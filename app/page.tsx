@@ -7,6 +7,7 @@ import StoriesSection from '@/components/home/StoriesSection';
 import WisdomBar from '@/components/home/WisdomBar';
 import FamilyStreakBanner from '@/components/home/FamilyStreakBanner';
 import LibrarySection from '@/components/home/LibrarySection';
+import StoryGarden from '@/components/stories/StoryGarden';
 import { getAllBooksWithMeta } from '@/lib/content';
 
 export const metadata: Metadata = {
@@ -33,13 +34,16 @@ export default function HomePage() {
         <FamilyStreakBanner />
       </div>
 
-      {/* 3. Journey paths — age-based starting points */}
+      {/* 3. Story Garden — user's completed stories (client, hidden until progress exists) */}
+      <StoryGarden />
+
+      {/* 4. Journey paths — age-based starting points */}
       <JourneySection />
 
-      {/* 4. Stories by collection — story-first browsing */}
+      {/* 5. Stories by collection — story-first browsing */}
       <StoriesSection />
 
-      {/* 5. Full Bible library — book/chapter navigation */}
+      {/* 6. Full Bible library — book/chapter navigation */}
       <LibrarySection availableBooks={books} />
 
       <Footer />
