@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Journey } from '@/types';
 import LumiMascot, { getLumiStage, getLumiLabel } from '@/components/mascot/LumiMascot';
 
@@ -5,10 +6,9 @@ interface JourneyCardProps {
   journey: Journey;
   completedStories?: number;
   recommended?: boolean;
-  onStart?: () => void;
 }
 
-export default function JourneyCard({ journey, completedStories = 0, recommended = false, onStart }: JourneyCardProps) {
+export default function JourneyCard({ journey, completedStories = 0, recommended = false }: JourneyCardProps) {
   const total = journey.stories.length;
   const pct = total > 0 ? (completedStories / total) * 100 : 0;
   const isStarted = completedStories > 0;
@@ -82,16 +82,13 @@ export default function JourneyCard({ journey, completedStories = 0, recommended
         )}
 
         {/* CTA */}
-        <button
-          onClick={onStart}
-          className="mt-4 w-full py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
-          style={{
-            background: journey.coverColor,
-            color: '#fff',
-          }}
+        <Link
+          href={`/stories/${journey.stories[0]}`}
+          className="mt-4 block w-full text-center py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
+          style={{ background: journey.coverColor, color: '#fff' }}
         >
-          {isComplete ? 'Read Again' : isStarted ? 'Continue Journey' : 'Begin Journey →'}
-        </button>
+          {isComplete ? 'Read Again ↩' : isStarted ? 'Continue Journey →' : 'Begin Journey →'}
+        </Link>
       </div>
     </div>
   );
