@@ -83,7 +83,7 @@ export default function JourneyCard({ journey, completedStories = 0, recommended
 
         {/* CTA */}
         <Link
-          href={`/stories/${journey.stories[0]}`}
+          href={`/journeys/${journey.id}`}
           className="mt-4 block w-full text-center py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
           style={{ background: journey.coverColor, color: '#fff' }}
         >
