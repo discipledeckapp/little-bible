@@ -23,6 +23,37 @@
   --font-child:    var(--font-nunito), system-ui, sans-serif;
   --font-devotion: var(--font-lora), Georgia, serif;
   --font-display:  var(--font-playfair), Georgia, serif;
+
+  /* ── Reading Mode Colors ─────────────────────────────── */
+  --color-mode-read:          #F59E0B;   /* Gold — Scripture reading */
+  --color-mode-read-light:    #FFFBEB;
+  --color-mode-read-text:     #78350F;
+
+  --color-mode-discuss:       #0EA5E9;   /* Sky blue — conversation */
+  --color-mode-discuss-light: #F0F9FF;
+  --color-mode-discuss-text:  #0C4A6E;
+
+  --color-mode-pray:          #7C3AED;   /* Purple — prayer */
+  --color-mode-pray-light:    #F5F3FF;
+  --color-mode-pray-text:     #3B0764;
+
+  --color-mode-remember:      #16A34A;   /* Green — memory, planted */
+  --color-mode-remember-light:#F0FDF4;
+  --color-mode-remember-text: #14532D;
+
+  --color-mode-do:            #EA580C;   /* Orange — action, obedience */
+  --color-mode-do-light:      #FFF7ED;
+  --color-mode-do-text:       #7C2D12;
+
+  /* ── Story / Illustration palette ────────────────────── */
+  --color-parchment:          #F5EDD6;
+  --color-warm-sand:          #E8C87A;
+  --color-ochre-gold:         #C9860E;
+  --color-clay-red:           #A84832;
+  --color-deep-olive:         #4A6741;
+  --color-midnight-blue:      #1A2B4A;
+  --color-soft-ivory:         #FAF6EE;
+  --color-warm-cream:         #FFF8EC;
 }
 
 *,
@@ -196,3 +227,70 @@ details > summary::-webkit-details-marker { display: none; }
 }
 .pin-dot.filled  { background: #f59e0b; }
 .pin-dot.error   { background: #ef4444; }
+
+/* ── Delight animations ──────────────────────────────── */
+
+/* Leaf plants itself into Lumi's branches */
+@keyframes leafPlant {
+  0%   { opacity: 0; transform: translateY(20px) scale(0.6) rotate(-15deg); }
+  60%  { opacity: 1; transform: translateY(-8px) scale(1.1) rotate(5deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); }
+}
+.leaf-plant { animation: leafPlant 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
+
+/* Prayer rises upward */
+@keyframes prayerRise {
+  0%   { opacity: 0; transform: translateY(16px); }
+  40%  { opacity: 1; transform: translateY(-12px); }
+  100% { opacity: 0; transform: translateY(-40px); }
+}
+.prayer-rise { animation: prayerRise 1.4s ease-out both; }
+
+/* Story card earned */
+@keyframes cardEarn {
+  0%   { opacity: 0; transform: scale(0.7) translateY(30px); }
+  70%  { transform: scale(1.05) translateY(-6px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.card-earn { animation: cardEarn 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
+
+/* Wonder word reveal */
+@keyframes wonderReveal {
+  0%   { opacity: 0; transform: translateY(8px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.wonder-reveal { animation: wonderReveal 0.25s ease-out both; }
+
+/* Lumi grows — gentle scale up */
+@keyframes lumiGrow {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.18) translateY(-6px); }
+  70%  { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+.lumi-grow { animation: lumiGrow 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
+
+/* Paz sparrow flies across */
+@keyframes sparrowFly {
+  0%   { opacity: 0; transform: translateX(-30px) translateY(10px); }
+  30%  { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(30px) translateY(-6px); }
+}
+.sparrow-fly { animation: sparrowFly 1.2s ease-in-out both; }
+
+/* Lumi droops (long absence state) */
+@keyframes lumiDroop {
+  0%   { transform: rotate(0deg); }
+  30%  { transform: rotate(-4deg) translateY(3px); }
+  60%  { transform: rotate(2deg) translateY(1px); }
+  100% { transform: rotate(-3deg) translateY(4px); }
+}
+.lumi-droop { animation: lumiDroop 2s ease-in-out infinite alternate; }
+
+/* Mode glow pulse */
+@keyframes modeGlow {
+  0%, 100% { box-shadow: 0 0 0 0 currentColor; opacity: 0.6; }
+  50%       { box-shadow: 0 0 16px 4px currentColor; opacity: 1; }
+}
+.mode-glow { animation: modeGlow 2s ease-in-out infinite; }

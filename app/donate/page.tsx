@@ -64,7 +64,7 @@ function DonateContent() {
   if (showSuccess) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center text-center px-6 py-16">
-        <LumiMascot stage="tree" className="w-36 h-36 mx-auto mb-6" animate />
+        <LumiMascot stage="tree-of-life" className="w-36 h-36 mx-auto mb-6" animate />
         <h2 className="font-display text-3xl font-bold text-stone-800 mb-3">
           Thank you so much! 🙏
         </h2>
@@ -89,7 +89,7 @@ function DonateContent() {
 
       {/* Hero */}
       <div className="text-center space-y-4">
-        <LumiMascot stage="plant" className="w-24 h-24 mx-auto" />
+        <LumiMascot stage="sapling" className="w-24 h-24 mx-auto" />
         <h1 className="font-display text-3xl font-bold text-stone-800 leading-tight">
           Help Lumi keep growing
         </h1>

@@ -94,3 +94,90 @@ export interface Progress {
   badges: Badge[];
   sessions: DevotionSession[];
 }
+
+// ── Story-First Navigation Types ──────────────────────────────────────────────
+
+export interface StoryVerse {
+  ref: string;         // e.g. "Genesis 1:1"
+  kjv: string;
+  little_bible: string;
+}
+
+export interface StoryStep {
+  title: string;
+  text?: string;
+  childText?: string;
+  verses?: StoryVerse[];
+  question?: string;
+  parentGuide?: string;
+  familyQuestion?: string;
+  guidedPrayer?: string;
+  childPrompt?: string;
+  prayerPoints?: string[];
+  memoryVerse?: string;
+  ref?: string;
+  memoryPhrase?: string;
+  tip?: string;
+  action?: string;
+  parentNote?: string;
+}
+
+export interface Story {
+  id: string;
+  title: string;
+  subtitle: string;
+  collection: string;
+  mainTruth: string;
+  ageRange: string;           // "4-5" | "6-7" | "4-7"
+  bibleRef: string;
+  durationMinutes: number;
+  coverEmoji: string;
+  coverColor: string;
+  illustrationPrompt: string;
+  steps: {
+    read:     StoryStep;
+    discuss:  StoryStep;
+    pray:     StoryStep;
+    remember: StoryStep;
+    doToday:  StoryStep;
+  };
+}
+
+export interface Collection {
+  id: string;
+  title: string;
+  subtitle: string;
+  emoji: string;
+  color: string;
+  stories: string[];          // array of story IDs
+}
+
+export interface JourneyStory {
+  storyId: string;
+  weekNumber: number;
+}
+
+export interface Journey {
+  id: string;
+  name: string;
+  subtitle: string;
+  ageRange: string;
+  durationWeeks: number;
+  mainTruth: string;
+  outcomes: string[];
+  stories: string[];          // ordered array of story IDs
+  completionMessage: string;
+  lumiStageStart: import('../components/mascot/LumiMascot').LumiStage;
+  lumiStageEnd: import('../components/mascot/LumiMascot').LumiStage;
+}
+
+// Story completion state
+export type StoryStatus = 'unread' | 'in-progress' | 'complete' | 'memorised';
+
+export interface StoryProgress {
+  storyId: string;
+  status: StoryStatus;
+  currentStep?: FamilyStep;
+  completedAt?: string;
+  memorisedAt?: string;
+}
