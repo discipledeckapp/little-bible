@@ -3,34 +3,88 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getProgress } from '@/lib/progress';
+import { getAllStoryProgress } from '@/lib/story-progress';
 import LumiMascot, { getLumiStage } from '@/components/mascot/LumiMascot';
 
-function getResumeHref(): string {
-  if (typeof window === 'undefined') return '/proverbs/1';
-  const p = getProgress();
-  if (p.sessions.length > 0) {
-    const last = p.sessions[p.sessions.length - 1];
-    return `/${last.book}/${last.chapter}`;
+const FIRST_STORY_ID = 'god-made-everything';
+
+const FEATURED_STORIES = [
+  {
+    id:       'god-made-everything',
+    title:    'God Made Everything',
+    subtitle: 'In the very beginning, God made it all.',
+    emoji:    '🌍',
+    color:    '#F59E0B',
+    ref:      'Genesis 1',
+    memory:   'God made everything, and it was good.',
+  },
+  {
+    id:       'birth-of-jesus',
+    title:    'Jesus Is Born',
+    subtitle: 'The most amazing night the world had ever seen.',
+    emoji:    '⭐',
+    color:    '#0EA5E9',
+    ref:      'Luke 2',
+    memory:   'Jesus came to be with us.',
+  },
+  {
+    id:       'how-to-pray',
+    title:    'How to Pray',
+    subtitle: 'Jesus taught us exactly how to talk to God.',
+    emoji:    '🙏',
+    color:    '#7C3AED',
+    ref:      'Matthew 6:9-13',
+    memory:   'Our Father in heaven.',
+  },
+];
+
+function getStoryResumeState(): {
+  href: string;
+  label: string;
+  hasStory: boolean;
+} {
+  if (typeof window === 'undefined') {
+    return { href: `/stories/${FIRST_STORY_ID}`, label: 'Start a Story', hasStory: false };
   }
-  return '/proverbs/1';
+
+  const storyProgress = getAllStoryProgress();
+  const allStories    = Object.values(storyProgress);
+  const inProgress    = allStories.find(s => s.status === 'in-progress');
+  const lastComplete  = allStories
+    .filter(s => s.status === 'complete' || s.status === 'memorised')
+    .sort((a, b) => (b.completedAt ?? '').localeCompare(a.completedAt ?? ''))
+    .at(0);
+
+  if (inProgress) {
+    return { href: `/stories/${inProgress.storyId}`, label: 'Continue Your Story', hasStory: true };
+  }
+  if (lastComplete) {
+    return { href: `/stories/${FIRST_STORY_ID}`, label: 'Start Another Story', hasStory: true };
+  }
+
+  return { href: `/stories/${FIRST_STORY_ID}`, label: 'Start a Story', hasStory: false };
 }
 
 export default function HeroSection() {
-  const [resumeHref, setResumeHref] = useState('/proverbs/1');
-  const [hasHistory, setHasHistory] = useState(false);
-  const [lumiStage, setLumiStage]   = useState<ReturnType<typeof getLumiStage>>('seed');
+  const [cta,       setCta]       = useState({ href: `/stories/${FIRST_STORY_ID}`, label: 'Start a Story', hasStory: false });
+  const [lumiStage, setLumiStage] = useState<ReturnType<typeof getLumiStage>>('seed');
+  const [featured,  setFeatured]  = useState(FEATURED_STORIES[0]);
 
   useEffect(() => {
-    const href = getResumeHref();
-    setResumeHref(href);
-    setHasHistory(href !== '/proverbs/1');
+    const state = getStoryResumeState();
+    setCta(state);
+
     const p = getProgress();
     setLumiStage(getLumiStage(p.wisdomSeeds));
+
+    // Rotate featured story daily
+    const dayOfYear = Math.floor(Date.now() / 86_400_000) % FEATURED_STORIES.length;
+    setFeatured(FEATURED_STORIES[dayOfYear]);
   }, []);
 
   return (
     <section className="hero-bg wave-divider relative overflow-hidden">
-      {/* Ambient glow layers */}
+      {/* Ambient glow */}
       <div
         className="absolute inset-0 opacity-[0.06]"
         style={{
@@ -63,12 +117,12 @@ export default function HeroSection() {
 
             {/* Body */}
             <p className="text-amber-100/75 text-lg sm:text-xl leading-relaxed mb-4 max-w-md mx-auto lg:mx-0">
-              Short, faithful, and warm — every verse of Scripture adapted so
+              Bible stories that disciple — every verse faithfully adapted so
               your child can understand, love, and remember God&apos;s Word
               from their earliest years.
             </p>
 
-            {/* Discipleship pillars — concise */}
+            {/* Pillars */}
             <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-9">
               {['Know God', 'Love God', 'Pray', 'Memorize', 'Obey', 'Follow Jesus'].map((p) => (
                 <span
@@ -83,11 +137,11 @@ export default function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
               <Link
-                href={resumeHref}
+                href={cta.href}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-amber-400 hover:bg-amber-300 text-amber-950 font-extrabold text-base px-7 py-4 rounded-2xl transition-all active:scale-95 shadow-lg shadow-amber-900/40 hover:shadow-xl hover:shadow-amber-900/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
               >
                 <span aria-hidden="true">📖</span>
-                {hasHistory ? 'Continue Bible Time' : "Start Today's Bible Time"}
+                {cta.label}
                 <span aria-hidden="true" className="text-amber-700">→</span>
               </Link>
 
@@ -95,44 +149,53 @@ export default function HeroSection() {
                 href="#library"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-amber-200 hover:text-white font-semibold text-base px-7 py-4 rounded-2xl border border-amber-700/50 hover:border-amber-400/60 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
               >
-                Explore the Bible
+                Open the Bible
               </a>
             </div>
 
             <p className="mt-7 text-amber-400/50 text-xs font-medium">
-              Free · Open source · Faithful to Scripture · All 66 books coming
+              Free · Faithful to Scripture · All 66 books · Complete Bible coming
             </p>
           </div>
 
-          {/* ── Right: Featured verse card ── */}
+          {/* ── Right: Featured story card ── */}
           <div className="flex-shrink-0 w-full max-w-sm lg:max-w-[300px] xl:max-w-sm">
-            <div
-              className="card-glass rounded-3xl p-6 shadow-2xl border border-amber-200/30 relative"
-              aria-label="Featured verse preview"
+            <Link
+              href={`/stories/${featured.id}`}
+              className="card-glass rounded-3xl p-6 shadow-2xl border border-amber-200/30 relative block group hover:scale-[1.02] transition-transform duration-200"
+              aria-label={`Featured story: ${featured.title}`}
             >
               {/* Card header */}
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <p className="text-amber-600 text-xs font-bold uppercase tracking-widest">
-                    Today&apos;s Reading
+                    Featured Story
                   </p>
-                  <p className="text-stone-700 font-bold text-base mt-0.5">Proverbs 1:7</p>
+                  <p className="text-stone-500 text-xs mt-0.5">{featured.ref}</p>
                 </div>
-                <LumiMascot className="w-12 h-12" />
+                <LumiMascot stage={lumiStage} className="w-12 h-12" />
               </div>
 
-              {/* Verse */}
-              <div className="bg-amber-50 rounded-2xl px-4 py-4 mb-4 border border-amber-100">
-                <p className="scripture-text text-stone-700 text-sm leading-relaxed">
-                  &ldquo;Respecting God is where wisdom begins.&rdquo;
+              {/* Story cover */}
+              <div
+                className="rounded-2xl px-5 py-6 mb-4 flex flex-col items-center text-center gap-2"
+                style={{ background: featured.color + '18', border: `1px solid ${featured.color}30` }}
+              >
+                <span className="text-5xl" aria-hidden="true">{featured.emoji}</span>
+                <p
+                  className="font-extrabold text-stone-800 text-lg leading-tight"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  {featured.title}
                 </p>
+                <p className="text-stone-500 text-sm leading-snug">{featured.subtitle}</p>
               </div>
 
               {/* Memory phrase */}
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-lg" aria-hidden="true">✨</span>
                 <p className="text-stone-800 font-extrabold text-sm font-child">
-                  Wisdom starts with God.
+                  {featured.memory}
                 </p>
               </div>
 
@@ -143,19 +206,20 @@ export default function HeroSection() {
               </p>
               <div className="flex gap-1.5">
                 {[
-                  { emoji: '📖', label: 'Read' },
-                  { emoji: '💬', label: 'Discuss' },
-                  { emoji: '🙏', label: 'Pray' },
-                  { emoji: '⭐', label: 'Remember' },
-                  { emoji: '🌟', label: 'Do It' },
+                  { emoji: '📖', label: 'Read',    color: '#F59E0B' },
+                  { emoji: '💬', label: 'Discuss', color: '#0EA5E9' },
+                  { emoji: '🙏', label: 'Pray',    color: '#7C3AED' },
+                  { emoji: '⭐', label: 'Remember',color: '#16A34A' },
+                  { emoji: '🌟', label: 'Do It',   color: '#EA580C' },
                 ].map((s, i) => (
                   <div
                     key={s.label}
-                    className={`flex-1 flex flex-col items-center gap-0.5 py-2 rounded-xl ${
+                    className="flex-1 flex flex-col items-center gap-0.5 py-2 rounded-xl transition-colors"
+                    style={
                       i === 0
-                        ? 'bg-amber-500 text-white'
-                        : 'bg-stone-100 text-stone-400'
-                    }`}
+                        ? { background: s.color, color: 'white' }
+                        : { background: '#f5f5f4', color: '#a8a29e' }
+                    }
                     aria-hidden="true"
                   >
                     <span className="text-xs">{s.emoji}</span>
@@ -164,13 +228,13 @@ export default function HeroSection() {
                 ))}
               </div>
 
-              <Link
-                href={resumeHref}
-                className="mt-4 block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-extrabold py-3.5 rounded-2xl text-sm transition-colors active:scale-95"
+              <div
+                className="mt-4 block w-full text-center text-white font-extrabold py-3.5 rounded-2xl text-sm transition-colors group-hover:opacity-90"
+                style={{ background: featured.color }}
               >
-                Begin Devotion →
-              </Link>
-            </div>
+                Read This Story →
+              </div>
+            </Link>
           </div>
 
         </div>
