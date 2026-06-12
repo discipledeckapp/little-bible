@@ -2,8 +2,15 @@
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "installCommand": "npm ci",
-  "regions": ["lhr1"],
-  "env": {
-    "NODE_ENV": "production"
+  "regions": [
+    "lhr1"
+  ],
+  "experimentalServices": {
+    "little-bible": {
+      "type": "web",
+      "routePrefix": "/",
+      "framework": "nextjs",
+      "buildCommand": "npm ci && npx prisma generate && npm run build"
+    }
   }
 }
