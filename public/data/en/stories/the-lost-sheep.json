@@ -1,0 +1,59 @@
+{
+  "id": "the-lost-sheep",
+  "title": "The Lost Sheep",
+  "subtitle": "One sheep got lost — and the shepherd left the ninety-nine to find it",
+  "collection": "what-jesus-taught",
+  "mainTruth": "You matter so much to God that He searches for you when you're lost.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 15:3-7",
+  "durationMinutes": 5,
+  "coverEmoji": "🐑",
+  "coverColor": "#16A34A",
+  "illustrationPrompt": "A shepherd carrying a small fluffy white sheep on his shoulders through a rocky hillside, the sheep looking relieved and cosy, the shepherd's face full of joy and tenderness, distant flock visible on a green hill, warm golden light, painterly gouache illustration on parchment paper, soft green, gold, and warm cream palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, joyful and tender --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus was talking to a crowd that included people nobody liked very much — tax collectors, people known for doing wrong things. The religious leaders were grumbling: 'How can Jesus spend time with such people? Doesn't He know what they're like?' So Jesus told them a story.\n\nImagine a shepherd, Jesus said, who has a hundred sheep. He counts them as the day ends — ninety-eight, ninety-nine — and then one more. But there is no one hundredth sheep. One is missing. What does he do? Does he say, 'Oh well — I still have ninety-nine, that's pretty good'? No. He leaves the flock somewhere safe and goes out searching. Over rocky ground, through thorny bushes, calling out in the darkness. He searches until he finds the one lost sheep.\n\nAnd when he finds it? He does not scold it or drag it home. He lifts it gently onto his shoulders and carries it. And when he gets home, he calls everyone together: 'Come and celebrate with me! I found my sheep that was lost!' Jesus looked at the grumbling leaders and said: that is what heaven looks like when even one person comes back to God. There is a party. There is joy.\n\nYou are never just one of a crowd to God. You are the one He searches for. The one He carries home. The one who makes heaven celebrate.",
+      "childText": "A shepherd had one hundred sheep. One got lost. So the shepherd left the ninety-nine and went to find that one lost sheep! He searched and searched. When he found it, he put it on his shoulders and carried it home. Then he threw a party! Jesus said: that is how happy God is when even one person comes back to Him. You are that special to God.",
+      "verses": [
+        {
+          "ref": "Luke 15:5",
+          "kjv": "And when he hath found it, he layeth it on his shoulders, rejoicing.",
+          "little_bible": "When the shepherd found the lost sheep, he put it gently on his shoulders — and he was so full of joy!"
+        },
+        {
+          "ref": "Luke 15:6",
+          "kjv": "And when he cometh home, he calleth together his friends and neighbours, saying unto them, Rejoice with me; for I have found my sheep which was lost.",
+          "little_bible": "He called all his friends together and said: Celebrate with me! I found my sheep that was lost! Come and be happy with me!"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "If you were the lost sheep, how do you think it would feel when the shepherd found you?",
+      "parentGuide": "This story is about the immeasurable value of one person to God. Children sometimes feel lost or overlooked — especially in large families, schools, or churches. This story says directly: you are not one of many to God. You are the one He searches for. Let that land.",
+      "familyQuestion": "The shepherd left ninety-nine sheep to find one. Does that seem fair? What does it tell us about how God thinks about people?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You that we are never just one of many to You. Thank You that You search for us when we are lost, and that You carry us home when You find us. Help us to know deep down that we are that precious to You. Amen.",
+      "childPrompt": "Can you tell God: 'Thank You that You look for me — and that I matter to You'?",
+      "prayerPoints": [
+        "Thank God that He values you so much He searches for you",
+        "Ask God to help you believe that you are precious to Him"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Rejoice with me; for I have found my sheep which was lost.",
+      "ref": "Luke 15:6",
+      "memoryPhrase": "God looks for me!",
+      "tip": "Cup your hands around your mouth and call out: 'Where are you?' Then spread your arms wide and say: 'I found you! God looks for ME!' Do it as a playful hide-and-find game."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Notice someone at school, church, or in your family who seems left out or lonely today — and go find them. Sit with them. That is what the shepherd did.",
+      "parentNote": "Jesus told this story in response to people being excluded. Children can learn early that noticing the person on the edge — and going to them — is one of the most Christlike things they can do."
+    }
+  }
+}

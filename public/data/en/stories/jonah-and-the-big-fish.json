@@ -1,0 +1,64 @@
+{
+  "id": "jonah-and-the-big-fish",
+  "title": "Jonah and the Big Fish",
+  "subtitle": "Jonah ran away from God — but you can't hide from God's love",
+  "collection": "brave-and-faithful",
+  "mainTruth": "We can't run from God — and when we come back, He always welcomes us.",
+  "ageRange": "4-7",
+  "bibleRef": "Jonah 1-3",
+  "durationMinutes": 5,
+  "coverEmoji": "🐋",
+  "coverColor": "#0EA5E9",
+  "illustrationPrompt": "Jonah sitting inside the enormous belly of a great fish, dim bioluminescent light around him, his face turning from despair to prayer, a ray of warm golden light filtering through the water above, painterly gouache illustration on parchment paper, deep teal and amber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God spoke to a man named Jonah and gave him a job: go to the great city of Nineveh and tell the people there to turn back to God. But Jonah did not want to go. He did not like the people of Nineveh — they were enemies of his people. So Jonah did something very human and very foolish: he ran in the opposite direction. He found a ship going as far away as possible and climbed aboard, trying to get away from God.\n\nBut you cannot outrun God. A great storm blew up, so fierce that the sailors were terrified. When they discovered Jonah was fleeing from his God, Jonah told them to throw him overboard — and the sea immediately grew calm. Then, just as Jonah sank beneath the waves, a great fish swallowed him whole. And Jonah sat in the darkness inside the fish for three days and three nights.\n\nIn that dark, smelly place, Jonah finally prayed. He cried out to God. He remembered God's mercy. He said: 'I will do what I promised.' And God spoke to the fish — and the fish spat Jonah out onto dry land. God spoke to Jonah again: 'Go to Nineveh.' And this time, Jonah went. The people listened and turned back to God. And God forgave them — because that is what God does. He runs toward people, not away from them. Even when they have been running away from Him.",
+      "childText": "God asked Jonah to go tell people about God. But Jonah ran away! He got on a boat going the other way. A huge storm came. Jonah was thrown into the sea — and a big fish swallowed him! Inside the fish, Jonah said sorry to God and asked for help. God heard him! The fish put Jonah back on land. And this time, Jonah obeyed.",
+      "verses": [
+        {
+          "ref": "Jonah 1:3",
+          "kjv": "But Jonah rose up to flee unto Tarshish from the presence of the LORD, and went down to Joppa; and he found a ship going to Tarshish: so he paid the fare thereof, and went down into it, to go with them unto Tarshish from the presence of the LORD.",
+          "little_bible": "Jonah tried to run away from God. He got on a boat going as far away as he could — but God was everywhere."
+        },
+        {
+          "ref": "Jonah 2:1",
+          "kjv": "Then Jonah prayed unto the LORD his God out of the fish's belly.",
+          "little_bible": "From inside the fish, Jonah prayed to God. Even in the darkest, strangest place — God could still hear him."
+        },
+        {
+          "ref": "Jonah 3:3",
+          "kjv": "So Jonah arose, and went unto Nineveh, according to the word of the LORD.",
+          "little_bible": "This time, Jonah got up and went where God told him to go. He obeyed."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Have you ever not wanted to do something you knew was right? What happened?",
+      "parentGuide": "Jonah is a story about second chances and the patience of God. The remarkable thing is not that Jonah ran — but that God gave him another chance anyway. Emphasise to your child that when we come back to God, He welcomes us — no matter where we've been.",
+      "familyQuestion": "God forgave Jonah and gave him another chance. Can you think of a time someone gave you another chance? How did it feel?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You that You never stop loving us, even when we run away. Thank You for second chances — just like You gave Jonah. If we have been running from You, help us to stop and turn back. You always welcome us home. Amen.",
+      "childPrompt": "Is there anything you have been hiding from God? You can tell Him now — He is listening.",
+      "prayerPoints": [
+        "Thank God that He gives second chances",
+        "Ask God to help you obey Him the first time, not the third!"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Then Jonah prayed unto the LORD his God out of the fish's belly.",
+      "ref": "Jonah 2:1",
+      "memoryPhrase": "You can't hide from God!",
+      "tip": "Put your hands over your eyes like you are hiding — then open them wide and say: 'You can't hide from God! He always finds us.' Peek-a-boo style, for the youngest ones."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell God one thing you have been putting off or running away from. Then ask Him to help you take one small step toward it today.",
+      "parentNote": "Jonah's story is ultimately about repentance and restoration — two concepts that can be introduced gently even to young children. Turning back to God is not shameful; it is the bravest thing we can do."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "god-made-me",
+  "title": "God Made Me",
+  "subtitle": "God knew you before you were born — and He made you on purpose",
+  "collection": "the-beginning",
+  "mainTruth": "God made you on purpose, and you are wonderfully made.",
+  "ageRange": "4-7",
+  "bibleRef": "Psalm 139:13-16",
+  "durationMinutes": 5,
+  "coverEmoji": "✨",
+  "coverColor": "#7C3AED",
+  "illustrationPrompt": "A young child gazing at their own hands in wonder, soft warm light from above, a gentle golden glow surrounding them, eyes wide with quiet awe, painterly gouache illustration on parchment paper, warm palette of deep purple, gold, and cream, storybook quality referencing Jesus Storybook Bible, NOT cartoon, deeply warm and intimate --ar 3:4 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Did you know that before you were born — even before your mum and dad knew who you would be — God already knew you? Not just knew about you. He knew you. Your name, your laugh, your favourite colour, the way you smile. He knew all of it before you took your very first breath.\n\nKing David wrote a song about this. He said that God made his most private and hidden parts — his very innermost self. He marvelled at how God had carefully put him together, like a craftsman working on something precious. 'I am wonderfully made,' David sang. And he was amazed by it.\n\nThat is true for you too. You are not an accident or a mistake. You were not forgotten or overlooked. God thought of you, planned you, made you, and He called what He made very good. Every part of you — your height, your voice, your personality, even the parts you are not sure about — God made those parts on purpose. You are wonderfully made. That means made with wonder — with love and care and great skill, by the God who makes everything.",
+      "childText": "Before you were born, God already knew you! He made you carefully, like someone making something very precious. He made your hands, your voice, your smile. God made you on purpose. You are wonderfully made!",
+      "verses": [
+        {
+          "ref": "Psalm 139:13",
+          "kjv": "For thou hast possessed my reins: thou hast covered me in my mother's womb.",
+          "little_bible": "God made your most inner parts. He put you together carefully before you were even born."
+        },
+        {
+          "ref": "Psalm 139:14",
+          "kjv": "I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+          "little_bible": "I will praise God because He made me with such great care. I am wonderfully made — and I know it is true!"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What is one thing about yourself that you are glad God made?",
+      "parentGuide": "Help your child think beyond just physical features — their laugh, their kindness, their curiosity. Affirm what they say warmly. If they struggle, point out something you love about them: 'I think God made your kind heart specially.'",
+      "familyQuestion": "Why do you think God took such care making each person different from everyone else?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You for making me. Thank You that I am not an accident — You planned me and made me on purpose. Help me to believe that I am wonderfully made, even on the days I don't feel like it. Amen.",
+      "childPrompt": "Can you thank God for one part of yourself He made?",
+      "prayerPoints": [
+        "Thank God for making you exactly as you are",
+        "Ask God to help you see yourself the way He sees you"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "I am fearfully and wonderfully made.",
+      "ref": "Psalm 139:14",
+      "memoryPhrase": "I am wonderfully made!",
+      "tip": "Point to yourself and say it with confidence: 'I — am — wonderfully — MADE!' Say it slowly, then fast, then in a whisper."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Draw a picture of yourself. On the drawing, write or say five things God made about you that you like.",
+      "parentNote": "This builds identity rooted in God as Creator, not in performance or comparison. Children who know they are 'wonderfully made' by God have a firmer foundation for self-worth than those whose identity is built on achievement or approval."
+    }
+  }
+}

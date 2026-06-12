@@ -1,0 +1,59 @@
+{
+  "id": "the-good-neighbour",
+  "title": "The Good Neighbour",
+  "subtitle": "A man asked Jesus: who is my neighbour? Jesus told him a story",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Loving God means loving the person in front of us — anyone who needs help.",
+  "ageRange": "5-7",
+  "bibleRef": "Luke 10:25-37",
+  "durationMinutes": 5,
+  "coverEmoji": "🤝",
+  "coverColor": "#0EA5E9",
+  "illustrationPrompt": "A man carefully bandaging the wounds of an injured stranger on a dusty road, kneeling beside him with deep care, the road winding into the distance, the Samaritan's donkey waiting patiently, warm afternoon light, painterly gouache illustration on parchment paper, warm amber, terracotta, and soft blue palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "A man who knew all the religious rules came to test Jesus with a question: 'What do I need to do to have eternal life?' Jesus asked him what the law said. The man answered perfectly: love God with everything you have, and love your neighbour as yourself. 'Do this and you will live,' said Jesus. But the man wanted to wriggle out of it, so he asked: 'And who exactly is my neighbour?'\n\nSo Jesus told him a story. A man was travelling a dangerous road from Jerusalem to Jericho. Robbers attacked him, beat him badly, took everything, and left him half-dead by the road. A priest came along — saw the man — and walked past on the other side. A temple assistant came along — saw him — and also walked past. Then a Samaritan came. In those days, Samaritans and Jewish people did not like each other at all. But this Samaritan saw the injured man — and stopped. He knelt beside him, cleaned and bandaged his wounds, put him on his own donkey, took him to an inn, and paid for him to be cared for.\n\nJesus looked at the man who had asked the question and said: 'Which of these three do you think was a neighbour to the man who was attacked?' The answer was obvious. And Jesus said: 'Go and do the same.' Your neighbour is whoever needs your help — right now, in front of you.",
+      "childText": "A man asked Jesus: who is my neighbour? Jesus told a story. A man was hurt on the road. Two religious people walked past and ignored him. But a stranger — someone nobody expected — stopped to help. He bandaged the hurt man, took care of him, and paid for everything. Jesus said: your neighbour is whoever needs your help today. Go and do the same.",
+      "verses": [
+        {
+          "ref": "Luke 10:27",
+          "kjv": "Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy strength, and with all thy mind; and thy neighbour as thyself.",
+          "little_bible": "Love God with everything you have — your heart, your strength, your whole self. And love the people around you as much as you love yourself."
+        },
+        {
+          "ref": "Luke 10:37",
+          "kjv": "And he said, He that shewed mercy on him. Then said Jesus unto him, Go, and do thou likewise.",
+          "little_bible": "Jesus said: the neighbour was the one who showed kindness. Then Jesus said: go and do the same thing."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Can you think of someone near you who needs help right now?",
+      "parentGuide": "The Good Samaritan challenges the tendency to limit our care to people like us. Gently help your child see that their neighbour might be someone who looks different, or someone they don't normally notice. Specificity is the goal — not 'be nice to people' but 'this person, today.'",
+      "familyQuestion": "The priest and the temple helper walked past. They were 'religious' people. Why do you think they didn't help? What might have stopped them?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, help us to see the people around us who need help — really see them, not just walk past. Give us hearts like the Good Samaritan, who stopped when others didn't. Help us to be good neighbours to whoever is in front of us today. Amen.",
+      "childPrompt": "Ask God to show you one person you can help today.",
+      "prayerPoints": [
+        "Ask God to open your eyes to someone who needs help today",
+        "Ask God for courage to actually stop and help — not just notice"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Go, and do thou likewise.",
+      "ref": "Luke 10:37",
+      "memoryPhrase": "Love God, love people!",
+      "tip": "Point up (love God), then point around you in all directions (love people). Say it: 'Love God — love PEOPLE!' Do it with big gestures. This is the whole summary of Jesus' teaching."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find one person today who needs something — help, company, kindness — and give it to them. Don't wait to be asked.",
+      "parentNote": "Jesus' instruction is strikingly practical: 'go and do.' Not 'go and feel.' The parable calls for action, not sentiment. Help your child identify the specific person and the specific thing they can do — then actually do it together."
+    }
+  }
+}

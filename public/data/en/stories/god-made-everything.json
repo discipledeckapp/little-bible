@@ -1,0 +1,69 @@
+{
+  "id": "god-made-everything",
+  "title": "God Made Everything",
+  "subtitle": "Before anything existed, God was there — and He made it all",
+  "collection": "the-beginning",
+  "mainTruth": "God made everything, and everything He made was very good.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 1",
+  "durationMinutes": 5,
+  "coverEmoji": "🌍",
+  "coverColor": "#0EA5E9",
+  "illustrationPrompt": "The moment of creation — swirling warm golden light emerging from deep darkness, stars and earth forming, painterly gouache illustration on parchment paper texture, warm limited palette of deep navy, gold, and forest green, hand-crafted storybook quality referencing Jesus Storybook Bible illustration style by Jago, NOT cartoon, children's book illustration --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Before the very beginning, there was nothing. No stars, no sky, no oceans, no trees, no animals — not even light. There was only God. And God had been there forever, full of love and power and joy.\n\nThen God spoke. He said, \"Let there be light\" — and suddenly the darkness split open and light blazed everywhere! He made the sky and the seas and the dry land. He made the sun to warm the days and the moon to watch over the nights. He filled the seas with fish that flashed and darted, and the skies with birds that swooped and sang. He made elephants and ants, lions and ladybirds, every creature you can imagine.\n\nAnd at the very end, as the best and most treasured part of His creation, God made people. He made them like Him — able to love, to think, to laugh, to create. And when He looked at everything He had made, He said it was very good. Not just good — very good. Everything He made, He made on purpose. Everything He made, He loved.",
+      "childText": "Before anything was here, God was already there. Then God spoke — and He made light! He made the sky and the sea. He made animals big and small. Then He made people. And when God looked at everything, He said it was very, very good!",
+      "verses": [
+        {
+          "ref": "Genesis 1:1",
+          "kjv": "In the beginning God created the heaven and the earth.",
+          "little_bible": "Before anything existed, God was already there. And He made everything!"
+        },
+        {
+          "ref": "Genesis 1:3",
+          "kjv": "And God said, Let there be light: and there was light.",
+          "little_bible": "God spoke — and light appeared! When God speaks, things happen."
+        },
+        {
+          "ref": "Genesis 1:27",
+          "kjv": "So God created man in his own image, in the image of God created he him; male and female created he them.",
+          "little_bible": "God made people to be like Him — to love, to think, and to take care of what He made."
+        },
+        {
+          "ref": "Genesis 1:31",
+          "kjv": "And God saw every thing that he had made, and, behold, it was very good.",
+          "little_bible": "God looked at everything He made and said: it is very, very good!"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What is your favourite thing that God made?",
+      "parentGuide": "Let your child name something specific — a favourite animal, a colour, the stars, their own hands. Then gently say: 'God made that, and He said it was good. And God made YOU too!' This connects creation to personal identity.",
+      "familyQuestion": "If you could have been there when God made the world, what would you have wanted to watch Him make first?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You for making everything. Thank You for the sky and the sea, for animals and flowers, for light and dark. You are so creative and so powerful. And thank You that You made us too — and that You love everything You made. Amen.",
+      "childPrompt": "Now you can tell God one thing you are thankful He made!",
+      "prayerPoints": [
+        "Thank God for one specific thing He made that you love",
+        "Ask God to help you take care of the world He made"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "In the beginning God created the heaven and the earth.",
+      "ref": "Genesis 1:1",
+      "memoryPhrase": "God made everything!",
+      "tip": "Hold up your hands and wiggle all ten fingers — one for each thing God made. Then say together: 'God made everything!'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Go outside together and find five things God made. Point at each one and say: 'God made this — and it is good!'",
+      "parentNote": "This connects the story to the real world your child lives in. It builds a habit of seeing creation as God's gift, not just the backdrop to their day."
+    }
+  }
+}

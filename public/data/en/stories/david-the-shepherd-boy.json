@@ -1,0 +1,59 @@
+{
+  "id": "david-the-shepherd-boy",
+  "title": "David the Shepherd Boy",
+  "subtitle": "The smallest son became the bravest — because God chose him",
+  "collection": "brave-and-faithful",
+  "mainTruth": "God doesn't look at how big you are — He looks at your heart.",
+  "ageRange": "4-7",
+  "bibleRef": "1 Samuel 16-17, Psalm 23",
+  "durationMinutes": 5,
+  "coverEmoji": "⭐",
+  "coverColor": "#16A34A",
+  "illustrationPrompt": "A young shepherd boy with a sling and staff standing on a hillside at golden hour, a flock of sheep around him, hills rolling into the distance, expression of quiet confidence and trust, painterly gouache illustration on parchment paper, warm green and gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesse had eight sons, and David was the youngest — the smallest, the one left out in the fields watching sheep while his older brothers did important things. When the prophet Samuel came looking for the next king of Israel, everyone assumed it would be one of the tall, strong, impressive older brothers. They looked like kings.\n\nBut God said something surprising. He said: 'I don't look at what people look at. People look at the outside. But I look at the heart.' One by one the brothers walked past Samuel — and one by one, God said no. Finally they called for David, still dusty from the fields. And God said: 'This is the one.'\n\nDavid was not impressive by the world's standards. But his heart was fully turned toward God. Out in those lonely fields, tending sheep, David had learned to talk to God, to trust God, to sing to God. He had faced lions and bears to protect his flock — and he knew God had been with him each time. That heart — brave and trusting and full of love for God — was exactly what God was looking for. Because God doesn't measure strength the way we do. He looks at what really matters.",
+      "childText": "David was the smallest of all his brothers. But when God was choosing a king, He didn't look for the biggest — He looked for the best heart. David loved God with his whole heart. He talked to God while watching his sheep. He was brave because he trusted God. And God chose him!",
+      "verses": [
+        {
+          "ref": "1 Samuel 16:7",
+          "kjv": "The LORD seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart.",
+          "little_bible": "God doesn't look at how tall or strong you are. God looks at your heart — and that is what matters most."
+        },
+        {
+          "ref": "Psalm 23:1",
+          "kjv": "The LORD is my shepherd; I shall not want.",
+          "little_bible": "God is my shepherd. He takes care of me and gives me everything I need."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "If God looks at your heart, what do you think He sees when He looks at yours?",
+      "parentGuide": "This is a tender question — handle it gently. Encourage your child to be honest. If they say something negative, gently affirm that God is not looking for a perfect heart, but an honest heart that loves Him and wants to follow Him — just like David.",
+      "familyQuestion": "Can you think of someone who doesn't look impressive on the outside but has an amazing heart? What makes them special?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You that You don't judge by size or looks or how impressive we seem. You look at our hearts. Please give us hearts like David — hearts that love You, trust You, and run to You. Help us to be brave because we know You are with us. Amen.",
+      "childPrompt": "Can you ask God to help you have a good heart?",
+      "prayerPoints": [
+        "Thank God that He sees your heart and loves you",
+        "Ask God to make your heart more like David's — brave, loving, and trusting"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "The LORD looketh on the heart.",
+      "ref": "1 Samuel 16:7",
+      "memoryPhrase": "God looks at my heart!",
+      "tip": "Put both hands on your chest where your heart is. Feel it beating. Say: 'God looks at MY heart!' Then ask: 'What is in your heart right now?'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Do one kind thing today that nobody sees. Don't tell anyone — just do it for God.",
+      "parentNote": "David served God in obscurity for years before anyone recognized him. This action helps children understand that integrity is doing the right thing whether or not anyone is watching — because God always sees the heart."
+    }
+  }
+}

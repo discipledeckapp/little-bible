@@ -1,0 +1,59 @@
+{
+  "id": "jesus-saves",
+  "title": "Jesus Saves",
+  "subtitle": "The most important story ever told — Jesus died for us and came back to life",
+  "collection": "jesus-saves",
+  "mainTruth": "Jesus died for our sins and rose again — this changes everything.",
+  "ageRange": "5-7",
+  "bibleRef": "Luke 23-24",
+  "durationMinutes": 5,
+  "coverEmoji": "✝️",
+  "coverColor": "#A84832",
+  "illustrationPrompt": "An empty tomb with the stone rolled away, golden sunrise light flooding in, white linen folded inside, spring flowers blooming around the entrance, a sense of overwhelming joy and wonder, painterly gouache illustration on parchment paper, warm gold, white, and deep teal palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, the most important and triumphant illustration in the collection --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "We need to talk about the most important thing that has ever happened. It is a hard story in the middle — but it has the most wonderful ending.\n\nJesus had loved people. He had healed them, taught them, welcomed them. But the religious leaders were afraid of Him and angry at Him. They had Him arrested. They brought Him to the Roman governor and demanded He be put to death. And even though the governor could not find anything wrong with Jesus, he gave in to the crowd. Jesus was crucified — nailed to a cross on a hill called Golgotha. He died there. And as He hung on that cross, Jesus did something extraordinary: He prayed for the very people who were hurting Him. He said, 'Father, forgive them — they don't know what they are doing.'\n\nHere is the truth Jesus understood that nobody else could see: His death was not a mistake. He had come for this. All the wrong things people have ever done — every lie, every unkindness, every time we chose ourselves over God — all of it needed to be dealt with. And Jesus took it. He bore it. He paid for it on that cross.\n\nThey took His body and buried it in a tomb. A heavy stone was rolled in front of it. Jesus' friends were devastated. It seemed like the end.\n\nBut three days later, some women went to the tomb and found the stone had been rolled away. An angel was there, blazing with light. He said: 'Why are you looking for the living among the dead? He is not here — He is risen!' Jesus was alive. He had defeated death. And because He is alive, everyone who trusts in Him can be forgiven and live with Him forever. This is the best news that has ever existed.",
+      "childText": "Jesus was arrested by people who were afraid of Him. He was put on a cross — and He died. It was very sad. But Jesus did this on purpose — He was taking the punishment for all the wrong things we do, because He loves us. They buried Him in a tomb. But three days later — Jesus came back to life! The women who went to the tomb heard the angel say: He is risen! Jesus was alive again. He beat death! And because He is alive, we can be forgiven and be with God forever.",
+      "verses": [
+        {
+          "ref": "Luke 23:34",
+          "kjv": "Then said Jesus, Father, forgive them; for they know not what they do.",
+          "little_bible": "Even while He was on the cross, Jesus prayed for the people hurting Him: Father, please forgive them — they don't understand what they are doing."
+        },
+        {
+          "ref": "Luke 24:6",
+          "kjv": "He is not here, but is risen: remember how he spake unto you when he was yet in Galilee.",
+          "little_bible": "The angel said: He is not here — He is risen! Jesus is alive! Remember what He told you?"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why do you think Jesus prayed for the people who were hurting Him?",
+      "parentGuide": "This question opens a window into the nature of grace — loving the people who wrong us. Take time here. If your child asks why Jesus had to die, be honest and age-appropriate: 'All the wrong things we do put us far from God. Jesus took those wrongs onto Himself — like taking a punishment we deserved — so we could be forgiven and be close to God again.' This is the Gospel. Don't avoid it.",
+      "familyQuestion": "Jesus rose from the dead. What difference does it make that Jesus is alive right now — not just a story from the past?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear Jesus, thank You for dying for us. Thank You that You took the punishment for the wrong things we do, so we could be forgiven and be close to God. Thank You that You rose again — that You are alive right now. We trust You. Amen.",
+      "childPrompt": "You can tell Jesus: 'Thank You for dying for me. Thank You for coming back to life.'",
+      "prayerPoints": [
+        "Thank Jesus for taking the punishment for our sins so we could be forgiven",
+        "Thank Jesus that He is alive and that death could not hold Him"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "He is not here, but is risen.",
+      "ref": "Luke 24:6",
+      "memoryPhrase": "Jesus is risen — He is alive!",
+      "tip": "Start crouched down very small — then as you say 'He is RISEN!' leap up with arms wide. Do it three times getting bigger and louder each time. The resurrection deserves a big reaction."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell someone today that Jesus rose from the dead. It can be simple: 'Did you know Jesus came back to life?' See what they say.",
+      "parentNote": "The resurrection is the hinge of history. Children who are taught early that Jesus is not just a historical figure but a living person develop a qualitatively different faith. This action — telling someone — makes the story their own."
+    }
+  }
+}

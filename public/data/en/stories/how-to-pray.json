@@ -1,0 +1,54 @@
+{
+  "id": "how-to-pray",
+  "title": "How to Pray",
+  "subtitle": "Jesus showed His friends the best way to talk to God",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Prayer is simply talking to God — and Jesus showed us how.",
+  "ageRange": "4-7",
+  "bibleRef": "Matthew 6:9-13",
+  "durationMinutes": 5,
+  "coverEmoji": "🙏",
+  "coverColor": "#7C3AED",
+  "illustrationPrompt": "Jesus sitting with His disciples on a hillside, one disciple leaning forward with hands clasped together asking a question, Jesus smiling with patient warmth, early morning light, painterly gouache illustration on parchment paper, soft purple, gold, and cream palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "One day Jesus' friends watched Him pray. When He was done, one of them asked: 'Lord, will you teach us to pray?' They had seen that Jesus talked to God differently — not like a performance, not in a long formal speech. Somehow it felt like He was actually talking to someone He loved.\n\nJesus said yes. And He gave them a prayer — not a magical formula to repeat perfectly, but a pattern, a shape, a way of thinking about talking to God. He said: when you pray, say it like this.\n\n'Our Father in heaven' — God is your Father. You can speak to Him like a beloved child speaks to a loving dad. 'Hallowed be your name' — You are holy and wonderful. We say so. 'Your Kingdom come, your will be done on earth as it is in heaven' — We ask God to bring His good rule here, to our days and our world. 'Give us today our daily bread' — We trust Him for what we need today. 'Forgive us our sins, as we forgive those who sin against us' — We ask for forgiveness and choose to give it too. 'Lead us not into temptation, but deliver us from evil' — Help us make good choices, and keep us safe. Prayer is not complicated. It is a child talking to a Father who loves them. You can do this.",
+      "childText": "Jesus' friends asked: how do we pray? And Jesus showed them! He said: talk to God like a loving Father. Say thank You. Ask for what you need. Say sorry. Ask for help. Prayer is just talking to God — and God loves to listen. You can pray anytime, anywhere, in your own words.",
+      "verses": [
+        {
+          "ref": "Matthew 6:9-10",
+          "kjv": "Our Father which art in heaven, Hallowed be thy name. Thy kingdom come, Thy will be done in earth, as it is in heaven.",
+          "little_bible": "Our Father in heaven — You are holy and wonderful. Please bring Your Kingdom here, and let Your good ways fill our world, just as they fill heaven."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What would you most want to say to God if you knew He was listening right now?",
+      "parentGuide": "Many children feel they need special words to pray. This story dismantles that. Help your child see that God is not grading their prayer — He just wants to hear from them. Their own words, however simple, are perfect.",
+      "familyQuestion": "Jesus taught us to pray 'forgive us as we forgive others.' What does that mean for how we treat people who have hurt us?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Our Father in heaven, You are wonderful and holy. Please bring Your Kingdom into our home today. Thank You for giving us everything we need. Please forgive us when we do wrong — and help us to forgive others too. Lead us away from wrong choices and keep us safe. Amen.",
+      "childPrompt": "Now try praying in your own words — just talk to God like you'd talk to someone you love.",
+      "prayerPoints": [
+        "Tell God one thing you are grateful for today",
+        "Ask God for one thing you really need this week"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Our Father which art in heaven, Hallowed be thy name.",
+      "ref": "Matthew 6:9",
+      "memoryPhrase": "I can talk to God!",
+      "tip": "Walk through the Lord's Prayer line by line on your fingers: (1) Father in heaven, (2) holy name, (3) Your Kingdom, (4) daily bread, (5) forgive us, (6) keep us safe. Six steps, one prayer."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Pray the Lord's Prayer together slowly today, stopping at each line to talk about what it means. Let your child ask questions.",
+      "parentNote": "The Lord's Prayer is one of the most formative texts a child can learn. But it should be understood, not just recited. This guided walk-through helps it become a living prayer rather than a memorised recitation."
+    }
+  }
+}

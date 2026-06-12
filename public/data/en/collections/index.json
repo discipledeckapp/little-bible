@@ -1,0 +1,50 @@
+[
+  {
+    "id": "the-beginning",
+    "title": "The Beginning",
+    "subtitle": "God made everything — including you",
+    "emoji": "🌍",
+    "color": "#0EA5E9",
+    "stories": ["god-made-everything", "god-made-me"]
+  },
+  {
+    "id": "the-great-flood",
+    "title": "The Great Flood",
+    "subtitle": "Noah trusted God when no one else did",
+    "emoji": "🌊",
+    "color": "#1A2B4A",
+    "stories": ["noahs-big-boat", "gods-rainbow-promise"]
+  },
+  {
+    "id": "brave-and-faithful",
+    "title": "Brave and Faithful",
+    "subtitle": "God was with them even in the darkest places",
+    "emoji": "🦁",
+    "color": "#C9860E",
+    "stories": ["david-the-shepherd-boy", "daniel-and-the-lions", "jonah-and-the-big-fish"]
+  },
+  {
+    "id": "jesus-is-here",
+    "title": "Jesus Is Here",
+    "subtitle": "The one all the stories were pointing to",
+    "emoji": "✨",
+    "color": "#1A2B4A",
+    "stories": ["birth-of-jesus"]
+  },
+  {
+    "id": "what-jesus-taught",
+    "title": "What Jesus Taught",
+    "subtitle": "How to live in God's Kingdom",
+    "emoji": "❤️",
+    "color": "#F59E0B",
+    "stories": ["jesus-loves-children", "the-good-shepherd", "the-lost-sheep", "the-lost-son", "how-to-pray", "the-good-neighbour"]
+  },
+  {
+    "id": "jesus-saves",
+    "title": "Jesus Saves",
+    "subtitle": "The most important story ever told",
+    "emoji": "✝️",
+    "color": "#A84832",
+    "stories": ["jesus-saves"]
+  }
+]

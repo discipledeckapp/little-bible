@@ -1,0 +1,54 @@
+{
+  "id": "gods-rainbow-promise",
+  "title": "God's Rainbow Promise",
+  "subtitle": "After the flood, God made a forever promise — and painted it across the sky",
+  "collection": "the-great-flood",
+  "mainTruth": "God keeps every promise He makes — forever.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 9:8-17",
+  "durationMinutes": 5,
+  "coverEmoji": "🌈",
+  "coverColor": "#16A34A",
+  "illustrationPrompt": "A vast rainbow arching over calm flood waters receding, Noah's ark resting on a distant hillside, Noah and his family standing with arms raised looking up at the rainbow, golden late-afternoon light, painterly gouache illustration on parchment paper, warm greens, golds, and soft rainbow colours, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "At last the rain had stopped. Slowly, slowly, the floodwaters went down. The ark came to rest on solid ground, and Noah opened the great door. After so long inside, the world outside looked fresh and new and full of possibility. Animals bounded out into the sunshine. Noah's family stepped onto dry land and breathed deep.\n\nThen God did something wonderful. He spoke to Noah and made a promise — not just to Noah, but to every living creature on earth, forever. God said: 'I will never again send a flood to destroy the earth. This is my promise — and I am putting a sign in the sky so you will never forget it.'\n\nAnd there it was: the most beautiful thing Noah had ever seen. An arc of colour stretching from one end of the sky to the other — red and orange and yellow and green and blue and violet, painted across the clouds. A rainbow. God's signature in the sky. His promise written in light. And every single time you see a rainbow, that is God keeping His promise — to Noah, to you, to every creature He made. Because God never breaks a promise. Not one. Not ever.",
+      "childText": "When the flood was over, Noah's family came out of the ark. Then God made a big promise: He would never flood the whole earth again. And God put a rainbow in the sky as a sign! Every time you see a rainbow, God is saying: I keep My promises. And He always does!",
+      "verses": [
+        {
+          "ref": "Genesis 9:13",
+          "kjv": "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth.",
+          "little_bible": "God said: I am putting My rainbow in the clouds. It is a sign of My promise to the earth — forever."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Have you ever seen a rainbow? What did it make you feel?",
+      "parentGuide": "Next time your child sees a rainbow, help them remember this story. The rainbow is not just beautiful — it is God's word in the sky. You can build a lifelong habit: every rainbow prompts the thought, 'God keeps His promises.'",
+      "familyQuestion": "What is a promise you have made to someone? Why is it important to keep our promises?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You for keeping every promise You make. Thank You for the rainbow — a sign in the sky that reminds us You never forget. Help us to trust Your promises, even when we cannot see what is coming. Amen.",
+      "childPrompt": "Can you thank God for one of His promises?",
+      "prayerPoints": [
+        "Thank God that He is a promise-keeper",
+        "Ask God to help you be someone who keeps their promises too"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth.",
+      "ref": "Genesis 9:13",
+      "memoryPhrase": "God keeps every promise!",
+      "tip": "Draw a rainbow arc in the air with your finger — start at one side, sweep up and over. As you draw it say: 'God keeps every promise!' Do it each time you see a rainbow."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Draw a rainbow together. On each colour stripe, write or draw one promise of God you know — or one thing about God you trust.",
+      "parentNote": "Making something physical helps truth stick for young children. This rainbow drawing can go on the wall as a reminder that God is faithful. Some families keep it for years."
+    }
+  }
+}

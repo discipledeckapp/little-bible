@@ -1,0 +1,28 @@
+{
+  "id": "god-loves-me",
+  "name": "God Loves Me",
+  "subtitle": "Who is God, and does He know me?",
+  "description": "Your child's first journey through Scripture — discovering that God made them, loves them, and hears them.",
+  "ageRange": "4-5",
+  "durationWeeks": 5,
+  "mainTruth": "God made me, God loves me, and God hears me when I pray.",
+  "coverEmoji": "🌱",
+  "coverColor": "#F59E0B",
+  "outcomes": [
+    "Knows God created the world and them personally",
+    "Can say 'God loves me' with confidence",
+    "Has prayed to God in their own words at least once",
+    "Has one memory verse they can repeat"
+  ],
+  "stories": [
+    "god-made-everything",
+    "god-made-me",
+    "jesus-loves-children",
+    "how-to-pray",
+    "the-good-shepherd"
+  ],
+  "lumiStageStart": "seed",
+  "lumiStageEnd": "sprout",
+  "completionMessage": "You have planted five stories in your heart. God made you, God loves you, and now you know how to talk to Him. Lumi grew because you did.",
+  "parentNote": "After this journey, your child has the theological foundation they need: a Creator God who loves them personally and is accessible through prayer. Everything else builds on this."
+}

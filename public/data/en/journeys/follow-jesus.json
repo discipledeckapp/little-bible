@@ -1,0 +1,32 @@
+{
+  "id": "follow-jesus",
+  "name": "I Follow Jesus",
+  "subtitle": "What does it mean to follow Jesus?",
+  "description": "Eight weeks walking with Jesus through the Gospels — understanding who He is, what He taught, and how to follow Him.",
+  "ageRange": "6-7",
+  "durationWeeks": 8,
+  "mainTruth": "Following Jesus means loving God, loving people, and living differently.",
+  "coverEmoji": "🌿",
+  "coverColor": "#16A34A",
+  "outcomes": [
+    "Can explain who Jesus is in their own words",
+    "Has 3-4 memorised verses from Jesus' teaching",
+    "Can pray conversationally, not just recite",
+    "Understands the Gospel narrative: birth to resurrection",
+    "Has identified one way they want to follow Jesus this week"
+  ],
+  "stories": [
+    "birth-of-jesus",
+    "jesus-loves-children",
+    "how-to-pray",
+    "the-good-shepherd",
+    "the-lost-son",
+    "the-good-neighbour",
+    "the-good-shepherd",
+    "jesus-saves"
+  ],
+  "lumiStageStart": "sprout",
+  "lumiStageEnd": "sapling",
+  "completionMessage": "Eight stories. Eight weeks. You know who Jesus is now — not just the stories, but the person. He loves you. He knows your name. And you can follow Him every day.",
+  "parentNote": "This journey gives your child a Gospel-shaped faith: they know Jesus was born, lived, taught, died, and rose again — and that all of it was for them."
+}

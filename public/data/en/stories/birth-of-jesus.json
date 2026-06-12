@@ -1,0 +1,59 @@
+{
+  "id": "birth-of-jesus",
+  "title": "The Night Jesus Was Born",
+  "subtitle": "The most important baby in history was born in the most humble place",
+  "collection": "jesus-is-here",
+  "mainTruth": "God's Son came to earth as a tiny baby — for us.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 2:1-20",
+  "durationMinutes": 5,
+  "coverEmoji": "⭐",
+  "coverColor": "#1A2B4A",
+  "illustrationPrompt": "Mary holding the newborn Jesus in a manger lit by a single shaft of brilliant starlight, Joseph watching protectively, animals in the shadows, shepherds appearing at the stable entrance in awe, painterly gouache illustration on parchment paper, deep navy and gold palette with warm candlelight tones, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sacred and wonder-filled --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "For thousands of years, God's people had been waiting. They were waiting for a rescuer — someone God had promised to send. A child who would change everything. And the night it finally happened was not what anyone expected.\n\nMary and Joseph had to travel to the town of Bethlehem. By the time they arrived, Mary was about to have her baby. But every inn was full — no room, no space, no warm bed. Only a stable. So it was in a stable, among animals and straw and dust, that the Son of God came into the world. Not in a palace. Not with gold and trumpets. With a cry of a newborn baby, and a tired mother wrapping Him in cloth.\n\nBut the sky over Bethlehem knew something the world did not. Angels blazed into the darkness above the hills where shepherds were watching their flocks, and an angel said: 'Don't be afraid! I bring you the best news the world has ever heard! Today, a Saviour has been born in Bethlehem — Christ the Lord!' The shepherds ran to the stable and found it exactly as they had been told — a baby lying in a manger. They went home overwhelmed with joy, telling everyone what they had seen. And Mary held her baby close and kept it all in her heart. The long wait was over.",
+      "childText": "God's people had been waiting for a very special baby for a long, long time. When He finally came, there was no room in any inn. Jesus was born in a stable — a place for animals! Angels told the shepherds, and they ran to find Him. The most important baby ever was wrapped in cloth, lying in a manger. God's own Son — born for us!",
+      "verses": [
+        {
+          "ref": "Luke 2:7",
+          "kjv": "And she brought forth her firstborn son, and wrapped him in swaddling clothes, and laid him in a manger; because there was no room for them in the inn.",
+          "little_bible": "Mary had her baby — Jesus — and wrapped Him in soft cloths. She laid Him in a manger because there was no room anywhere else."
+        },
+        {
+          "ref": "Luke 2:10-11",
+          "kjv": "And the angel said unto them, Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people. For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+          "little_bible": "The angel said: Don't be afraid! I have the best news ever — today, God's Saviour has been born! He is Christ the Lord!"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why do you think Jesus was born in a stable instead of a palace?",
+      "parentGuide": "There is deep theology here for older children: Jesus came for ordinary people, not just important ones. He entered the world as the most vulnerable thing imaginable — a newborn. God chose to come low, so He could reach everyone. Even young children can grasp: Jesus came for me, not just for important people.",
+      "familyQuestion": "The shepherds were ordinary working people — not kings or important leaders. Why do you think God told them first?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You for sending Jesus. Thank You that He came as a tiny baby, in a humble stable — not too important or too grand for ordinary people. Thank You that Jesus came for us. Help us to never forget what that night meant. Amen.",
+      "childPrompt": "Can you say thank You to God for sending Jesus?",
+      "prayerPoints": [
+        "Thank God for sending His Son Jesus into the world",
+        "Ask God to help you understand more and more about why Jesus came"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+      "ref": "Luke 2:11",
+      "memoryPhrase": "Jesus is born — for us!",
+      "tip": "Cradle your arms like you are rocking a baby and say: 'Jesus is born!' Then point outward and say: 'For us!' Do it together — cradle, then point."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tonight before bed, look up at the sky. Imagine the angels blazing across it. Say together: 'The best news ever — Jesus was born for us.'",
+      "parentNote": "Christmas is one story but it belongs to every night, not just December. Helping children connect Jesus' birth to everyday wonder keeps the story alive year-round."
+    }
+  }
+}

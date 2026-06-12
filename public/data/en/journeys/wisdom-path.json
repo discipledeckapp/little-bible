@@ -1,0 +1,22 @@
+{
+  "id": "wisdom-path",
+  "name": "The Wisdom Path",
+  "subtitle": "How do I make good choices?",
+  "description": "A journey through Proverbs — learning that wisdom comes from knowing God and living His way.",
+  "ageRange": "6-7",
+  "durationWeeks": 6,
+  "mainTruth": "Wisdom begins with knowing and trusting God.",
+  "coverEmoji": "📖",
+  "coverColor": "#C9860E",
+  "outcomes": [
+    "Understands wisdom as a way of life, not just knowledge",
+    "Has Proverbs 3:5-6 memorised",
+    "Can identify one wise choice they made this week",
+    "Understands that fear of God means loving and respecting Him"
+  ],
+  "stories": [],
+  "lumiStageStart": "sapling",
+  "lumiStageEnd": "young-tree",
+  "completionMessage": "You walked the wisdom path. Keep walking it — it gets better every day.",
+  "parentNote": "Proverbs is one of the most practical books for discipling children in everyday decision-making. This journey connects their daily choices to the fear of God."
+}

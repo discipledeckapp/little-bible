@@ -1,0 +1,59 @@
+{
+  "id": "jesus-loves-children",
+  "title": "Jesus Loves Children",
+  "subtitle": "When everyone tried to keep the children away, Jesus said: bring them to me",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Jesus specifically wants children close to Him — including you.",
+  "ageRange": "4-7",
+  "bibleRef": "Mark 10:13-16",
+  "durationMinutes": 5,
+  "coverEmoji": "❤️",
+  "coverColor": "#F59E0B",
+  "illustrationPrompt": "Jesus seated on the ground surrounded by children of different ages climbing on His lap and gathering close, laughing and looking at His face with delight, Jesus smiling with complete joy and tenderness, disciples watching in the background with surprise, warm golden afternoon light, painterly gouache illustration on parchment paper, warm amber, cream, and deep red palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, the most warm and tender illustration in the collection --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "One day, parents were bringing their children to Jesus — little ones, toddlers, small children who could barely walk. They wanted Jesus to touch them, to bless them. But Jesus' disciples saw this and stepped in. 'Don't bother him,' they said firmly, waving the children away. 'He's too busy. He has important things to do. Come back another time.'\n\nBut when Jesus saw what was happening, He was not happy with His disciples. In fact, He was upset. He turned to them and said: 'Let the children come to Me. Do not stop them. Don't ever stop them. Because the Kingdom of God belongs to people like these.'\n\nAnd then Jesus did something wonderful. He sat down right there, and the children came — climbing on His lap, touching His hands, looking up at His face. And Jesus took each one in His arms, held them close, and blessed them. He wasn't too busy. He wasn't too important. He didn't need children to be older or quieter or more impressive. He wanted them exactly as they were. And He wants you exactly as you are. Not when you are bigger. Not when you know more. Right now. Jesus says: come to Me.",
+      "childText": "One day parents brought their children to Jesus. His helpers tried to send them away — 'Jesus is too busy!' But Jesus said: 'No! Let the children come to Me. Don't stop them!' He sat down and took the children in His arms and hugged them. Jesus was not too busy for children. He wanted them close. He wants YOU close too.",
+      "verses": [
+        {
+          "ref": "Mark 10:14",
+          "kjv": "But when Jesus saw it, he was much displeased, and said unto them, Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God.",
+          "little_bible": "When Jesus saw the children being turned away, He was upset. He said: Let the children come to Me — don't stop them! They belong in My Kingdom."
+        },
+        {
+          "ref": "Mark 10:16",
+          "kjv": "And he took them up in his arms, put his hands upon them, and blessed them.",
+          "little_bible": "Jesus took the children in His arms, held them, and blessed every single one."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "If you could run up to Jesus right now, what would you say to Him?",
+      "parentGuide": "This question gives your child permission to relate to Jesus directly and personally. Whatever they say — take it seriously. Affirm it. Jesus really does want to hear from them. If your child is shy or quiet, you can model it: 'I think I would say...' and then invite them.",
+      "familyQuestion": "Why do you think Jesus said the Kingdom of God belongs to people who are like children?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear Jesus, thank You that You wanted those children close to You — and that You want us close too. Thank You that we don't have to be older or bigger or better. We can come to You right now, just as we are. Here we are. We come to You. Amen.",
+      "childPrompt": "Jesus is here right now. Can you talk to Him like He is in the room?",
+      "prayerPoints": [
+        "Thank Jesus that He wants you close to Him",
+        "Ask Jesus to help you feel how much He loves you"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Suffer the little children to come unto me, and forbid them not.",
+      "ref": "Mark 10:14",
+      "memoryPhrase": "Jesus wants me close!",
+      "tip": "Hold your arms out wide — like Jesus opening His arms to the children — and say: 'Jesus wants ME close!' Then run into a parent's arms. Do it again and again."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Sit quietly for two minutes with your child and say: 'Let's just be with Jesus together.' No reading, no praying out loud — just sit. Then ask: 'What did you notice?'",
+      "parentNote": "This is the most important illustration in the whole product. Children who grow up knowing that Jesus specifically wants them — not just tolerates them — carry something unshakeable. This story is worth coming back to again and again."
+    }
+  }
+}

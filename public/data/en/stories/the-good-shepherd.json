@@ -1,0 +1,59 @@
+{
+  "id": "the-good-shepherd",
+  "title": "The Good Shepherd",
+  "subtitle": "Jesus knows every sheep by name — and He knows your name too",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Jesus is our Good Shepherd — He knows us by name and never leaves us.",
+  "ageRange": "4-7",
+  "bibleRef": "John 10:11-15, Luke 15:3-7",
+  "durationMinutes": 5,
+  "coverEmoji": "🐑",
+  "coverColor": "#16A34A",
+  "illustrationPrompt": "A shepherd carrying a small sheep on his shoulders across a hillside at dusk, the sheep's head resting against the shepherd's cheek contentedly, a small flock visible in the valley below, warm amber sunset light, painterly gouache illustration on parchment paper, warm green, gold, and deep blue palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, tender and protective --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "In Jesus' time, shepherds spent their whole lives with their sheep. They knew each one — their faces, their voices, even their personalities. Some shepherds gave each sheep a name. And when the shepherd called, the sheep knew his voice and came running — because they trusted him.\n\nJesus said: 'I am the Good Shepherd.' And then He said something extraordinary: 'I know my sheep, and my sheep know me.' Not 'I manage my sheep.' Not 'I keep my sheep under control.' He said: I know them. Like a shepherd who knows each face, each name, each one that limps, each one that tends to wander. He knows them.\n\nAnd then Jesus said the most costly thing: 'The Good Shepherd lays down his life for the sheep.' Not a hired worker who runs away when danger comes — but a real shepherd who stays, who fights for his flock, who would give everything to keep them safe. That is who Jesus is for you. He knows your name. He knows your face. He knows everything about you — and He chose you. And He will never, ever leave you or let you go.",
+      "childText": "Jesus said He is like a good shepherd. A good shepherd knows all his sheep by name and loves every one of them. Jesus knows your name! He knows everything about you. And Jesus said He is the kind of shepherd who stays — even when things get dangerous. He will never leave you.",
+      "verses": [
+        {
+          "ref": "John 10:11",
+          "kjv": "I am the good shepherd: the good shepherd giveth his life for the sheep.",
+          "little_bible": "Jesus said: I am the Good Shepherd. A good shepherd loves his sheep so much he would give his life for them."
+        },
+        {
+          "ref": "John 10:14",
+          "kjv": "I am the good shepherd, and know my sheep, and am known of mine.",
+          "little_bible": "Jesus said: I know My sheep — and they know Me. Jesus knows you. And you can know Him too."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What does it feel like to know that Jesus knows your name?",
+      "parentGuide": "This can be deeply moving for children — the personal, intimate nature of Jesus' love. Let your child sit with it. You might say: 'Jesus knows your name — your actual name, [child's name]. He knows you.' Watch their face.",
+      "familyQuestion": "A good shepherd stays with the sheep even when it is dangerous. How does it make you feel to know that Jesus never leaves us?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear Jesus, thank You for being our Good Shepherd. Thank You that You know our names and You know us — really know us. Thank You that You never leave us and never let us go. Help us to know Your voice and follow You. Amen.",
+      "childPrompt": "Can you tell Jesus: 'Thank You that You know my name'?",
+      "prayerPoints": [
+        "Thank Jesus that He knows you by name",
+        "Ask Jesus to help you recognise His voice when He speaks to you"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "I am the good shepherd, and know my sheep, and am known of mine.",
+      "ref": "John 10:14",
+      "memoryPhrase": "Jesus knows my name!",
+      "tip": "Whisper your child's name slowly and say: 'Jesus knows YOUR name — [child's name].' Then together say: 'Jesus knows my name!' The personalisation makes this one stick."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Learn one name of someone you don't know very well today — a neighbour, a classmate, someone at church. Because knowing someone's name is how Jesus loves us.",
+      "parentNote": "Jesus' love is intensely personal. Knowing someone's name is one of the most basic forms of dignity and respect. This action connects the theological truth to a concrete act of love your child can perform today."
+    }
+  }
+}

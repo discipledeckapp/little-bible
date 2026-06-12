@@ -1,0 +1,59 @@
+{
+  "id": "noahs-big-boat",
+  "title": "Noah's Big Boat",
+  "subtitle": "When everyone laughed, Noah trusted God and built the biggest boat ever",
+  "collection": "the-great-flood",
+  "mainTruth": "When we trust and obey God, He keeps us safe.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 6-8",
+  "durationMinutes": 5,
+  "coverEmoji": "🚢",
+  "coverColor": "#1A2B4A",
+  "illustrationPrompt": "Noah's enormous wooden ark under stormy dark skies, two of every animal streaming toward the ark ramp — elephants, giraffes, birds, lions — warm lantern light glowing from inside, painterly gouache illustration on parchment paper, deep navy and amber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, epic and awe-inspiring yet warm --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Long, long ago, when the world had grown very sad and people had forgotten all about God, there was one man who still loved God with his whole heart. His name was Noah. Everyone around him was doing wrong things — but Noah chose to listen to God and obey Him.\n\nOne day, God spoke to Noah and gave him an extraordinary task: build a giant boat. Not a little fishing boat — an enormous ark, big enough for Noah's whole family and two of every kind of animal on earth. People must have laughed. There was no ocean nearby. There was no rain falling. A boat? Out here? But Noah did not argue or make excuses. He simply picked up his tools and started building — because he trusted God.\n\nFor many years Noah built and built. When the ark was finished, the animals came — two by two, just as God had said. Then God shut the door. The rain fell. The floodwaters rose. But inside the ark, Noah, his family, and all the animals were safe. The very same God who sent the flood kept them through it. Because Noah trusted God — and God was faithful.",
+      "childText": "Noah loved God when everyone else had forgotten Him. God told Noah to build a huge boat — even though there was no sea nearby! People laughed. But Noah trusted God and built the boat anyway. The animals came in two by two. Then the rain came. But Noah and his family were safe inside — because they trusted God!",
+      "verses": [
+        {
+          "ref": "Genesis 6:22",
+          "kjv": "Thus did Noah; according to all that God commanded him, so did he.",
+          "little_bible": "Noah did everything God told him to do. He trusted God and obeyed."
+        },
+        {
+          "ref": "Genesis 7:1",
+          "kjv": "And the LORD said unto Noah, Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation.",
+          "little_bible": "God said to Noah: 'Come into the ark — I have seen that you love Me and follow Me.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "If you were Noah and people laughed at your boat, what would you have done?",
+      "parentGuide": "Noah's obedience was costly — he looked foolish for years before anyone could see he was right. Talk about times when doing the right thing feels hard because others don't understand. Reassure your child that trusting God is always worth it, even when it is hard.",
+      "familyQuestion": "Can you think of a time you trusted someone and it turned out they were right? How did that feel?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You for the story of Noah. He trusted You even when it was hard, even when people laughed. Help us to be like Noah — to trust You and obey You even when it is not easy. We know You always keep Your promises. Amen.",
+      "childPrompt": "Can you ask God to help you trust Him even when it feels hard?",
+      "prayerPoints": [
+        "Thank God that He keeps us safe",
+        "Ask God to give you courage to obey Him even when others don't understand"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Thus did Noah; according to all that God commanded him, so did he.",
+      "ref": "Genesis 6:22",
+      "memoryPhrase": "Noah trusted God and obeyed!",
+      "tip": "Do a big hammering motion with your fist — like you are building the ark — and say: 'Noah trusted God and obeyed!' Do it three times, getting louder each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Think of one thing God (or a parent) has asked you to do that feels hard. Do it today anyway — and notice how it feels afterwards.",
+      "parentNote": "Obedience is one of the most important character habits to build in early childhood. Noah's story shows that obedience is not weakness — it takes real courage. Celebrate your child when they obey even when it is hard."
+    }
+  }
+}
