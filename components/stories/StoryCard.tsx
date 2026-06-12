@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Story, StoryStatus } from '@/types';
 import PazSparrow from '@/components/mascot/PazSparrow';
 
@@ -10,7 +11,7 @@ interface StoryCardProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
-export default function StoryCard({ story, status = 'unread', onClick, size = 'md' }: StoryCardProps) {
+export default function StoryCard({ story, status = 'unread', size = 'md' }: StoryCardProps) {
   // Size variants
   const sizeClasses = {
     sm: 'w-32 h-44',
@@ -22,8 +23,8 @@ export default function StoryCard({ story, status = 'unread', onClick, size = 'm
   const isStarted = status === 'in-progress';
 
   return (
-    <button
-      onClick={onClick}
+    <Link
+      href={`/stories/${story.id}`}
       className={`
         ${sizeClasses[size]} relative flex flex-col rounded-2xl overflow-hidden
         shadow-md hover:shadow-lg transition-all duration-200
@@ -90,6 +91,6 @@ export default function StoryCard({ story, status = 'unread', onClick, size = 'm
       {isComplete && (
         <div className="absolute inset-0 bg-amber-400/5 pointer-events-none rounded-2xl" />
       )}
-    </button>
+    </Link>
   );
 }

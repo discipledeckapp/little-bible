@@ -164,6 +164,14 @@ export function isChapterComplete(
   return done.length >= totalVerses;
 }
 
+export function addSeeds(amount: number): void {
+  const p = getProgress();
+  p.wisdomSeeds += amount;
+  updateStreak(p);
+  saveProgress(p);
+  scheduleCloudSync();
+}
+
 export function resetProgress(): void {
   if (typeof window !== 'undefined') localStorage.removeItem(PROGRESS_KEY);
 }
