@@ -164,6 +164,8 @@ export interface Journey {
   ageRange: string;
   durationWeeks: number;
   mainTruth: string;
+  coverEmoji: string;
+  coverColor: string;
   outcomes: string[];
   stories: string[];          // ordered array of story IDs
   completionMessage: string;

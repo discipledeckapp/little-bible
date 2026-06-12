@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
-import BenefitsSection from '@/components/home/BenefitsSection';
-import ExperienceSection from '@/components/home/ExperienceSection';
+import JourneySection from '@/components/home/JourneySection';
+import StoriesSection from '@/components/home/StoriesSection';
 import WisdomBar from '@/components/home/WisdomBar';
 import FamilyStreakBanner from '@/components/home/FamilyStreakBanner';
 import LibrarySection from '@/components/home/LibrarySection';
@@ -22,26 +22,24 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* 1. Hero — story, CTAs, featured verse */}
+      {/* 1. Hero */}
       <HeroSection />
 
-      {/* 2. Benefits — why Little Bible exists */}
-      <BenefitsSection />
-
-      {/* 3. Experience — how it works */}
-      <ExperienceSection />
-
-      {/* 4. Progress bar — only shown once user has started */}
+      {/* 2. Progress (shown when started) */}
       <div className="bg-[#FFFBF5] px-0 py-2">
         <WisdomBar />
       </div>
-
-      {/* 5. Family streak + growth banner — only shown once user has started */}
       <div className="bg-[#FFFBF5] pb-4">
         <FamilyStreakBanner />
       </div>
 
-      {/* 6. Library — browse content */}
+      {/* 3. Journey paths — age-based starting points */}
+      <JourneySection />
+
+      {/* 4. Stories by collection — story-first browsing */}
+      <StoriesSection />
+
+      {/* 5. Full Bible library — book/chapter navigation */}
       <LibrarySection availableBooks={books} />
 
       <Footer />

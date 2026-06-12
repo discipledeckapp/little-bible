@@ -1,12 +1,14 @@
+import fs from 'fs';
+import path from 'path';
 import type { Story, Collection, Journey } from '@/types';
 
 // ── Story loading ─────────────────────────────────────────────────────────────
 
 export async function getStory(id: string): Promise<Story | null> {
   try {
-    const res = await fetch(`/data/en/stories/${id}.json`);
-    if (!res.ok) return null;
-    return res.json();
+    const filePath = path.join(process.cwd(), 'public', 'data', 'en', 'stories', `${id}.json`);
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(raw);
   } catch {
     return null;
   }
@@ -27,9 +29,9 @@ export async function getAllStories(): Promise<Story[]> {
 
 export async function getAllCollections(): Promise<Collection[]> {
   try {
-    const res = await fetch('/data/en/collections/index.json');
-    if (!res.ok) return [];
-    return res.json();
+    const filePath = path.join(process.cwd(), 'public', 'data', 'en', 'collections', 'index.json');
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(raw);
   } catch {
     return [];
   }
@@ -46,9 +48,9 @@ const JOURNEY_IDS = ['god-loves-me', 'follow-jesus', 'wisdom-path'];
 
 export async function getJourney(id: string): Promise<Journey | null> {
   try {
-    const res = await fetch(`/data/en/journeys/${id}.json`);
-    if (!res.ok) return null;
-    return res.json();
+    const filePath = path.join(process.cwd(), 'public', 'data', 'en', 'journeys', `${id}.json`);
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(raw);
   } catch {
     return null;
   }
