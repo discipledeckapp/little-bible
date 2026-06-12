@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import type { Story, StoryStep } from '@/types';
 import { markStoryStarted, markStoryComplete } from '@/lib/story-progress';
 import { addSeeds, getProgress } from '@/lib/progress';
@@ -34,9 +35,10 @@ const STEP_CONFIG: Record<string, StepConfig> = {
 
 interface StoryReaderProps {
   story: Story;
+  nextStory?: Pick<Story, 'id' | 'title' | 'subtitle' | 'coverEmoji' | 'coverColor'> | null;
 }
 
-export default function StoryReader({ story }: StoryReaderProps) {
+export default function StoryReader({ story, nextStory }: StoryReaderProps) {
   const router = useRouter();
   const [step, setStep] = useState<Step>('cover');
   const [revealed, setRevealed] = useState(false);
@@ -163,6 +165,20 @@ export default function StoryReader({ story }: StoryReaderProps) {
             &ldquo;{story.steps.remember.memoryPhrase}&rdquo;
           </p>
         </div>
+        {nextStory && (
+          <Link
+            href={`/stories/${nextStory.id}`}
+            className="w-full max-w-xs flex items-center gap-4 bg-white/15 hover:bg-white/25 border border-white/20 rounded-2xl px-5 py-4 mb-3 transition-all active:scale-95 fade-in"
+          >
+            <span className="text-3xl shrink-0">{nextStory.coverEmoji}</span>
+            <div className="text-left flex-1 min-w-0">
+              <p className="text-amber-200 text-xs font-bold uppercase tracking-widest">Up Next</p>
+              <p className="text-white font-extrabold text-sm leading-tight truncate">{nextStory.title}</p>
+              <p className="text-amber-200/70 text-xs leading-tight truncate">{nextStory.subtitle}</p>
+            </div>
+            <span className="text-white/60 text-lg shrink-0">→</span>
+          </Link>
+        )}
         <button
           onClick={() => router.push('/')}
           className="w-full max-w-xs py-4 rounded-2xl font-bold text-white bg-amber-500 hover:bg-amber-600 active:scale-95 transition-all"
