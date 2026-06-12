@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ── NextAuth required tables ─────────────────────────────────────────────────
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+  accounts      Account[]
+  sessions      Session[]
+  progress      UserProgress?
+  donations     Donation[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ── App data ─────────────────────────────────────────────────────────────────
+
+model UserProgress {
+  id                   String   @id @default(cuid())
+  userId               String   @unique
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wisdomSeeds          Int      @default(0)
+  streak               Int      @default(0)
+  lastActiveDate       String   @default("")
+  completedVersesJson  String   @default("{}") @db.Text
+  completedChapters    String[] @default([])
+  badgesJson           String   @default("[]") @db.Text
+  sessionsJson         String   @default("[]") @db.Text
+  updatedAt            DateTime @updatedAt
+}
+
+model Donation {
+  id         String   @id @default(cuid())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id])
+  amount     Int      // in smallest unit (cents / kobo)
+  currency   String   // 'usd' | 'ngn'
+  provider   String   // 'stripe' | 'paystack'
+  status     String   @default("pending") // 'pending' | 'completed' | 'failed'
+  reference  String?  @unique
+  createdAt  DateTime @default(now())
+}

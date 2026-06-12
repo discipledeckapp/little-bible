@@ -1,0 +1,7 @@
+[
+  { "book": "Proverbs", "chapter": 1, "file": "proverbs_chapter_01.json" },
+  { "book": "Proverbs", "chapter": 2, "file": "proverbs_chapter_02.json" },
+  { "book": "Proverbs", "chapter": 3, "file": "proverbs_chapter_03.json" },
+  { "book": "Proverbs", "chapter": 4, "file": "proverbs_chapter_04.json" },
+  { "book": "Proverbs", "chapter": 5, "file": "proverbs_chapter_05.json" }
+]

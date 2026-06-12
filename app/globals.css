@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Base surface ── */
+  --color-background: #FFFBF5;
+  --color-foreground: #1C1917;
+
+  /* ── Brand palette ── */
+  --color-wisdom-gold:    #F59E0B;  /* Scripture memory, seeds, primary CTA */
+  --color-wisdom-light:   #FEF3C7;  /* Cards, subtle backgrounds */
+  --color-sky-blue:       #60A5FA;  /* Prayer, peace, reflective moments */
+  --color-sky-light:      #EFF6FF;  /* Prayer step backgrounds */
+  --color-prayer-purple:  #A78BFA;  /* Spiritual depth, prayer emphasis */
+  --color-prayer-light:   #F5F3FF;  /* Prayer card backgrounds */
+  --color-growth-green:   #34D399;  /* Growth, completion, encouragement */
+  --color-growth-light:   #ECFDF5;  /* Growth card backgrounds */
+  --color-love-red:       #FB7185;  /* Love, warmth, family */
+  --color-love-light:     #FFF1F2;  /* Love card backgrounds */
+  --color-deep-earth:     #78350F;  /* Bible-brown, brand warmth */
+
+  /* Font families — variables set by next/font in layout.tsx */
+  --font-sans:     var(--font-nunito), system-ui, sans-serif;
+  --font-child:    var(--font-nunito), system-ui, sans-serif;
+  --font-devotion: var(--font-lora), Georgia, serif;
+  --font-display:  var(--font-playfair), Georgia, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-child), -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Verse card entrance ─────────────────────────────── */
+.verse-enter {
+  animation: verseEnter 0.3s ease-out both;
+}
+
+@keyframes verseEnter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Slide in from right (family step forward) ──────── */
+.slide-in-right {
+  animation: slideInRight 0.28s ease-out both;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Slide in from left (family step back) ──────────── */
+.slide-in-left {
+  animation: slideInLeft 0.28s ease-out both;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Fade ────────────────────────────────────────────── */
+.fade-in {
+  animation: fadeIn 0.25s ease-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Encouragement pop ───────────────────────────────── */
+.pop-in {
+  animation: popIn 0.32s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.65); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Chapter complete celebration ────────────────────── */
+.celebrate-in {
+  animation: celebrateIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes celebrateIn {
+  from { opacity: 0; transform: scale(0.85) translateY(24px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── Shine pulse (badge unlock) ─────────────────────── */
+.shine-pulse {
+  animation: shinePulse 1.2s ease-in-out infinite;
+}
+
+@keyframes shinePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(245, 158, 11, 0); }
+}
+
+/* ── Reduced motion overrides ────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .verse-enter,
+  .slide-in-right,
+  .slide-in-left,
+  .fade-in,
+  .pop-in,
+  .celebrate-in,
+  .shine-pulse {
+    animation: none;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Details/summary ─────────────────────────────────── */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+/* ── Hero gradient ───────────────────────────────────── */
+.hero-bg {
+  background: linear-gradient(160deg, #1c0d00 0%, #3d1a00 35%, #78350f 65%, #92400e 100%);
+}
+
+/* ── Amber glow ring (illustration center) ───────────── */
+.amber-glow {
+  box-shadow:
+    0 0 60px 20px rgba(251, 191, 36, 0.25),
+    0 0 120px 40px rgba(245, 158, 11, 0.12);
+}
+
+/* ── Floating card glass effect ──────────────────────── */
+.card-glass {
+  background: rgba(255, 251, 245, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Section wave divider ────────────────────────────── */
+.wave-divider {
+  position: relative;
+}
+.wave-divider::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #FFFBF5;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+/* ── Benefit card hover ──────────────────────────────── */
+.benefit-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.benefit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(120, 53, 15, 0.1);
+}
+
+/* ── Scripture display ───────────────────────────────── */
+.scripture-text {
+  font-family: var(--font-devotion);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ── Soft divider ────────────────────────────────────── */
+.divider-amber {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.3), transparent);
+}
+
+/* ── PIN dots ────────────────────────────────────────── */
+.pin-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #e7e5e4;
+  transition: background 0.15s ease;
+}
+.pin-dot.filled  { background: #f59e0b; }
+.pin-dot.error   { background: #ef4444; }

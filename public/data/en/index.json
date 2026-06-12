@@ -1,0 +1,12 @@
+[
+  {
+    "book": "Genesis",
+    "slug": "genesis",
+    "indexFile": "genesis/index.json"
+  },
+  {
+    "book": "Proverbs",
+    "slug": "proverbs",
+    "indexFile": "proverbs/index.json"
+  }
+]
