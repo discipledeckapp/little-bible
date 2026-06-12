@@ -1,4 +1,6 @@
 import type { Progress, Badge, DevotionSession, AppMode } from '@/types';
+import { getLumiStage } from '@/components/mascot/LumiMascot';
+import type { LumiStage } from '@/components/mascot/LumiMascot';
 
 // Lazy import — avoids circular deps; only fires in browser when signed in
 function scheduleCloudSync(): void {
@@ -164,12 +166,15 @@ export function isChapterComplete(
   return done.length >= totalVerses;
 }
 
-export function addSeeds(amount: number): void {
+export function addSeeds(amount: number): { newStage: LumiStage | null } {
   const p = getProgress();
+  const stageBefore = getLumiStage(p.wisdomSeeds);
   p.wisdomSeeds += amount;
   updateStreak(p);
   saveProgress(p);
   scheduleCloudSync();
+  const stageAfter = getLumiStage(p.wisdomSeeds);
+  return { newStage: stageAfter !== stageBefore ? stageAfter : null };
 }
 
 export function resetProgress(): void {

@@ -6,6 +6,8 @@ import type { Story, StoryStep } from '@/types';
 import { markStoryStarted, markStoryComplete } from '@/lib/story-progress';
 import { addSeeds, getProgress } from '@/lib/progress';
 import LumiMascot, { getLumiStage } from '@/components/mascot/LumiMascot';
+import LumiStageUp from '@/components/mascot/LumiStageUp';
+import type { LumiStage } from '@/components/mascot/LumiMascot';
 
 type Step = 'cover' | 'read' | 'discuss' | 'pray' | 'remember' | 'do' | 'complete';
 
@@ -37,6 +39,7 @@ export default function StoryReader({ story }: StoryReaderProps) {
   const [step, setStep] = useState<Step>('cover');
   const [revealed, setRevealed] = useState(false);
   const [seeds, setSeeds] = useState(0);
+  const [stageUpTo, setStageUpTo] = useState<LumiStage | null>(null);
 
   useEffect(() => {
     const p = getProgress();
@@ -57,7 +60,8 @@ export default function StoryReader({ story }: StoryReaderProps) {
       setRevealed(false);
     } else {
       markStoryComplete(story.id);
-      addSeeds(10);
+      const { newStage } = addSeeds(10);
+      if (newStage) setStageUpTo(newStage);
       setSeeds(s => s + 10);
       setStep('complete');
     }
@@ -134,6 +138,9 @@ export default function StoryReader({ story }: StoryReaderProps) {
     const lumiStage = getLumiStage(seeds);
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-amber-50 pb-12">
+        {stageUpTo && (
+          <LumiStageUp newStage={stageUpTo} onDismiss={() => setStageUpTo(null)} />
+        )}
         <div className="lumi-grow mb-2">
           <LumiMascot stage={lumiStage} animate className="w-28 h-28" />
         </div>
