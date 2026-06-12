@@ -8,6 +8,8 @@ import { addSeeds, getProgress } from '@/lib/progress';
 import LumiMascot, { getLumiStage } from '@/components/mascot/LumiMascot';
 import LumiStageUp from '@/components/mascot/LumiStageUp';
 import type { LumiStage } from '@/components/mascot/LumiMascot';
+import WonderWord from '@/components/stories/WonderWord';
+import { getWonderWords, type WonderWordDef } from '@/lib/wonder-words';
 
 type Step = 'cover' | 'read' | 'discuss' | 'pray' | 'remember' | 'do' | 'complete';
 
@@ -225,7 +227,7 @@ export default function StoryReader({ story }: StoryReaderProps) {
 
       {/* Step body */}
       <div className="flex-1 overflow-y-auto px-5 py-5 slide-in-right">
-        <StepBody step={step} stepData={stepData} cfg={cfg} revealed={revealed} setRevealed={setRevealed} />
+        <StepBody step={step} stepData={stepData} cfg={cfg} revealed={revealed} setRevealed={setRevealed} wonderDefs={getWonderWords(story.id)} />
       </div>
 
       {/* Bottom CTA */}
@@ -244,6 +246,45 @@ export default function StoryReader({ story }: StoryReaderProps) {
   );
 }
 
+// ── renderWithWonderWords ─────────────────────────────────────────────────────
+
+function renderWithWonderWords(text: string, defs: WonderWordDef[]): React.ReactNode {
+  if (defs.length === 0) return text;
+
+  let parts: (string | React.ReactNode)[] = [text];
+
+  defs.forEach((def, defIdx) => {
+    const next: (string | React.ReactNode)[] = [];
+    parts.forEach((part, partIdx) => {
+      if (typeof part !== 'string') {
+        next.push(part);
+        return;
+      }
+      const idx = part.toLowerCase().indexOf(def.phrase.toLowerCase());
+      if (idx === -1) {
+        next.push(part);
+        return;
+      }
+      const before = part.slice(0, idx);
+      const match  = part.slice(idx, idx + def.phrase.length);
+      const after  = part.slice(idx + def.phrase.length);
+      if (before) next.push(before);
+      next.push(
+        <WonderWord
+          key={`${defIdx}-${partIdx}`}
+          word={match}
+          fact={def.fact}
+          emoji={def.emoji}
+        />
+      );
+      if (after) next.push(after);
+    });
+    parts = next;
+  });
+
+  return <>{parts}</>;
+}
+
 // ── StepBody ──────────────────────────────────────────────────────────────────
 
 interface StepBodyProps {
@@ -252,9 +293,10 @@ interface StepBodyProps {
   cfg: StepConfig;
   revealed: boolean;
   setRevealed: (v: boolean) => void;
+  wonderDefs: WonderWordDef[];
 }
 
-function StepBody({ step, stepData, cfg, revealed, setRevealed }: StepBodyProps) {
+function StepBody({ step, stepData, cfg, revealed, setRevealed, wonderDefs }: StepBodyProps) {
   // READ step
   if (step === 'read') {
     return (
@@ -264,7 +306,7 @@ function StepBody({ step, stepData, cfg, revealed, setRevealed }: StepBodyProps)
           <div className="prose prose-stone max-w-none">
             {stepData.text.split('\n').filter(Boolean).map((para, i) => (
               <p key={i} className="text-stone-700 text-base leading-relaxed mb-3" style={{ fontFamily: 'var(--font-devotion)' }}>
-                {para}
+                {renderWithWonderWords(para, wonderDefs)}
               </p>
             ))}
           </div>
