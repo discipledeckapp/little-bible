@@ -209,7 +209,9 @@ export default function ChildModeReader({ chapter, bookSlug }: ChildModeReaderPr
       <div className="mb-5">
         <div className="flex items-center justify-between mb-1.5">
           <span className="text-sm font-bold text-stone-400">
-            Verse {verseIndex + 1} of {total}
+            <span className="text-amber-600 font-extrabold">{chapter.book} {chapter.chapter}:{verse.verse}</span>
+            <span className="text-stone-300 mx-1.5">·</span>
+            {verseIndex + 1} of {total}
           </span>
           <span className="text-sm font-extrabold text-amber-600">{progress}%</span>
         </div>
@@ -244,6 +246,44 @@ export default function ChildModeReader({ chapter, bookSlug }: ChildModeReaderPr
 
           <div className="px-5 sm:px-7 pt-5 pb-6 space-y-5">
 
+            {/* Ages selector pill — shown only when little reader content exists */}
+            {hasLittleReader && (
+              <div className="flex items-center justify-center gap-1 mb-3 bg-stone-50 rounded-xl p-1">
+                <button
+                  onClick={() => !littleReaderMode && toggleLittleReader()}
+                  className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition-colors focus:outline-none ${
+                    !littleReaderMode
+                      ? 'bg-amber-500 text-white shadow-sm'
+                      : 'text-stone-500 hover:text-stone-700'
+                  }`}
+                  aria-pressed={!littleReaderMode}
+                >
+                  Ages 5–7
+                </button>
+                <button
+                  onClick={() => littleReaderMode && toggleLittleReader()}
+                  className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition-colors focus:outline-none ${
+                    littleReaderMode
+                      ? 'bg-amber-500 text-white shadow-sm'
+                      : 'text-stone-500 hover:text-stone-700'
+                  }`}
+                  aria-pressed={littleReaderMode}
+                >
+                  🌱 Ages 4–5
+                </button>
+              </div>
+            )}
+
+            {/* Persistent verse reference */}
+            <div className="flex items-center justify-between mb-1">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-stone-400 uppercase tracking-widest">
+                <span className="text-amber-500">{chapter.book}</span>
+                <span className="text-stone-300">·</span>
+                <span>{chapter.chapter}:{verse.verse}</span>
+              </span>
+              {/* KJV reference toggle if needed */}
+            </div>
+
             {/* ① Read aloud — PRIMARY action, top of content */}
             <button
               onClick={speaking ? stopReading : startReading}
@@ -262,23 +302,6 @@ export default function ChildModeReader({ chapter, bookSlug }: ChildModeReaderPr
 
             {/* ② Verse text — large, Nunito Bold */}
             <div>
-              {hasLittleReader && (
-                <div className="flex justify-end mb-2">
-                  <button
-                    onClick={toggleLittleReader}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
-                      littleReaderMode
-                        ? 'bg-amber-200 text-amber-800'
-                        : 'bg-stone-100 text-stone-500 hover:bg-stone-200'
-                    }`}
-                    aria-pressed={littleReaderMode}
-                    aria-label="Toggle Little Reader mode (ages 4–5)"
-                  >
-                    <span aria-hidden="true">{littleReaderMode ? '🌱' : '📖'}</span>
-                    {littleReaderMode ? 'Ages 4–5' : 'Ages 5–7'}
-                  </button>
-                </div>
-              )}
               <p className="text-stone-800 text-2xl sm:text-3xl font-bold leading-relaxed font-child">
                 {verseText}
               </p>

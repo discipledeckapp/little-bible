@@ -203,6 +203,18 @@ export default function FamilyModeReader({ chapter, bookSlug }: FamilyModeReader
         </div>
       </div>
 
+      {/* Verse reference — always visible */}
+      <div className="flex items-center justify-between mb-3">
+        <span className="inline-flex items-center gap-1.5">
+          <span className="text-xs font-extrabold text-amber-600 uppercase tracking-wide">
+            {chapter.book} {chapter.chapter}:{verse.verse}
+          </span>
+        </span>
+        <span className="text-xs text-stone-400 font-medium" aria-hidden="true">
+          {STEPS.findIndex(s => s.id === step) + 1} / {STEPS.length}
+        </span>
+      </div>
+
       {/* Step indicator pills */}
       <div className="flex gap-1.5 mb-5" role="list" aria-label="Devotion steps">
         {STEPS.map((s, i) => {
