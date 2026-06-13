@@ -1,12 +1,9 @@
 [
-  {
-    "book": "Genesis",
-    "slug": "genesis",
-    "indexFile": "genesis/index.json"
-  },
-  {
-    "book": "Proverbs",
-    "slug": "proverbs",
-    "indexFile": "proverbs/index.json"
-  }
+  { "book": "Genesis",  "slug": "genesis",  "indexFile": "genesis/index.json"  },
+  { "book": "Psalms",   "slug": "psalms",   "indexFile": "psalms/index.json"   },
+  { "book": "Proverbs", "slug": "proverbs", "indexFile": "proverbs/index.json" },
+  { "book": "Matthew",  "slug": "matthew",  "indexFile": "matthew/index.json"  },
+  { "book": "Mark",     "slug": "mark",     "indexFile": "mark/index.json"     },
+  { "book": "Luke",     "slug": "luke",     "indexFile": "luke/index.json"     },
+  { "book": "John",     "slug": "john",     "indexFile": "john/index.json"     }
 ]
