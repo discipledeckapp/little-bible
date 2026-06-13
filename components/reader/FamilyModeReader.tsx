@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import type { Chapter, Badge } from '@/types';
 import type { FamilyStep } from '@/types';
+import { recordMemberProgress, getActiveMemberId } from '@/lib/family-client';
 import { speakText, stopSpeech, isSpeechSupported } from '@/lib/audio';
 import {
   markVerseComplete,
@@ -42,11 +43,17 @@ type MemoryPhase = 'hear' | 'say' | 'done';
 interface FamilyModeReaderProps {
   chapter: Chapter;
   bookSlug: string;
+  initialVerse?: number;
 }
 
-export default function FamilyModeReader({ chapter, bookSlug }: FamilyModeReaderProps) {
+export default function FamilyModeReader({ chapter, bookSlug, initialVerse }: FamilyModeReaderProps) {
   const router = useRouter();
-  const [verseIndex, setVerseIndex] = useState(0);
+  const [verseIndex, setVerseIndex] = useState(() => {
+    if (initialVerse && initialVerse >= 1 && initialVerse <= chapter.verses.length) {
+      return initialVerse - 1;
+    }
+    return 0;
+  });
   const [step, setStep]             = useState<FamilyStep>('read');
   const [direction, setDirection]   = useState<'forward' | 'back'>('forward');
   const [animKey, setAnimKey]       = useState(0);
@@ -102,6 +109,10 @@ export default function FamilyModeReader({ chapter, bookSlug }: FamilyModeReader
     if (newBadge) setEarnedBadge(newBadge);
     recordSession(bookSlug, chapter.chapter, verse.verse, 'family');
     setSeedsThisChapter((n) => n + 1);
+    const memberId = getActiveMemberId();
+    if (memberId) {
+      recordMemberProgress({ memberId, bookSlug, chapter: chapter.chapter, verse: verse.verse, mode: 'family', type: 'verse' });
+    }
 
     if (!isLastVerse) {
       setDirection('forward');

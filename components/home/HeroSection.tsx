@@ -1,10 +1,52 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { getProgress } from '@/lib/progress';
-import { getAllStoryProgress } from '@/lib/story-progress';
 import LumiMascot, { getLumiStage } from '@/components/mascot/LumiMascot';
+
+// All books for search — 66 total (available ones navigable)
+const ALL_BOOKS_SEARCH = [
+  { slug: 'genesis', name: 'Genesis', emoji: '🌍', available: true },
+  { slug: 'exodus', name: 'Exodus', emoji: '🔥', available: false },
+  { slug: 'leviticus', name: 'Leviticus', emoji: '📜', available: false },
+  { slug: 'numbers', name: 'Numbers', emoji: '🔢', available: false },
+  { slug: 'deuteronomy', name: 'Deuteronomy', emoji: '📋', available: false },
+  { slug: 'joshua', name: 'Joshua', emoji: '⚔️', available: false },
+  { slug: 'judges', name: 'Judges', emoji: '🛡️', available: false },
+  { slug: 'ruth', name: 'Ruth', emoji: '🌾', available: false },
+  { slug: 'psalms', name: 'Psalms', emoji: '🎵', available: true },
+  { slug: 'proverbs', name: 'Proverbs', emoji: '✨', available: true },
+  { slug: 'jonah', name: 'Jonah', emoji: '🐳', available: false },
+  { slug: 'matthew', name: 'Matthew', emoji: '✝️', available: true },
+  { slug: 'mark', name: 'Mark', emoji: '📖', available: false },
+  { slug: 'luke', name: 'Luke', emoji: '⭐', available: true },
+  { slug: 'john', name: 'John', emoji: '💙', available: true },
+  { slug: 'acts', name: 'Acts', emoji: '🕊️', available: false },
+  { slug: 'romans', name: 'Romans', emoji: '✉️', available: false },
+  { slug: 'revelation', name: 'Revelation', emoji: '👑', available: false },
+];
+
+type StorySearchItem = { id: string; title: string; emoji: string };
+
+type SearchResult =
+  | { kind: 'book'; slug: string; name: string; emoji: string; available: boolean }
+  | { kind: 'story'; id: string; title: string; emoji: string };
+
+function searchContent(q: string, stories: StorySearchItem[]): SearchResult[] {
+  if (!q.trim()) return [];
+  const lower = q.toLowerCase();
+  const books: SearchResult[] = ALL_BOOKS_SEARCH
+    .filter(b => b.name.toLowerCase().includes(lower))
+    .slice(0, 3)
+    .map(b => ({ kind: 'book' as const, ...b }));
+  const storyResults: SearchResult[] = stories
+    .filter(s => s.title.toLowerCase().includes(lower))
+    .slice(0, 4)
+    .map(s => ({ kind: 'story' as const, ...s }));
+  return [...books, ...storyResults].slice(0, 6);
+}
 
 // Quick-start books — available books first, clearly marked
 const QUICK_BOOKS = [
@@ -26,10 +68,23 @@ function getReadingResume(): { href: string; label: string } {
   return { href: '/genesis/1', label: 'Start with Genesis' };
 }
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  stories?: StorySearchItem[];
+}
+
+export default function HeroSection({ stories = [] }: HeroSectionProps) {
+  const router = useRouter();
   const [resume,    setResume]    = useState({ href: '/genesis/1', label: 'Start with Genesis' });
   const [lumiStage, setLumiStage] = useState<ReturnType<typeof getLumiStage>>('seed');
   const [seedCount, setSeedCount] = useState(0);
+
+  const [searchQuery,   setSearchQuery]   = useState('');
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [activeIndex,   setActiveIndex]   = useState(-1);
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  const searchResults = searchContent(searchQuery, stories);
+  const showDropdown  = searchFocused && searchQuery.trim().length > 0;
 
   useEffect(() => {
     setResume(getReadingResume());
@@ -37,6 +92,46 @@ export default function HeroSection() {
     setLumiStage(getLumiStage(p.wisdomSeeds));
     setSeedCount(p.wisdomSeeds);
   }, []);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setSearchFocused(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  function getResultHref(r: SearchResult): string {
+    if (r.kind === 'book') return r.available ? `/${r.slug}/1` : `/${r.slug}`;
+    return `/stories/${r.id}`;
+  }
+
+  function navigateToResult(r: SearchResult) {
+    setSearchQuery('');
+    setSearchFocused(false);
+    setActiveIndex(-1);
+    router.push(getResultHref(r));
+  }
+
+  function handleSearchKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (!showDropdown) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActiveIndex(i => Math.min(i + 1, searchResults.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveIndex(i => Math.max(i - 1, 0));
+    } else if (e.key === 'Enter' && activeIndex >= 0) {
+      e.preventDefault();
+      navigateToResult(searchResults[activeIndex]);
+    } else if (e.key === 'Escape') {
+      setSearchFocused(false);
+      setActiveIndex(-1);
+    }
+  }
 
   return (
     <section className="hero-bg relative overflow-hidden">
@@ -118,15 +213,94 @@ export default function HeroSection() {
                 <span className="text-amber-700" aria-hidden="true">→</span>
               </Link>
 
-              <a
-                href="#library"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-amber-200 hover:text-white font-semibold text-base px-7 py-4 rounded-2xl border border-amber-700/50 hover:border-amber-400/60 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
-              >
-                All 66 Books
-              </a>
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <a
+                  href="#library"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 text-amber-200 hover:text-white font-semibold text-sm px-4 py-4 rounded-2xl border border-amber-700/50 hover:border-amber-400/60 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+                >
+                  📚 All 66 Books
+                </a>
+                <Link
+                  href="/stories"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 text-amber-200 hover:text-white font-semibold text-sm px-4 py-4 rounded-2xl border border-amber-700/50 hover:border-amber-400/60 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+                >
+                  ✨ Stories
+                </Link>
+              </div>
             </div>
 
-            <p className="mt-6 text-amber-400/50 text-xs font-medium text-center lg:text-left">
+            {/* Search bar */}
+            <div ref={searchRef} className="relative mt-5">
+              <div className="flex items-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-3 transition-colors focus-within:bg-white/15 focus-within:border-amber-300/40">
+                <span className="text-amber-300/80 text-base shrink-0" aria-hidden="true">🔍</span>
+                <input
+                  type="search"
+                  value={searchQuery}
+                  onChange={e => { setSearchQuery(e.target.value); setActiveIndex(-1); }}
+                  onFocus={() => setSearchFocused(true)}
+                  onKeyDown={handleSearchKeyDown}
+                  placeholder="Search books or stories…"
+                  aria-label="Search books and stories"
+                  aria-expanded={showDropdown}
+                  aria-autocomplete="list"
+                  className="flex-1 bg-transparent text-white placeholder-amber-300/40 text-sm font-medium outline-none min-w-0"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => { setSearchQuery(''); setActiveIndex(-1); }}
+                    className="text-amber-300/60 hover:text-amber-200 text-xs shrink-0 focus:outline-none"
+                    aria-label="Clear search"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+
+              {/* Dropdown results */}
+              {showDropdown && (
+                <div
+                  role="listbox"
+                  aria-label="Search results"
+                  className="absolute top-full mt-2 left-0 right-0 bg-white rounded-2xl shadow-2xl border border-stone-100 overflow-hidden z-30"
+                >
+                  {searchResults.length === 0 ? (
+                    <p className="px-4 py-3 text-sm text-stone-400 text-center">No results for &quot;{searchQuery}&quot;</p>
+                  ) : (
+                    searchResults.map((result, i) => {
+                      const href = getResultHref(result);
+                      const label = result.kind === 'book' ? result.name : result.title;
+                      const sub   = result.kind === 'book'
+                        ? (result.available ? 'Bible Book' : 'Coming soon')
+                        : 'Bible Story';
+                      return (
+                        <button
+                          key={`${result.kind}-${result.kind === 'book' ? result.slug : result.id}`}
+                          role="option"
+                          aria-selected={i === activeIndex}
+                          onClick={() => navigateToResult(result)}
+                          className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors focus:outline-none border-b border-stone-50 last:border-0 ${
+                            i === activeIndex
+                              ? 'bg-amber-50'
+                              : 'hover:bg-stone-50'
+                          }`}
+                        >
+                          <span className="text-xl shrink-0" aria-hidden="true">{result.emoji}</span>
+                          <div className="min-w-0">
+                            <p className="text-sm font-bold text-stone-800 truncate">{label}</p>
+                            <p className="text-xs text-stone-400">{sub}</p>
+                          </div>
+                          {result.kind === 'book' && !result.available && (
+                            <span className="ml-auto text-[10px] font-bold text-stone-300 uppercase tracking-wide shrink-0">Soon</span>
+                          )}
+                        </button>
+                      );
+                    })
+                  )}
+                </div>
+              )}
+            </div>
+
+            <p className="mt-4 text-amber-400/50 text-xs font-medium text-center lg:text-left">
               Free · Open source · Faithful to Scripture
             </p>
           </div>

@@ -46,6 +46,7 @@ model User {
   sessions      Session[]
   progress      UserProgress?
   donations     Donation[]
+  family        Family?
 }
 
 model VerificationToken {
@@ -71,6 +72,95 @@ model UserProgress {
   sessionsJson         String   @default("[]") @db.Text
   updatedAt            DateTime @updatedAt
 }
+
+// ── Family Identity System ────────────────────────────────────────────────────
+
+model Family {
+  id         String   @id @default(cuid())
+  name       String?
+  ownerId    String   @unique
+  owner      User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  members    FamilyMember[]
+  streak     FamilyStreak?
+  prayers    FamilyPrayer[]
+  milestones FamilyMilestone[]
+  journeyId  String?
+  createdAt  DateTime @default(now())
+}
+
+model FamilyMember {
+  id          String   @id @default(cuid())
+  familyId    String
+  family      Family   @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  name        String
+  age         Int?
+  avatarId    String   @default("lion")
+  accentColor String?
+  faithGoals  String[] @default([])
+  seeds       Int      @default(0)
+  sortOrder   Int      @default(0)
+  progress    MemberProgress?
+  sessions    MemberSession[]
+  createdAt   DateTime @default(now())
+}
+
+model MemberProgress {
+  id                  String   @id @default(cuid())
+  memberId            String   @unique
+  member              FamilyMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  completedVersesJson String   @default("{}") @db.Text
+  completedChapters   String[] @default([])
+  memoryVersesJson    String   @default("[]") @db.Text
+  lastReadBook        String?
+  lastReadChapter     Int?
+  lastReadAt          DateTime?
+  updatedAt           DateTime @updatedAt
+}
+
+model MemberSession {
+  id       String   @id @default(cuid())
+  memberId String
+  member   FamilyMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  bookSlug String
+  chapter  Int
+  verse    Int
+  mode     String
+  readAt   DateTime @default(now())
+}
+
+model FamilyStreak {
+  id            String   @id @default(cuid())
+  familyId      String   @unique
+  family        Family   @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  currentStreak Int      @default(0)
+  longestStreak Int      @default(0)
+  lastReadDate  String   @default("")
+  updatedAt     DateTime @updatedAt
+}
+
+model FamilyPrayer {
+  id         String   @id @default(cuid())
+  familyId   String
+  family     Family   @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  memberId   String?
+  bookSlug   String
+  chapter    Int
+  verse      Int
+  prayerText String   @db.Text
+  answered   Boolean  @default(false)
+  savedAt    DateTime @default(now())
+}
+
+model FamilyMilestone {
+  id         String   @id @default(cuid())
+  familyId   String
+  family     Family   @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  memberId   String?
+  type       String
+  achievedAt DateTime @default(now())
+}
+
+// ── Donations ─────────────────────────────────────────────────────────────────
 
 model Donation {
   id         String   @id @default(cuid())

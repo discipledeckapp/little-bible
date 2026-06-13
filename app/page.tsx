@@ -8,7 +8,9 @@ import WisdomBar from '@/components/home/WisdomBar';
 import FamilyStreakBanner from '@/components/home/FamilyStreakBanner';
 import LibrarySection from '@/components/home/LibrarySection';
 import StoryGarden from '@/components/stories/StoryGarden';
+import FamilyDashboardSection from '@/components/home/FamilyDashboardSection';
 import { getAllBooksWithMeta } from '@/lib/content';
+import { getAllStories } from '@/lib/stories';
 
 export const metadata: Metadata = {
   title: "Little Bible — God's Word for Little Hearts",
@@ -16,15 +18,24 @@ export const metadata: Metadata = {
     'Daily family devotions for children ages 4–7. Every verse of Scripture — faithfully adapted, beautifully simple.',
 };
 
-export default function HomePage() {
-  const books = getAllBooksWithMeta('en');
+export default async function HomePage() {
+  const [books, allStories] = await Promise.all([
+    Promise.resolve(getAllBooksWithMeta('en')),
+    getAllStories(),
+  ]);
+
+  const storySearchItems = allStories.map(s => ({
+    id: s.id,
+    title: s.title,
+    emoji: s.coverEmoji ?? '📖',
+  }));
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
 
       {/* 1. Hero */}
-      <HeroSection />
+      <HeroSection stories={storySearchItems} />
 
       {/* 2. Progress (shown when started) */}
       <div className="bg-[#FFFBF5] px-0 py-2">
@@ -34,7 +45,10 @@ export default function HomePage() {
         <FamilyStreakBanner />
       </div>
 
-      {/* 3. Full Bible library — the primary product identity */}
+      {/* 3. Family dashboard — shown to signed-in users with a family */}
+      <FamilyDashboardSection />
+
+      {/* 4. Full Bible library — the primary product identity */}
       <LibrarySection availableBooks={books} />
 
       {/* 4. Journey paths — age-based discipleship paths */}

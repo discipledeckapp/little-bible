@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
@@ -70,13 +71,19 @@ export default async function ChapterPage({ params }: PageProps) {
           ← {chapter.book}
         </Link>
 
-        <ChapterPageClient
-          chapter={chapter}
-          bookSlug={bookSlug}
-          availableChapters={availableChapters}
-          totalChapters={totalChapters}
-          nextChapterNum={nextChapterNum}
-        />
+        <Suspense fallback={
+          <div className="flex justify-center py-12">
+            <div className="w-8 h-8 border-4 border-amber-200 border-t-amber-500 rounded-full animate-spin" />
+          </div>
+        }>
+          <ChapterPageClient
+            chapter={chapter}
+            bookSlug={bookSlug}
+            availableChapters={availableChapters}
+            totalChapters={totalChapters}
+            nextChapterNum={nextChapterNum}
+          />
+        </Suspense>
       </main>
       <Footer />
     </div>

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Nunito, Lora, Playfair_Display } from 'next/font/google';
 import Providers from '@/components/providers/Providers';
-import OnboardingFlow from '@/components/onboarding/OnboardingFlow';
 import './globals.css';
 
 const nunito = Nunito({
@@ -53,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={`${nunito.variable} ${lora.variable} ${playfair.variable} min-h-screen font-child`}
       >
         <Providers>
-          <OnboardingFlow />
           {children}
         </Providers>
       </body>

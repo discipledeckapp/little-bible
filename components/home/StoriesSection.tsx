@@ -10,7 +10,7 @@ export default async function StoriesSection() {
   if (collections.length === 0) return null;
 
   return (
-    <section className="py-14 px-4 bg-[var(--color-background)]">
+    <section id="stories" className="py-14 px-4 bg-[var(--color-background)]">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10">
           <p className="text-xs font-semibold text-amber-600 uppercase tracking-widest mb-2">

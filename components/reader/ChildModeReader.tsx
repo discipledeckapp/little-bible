@@ -11,6 +11,7 @@ import {
   getChapterCompletedVerses,
   recordSession,
 } from '@/lib/progress';
+import { recordMemberProgress, getActiveMemberId } from '@/lib/family-client';
 import IllustrationZone from './IllustrationZone';
 import LumiMascot, { getLumiStage, getLumiLabel } from '@/components/mascot/LumiMascot';
 import { getProgress } from '@/lib/progress';
@@ -30,6 +31,8 @@ interface ChildModeReaderProps {
   chapter: Chapter;
   bookSlug: string;
   nextChapterNum?: number;
+  initialVerse?: number;
+  onVerseChange?: (verseNum: number) => void;
 }
 
 const MAX_DOTS = 9;
@@ -42,12 +45,15 @@ function getPaginatedRange(current: number, total: number) {
 
 const READER_MODE_KEY = 'little_bible_reader_mode';
 
-export default function ChildModeReader({ chapter, bookSlug, nextChapterNum }: ChildModeReaderProps) {
+export default function ChildModeReader({ chapter, bookSlug, nextChapterNum, initialVerse, onVerseChange }: ChildModeReaderProps) {
   const router = useRouter();
 
   const hasLittleReader = chapter.verses.some((v) => !!v.little_reader_adaptation);
 
   const [verseIndex, setVerseIndex] = useState(() => {
+    if (initialVerse && initialVerse >= 1 && initialVerse <= chapter.verses.length) {
+      return initialVerse - 1;
+    }
     const done = getChapterCompletedVerses(bookSlug, chapter.chapter);
     const next = done.length < chapter.verses.length ? done.length : 0;
     return next;
@@ -114,12 +120,18 @@ export default function ChildModeReader({ chapter, bookSlug, nextChapterNum }: C
     setFamilyOpen(false);
     setVerseIndex(idx);
     setAnimKey((k) => k + 1);
-  }, []);
+    onVerseChange?.(chapter.verses[idx]?.verse ?? idx + 1);
+  }, [chapter.verses, onVerseChange]);
 
   const handleNext = useCallback(() => {
     if (isLast || encouragement) return;
     const { newBadge } = markVerseComplete(bookSlug, chapter.chapter, verse.verse);
     if (newBadge) setEarnedBadge(newBadge);
+    // Also record against the active family member if one is selected
+    const memberId = getActiveMemberId();
+    if (memberId) {
+      recordMemberProgress({ memberId, bookSlug, chapter: chapter.chapter, verse: verse.verse, mode: 'child', type: 'verse' });
+    }
     goToVerse(verseIndex + 1);
     const pick = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
     setEncouragement(pick);
@@ -131,6 +143,11 @@ export default function ChildModeReader({ chapter, bookSlug, nextChapterNum }: C
     markVerseComplete(bookSlug, chapter.chapter, verse.verse);
     const { newBadge } = markChapterComplete(bookSlug, chapter.chapter);
     if (newBadge) setEarnedBadge(newBadge);
+    // Record chapter completion against active family member
+    const memberId = getActiveMemberId();
+    if (memberId) {
+      recordMemberProgress({ memberId, bookSlug, chapter: chapter.chapter, verse: verse.verse, mode: 'child', type: 'chapter' });
+    }
     setChapterDone(true);
   }, [encouragement, bookSlug, chapter.chapter, verse.verse]);
 
