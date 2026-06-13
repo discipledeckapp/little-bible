@@ -20,7 +20,7 @@ export default function Header() {
           <div>
             <p className="font-bold text-amber-900 text-base leading-tight">Little Bible</p>
             <p className="text-amber-500 text-xs leading-tight hidden sm:block font-medium">
-              God&apos;s Word for Little Hearts
+              Children&apos;s Bible · Ages 4–7
             </p>
           </div>
         </Link>
@@ -37,11 +37,11 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/proverbs/1"
+            href="/genesis/1"
             className="hidden sm:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition-all active:scale-95 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <span aria-hidden="true">📖</span>
-            Start Today
+            Read the Bible
           </Link>
 
           {/* Auth — UserAvatar when signed in, sign-in button when not */}

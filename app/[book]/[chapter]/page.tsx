@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ChapterPageClient from '@/components/reader/ChapterPageClient';
 import { getChapter, getLanguageIndex, getBookIndex } from '@/lib/content';
+import { BIBLE_BOOKS } from '@/lib/bibleBooks';
 
 interface PageProps {
   params: Promise<{ book: string; chapter: string }>;
@@ -45,20 +46,35 @@ export default async function ChapterPage({ params }: PageProps) {
   const chapter = getChapter(bookSlug, chapterNum, 'en');
   if (!chapter) notFound();
 
+  const bookMeta = BIBLE_BOOKS.find(b => b.slug === bookSlug);
+  let availableChapters: number[] = [];
+  try {
+    const idx = getBookIndex(bookSlug, 'en');
+    availableChapters = idx.map(c => c.chapter).sort((a, b) => a - b);
+  } catch {
+    availableChapters = [chapterNum];
+  }
+  const totalChapters = bookMeta?.totalChapters ?? chapterNum;
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-8">
-        {/* Back link */}
+        {/* Back link — goes to book page, not home */}
         <Link
-          href="/"
-          className="inline-flex items-center gap-1.5 text-sm text-amber-600 hover:text-amber-800 font-semibold mb-8 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
-          aria-label="Back to book library"
+          href={`/${bookSlug}`}
+          className="inline-flex items-center gap-1.5 text-sm text-amber-600 hover:text-amber-800 font-semibold mb-6 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+          aria-label={`Back to ${chapter.book}`}
         >
-          ← Back to Library
+          ← {chapter.book}
         </Link>
 
-        <ChapterPageClient chapter={chapter} bookSlug={bookSlug} />
+        <ChapterPageClient
+          chapter={chapter}
+          bookSlug={bookSlug}
+          availableChapters={availableChapters}
+          totalChapters={totalChapters}
+        />
       </main>
       <Footer />
     </div>

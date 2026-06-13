@@ -34,17 +34,17 @@ export default function HomePage() {
         <FamilyStreakBanner />
       </div>
 
-      {/* 3. Story Garden — user's completed stories (client, hidden until progress exists) */}
-      <StoryGarden />
+      {/* 3. Full Bible library — the primary product identity */}
+      <LibrarySection availableBooks={books} />
 
-      {/* 4. Journey paths — age-based starting points */}
+      {/* 4. Journey paths — age-based discipleship paths */}
       <JourneySection />
 
       {/* 5. Stories by collection — story-first browsing */}
       <StoriesSection />
 
-      {/* 6. Full Bible library — book/chapter navigation */}
-      <LibrarySection availableBooks={books} />
+      {/* 6. Story Garden — user's completed stories (client, hidden until progress exists) */}
+      <StoryGarden />
 
       <Footer />
     </div>
