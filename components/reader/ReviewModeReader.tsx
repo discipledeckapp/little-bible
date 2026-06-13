@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import type { Chapter, ChapterReview, ReviewStatus } from '@/types';
+import { getMemoryVerseText, getMemoryVerseRef } from '@/types';
 import { getChapterReview, saveVerseReview, exportReviewReport } from '@/lib/review';
 import VerseCard from './VerseCard';
 
@@ -46,9 +47,14 @@ export default function ReviewModeReader({ chapter }: ReviewModeReaderProps) {
         <div className="bg-amber-100 rounded-xl px-4 py-3 border border-amber-200">
           <p className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-1">
             Memory Verse
+            {getMemoryVerseRef(chapter.memory_verse) && (
+              <span className="ml-2 font-medium normal-case tracking-normal opacity-70">
+                — {getMemoryVerseRef(chapter.memory_verse)}
+              </span>
+            )}
           </p>
           <p className="text-amber-900 font-semibold text-base leading-relaxed">
-            &ldquo;{chapter.memory_verse}&rdquo;
+            &ldquo;{getMemoryVerseText(chapter.memory_verse)}&rdquo;
           </p>
         </div>
 

@@ -16,15 +16,32 @@ export interface Verse {
   keywords: string[];
 }
 
+export interface MemoryVerseObject {
+  ref: string;
+  kjv: string;
+  little_bible: string;
+}
+
 export interface Chapter {
   book: string;
   chapter: number;
   chapter_summary: string;
   main_lesson: string;
-  memory_verse: string;
+  memory_verse: string | MemoryVerseObject;
   parent_guide: string;
   application_for_children: string;
   verses: Verse[];
+}
+
+export function getMemoryVerseText(mv: Chapter['memory_verse']): string {
+  if (!mv) return '';
+  if (typeof mv === 'string') return mv;
+  return mv.kjv ?? '';
+}
+
+export function getMemoryVerseRef(mv: Chapter['memory_verse']): string {
+  if (!mv || typeof mv === 'string') return '';
+  return mv.ref ?? '';
 }
 
 export type ReviewStatus =
