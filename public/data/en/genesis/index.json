@@ -3,5 +3,9 @@
   { "book": "Genesis", "chapter": 2, "file": "genesis_chapter_02.json" },
   { "book": "Genesis", "chapter": 3, "file": "genesis_chapter_03.json" },
   { "book": "Genesis", "chapter": 4, "file": "genesis_chapter_04.json" },
-  { "book": "Genesis", "chapter": 5, "file": "genesis_chapter_05.json" }
+  { "book": "Genesis", "chapter": 5, "file": "genesis_chapter_05.json" },
+  { "book": "Genesis", "chapter": 6, "file": "genesis_chapter_06.json" },
+  { "book": "Genesis", "chapter": 7, "file": "genesis_chapter_07.json" },
+  { "book": "Genesis", "chapter": 8, "file": "genesis_chapter_08.json" },
+  { "book": "Genesis", "chapter": 9, "file": "genesis_chapter_09.json" }
 ]
