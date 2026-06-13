@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import type { Chapter, Badge } from '@/types';
 import { speakText, stopSpeech, isSpeechSupported } from '@/lib/audio';
 import {
@@ -28,6 +29,7 @@ const ENCOURAGEMENTS = [
 interface ChildModeReaderProps {
   chapter: Chapter;
   bookSlug: string;
+  nextChapterNum?: number;
 }
 
 // Paginated dots: always shows at most MAX_DOTS, active centred
@@ -41,7 +43,7 @@ function getPaginatedRange(current: number, total: number) {
 
 const READER_MODE_KEY = 'little_bible_reader_mode';
 
-export default function ChildModeReader({ chapter, bookSlug }: ChildModeReaderProps) {
+export default function ChildModeReader({ chapter, bookSlug, nextChapterNum }: ChildModeReaderProps) {
   const router = useRouter();
 
   const hasLittleReader = chapter.verses.some((v) => !!v.little_reader_adaptation);
@@ -190,6 +192,21 @@ export default function ChildModeReader({ chapter, bookSlug }: ChildModeReaderPr
         </div>
 
         <div className="flex flex-col gap-3 w-full max-w-xs">
+          {nextChapterNum && (
+            <Link
+              href={`/${bookSlug}/${nextChapterNum}`}
+              className="w-full max-w-xs flex items-center gap-4 bg-white/15 hover:bg-white/25 border border-white/20 rounded-2xl px-5 py-4 mb-3 transition-all active:scale-95 fade-in"
+            >
+              <span className="text-2xl shrink-0" aria-hidden="true">📖</span>
+              <div className="text-left flex-1 min-w-0">
+                <p className="text-amber-200 text-xs font-bold uppercase tracking-widest">Up Next</p>
+                <p className="text-white font-extrabold text-sm leading-tight">
+                  {chapter.book} Chapter {nextChapterNum}
+                </p>
+              </div>
+              <span className="text-white/60 text-lg shrink-0" aria-hidden="true">→</span>
+            </Link>
+          )}
           <button
             onClick={() => router.push('/')}
             className="bg-white text-amber-700 font-extrabold py-4 rounded-2xl text-lg hover:bg-amber-50 transition-colors"

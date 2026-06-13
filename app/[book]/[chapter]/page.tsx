@@ -55,6 +55,7 @@ export default async function ChapterPage({ params }: PageProps) {
     availableChapters = [chapterNum];
   }
   const totalChapters = bookMeta?.totalChapters ?? chapterNum;
+  const nextChapterNum = availableChapters.find(c => c > chapterNum);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -74,6 +75,7 @@ export default async function ChapterPage({ params }: PageProps) {
           bookSlug={bookSlug}
           availableChapters={availableChapters}
           totalChapters={totalChapters}
+          nextChapterNum={nextChapterNum}
         />
       </main>
       <Footer />

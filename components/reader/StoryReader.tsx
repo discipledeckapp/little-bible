@@ -432,49 +432,48 @@ function StepBody({ step, stepData, cfg, revealed, setRevealed, wonderDefs }: St
   // REMEMBER step
   if (step === 'remember') {
     return (
-      <div className="space-y-5">
-        {/* Memory verse — tap to reveal */}
-        <div
-          className="rounded-2xl overflow-hidden cursor-pointer"
+      <div className="space-y-4">
+        <p className="text-center text-stone-500 text-sm font-semibold">
+          {revealed ? 'Read it aloud together!' : 'Tap to reveal the memory verse'}
+        </p>
+
+        <button
           onClick={() => setRevealed(true)}
-          style={{ background: cfg.color + '15' }}
+          className={`w-full rounded-3xl px-6 py-6 text-center transition-all active:scale-[0.98] ${
+            revealed ? 'cursor-default' : 'cursor-pointer hover:opacity-90'
+          }`}
+          style={{ background: '#16A34A' }}
+          disabled={revealed}
+          aria-label={revealed ? 'Memory verse revealed' : 'Tap to reveal memory verse'}
         >
-          <div className="px-5 py-4">
-            <p className="text-xs font-bold uppercase tracking-wide mb-2" style={{ color: cfg.color }}>
-              {stepData.ref}
-            </p>
-            {revealed ? (
-              <p className="scripture-text text-base text-stone-700 leading-relaxed wonder-reveal">
-                &ldquo;{stepData.memoryVerse}&rdquo;
+          {!revealed ? (
+            <div className="flex flex-col items-center gap-3">
+              <span className="text-5xl" aria-hidden="true">⭐</span>
+              <p className="text-white font-extrabold text-lg">Tap to reveal</p>
+              <p className="text-green-200 text-sm">Memory verse hidden — tap when ready</p>
+            </div>
+          ) : (
+            <div className="wonder-reveal">
+              <p className="text-white/80 text-xs font-bold uppercase tracking-widest mb-2">
+                {stepData.ref ?? ''}
               </p>
-            ) : (
-              <div className="text-center py-3">
-                <p className="text-sm text-stone-400 mb-2">Tap to reveal the verse</p>
-                <div className="flex gap-1 justify-center">
-                  {[1, 2, 3, 4, 5].map(i => (
-                    <div key={i} className="h-2 rounded-full" style={{ width: `${20 + i * 8}px`, background: cfg.color + '40' }} />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
+              <p className="text-white font-extrabold text-xl sm:text-2xl leading-snug font-child">
+                {stepData.memoryVerse ?? stepData.memoryPhrase ?? ''}
+              </p>
+              {stepData.memoryPhrase && stepData.memoryVerse && (
+                <p className="text-green-200 text-sm mt-3 font-semibold italic">
+                  &ldquo;{stepData.memoryPhrase}&rdquo;
+                </p>
+              )}
+            </div>
+          )}
+        </button>
 
-        {/* Memory phrase */}
-        <div className="rounded-2xl p-5 bg-white shadow-sm text-center">
-          <p className="text-xs font-bold uppercase tracking-wide mb-3 text-stone-400">
-            Short version to remember:
-          </p>
-          <p className="text-2xl font-bold leading-tight" style={{ color: cfg.color, fontFamily: 'var(--font-display)' }}>
-            &ldquo;{stepData.memoryPhrase}&rdquo;
-          </p>
-        </div>
-
-        {/* Memory tip */}
-        {stepData.tip && (
-          <div className="rounded-xl px-4 py-3 bg-stone-50 flex gap-3">
-            <span className="text-lg">💡</span>
-            <p className="text-sm text-stone-600 leading-relaxed">{stepData.tip}</p>
+        {revealed && stepData.tip && (
+          <div className="bg-green-50 rounded-2xl px-4 py-3 border border-green-100 fade-in">
+            <p className="text-green-700 text-sm font-semibold leading-snug">
+              💡 {stepData.tip}
+            </p>
           </div>
         )}
       </div>

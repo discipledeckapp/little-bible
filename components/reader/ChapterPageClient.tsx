@@ -14,6 +14,7 @@ interface ChapterPageClientProps {
   bookSlug: string;
   availableChapters?: number[];
   totalChapters?: number;
+  nextChapterNum?: number;
 }
 
 const MODE_META: Record<AppMode, {
@@ -50,7 +51,7 @@ const MODE_META: Record<AppMode, {
   },
 };
 
-export default function ChapterPageClient({ chapter, bookSlug, availableChapters = [], totalChapters = 0 }: ChapterPageClientProps) {
+export default function ChapterPageClient({ chapter, bookSlug, availableChapters = [], totalChapters = 0, nextChapterNum }: ChapterPageClientProps) {
   const [mode, setMode]             = useState<AppMode>('child');
   const [mounted, setMounted]       = useState(false);
   const [showPin, setShowPin]       = useState(false);
@@ -202,7 +203,7 @@ export default function ChapterPageClient({ chapter, bookSlug, availableChapters
 
       {/* Reader */}
       {mode === 'child' && (
-        <ChildModeReader chapter={chapter} bookSlug={bookSlug} />
+        <ChildModeReader chapter={chapter} bookSlug={bookSlug} nextChapterNum={nextChapterNum} />
       )}
       {mode === 'family' && (
         <FamilyModeReader chapter={chapter} bookSlug={bookSlug} />
