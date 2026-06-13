@@ -111,9 +111,14 @@ export default function ChapterPageClient({ chapter, bookSlug, availableChapters
             ) : (
               <div />
             )}
-            <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">
-              {chapter.book} {chapter.chapter} of {totalChapters}
-            </span>
+            <Link
+              href={`/${bookSlug}`}
+              className="text-xs font-bold text-amber-600 hover:text-amber-800 uppercase tracking-widest transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-2 py-1 hover:bg-amber-50"
+              aria-label={`All chapters of ${chapter.book}`}
+              title="Tap to see all chapters"
+            >
+              {chapter.book} · Ch {chapter.chapter} of {totalChapters} ▾
+            </Link>
             {nextCh ? (
               <Link
                 href={`/${bookSlug}/${nextCh}`}
@@ -135,7 +140,7 @@ export default function ChapterPageClient({ chapter, bookSlug, availableChapters
         {/* Book + Chapter name */}
         <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
           <div>
-            <p className="text-amber-500 text-xs font-bold uppercase tracking-[0.2em] mb-1">
+            <p className="text-amber-600 text-sm font-extrabold uppercase tracking-[0.15em] mb-0.5">
               {chapter.book}
             </p>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-800 leading-tight font-display">

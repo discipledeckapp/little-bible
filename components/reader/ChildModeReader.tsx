@@ -291,14 +291,11 @@ export default function ChildModeReader({ chapter, bookSlug, nextChapterNum }: C
               </div>
             )}
 
-            {/* Persistent verse reference */}
-            <div className="flex items-center justify-between mb-1">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-stone-400 uppercase tracking-widest">
-                <span className="text-amber-500">{chapter.book}</span>
-                <span className="text-stone-300">·</span>
-                <span>{chapter.chapter}:{verse.verse}</span>
+            {/* Verse reference pill — prominent Bible identity marker inside card */}
+            <div className="flex items-center mb-1">
+              <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-sm font-extrabold px-3 py-1 rounded-full border border-amber-200">
+                📖 {chapter.book} {chapter.chapter}:{verse.verse}
               </span>
-              {/* KJV reference toggle if needed */}
             </div>
 
             {/* ① Read aloud — PRIMARY action, top of content */}
