@@ -1,4 +1,5 @@
 [
   { "book": "Matthew", "chapter": 5, "file": "matthew_chapter_05.json" },
-  { "book": "Matthew", "chapter": 6, "file": "matthew_chapter_06.json" }
+  { "book": "Matthew", "chapter": 6, "file": "matthew_chapter_06.json" },
+  { "book": "Matthew", "chapter": 7, "file": "matthew_chapter_07.json" }
 ]
