@@ -1,0 +1,65 @@
+{
+  "id": "the-lost-coin",
+  "title": "The Lost Coin",
+  "subtitle": "She had ten coins and lost one — and she searched until she found it",
+  "collection": "what-jesus-taught",
+  "mainTruth": "You are so precious to God that He searches for you — and all of heaven celebrates when you come home.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 15:8-10",
+  "durationMinutes": 5,
+  "coverEmoji": "🪙",
+  "coverColor": "#D97706",
+  "illustrationPrompt": "A woman on her knees holding a lit oil lamp close to the floor, peering into the dark corner of a stone room, a glinting silver coin just within reach of the lamplight, her face filled with joyful relief, warm amber and golden lamplight against deep shadow palette, painterly gouache illustration on parchment paper, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, intimate and tender, the coin seeming to glow with its own worth, --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus was talking to a crowd that included some people who didn't think they mattered very much to God — and some people who thought they mattered a great deal more than everyone else. And so Jesus told them a story.\n\n'A woman had ten silver coins,' Jesus said. 'In those days, silver coins were precious — some women wore them like a headband, a kind of treasure saved for their wedding day. Each coin was deeply important to her.'\n\n'One day, one coin went missing. Just one out of ten. And the woman couldn't rest. She lit a lamp — a small clay oil lamp that threw a warm circle of light across the dark stone floor. She took a broom and swept the whole house, every corner, every crack. She got down on her hands and knees, holding the lamp close, searching carefully.'\n\n'And then — there it was. A glint of silver in the lamplight. She picked it up, held it tightly, and her heart filled with joy.'\n\nJesus smiled. 'She doesn't keep that joy to herself. She calls her friends and neighbours: Come! Celebrate with me! I found my coin — the one that was lost!'\n\nAnd then Jesus said the most important part of the story: 'I tell you — there is joy in the presence of all the angels of God over one sinner who comes back to God. Heaven throws a party.'\n\nYou are that coin. You are not lost in a pile of other people that God can barely keep track of. You are precious — valuable — missed when you wander away. And when you come back to God, all of heaven lights up. The angels celebrate. Because you matter that much.",
+      "childText": "Jesus told this story: A woman had ten silver coins — and she lost one! She lit a lamp and swept the whole house until she found it. When she did, she called all her friends: Celebrate with me! I found my coin! Then Jesus said: That is exactly what happens in heaven when one person comes back to God. All the angels have a party! You are like that precious coin — so loved and so important to God that He searches for you, and heaven celebrates when you come home.",
+      "verses": [
+        {
+          "ref": "Luke 15:8",
+          "kjv": "Either what woman having ten pieces of silver, if she lose one piece, doth not light a candle, and sweep the house, and seek diligently till she find it?",
+          "little_bible": "Jesus asked: If a woman has ten silver coins and loses one, won't she light a lamp and sweep the whole house, searching carefully until she finds it?"
+        },
+        {
+          "ref": "Luke 15:9",
+          "kjv": "And when she hath found it, she calleth her friends and her neighbours together, saying, Rejoice with me; for I have found the piece which I had lost.",
+          "little_bible": "When she finds it, she calls all her friends and says: Celebrate with me! I found my coin — the one I had lost!"
+        },
+        {
+          "ref": "Luke 15:10",
+          "kjv": "Likewise, I say unto you, there is joy in the presence of the angels of God over one sinner that repenteth.",
+          "little_bible": "Jesus said: In the same way, all the angels in heaven are filled with joy when even one person comes back to God."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "The woman only lost one coin out of ten — but she searched for it like it was the most important thing in the world. What does that tell you about how God feels about you?",
+      "parentGuide": "The power of this parable is in the proportion: one out of ten, and yet the woman stops everything. God is not managing a crowd where individuals can go unnoticed. Each person is known, valued, and missed when they wander. For young children this is wonderfully concrete: you are not lost in a crowd. God knows your name and searches for you. For older children, push into the celebration: how does it feel to know that your coming home causes a party in heaven?",
+      "familyQuestion": "Has there ever been a time you felt lost or far from God? What happened — and what did it feel like to come back?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You that I am precious to You — like a coin that You would search the whole house to find. Thank You that when I come back to You, heaven is happy. Help me to remember that I matter to You — not because I'm perfect, but because You love me. Thank You for never stopping Your search for me. Amen.",
+      "childPrompt": "Tell God: 'Thank You that You look for me.' Then ask Him to help you stay close to Him today.",
+      "prayerPoints": [
+        "Thank God that you are precious and valuable to Him",
+        "Ask God to help you turn back to Him whenever you feel far away",
+        "Pray for someone you know who might feel lost — ask God to find them"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Likewise, I say unto you, there is joy in the presence of the angels of God over one sinner that repenteth.",
+      "ref": "Luke 15:10",
+      "memoryPhrase": "Heaven celebrates for you.",
+      "tip": "Clap and cheer when you say the memory phrase: 'Heaven — (clap) — celebrates — (cheer) — for YOU — (point at the child)!' The celebration built into the verse should be felt in the body. Do it for each person: clap, cheer, and point — making sure every child hears 'for YOU.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Search your room, your bag, or somewhere around the house for something small that has been lost or forgotten — a toy, a coin, a card. When you find it, notice how happy it makes you feel. Hold it and remember: that is exactly how God feels about you. You are that precious.",
+      "parentNote": "This activity asks children to feel something, not just understand it. The joy of finding something lost is a bodily experience — and Jesus deliberately used it to describe the joy of heaven. When your child finds what they were looking for, name the feeling together and connect it to the parable. This is formation through imagination and emotion, which is how young children learn best."
+    }
+  }
+}

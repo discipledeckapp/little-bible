@@ -1,0 +1,60 @@
+{
+  "id": "build-on-the-rock",
+  "title": "Build on the Rock",
+  "subtitle": "Two builders, two choices — and only one house that could stand",
+  "collection": "what-jesus-taught",
+  "mainTruth": "When we hear Jesus' words and DO them, we build a life that stands even in the hardest storms.",
+  "ageRange": "4-7",
+  "bibleRef": "Matthew 7:24-27",
+  "durationMinutes": 5,
+  "coverEmoji": "🏠",
+  "coverColor": "#92400E",
+  "illustrationPrompt": "Split scene: on the left, a solid stone cottage on a rocky hillside standing firm while rain and wind lash around it, warm golden light in its windows; on the right, a wooden house on sand collapsing in a flood, timbers flying into the storm, warm amber and stormy grey palette, painterly gouache illustration on parchment paper, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, dramatic contrast between stability and collapse, --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus had been teaching the crowds all day on a hillside — beautiful, challenging, life-changing words. And now, at the end of His great sermon, He told one final story to make sure His listeners understood what really mattered.\n\n'Imagine two builders,' Jesus said. 'One is wise. He hears my words — and he does them. He digs down deep, down through the soft soil, until he hits solid rock. And on that rock he builds his house.'\n\n'Then the storms come.' Jesus paused, and everyone listening knew about storms. They knew about winter floods that swept down from the hills and wrecked everything in their path. 'The rain falls. The rivers rise. The winds howl and beat against that house.' A few people in the crowd held their breath. 'And the house stands. Because it was built on rock.'\n\n'Now imagine the foolish builder,' Jesus continued. 'He also hears my words — but he doesn't do them. He builds his house quickly and easily, right on the sand. No digging. No rock. It looks fine.'\n\n'The same storms come. The same rain, the same rivers, the same winds.' Jesus looked around at the people listening. 'And the house falls. With a great crash.'\n\nThe two builders both heard Jesus' words. Both built houses. Both faced the same storm. The only difference was the foundation.\n\nJesus is the rock. His words are not suggestions — they are the foundation that holds a life together when everything shakes. It's not enough to hear what Jesus says. The life that stands is the one that hears — and does.",
+      "childText": "At the end of a long day of teaching, Jesus told this story: One builder dug all the way down to solid rock and built his house there. Another builder didn't bother digging — he just built on sand because it was easier. Then a huge storm came! Rain, floods, wind — crashing against both houses. The house on the rock stood firm. The house on the sand crashed down. Jesus says WE are like those builders. When we hear His words AND do them, we build our lives on something that will never fall apart!",
+      "verses": [
+        {
+          "ref": "Matthew 7:24",
+          "kjv": "Therefore whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock.",
+          "little_bible": "Jesus said: Anyone who hears my words and obeys them is like a wise person who builds their house on solid rock."
+        },
+        {
+          "ref": "Matthew 7:26-27",
+          "kjv": "And every one that heareth these sayings of mine, and doeth them not, shall be likened unto a foolish man, which built his house upon the sand: and the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell: and great was the fall of it.",
+          "little_bible": "But anyone who hears Jesus' words and doesn't obey is like a foolish person who builds on sand. When the storm comes, that house will fall — and the crash will be enormous."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Both builders heard Jesus' words — but only one actually did them. What's the difference between just knowing what Jesus says and actually doing it?",
+      "parentGuide": "This parable is designed to unsettle comfortable hearers. Jesus isn't warning people who have never heard His words — He's warning people who have heard them but haven't obeyed. Help children understand that the Christian life isn't about knowing the right answers; it's about living them out. A practical question: What is one thing Jesus says that is hard to actually do? Start there — that's where the building happens.",
+      "familyQuestion": "If someone looked at your life this week, what would they see that shows you're building on Jesus? What's one thing you could change that would make the foundation stronger?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear Jesus, I want to build my life on You — not just hear what You say, but actually do it. I know that's not always easy. Help me this week to do one thing You've asked me to do. When the hard times come, I want to be standing firm because my life is built on You. Amen.",
+      "childPrompt": "Ask Jesus to show you one of His words — something He says to do — that you can actually do today.",
+      "prayerPoints": [
+        "Ask Jesus to help you be a doer of His words, not just a hearer",
+        "Thank God that He is a rock — solid, unchanging, and completely trustworthy",
+        "Ask God to help your family build your life on Jesus together"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Therefore whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock.",
+      "ref": "Matthew 7:24",
+      "memoryPhrase": "Build your life on Jesus.",
+      "tip": "Stamp your foot on the floor while saying each word: 'Build — your — life — on — Jesus!' The physical stamping helps children feel the solidity of a rock foundation. Say it five times with growing confidence — each time a little more firmly."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "As a family, write one of Jesus' sayings — something He commands, like 'Love one another' or 'Do not be afraid' — on a card or piece of paper. Put it somewhere you will see it every single day: on the fridge, beside the bed, or on the bathroom mirror. Let it become part of your foundation.",
+      "parentNote": "Choosing the verse together gives children ownership. Ask them: which of Jesus' words feels most important for our family right now? This is formative discipleship, not decoration. If the card is still up in a month's time, revisit it — has anything changed because of it?"
+    }
+  }
+}

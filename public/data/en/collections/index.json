@@ -5,7 +5,7 @@
     "subtitle": "God made everything — including you",
     "emoji": "🌍",
     "color": "#0EA5E9",
-    "stories": ["god-made-everything", "god-made-me"]
+    "stories": ["god-made-everything", "god-made-me", "adam-and-eve", "the-tower-of-babel"]
   },
   {
     "id": "the-great-flood",
@@ -29,7 +29,7 @@
     "subtitle": "The one all the stories were pointing to",
     "emoji": "✨",
     "color": "#1A2B4A",
-    "stories": ["birth-of-jesus"]
+    "stories": ["birth-of-jesus", "mary-says-yes", "jesus-is-baptized"]
   },
   {
     "id": "what-jesus-taught",
@@ -37,7 +37,7 @@
     "subtitle": "How to live in God's Kingdom",
     "emoji": "❤️",
     "color": "#F59E0B",
-    "stories": ["jesus-loves-children", "the-good-shepherd", "the-lost-sheep", "the-lost-son", "how-to-pray", "the-good-neighbour"]
+    "stories": ["jesus-loves-children", "the-good-shepherd", "the-lost-sheep", "the-lost-son", "how-to-pray", "the-good-neighbour", "the-wedding-at-cana", "build-on-the-rock", "the-lost-coin"]
   },
   {
     "id": "jesus-saves",

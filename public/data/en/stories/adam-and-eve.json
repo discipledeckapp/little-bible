@@ -1,0 +1,65 @@
+{
+  "id": "adam-and-eve",
+  "title": "Adam and Eve",
+  "subtitle": "God made a beautiful garden — and a choice that changed everything",
+  "collection": "the-beginning",
+  "mainTruth": "God gave us freedom to choose, and even when we choose wrong, His love makes a way back.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 2:15-17; 3:1-24",
+  "durationMinutes": 7,
+  "coverEmoji": "🌿",
+  "coverColor": "#16A34A",
+  "illustrationPrompt": "Adam and Eve standing in a lush, sun-dappled garden of Eden, surrounded by vivid fruit trees and flowers, a serpent coiled in a fig tree casting a shadow, warm golden light filtering through leaves, painterly gouache illustration on parchment paper, emerald and amber palette with dappled sunlight, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sense of wonder mingled with sadness, --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "In the very beginning, after God had made the world and everything in it, He made something extra special — a garden called Eden. And in that garden He placed the first two people: Adam and Eve.\n\nIt was the most beautiful place imaginable. Fruit hanging from every tree. Rivers sparkling through green meadows. Every animal, every flower, every bird — all of it their home. And best of all, God would walk with them in the garden in the cool of the evening. They were His people, and He was their God.\n\nGod gave them one rule — just one. Every tree in the garden was theirs to enjoy. Every single one — except one. The tree of the knowledge of good and evil. 'If you eat from it,' God said gently, 'you will die.'\n\nBut one day a serpent crept through the garden. It was sly and cunning, and it whispered to Eve: 'Did God really say you couldn't eat from any tree? He doesn't want you to eat it because then you'd be like Him.' Eve looked at the fruit. It looked beautiful. She took it. She ate it. She gave some to Adam. He ate too.\n\nIn an instant, everything felt different. They were ashamed. They hid from God. But God came looking for them — because that's what God does. He found them, and even though there were consequences for what they had done, God did something beautiful in the middle of it all: He made them coverings. He clothed them with care.\n\nAnd He made a promise — a mysterious, wonderful promise. One day, a child born from a woman would crush the serpent forever. The mistake was real. The sadness was real. But already, before they even left the garden, God was making a way back. That promised child? Thousands of years later, His name would be Jesus.",
+      "childText": "God made a perfect garden for Adam and Eve. He gave them everything — and just one rule: don't eat from one special tree. But a sneaky serpent told Eve a lie, and she and Adam ate the fruit anyway. They felt so ashamed they hid from God. But God came looking for them. He took care of them even when they had disobeyed. And He made an amazing promise: one day, someone would come and fix everything. That someone was Jesus!",
+      "verses": [
+        {
+          "ref": "Genesis 2:16-17",
+          "kjv": "And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat: but of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.",
+          "little_bible": "God said: You can eat from every tree in the garden — every single one! But not from this one tree. If you eat from it, something very bad will happen."
+        },
+        {
+          "ref": "Genesis 3:9",
+          "kjv": "And the LORD God called unto Adam, and said unto him, Where art thou?",
+          "little_bible": "God called out to Adam and said: 'Where are you?' Even when we hide, God comes looking for us."
+        },
+        {
+          "ref": "Genesis 3:15",
+          "kjv": "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.",
+          "little_bible": "God made a promise to the serpent: one day, a child from a woman will crush you. That child was Jesus — God's way of making everything right."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why do you think Adam and Eve hid from God after they disobeyed?",
+      "parentGuide": "Children instinctively understand shame — the urge to hide when we've done something wrong. Help them see that God's first response wasn't punishment but pursuit: 'Where are you?' God came looking. This is the pattern of the whole Bible. Even in consequences, God's love provides a covering. Older children can explore the connection between God's garments for Adam and Eve and Jesus being our covering for sin.",
+      "familyQuestion": "God already knew where Adam and Eve were hiding — so why do you think He called out 'Where are you?' What was He really saying to them?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You that even when people make wrong choices, You don't stop loving them. Thank You that You came looking for Adam and Eve — and that You come looking for us too. Thank You for sending Jesus to be the way back to You. Help me to choose to obey You, and when I get it wrong, help me to run to You instead of hiding. Amen.",
+      "childPrompt": "Can you tell God about a time you felt like hiding instead of coming to Him? He's not angry — He wants to find you.",
+      "prayerPoints": [
+        "Thank God that He made a way back through Jesus",
+        "Ask God to help you obey Him even when something else looks tempting",
+        "Thank God that He never stops looking for us when we wander away"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.",
+      "ref": "Genesis 3:15",
+      "memoryPhrase": "God made a way.",
+      "tip": "Stomp your foot on the ground and say 'God made a way!' every time you say the memory phrase. This helps connect the image of the serpent being crushed to the promise of Jesus — active and memorable for young children."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Draw a picture of the Garden of Eden — make it as beautiful as you can. Then draw a door somewhere in the picture and write (or ask a parent to write) on it: 'Jesus — the Way Back.' Remember: God always makes a way.",
+      "parentNote": "This creative exercise helps children hold two truths together: the real sadness of the fall, and the immediate hope God planted inside it. Display the picture somewhere visible as a daily reminder that God's love always makes a way."
+    }
+  }
+}

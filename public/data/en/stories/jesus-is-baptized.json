@@ -1,0 +1,60 @@
+{
+  "id": "jesus-is-baptized",
+  "title": "Jesus Is Baptised",
+  "subtitle": "When Jesus came out of the water, heaven opened and God spoke",
+  "collection": "jesus-is-here",
+  "mainTruth": "God the Father loves Jesus — and Jesus' baptism shows us what it looks like to live fully for God.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 3:21-22; Matthew 3:13-17",
+  "durationMinutes": 6,
+  "coverEmoji": "🕊️",
+  "coverColor": "#0EA5E9",
+  "illustrationPrompt": "Jesus rising from the River Jordan, water streaming from his hair and hands, a white dove descending in a beam of brilliant light from a parting in the clouds above, John the Baptist standing in the river beside him in reverence, golden late-afternoon light on the water's surface, soft blue and gold palette, painterly gouache illustration on parchment paper, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, holy and luminous, --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Near the River Jordan, crowds of people were gathering. John the Baptist was there — a wild, bold prophet who wore rough camel-hair clothing and called people to turn back to God and be baptised in the river as a sign of it. The people were hungry for God, and they came from all over to be baptised and to hear John speak.\n\nThen one day, Jesus came.\n\nJohn recognised who Jesus was immediately. He felt deeply unworthy. 'You should be baptising me!' John said. 'I'm not even worthy to untie your sandals.' Jesus gently insisted: 'Let it be this way for now. We must do what is right.' So John baptised Jesus in the river.\n\nAnd when Jesus came up out of the water, something extraordinary happened. While Jesus was praying, heaven opened — and the Holy Spirit came down from the sky like a dove and landed on Him. And then a voice came from heaven, a voice that shook the air and warmed the heart:\n\n'This is my beloved Son — in whom I am well pleased.'\n\nIn that one breathtaking moment, all three persons of God were present: Jesus in the water, the Holy Spirit descending like a dove, and the Father's voice speaking from heaven. The whole Trinity — Father, Son, and Spirit — together at the beginning of Jesus' public ministry.\n\nGod the Father called Jesus His beloved Son before Jesus had performed a single miracle, before He had preached a single sermon. Not because of what Jesus had done — but because of who He was. Loved. Chosen. Pleasing to God.\n\nAnd that is the same truth God speaks over every person who belongs to Jesus.",
+      "childText": "John the Baptist was at the river, helping people follow God. Then Jesus came to be baptised too. John couldn't believe it — Jesus was the one John had been telling everyone about! But Jesus said: Let's do what is right. So John baptised Jesus. And when Jesus came up out of the water and was praying, something amazing happened. A dove came down from the sky. And God's voice said: 'This is my Son — and I love Him.' The whole family of God — Father, Son, and Spirit — right there together!",
+      "verses": [
+        {
+          "ref": "Luke 3:21-22",
+          "kjv": "Now when all the people were baptized, it came to pass, that Jesus also being baptized, and praying, the heaven was opened, And the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son; in thee I am well pleased.",
+          "little_bible": "After Jesus was baptised and was praying, heaven opened! The Holy Spirit came down like a dove, and God's voice said: You are my beloved Son — I am so pleased with You."
+        },
+        {
+          "ref": "Matthew 3:17",
+          "kjv": "And lo a voice from heaven, saying, This is my beloved Son, in whom I am well pleased.",
+          "little_bible": "A voice from heaven said: This is my Son — my beloved Son. I am so happy with Him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "God said He was pleased with Jesus before Jesus had done any miracles yet. What does that tell you about why God loves us?",
+      "parentGuide": "This is one of the most important things a child can learn: God's love and pleasure are not rewards for good performance. The Father declared His delight in Jesus at the very start of His ministry — before the works began. Help children understand that they too are loved not for what they do but for who they are. For those baptised or thinking about baptism, this is a natural connection point to their own belonging in God's family.",
+      "familyQuestion": "If God spoke from heaven about you the way He spoke about Jesus, what do you think He would say? What does it mean to know God loves you — not because of what you do, but because you're His?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You for this beautiful moment when You spoke over Jesus and said You loved Him. Thank You that You love me too — not because I'm perfect, but because I'm Yours. Holy Spirit, come and be with me today. Help me to live for You the way Jesus did. Amen.",
+      "childPrompt": "Can you ask God to remind you how much He loves you — just like He told Jesus?",
+      "prayerPoints": [
+        "Thank God for loving Jesus — and for loving you the same way",
+        "Ask the Holy Spirit to be with you and guide you today",
+        "Thank God for the gift of baptism as a sign of belonging to Him"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Thou art my beloved Son; in thee I am well pleased.",
+      "ref": "Luke 3:22",
+      "memoryPhrase": "You are God's beloved.",
+      "tip": "Put a hand over your heart and say: 'I am God's beloved.' Say it slowly. Then look at each person in the room and point to them: 'You are God's beloved.' Do it until everyone has been pointed to. This verse is not just about Jesus — it echoes over every child of God."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell someone in your family one specific thing you love about them — say it out loud, look at them, and make it real. Just like God spoke words of love over Jesus, use your voice today to speak love to someone.",
+      "parentNote": "Children both need to receive words of love and learn to give them. Model this yourself: speak something specific and true over your child today. 'I love how you...' is worth more than a thousand general reassurances. The spiritual formation here is learning that words carry weight — and that love deserves to be spoken aloud."
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "mary-says-yes",
+  "title": "Mary Says Yes",
+  "subtitle": "An angel brought the most surprising news — and Mary trusted God",
+  "collection": "jesus-is-here",
+  "mainTruth": "When God asks us to do something hard, we can say yes because nothing is impossible with Him.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 1:26-38",
+  "durationMinutes": 6,
+  "coverEmoji": "⭐",
+  "coverColor": "#7C3AED",
+  "illustrationPrompt": "A young Mary kneeling in a simple stone room, her face lit with soft golden light, the angel Gabriel standing before her in a luminous glow, his wings barely visible in the brightness, Mary's expression shifting from fear to wonder to quiet courage, deep violet and warm gold palette, painterly gouache illustration on parchment paper, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sacred intimacy and holy wonder, --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Mary was a young woman living in a small town called Nazareth. She was engaged to be married to a man named Joseph. Life was simple, ordinary — the kind of life where nothing extraordinary was expected to happen.\n\nBut God had chosen Mary for something that had never happened before and would never happen again.\n\nOne day, an angel named Gabriel appeared to her. 'Greetings, favoured one!' the angel said. 'The Lord is with you!'\n\nMary was deeply troubled. What kind of greeting was this? The angel saw her fear and said, 'Don't be afraid, Mary. You have found favour with God. You are going to have a baby — a son. And you will call His name Jesus. He will be called the Son of the Most High God. His kingdom will never end.'\n\nMary was quiet for a moment. Then she asked the only question that made sense: 'How can this be? I'm not married yet.'\n\nThe angel answered gently: 'The Holy Spirit will come upon you. God's own power will overshadow you. And so the holy child born to you will be called the Son of God.' And then the angel told her something else: her relative Elizabeth — who everyone thought was too old to have children — was already six months pregnant. 'With God,' Gabriel said, 'nothing is impossible.'\n\nMary was still. She took a breath. And then she said one of the most important sentences ever spoken in all of history: 'I am the servant of the Lord. Let it happen to me just as you have said.'\n\nShe didn't know how it would all unfold. She didn't know all that was coming. But she trusted God, and her yes changed the whole world.",
+      "childText": "Mary was a young woman living a quiet, ordinary life. Then one day, an angel appeared! The angel said: Mary, God has chosen you to have a very special baby — God's own Son. His name will be Jesus. Mary was confused and a little scared. She asked: How can this happen? The angel said: Nothing is impossible with God. And Mary said something brave and beautiful: 'Yes, God. Whatever You say.' Her one little yes changed everything!",
+      "verses": [
+        {
+          "ref": "Luke 1:30-31",
+          "kjv": "And the angel said unto her, Fear not, Mary: for thou hast found favour with God. And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS.",
+          "little_bible": "The angel said: Don't be afraid, Mary! God is very pleased with you. You are going to have a baby boy, and you will call Him Jesus."
+        },
+        {
+          "ref": "Luke 1:37",
+          "kjv": "For with God nothing shall be impossible.",
+          "little_bible": "The angel told Mary: Nothing — not one single thing — is impossible with God."
+        },
+        {
+          "ref": "Luke 1:38",
+          "kjv": "And Mary said, Behold the handmaid of the Lord; be it unto me according to thy word.",
+          "little_bible": "Mary said: I belong to God. Let everything happen just as you have said. And the angel left."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Mary said yes to something very hard and surprising. What do you think helped her say yes to God?",
+      "parentGuide": "Mary's yes came from a heart already shaped by trust in God. She didn't understand everything — she asked a real question — but she believed God was good enough to trust. Help children see that saying yes to God doesn't mean we aren't scared or don't have questions. It means we believe He is bigger than our fears. For younger children: What hard thing have you said yes to that turned out to be good?",
+      "familyQuestion": "Has God ever asked you to do something that felt too big or too scary? What happened when you trusted Him?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You for Mary and her brave yes. Thank You that nothing is impossible for You — not even the things that feel impossible to me. Help me to trust You even when I'm scared or confused. I want to say yes to You like Mary did. Amen.",
+      "childPrompt": "Is there something that feels too hard or too big for you right now? Tell God about it — and remember: nothing is impossible with Him.",
+      "prayerPoints": [
+        "Thank God for sending Jesus through Mary's willing yes",
+        "Ask God to help you trust Him even when things feel impossible",
+        "Pray for courage to say yes to whatever God asks of you"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "For with God nothing shall be impossible.",
+      "ref": "Luke 1:37",
+      "memoryPhrase": "Nothing is impossible with God.",
+      "tip": "Spread your arms wide as wide as they go and say: 'NOTHING!' — then bring your hands together and point upward: 'is impossible with God!' The big arm spread helps children feel the bigness of the word 'nothing.' Do it three times in a row and it sticks fast."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Think of one thing that feels too hard or too scary right now. Write it down or draw a picture of it. Then say out loud: 'God, this is too big for me — but not for You.' Leave the paper somewhere you can see it as a reminder.",
+      "parentNote": "This exercise helps children practise the same honest trust Mary modelled — naming the hard thing and then placing it in God's hands. If your child names a real fear or worry, take it seriously. Pray over what they drew or wrote together. This is formation, not just information."
+    }
+  }
+}

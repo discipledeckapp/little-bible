@@ -1,0 +1,60 @@
+{
+  "id": "the-tower-of-babel",
+  "title": "The Tower of Babel",
+  "subtitle": "People tried to reach heaven on their own — but God had a better plan",
+  "collection": "the-beginning",
+  "mainTruth": "We can't reach God by being great — God reaches down to us.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 11:1-9",
+  "durationMinutes": 5,
+  "coverEmoji": "🏗️",
+  "coverColor": "#78350F",
+  "illustrationPrompt": "A grand unfinished ziggurat tower stretching into storm clouds, tiny people scrambling on scaffolding below, a moment of confusion as they look at each other unable to understand, God's presence hinted as light breaking through dark swirling clouds above, warm terracotta and burnt umber palette, painterly gouache illustration on parchment paper, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sense of human ambition humbled before the divine, --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "After the great flood, Noah's family grew and grew. In time there were many, many people again — and they all spoke the same language. One tongue, one people, one land.\n\nOne day they had an idea. 'Let's build a city,' they said. 'And let's build a tower so tall it reaches into heaven! Then everyone will know how great WE are. We'll be famous. No one will be able to stop us.'\n\nThey began to build. Brick by brick, higher and higher. They were proud of what they were making — proud of themselves.\n\nBut God looked down and saw what was happening. He saw their pride. He knew that building a tower wasn't really the problem — it was what was in their hearts. They wanted to be their own gods. They didn't need God if they could reach heaven by themselves.\n\nSo God did something surprising. He confused their language. Suddenly, one man said 'hand me a brick' and his neighbour stared at him blankly. Another called out for help and no one could understand her. Voices grew louder and more confused. No one knew what anyone was saying.\n\nThe building stopped. The people scattered across the earth — which was exactly what God had told them to do in the first place.\n\nThe tower was left unfinished, and the place was called Babel, meaning confusion. But this wasn't just a story about punishment. God was keeping His promise — filling the earth with people and making a way for His plan to reach every nation and every tongue.\n\nAnd one day, at a great celebration called Pentecost, God's Spirit would fall on people from every nation — and they would all hear the good news in their own language. Not a tower reaching up to God — but God's Spirit reaching down to every one of them.",
+      "childText": "Long ago, all people spoke the same language. They decided to build a huge tower all the way to heaven — so they could be super famous! But they forgot something: you don't reach God by being impressive. God looked down, mixed up all their languages, and the building stopped! People spread out across the world — just as God had planned. We can't climb up to God. But God can always reach down to us!",
+      "verses": [
+        {
+          "ref": "Genesis 11:4",
+          "kjv": "And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name, lest we be scattered abroad upon the face of the whole earth.",
+          "little_bible": "The people said: Let's build a great tower all the way to heaven! We want to be famous — we don't want to be scattered."
+        },
+        {
+          "ref": "Genesis 11:7-8",
+          "kjv": "Go to, let us go down, and there confound their language, that they may not understand one another's speech. So the LORD scattered them abroad from thence upon the face of all the earth.",
+          "little_bible": "God mixed up their languages so they couldn't understand each other. Then they stopped building and spread out all over the earth."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "The people wanted to make themselves famous and reach heaven on their own. Why do you think that idea didn't work?",
+      "parentGuide": "The heart of Babel is self-sufficiency — wanting to be great without needing God. Help children name the difference between doing something to serve others versus doing something to make yourself look important. The great reversal comes at Pentecost: God brings people together through His Spirit, not through human achievement. For younger children, keep it simple: we can't get to God by being big or smart — He comes to us because He loves us.",
+      "familyQuestion": "Can you think of a time you tried to do something all by yourself because you wanted to be impressive — instead of asking for help? How did that feel?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, I'm sorry for the times I try to do everything my own way and forget that I need You. Thank You that I don't have to climb up to reach You — You come down to us. Help me to want to make Your name great instead of my own. Amen.",
+      "childPrompt": "Can you ask God to help you think about His greatness today, not just your own?",
+      "prayerPoints": [
+        "Ask God to help you do things to honour Him, not just to show off",
+        "Thank God that He reaches down to us in love",
+        "Pray for people all over the world who speak different languages to hear about Jesus"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name.",
+      "ref": "Genesis 11:4",
+      "memoryPhrase": "God reaches down to us.",
+      "tip": "Reach your hands up high as if building a tower, then slowly lower them and point down — say: 'God reaches DOWN to us.' The motion helps the contrast stick: we reach up in pride, but God is the one who comes to us."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Build a tower together using blocks, cups, or books — make it as tall as you can! When it's done, ask each other: Did we build it to show off, or to share the fun together? Then knock it down and talk about how God's plans are always bigger than ours.",
+      "parentNote": "This playful activity gives children a physical experience of the Babel story. The key conversation is not about the building but the motivation — doing things for attention versus doing things together. Keep it light and joyful; the point lands better through laughter than lecture."
+    }
+  }
+}

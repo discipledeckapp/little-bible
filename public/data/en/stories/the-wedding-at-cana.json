@@ -1,0 +1,65 @@
+{
+  "id": "the-wedding-at-cana",
+  "title": "The Wedding at Cana",
+  "subtitle": "When the wine ran out, Jesus turned water into the best wine anyone had tasted",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Jesus cares about the ordinary moments of our lives — and His first miracle happened at a party!",
+  "ageRange": "4-7",
+  "bibleRef": "John 2:1-11",
+  "durationMinutes": 6,
+  "coverEmoji": "🫙",
+  "coverColor": "#DC2626",
+  "illustrationPrompt": "Six large stone water jars standing in a warm courtyard, servants pouring water into them as Jesus watches calmly from nearby, Mary standing to one side with a knowing smile, golden lantern light catching the pouring water, rich terracotta and deep ruby palette, painterly gouache illustration on parchment paper, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, joyful celebration atmosphere with a hint of miraculous wonder, --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "There was a wedding in a small town called Cana in Galilee, and Jesus and His mother Mary and His disciples were all invited. Weddings in those days were enormous celebrations — feasts that could last several days. It was a time of joy, music, dancing, and sharing meals together.\n\nBut somewhere in the middle of the celebration, a problem crept in: the wine had run out.\n\nIn that culture, running out of wine at your wedding feast was a serious embarrassment — a disgrace that the family might never live down. Mary found Jesus and told him simply: 'They have no wine.'\n\nJesus looked at her and said gently, 'My time hasn't fully come yet, woman.' But Mary turned to the servants and said the most important instruction anyone could ever receive: 'Whatever He says to you — do it.'\n\nJesus saw six huge stone water jars standing nearby — the kind used for washing, each one holding enough for many people. He said to the servants: 'Fill the jars with water.' They filled them to the brim — every single one, completely full.\n\n'Now draw some out,' Jesus said, 'and take it to the master of the feast.'\n\nThey did. The master tasted it — and his eyebrows shot up. He called to the bridegroom in amazement: 'Everyone serves the good wine first, and then the cheaper wine when people have had enough. But you have saved the best wine for last!'\n\nThe servants knew the secret. The disciples saw what had happened — and they believed in Jesus. This was the very first miracle Jesus performed. Not healing a sick person or raising the dead — but filling party cups with the finest wine, so that a celebration could go on. Jesus cares about ordinary life. He cares about joy. And when He shows up, the best is always yet to come.",
+      "childText": "Jesus and his mum Mary were at a wedding party! It was a wonderful celebration — until the wine ran out. That was very embarrassing! Mary told Jesus about the problem. Jesus told the servants to fill six huge stone jars with water. They did. Then He said: now pour some out and take it to the person in charge. They did — and it had become the most delicious wine anyone had ever tasted! Jesus' very first miracle was at a party. He cares about every part of our lives, even the fun parts!",
+      "verses": [
+        {
+          "ref": "John 2:5",
+          "kjv": "His mother saith unto the servants, Whatsoever he saith unto you, do it.",
+          "little_bible": "Mary said to the servants: Whatever Jesus tells you to do — just do it."
+        },
+        {
+          "ref": "John 2:9-10",
+          "kjv": "When the ruler of the feast had tasted the water that was made wine, and knew not whence it was: (but the servants which drew the water knew;) the governor of the feast called the bridegroom, and saith unto him, Every man at the beginning doth set forth good wine; and when men have well drunk, then that which is worse: but thou hast kept the good wine until now.",
+          "little_bible": "The master of the party tasted it and was amazed. He said: Everyone saves the best for first — but you have saved the very best until now!"
+        },
+        {
+          "ref": "John 2:11",
+          "kjv": "This beginning of miracles did Jesus in Cana of Galilee, and manifested forth his glory; and his disciples believed on him.",
+          "little_bible": "This was the very first miracle Jesus did. When the disciples saw it, they believed in Him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Mary told the servants: 'Whatever Jesus says, do it.' Why is that good advice not just for the servants — but for all of us?",
+      "parentGuide": "Mary's instruction to the servants is one of the simplest and most profound statements in the Gospels — and it applies directly to life with Jesus. When we do what Jesus says, even when we don't fully understand why, we see His glory revealed. For children, this lands practically: when we obey Jesus' words (love your neighbour, forgive, tell the truth), the best things happen. Also draw out the surprise and delight of this miracle — Jesus wasn't too serious for a party.",
+      "familyQuestion": "Jesus turned ordinary water into something extraordinary. Can you think of a time when something ordinary in your life became something special because Jesus was in it?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank You that Jesus came to a party and cared about making it wonderful. Thank You that You care about ordinary days and ordinary things — not just big, important moments. Help me to do whatever Jesus says, like the servants did. And help me to trust that when Jesus is involved, the best is always coming. Amen.",
+      "childPrompt": "Tell God about an ordinary part of your day — something small — and ask Him to be part of it.",
+      "prayerPoints": [
+        "Thank Jesus that He cares about every part of your life, even the everyday things",
+        "Ask God to help you obey Jesus even when you don't fully understand why",
+        "Pray for joy in your home today — Jesus loves celebration!"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "His mother saith unto the servants, Whatsoever he saith unto you, do it.",
+      "ref": "John 2:5",
+      "memoryPhrase": "Do whatever Jesus says.",
+      "tip": "Act it out: one person plays Mary, pointing at the other and saying slowly: 'Whatever — He says — DO IT.' The other person acts it out by filling an imaginary jar. Repetition with movement locks the verse in for young children."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Help set the table or prepare something for a family meal today — pour the drinks, fold the napkins, carry the plates. Serve your family just like the servants served at the wedding, and remember: Jesus loves it when we serve each other with joy.",
+      "parentNote": "Service is best taught through doing, not telling. When you invite your child to help with a meal today, name what they are doing — 'You're serving our family like the servants at the wedding!' This connects the action to the story and helps children build a theology of joyful, everyday service."
+    }
+  }
+}
