@@ -5,5 +5,8 @@
   { "book": "Proverbs", "chapter": 4, "file": "proverbs_chapter_04.json" },
   { "book": "Proverbs", "chapter": 5, "file": "proverbs_chapter_05.json" },
   { "book": "Proverbs", "chapter": 6, "file": "proverbs_chapter_06.json" },
-  { "book": "Proverbs", "chapter": 7, "file": "proverbs_chapter_07.json" }
+  { "book": "Proverbs", "chapter": 7, "file": "proverbs_chapter_07.json" },
+  { "book": "Proverbs", "chapter": 8, "file": "proverbs_chapter_08.json" },
+  { "book": "Proverbs", "chapter": 9, "file": "proverbs_chapter_09.json" },
+  { "book": "Proverbs", "chapter": 10, "file": "proverbs_chapter_10.json" }
 ]
