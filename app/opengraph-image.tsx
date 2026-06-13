@@ -32,7 +32,6 @@ export default function OGImage() {
               borderRadius: 32,
               padding: '8px 20px',
               marginBottom: 32,
-              width: 'fit-content',
             }}
           >
             <div style={{ fontSize: 18, color: '#FCD34D' }}>📖</div>
