@@ -203,15 +203,13 @@ export default function FamilyModeReader({ chapter, bookSlug }: FamilyModeReader
         </div>
       </div>
 
-      {/* Verse reference — always visible */}
+      {/* Verse reference — prominent Bible identity marker */}
       <div className="flex items-center justify-between mb-3">
-        <span className="inline-flex items-center gap-1.5">
-          <span className="text-xs font-extrabold text-amber-600 uppercase tracking-wide">
-            {chapter.book} {chapter.chapter}:{verse.verse}
-          </span>
+        <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-sm font-extrabold px-3 py-1 rounded-full border border-amber-200">
+          📖 {chapter.book} {chapter.chapter}:{verse.verse}
         </span>
         <span className="text-xs text-stone-400 font-medium" aria-hidden="true">
-          {STEPS.findIndex(s => s.id === step) + 1} / {STEPS.length}
+          Step {STEPS.findIndex(s => s.id === step) + 1} of {STEPS.length}
         </span>
       </div>
 
