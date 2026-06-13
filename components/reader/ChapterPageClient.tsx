@@ -17,44 +17,28 @@ interface ChapterPageClientProps {
   nextChapterNum?: number;
 }
 
-const MODE_META: Record<AppMode, {
-  label: string;
-  sublabel: string;
-  icon: string;
-  activeClass: string;
-  ringClass: string;
-  description: string;
-}> = {
-  child: {
-    label: 'Bible Time',
-    sublabel: 'Solo',
-    icon: '📖',
-    activeClass: 'bg-amber-500 text-white shadow-sm shadow-amber-200',
-    ringClass: 'focus-visible:ring-amber-400',
-    description: 'Read verse by verse at your own pace',
-  },
-  family: {
-    label: 'Family',
-    sublabel: 'Together',
-    icon: '❤️',
-    activeClass: 'bg-emerald-500 text-white shadow-sm shadow-emerald-200',
-    ringClass: 'focus-visible:ring-emerald-400',
-    description: '5-step devotion with discussion, prayer, and action',
-  },
-  review: {
-    label: 'Parent',
-    sublabel: 'Review',
-    icon: '🔍',
-    activeClass: 'bg-stone-700 text-white shadow-sm shadow-stone-200',
-    ringClass: 'focus-visible:ring-stone-400',
-    description: 'KJV comparison, annotations, and chapter overview',
-  },
+const MODES: { id: AppMode; label: string; icon: string }[] = [
+  { id: 'child',  label: 'Child',  icon: '📖' },
+  { id: 'family', label: 'Family', icon: '❤️' },
+  { id: 'review', label: 'Review', icon: '🔍' },
+];
+
+const MODE_ACTIVE: Record<AppMode, string> = {
+  child:  'bg-amber-500 text-white shadow-sm',
+  family: 'bg-emerald-500 text-white shadow-sm',
+  review: 'bg-stone-700 text-white shadow-sm',
 };
 
-export default function ChapterPageClient({ chapter, bookSlug, availableChapters = [], totalChapters = 0, nextChapterNum }: ChapterPageClientProps) {
-  const [mode, setMode]             = useState<AppMode>('child');
-  const [mounted, setMounted]       = useState(false);
-  const [showPin, setShowPin]       = useState(false);
+export default function ChapterPageClient({
+  chapter,
+  bookSlug,
+  availableChapters = [],
+  totalChapters = 0,
+  nextChapterNum,
+}: ChapterPageClientProps) {
+  const [mode, setMode]                     = useState<AppMode>('child');
+  const [mounted, setMounted]               = useState(false);
+  const [showPin, setShowPin]               = useState(false);
   const [reviewUnlocked, setReviewUnlocked] = useState(false);
 
   useEffect(() => {
@@ -86,136 +70,98 @@ export default function ChapterPageClient({ chapter, bookSlug, availableChapters
     );
   }
 
-  const currentMeta = MODE_META[mode];
+  const prevCh = availableChapters.filter(c => c < chapter.chapter).pop();
+  const nextCh = availableChapters.find(c => c > chapter.chapter);
 
   return (
     <div>
-      {/* PIN modal */}
       {showPin && <PinModal onUnlock={handlePinUnlock} />}
 
-      {/* Chapter navigation */}
-      {(availableChapters.length > 0 || totalChapters > 0) && (() => {
-        const prevCh = availableChapters.filter(c => c < chapter.chapter).pop();
-        const nextCh = availableChapters.find(c => c > chapter.chapter);
-        return (
-          <div className="flex items-center justify-between mb-5 bg-stone-50 rounded-2xl px-4 py-2.5 border border-stone-100">
-            {prevCh ? (
-              <Link
-                href={`/${bookSlug}/${prevCh}`}
-                className="flex items-center gap-1.5 text-sm font-bold text-amber-700 hover:text-amber-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1 active:scale-95"
-                aria-label={`Previous chapter: ${chapter.book} ${prevCh}`}
-              >
-                <span aria-hidden="true">←</span>
-                <span>Ch {prevCh}</span>
-              </Link>
-            ) : (
-              <div />
-            )}
+      {/* ── Chapter navigation bar ── */}
+      {(availableChapters.length > 0 || totalChapters > 0) && (
+        <div className="flex items-center justify-between mb-4 bg-stone-50 rounded-2xl px-4 py-2.5 border border-stone-100">
+          {prevCh ? (
             <Link
-              href={`/${bookSlug}`}
-              className="text-xs font-bold text-amber-600 hover:text-amber-800 uppercase tracking-widest transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-2 py-1 hover:bg-amber-50"
-              aria-label={`All chapters of ${chapter.book}`}
-              title="Tap to see all chapters"
+              href={`/${bookSlug}/${prevCh}`}
+              className="flex items-center gap-1.5 text-sm font-bold text-amber-700 hover:text-amber-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1 active:scale-95"
+              aria-label={`Previous chapter: ${chapter.book} ${prevCh}`}
             >
-              {chapter.book} · Ch {chapter.chapter} of {totalChapters} ▾
+              <span aria-hidden="true">←</span>
+              <span>Ch {prevCh}</span>
             </Link>
-            {nextCh ? (
-              <Link
-                href={`/${bookSlug}/${nextCh}`}
-                className="flex items-center gap-1.5 text-sm font-bold text-amber-700 hover:text-amber-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1 active:scale-95"
-                aria-label={`Next chapter: ${chapter.book} ${nextCh}`}
-              >
-                <span>Ch {nextCh}</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-            ) : (
-              <div />
-            )}
-          </div>
-        );
-      })()}
+          ) : <div />}
 
-      {/* Chapter header */}
-      <div className="mb-6">
-        {/* Book + Chapter name */}
-        <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
-          <div>
-            <p className="text-amber-600 text-sm font-extrabold uppercase tracking-[0.15em] mb-0.5">
-              {chapter.book}
-            </p>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-800 leading-tight font-display">
-              Chapter {chapter.chapter}
-            </h1>
-            {chapter.main_lesson && (
-              <p className="text-stone-400 text-sm mt-1.5 max-w-xs leading-snug">
-                {chapter.main_lesson}
-              </p>
-            )}
-          </div>
+          <Link
+            href={`/${bookSlug}`}
+            className="text-xs font-bold text-amber-600 hover:text-amber-800 uppercase tracking-widest transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-2 py-1 hover:bg-amber-50"
+            aria-label={`All chapters of ${chapter.book}`}
+            title="Tap to see all chapters"
+          >
+            {chapter.book} · Ch {chapter.chapter} of {totalChapters} ▾
+          </Link>
 
-          {/* Mode toggle — child and family only */}
-          <div className="flex items-center gap-2 flex-shrink-0">
-            <div
-              role="group"
-              aria-label="Reading mode"
-              className="inline-flex bg-stone-100 rounded-2xl p-1 gap-1 flex-shrink-0"
+          {nextCh ? (
+            <Link
+              href={`/${bookSlug}/${nextCh}`}
+              className="flex items-center gap-1.5 text-sm font-bold text-amber-700 hover:text-amber-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1 py-1 active:scale-95"
+              aria-label={`Next chapter: ${chapter.book} ${nextCh}`}
             >
-              {(['child', 'family'] as const).map((m) => {
-                const meta = MODE_META[m];
-                return (
-                  <button
-                    key={m}
-                    onClick={() => switchMode(m)}
-                    className={`flex flex-col items-center gap-0 px-4 py-2.5 rounded-xl text-xs font-bold transition-all focus:outline-none focus-visible:ring-2 ${meta.ringClass} ${
-                      mode === m ? meta.activeClass : 'text-stone-500 hover:text-stone-700 hover:bg-stone-200/60'
-                    }`}
-                    aria-label={`Switch to ${meta.label} mode`}
-                    aria-pressed={mode === m}
-                  >
-                    <span className="text-base leading-none mb-0.5" aria-hidden="true">{meta.icon}</span>
-                    <span className="leading-none">{meta.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-            {mode !== 'review' && (
-              <button
-                onClick={() => switchMode('review')}
-                className="text-xs text-stone-400 hover:text-stone-600 font-semibold flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-stone-100 transition-colors focus:outline-none"
-                aria-label="Parent review mode"
-                title="Parent review — tap to unlock"
-              >
-                <span aria-hidden="true">👨‍👩‍👧</span>
-                <span className="hidden sm:inline">Parent</span>
-              </button>
-            )}
-          </div>
+              <span>Ch {nextCh}</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          ) : <div />}
         </div>
+      )}
 
-        {/* Active mode context strip */}
-        <div className={`rounded-2xl px-4 py-2.5 text-sm flex items-center gap-2 ${
-          mode === 'child'
-            ? 'bg-amber-50 text-amber-800 border border-amber-100'
-            : mode === 'family'
-            ? 'bg-emerald-50 text-emerald-800 border border-emerald-100'
-            : 'bg-stone-100 text-stone-600 border border-stone-200'
-        }`}>
-          <span aria-hidden="true">{currentMeta.icon}</span>
-          <span className="font-semibold">{currentMeta.label}:</span>
-          <span className="font-normal">{currentMeta.description}</span>
-        </div>
+      {/* ── Persistent mode toggle ── */}
+      <div
+        role="group"
+        aria-label="Reading mode"
+        className="flex bg-stone-100 rounded-2xl p-1 gap-1 mb-6"
+      >
+        {MODES.map(({ id, label, icon }) => (
+          <button
+            key={id}
+            onClick={() => switchMode(id)}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-bold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 active:scale-95 ${
+              mode === id
+                ? MODE_ACTIVE[id]
+                : 'text-stone-500 hover:text-stone-700 hover:bg-stone-200/60'
+            }`}
+            aria-pressed={mode === id}
+            aria-label={
+              id === 'review'
+                ? 'Review mode — full KJV comparison and annotations (parent)'
+                : id === 'family'
+                ? 'Family mode — 5-step devotion flow'
+                : 'Child mode — simple Bible reading'
+            }
+          >
+            <span aria-hidden="true">{icon}</span>
+            {label}
+          </button>
+        ))}
       </div>
 
-      {/* Reader */}
-      {mode === 'child' && (
-        <ChildModeReader chapter={chapter} bookSlug={bookSlug} nextChapterNum={nextChapterNum} />
-      )}
-      {mode === 'family' && (
-        <FamilyModeReader chapter={chapter} bookSlug={bookSlug} />
-      )}
-      {mode === 'review' && (
-        <ReviewModeReader chapter={chapter} />
-      )}
+      {/* ── Chapter header ── */}
+      <div className="mb-6">
+        <p className="text-amber-600 text-sm font-extrabold uppercase tracking-[0.15em] mb-0.5">
+          {chapter.book}
+        </p>
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-800 leading-tight font-display">
+          Chapter {chapter.chapter}
+        </h1>
+        {chapter.main_lesson && mode !== 'child' && (
+          <p className="text-stone-400 text-sm mt-1.5 max-w-sm leading-snug">
+            {chapter.main_lesson}
+          </p>
+        )}
+      </div>
+
+      {/* ── Reader ── */}
+      {mode === 'child'  && <ChildModeReader  chapter={chapter} bookSlug={bookSlug} nextChapterNum={nextChapterNum} />}
+      {mode === 'family' && <FamilyModeReader chapter={chapter} bookSlug={bookSlug} />}
+      {mode === 'review' && <ReviewModeReader chapter={chapter} />}
     </div>
   );
 }
