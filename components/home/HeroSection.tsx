@@ -10,10 +10,10 @@ import LumiMascot, { getLumiStage } from '@/components/mascot/LumiMascot';
 const QUICK_BOOKS = [
   { slug: 'genesis',  name: 'Genesis',  emoji: '🌍', available: true  },
   { slug: 'proverbs', name: 'Proverbs', emoji: '✨', available: true  },
-  { slug: 'psalms',   name: 'Psalms',   emoji: '🎵', available: false },
+  { slug: 'psalms',   name: 'Psalms',   emoji: '🎵', available: true  },
   { slug: 'matthew',  name: 'Matthew',  emoji: '✝️', available: true  },
   { slug: 'luke',     name: 'Luke',     emoji: '⭐', available: true  },
-  { slug: 'john',     name: 'John',     emoji: '💙', available: false },
+  { slug: 'john',     name: 'John',     emoji: '💙', available: true  },
 ];
 
 function getReadingResume(): { href: string; label: string } {
