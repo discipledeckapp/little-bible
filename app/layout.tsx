@@ -28,8 +28,21 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Little Bible — God's Word for Little Hearts",
   description:
-    'A child-friendly adaptation of Scripture for ages 4–7, preserving the heart of the KJV in language little ones understand.',
-  keywords: ['Bible', 'children', 'Scripture', 'kids', 'Proverbs', 'faith'],
+    'All 66 books of Scripture — every verse faithfully adapted so children ages 4–7 can read, understand, and love God\'s Word.',
+  keywords: ['Bible', 'children', 'Scripture', 'kids', 'faith', 'devotional', 'Christian'],
+  openGraph: {
+    title: "Little Bible — God's Word for Little Hearts",
+    description:
+      'All 66 books of Scripture faithfully adapted for ages 4–7. Read, discuss, pray, remember, and live God\'s Word together.',
+    siteName: 'Little Bible',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Little Bible — God's Word for Little Hearts",
+    description: 'Every verse of Scripture faithfully adapted for children ages 4–7.',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
