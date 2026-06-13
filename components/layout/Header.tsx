@@ -3,6 +3,7 @@ import HeaderModeChip from './HeaderModeChip';
 import UserAvatar from '@/components/auth/UserAvatar';
 import SignInButton from '@/components/auth/SignInButton';
 import MemberSelectorClient from './MemberSelectorServer';
+import LogoMark from '@/components/brand/LogoMark';
 
 export default function Header() {
   return (
@@ -15,9 +16,7 @@ export default function Header() {
           className="flex items-center gap-2.5 group flex-shrink-0"
           aria-label="Little Bible — Home"
         >
-          <div className="w-9 h-9 bg-amber-100 rounded-xl flex items-center justify-center text-xl group-hover:bg-amber-200 transition-colors select-none">
-            📖
-          </div>
+          <LogoMark size={36} className="group-hover:opacity-90 transition-opacity" />
           <div>
             <p className="font-bold text-amber-900 text-base leading-tight">Little Bible</p>
             <p className="text-amber-500 text-xs leading-tight hidden sm:block font-medium">

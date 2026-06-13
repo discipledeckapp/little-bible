@@ -30,6 +30,13 @@ export const metadata: Metadata = {
   description:
     'All 66 books of Scripture — every verse faithfully adapted so children ages 4–7 can read, understand, and love God\'s Word.',
   keywords: ['Bible', 'children', 'Scripture', 'kids', 'faith', 'devotional', 'Christian'],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon',        type: 'image/png'     },
+    ],
+    apple: '/apple-icon',
+  },
   openGraph: {
     title: "Little Bible — God's Word for Little Hearts",
     description:

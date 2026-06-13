@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ChapterPageClient from '@/components/reader/ChapterPageClient';
+import JsonLd from '@/components/seo/JsonLd';
 import { getChapter, getLanguageIndex, getBookIndex } from '@/lib/content';
 import { BIBLE_BOOKS } from '@/lib/bibleBooks';
 
@@ -17,9 +18,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const chapterNum = parseInt(chapter, 10);
   const data = getChapter(book, chapterNum, 'en');
   if (!data) return {};
+
+  const title = `${data.book} Chapter ${data.chapter} — Little Bible`;
+  const description = data.main_lesson
+    ? `${data.main_lesson} — ${data.book} ${data.chapter} faithfully adapted for children ages 4–7.`
+    : `Read ${data.book} Chapter ${data.chapter} — every verse adapted for children ages 4–7 on Little Bible.`;
+  const url = `https://littlebible.org/${book}/${chapter}`;
+
   return {
-    title: `${data.book} ${data.chapter} — Little Bible`,
-    description: data.main_lesson,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: 'Little Bible',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+    },
+    alternates: { canonical: url },
   };
 }
 
@@ -58,8 +79,29 @@ export default async function ChapterPage({ params }: PageProps) {
   const totalChapters = bookMeta?.totalChapters ?? chapterNum;
   const nextChapterNum = availableChapters.find(c => c > chapterNum);
 
+  const chapterJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${chapter.book} Chapter ${chapter.chapter}`,
+    description: chapter.main_lesson ?? undefined,
+    url: `https://littlebible.org/${bookSlug}/${chapterNum}`,
+    isPartOf: {
+      '@type': 'Book',
+      name: chapter.book,
+      url: `https://littlebible.org/${bookSlug}`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Little Bible',
+      url: 'https://littlebible.org',
+    },
+    inLanguage: 'en',
+    audience: { '@type': 'Audience', audienceType: 'Children ages 4–7' },
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLd data={chapterJsonLd} />
       <Header />
       <main className="flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-8">
         {/* Back link — goes to book page, not home */}

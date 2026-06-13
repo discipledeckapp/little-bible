@@ -9,6 +9,7 @@ import FamilyStreakBanner from '@/components/home/FamilyStreakBanner';
 import LibrarySection from '@/components/home/LibrarySection';
 import StoryGarden from '@/components/stories/StoryGarden';
 import FamilyDashboardSection from '@/components/home/FamilyDashboardSection';
+import JsonLd from '@/components/seo/JsonLd';
 import { getAllBooksWithMeta } from '@/lib/content';
 import { getAllStories } from '@/lib/stories';
 
@@ -30,8 +31,28 @@ export default async function HomePage() {
     emoji: s.coverEmoji ?? '📖',
   }));
 
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Little Bible',
+    url: 'https://littlebible.org',
+    description:
+      'All 66 books of Scripture faithfully adapted for children ages 4–7. Read, discuss, pray, and live God\'s Word together as a family.',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Little Bible',
+      url: 'https://littlebible.org',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://littlebible.org/icon',
+      },
+    },
+    inLanguage: 'en',
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLd data={websiteJsonLd} />
       <Header />
 
       {/* 1. Hero */}

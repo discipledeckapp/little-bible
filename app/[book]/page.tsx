@@ -19,9 +19,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { book: slug } = await params;
   const bookMeta = BIBLE_BOOKS.find((b) => b.slug === slug);
   if (!bookMeta) return {};
+
+  const testament = bookMeta.testament === 'OT' ? 'Old Testament' : 'New Testament';
+  const description = `${bookMeta.tagline} — ${bookMeta.name} is a ${testament} book with ${bookMeta.totalChapters} chapters, faithfully adapted for children ages 4–7.`;
+
   return {
     title: `${bookMeta.name} — Little Bible`,
-    description: bookMeta.tagline,
+    description,
+    openGraph: {
+      title: `${bookMeta.name} — Little Bible`,
+      description,
+      url: `https://littlebible.org/${slug}`,
+      siteName: 'Little Bible',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title: `${bookMeta.name} — Little Bible`,
+      description,
+    },
+    alternates: { canonical: `https://littlebible.org/${slug}` },
   };
 }
 
