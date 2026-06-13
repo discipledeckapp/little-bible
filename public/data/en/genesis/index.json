@@ -13,5 +13,7 @@
   { "book": "Genesis", "chapter": 12, "file": "genesis_chapter_12.json" },
   { "book": "Genesis", "chapter": 13, "file": "genesis_chapter_13.json" },
   { "book": "Genesis", "chapter": 14, "file": "genesis_chapter_14.json" },
-  { "book": "Genesis", "chapter": 15, "file": "genesis_chapter_15.json" }
+  { "book": "Genesis", "chapter": 15, "file": "genesis_chapter_15.json" },
+  { "book": "Genesis", "chapter": 16, "file": "genesis_chapter_16.json" },
+  { "book": "Genesis", "chapter": 17, "file": "genesis_chapter_17.json" }
 ]
