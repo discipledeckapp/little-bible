@@ -79,10 +79,7 @@ export default async function HomePage() {
       {/* 3. Family dashboard — shown to signed-in users with a family */}
       <FamilyDashboardSection />
 
-      {/* 4. Full Bible library — the primary product identity */}
-      <LibrarySection availableBooks={books} />
-
-      {/* 4. Journey paths — age-based discipleship paths */}
+      {/* 4. Journey paths — age-based discipleship paths (story-first) */}
       <JourneySection />
 
       {/* 5. Topics — scriptures by theme */}
@@ -91,8 +88,11 @@ export default async function HomePage() {
       {/* 6. Stories by collection — story-first browsing */}
       <StoriesSection />
 
-      {/* 6. Story Garden — user's completed stories (client, hidden until progress exists) */}
+      {/* 7. Story Garden — user's completed stories (client, hidden until progress exists) */}
       <StoryGarden />
+
+      {/* 8. Full Bible library — reference and deep reading (secondary) */}
+      <LibrarySection availableBooks={books} />
 
       <Footer />
     </div>
