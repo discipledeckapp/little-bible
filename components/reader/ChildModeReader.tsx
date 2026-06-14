@@ -15,6 +15,7 @@ import { recordMemberProgress, getActiveMemberId } from '@/lib/family-client';
 import IllustrationZone from './IllustrationZone';
 import LumiMascot, { getLumiStage, getLumiLabel } from '@/components/mascot/LumiMascot';
 import { getProgress } from '@/lib/progress';
+import { getMemoryVerseText, getMemoryVerseRef } from '@/types';
 
 const ENCOURAGEMENTS = [
   { text: 'Great listening!',   emoji: '🌟' },
@@ -246,6 +247,9 @@ export default function ChildModeReader({ chapter, bookSlug, nextChapterNum, ini
               chapter={chapter.chapter}
               verse={verse.verse}
               keywords={verse.keywords}
+              illustrationPrompt={verse.illustration_prompt}
+              illustrationUrl={verse.illustration_url}
+              illustrationAltText={verse.illustration_alt_text}
             />
           </div>
 
@@ -328,18 +332,44 @@ export default function ChildModeReader({ chapter, bookSlug, nextChapterNum, ini
 
                   {/* Memory phrase */}
                   {verse.memory_phrase && (
-                    <div className="bg-amber-50 rounded-2xl px-4 py-3 border border-amber-200">
-                      <p className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-1.5">✨ Remember</p>
+                    <div className="bg-amber-50 rounded-2xl px-4 py-3 border border-amber-200 space-y-2">
+                      <p className="text-xs font-bold text-amber-600 uppercase tracking-widest">✨ Remember</p>
                       <p className="text-amber-900 text-base font-extrabold leading-snug font-child">
                         {verse.memory_phrase}
                       </p>
                       <button
                         onClick={() => speakText(verse.memory_phrase, { rate: 0.65, pitch: 1.05 })}
-                        className="mt-2 text-amber-500 hover:text-amber-700 text-xs font-semibold flex items-center gap-1 focus:outline-none rounded"
+                        className="text-amber-500 hover:text-amber-700 text-xs font-semibold flex items-center gap-1 focus:outline-none rounded"
                         aria-label="Hear memory phrase"
                       >
                         <span aria-hidden="true">🔊</span> Hear it slowly
                       </button>
+                      {/* Chapter memory verse — expandable for ages 6-7 */}
+                      {chapter.memory_verse && (
+                        <details className="group mt-1">
+                          <summary className="text-xs font-bold text-amber-700 cursor-pointer select-none flex items-center gap-1.5 list-none">
+                            <span className="group-open:rotate-90 transition-transform inline-block text-amber-400" aria-hidden="true">▶</span>
+                            Learn the full verse (ages 6–7)
+                          </summary>
+                          <div className="mt-2 pt-2 border-t border-amber-200 space-y-1.5">
+                            <p className="text-amber-900 text-sm font-bold leading-snug font-child">
+                              {getMemoryVerseText(chapter.memory_verse)}
+                            </p>
+                            {getMemoryVerseRef(chapter.memory_verse) && (
+                              <p className="text-xs text-amber-500 font-semibold">
+                                — {getMemoryVerseRef(chapter.memory_verse)}
+                              </p>
+                            )}
+                            <button
+                              onClick={() => speakText(getMemoryVerseText(chapter.memory_verse), { rate: 0.7, pitch: 1.0 })}
+                              className="text-amber-500 hover:text-amber-700 text-xs font-semibold flex items-center gap-1 focus:outline-none rounded"
+                              aria-label="Hear full memory verse"
+                            >
+                              <span aria-hidden="true">🔊</span> Hear it slowly
+                            </button>
+                          </div>
+                        </details>
+                      )}
                     </div>
                   )}
 

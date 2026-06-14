@@ -13,6 +13,8 @@ export interface Verse {
   do_it_today?: string;               // 5th Family Mode step — concrete action
   action_challenge?: string;           // optional bonus family challenge
   illustration_prompt?: string;        // what the illustration should depict
+  illustration_url?: string;           // real image URL if available
+  illustration_alt_text?: string;      // accessible description of the illustration
   keywords: string[];
 }
 

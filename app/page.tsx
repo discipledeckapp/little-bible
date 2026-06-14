@@ -9,9 +9,11 @@ import FamilyStreakBanner from '@/components/home/FamilyStreakBanner';
 import LibrarySection from '@/components/home/LibrarySection';
 import StoryGarden from '@/components/stories/StoryGarden';
 import FamilyDashboardSection from '@/components/home/FamilyDashboardSection';
+import TopicsSection from '@/components/home/TopicsSection';
 import JsonLd from '@/components/seo/JsonLd';
 import { getAllBooksWithMeta } from '@/lib/content';
 import { getAllStories } from '@/lib/stories';
+import { getAllTopics } from '@/lib/topics';
 
 export const metadata: Metadata = {
   title: "Little Bible — God's Word for Little Hearts",
@@ -20,9 +22,10 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [books, allStories] = await Promise.all([
+  const [books, allStories, topics] = await Promise.all([
     Promise.resolve(getAllBooksWithMeta('en')),
     getAllStories(),
+    Promise.resolve(getAllTopics()),
   ]);
 
   const storySearchItems = allStories.map(s => ({
@@ -75,7 +78,10 @@ export default async function HomePage() {
       {/* 4. Journey paths — age-based discipleship paths */}
       <JourneySection />
 
-      {/* 5. Stories by collection — story-first browsing */}
+      {/* 5. Topics — scriptures by theme */}
+      <TopicsSection topics={topics} />
+
+      {/* 6. Stories by collection — story-first browsing */}
       <StoriesSection />
 
       {/* 6. Story Garden — user's completed stories (client, hidden until progress exists) */}

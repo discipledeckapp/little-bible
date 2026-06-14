@@ -13,6 +13,7 @@ import {
   getChapterCompletedVerses,
 } from '@/lib/progress';
 import IllustrationZone from './IllustrationZone';
+import { getMemoryVerseText, getMemoryVerseRef } from '@/types';
 import LumiMascot, { getLumiStage, getLumiLabel } from '@/components/mascot/LumiMascot';
 import { getProgress } from '@/lib/progress';
 
@@ -269,6 +270,8 @@ export default function FamilyModeReader({ chapter, bookSlug, initialVerse }: Fa
               verse={verse.verse}
               keywords={verse.keywords}
               illustrationPrompt={verse.illustration_prompt}
+              illustrationUrl={verse.illustration_url}
+              illustrationAltText={verse.illustration_alt_text}
             />
           </div>
 
@@ -378,12 +381,13 @@ export default function FamilyModeReader({ chapter, bookSlug, initialVerse }: Fa
             {/* ── REMEMBER step ── */}
             {step === 'remember' && (
               <>
+                {/* Memory phrase card — ages 4-5 */}
                 <div
-                  className="rounded-3xl px-6 py-6 text-white text-center space-y-2 shine-pulse"
+                  className="rounded-3xl px-6 py-5 text-white text-center space-y-1.5 shine-pulse"
                   style={{ background: cfg.color }}
                 >
-                  <p className="text-4xl mb-2" aria-hidden="true">⭐</p>
-                  <p className="text-xs font-bold uppercase tracking-widest opacity-80">Memory Phrase</p>
+                  <p className="text-3xl mb-1" aria-hidden="true">⭐</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest opacity-75">Memory Phrase · Ages 4–5</p>
                   <p className="text-xl sm:text-2xl font-extrabold leading-snug font-child">
                     {verse.memory_phrase}
                   </p>
@@ -432,17 +436,44 @@ export default function FamilyModeReader({ chapter, bookSlug, initialVerse }: Fa
                   </div>
                 )}
 
-                {/* Phase 3: Done! */}
+                {/* Phase 3: Done — show chapter memory verse for ages 6-7 */}
                 {memoryPhase === 'done' && (
-                  <div
-                    className="flex items-center gap-3 rounded-2xl px-4 py-3 border fade-in"
-                    style={{ background: cfg.lightColor, borderColor: cfg.borderColor }}
-                  >
-                    <span className="text-2xl" aria-hidden="true">🌱</span>
-                    <div>
-                      <p className="text-sm font-bold" style={{ color: cfg.textColor }}>Well done!</p>
-                      <p className="text-xs" style={{ color: cfg.color }}>+1 Wisdom Seed coming up.</p>
+                  <div className="space-y-3 fade-in">
+                    <div
+                      className="flex items-center gap-3 rounded-2xl px-4 py-3 border"
+                      style={{ background: cfg.lightColor, borderColor: cfg.borderColor }}
+                    >
+                      <span className="text-2xl" aria-hidden="true">🌱</span>
+                      <div>
+                        <p className="text-sm font-bold" style={{ color: cfg.textColor }}>Memory phrase done!</p>
+                        <p className="text-xs" style={{ color: cfg.color }}>+1 Wisdom Seed coming up.</p>
+                      </div>
                     </div>
+
+                    {/* Chapter memory verse — ages 6-7 / parent-led */}
+                    {chapter.memory_verse && (
+                      <div className="bg-white rounded-2xl border border-stone-200 px-5 py-4 space-y-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-base" aria-hidden="true">📖</span>
+                          <p className="text-xs font-bold text-stone-500 uppercase tracking-widest">Weekly Memory Verse · Ages 6–7</p>
+                        </div>
+                        <p className="text-stone-800 text-base font-bold leading-snug font-child">
+                          {getMemoryVerseText(chapter.memory_verse)}
+                        </p>
+                        {getMemoryVerseRef(chapter.memory_verse) && (
+                          <p className="text-xs text-stone-400 font-semibold">
+                            — {getMemoryVerseRef(chapter.memory_verse)}
+                          </p>
+                        )}
+                        <button
+                          onClick={() => speakText(getMemoryVerseText(chapter.memory_verse), { rate: 0.7, pitch: 1.0 })}
+                          className="text-stone-400 hover:text-stone-600 text-xs font-semibold flex items-center gap-1 focus:outline-none rounded transition-colors"
+                          aria-label="Hear memory verse"
+                        >
+                          <span aria-hidden="true">🔊</span> Hear the full verse
+                        </button>
+                      </div>
+                    )}
                   </div>
                 )}
               </>
