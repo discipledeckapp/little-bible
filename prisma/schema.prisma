@@ -6,6 +6,15 @@ datasource db {
   provider = "postgresql"
 }
 
+enum AdminRole {
+  SUPER_ADMIN
+  CONTENT_EDITOR
+  THEOLOGICAL_REVIEWER
+  CURRICULUM_MANAGER
+  SUPPORT_ADMIN
+  ANALYTICS_VIEWER
+}
+
 // ── NextAuth required tables ─────────────────────────────────────────────────
 
 model Account {
@@ -36,17 +45,19 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String     @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?    @unique
   emailVerified DateTime?
   image         String?
-  createdAt     DateTime  @default(now())
+  createdAt     DateTime   @default(now())
+  role          AdminRole?
   accounts      Account[]
   sessions      Session[]
   progress      UserProgress?
   donations     Donation[]
   family        Family?
+  auditLogs     AdminAuditLog[]
 }
 
 model VerificationToken {
@@ -172,4 +183,55 @@ model Donation {
   status     String   @default("pending") // 'pending' | 'completed' | 'failed'
   reference  String?  @unique
   createdAt  DateTime @default(now())
+}
+
+// ── Admin ─────────────────────────────────────────────────────────────────────
+
+model AnalyticsEvent {
+  id        String   @id @default(cuid())
+  event     String
+  userId    String?
+  isGuest   Boolean  @default(false)
+  bookSlug  String?
+  chapter   Int?
+  verseNum  Int?
+  storyId   String?
+  mode      String?
+  props     Json?
+  createdAt DateTime @default(now())
+
+  @@index([event, createdAt])
+  @@index([userId, createdAt])
+  @@index([bookSlug, chapter])
+  @@index([createdAt])
+}
+
+model ContentReview {
+  id         String   @id @default(cuid())
+  bookSlug   String
+  chapter    Int
+  verseNum   Int?
+  status     String   @default("pending") // pending | approved | needs_revision | flagged
+  concern    String?  // theological | too_difficult | language | other
+  notes      String?  @db.Text
+  reviewerId String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([bookSlug, chapter, verseNum])
+  @@index([status])
+  @@index([bookSlug, chapter])
+}
+
+model AdminAuditLog {
+  id        String   @id @default(cuid())
+  adminId   String
+  admin     User     @relation(fields: [adminId], references: [id])
+  action    String
+  targetId  String?
+  details   Json?
+  createdAt DateTime @default(now())
+
+  @@index([adminId, createdAt])
+  @@index([createdAt])
 }
