@@ -2,5 +2,6 @@
   { "book": "John", "chapter": 1, "file": "john_chapter_01.json" },
   { "book": "John", "chapter": 2, "file": "john_chapter_02.json" },
   { "book": "John", "chapter": 3, "file": "john_chapter_03.json" },
-  { "book": "John", "chapter": 4, "file": "john_chapter_04.json" }
+  { "book": "John", "chapter": 4, "file": "john_chapter_04.json" },
+  { "book": "John", "chapter": 6, "file": "john_chapter_06.json" }
 ]

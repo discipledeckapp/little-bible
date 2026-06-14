@@ -1,5 +1,6 @@
 [
   { "book": "Mark", "chapter": 1, "file": "mark_chapter_01.json" },
   { "book": "Mark", "chapter": 2, "file": "mark_chapter_02.json" },
-  { "book": "Mark", "chapter": 3, "file": "mark_chapter_03.json" }
+  { "book": "Mark", "chapter": 3, "file": "mark_chapter_03.json" },
+  { "book": "Mark", "chapter": 4, "file": "mark_chapter_04.json" }
 ]

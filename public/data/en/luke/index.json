@@ -3,5 +3,8 @@
   { "book": "Luke", "chapter": 2, "file": "luke_chapter_02.json" },
   { "book": "Luke", "chapter": 3, "file": "luke_chapter_03.json" },
   { "book": "Luke", "chapter": 4, "file": "luke_chapter_04.json" },
+  { "book": "Luke", "chapter": 5, "file": "luke_chapter_05.json" },
+  { "book": "Luke", "chapter": 6, "file": "luke_chapter_06.json" },
+  { "book": "Luke", "chapter": 10, "file": "luke_chapter_10.json" },
   { "book": "Luke", "chapter": 15, "file": "luke_chapter_15.json" }
 ]

@@ -2,5 +2,8 @@
   { "book": "Psalms", "chapter": 1,   "file": "psalms_chapter_01.json"  },
   { "book": "Psalms", "chapter": 22,  "file": "psalms_chapter_22.json"  },
   { "book": "Psalms", "chapter": 23,  "file": "psalms_chapter_23.json"  },
-  { "book": "Psalms", "chapter": 100, "file": "psalms_chapter_100.json" }
+  { "book": "Psalms", "chapter": 100, "file": "psalms_chapter_100.json" },
+  { "book": "Psalms", "chapter": 121, "file": "psalms_chapter_121.json" },
+  { "book": "Psalms", "chapter": 139, "file": "psalms_chapter_139.json" },
+  { "book": "Psalms", "chapter": 150, "file": "psalms_chapter_150.json" }
 ]
