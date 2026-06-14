@@ -34,6 +34,13 @@ export default async function HomePage() {
     emoji: s.coverEmoji ?? '📖',
   }));
 
+  const topicSearchItems = topics.map(t => ({
+    id: t.id,
+    title: t.title,
+    emoji: t.emoji,
+    description: t.description,
+  }));
+
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -59,7 +66,7 @@ export default async function HomePage() {
       <Header />
 
       {/* 1. Hero */}
-      <HeroSection stories={storySearchItems} />
+      <HeroSection stories={storySearchItems} topics={topicSearchItems} />
 
       {/* 2. Progress (shown when started) */}
       <div className="bg-[#FFFBF5] px-0 py-2">

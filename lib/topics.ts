@@ -11,6 +11,18 @@ export interface TopicVerse {
   memory_phrase: string;
 }
 
+export interface TopicStory {
+  id: string;
+  title: string;
+  emoji: string;
+}
+
+export interface TopicRelatedReading {
+  book_slug: string;
+  chapter: number;
+  label: string;
+}
+
 export interface Topic {
   id: string;
   title: string;
@@ -20,12 +32,16 @@ export interface Topic {
   colorText: string;
   colorBorder: string;
   description: string;
+  child_intro: string;
   parent_note: string;
+  stories: TopicStory[];
   verses: TopicVerse[];
   memory_verse: { ref: string; kjv: string; little_bible: string };
   memory_phrase: string;
   prayer: string;
   do_it_today: string;
+  related_reading: TopicRelatedReading[];
+  discussion_prompts: string[];
   illustration_prompt: string;
   illustration_url?: string;
 }

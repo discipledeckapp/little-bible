@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import JsonLd from '@/components/seo/JsonLd';
 import { getAllTopics, getTopicById } from '@/lib/topics';
 
 interface PageProps {
@@ -19,25 +20,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const topic = getTopicById(slug);
   if (!topic) return { title: 'Topic — Little Bible' };
 
-  const title = `${topic.title} — Scriptures by Topic · Little Bible`;
-  const description = `${topic.description} Key verses, a memory verse, family prayer, and a do-it-today challenge.`;
+  const title = `${topic.title} — Scripture Topic · Little Bible`;
+  const description = `${topic.child_intro} Key verses, Bible stories, a memory verse, family prayer, and a do-it-today challenge. Ages 4–7.`;
   const url = `https://littlebible.org/topics/${slug}`;
 
   return {
     title,
     description,
-    openGraph: {
-      title,
-      description,
-      url,
-      siteName: 'Little Bible',
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary',
-      title,
-      description,
-    },
+    openGraph: { title, description, url, siteName: 'Little Bible', type: 'article' },
+    twitter: { card: 'summary', title, description },
     alternates: { canonical: url },
   };
 }
@@ -52,8 +43,28 @@ export default async function TopicPage({ params }: PageProps) {
   const prevTopic = currentIndex > 0 ? allTopics[currentIndex - 1] : null;
   const nextTopic = currentIndex < allTopics.length - 1 ? allTopics[currentIndex + 1] : null;
 
+  const url = `https://littlebible.org/topics/${slug}`;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${topic.title} — Scripture Topic · Little Bible`,
+    description: `${topic.child_intro} Ages 4–7.`,
+    url,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Little Bible',
+      url: 'https://littlebible.org',
+      logo: { '@type': 'ImageObject', url: 'https://littlebible.org/icon' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  };
+
+  const featuredVerses = topic.verses.slice(0, 2);
+  const moreVerses = topic.verses.slice(2);
+
   return (
     <div className="min-h-screen flex flex-col bg-[var(--color-background)]">
+      <JsonLd data={jsonLd} />
       <Header />
 
       <main className="flex-1">
@@ -90,59 +101,88 @@ export default async function TopicPage({ params }: PageProps) {
 
         <div className="max-w-3xl mx-auto px-4 py-10 space-y-10">
 
-          {/* ── 2. Key Verses ─────────────────────────────────────────── */}
+          {/* ── 2. Child Intro ────────────────────────────────────────── */}
+          <section>
+            <div className={`${topic.colorLight} ${topic.colorBorder} border-l-4 rounded-2xl px-6 py-5 flex items-start gap-4`}>
+              <span className="text-3xl shrink-0 mt-0.5" aria-hidden="true">{topic.emoji}</span>
+              <div>
+                <p className={`text-xs font-bold uppercase tracking-widest ${topic.colorText} mb-1.5`}>
+                  For young readers
+                </p>
+                <p className="text-stone-800 text-base sm:text-lg leading-relaxed font-medium">
+                  {topic.child_intro}
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ── 3. Featured Bible Stories ─────────────────────────────── */}
+          {topic.stories.length > 0 && (
+            <section>
+              <h2
+                className="text-2xl font-bold text-stone-800 mb-2"
+                style={{ fontFamily: 'var(--font-display)' }}
+              >
+                Bible Stories about {topic.title}
+              </h2>
+              <p className="text-stone-500 text-sm mb-5">
+                Read these stories with your family to see {topic.title.toLowerCase()} in action.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {topic.stories.map(story => (
+                  <Link
+                    key={story.id}
+                    href={`/stories/${story.id}`}
+                    className="group flex flex-col items-center gap-2 bg-white border border-stone-100 hover:border-stone-200 rounded-2xl p-4 text-center shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                  >
+                    <span className="text-3xl" aria-hidden="true">{story.emoji}</span>
+                    <p className="text-xs font-bold text-stone-700 leading-tight group-hover:text-stone-900 transition-colors">
+                      {story.title}
+                    </p>
+                    <span className={`text-[10px] font-bold uppercase tracking-wide ${topic.colorText} opacity-70`}>
+                      Read →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* ── 4. Key Verses ─────────────────────────────────────────── */}
           <section>
             <h2
-              className="text-2xl font-bold text-stone-800 mb-5"
+              className="text-2xl font-bold text-stone-800 mb-2"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Key Verses
             </h2>
+            <p className="text-stone-500 text-sm mb-5">
+              What the Bible says about {topic.title.toLowerCase()}, in words your child can understand.
+            </p>
             <div className="space-y-4">
-              {topic.verses.map(verse => (
-                <div
-                  key={verse.ref}
-                  className="bg-white rounded-3xl shadow-sm border border-stone-100 overflow-hidden"
-                >
-                  {/* Ref badge + chapter link */}
-                  <div className="px-5 pt-5 pb-3 flex items-center justify-between gap-3">
-                    <Link
-                      href={`/${verse.book_slug}/${verse.chapter}`}
-                      className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full ${topic.colorLight} ${topic.colorText} hover:opacity-80 transition-opacity`}
-                    >
-                      {verse.ref}
-                      <span aria-hidden="true">↗</span>
-                    </Link>
-                    <span className="text-xs text-stone-400 font-medium">KJV</span>
-                  </div>
-
-                  {/* KJV text — subtle, smaller */}
-                  <div className="px-5 pb-3">
-                    <p className="text-stone-400 text-xs leading-relaxed italic border-l-2 border-stone-100 pl-3">
-                      {verse.kjv}
-                    </p>
-                  </div>
-
-                  {/* Little Bible text — prominent */}
-                  <div className="px-5 pb-4">
-                    <p className="text-stone-700 text-base sm:text-lg leading-relaxed font-medium">
-                      {verse.little_bible}
-                    </p>
-                  </div>
-
-                  {/* Memory phrase chip */}
-                  <div className="px-5 pb-5">
-                    <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 text-xs font-bold px-3 py-1.5 rounded-full border border-amber-100">
-                      <span aria-hidden="true">⭐</span>
-                      {verse.memory_phrase}
-                    </span>
-                  </div>
-                </div>
+              {featuredVerses.map(verse => (
+                <VerseCard key={verse.ref} verse={verse} topic={topic} />
               ))}
             </div>
+
+            {moreVerses.length > 0 && (
+              <details className="mt-4 group">
+                <summary className="cursor-pointer list-none">
+                  <span className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide ${topic.colorText} hover:opacity-70 transition-opacity`}>
+                    <span className="group-open:hidden">+ Show {moreVerses.length} more verse{moreVerses.length > 1 ? 's' : ''}</span>
+                    <span className="hidden group-open:inline">− Show fewer verses</span>
+                  </span>
+                </summary>
+                <div className="space-y-4 mt-4">
+                  {moreVerses.map(verse => (
+                    <VerseCard key={verse.ref} verse={verse} topic={topic} />
+                  ))}
+                </div>
+              </details>
+            )}
           </section>
 
-          {/* ── 3. Memory Verse ───────────────────────────────────────── */}
+          {/* ── 5. Memory Verse ───────────────────────────────────────── */}
           <section>
             <h2
               className="text-2xl font-bold text-stone-800 mb-5"
@@ -155,6 +195,7 @@ export default async function TopicPage({ params }: PageProps) {
                 <span className={`text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full ${topic.color} text-white`}>
                   {topic.memory_verse.ref}
                 </span>
+                <span className="text-xs font-semibold text-stone-400 mt-1">Learn this verse</span>
               </div>
               <p className="text-stone-400 text-xs leading-relaxed italic mb-4 border-l-2 border-stone-200 pl-3">
                 {topic.memory_verse.kjv}
@@ -166,14 +207,14 @@ export default async function TopicPage({ params }: PageProps) {
                 <span className="bg-amber-400 text-white text-xs font-bold px-3 py-1.5 rounded-full">
                   Memory Phrase
                 </span>
-                <span className="text-stone-700 font-semibold text-sm">
-                  {topic.memory_phrase}
+                <span className="text-stone-700 font-semibold text-sm italic">
+                  &ldquo;{topic.memory_phrase}&rdquo;
                 </span>
               </div>
             </div>
           </section>
 
-          {/* ── 4. Family Prayer ──────────────────────────────────────── */}
+          {/* ── 6. Family Prayer ──────────────────────────────────────── */}
           <section>
             <h2
               className="text-2xl font-bold text-stone-800 mb-5"
@@ -192,7 +233,7 @@ export default async function TopicPage({ params }: PageProps) {
             </div>
           </section>
 
-          {/* ── 5. Do It Today ────────────────────────────────────────── */}
+          {/* ── 7. Do It Today ────────────────────────────────────────── */}
           <section>
             <h2
               className="text-2xl font-bold text-stone-800 mb-5"
@@ -211,7 +252,39 @@ export default async function TopicPage({ params }: PageProps) {
             </div>
           </section>
 
-          {/* ── 6. Parent Note (collapsible) ──────────────────────────── */}
+          {/* ── 8. Related Bible Reading ──────────────────────────────── */}
+          {topic.related_reading.length > 0 && (
+            <section>
+              <h2
+                className="text-2xl font-bold text-stone-800 mb-2"
+                style={{ fontFamily: 'var(--font-display)' }}
+              >
+                Read More in the Bible
+              </h2>
+              <p className="text-stone-500 text-sm mb-5">
+                Explore these Bible chapters to go deeper on {topic.title.toLowerCase()}.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {topic.related_reading.map(reading => (
+                  <Link
+                    key={`${reading.book_slug}-${reading.chapter}`}
+                    href={`/${reading.book_slug}/${reading.chapter}`}
+                    className="group flex items-center gap-3 bg-white border border-stone-100 hover:border-stone-200 rounded-2xl px-4 py-3.5 shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                  >
+                    <span className="text-xl shrink-0" aria-hidden="true">📖</span>
+                    <p className="text-sm font-semibold text-stone-700 group-hover:text-stone-900 leading-tight flex-1">
+                      {reading.label}
+                    </p>
+                    <span className={`text-xs font-bold ${topic.colorText} shrink-0 group-hover:translate-x-0.5 transition-transform`} aria-hidden="true">
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* ── 9. Family Guide (collapsible) ─────────────────────────── */}
           <section>
             <details className="group bg-stone-50 border border-stone-200 rounded-3xl overflow-hidden">
               <summary className="flex items-center justify-between gap-3 px-6 py-5 cursor-pointer list-none select-none">
@@ -221,16 +294,42 @@ export default async function TopicPage({ params }: PageProps) {
                     className="text-lg font-bold text-stone-700"
                     style={{ fontFamily: 'var(--font-display)' }}
                   >
-                    Note for Parents
+                    Family Discussion Guide
                   </h2>
                 </div>
                 <span className="text-stone-400 text-sm font-medium group-open:hidden">Show</span>
                 <span className="text-stone-400 text-sm font-medium hidden group-open:block">Hide</span>
               </summary>
-              <div className="px-6 pb-6 pt-1">
-                <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-                  {topic.parent_note}
-                </p>
+              <div className="px-6 pb-6 pt-2 space-y-5">
+
+                {/* Discussion prompts */}
+                {topic.discussion_prompts.length > 0 && (
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">
+                      Talk About It
+                    </p>
+                    <ul className="space-y-2.5">
+                      {topic.discussion_prompts.map((prompt, i) => (
+                        <li key={i} className="flex items-start gap-2.5">
+                          <span className={`text-xs font-extrabold ${topic.colorText} shrink-0 mt-0.5`}>
+                            {i + 1}.
+                          </span>
+                          <p className="text-stone-600 text-sm leading-relaxed">{prompt}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Parent note */}
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">
+                    Note for Parents
+                  </p>
+                  <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+                    {topic.parent_note}
+                  </p>
+                </div>
               </div>
             </details>
           </section>
@@ -273,6 +372,48 @@ export default async function TopicPage({ params }: PageProps) {
       </main>
 
       <Footer />
+    </div>
+  );
+}
+
+function VerseCard({
+  verse,
+  topic,
+}: {
+  verse: { ref: string; book_slug: string; chapter: number; kjv: string; little_bible: string; memory_phrase: string };
+  topic: { colorLight: string; colorText: string; colorBorder: string };
+}) {
+  return (
+    <div className="bg-white rounded-3xl shadow-sm border border-stone-100 overflow-hidden">
+      <div className="px-5 pt-5 pb-3 flex items-center justify-between gap-3">
+        <Link
+          href={`/${verse.book_slug}/${verse.chapter}`}
+          className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full ${topic.colorLight} ${topic.colorText} hover:opacity-80 transition-opacity`}
+        >
+          {verse.ref}
+          <span aria-hidden="true">↗</span>
+        </Link>
+        <span className="text-xs text-stone-400 font-medium">KJV</span>
+      </div>
+
+      <div className="px-5 pb-3">
+        <p className="text-stone-400 text-xs leading-relaxed italic border-l-2 border-stone-100 pl-3">
+          {verse.kjv}
+        </p>
+      </div>
+
+      <div className="px-5 pb-4">
+        <p className="text-stone-700 text-base sm:text-lg leading-relaxed font-medium">
+          {verse.little_bible}
+        </p>
+      </div>
+
+      <div className="px-5 pb-5">
+        <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 text-xs font-bold px-3 py-1.5 rounded-full border border-amber-100">
+          <span aria-hidden="true">⭐</span>
+          {verse.memory_phrase}
+        </span>
+      </div>
     </div>
   );
 }

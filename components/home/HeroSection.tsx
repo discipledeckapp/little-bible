@@ -29,23 +29,29 @@ const ALL_BOOKS_SEARCH = [
 ];
 
 type StorySearchItem = { id: string; title: string; emoji: string };
+type TopicSearchItem = { id: string; title: string; emoji: string; description: string };
 
 type SearchResult =
   | { kind: 'book'; slug: string; name: string; emoji: string; available: boolean }
-  | { kind: 'story'; id: string; title: string; emoji: string };
+  | { kind: 'story'; id: string; title: string; emoji: string }
+  | { kind: 'topic'; id: string; title: string; emoji: string; description: string };
 
-function searchContent(q: string, stories: StorySearchItem[]): SearchResult[] {
+function searchContent(q: string, stories: StorySearchItem[], topics: TopicSearchItem[]): SearchResult[] {
   if (!q.trim()) return [];
   const lower = q.toLowerCase();
   const books: SearchResult[] = ALL_BOOKS_SEARCH
     .filter(b => b.name.toLowerCase().includes(lower))
-    .slice(0, 3)
+    .slice(0, 2)
     .map(b => ({ kind: 'book' as const, ...b }));
   const storyResults: SearchResult[] = stories
     .filter(s => s.title.toLowerCase().includes(lower))
-    .slice(0, 4)
+    .slice(0, 3)
     .map(s => ({ kind: 'story' as const, ...s }));
-  return [...books, ...storyResults].slice(0, 6);
+  const topicResults: SearchResult[] = topics
+    .filter(t => t.title.toLowerCase().includes(lower) || t.description.toLowerCase().includes(lower))
+    .slice(0, 2)
+    .map(t => ({ kind: 'topic' as const, ...t }));
+  return [...books, ...storyResults, ...topicResults].slice(0, 6);
 }
 
 // Quick-start books — available books first, clearly marked
@@ -70,9 +76,10 @@ function getReadingResume(): { href: string; label: string } {
 
 interface HeroSectionProps {
   stories?: StorySearchItem[];
+  topics?: TopicSearchItem[];
 }
 
-export default function HeroSection({ stories = [] }: HeroSectionProps) {
+export default function HeroSection({ stories = [], topics = [] }: HeroSectionProps) {
   const router = useRouter();
   const [resume,    setResume]    = useState({ href: '/genesis/1', label: 'Start with Genesis' });
   const [lumiStage, setLumiStage] = useState<ReturnType<typeof getLumiStage>>('seed');
@@ -83,7 +90,7 @@ export default function HeroSection({ stories = [] }: HeroSectionProps) {
   const [activeIndex,   setActiveIndex]   = useState(-1);
   const searchRef = useRef<HTMLDivElement>(null);
 
-  const searchResults = searchContent(searchQuery, stories);
+  const searchResults = searchContent(searchQuery, stories, topics);
   const showDropdown  = searchFocused && searchQuery.trim().length > 0;
 
   useEffect(() => {
@@ -106,6 +113,7 @@ export default function HeroSection({ stories = [] }: HeroSectionProps) {
 
   function getResultHref(r: SearchResult): string {
     if (r.kind === 'book') return r.available ? `/${r.slug}/1` : `/${r.slug}`;
+    if (r.kind === 'topic') return `/topics/${r.id}`;
     return `/stories/${r.id}`;
   }
 
@@ -239,8 +247,8 @@ export default function HeroSection({ stories = [] }: HeroSectionProps) {
                   onChange={e => { setSearchQuery(e.target.value); setActiveIndex(-1); }}
                   onFocus={() => setSearchFocused(true)}
                   onKeyDown={handleSearchKeyDown}
-                  placeholder="Search books or stories…"
-                  aria-label="Search books and stories"
+                  placeholder="Search books, stories, topics…"
+                  aria-label="Search books, stories and topics"
                   aria-expanded={showDropdown}
                   aria-autocomplete="list"
                   className="flex-1 bg-transparent text-white placeholder-amber-300/40 text-sm font-medium outline-none min-w-0"
@@ -271,7 +279,9 @@ export default function HeroSection({ stories = [] }: HeroSectionProps) {
                       const label = result.kind === 'book' ? result.name : result.title;
                       const sub   = result.kind === 'book'
                         ? (result.available ? 'Bible Book' : 'Coming soon')
-                        : 'Bible Story';
+                        : result.kind === 'topic'
+                          ? 'Scripture Topic'
+                          : 'Bible Story';
                       return (
                         <button
                           key={`${result.kind}-${result.kind === 'book' ? result.slug : result.id}`}

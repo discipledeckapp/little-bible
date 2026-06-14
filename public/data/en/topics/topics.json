@@ -8,7 +8,14 @@
     "colorText": "text-rose-800",
     "colorBorder": "border-rose-200",
     "description": "God loves you so much — more than the biggest hug you can imagine! His love never stops, no matter what.",
+    "child_intro": "God loves you SO much — more than you can count! And He wants you to share that same love with everyone around you. Love is the greatest thing in the whole world.",
     "parent_note": "The love of God is not merely an emotion but an enacted covenant — most fully revealed in the gift of His Son. For children, this becomes the bedrock of identity: they are loved before they perform. When children internalize this unconditional love, it shapes how they treat others and how they understand their own worth.",
+    "stories": [
+      { "id": "the-good-neighbour", "title": "The Good Neighbour", "emoji": "❤️" },
+      { "id": "jesus-loves-children", "title": "Jesus Loves Children", "emoji": "💛" },
+      { "id": "the-lost-son", "title": "The Lost Son", "emoji": "🏃" },
+      { "id": "god-made-me", "title": "God Made Me", "emoji": "🌟" }
+    ],
     "verses": [
       {
         "ref": "John 3:16",
@@ -55,6 +62,17 @@
     "memory_phrase": "God loves the whole world",
     "prayer": "Dear God, thank You for loving us so much that You sent Jesus. Help us to feel Your love every day. Teach our family to love each other the way You love us. In Jesus' name, amen.",
     "do_it_today": "Tell every person in your family one thing you love about them — and then thank God together for His love.",
+    "related_reading": [
+      { "book_slug": "john", "chapter": 3, "label": "John 3 — God so loved the world" },
+      { "book_slug": "john", "chapter": 15, "label": "John 15 — Love one another" },
+      { "book_slug": "luke", "chapter": 10, "label": "Luke 10 — The Good Samaritan" },
+      { "book_slug": "matthew", "chapter": 22, "label": "Matthew 22 — The greatest commandment" }
+    ],
+    "discussion_prompts": [
+      "Can you think of someone who loves you very much? How do they show their love?",
+      "How can you show love to someone in your family or at school today?",
+      "Why did God send Jesus? What does that tell us about how much God loves us?"
+    ],
     "illustration_prompt": "A warm illustration of a father holding a child in a big hug, with a bright sunrise behind them and a soft golden glow — conveying unconditional love and safety."
   },
   {
@@ -66,7 +84,13 @@
     "colorText": "text-green-800",
     "colorBorder": "border-green-200",
     "description": "When we feel sick or hurt, we can ask God to help us get better. God is a kind and caring healer.",
+    "child_intro": "Jesus is a wonderful healer. When we feel sick or hurt inside, we can talk to Him. He cares about every part of us — our bodies and our hearts!",
     "parent_note": "Scripture speaks of healing in physical, emotional, and spiritual dimensions. Isaiah 53:5 points to Christ's atoning work as the foundation of all healing — our wholeness is purchased by His suffering. For children, God's healing nature can be taught as confidence in prayer without guaranteeing specific outcomes, grounding hope in God's goodness rather than a formula.",
+    "stories": [
+      { "id": "jesus-saves", "title": "Jesus Saves", "emoji": "✨" },
+      { "id": "daniel-and-the-lions", "title": "Daniel and the Lions", "emoji": "🦁" },
+      { "id": "the-good-shepherd", "title": "The Good Shepherd", "emoji": "🐑" }
+    ],
     "verses": [
       {
         "ref": "Isaiah 53:5",
@@ -78,15 +102,6 @@
         "memory_phrase": "By His wounds we are healed"
       },
       {
-        "ref": "Jeremiah 17:14",
-        "book_slug": "jeremiah",
-        "chapter": 17,
-        "verse_num": 14,
-        "kjv": "Heal me, O LORD, and I shall be healed; save me, and I shall be saved: for thou art my praise.",
-        "little_bible": "Heal me, Lord — and I will truly be healed. Save me — and I will truly be saved. You are the one I praise.",
-        "memory_phrase": "Heal me, Lord, and I am healed"
-      },
-      {
         "ref": "Psalm 103:2-3",
         "book_slug": "psalms",
         "chapter": 103,
@@ -94,6 +109,15 @@
         "kjv": "Bless the LORD, O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; who healeth all thy diseases.",
         "little_bible": "Praise God with your whole heart — and don't forget all the good things He does. He forgives us and heals us.",
         "memory_phrase": "God forgives and heals us"
+      },
+      {
+        "ref": "Jeremiah 17:14",
+        "book_slug": "jeremiah",
+        "chapter": 17,
+        "verse_num": 14,
+        "kjv": "Heal me, O LORD, and I shall be healed; save me, and I shall be saved: for thou art my praise.",
+        "little_bible": "Heal me, Lord — and I will truly be healed. Save me — and I will truly be saved. You are the one I praise.",
+        "memory_phrase": "Heal me, Lord, and I am healed"
       },
       {
         "ref": "James 5:15",
@@ -113,6 +137,17 @@
     "memory_phrase": "By His wounds we are healed",
     "prayer": "Dear God, You are our healer. When we feel sick or sad, remind us to come to You. We trust You to take care of our bodies and our hearts. Thank You for Jesus, who made a way for us to be truly well. Amen.",
     "do_it_today": "Pray together for someone you know who is sick or hurting, and write them a kind note to cheer them up.",
+    "related_reading": [
+      { "book_slug": "psalms", "chapter": 103, "label": "Psalm 103 — God heals and forgives" },
+      { "book_slug": "matthew", "chapter": 8, "label": "Matthew 8 — Jesus heals many people" },
+      { "book_slug": "luke", "chapter": 17, "label": "Luke 17 — Ten lepers are healed" },
+      { "book_slug": "john", "chapter": 9, "label": "John 9 — A blind man sees again" }
+    ],
+    "discussion_prompts": [
+      "When you feel sick or sad, does it help to know that Jesus cares about you? Why?",
+      "How can we pray for someone who is hurting or unwell?",
+      "What does it mean that 'by His wounds we are healed'? What did Jesus do for us?"
+    ],
     "illustration_prompt": "A gentle illustration of a child lying in bed with a warm blanket, and a beam of golden light coming through the window — peaceful and hopeful, suggesting God's care and comfort."
   },
   {
@@ -124,7 +159,14 @@
     "colorText": "text-indigo-800",
     "colorBorder": "border-indigo-200",
     "description": "Prayer is just talking to God — and He always listens! You can tell Him anything, any time of day.",
+    "child_intro": "Did you know you can talk to God any time — morning, night, or even in the middle of lunch? Prayer is just talking to your best friend who is always there and always listens!",
     "parent_note": "Prayer is the primary means by which children learn that God is personal and near. Matthew 6 gives us the Lord's Prayer as a model — not a formula, but a shape: adoration, surrender, petition, forgiveness, and trust. Teaching children to pray early forms a lifelong habit of dependence on God that becomes the foundation of their faith.",
+    "stories": [
+      { "id": "how-to-pray", "title": "How to Pray", "emoji": "🙏" },
+      { "id": "daniel-and-the-lions", "title": "Daniel and the Lions", "emoji": "🦁" },
+      { "id": "mary-says-yes", "title": "Mary Says Yes", "emoji": "⭐" },
+      { "id": "jesus-is-baptized", "title": "Jesus Is Baptized", "emoji": "💦" }
+    ],
     "verses": [
       {
         "ref": "Matthew 6:9",
@@ -171,6 +213,17 @@
     "memory_phrase": "Tell God everything you need",
     "prayer": "Dear God, thank You that we can always talk to You. Help our family to pray every day — in the morning, at night, and whenever we need You. We know You are always listening. Amen.",
     "do_it_today": "Set a special time today to pray together as a family — take turns letting each person say one thing they are thankful for and one thing they need from God.",
+    "related_reading": [
+      { "book_slug": "matthew", "chapter": 6, "label": "Matthew 6 — The Lord's Prayer" },
+      { "book_slug": "luke", "chapter": 11, "label": "Luke 11 — Ask and it shall be given" },
+      { "book_slug": "psalms", "chapter": 145, "label": "Psalm 145 — God is near when we call" },
+      { "book_slug": "matthew", "chapter": 18, "label": "Matthew 18 — Where two or three gather" }
+    ],
+    "discussion_prompts": [
+      "What is something you want to talk to God about right now? Let's do it!",
+      "When is a good time to pray? Can you pray anywhere — even at the playground?",
+      "How do you feel after you pray — does anything feel different?"
+    ],
     "illustration_prompt": "A warm illustration of a small child with hands folded and eyes closed in prayer, kneeling beside a bed at night — soft lamplight, a starry window, peaceful and tender."
   },
   {
@@ -182,7 +235,14 @@
     "colorText": "text-sky-800",
     "colorBorder": "border-sky-200",
     "description": "It's okay to feel scared sometimes — but God says \"Do not be afraid!\" because He is always right there with you.",
+    "child_intro": "Even the bravest people feel scared sometimes! But God has a special promise just for you: \"Don't be afraid — I am right here with you!\" And He always keeps His promises.",
     "parent_note": "The command \"Do not fear\" appears more than 365 times in Scripture — one for every day of the year. God's antidote to fear is not the absence of danger but the presence of God Himself. Teaching children to name their fears and then bring them to God is a formative spiritual discipline that builds lasting trust.",
+    "stories": [
+      { "id": "daniel-and-the-lions", "title": "Daniel and the Lions", "emoji": "🦁" },
+      { "id": "david-the-shepherd-boy", "title": "David the Shepherd Boy", "emoji": "⭐" },
+      { "id": "noahs-big-boat", "title": "Noah's Big Boat", "emoji": "⛵" },
+      { "id": "jonah-and-the-big-fish", "title": "Jonah and the Big Fish", "emoji": "🐋" }
+    ],
     "verses": [
       {
         "ref": "Isaiah 41:10",
@@ -229,6 +289,17 @@
     "memory_phrase": "God says do not be afraid",
     "prayer": "Dear God, sometimes we feel scared. Thank You that You are always with us. Help us to remember that You are bigger than anything we are afraid of. Hold our hands and help us to be brave. In Jesus' name, amen.",
     "do_it_today": "Ask your child what makes them feel afraid, then pray about it together and remind them of God's promise to always be with them.",
+    "related_reading": [
+      { "book_slug": "psalms", "chapter": 23, "label": "Psalm 23 — The Lord is my shepherd" },
+      { "book_slug": "psalms", "chapter": 27, "label": "Psalm 27 — The Lord is my light" },
+      { "book_slug": "matthew", "chapter": 10, "label": "Matthew 10 — Do not be afraid" },
+      { "book_slug": "luke", "chapter": 12, "label": "Luke 12 — Do not worry" }
+    ],
+    "discussion_prompts": [
+      "What is something that makes you feel scared? Can you tell God about it right now?",
+      "How did Daniel stay calm when he was in the lions' den? What helped him be brave?",
+      "What promise from God helps you most when you feel afraid?"
+    ],
     "illustration_prompt": "A child walking through a dark forest with a small lantern, looking up to see a huge warm hand of light reaching down to hold theirs — the darkness fading, the path glowing ahead."
   },
   {
@@ -240,17 +311,15 @@
     "colorText": "text-amber-800",
     "colorBorder": "border-amber-200",
     "description": "When we obey God and our parents, we are saying \"I trust you!\" — and that makes God glad.",
+    "child_intro": "Obeying God is like saying 'I love You!' to Him. It's not just following rules — it's showing that you trust God and know He always wants what's best for you!",
     "parent_note": "Biblical obedience flows from love, not mere rule-following. Jesus explicitly connects love and obedience in John 14:15 — \"If ye love me, keep my commandments.\" When children learn obedience as a response of love rather than fear of punishment, they develop a healthy understanding of authority that prepares them for a life of faith.",
+    "stories": [
+      { "id": "noahs-big-boat", "title": "Noah's Big Boat", "emoji": "⛵" },
+      { "id": "mary-says-yes", "title": "Mary Says Yes", "emoji": "⭐" },
+      { "id": "jesus-is-baptized", "title": "Jesus Is Baptized", "emoji": "💦" },
+      { "id": "adam-and-eve", "title": "Adam and Eve", "emoji": "🍎" }
+    ],
     "verses": [
-      {
-        "ref": "Deuteronomy 11:1",
-        "book_slug": "deuteronomy",
-        "chapter": 11,
-        "verse_num": 1,
-        "kjv": "Therefore thou shalt love the LORD thy God, and keep his charge, and his statutes, and his judgments, and his commandments, alway.",
-        "little_bible": "Love the Lord your God and follow His ways — always! When we love God, we want to do what He says.",
-        "memory_phrase": "Love God and obey Him"
-      },
       {
         "ref": "John 14:15",
         "book_slug": "john",
@@ -261,15 +330,6 @@
         "memory_phrase": "If you love me, obey me"
       },
       {
-        "ref": "Proverbs 3:1-2",
-        "book_slug": "proverbs",
-        "chapter": 3,
-        "verse_num": 1,
-        "kjv": "My son, forget not my law; but let thine heart keep my commandments: For length of days, and long life, and peace, shall they add to thee.",
-        "little_bible": "My child, don't forget what you have been taught. Keep God's ways in your heart — they will bring you a long and peaceful life.",
-        "memory_phrase": "Keep God's ways in your heart"
-      },
-      {
         "ref": "Colossians 3:20",
         "book_slug": "colossians",
         "chapter": 3,
@@ -277,6 +337,24 @@
         "kjv": "Children, obey your parents in all things: for this is well pleasing unto the Lord.",
         "little_bible": "Children, obey your parents in everything — because this makes God very happy.",
         "memory_phrase": "Obey your parents in everything"
+      },
+      {
+        "ref": "Deuteronomy 11:1",
+        "book_slug": "deuteronomy",
+        "chapter": 11,
+        "verse_num": 1,
+        "kjv": "Therefore thou shalt love the LORD thy God, and keep his charge, and his statutes, and his judgments, and his commandments, alway.",
+        "little_bible": "Love the Lord your God and follow His ways — always! When we love God, we want to do what He says.",
+        "memory_phrase": "Love God and obey Him"
+      },
+      {
+        "ref": "Proverbs 3:1-2",
+        "book_slug": "proverbs",
+        "chapter": 3,
+        "verse_num": 1,
+        "kjv": "My son, forget not my law; but let thine heart keep my commandments: For length of days, and long life, and peace, shall they add to thee.",
+        "little_bible": "My child, don't forget what you have been taught. Keep God's ways in your heart — they will bring you a long and peaceful life.",
+        "memory_phrase": "Keep God's ways in your heart"
       }
     ],
     "memory_verse": {
@@ -287,6 +365,17 @@
     "memory_phrase": "If you love me, obey me",
     "prayer": "Dear God, help us to obey You because we love You — not just because we have to. Teach our family to follow Your ways with happy hearts. Thank You for the parents and teachers You gave us to guide us. Amen.",
     "do_it_today": "Practice cheerful obedience today — when a parent asks something, do it with a smile and thank God for the chance to show love through listening.",
+    "related_reading": [
+      { "book_slug": "john", "chapter": 14, "label": "John 14 — If you love me, obey me" },
+      { "book_slug": "matthew", "chapter": 5, "label": "Matthew 5 — Blessed are those who obey" },
+      { "book_slug": "proverbs", "chapter": 3, "label": "Proverbs 3 — Trust God with all your heart" },
+      { "book_slug": "luke", "chapter": 6, "label": "Luke 6 — Why do you call me Lord?" }
+    ],
+    "discussion_prompts": [
+      "Why do you think God wants us to obey? Is it different from just following school rules?",
+      "Can you think of a time when obeying was hard? What helped you do the right thing?",
+      "How does loving someone make it easier to do what they ask?"
+    ],
     "illustration_prompt": "A child helping a parent plant seeds in a garden, both smiling together in bright sunlight — showing willing, joyful obedience as an act of love and teamwork."
   },
   {
@@ -298,7 +387,13 @@
     "colorText": "text-teal-800",
     "colorBorder": "border-teal-200",
     "description": "God forgives us for all the wrong things we do — and He wants us to forgive each other too. Forgiveness is a gift we can give.",
+    "child_intro": "Everyone makes mistakes! But the amazing news is that God always forgives us when we say sorry — and He wants us to forgive others too. Forgiveness is one of the greatest gifts you can ever give!",
     "parent_note": "Forgiveness is at the heart of the gospel — God in Christ has forgiven our sins at enormous cost. Children who learn to receive and extend forgiveness early develop one of the most essential character traits for healthy relationships and spiritual maturity. The connection between God's forgiveness of us and our forgiveness of others (Matthew 6:14) shows that forgiveness is not optional but foundational.",
+    "stories": [
+      { "id": "the-lost-son", "title": "The Lost Son", "emoji": "🏃" },
+      { "id": "jesus-saves", "title": "Jesus Saves", "emoji": "✨" },
+      { "id": "jonah-and-the-big-fish", "title": "Jonah and the Big Fish", "emoji": "🐋" }
+    ],
     "verses": [
       {
         "ref": "Ephesians 4:32",
@@ -308,6 +403,15 @@
         "kjv": "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
         "little_bible": "Be kind and tender-hearted to each other. Forgive one another — just as God has forgiven you because of Jesus.",
         "memory_phrase": "Forgive as God forgave you"
+      },
+      {
+        "ref": "1 John 1:9",
+        "book_slug": "john",
+        "chapter": 1,
+        "verse_num": 9,
+        "kjv": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+        "little_bible": "If we tell God what we did wrong, He is faithful — He will forgive us and make our hearts clean again.",
+        "memory_phrase": "God forgives when we confess"
       },
       {
         "ref": "Colossians 3:13",
@@ -326,15 +430,6 @@
         "kjv": "For if ye forgive men their trespasses, your heavenly Father will also forgive you.",
         "little_bible": "Jesus said: When you forgive other people for what they did wrong, your Heavenly Father will forgive you too.",
         "memory_phrase": "When you forgive, God forgives"
-      },
-      {
-        "ref": "1 John 1:9",
-        "book_slug": "john",
-        "chapter": 1,
-        "verse_num": 9,
-        "kjv": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
-        "little_bible": "If we tell God what we did wrong, He is faithful — He will forgive us and make our hearts clean again.",
-        "memory_phrase": "God forgives when we confess"
       }
     ],
     "memory_verse": {
@@ -345,6 +440,17 @@
     "memory_phrase": "Forgive as God forgave you",
     "prayer": "Dear God, thank You for forgiving us for everything we do wrong. Help us to forgive others quickly and with a kind heart. When it is hard to forgive, remind us how much You have forgiven us. Amen.",
     "do_it_today": "Is there anyone in your family or at school you need to forgive? Say it out loud today — \"I forgive you\" — and then pray together for that person.",
+    "related_reading": [
+      { "book_slug": "luke", "chapter": 15, "label": "Luke 15 — The Lost Son comes home" },
+      { "book_slug": "matthew", "chapter": 6, "label": "Matthew 6 — Forgive as God forgives" },
+      { "book_slug": "matthew", "chapter": 18, "label": "Matthew 18 — Forgive seventy times seven" },
+      { "book_slug": "john", "chapter": 8, "label": "John 8 — Neither do I condemn you" }
+    ],
+    "discussion_prompts": [
+      "Has someone ever forgiven you when you did something wrong? How did that feel?",
+      "Is there anyone you need to forgive? How can we pray about that together?",
+      "In the story of the Lost Son, why did the father run to meet his son? What does that tell us about God?"
+    ],
     "illustration_prompt": "Two children facing each other with arms reaching out — one extending a hand, both smiling with a glowing heart between them — suggesting reconciliation and the joy of forgiveness."
   },
   {
@@ -356,7 +462,14 @@
     "colorText": "text-violet-800",
     "colorBorder": "border-violet-200",
     "description": "Wisdom means knowing what is right and good — and God promises to give it to anyone who asks Him!",
+    "child_intro": "Wisdom means knowing the right thing to do — and the amazing news is that you can simply ask God for it! He loves to give wisdom to everyone who asks, and He always has enough!",
     "parent_note": "Biblical wisdom (Hebrew: chokmah) is not mere intelligence but skill in living — knowing how to act rightly in any situation. Proverbs teaches that the fear of the Lord is the beginning of wisdom, grounding all understanding in reverence for God. Children who learn to ask God for wisdom develop a posture of humility and dependence that will serve them throughout life.",
+    "stories": [
+      { "id": "build-on-the-rock", "title": "Build on the Rock", "emoji": "🪨" },
+      { "id": "the-tower-of-babel", "title": "The Tower of Babel", "emoji": "🗼" },
+      { "id": "david-the-shepherd-boy", "title": "David the Shepherd Boy", "emoji": "⭐" },
+      { "id": "how-to-pray", "title": "How to Pray", "emoji": "🙏" }
+    ],
     "verses": [
       {
         "ref": "Proverbs 3:5-6",
@@ -403,6 +516,17 @@
     "memory_phrase": "Trust God, He shows the way",
     "prayer": "Dear God, You are the wisest One of all. Help our family to ask You for wisdom every day. When we have hard choices to make, remind us to pray first and trust You to show us what to do. Amen.",
     "do_it_today": "Before making a decision today — even a small one — stop and ask God together: 'What is the wise thing to do here?'",
+    "related_reading": [
+      { "book_slug": "proverbs", "chapter": 1, "label": "Proverbs 1 — The beginning of wisdom" },
+      { "book_slug": "proverbs", "chapter": 4, "label": "Proverbs 4 — Get wisdom above all" },
+      { "book_slug": "matthew", "chapter": 7, "label": "Matthew 7 — The wise and foolish builders" },
+      { "book_slug": "proverbs", "chapter": 9, "label": "Proverbs 9 — Wisdom invites us in" }
+    ],
+    "discussion_prompts": [
+      "What does it mean to be wise? Is it the same as being really clever or smart at school?",
+      "When you have a hard decision to make, what do you usually do? What should we do first?",
+      "What is one wise thing you have learned from the Bible or from our family?"
+    ],
     "illustration_prompt": "A child sitting under a big oak tree reading an open book, with beams of golden light filtering through the leaves — peaceful, curious, and full of wonder at learning."
   },
   {
@@ -414,7 +538,13 @@
     "colorText": "text-pink-800",
     "colorBorder": "border-pink-200",
     "description": "Being kind is one of the best ways to show people that God loves them. Even small acts of kindness are a big deal to God!",
+    "child_intro": "A small act of kindness is a really BIG deal! When you share, help someone, or say something nice, it's like giving them a little piece of God's love. And God notices every single kind thing you do!",
     "parent_note": "Kindness (Greek: chrestotes) is one of the fruits of the Spirit — not a natural default for children, but a cultivated character trait. Proverbs 19:17 makes a remarkable claim: lending to the poor is lending to God Himself. Teaching children that kindness to others is kindness to God elevates ordinary acts of generosity into acts of worship.",
+    "stories": [
+      { "id": "the-good-neighbour", "title": "The Good Neighbour", "emoji": "❤️" },
+      { "id": "jesus-loves-children", "title": "Jesus Loves Children", "emoji": "💛" },
+      { "id": "the-lost-sheep", "title": "The Lost Sheep", "emoji": "🐑" }
+    ],
     "verses": [
       {
         "ref": "Colossians 3:12",
@@ -426,15 +556,6 @@
         "memory_phrase": "Put on kindness every day"
       },
       {
-        "ref": "Proverbs 19:17",
-        "book_slug": "proverbs",
-        "chapter": 19,
-        "verse_num": 17,
-        "kjv": "He that hath pity upon the poor lendeth unto the LORD; and that which he hath given will he pay him again.",
-        "little_bible": "When you are kind to someone who has very little, it is like being kind to God Himself. And He will bless you for it.",
-        "memory_phrase": "Kindness to others is to God"
-      },
-      {
         "ref": "Luke 6:31",
         "book_slug": "luke",
         "chapter": 6,
@@ -442,6 +563,15 @@
         "kjv": "And as ye would that men should do to you, do ye also to them likewise.",
         "little_bible": "Treat other people the way you want them to treat you. This is the golden rule Jesus taught us.",
         "memory_phrase": "Treat others as you want"
+      },
+      {
+        "ref": "Proverbs 19:17",
+        "book_slug": "proverbs",
+        "chapter": 19,
+        "verse_num": 17,
+        "kjv": "He that hath pity upon the poor lendeth unto the LORD; and that which he hath given will he pay him again.",
+        "little_bible": "When you are kind to someone who has very little, it is like being kind to God Himself. And He will bless you for it.",
+        "memory_phrase": "Kindness to others is to God"
       },
       {
         "ref": "Ephesians 4:32",
@@ -461,6 +591,17 @@
     "memory_phrase": "Put on kindness every day",
     "prayer": "Dear God, thank You for being so kind to us. Help our family to be kind to everyone we meet today — at home, at school, and everywhere we go. Show us one person we can bless with kindness. Amen.",
     "do_it_today": "Do one secret act of kindness for someone today — leave a note, help without being asked, or share something special — without expecting anything back.",
+    "related_reading": [
+      { "book_slug": "luke", "chapter": 10, "label": "Luke 10 — The Good Samaritan" },
+      { "book_slug": "matthew", "chapter": 25, "label": "Matthew 25 — Kindness to the least" },
+      { "book_slug": "proverbs", "chapter": 19, "label": "Proverbs 19 — Kindness to the poor" },
+      { "book_slug": "luke", "chapter": 6, "label": "Luke 6 — The golden rule" }
+    ],
+    "discussion_prompts": [
+      "Who is your neighbour? Is it only people who live next door — or everyone you meet?",
+      "What is the kindest thing someone has ever done for you? How did it make you feel?",
+      "How can you be kind today — even to someone who is hard to be kind to?"
+    ],
     "illustration_prompt": "A child surprising a friend with a handmade card and a small flower, both children beaming with joy — bright spring colors, warm and tender, the gift of simple kindness."
   },
   {
@@ -472,7 +613,14 @@
     "colorText": "text-orange-800",
     "colorBorder": "border-orange-200",
     "description": "Courage doesn't mean you are never scared — it means you do the right thing even when it feels hard, because God is with you!",
+    "child_intro": "Courage doesn't mean you're never scared — it means you do the right thing even when it feels really hard. And the best news is: God is always right there with you, making you brave!",
     "parent_note": "Biblical courage is not the absence of fear but action in spite of it, grounded in God's promise of presence. God repeated 'be strong and courageous' to Joshua three times (Joshua 1:6, 7, 9) — underscoring that courage is not natural but commanded and sustained by God. Courageous children are formed by rehearsing God's past faithfulness and His present promise: 'I will be with you.'",
+    "stories": [
+      { "id": "david-the-shepherd-boy", "title": "David the Shepherd Boy", "emoji": "⭐" },
+      { "id": "daniel-and-the-lions", "title": "Daniel and the Lions", "emoji": "🦁" },
+      { "id": "mary-says-yes", "title": "Mary Says Yes", "emoji": "⭐" },
+      { "id": "noahs-big-boat", "title": "Noah's Big Boat", "emoji": "⛵" }
+    ],
     "verses": [
       {
         "ref": "Joshua 1:9",
@@ -482,6 +630,15 @@
         "kjv": "Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
         "little_bible": "God says: Be strong and very brave! Don't be afraid or discouraged — because I am with you everywhere you go.",
         "memory_phrase": "Be strong and very brave"
+      },
+      {
+        "ref": "Philippians 4:13",
+        "book_slug": "philippians",
+        "chapter": 4,
+        "verse_num": 13,
+        "kjv": "I can do all things through Christ which strengtheneth me.",
+        "little_bible": "I can do anything God asks me to do — because Christ gives me the strength I need to do it.",
+        "memory_phrase": "Christ gives me the strength"
       },
       {
         "ref": "Psalm 31:24",
@@ -500,15 +657,6 @@
         "kjv": "Be strong and of a good courage, fear not, nor be afraid of them: for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee.",
         "little_bible": "Be strong and brave — don't be afraid! God your God goes with you. He will never leave you or let you down.",
         "memory_phrase": "God will never leave you"
-      },
-      {
-        "ref": "Philippians 4:13",
-        "book_slug": "philippians",
-        "chapter": 4,
-        "verse_num": 13,
-        "kjv": "I can do all things through Christ which strengtheneth me.",
-        "little_bible": "I can do anything God asks me to do — because Christ gives me the strength I need to do it.",
-        "memory_phrase": "Christ gives me the strength"
       }
     ],
     "memory_verse": {
@@ -519,6 +667,17 @@
     "memory_phrase": "Christ gives me the strength",
     "prayer": "Dear God, sometimes we feel scared to do what is right. Give us courage today. Help us to remember that You are always with us. Make our hearts strong and brave for Your glory. In Jesus' name, amen.",
     "do_it_today": "Think of something that feels scary but is the right thing to do — then do it today, saying to yourself: 'God is with me!'",
+    "related_reading": [
+      { "book_slug": "psalms", "chapter": 27, "label": "Psalm 27 — The Lord is my light and salvation" },
+      { "book_slug": "matthew", "chapter": 14, "label": "Matthew 14 — Peter walks on water" },
+      { "book_slug": "john", "chapter": 16, "label": "John 16 — Take courage, I have overcome" },
+      { "book_slug": "proverbs", "chapter": 28, "label": "Proverbs 28 — The righteous are bold" }
+    ],
+    "discussion_prompts": [
+      "What is something that takes courage for you? It can be something big or something small!",
+      "What made David brave when he faced Goliath — what gave him his confidence?",
+      "What is the difference between being reckless and being truly courageous?"
+    ],
     "illustration_prompt": "A small child standing at the top of a high hill, arms wide open, looking out at a vast and beautiful landscape — wind in their hair, a look of joyful boldness and confidence on their face."
   },
   {
@@ -530,7 +689,14 @@
     "colorText": "text-yellow-800",
     "colorBorder": "border-yellow-200",
     "description": "Faith means trusting God even when you can't see everything — like knowing the sun is there even on a cloudy day.",
+    "child_intro": "Faith is like a superpower! It means trusting God even when you can't see everything He is doing — just like knowing the sun is there even when clouds hide it. And God is always doing something wonderful!",
     "parent_note": "Hebrews 11:1 defines faith as substance and evidence — not wishful thinking but confident trust in God's revealed character and promises. Faith is formed in children by rehearsing God's acts in history (especially Jesus's resurrection), hearing His Word regularly, and practicing trust in small everyday moments. Faith is not a spiritual gift reserved for adults — Jesus pointed to children as models of it.",
+    "stories": [
+      { "id": "the-wedding-at-cana", "title": "The Wedding at Cana", "emoji": "🍷" },
+      { "id": "noahs-big-boat", "title": "Noah's Big Boat", "emoji": "⛵" },
+      { "id": "build-on-the-rock", "title": "Build on the Rock", "emoji": "🪨" },
+      { "id": "david-the-shepherd-boy", "title": "David the Shepherd Boy", "emoji": "⭐" }
+    ],
     "verses": [
       {
         "ref": "Hebrews 11:1",
@@ -542,15 +708,6 @@
         "memory_phrase": "Faith trusts what we can't see"
       },
       {
-        "ref": "Romans 10:17",
-        "book_slug": "romans",
-        "chapter": 10,
-        "verse_num": 17,
-        "kjv": "So then faith cometh by hearing, and hearing by the word of God.",
-        "little_bible": "Faith grows when we hear God's Word. The more we read the Bible, the stronger our trust in God becomes.",
-        "memory_phrase": "Faith grows from God's Word"
-      },
-      {
         "ref": "Mark 9:23",
         "book_slug": "mark",
         "chapter": 9,
@@ -558,6 +715,15 @@
         "kjv": "Jesus said unto him, If thou canst believe, all things are possible to him that believeth.",
         "little_bible": "Jesus said: If you can believe — all things are possible for the person who trusts God. Nothing is too hard for Him.",
         "memory_phrase": "All things are possible for believers"
+      },
+      {
+        "ref": "Romans 10:17",
+        "book_slug": "romans",
+        "chapter": 10,
+        "verse_num": 17,
+        "kjv": "So then faith cometh by hearing, and hearing by the word of God.",
+        "little_bible": "Faith grows when we hear God's Word. The more we read the Bible, the stronger our trust in God becomes.",
+        "memory_phrase": "Faith grows from God's Word"
       },
       {
         "ref": "2 Corinthians 5:7",
@@ -577,6 +743,17 @@
     "memory_phrase": "Faith trusts what we can't see",
     "prayer": "Dear God, help our family to trust You more and more every day. When we can't see what You are doing, help us to believe that You are always working for our good. Grow our faith as we read Your Word together. Amen.",
     "do_it_today": "Read one story from the Bible about someone who trusted God — like Abraham, Ruth, or Daniel — and talk about what made their faith strong.",
+    "related_reading": [
+      { "book_slug": "matthew", "chapter": 14, "label": "Matthew 14 — Peter walks on water" },
+      { "book_slug": "john", "chapter": 20, "label": "John 20 — Thomas believes" },
+      { "book_slug": "matthew", "chapter": 17, "label": "Matthew 17 — Faith like a mustard seed" },
+      { "book_slug": "luke", "chapter": 7, "label": "Luke 7 — Great faith" }
+    ],
+    "discussion_prompts": [
+      "What does it mean to trust someone you can't see — like trusting God?",
+      "Which story about faith from the Bible is your favourite, and why?",
+      "How does reading the Bible help our faith grow?"
+    ],
     "illustration_prompt": "A child reaching up to take a large gentle hand that descends from a glowing sky — one foot stepping forward into a path of light, the rest of the path hidden in mist but glowing ahead — trust and hope."
   },
   {
@@ -588,7 +765,14 @@
     "colorText": "text-lime-800",
     "colorBorder": "border-lime-200",
     "description": "A thankful heart is a happy heart! When we notice all the good things God gives us and say 'thank You,' it makes us and God both glad.",
+    "child_intro": "A thankful heart is a happy heart! There are so many good things God gives us every day — and when we stop to say 'thank You, God!', it fills us up with joy. Let's count our blessings together!",
     "parent_note": "Gratitude is not merely a social grace — it is a theological discipline that rightly orients us toward God as the giver of every good gift. Paul's command to 'give thanks in everything' (1 Thessalonians 5:18) links thankfulness to the will of God. Children who practice gratitude are learning to see the world as gift, which is a fundamentally Christian way of perceiving reality.",
+    "stories": [
+      { "id": "god-made-me", "title": "God Made Me", "emoji": "🌟" },
+      { "id": "gods-rainbow-promise", "title": "God's Rainbow Promise", "emoji": "🌈" },
+      { "id": "the-lost-coin", "title": "The Lost Coin", "emoji": "🪙" },
+      { "id": "god-made-everything", "title": "God Made Everything", "emoji": "🌍" }
+    ],
     "verses": [
       {
         "ref": "Psalm 100:4",
@@ -635,6 +819,17 @@
     "memory_phrase": "Come to God with thanks",
     "prayer": "Dear God, we are so thankful for Your goodness to us. Thank You for our family, our home, our food, and Your love. Help us to say 'thank You' to You and to each other every single day. You are so good! Amen.",
     "do_it_today": "Go around the table at dinner and have each family member share three things they are thankful to God for today — then thank Him together.",
+    "related_reading": [
+      { "book_slug": "psalms", "chapter": 100, "label": "Psalm 100 — Shout for joy to the Lord" },
+      { "book_slug": "psalms", "chapter": 107, "label": "Psalm 107 — Give thanks, He is good" },
+      { "book_slug": "luke", "chapter": 17, "label": "Luke 17 — The thankful leper" },
+      { "book_slug": "john", "chapter": 11, "label": "John 11 — Thank you Father" }
+    ],
+    "discussion_prompts": [
+      "What are three things you are thankful to God for today? Let's take turns!",
+      "Can we be thankful even when things are hard? How does that work?",
+      "How does saying 'thank you' to God change the way we feel inside?"
+    ],
     "illustration_prompt": "A family sitting around a table with hands clasped together, warm candle light, heads bowed in prayer with big smiles — a feast spread before them, bright sunflowers on the windowsill."
   }
 ]

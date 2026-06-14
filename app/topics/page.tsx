@@ -4,10 +4,25 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { getAllTopics } from '@/lib/topics';
 
+const DESCRIPTION =
+  'Explore 11 Bible topics with key verses, memory phrases, and family prayers — love, courage, faith, forgiveness, and more. Faithfully adapted for children ages 4–7.';
+
 export const metadata: Metadata = {
   title: 'Scriptures by Topic — Little Bible',
-  description:
-    'Explore 11 Bible topics with key verses, memory phrases, and family prayers — love, courage, faith, forgiveness, and more. Adapted for children ages 4–7.',
+  description: DESCRIPTION,
+  openGraph: {
+    title: 'Scriptures by Topic — Little Bible',
+    description: DESCRIPTION,
+    url: 'https://littlebible.org/topics',
+    siteName: 'Little Bible',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Scriptures by Topic — Little Bible',
+    description: DESCRIPTION,
+  },
+  alternates: { canonical: 'https://littlebible.org/topics' },
 };
 
 export default function TopicsPage() {
@@ -29,8 +44,8 @@ export default function TopicsPage() {
           >
             God&apos;s Word on Every Topic
           </h1>
-          <p className="text-stone-500 text-base sm:text-lg max-w-md mx-auto leading-relaxed">
-            Find the right verses for every season of life — verses your family can read, learn, and pray together.
+          <p className="text-stone-500 text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
+            Each topic connects Bible stories, key verses, a memory verse, family prayer, and a do-it-today challenge — all in words your child can understand.
           </p>
 
           {/* Stats row */}
@@ -45,6 +60,13 @@ export default function TopicsPage() {
                 {topics.reduce((acc, t) => acc + t.verses.length, 0)}
               </p>
               <p className="text-xs text-stone-400 font-semibold uppercase tracking-wide">Verses</p>
+            </div>
+            <div className="w-px h-8 bg-stone-200" />
+            <div className="text-center">
+              <p className="text-2xl font-extrabold text-amber-600">
+                {topics.reduce((acc, t) => acc + t.stories.length, 0)}
+              </p>
+              <p className="text-xs text-stone-400 font-semibold uppercase tracking-wide">Stories</p>
             </div>
             <div className="w-px h-8 bg-stone-200" />
             <div className="text-center">
@@ -91,9 +113,15 @@ export default function TopicsPage() {
 
                   {/* CTA */}
                   <div className="mt-4 pt-4 border-t border-stone-200/60 flex items-center justify-between">
-                    <span className="text-xs text-stone-400 font-medium italic">
-                      &ldquo;{topic.memory_phrase}&rdquo;
-                    </span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs text-stone-400 font-medium">
+                        {topic.stories.length} stories
+                      </span>
+                      <span className="text-xs text-stone-300">·</span>
+                      <span className="text-xs text-stone-400 font-medium">
+                        {topic.verses.length} verses
+                      </span>
+                    </div>
                     <span className={`text-sm font-bold ${topic.colorText} group-hover:translate-x-1 transition-transform inline-block`}>
                       Explore →
                     </span>
