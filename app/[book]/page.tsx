@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import BreadcrumbBar from '@/components/layout/BreadcrumbBar';
 import { BIBLE_BOOKS } from '@/lib/bibleBooks';
 import { getBookIndex } from '@/lib/content';
 import LumiMascot from '@/components/mascot/LumiMascot';
@@ -63,6 +64,7 @@ export default async function BookPage({ params }: PageProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <BreadcrumbBar crumbs={[{ label: bookMeta.name }]} />
 
       <main className="flex-1">
 

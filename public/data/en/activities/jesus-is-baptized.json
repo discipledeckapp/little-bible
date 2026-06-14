@@ -1,0 +1,36 @@
+{
+  "storyId": "jesus-is-baptized",
+  "memoryBuilder": {
+    "phrase": "You are God's beloved.",
+    "phraseWords": ["You", "are", "God's", "beloved."],
+    "verseRef": "Luke 3:22",
+    "verseText": "Thou art my beloved Son; in thee I am well pleased.",
+    "verseWords": ["You", "are", "My", "beloved", "Son;", "I", "am", "pleased", "with", "you."]
+  },
+  "sequence": {
+    "prompt": "What happened when Jesus was baptized? Put it in order.",
+    "items": [
+      { "id": "john",    "label": "John baptizes people at the river",  "emoji": "🌊", "order": 1 },
+      { "id": "jesus",   "label": "Jesus comes to be baptized",         "emoji": "✨", "order": 2 },
+      { "id": "heaven",  "label": "Heaven opens above Jesus",           "emoji": "☁️", "order": 3 },
+      { "id": "voice",   "label": "God speaks from heaven",             "emoji": "💛", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they did or mean.",
+    "pairs": [
+      { "leftId": "john",  "left": "John",       "leftEmoji": "🌊", "rightId": "prepared", "right": "Prepared the way for Jesus",      "rightEmoji": "🛣️" },
+      { "leftId": "dove",  "left": "Dove",       "leftEmoji": "🕊️", "rightId": "spirit",   "right": "The Holy Spirit coming on Jesus", "rightEmoji": "✨" },
+      { "leftId": "voice", "left": "God's voice","leftEmoji": "💬", "rightId": "beloved",  "right": "Said: This is My beloved Son",    "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "God said Jesus is His beloved Son — and you are God's beloved child! How does it feel to know God loves you that much?",
+    "options": [
+      { "id": "safe",     "label": "Safe and belonging",        "emoji": "🤗" },
+      { "id": "grateful", "label": "Grateful and joyful",       "emoji": "😊" },
+      { "id": "amazed",   "label": "Amazed and surprised",      "emoji": "😲" }
+    ],
+    "followUp": "The words God spoke over Jesus — 'beloved,' 'well-pleasing' — God says the same over you because you belong to Him through Jesus."
+  }
+}

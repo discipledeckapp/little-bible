@@ -1,0 +1,36 @@
+{
+  "storyId": "the-tower-of-babel",
+  "memoryBuilder": {
+    "phrase": "God reaches down to us.",
+    "phraseWords": ["God", "reaches", "down", "to", "us."],
+    "verseRef": "Genesis 11:4",
+    "verseText": "And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name.",
+    "verseWords": ["They", "tried", "to", "reach", "heaven", "—", "but", "God", "reaches", "down."]
+  },
+  "sequence": {
+    "prompt": "What happened at the Tower of Babel? Put it in order.",
+    "items": [
+      { "id": "one-lang", "label": "Everyone speaks one language",          "emoji": "🗣️", "order": 1 },
+      { "id": "tower",    "label": "People plan to build a tower to heaven","emoji": "🏗️", "order": 2 },
+      { "id": "god-sees", "label": "God sees their pride",                  "emoji": "👁️", "order": 3 },
+      { "id": "scatter",  "label": "Languages confused — people scatter",   "emoji": "🌍", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what it means.",
+    "pairs": [
+      { "leftId": "tower",    "left": "The tall tower",  "leftEmoji": "🏗️", "rightId": "pride",    "right": "Human pride — trying to be great without God", "rightEmoji": "😤" },
+      { "leftId": "scatter",  "left": "Scattered people","leftEmoji": "🌍", "rightId": "nations",  "right": "How the world's different nations began",      "rightEmoji": "🗺️" },
+      { "leftId": "god",      "left": "God",             "leftEmoji": "✨", "rightId": "reaches",  "right": "Reaches DOWN to us — we don't reach UP to Him","rightEmoji": "💛" }
+    ]
+  },
+  "application": {
+    "question": "People tried to reach God by being great. But God reaches DOWN to us through Jesus! What does God reaching down mean to you?",
+    "options": [
+      { "id": "humble",  "label": "I don't need to be great to know God", "emoji": "🌱" },
+      { "id": "loved",   "label": "God loves me just as I am",            "emoji": "❤️" },
+      { "id": "near",    "label": "God is closer than I think",           "emoji": "🤗" }
+    ],
+    "followUp": "You can't build your way up to God — but God already came all the way down to you. That's what Jesus' whole life was about."
+  }
+}

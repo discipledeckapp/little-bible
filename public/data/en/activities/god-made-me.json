@@ -1,0 +1,36 @@
+{
+  "storyId": "god-made-me",
+  "memoryBuilder": {
+    "phrase": "I am wonderfully made!",
+    "phraseWords": ["I", "am", "wonderfully", "made!"],
+    "verseRef": "Psalm 139:14",
+    "verseText": "I am fearfully and wonderfully made: marvellous are thy works.",
+    "verseWords": ["I", "am", "fearfully", "and", "wonderfully", "made."]
+  },
+  "sequence": {
+    "prompt": "What does God know about you? Put it in order.",
+    "items": [
+      { "id": "made",    "label": "God carefully made you before you were born", "emoji": "✨", "order": 1 },
+      { "id": "knows",   "label": "God knows every part of you",                "emoji": "❤️", "order": 2 },
+      { "id": "sees",    "label": "God sees you wherever you go",               "emoji": "👁️", "order": 3 },
+      { "id": "loves",   "label": "God loves you just as you are",              "emoji": "🌟", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what God knows or made.",
+    "pairs": [
+      { "leftId": "body",   "left": "Your body",   "leftEmoji": "🙋", "rightId": "knit",    "right": "Knit together by God with great care",  "rightEmoji": "🧶" },
+      { "leftId": "days",   "left": "Your days",   "leftEmoji": "📅", "rightId": "written", "right": "Written in God's book before you were born", "rightEmoji": "📖" },
+      { "leftId": "you",    "left": "You",         "leftEmoji": "😊", "rightId": "purpose", "right": "Made on purpose, not by accident",      "rightEmoji": "✨" }
+    ]
+  },
+  "application": {
+    "question": "God made every part of YOU on purpose and calls you wonderful! What is one thing about yourself that you are thankful God made?",
+    "options": [
+      { "id": "heart",  "label": "My kind heart",        "emoji": "❤️" },
+      { "id": "body",   "label": "My body",              "emoji": "🙋" },
+      { "id": "mind",   "label": "My mind and thoughts", "emoji": "🧠" }
+    ],
+    "followUp": "God did not make you by mistake. He made every part of you carefully and lovingly — and He calls you wonderfully made. That is the truth about you."
+  }
+}

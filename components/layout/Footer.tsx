@@ -26,10 +26,17 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-2 gap-x-14 gap-y-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-12 gap-y-2">
+
+            {/* Read */}
             <div>
               <p className="text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">Read</p>
               <ul className="space-y-2">
+                <li>
+                  <Link href="/genesis/1" className="text-amber-200/80 hover:text-white text-sm transition-colors">
+                    Genesis
+                  </Link>
+                </li>
                 <li>
                   <Link href="/proverbs/1" className="text-amber-200/80 hover:text-white text-sm transition-colors">
                     Proverbs
@@ -37,24 +44,76 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href="#library" className="text-amber-200/80 hover:text-white text-sm transition-colors">
-                    All Books
+                    All 66 Books
                   </a>
                 </li>
               </ul>
             </div>
+
+            {/* Explore */}
             <div>
-              <p className="text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">Project</p>
+              <p className="text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">Explore</p>
               <ul className="space-y-2">
                 <li>
-                  <span className="text-amber-200/80 text-sm">Open Source</span>
+                  <Link href="/stories" className="text-amber-200/80 hover:text-white text-sm transition-colors">
+                    Bible Stories
+                  </Link>
                 </li>
                 <li>
-                  <span className="text-amber-200/80 text-sm">All 66 Books</span>
-                  <span className="ml-2 text-amber-600 text-xs">(coming)</span>
+                  <Link href="/journeys" className="text-amber-200/80 hover:text-white text-sm transition-colors">
+                    Start a Journey
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/topics" className="text-amber-200/80 hover:text-white text-sm transition-colors">
+                    Scripture Topics
+                  </Link>
                 </li>
               </ul>
             </div>
+
+            {/* App + Support */}
+            <div>
+              <p className="text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">App &amp; Support</p>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/download" className="text-amber-200/80 hover:text-white text-sm transition-colors">
+                    📱 Get the App
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/donate" className="text-amber-200/80 hover:text-white text-sm transition-colors">
+                    ❤️ Support Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/family" className="text-amber-200/80 hover:text-white text-sm transition-colors">
+                    👨‍👩‍👧 Family Setup
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
           </div>
+        </div>
+
+        {/* App store chips */}
+        <div className="flex items-center gap-3 flex-wrap mb-8">
+          <p className="text-amber-600/70 text-xs font-semibold uppercase tracking-widest">App coming soon:</p>
+          {[
+            { icon: '🍎', label: 'App Store',   href: '/download' },
+            { icon: '🤖', label: 'Google Play', href: '/download' },
+          ].map(b => (
+            <Link
+              key={b.label}
+              href={b.href}
+              className="flex items-center gap-2 bg-white/8 hover:bg-white/14 border border-white/12 rounded-xl px-3.5 py-2 transition-colors"
+            >
+              <span className="text-base">{b.icon}</span>
+              <span className="text-amber-200/80 text-xs font-semibold">{b.label}</span>
+              <span className="text-amber-500/60 text-[10px] font-medium">Soon</span>
+            </Link>
+          ))}
         </div>
 
         {/* Divider */}

@@ -1,0 +1,36 @@
+{
+  "storyId": "adam-and-eve",
+  "memoryBuilder": {
+    "phrase": "God made a way.",
+    "phraseWords": ["God", "made", "a", "way."],
+    "verseRef": "Genesis 3:15",
+    "verseText": "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head.",
+    "verseWords": ["God", "promised", "to", "send", "someone", "to", "rescue", "us."]
+  },
+  "sequence": {
+    "prompt": "What happened in the Garden of Eden? Put it in order.",
+    "items": [
+      { "id": "garden",   "label": "God makes a beautiful garden",          "emoji": "🌳", "order": 1 },
+      { "id": "tempt",    "label": "Serpent tempts Adam and Eve",           "emoji": "🐍", "order": 2 },
+      { "id": "wrong",    "label": "They choose to disobey God",            "emoji": "😞", "order": 3 },
+      { "id": "promise",  "label": "God makes a promise to rescue them",    "emoji": "✨", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they did.",
+    "pairs": [
+      { "leftId": "adam",    "left": "Adam",    "leftEmoji": "👦", "rightId": "garden",  "right": "Given the garden to care for",       "rightEmoji": "🌿" },
+      { "leftId": "serpent", "left": "Serpent", "leftEmoji": "🐍", "rightId": "tricked", "right": "Tricked them with a lie",             "rightEmoji": "🤥" },
+      { "leftId": "god",     "left": "God",     "leftEmoji": "✨", "rightId": "rescued", "right": "Promised to send a rescuer",          "rightEmoji": "🌟" }
+    ]
+  },
+  "application": {
+    "question": "Even when Adam and Eve chose wrong, God made a way back. When YOU do something wrong, what do you do?",
+    "options": [
+      { "id": "tell-god",  "label": "Tell God I'm sorry",    "emoji": "🙏" },
+      { "id": "tell-mum",  "label": "Tell Mum or Dad",       "emoji": "👨‍👩‍👧" },
+      { "id": "try-again", "label": "Try to do better",      "emoji": "💪" }
+    ],
+    "followUp": "God always makes a way back for us — that was His plan from the very beginning. He loves you too much to leave you."
+  }
+}

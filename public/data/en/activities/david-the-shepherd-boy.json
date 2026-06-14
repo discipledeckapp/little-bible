@@ -1,0 +1,36 @@
+{
+  "storyId": "david-the-shepherd-boy",
+  "memoryBuilder": {
+    "phrase": "God looks at the heart.",
+    "phraseWords": ["God", "looks", "at", "the", "heart."],
+    "verseRef": "1 Samuel 16:7",
+    "verseText": "The LORD seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart.",
+    "verseWords": ["God", "does", "not", "look", "at", "the", "outside,", "but", "the", "heart."]
+  },
+  "sequence": {
+    "prompt": "What happened when God chose a new king? Put it in order.",
+    "items": [
+      { "id": "samuel",   "label": "Samuel came to find a new king",          "emoji": "🔍", "order": 1 },
+      { "id": "brothers", "label": "Tall brothers looked like kings",         "emoji": "💪", "order": 2 },
+      { "id": "god-says", "label": "God said: I look at the heart",           "emoji": "❤️", "order": 3 },
+      { "id": "david",    "label": "David the shepherd boy was chosen",       "emoji": "👑", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they looked at.",
+    "pairs": [
+      { "leftId": "god",     "left": "God",     "leftEmoji": "✨", "rightId": "heart",   "right": "The heart",                 "rightEmoji": "❤️" },
+      { "leftId": "people",  "left": "People",  "leftEmoji": "👥", "rightId": "outside", "right": "The outside appearance",    "rightEmoji": "👁️" },
+      { "leftId": "samuel",  "left": "Samuel",  "leftEmoji": "👴", "rightId": "learned", "right": "Learned to see like God",   "rightEmoji": "🌟" }
+    ]
+  },
+  "application": {
+    "question": "God chose David because of his heart. What do YOU want your heart to be like?",
+    "options": [
+      { "id": "kind",     "label": "Kind and loving",           "emoji": "💛" },
+      { "id": "brave",    "label": "Brave and trusting God",    "emoji": "🦁" },
+      { "id": "thankful", "label": "Grateful and worshipping",  "emoji": "🙏" }
+    ],
+    "followUp": "God sees your heart right now — and He loves what He made in you. Ask Him to help your heart grow more and more like David's."
+  }
+}

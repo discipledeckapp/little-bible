@@ -1,0 +1,36 @@
+{
+  "storyId": "the-wedding-at-cana",
+  "memoryBuilder": {
+    "phrase": "Do whatever Jesus says.",
+    "phraseWords": ["Do", "whatever", "Jesus", "says."],
+    "verseRef": "John 2:5",
+    "verseText": "His mother saith unto the servants, Whatsoever he saith unto you, do it.",
+    "verseWords": ["Whatever", "He", "tells", "you,", "do", "it."]
+  },
+  "sequence": {
+    "prompt": "What happened at the wedding? Put it in order.",
+    "items": [
+      { "id": "wedding",  "label": "Wedding celebration runs out of wine", "emoji": "🍷", "order": 1 },
+      { "id": "mary",     "label": "Mary tells Jesus about the problem",   "emoji": "💬", "order": 2 },
+      { "id": "fill",     "label": "Jesus tells servants to fill water jars","emoji": "🪣", "order": 3 },
+      { "id": "miracle",  "label": "Water becomes the finest wine!",       "emoji": "✨", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they did.",
+    "pairs": [
+      { "leftId": "mary",     "left": "Mary",      "leftEmoji": "👩", "rightId": "trust",   "right": "Trusted Jesus to help",             "rightEmoji": "🙏" },
+      { "leftId": "servants", "left": "Servants",  "leftEmoji": "🧑", "rightId": "obeyed",  "right": "Obeyed Jesus and filled the jars",  "rightEmoji": "✅" },
+      { "leftId": "water",    "left": "Water jars","leftEmoji": "🪣", "rightId": "became",  "right": "Became the best wine of the party",  "rightEmoji": "🍷" }
+    ]
+  },
+  "application": {
+    "question": "Mary said: Do whatever Jesus says! What is one thing Jesus tells us to do that you can do today?",
+    "options": [
+      { "id": "love",    "label": "Love someone",              "emoji": "❤️" },
+      { "id": "forgive", "label": "Forgive someone",           "emoji": "🕊️" },
+      { "id": "pray",    "label": "Pray and trust God",        "emoji": "🙏" }
+    ],
+    "followUp": "When the servants obeyed Jesus, ordinary water became extraordinary wine. When YOU do what Jesus says, ordinary moments become something amazing."
+  }
+}

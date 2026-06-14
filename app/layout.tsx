@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Nunito, Lora, Playfair_Display } from 'next/font/google';
 import Providers from '@/components/providers/Providers';
+import MobileTabBar from '@/components/layout/MobileTabBar';
 import './globals.css';
 
 const nunito = Nunito({
@@ -60,6 +61,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <Providers>
           {children}
+          {/* Bottom tab bar spacer — prevents content hiding behind fixed mobile nav */}
+          <div className="h-16 md:hidden" aria-hidden="true" />
+          <MobileTabBar />
         </Providers>
       </body>
     </html>

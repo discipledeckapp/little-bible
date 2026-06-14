@@ -1,0 +1,36 @@
+{
+  "storyId": "the-lost-son",
+  "memoryBuilder": {
+    "phrase": "God runs to us!",
+    "phraseWords": ["God", "runs", "to", "us!"],
+    "verseRef": "Luke 15:20",
+    "verseText": "He arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion, and ran.",
+    "verseWords": ["The", "father", "saw", "him", "and", "ran", "to", "him."]
+  },
+  "sequence": {
+    "prompt": "What happened to the lost son? Put the story in order.",
+    "items": [
+      { "id": "leaves",  "label": "Son takes money and leaves home",  "emoji": "💰", "order": 1 },
+      { "id": "wastes",  "label": "Son wastes all his money",         "emoji": "😞", "order": 2 },
+      { "id": "returns", "label": "Son decides to go home",           "emoji": "🚶", "order": 3 },
+      { "id": "father",  "label": "Father runs and hugs him",         "emoji": "🤗", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they did.",
+    "pairs": [
+      { "leftId": "son",    "left": "The Son",  "leftEmoji": "🧑", "rightId": "ran-away", "right": "Left home and wasted money",        "rightEmoji": "💸" },
+      { "leftId": "father", "left": "The Father","leftEmoji": "👨", "rightId": "ran-back", "right": "Ran to his son and forgave him",    "rightEmoji": "🤗" },
+      { "leftId": "god",    "left": "God",       "leftEmoji": "✨", "rightId": "loves-us", "right": "Loves us and forgives us always",   "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "The father ran to meet his son! How does it feel to know that God loves you like that — no matter what?",
+    "options": [
+      { "id": "safe",     "label": "Safe and loved",         "emoji": "🤗" },
+      { "id": "forgiven", "label": "Forgiven and free",      "emoji": "🕊️" },
+      { "id": "amazed",   "label": "Amazed by God's love",   "emoji": "😮" }
+    ],
+    "followUp": "God is like that father — He sees you from far away and runs toward you with love. You are always welcome home with God."
+  }
+}

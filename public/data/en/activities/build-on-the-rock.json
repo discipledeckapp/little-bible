@@ -1,0 +1,36 @@
+{
+  "storyId": "build-on-the-rock",
+  "memoryBuilder": {
+    "phrase": "Build your life on Jesus.",
+    "phraseWords": ["Build", "your", "life", "on", "Jesus."],
+    "verseRef": "Matthew 7:24",
+    "verseText": "Whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock.",
+    "verseWords": ["Hear", "Jesus'", "words", "and", "do", "them", "—", "that", "is", "wise."]
+  },
+  "sequence": {
+    "prompt": "What did the two builders do? Put it in order.",
+    "items": [
+      { "id": "two-men",  "label": "Two men both decide to build a house", "emoji": "🏠", "order": 1 },
+      { "id": "rock",     "label": "Wise man digs deep to the rock",       "emoji": "⛏️", "order": 2 },
+      { "id": "storms",   "label": "Storms and floods come",               "emoji": "⛈️", "order": 3 },
+      { "id": "stands",   "label": "Rock house stands — sand house falls", "emoji": "✅", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what it means.",
+    "pairs": [
+      { "leftId": "rock",  "left": "Rock",    "leftEmoji": "🪨", "rightId": "jesus",  "right": "Jesus and His words",           "rightEmoji": "📖" },
+      { "leftId": "sand",  "left": "Sand",    "leftEmoji": "🏖️", "rightId": "other",  "right": "Building on things that shift", "rightEmoji": "💨" },
+      { "leftId": "storm", "left": "Storm",   "leftEmoji": "⛈️", "rightId": "tests",  "right": "Hard times that test us",       "rightEmoji": "💪" }
+    ]
+  },
+  "application": {
+    "question": "Jesus wants to be your foundation! What is one way you can listen to Jesus and DO what He says?",
+    "options": [
+      { "id": "kind",    "label": "Be kind even when it's hard",  "emoji": "💛" },
+      { "id": "honest",  "label": "Tell the truth",               "emoji": "🕊️" },
+      { "id": "pray",    "label": "Pray every day",               "emoji": "🙏" }
+    ],
+    "followUp": "When you build your life on Jesus — listening to Him and doing what He says — you will stand firm through anything."
+  }
+}

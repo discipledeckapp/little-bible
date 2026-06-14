@@ -1,0 +1,36 @@
+{
+  "storyId": "jesus-saves",
+  "memoryBuilder": {
+    "phrase": "Jesus is alive!",
+    "phraseWords": ["Jesus", "is", "alive!"],
+    "verseRef": "Luke 24:6",
+    "verseText": "He is not here, but is risen: remember how he spake unto you when he was yet in Galilee.",
+    "verseWords": ["He", "is", "not", "here,", "but", "is", "risen!"]
+  },
+  "sequence": {
+    "prompt": "What is the most important story ever told? Put it in order.",
+    "items": [
+      { "id": "cross",   "label": "Jesus dies on the cross for us",          "emoji": "✝️", "order": 1 },
+      { "id": "buried",  "label": "Jesus is laid in a tomb",                 "emoji": "🪨", "order": 2 },
+      { "id": "third",   "label": "Three days pass",                         "emoji": "📅", "order": 3 },
+      { "id": "risen",   "label": "Jesus rises from the dead — alive!",      "emoji": "🌅", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what it means for us.",
+    "pairs": [
+      { "leftId": "cross",      "left": "Jesus on the cross",  "leftEmoji": "✝️", "rightId": "forgiven",  "right": "Our wrongs are forgiven",       "rightEmoji": "🕊️" },
+      { "leftId": "tomb",       "left": "The empty tomb",      "leftEmoji": "🪨", "rightId": "risen",     "right": "Death could not hold Him",      "rightEmoji": "💫" },
+      { "leftId": "alive",      "left": "Jesus is alive",      "leftEmoji": "🌅", "rightId": "hope",      "right": "We have hope forever",          "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "Jesus rose from the dead — nothing can defeat Him! What does knowing Jesus is alive mean to you?",
+    "options": [
+      { "id": "fear",   "label": "I don't have to be afraid",      "emoji": "💪" },
+      { "id": "loved",  "label": "I am loved forever",             "emoji": "❤️" },
+      { "id": "heaven", "label": "I can have life with God",       "emoji": "✨" }
+    ],
+    "followUp": "Because Jesus is alive, death and sin and sadness do not get the last word. He is risen — and that changes absolutely everything, forever."
+  }
+}

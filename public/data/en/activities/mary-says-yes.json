@@ -1,0 +1,36 @@
+{
+  "storyId": "mary-says-yes",
+  "memoryBuilder": {
+    "phrase": "Nothing is impossible with God.",
+    "phraseWords": ["Nothing", "is", "impossible", "with", "God."],
+    "verseRef": "Luke 1:37",
+    "verseText": "For with God nothing shall be impossible.",
+    "verseWords": ["With", "God,", "nothing", "is", "impossible."]
+  },
+  "sequence": {
+    "prompt": "What happened when the angel visited Mary? Put it in order.",
+    "items": [
+      { "id": "angel",    "label": "Angel Gabriel appears to Mary",           "emoji": "👼", "order": 1 },
+      { "id": "news",     "label": "Angel announces she will have God's Son", "emoji": "📢", "order": 2 },
+      { "id": "asks",     "label": "Mary asks: How is this possible?",        "emoji": "🤔", "order": 3 },
+      { "id": "yes",      "label": "Mary says yes to God",                    "emoji": "💛", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they did.",
+    "pairs": [
+      { "leftId": "gabriel", "left": "Angel Gabriel", "leftEmoji": "👼", "rightId": "told",   "right": "Told Mary God's plan",              "rightEmoji": "📜" },
+      { "leftId": "mary",    "left": "Mary",          "leftEmoji": "💛", "rightId": "yes",    "right": "Said yes to God even though it was hard", "rightEmoji": "✅" },
+      { "leftId": "spirit",  "left": "Holy Spirit",   "leftEmoji": "🕊️", "rightId": "made",   "right": "Made the impossible happen",        "rightEmoji": "✨" }
+    ]
+  },
+  "application": {
+    "question": "Mary said yes to God even when it was hard and surprising. What is one thing God might be asking YOU to say yes to?",
+    "options": [
+      { "id": "kind",    "label": "Be kind to someone hard",    "emoji": "💛" },
+      { "id": "forgive", "label": "Forgive someone",            "emoji": "🕊️" },
+      { "id": "brave",   "label": "Do something brave",         "emoji": "💪" }
+    ],
+    "followUp": "Mary didn't know how, but she trusted God enough to say yes. When you say yes to God, He makes a way — even when you can't see how."
+  }
+}

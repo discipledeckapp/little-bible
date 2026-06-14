@@ -1,0 +1,36 @@
+{
+  "storyId": "daniel-and-the-lions",
+  "memoryBuilder": {
+    "phrase": "God kept Daniel safe!",
+    "phraseWords": ["God", "kept", "Daniel", "safe!"],
+    "verseRef": "Daniel 6:22",
+    "verseText": "My God hath sent his angel, and hath shut the lions' mouths, that they have not hurt me.",
+    "verseWords": ["My", "God", "sent", "His", "angel", "and", "shut", "the", "lions'", "mouths."]
+  },
+  "sequence": {
+    "prompt": "What happened to Daniel? Put it in order.",
+    "items": [
+      { "id": "trusted",   "label": "Daniel was trusted by the king",        "emoji": "👑", "order": 1 },
+      { "id": "trap",      "label": "Jealous men made a law against prayer",  "emoji": "📜", "order": 2 },
+      { "id": "prays",     "label": "Daniel prayed to God anyway",            "emoji": "🙏", "order": 3 },
+      { "id": "safe",      "label": "God sent an angel to shut the lions' mouths", "emoji": "🦁", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they did.",
+    "pairs": [
+      { "leftId": "daniel",   "left": "Daniel",       "leftEmoji": "🙏", "rightId": "prayed",   "right": "Kept praying to God every day",          "rightEmoji": "📿" },
+      { "leftId": "enemies",  "left": "Daniel's enemies", "leftEmoji": "😤", "rightId": "trapped",  "right": "Tried to trap Daniel with a law",     "rightEmoji": "🪤" },
+      { "leftId": "god",      "left": "God",           "leftEmoji": "✨", "rightId": "angel",    "right": "Sent an angel to protect Daniel",        "rightEmoji": "👼" }
+    ]
+  },
+  "application": {
+    "question": "Daniel prayed even when it was scary and against the law. What is something scary that YOU can pray about?",
+    "options": [
+      { "id": "dark",       "label": "Being afraid of the dark",   "emoji": "🌙" },
+      { "id": "school",     "label": "Something hard at school",   "emoji": "📚" },
+      { "id": "someone",    "label": "Someone who is unkind",      "emoji": "😟" }
+    ],
+    "followUp": "Just like Daniel, when you pray in hard times, God is with you — even in the darkest places. You can always pray."
+  }
+}

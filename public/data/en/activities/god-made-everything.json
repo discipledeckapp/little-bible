@@ -1,0 +1,36 @@
+{
+  "storyId": "god-made-everything",
+  "memoryBuilder": {
+    "phrase": "God made everything!",
+    "phraseWords": ["God", "made", "everything!"],
+    "verseRef": "Genesis 1:1",
+    "verseText": "In the beginning God created the heaven and the earth.",
+    "verseWords": ["In", "the", "beginning", "God", "created", "the", "heaven", "and", "earth."]
+  },
+  "sequence": {
+    "prompt": "What did God make? Put them in the right order.",
+    "items": [
+      { "id": "light",    "label": "Light",        "emoji": "☀️", "order": 1 },
+      { "id": "sea-sky",  "label": "Sky and Sea",  "emoji": "🌊", "order": 2 },
+      { "id": "animals",  "label": "Animals",      "emoji": "🐘", "order": 3 },
+      { "id": "people",   "label": "People",       "emoji": "👨‍👩‍👧", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each day to what God made.",
+    "pairs": [
+      { "leftId": "day1", "left": "Day One",  "leftEmoji": "1️⃣", "rightId": "light",    "right": "Light",         "rightEmoji": "☀️" },
+      { "leftId": "day5", "left": "Day Five", "leftEmoji": "5️⃣", "rightId": "fishbirds","right": "Fish and Birds", "rightEmoji": "🐟" },
+      { "leftId": "day6", "left": "Day Six",  "leftEmoji": "6️⃣", "rightId": "people",   "right": "People",        "rightEmoji": "👨‍👩‍👧" }
+    ]
+  },
+  "application": {
+    "question": "God made everything and called it GOOD — including you! What is one amazing thing God made that you love?",
+    "options": [
+      { "id": "animals", "label": "Animals",    "emoji": "🐘" },
+      { "id": "family",  "label": "My family",  "emoji": "👨‍👩‍👧" },
+      { "id": "me",      "label": "Me!",        "emoji": "😊" }
+    ],
+    "followUp": "Everything God made — including YOU — He called very, very good. That means you!"
+  }
+}

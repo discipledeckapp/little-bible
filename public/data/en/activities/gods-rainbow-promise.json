@@ -1,0 +1,36 @@
+{
+  "storyId": "gods-rainbow-promise",
+  "memoryBuilder": {
+    "phrase": "God keeps every promise!",
+    "phraseWords": ["God", "keeps", "every", "promise!"],
+    "verseRef": "Genesis 9:13",
+    "verseText": "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth.",
+    "verseWords": ["I", "put", "My", "rainbow", "in", "the", "clouds", "—", "My", "promise."]
+  },
+  "sequence": {
+    "prompt": "What happened after the great flood? Put it in order.",
+    "items": [
+      { "id": "flood-ends", "label": "The flood waters go down",             "emoji": "🌊", "order": 1 },
+      { "id": "ark-open",   "label": "Noah's family leaves the ark",         "emoji": "🕊️", "order": 2 },
+      { "id": "promise",    "label": "God makes a special promise",          "emoji": "🤝", "order": 3 },
+      { "id": "rainbow",    "label": "God places a rainbow in the sky",      "emoji": "🌈", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what it means.",
+    "pairs": [
+      { "leftId": "rainbow", "left": "Rainbow",        "leftEmoji": "🌈", "rightId": "sign",    "right": "God's sign of His promise",    "rightEmoji": "🤝" },
+      { "leftId": "flood",   "left": "Great flood",    "leftEmoji": "🌊", "rightId": "judgment","right": "What happens with great sin",   "rightEmoji": "⚖️" },
+      { "leftId": "noah",    "left": "Noah",           "leftEmoji": "👴", "rightId": "faithful","right": "Trusted and obeyed God",        "rightEmoji": "🙏" }
+    ]
+  },
+  "application": {
+    "question": "Every rainbow is a reminder that God keeps His promises! What is one of God's promises that makes you feel safe?",
+    "options": [
+      { "id": "love",   "label": "God will always love me",        "emoji": "❤️" },
+      { "id": "near",   "label": "God is always near me",          "emoji": "🤗" },
+      { "id": "heaven", "label": "God has a home for me in heaven", "emoji": "🏡" }
+    ],
+    "followUp": "God has never broken a single promise. Every rainbow you see is God reminding you: I keep my word. Always."
+  }
+}

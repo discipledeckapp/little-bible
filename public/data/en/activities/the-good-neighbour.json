@@ -1,0 +1,36 @@
+{
+  "storyId": "the-good-neighbour",
+  "memoryBuilder": {
+    "phrase": "Love God, love people!",
+    "phraseWords": ["Love", "God,", "love", "people!"],
+    "verseRef": "Luke 10:37",
+    "verseText": "Then said Jesus unto him, Go, and do thou likewise.",
+    "verseWords": ["Go,", "and", "do", "the", "same."]
+  },
+  "sequence": {
+    "prompt": "What happened on the road to Jericho? Put it in order.",
+    "items": [
+      { "id": "hurt",    "label": "A man is hurt on the road",             "emoji": "😔", "order": 1 },
+      { "id": "priest",  "label": "A priest walks past and ignores him",   "emoji": "🚶", "order": 2 },
+      { "id": "helper",  "label": "A temple helper also walks past",       "emoji": "🚶", "order": 3 },
+      { "id": "samari",  "label": "The Samaritan stops and helps him",     "emoji": "🤗", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they did.",
+    "pairs": [
+      { "leftId": "priest",   "left": "Priest",      "leftEmoji": "🚶", "rightId": "passed",  "right": "Walked past on the other side",        "rightEmoji": "❌" },
+      { "leftId": "samaritan","left": "Samaritan",   "leftEmoji": "🤗", "rightId": "helped",  "right": "Stopped, helped, and paid for his care","rightEmoji": "💛" },
+      { "leftId": "jesus",    "left": "Jesus",       "leftEmoji": "✨", "rightId": "said",    "right": "Said: Go and do the same",              "rightEmoji": "💬" }
+    ]
+  },
+  "application": {
+    "question": "The Samaritan stopped to help someone who needed it. Who around YOU could use help today?",
+    "options": [
+      { "id": "friend",  "label": "A friend who is sad",      "emoji": "😢" },
+      { "id": "family",  "label": "Someone in my family",     "emoji": "👨‍👩‍👧" },
+      { "id": "new",     "label": "Someone I don't know well","emoji": "👋" }
+    ],
+    "followUp": "Jesus said: Go and do the same. Your small act of love — stopping, noticing, helping — is exactly what love looks like."
+  }
+}

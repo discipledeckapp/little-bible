@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import BreadcrumbBar from '@/components/layout/BreadcrumbBar';
 import ChapterPageClient from '@/components/reader/ChapterPageClient';
 import JsonLd from '@/components/seo/JsonLd';
 import { getChapter, getLanguageIndex, getBookIndex } from '@/lib/content';
@@ -103,15 +104,13 @@ export default async function ChapterPage({ params }: PageProps) {
     <div className="min-h-screen flex flex-col">
       <JsonLd data={chapterJsonLd} />
       <Header />
+      <BreadcrumbBar
+        crumbs={[
+          { label: chapter.book, href: `/${bookSlug}` },
+          { label: `Chapter ${chapterNum}` },
+        ]}
+      />
       <main className="flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-8">
-        {/* Back link — goes to book page, not home */}
-        <Link
-          href={`/${bookSlug}`}
-          className="inline-flex items-center gap-1.5 text-sm text-amber-600 hover:text-amber-800 font-semibold mb-6 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
-          aria-label={`Back to ${chapter.book}`}
-        >
-          ← {chapter.book}
-        </Link>
 
         <Suspense fallback={
           <div className="flex justify-center py-12">

@@ -1,0 +1,36 @@
+{
+  "storyId": "the-lost-coin",
+  "memoryBuilder": {
+    "phrase": "Heaven celebrates for you.",
+    "phraseWords": ["Heaven", "celebrates", "for", "you."],
+    "verseRef": "Luke 15:10",
+    "verseText": "Likewise, I say unto you, there is joy in the presence of the angels of God over one sinner that repenteth.",
+    "verseWords": ["There", "is", "joy", "in", "heaven", "when", "one", "comes", "home."]
+  },
+  "sequence": {
+    "prompt": "What did the woman do when she lost her coin? Put it in order.",
+    "items": [
+      { "id": "lost",     "label": "One coin goes missing",              "emoji": "🪙", "order": 1 },
+      { "id": "lamp",     "label": "She lights a lamp to search",        "emoji": "🕯️", "order": 2 },
+      { "id": "sweeps",   "label": "She sweeps the whole house",         "emoji": "🧹", "order": 3 },
+      { "id": "found",    "label": "She finds it and tells her friends!", "emoji": "🎉", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what it means in Jesus' story.",
+    "pairs": [
+      { "leftId": "coin",    "left": "Lost coin",   "leftEmoji": "🪙", "rightId": "you",      "right": "Anyone who is far from God",      "rightEmoji": "💛" },
+      { "leftId": "woman",   "left": "The woman",   "leftEmoji": "👩", "rightId": "god-seek", "right": "God who searches for us",         "rightEmoji": "✨" },
+      { "leftId": "party",   "left": "Celebration", "leftEmoji": "🎉", "rightId": "heaven",   "right": "How heaven feels when we return",  "rightEmoji": "👼" }
+    ]
+  },
+  "application": {
+    "question": "The woman searched everywhere for one coin — and heaven celebrates like that for YOU! How does it feel to know heaven celebrates for you?",
+    "options": [
+      { "id": "amazed",  "label": "Amazed and surprised",   "emoji": "😮" },
+      { "id": "loved",   "label": "So loved and precious",  "emoji": "💛" },
+      { "id": "joyful",  "label": "Joyful and grateful",    "emoji": "🎉" }
+    ],
+    "followUp": "You are so precious to God that all of heaven celebrates when you come home to Him. You are that valuable — never forget it."
+  }
+}

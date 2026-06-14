@@ -1,0 +1,36 @@
+{
+  "storyId": "jonah-and-the-big-fish",
+  "memoryBuilder": {
+    "phrase": "You can't hide from God!",
+    "phraseWords": ["You", "can't", "hide", "from", "God!"],
+    "verseRef": "Jonah 2:1",
+    "verseText": "Then Jonah prayed unto the LORD his God out of the fish's belly.",
+    "verseWords": ["Even", "in", "the", "darkest", "place,", "Jonah", "prayed", "to", "God."]
+  },
+  "sequence": {
+    "prompt": "What happened to Jonah? Put it in order.",
+    "items": [
+      { "id": "called",  "label": "God calls Jonah to go to Nineveh",       "emoji": "📢", "order": 1 },
+      { "id": "runs",    "label": "Jonah runs away on a ship",               "emoji": "⛵", "order": 2 },
+      { "id": "fish",    "label": "Big fish swallows Jonah",                 "emoji": "🐋", "order": 3 },
+      { "id": "obeys",   "label": "Jonah prays and goes to Nineveh",         "emoji": "🙏", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they did.",
+    "pairs": [
+      { "leftId": "jonah",  "left": "Jonah",       "leftEmoji": "🚶", "rightId": "ran",     "right": "Ran from God — then came back",      "rightEmoji": "🔄" },
+      { "leftId": "fish",   "left": "Big fish",    "leftEmoji": "🐋", "rightId": "carried", "right": "Carried Jonah to a second chance",   "rightEmoji": "🌊" },
+      { "leftId": "god",    "left": "God",         "leftEmoji": "✨", "rightId": "waited",  "right": "Waited for Jonah to come back",      "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "Jonah ran from God but God still used him! Have you ever done something wrong and then came back to God?",
+    "options": [
+      { "id": "yes",      "label": "Yes — I came back to God",    "emoji": "🔄" },
+      { "id": "told",     "label": "I told someone what I did",   "emoji": "💬" },
+      { "id": "trying",   "label": "I am still learning to trust", "emoji": "🌱" }
+    ],
+    "followUp": "No matter where you run, God is already there — and He is always ready to give you another chance, just like Jonah."
+  }
+}

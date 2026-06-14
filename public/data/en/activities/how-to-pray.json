@@ -1,0 +1,36 @@
+{
+  "storyId": "how-to-pray",
+  "memoryBuilder": {
+    "phrase": "God hears my prayers!",
+    "phraseWords": ["God", "hears", "my", "prayers!"],
+    "verseRef": "Matthew 6:9",
+    "verseText": "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",
+    "verseWords": ["Our", "Father", "in", "heaven,", "hear", "my", "prayer."]
+  },
+  "sequence": {
+    "prompt": "Jesus taught us how to pray. What do we do? Put it in order.",
+    "items": [
+      { "id": "father",  "label": "Talk to God like a loving Father",       "emoji": "❤️", "order": 1 },
+      { "id": "kingdom", "label": "Ask for God's Kingdom to come",          "emoji": "👑", "order": 2 },
+      { "id": "needs",   "label": "Ask God for what we need",               "emoji": "🙏", "order": 3 },
+      { "id": "forgive", "label": "Ask for forgiveness and forgive others", "emoji": "🕊️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of prayer to what it means.",
+    "pairs": [
+      { "leftId": "our-father",   "left": "Our Father",   "leftEmoji": "❤️", "rightId": "god-loves",   "right": "God loves us like a perfect father",  "rightEmoji": "👨" },
+      { "leftId": "daily-bread",  "left": "Daily bread",  "leftEmoji": "🍞", "rightId": "needs",       "right": "Everything we need today",            "rightEmoji": "✅" },
+      { "leftId": "forgive-us",   "left": "Forgive us",   "leftEmoji": "🕊️", "rightId": "fresh-start", "right": "God gives us a fresh start",          "rightEmoji": "🌱" }
+    ]
+  },
+  "application": {
+    "question": "Jesus wants to hear from you! What do you most want to tell God right now?",
+    "options": [
+      { "id": "thankful", "label": "Thank You for something good",  "emoji": "🙏" },
+      { "id": "help",     "label": "Please help me with something", "emoji": "🤝" },
+      { "id": "sorry",    "label": "I am sorry for something",      "emoji": "💙" }
+    ],
+    "followUp": "God loves to hear from you — any time, any place, about anything. You can always talk to Him. He always listens."
+  }
+}

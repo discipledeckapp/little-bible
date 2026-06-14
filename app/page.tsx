@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
+import WhereToStartSection from '@/components/home/WhereToStartSection';
 import JourneySection from '@/components/home/JourneySection';
 import StoriesSection from '@/components/home/StoriesSection';
 import WisdomBar from '@/components/home/WisdomBar';
@@ -10,6 +11,8 @@ import LibrarySection from '@/components/home/LibrarySection';
 import StoryGarden from '@/components/stories/StoryGarden';
 import FamilyDashboardSection from '@/components/home/FamilyDashboardSection';
 import TopicsSection from '@/components/home/TopicsSection';
+import AppInterestBanner from '@/components/app-interest/AppInterestBanner';
+import WeeklyMemoryVerse from '@/components/memory/WeeklyMemoryVerse';
 import JsonLd from '@/components/seo/JsonLd';
 import { getAllBooksWithMeta } from '@/lib/content';
 import { getAllStories } from '@/lib/stories';
@@ -18,7 +21,7 @@ import { getAllTopics } from '@/lib/topics';
 export const metadata: Metadata = {
   title: "Little Bible — God's Word for Little Hearts",
   description:
-    'Daily family devotions for children ages 4–7. Every verse of Scripture — faithfully adapted, beautifully simple.',
+    'All 66 books of Scripture faithfully adapted for children ages 4–7. Read, discuss, pray, and live God\'s Word together as a family. Free, always.',
 };
 
 export default async function HomePage() {
@@ -29,15 +32,15 @@ export default async function HomePage() {
   ]);
 
   const storySearchItems = allStories.map(s => ({
-    id: s.id,
+    id:    s.id,
     title: s.title,
     emoji: s.coverEmoji ?? '📖',
   }));
 
   const topicSearchItems = topics.map(t => ({
-    id: t.id,
-    title: t.title,
-    emoji: t.emoji,
+    id:          t.id,
+    title:       t.title,
+    emoji:       t.emoji,
     description: t.description,
   }));
 
@@ -65,10 +68,13 @@ export default async function HomePage() {
       <JsonLd data={websiteJsonLd} />
       <Header />
 
-      {/* 1. Hero */}
+      {/* 1. Hero — identity, Lumi scene, smart CTA */}
       <HeroSection stories={storySearchItems} topics={topicSearchItems} />
 
-      {/* 2. Progress (shown when started) */}
+      {/* 2. Where to Start — onboarding paths for new families */}
+      <WhereToStartSection />
+
+      {/* 3. Progress strips — shown when user has started */}
       <div className="bg-[#FFFBF5] px-0 py-2">
         <WisdomBar />
       </div>
@@ -76,23 +82,29 @@ export default async function HomePage() {
         <FamilyStreakBanner />
       </div>
 
-      {/* 3. Family dashboard — shown to signed-in users with a family */}
+      {/* 4. Weekly memory verse — engaging for all users */}
+      <WeeklyMemoryVerse />
+
+      {/* 5. Family dashboard — shown to signed-in users with a family */}
       <FamilyDashboardSection />
 
-      {/* 4. Journey paths — age-based discipleship paths (story-first) */}
+      {/* 5. Journey paths — age-based discipleship paths */}
       <JourneySection />
-
-      {/* 5. Topics — scriptures by theme */}
-      <TopicsSection topics={topics} />
 
       {/* 6. Stories by collection — story-first browsing */}
       <StoriesSection />
 
-      {/* 7. Story Garden — user's completed stories (client, hidden until progress exists) */}
+      {/* 7. Topics — scriptures by theme */}
+      <TopicsSection topics={topics} />
+
+      {/* 8. Story Garden — user's completed stories */}
       <StoryGarden />
 
-      {/* 8. Full Bible library — reference and deep reading (secondary) */}
+      {/* 9. Full Bible library — reference and deep reading */}
       <LibrarySection availableBooks={books} />
+
+      {/* 10. App Interest — pre-footer CTA */}
+      <AppInterestBanner />
 
       <Footer />
     </div>

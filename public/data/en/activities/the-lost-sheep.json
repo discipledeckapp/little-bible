@@ -1,0 +1,36 @@
+{
+  "storyId": "the-lost-sheep",
+  "memoryBuilder": {
+    "phrase": "God looks for me!",
+    "phraseWords": ["God", "looks", "for", "me!"],
+    "verseRef": "Luke 15:6",
+    "verseText": "Rejoice with me; for I have found my sheep which was lost.",
+    "verseWords": ["Rejoice", "with", "me", "—", "I", "found", "my", "lost", "sheep!"]
+  },
+  "sequence": {
+    "prompt": "What did the shepherd do when one sheep was lost? Put it in order.",
+    "items": [
+      { "id": "hundred", "label": "Shepherd has 100 sheep",             "emoji": "🐑", "order": 1 },
+      { "id": "lost",    "label": "One sheep goes missing",             "emoji": "❓", "order": 2 },
+      { "id": "search",  "label": "Shepherd leaves 99 and searches",    "emoji": "🔦", "order": 3 },
+      { "id": "carries", "label": "Shepherd finds and carries it home", "emoji": "🎉", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each to what they mean.",
+    "pairs": [
+      { "leftId": "shepherd", "left": "Shepherd",      "leftEmoji": "👨", "rightId": "jesus",    "right": "Jesus — who searches for us",      "rightEmoji": "💛" },
+      { "leftId": "lost",     "left": "Lost sheep",    "leftEmoji": "🐑", "rightId": "anyone",   "right": "Anyone who has wandered from God",  "rightEmoji": "🚶" },
+      { "leftId": "celebrate","left": "Celebration",   "leftEmoji": "🎉", "rightId": "heaven",   "right": "What heaven does when we return",  "rightEmoji": "👼" }
+    ]
+  },
+  "application": {
+    "question": "God searches for YOU like that shepherd — He never gives up! How does that make you feel?",
+    "options": [
+      { "id": "safe",     "label": "Safe and found",            "emoji": "🤗" },
+      { "id": "special",  "label": "Special and precious",      "emoji": "⭐" },
+      { "id": "loved",    "label": "Deeply loved",              "emoji": "❤️" }
+    ],
+    "followUp": "Even if you wander, God does not stop looking for you. He leaves everything to find you — that is how much you matter to Him."
+  }
+}

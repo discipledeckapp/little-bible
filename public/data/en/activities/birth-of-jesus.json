@@ -1,0 +1,36 @@
+{
+  "storyId": "birth-of-jesus",
+  "memoryBuilder": {
+    "phrase": "Jesus is born for us!",
+    "phraseWords": ["Jesus", "is", "born", "for", "us!"],
+    "verseRef": "Luke 2:11",
+    "verseText": "For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+    "verseWords": ["Today", "a", "Saviour", "is", "born", "for", "you!"]
+  },
+  "sequence": {
+    "prompt": "What happened on the night Jesus was born? Put it in order.",
+    "items": [
+      { "id": "travel",     "label": "Mary and Joseph travel to Bethlehem", "emoji": "🗺️",  "order": 1 },
+      { "id": "no-room",    "label": "No room at the inn",                  "emoji": "🚪",  "order": 2 },
+      { "id": "born",       "label": "Jesus is born in a stable",           "emoji": "⭐",  "order": 3 },
+      { "id": "shepherds",  "label": "Angels tell the shepherds",           "emoji": "👼",  "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match the people to what they did that night.",
+    "pairs": [
+      { "leftId": "mary",      "left": "Mary",      "leftEmoji": "👩", "rightId": "wrapped",   "right": "Wrapped Jesus in cloth",          "rightEmoji": "🧸" },
+      { "leftId": "angels",    "left": "Angels",    "leftEmoji": "👼", "rightId": "announced", "right": "Announced the great news",        "rightEmoji": "📢" },
+      { "leftId": "shepherds", "left": "Shepherds", "leftEmoji": "🐑", "rightId": "ran",       "right": "Ran to find the baby Jesus",      "rightEmoji": "🏃" }
+    ]
+  },
+  "application": {
+    "question": "Jesus came as a tiny baby — for YOU! What would you like to say to Jesus about being born for us?",
+    "options": [
+      { "id": "thankyou", "label": "Thank You for coming!",         "emoji": "🙏" },
+      { "id": "wow",      "label": "Wow — You chose to come!",      "emoji": "😲" },
+      { "id": "love",     "label": "I love that You came for me!",  "emoji": "💛" }
+    ],
+    "followUp": "God's Son became a tiny baby — for you! The most powerful person in the universe chose to enter the world as a helpless child, just so He could be near you."
+  }
+}

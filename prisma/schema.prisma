@@ -58,6 +58,9 @@ model User {
   donations     Donation[]
   family        Family?
   auditLogs     AdminAuditLog[]
+  appInterest   AppInterest?
+  activityRecords      ActivityRecord[]
+  memoryVerseProgress  MemoryVerseProgress[]
 }
 
 model VerificationToken {
@@ -112,6 +115,8 @@ model FamilyMember {
   sortOrder   Int      @default(0)
   progress    MemberProgress?
   sessions    MemberSession[]
+  activityRecords      ActivityRecord[]
+  memoryVerseProgress  MemoryVerseProgress[]
   createdAt   DateTime @default(now())
 }
 
@@ -234,4 +239,69 @@ model AdminAuditLog {
 
   @@index([adminId, createdAt])
   @@index([createdAt])
+}
+
+// ── Mobile App Interest ───────────────────────────────────────────────────────
+
+model AppInterest {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wantsIos        Boolean   @default(false)
+  wantsAndroid    Boolean   @default(false)
+  wantsPush       Boolean   @default(true)
+  wantsEmail      Boolean   @default(true)
+  countryCode     String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  notifiedIos     DateTime?
+  notifiedAndroid DateTime?
+
+  @@index([wantsIos])
+  @@index([wantsAndroid])
+  @@index([createdAt])
+}
+
+// ── Engagement & Activity System ──────────────────────────────────────────────
+
+model ActivityRecord {
+  id           String   @id @default(cuid())
+  userId       String?
+  memberId     String?
+  storyId      String
+  activityType String   // 'memory-builder' | 'story-sequence' | 'character-match' | 'application'
+  score        Int      @default(0)
+  perfect      Boolean  @default(false)
+  seedsEarned  Int      @default(0)
+  attempts     Int      @default(1)
+  createdAt    DateTime @default(now())
+
+  user   User?         @relation(fields: [userId],   references: [id], onDelete: SetNull)
+  member FamilyMember? @relation(fields: [memberId], references: [id], onDelete: SetNull)
+
+  @@index([storyId])
+  @@index([userId])
+  @@index([memberId])
+  @@index([createdAt])
+}
+
+model MemoryVerseProgress {
+  id            String    @id @default(cuid())
+  userId        String?
+  memberId      String?
+  verseRef      String
+  stage         String    @default("learning") // 'learning' | 'practicing' | 'mastered'
+  attempts      Int       @default(0)
+  lastPracticed DateTime?
+  masteredAt    DateTime?
+  seedsEarned   Int       @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user   User?         @relation(fields: [userId],   references: [id], onDelete: SetNull)
+  member FamilyMember? @relation(fields: [memberId], references: [id], onDelete: SetNull)
+
+  @@unique([userId, verseRef])
+  @@unique([memberId, verseRef])
+  @@index([verseRef])
 }

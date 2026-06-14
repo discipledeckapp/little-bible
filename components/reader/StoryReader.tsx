@@ -11,6 +11,8 @@ import LumiStageUp from '@/components/mascot/LumiStageUp';
 import type { LumiStage } from '@/components/mascot/LumiMascot';
 import WonderWord from '@/components/stories/WonderWord';
 import { getWonderWords, type WonderWordDef } from '@/lib/wonder-words';
+import ActivityGate from '@/components/activities/ActivityGate';
+import SeedToast from '@/components/growth/SeedToast';
 
 type Step = 'cover' | 'read' | 'discuss' | 'pray' | 'remember' | 'do' | 'complete';
 
@@ -44,6 +46,8 @@ export default function StoryReader({ story, nextStory }: StoryReaderProps) {
   const [revealed, setRevealed] = useState(false);
   const [seeds, setSeeds] = useState(0);
   const [stageUpTo, setStageUpTo] = useState<LumiStage | null>(null);
+  const [activityOpen, setActivityOpen] = useState(false);
+  const [seedToast, setSeedToast] = useState<number | null>(null);
 
   useEffect(() => {
     const p = getProgress();
@@ -145,6 +149,26 @@ export default function StoryReader({ story, nextStory }: StoryReaderProps) {
         {stageUpTo && (
           <LumiStageUp newStage={stageUpTo} onDismiss={() => setStageUpTo(null)} />
         )}
+
+        {/* Activity overlay */}
+        {activityOpen && (
+          <ActivityGate
+            storyId={story.id}
+            storyTitle={story.title}
+            doTodayAction={story.steps.doToday?.action}
+            onSeedsEarned={(s) => {
+              setSeeds(prev => prev + s);
+              setSeedToast(s);
+            }}
+            onDismiss={() => setActivityOpen(false)}
+          />
+        )}
+
+        {/* Seed toast */}
+        {seedToast !== null && (
+          <SeedToast amount={seedToast} onHide={() => setSeedToast(null)} />
+        )}
+
         <div className="lumi-grow mb-2">
           <LumiMascot stage={lumiStage} animate className="w-28 h-28" />
         </div>
@@ -157,7 +181,7 @@ export default function StoryReader({ story, nextStory }: StoryReaderProps) {
         <p className="text-stone-500 text-base leading-relaxed max-w-xs mb-2">
           You finished <strong>{story.title}</strong>.
         </p>
-        <div className="leaf-plant mt-2 mb-6 px-5 py-3 bg-amber-100 rounded-2xl">
+        <div className="leaf-plant mt-2 mb-4 px-5 py-3 bg-amber-100 rounded-2xl">
           <p className="text-amber-800 font-medium text-sm">
             +10 Wisdom Seeds 🌱
           </p>
@@ -165,23 +189,32 @@ export default function StoryReader({ story, nextStory }: StoryReaderProps) {
             &ldquo;{story.steps.remember.memoryPhrase}&rdquo;
           </p>
         </div>
+
+        {/* Practice CTA */}
+        <button
+          onClick={() => setActivityOpen(true)}
+          className="w-full max-w-xs py-4 rounded-2xl font-bold text-white bg-amber-500 hover:bg-amber-600 active:scale-95 transition-all shadow-md mb-3"
+        >
+          🌟 Practice What You Learned
+        </button>
+
         {nextStory && (
           <Link
             href={`/stories/${nextStory.id}`}
-            className="w-full max-w-xs flex items-center gap-4 bg-white/15 hover:bg-white/25 border border-white/20 rounded-2xl px-5 py-4 mb-3 transition-all active:scale-95 fade-in"
+            className="w-full max-w-xs flex items-center gap-4 bg-stone-800 hover:bg-stone-900 rounded-2xl px-5 py-4 mb-3 transition-all active:scale-95 fade-in"
           >
             <span className="text-3xl shrink-0">{nextStory.coverEmoji}</span>
             <div className="text-left flex-1 min-w-0">
-              <p className="text-amber-200 text-xs font-bold uppercase tracking-widest">Up Next</p>
+              <p className="text-amber-400 text-xs font-bold uppercase tracking-widest">Up Next</p>
               <p className="text-white font-extrabold text-sm leading-tight truncate">{nextStory.title}</p>
-              <p className="text-amber-200/70 text-xs leading-tight truncate">{nextStory.subtitle}</p>
+              <p className="text-stone-400 text-xs leading-tight truncate">{nextStory.subtitle}</p>
             </div>
-            <span className="text-white/60 text-lg shrink-0">→</span>
+            <span className="text-stone-400 text-lg shrink-0">→</span>
           </Link>
         )}
         <button
           onClick={() => router.push('/')}
-          className="w-full max-w-xs py-4 rounded-2xl font-bold text-white bg-amber-500 hover:bg-amber-600 active:scale-95 transition-all"
+          className="w-full max-w-xs py-4 rounded-2xl font-bold text-stone-600 bg-white border border-stone-200 hover:bg-stone-50 active:scale-95 transition-all"
         >
           ← Back to Stories
         </button>
