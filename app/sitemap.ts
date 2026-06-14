@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { BIBLE_BOOKS } from '@/lib/bibleBooks';
 import { getLanguageIndex, getBookIndex } from '@/lib/content';
-import { getAllStories } from '@/lib/stories';
+import { getAllStories, getAllJourneys } from '@/lib/stories';
 import { getAllTopics } from '@/lib/topics';
 
 const BASE = 'https://littlebible.org';
@@ -11,10 +11,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // ── Static pages ────────────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE,              lastModified: now, changeFrequency: 'daily',   priority: 1.0 },
-    { url: `${BASE}/stories`, lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE}/topics`,  lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
-    { url: `${BASE}/donate`,  lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: BASE,                 lastModified: now, changeFrequency: 'daily',   priority: 1.0 },
+    { url: `${BASE}/stories`,    lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE}/topics`,     lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
+    { url: `${BASE}/journeys`,   lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
+    { url: `${BASE}/download`,   lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE}/donate`,     lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
   ];
 
   // ── All 66 book index pages ──────────────────────────────────────────────
@@ -61,5 +63,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.75,
   }));
 
-  return [...staticPages, ...bookPages, ...chapterPages, ...storyPages, ...topicPages];
+  // ── Journey pages ─────────────────────────────────────────────────────────
+  const journeys = await getAllJourneys();
+  const journeyPages: MetadataRoute.Sitemap = journeys.map(journey => ({
+    url: `${BASE}/journeys/${journey.id}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [
+    ...staticPages,
+    ...bookPages,
+    ...chapterPages,
+    ...storyPages,
+    ...topicPages,
+    ...journeyPages,
+  ];
 }
