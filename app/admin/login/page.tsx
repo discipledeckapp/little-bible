@@ -8,6 +8,7 @@ import {
   ADMIN_COOKIE,
   SESSION_MAX_AGE,
 } from '@/lib/admin/session';
+
 import LogoMark from '@/components/brand/LogoMark';
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default async function AdminLoginPage({ searchParams }: PageProps) {
   // If already logged in, go to dashboard
   const cookieStore = await cookies();
   const existingToken = cookieStore.get(ADMIN_COOKIE)?.value;
-  if (existingToken && await verifyAdminToken(existingToken)) {
+  if (existingToken && verifyAdminToken(existingToken)) {
     redirect('/admin/dashboard');
   }
 
@@ -38,7 +39,7 @@ export default async function AdminLoginPage({ searchParams }: PageProps) {
       redirect('/admin/login?error=invalid');
     }
 
-    const token = await createAdminToken();
+    const token = createAdminToken();
     const cookieStore = await cookies();
     cookieStore.set(ADMIN_COOKIE, token, {
       httpOnly: true,
