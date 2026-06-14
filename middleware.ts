@@ -1,21 +1,26 @@
-import { auth } from '@/auth';
 import { NextResponse } from 'next/server';
-import { isAdmin } from '@/lib/admin/permissions';
+import type { NextRequest } from 'next/server';
 
-export default auth((req) => {
-  const { nextUrl, auth: session } = req;
+// Edge-compatible middleware — no Prisma/Node.js imports allowed here.
+// Role check is handled in app/admin/layout.tsx (Node.js runtime).
+export function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl;
 
-  if (nextUrl.pathname.startsWith('/admin')) {
-    if (!session?.user?.id || !isAdmin(session.user.role)) {
-      const url = nextUrl.clone();
+  if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
+    const hasSession =
+      req.cookies.has('authjs.session-token') ||
+      req.cookies.has('__Secure-authjs.session-token');
+
+    if (!hasSession) {
+      const url = req.nextUrl.clone();
       url.pathname = '/';
-      url.searchParams.set('callbackUrl', nextUrl.pathname);
+      url.searchParams.set('callbackUrl', pathname);
       return NextResponse.redirect(url);
     }
   }
 
   return NextResponse.next();
-});
+}
 
 export const config = {
   matcher: ['/admin/:path*', '/api/admin/:path*'],
