@@ -2,39 +2,33 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import type { AdminRole } from '@prisma/client';
-import { can, ROLE_LABELS, ROLE_COLORS, type AdminModule } from '@/lib/admin/permissions';
+import { logoutAction } from '@/app/admin/actions/logout';
 import LogoMark from '@/components/brand/LogoMark';
 
 interface NavItem {
-  href:   string;
-  label:  string;
-  icon:   string;
-  module: AdminModule;
+  href:  string;
+  label: string;
+  icon:  string;
 }
 
 const NAV: NavItem[] = [
-  { href: '/admin/dashboard',     label: 'Dashboard',     icon: '◈',  module: 'dashboard'     },
-  { href: '/admin/analytics',     label: 'Analytics',     icon: '↗',  module: 'analytics'     },
-  { href: '/admin/users',         label: 'Users',         icon: '◉',  module: 'users'         },
-  { href: '/admin/families',      label: 'Families',      icon: '⬡',  module: 'families'      },
-  { href: '/admin/content',       label: 'Content',       icon: '≡',  module: 'content'       },
-  { href: '/admin/reviews',       label: 'Reviews',       icon: '✓',  module: 'reviews'       },
-  { href: '/admin/feedback',      label: 'Feedback',      icon: '◷',  module: 'feedback'      },
-  { href: '/admin/settings',      label: 'Settings',      icon: '⚙',  module: 'settings'      },
+  { href: '/admin/dashboard', label: 'Dashboard', icon: '◈' },
+  { href: '/admin/analytics', label: 'Analytics', icon: '↗' },
+  { href: '/admin/users',     label: 'Users',     icon: '◉' },
+  { href: '/admin/families',  label: 'Families',  icon: '⬡' },
+  { href: '/admin/content',   label: 'Content',   icon: '≡' },
+  { href: '/admin/reviews',   label: 'Reviews',   icon: '✓' },
+  { href: '/admin/feedback',  label: 'Feedback',  icon: '◷' },
+  { href: '/admin/settings',  label: 'Settings',  icon: '⚙' },
 ];
 
 interface AdminSidebarProps {
-  role:   AdminRole;
-  name:   string | null;
-  email:  string | null;
-  image:  string | null;
+  name:  string;
+  email: string;
 }
 
-export default function AdminSidebar({ role, name, email, image }: AdminSidebarProps) {
+export default function AdminSidebar({ name, email }: AdminSidebarProps) {
   const pathname = usePathname();
-
-  const visibleNav = NAV.filter(item => can(role, item.module));
 
   return (
     <aside className="flex flex-col w-60 min-h-screen bg-stone-900 border-r border-stone-800 shrink-0">
@@ -51,7 +45,7 @@ export default function AdminSidebar({ role, name, email, image }: AdminSidebarP
 
       {/* Navigation */}
       <nav className="flex-1 px-3 py-4 space-y-0.5">
-        {visibleNav.map(item => {
+        {NAV.map(item => {
           const active = pathname === item.href || pathname.startsWith(item.href + '/');
           return (
             <Link
@@ -72,8 +66,8 @@ export default function AdminSidebar({ role, name, email, image }: AdminSidebarP
         })}
       </nav>
 
-      {/* Back to app link */}
-      <div className="px-3 pb-3">
+      {/* Back to app */}
+      <div className="px-3 pb-1">
         <Link
           href="/"
           className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-stone-500 hover:text-stone-300 hover:bg-stone-800 transition-colors"
@@ -83,24 +77,26 @@ export default function AdminSidebar({ role, name, email, image }: AdminSidebarP
         </Link>
       </div>
 
-      {/* User info */}
+      {/* User info + logout */}
       <div className="px-4 py-4 border-t border-stone-800">
-        <div className="flex items-center gap-3">
-          {image ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={image} alt={name ?? ''} className="w-8 h-8 rounded-full shrink-0" />
-          ) : (
-            <div className="w-8 h-8 rounded-full bg-stone-700 flex items-center justify-center text-stone-300 text-sm font-bold shrink-0">
-              {(name ?? 'A')[0].toUpperCase()}
-            </div>
-          )}
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-8 h-8 rounded-full bg-amber-900 flex items-center justify-center text-amber-200 text-sm font-bold shrink-0">
+            {(name ?? 'A')[0].toUpperCase()}
+          </div>
           <div className="min-w-0 flex-1">
-            <p className="text-white text-xs font-semibold truncate leading-tight">{name ?? 'Admin'}</p>
-            <span className={`inline-block text-[9px] font-bold px-1.5 py-0.5 rounded-full leading-tight mt-0.5 ${ROLE_COLORS[role]}`}>
-              {ROLE_LABELS[role]}
-            </span>
+            <p className="text-white text-xs font-semibold truncate leading-tight capitalize">{name}</p>
+            <p className="text-stone-500 text-[10px] truncate">{email}</p>
           </div>
         </div>
+        <form action={logoutAction}>
+          <button
+            type="submit"
+            className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-stone-500 hover:text-red-400 hover:bg-stone-800 transition-colors focus:outline-none"
+          >
+            <span aria-hidden="true">⏻</span>
+            Sign out
+          </button>
+        </form>
       </div>
     </aside>
   );

@@ -1,22 +1,23 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { ADMIN_COOKIE } from '@/lib/admin/session';
 
-// Edge-compatible middleware — no Prisma/Node.js imports allowed here.
-// Role check is handled in app/admin/layout.tsx (Node.js runtime).
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
-    const hasSession =
-      req.cookies.has('authjs.session-token') ||
-      req.cookies.has('__Secure-authjs.session-token');
+    // Login page and logout action are always accessible
+    if (pathname === '/admin/login') return NextResponse.next();
 
-    if (!hasSession) {
+    const adminSession = req.cookies.get(ADMIN_COOKIE)?.value;
+    if (!adminSession) {
       const url = req.nextUrl.clone();
-      url.pathname = '/';
-      url.searchParams.set('callbackUrl', pathname);
+      url.pathname = '/admin/login';
+      url.searchParams.delete('error');
       return NextResponse.redirect(url);
     }
+    // Full JWT verification runs in Node.js runtime (admin layout)
+    return NextResponse.next();
   }
 
   return NextResponse.next();
