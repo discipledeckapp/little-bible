@@ -6,5 +6,7 @@
   { "book": "Luke", "chapter": 5, "file": "luke_chapter_05.json" },
   { "book": "Luke", "chapter": 6, "file": "luke_chapter_06.json" },
   { "book": "Luke", "chapter": 10, "file": "luke_chapter_10.json" },
-  { "book": "Luke", "chapter": 15, "file": "luke_chapter_15.json" }
+  { "book": "Luke", "chapter": 15, "file": "luke_chapter_15.json" },
+  { "book": "Luke", "chapter": 22, "file": "luke_chapter_22.json" },
+  { "book": "Luke", "chapter": 23, "file": "luke_chapter_23.json" }
 ]
