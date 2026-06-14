@@ -58,6 +58,30 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
 
+      // ── Challenge aliases ───────────────────────────────────────────────
+      {
+        source: '/7-day-challenge',
+        destination: '/challenge',
+        permanent: false,
+      },
+      {
+        source: '/littlebiblechallenge',
+        destination: '/challenge',
+        permanent: false,
+      },
+
+      // ── Free resources aliases ──────────────────────────────────────────
+      {
+        source: '/resources',
+        destination: '/free',
+        permanent: false,
+      },
+      {
+        source: '/devotional',
+        destination: '/free/7-day-devotional',
+        permanent: false,
+      },
+
       // ── Utility aliases ─────────────────────────────────────────────────
       {
         source: '/coming-soon',
