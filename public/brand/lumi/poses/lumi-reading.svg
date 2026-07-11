@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" width="480" height="576" fill="none">
+  <rect width="80" height="96" fill="#FFFBF5"/>
+  <!-- Outer glow — slightly larger for reading excitement -->
+  <ellipse cx="40" cy="60" rx="34" ry="32" fill="#FCD34D" opacity="0.2"/>
+  <ellipse cx="40" cy="60" rx="26" ry="24" fill="#FDE68A" opacity="0.25"/>
+  <!-- Floating Bible book above Lumi -->
+  <!-- Book glow -->
+  <ellipse cx="40" cy="38" rx="18" ry="9" fill="#FCD34D" opacity="0.18"/>
+  <!-- Left page -->
+  <path d="M22 30 L37 28 L37 44 L22 42 Q21 42 21 41 L21 31 Q21 30 22 30Z" fill="rgba(255,255,255,0.97)"/>
+  <!-- Right page -->
+  <path d="M43 28 L58 30 L58 42 L43 44 Q43 44 43 41 L43 29Z" fill="rgba(255,255,255,0.80)"/>
+  <!-- Spine -->
+  <rect x="37" y="28" width="2" height="16" fill="rgba(120,53,15,0.25)"/>
+  <!-- Cross above book -->
+  <rect x="37.65" y="21" width="0.7" height="6" rx="0.35" fill="#FDE68A" opacity="0.95"/>
+  <rect x="35.2" y="23.8" width="5.6" height="0.7" rx="0.35" fill="#FDE68A" opacity="0.95"/>
+  <!-- Lines on left page -->
+  <rect x="23" y="33" width="12" height="0.9" rx="0.45" fill="rgba(120,53,15,0.25)"/>
+  <rect x="23" y="36" width="11" height="0.9" rx="0.45" fill="rgba(120,53,15,0.18)"/>
+  <rect x="23" y="39" width="10" height="0.9" rx="0.45" fill="rgba(120,53,15,0.14)"/>
+  <!-- Lines on right page -->
+  <rect x="45" y="33" width="11" height="0.9" rx="0.45" fill="rgba(120,53,15,0.20)"/>
+  <rect x="45" y="36" width="10" height="0.9" rx="0.45" fill="rgba(120,53,15,0.14)"/>
+  <rect x="45" y="39" width="9"  height="0.9" rx="0.45" fill="rgba(120,53,15,0.10)"/>
+  <!-- Book sparkle -->
+  <circle cx="18" cy="28" r="1.8" fill="#FEF3C7" opacity="0.9"/>
+  <circle cx="62" cy="26" r="1.4" fill="#FEF3C7" opacity="0.8"/>
+  <!-- Seed body -->
+  <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+  <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+  <!-- Leaf — tall and perky (eager reader) -->
+  <path d="M40 34 Q28 20 33 11 Q47 15 40 34Z" fill="#34D399"/>
+  <path d="M40 34 Q36 22 38 13" stroke="#10B981" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Eyes: wide and curious -->
+  <circle cx="33.5" cy="57" r="3.2" fill="#78350F"/>
+  <circle cx="46.5" cy="57" r="3.2" fill="#78350F"/>
+  <circle cx="34.3" cy="56.1" r="1.1" fill="white"/>
+  <circle cx="47.3" cy="56.1" r="1.1" fill="white"/>
+  <!-- Smile: happy -->
+  <path d="M34 66 Q40 71.5 46 66" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Sparkles -->
+  <circle cx="24" cy="52" r="2.2" fill="#FEF3C7" opacity="0.8"/>
+  <circle cx="57" cy="49" r="1.6" fill="#FEF3C7" opacity="0.7"/>
+  <circle cx="21" cy="64" r="1.4" fill="#FEF3C7" opacity="0.6"/>
+  <!-- Pose label -->
+  <text x="40" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" font-weight="bold" fill="#B45309" opacity="0.7">Reading</text>
+</svg>

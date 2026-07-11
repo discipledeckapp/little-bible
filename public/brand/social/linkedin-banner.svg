@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 191" fill="none">
+  <defs>
+    <linearGradient id="li-bg" x1="0" y1="0" x2="1128" y2="191" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#78350F"/>
+      <stop offset="60%"  stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="1128" height="191" fill="url(#li-bg)"/>
+  <!-- Subtle pattern lines -->
+  <rect x="0" y="63"  width="1128" height="1.5" fill="#FDE68A" opacity="0.08"/>
+  <rect x="0" y="127" width="1128" height="1.5" fill="#FDE68A" opacity="0.06"/>
+
+  <!-- Logo: icon + wordmark left -->
+  <svg x="40" y="36" width="119" height="119" viewBox="0 0 36 36" fill="none">
+    <defs>
+      <linearGradient id="li-icon" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+        <stop offset="0%"   stop-color="#7C2D12"/>
+        <stop offset="100%" stop-color="#D97706"/>
+      </linearGradient>
+    </defs>
+    <rect width="36" height="36" rx="9" fill="url(#li-icon)"/>
+    <rect x="17.25" y="3" width="1.5" height="10" rx="0.75" fill="#FDE68A" opacity="0.92"/>
+    <rect x="13" y="6.5" width="10" height="1.5" rx="0.75" fill="#FDE68A" opacity="0.92"/>
+    <path d="M7 14.5 L17 13.5 L17 28 L7 27 Q6 27 6 26 L6 15.5 Q6 14.5 7 14.5Z" fill="rgba(255,255,255,0.96)"/>
+    <path d="M29 14.5 L19 13.5 L19 28 L29 27 Q30 27 30 26 L30 15.5 Q30 14.5 29 14.5Z" fill="rgba(255,255,255,0.76)"/>
+    <rect x="17" y="13.5" width="2" height="14.5" fill="rgba(120,53,15,0.22)"/>
+    <rect x="8" y="16.5" width="7" height="1.2" rx="0.6" fill="rgba(120,53,15,0.28)"/>
+    <rect x="8" y="19.5" width="8" height="1.2" rx="0.6" fill="rgba(120,53,15,0.20)"/>
+    <rect x="21" y="16.5" width="6.5" height="1.2" rx="0.6" fill="rgba(120,53,15,0.20)"/>
+    <rect x="21" y="19.5" width="7.5" height="1.2" rx="0.6" fill="rgba(120,53,15,0.15)"/>
+  </svg>
+  <text x="174" y="106" font-family="Georgia, serif" font-size="64" font-weight="bold" fill="white" letter-spacing="-1">Little Bible</text>
+
+  <!-- Divider -->
+  <rect x="490" y="36" width="2" height="119" rx="1" fill="#FDE68A" opacity="0.3"/>
+
+  <!-- Tagline centre -->
+  <text x="520" y="85"  font-family="Georgia, serif" font-size="36" fill="white" opacity="0.9">God&#x2019;s Word for Little Hearts</text>
+  <text x="520" y="135" font-family="system-ui, sans-serif" font-size="30" fill="#FDE68A" opacity="0.65">All 66 books of Scripture &#x2022; Adapted for children ages 4&#x2013;7 &#x2022; Free, always</text>
+
+  <!-- Badges right -->
+  <rect x="830" y="50"  width="130" height="42" rx="21" fill="white" opacity="0.12"/>
+  <text x="895" y="79" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="white">Ages 4&#x2013;7</text>
+
+  <rect x="974" y="50"  width="120" height="42" rx="21" fill="white" opacity="0.12"/>
+  <text x="1034" y="79" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="white">66 Books</text>
+
+  <rect x="900" y="104" width="180" height="42" rx="21" fill="white" opacity="0.12"/>
+  <text x="990" y="133" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="white">Free Always</text>
+</svg>

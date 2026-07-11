@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" width="480" height="576" fill="none">
+  <rect width="80" height="96" fill="#F5F0FF"/>
+  <!-- Prayer glow — violet-tinged for prayer mode -->
+  <ellipse cx="40" cy="55" rx="36" ry="34" fill="#7C3AED" opacity="0.08"/>
+  <ellipse cx="40" cy="60" rx="30" ry="28" fill="#FCD34D" opacity="0.18"/>
+  <ellipse cx="40" cy="60" rx="22" ry="20" fill="#FDE68A" opacity="0.22"/>
+  <!-- Golden rays upward -->
+  <path d="M40 34 L36 8"  stroke="#FCD34D" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M40 32 L40 4"  stroke="#FDE68A" stroke-width="2"   stroke-linecap="round" opacity="0.8"/>
+  <path d="M40 34 L44 8"  stroke="#FCD34D" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M40 36 L50 12" stroke="#FCD34D" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
+  <path d="M40 36 L30 12" stroke="#FCD34D" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
+  <!-- Cross sparkle at top of rays -->
+  <rect x="39.25" y="2" width="1.5" height="7" rx="0.75" fill="#FDE68A" opacity="0.95"/>
+  <rect x="36.5"  y="5" width="7"   height="1.5" rx="0.75" fill="#FDE68A" opacity="0.95"/>
+  <!-- Seed body -->
+  <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+  <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+  <!-- Leaf: bowed gently inward -->
+  <path d="M40 34 Q32 26 36 18 Q44 22 40 34Z" fill="#34D399"/>
+  <path d="M40 34 Q37 26 38 19" stroke="#10B981" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Eyes: closed in prayer — gentle curved lines -->
+  <path d="M30.5 57.5 Q33.5 60 36.5 57.5" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M43.5 57.5 Q46.5 60 49.5 57.5" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Peaceful smile -->
+  <path d="M34.5 67 Q40 71 45.5 67" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Soft sparkles -->
+  <circle cx="24" cy="54" r="2"   fill="#FEF3C7" opacity="0.7"/>
+  <circle cx="57" cy="52" r="1.5" fill="#FEF3C7" opacity="0.6"/>
+  <circle cx="19" cy="66" r="1.2" fill="#FEF3C7" opacity="0.5"/>
+  <!-- Small heart near body -->
+  <path d="M62 62 Q63 60 64.5 62 Q66 60 67 62 Q66 65 64.5 67 Q63 65 62 62Z" fill="#F87171" opacity="0.7"/>
+  <!-- Pose label -->
+  <text x="40" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" font-weight="bold" fill="#7C3AED" opacity="0.7">Praying</text>
+</svg>

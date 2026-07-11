@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" width="480" height="576" fill="none">
+  <rect width="80" height="96" fill="#FFFBF5"/>
+  <!-- Outer glow -->
+  <ellipse cx="40" cy="60" rx="32" ry="30" fill="#FCD34D" opacity="0.18"/>
+  <ellipse cx="40" cy="60" rx="24" ry="22" fill="#FDE68A" opacity="0.22"/>
+  <!-- Seed body -->
+  <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+  <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+  <!-- Single leaf -->
+  <path d="M40 34 Q30 22 34 14 Q46 18 40 34Z" fill="#34D399"/>
+  <path d="M40 34 Q37 24 39 16" stroke="#10B981" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <circle cx="33.5" cy="58" r="2.8" fill="#78350F"/>
+  <circle cx="46.5" cy="58" r="2.8" fill="#78350F"/>
+  <circle cx="34.2" cy="57.2" r="0.9" fill="white"/>
+  <circle cx="47.2" cy="57.2" r="0.9" fill="white"/>
+  <!-- Smile -->
+  <path d="M34 67 Q40 72 46 67" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Sparkles -->
+  <circle cx="26" cy="50" r="2.2" fill="#FEF3C7" opacity="0.85"/>
+  <circle cx="55" cy="48" r="1.6" fill="#FEF3C7" opacity="0.75"/>
+  <circle cx="22" cy="62" r="1.4" fill="#FEF3C7" opacity="0.6"/>
+  <!-- Stage label -->
+  <text x="40" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" font-weight="bold" fill="#B45309" opacity="0.7">Wisdom Seed</text>
+</svg>

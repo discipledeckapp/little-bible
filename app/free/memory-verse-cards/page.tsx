@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   title: 'Memory Verse Cards — Little Bible',
   description:
     '12 free Bible memory verse cards for children ages 4–7. One key verse per month, with a child-friendly paraphrase and memory tip. Print and stick on the fridge.',
+  openGraph: {
+    title: 'Free Memory Verse Cards for Kids — Little Bible',
+    description: '12 key Bible verses, one per month. Child-friendly paraphrase and memory tip for every card. Free for families, Sunday school & homeschool.',
+    url: 'https://littlebible.org/free/memory-verse-cards',
+    siteName: 'Little Bible',
+    images: [{ url: '/brand/free/memory-verse-cover.svg', width: 1200, height: 630, alt: 'Little Bible Memory Verse Cards' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Memory Verse Cards for Kids — Little Bible',
+    description: '12 key Bible verses, one per month. Free for families, Sunday school & homeschool.',
+    images: ['/brand/free/memory-verse-cover.svg'],
+  },
 };
 
 const VERSES = [

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" width="480" height="576" fill="none">
+  <rect width="80" height="96" fill="#FFFBF5"/>
+  <!-- Glow -->
+  <ellipse cx="40" cy="66" rx="32" ry="28" fill="#FCD34D" opacity="0.2"/>
+  <ellipse cx="40" cy="66" rx="24" ry="20" fill="#FDE68A" opacity="0.25"/>
+  <!-- Stem -->
+  <rect x="37.5" y="28" width="5" height="28" rx="2.5" fill="#34D399"/>
+  <!-- Left leaf -->
+  <path d="M40 42 Q20 32 22 20 Q38 22 40 42Z" fill="#4ADE80"/>
+  <!-- Right leaf -->
+  <path d="M40 48 Q60 38 58 26 Q42 28 40 48Z" fill="#34D399"/>
+  <!-- Body -->
+  <ellipse cx="40" cy="72" rx="19" ry="20" fill="#FBBF24"/>
+  <ellipse cx="40" cy="66" rx="19" ry="14" fill="#F59E0B"/>
+  <!-- Eyes -->
+  <circle cx="33.5" cy="70" r="2.8" fill="#78350F"/>
+  <circle cx="46.5" cy="70" r="2.8" fill="#78350F"/>
+  <circle cx="34.2" cy="69.2" r="0.9" fill="white"/>
+  <circle cx="47.2" cy="69.2" r="0.9" fill="white"/>
+  <!-- Smile -->
+  <path d="M34 78 Q40 83.5 46 78" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Sparkles -->
+  <circle cx="24" cy="58" r="2" fill="#FEF3C7" opacity="0.85"/>
+  <circle cx="57" cy="55" r="1.6" fill="#FEF3C7" opacity="0.75"/>
+  <!-- Stage label -->
+  <text x="40" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" font-weight="bold" fill="#B45309" opacity="0.7">Wisdom Sprout</text>
+</svg>

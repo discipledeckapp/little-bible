@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 760" fill="none">
+  <rect width="2200" height="760" fill="#FFFBF5"/>
+  <!-- Title -->
+  <text x="1100" y="44" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#78350F">Lumi&#x2019;s Growth Stages</text>
+  <!-- Baseline -->
+  <rect x="60" y="680" width="2080" height="3" rx="1.5" fill="#FDE68A" opacity="0.5"/>
+
+  <!-- STAGE 1: Seed — 160×192 at (80, 488) -->
+  <svg x="80" y="488" width="160" height="192" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="60" rx="32" ry="30" fill="#FCD34D" opacity="0.18"/>
+    <ellipse cx="40" cy="60" rx="24" ry="22" fill="#FDE68A" opacity="0.22"/>
+    <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+    <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+    <path d="M40 34 Q30 22 34 14 Q46 18 40 34Z" fill="#34D399"/>
+    <circle cx="33.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="46.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="34.2" cy="57.2" r="0.9" fill="white"/>
+    <circle cx="47.2" cy="57.2" r="0.9" fill="white"/>
+    <path d="M34 67 Q40 72 46 67" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="26" cy="50" r="2.2" fill="#FEF3C7" opacity="0.85"/>
+    <circle cx="55" cy="48" r="1.6" fill="#FEF3C7" opacity="0.75"/>
+  </svg>
+  <text x="160" y="706" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#B45309">Wisdom Seed</text>
+  <text x="160" y="730" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#92400E" opacity="0.7">0 seeds</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M260 640 L330 640" stroke="#FCD34D" stroke-width="3" marker-end="url(#arrowhead)" stroke-linecap="round"/>
+
+  <!-- STAGE 2: Sprout — 200×240 at (360, 440) -->
+  <svg x="360" y="440" width="200" height="240" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="66" rx="32" ry="28" fill="#FCD34D" opacity="0.2"/>
+    <ellipse cx="40" cy="66" rx="24" ry="20" fill="#FDE68A" opacity="0.25"/>
+    <rect x="37.5" y="28" width="5" height="28" rx="2.5" fill="#34D399"/>
+    <path d="M40 42 Q20 32 22 20 Q38 22 40 42Z" fill="#4ADE80"/>
+    <path d="M40 48 Q60 38 58 26 Q42 28 40 48Z" fill="#34D399"/>
+    <ellipse cx="40" cy="72" rx="19" ry="20" fill="#FBBF24"/>
+    <ellipse cx="40" cy="66" rx="19" ry="14" fill="#F59E0B"/>
+    <circle cx="33.5" cy="70" r="2.8" fill="#78350F"/>
+    <circle cx="46.5" cy="70" r="2.8" fill="#78350F"/>
+    <circle cx="34.2" cy="69.2" r="0.9" fill="white"/>
+    <circle cx="47.2" cy="69.2" r="0.9" fill="white"/>
+    <path d="M34 78 Q40 83.5 46 78" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="24" cy="58" r="2" fill="#FEF3C7" opacity="0.85"/>
+    <circle cx="57" cy="55" r="1.6" fill="#FEF3C7" opacity="0.75"/>
+  </svg>
+  <text x="460" y="706" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#B45309">Wisdom Sprout</text>
+  <text x="460" y="730" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#92400E" opacity="0.7">21+ seeds</text>
+
+  <!-- Arrow 2→3 -->
+  <path d="M580 620 L660 620" stroke="#FCD34D" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="660,614 674,620 660,626" fill="#FCD34D"/>
+
+  <!-- STAGE 3: Sapling — 280×336 at (700, 344) -->
+  <svg x="700" y="344" width="280" height="336" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="68" rx="34" ry="28" fill="#FCD34D" opacity="0.22"/>
+    <ellipse cx="40" cy="68" rx="26" ry="20" fill="#FDE68A" opacity="0.28"/>
+    <rect x="37.5" y="22" width="5" height="38" rx="2.5" fill="#34D399"/>
+    <path d="M40 50 Q18 42 18 28 Q36 28 40 50Z" fill="#4ADE80"/>
+    <path d="M40 56 Q62 48 62 34 Q44 34 40 56Z" fill="#34D399"/>
+    <path d="M40 36 Q24 26 26 14 Q40 16 40 36Z" fill="#6EE7B7"/>
+    <path d="M40 30 Q56 20 54 10 Q40 12 40 30Z" fill="#4ADE80"/>
+    <circle cx="26" cy="13" r="4" fill="#FCD34D"/>
+    <circle cx="55" cy="9"  r="3.5" fill="#FDE68A"/>
+    <circle cx="29" cy="12" r="2.5" fill="#F87171" opacity="0.8"/>
+    <ellipse cx="40" cy="76" rx="18" ry="19" fill="#FBBF24"/>
+    <ellipse cx="40" cy="70" rx="18" ry="13" fill="#F59E0B"/>
+    <circle cx="33.5" cy="73" r="2.8" fill="#78350F"/>
+    <circle cx="46.5" cy="73" r="2.8" fill="#78350F"/>
+    <circle cx="34.2" cy="72.2" r="0.9" fill="white"/>
+    <circle cx="47.2" cy="72.2" r="0.9" fill="white"/>
+    <path d="M32 81 Q40 88 48 81" stroke="#78350F" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <circle cx="14" cy="50" r="2.2" fill="#FEF3C7" opacity="0.8"/>
+    <circle cx="66" cy="46" r="1.8" fill="#FEF3C7" opacity="0.7"/>
+  </svg>
+  <text x="840" y="706" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#B45309">Young Sapling</text>
+  <text x="840" y="730" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#92400E" opacity="0.7">51+ seeds</text>
+
+  <!-- Arrow 3→4 -->
+  <path d="M1000 600 L1080 600" stroke="#FCD34D" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="1080,594 1094,600 1080,606" fill="#FCD34D"/>
+
+  <!-- STAGE 4: Young Tree — 360×432 at (1120, 248) -->
+  <svg x="1120" y="248" width="360" height="432" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="60" rx="36" ry="32" fill="#FCD34D" opacity="0.22"/>
+    <ellipse cx="40" cy="60" rx="28" ry="24" fill="#FDE68A" opacity="0.28"/>
+    <rect x="37" y="48" width="6" height="40" rx="3" fill="#92400E"/>
+    <circle cx="40" cy="30" r="20" fill="#34D399"/>
+    <circle cx="40" cy="26" r="16" fill="#4ADE80"/>
+    <circle cx="30" cy="33" r="10" fill="#6EE7B7"/>
+    <circle cx="50" cy="33" r="10" fill="#4ADE80"/>
+    <circle cx="32" cy="24" r="3.5" fill="#F87171"/>
+    <circle cx="49" cy="22" r="3.5" fill="#FCA5A5"/>
+    <ellipse cx="58" cy="26" rx="4" ry="2.5" fill="#78350F"/>
+    <ellipse cx="60" cy="24.5" rx="2" ry="1.5" fill="#78350F"/>
+    <circle cx="34.5" cy="57" r="2.5" fill="#78350F"/>
+    <circle cx="45.5" cy="57" r="2.5" fill="#78350F"/>
+    <circle cx="35.1" cy="56.4" r="0.8" fill="white"/>
+    <circle cx="46.1" cy="56.4" r="0.8" fill="white"/>
+    <path d="M32.5 64 Q40 69.5 47.5 64" stroke="#78350F" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <circle cx="10" cy="36" r="2" fill="#FEF3C7" opacity="0.85"/>
+    <circle cx="70" cy="32" r="1.6" fill="#FEF3C7" opacity="0.75"/>
+  </svg>
+  <text x="1300" y="706" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#B45309">Growing Tree</text>
+  <text x="1300" y="730" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#92400E" opacity="0.7">101+ seeds</text>
+
+  <!-- Arrow 4→5 -->
+  <path d="M1500 570 L1580 570" stroke="#FCD34D" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="1580,564 1594,570 1580,576" fill="#FCD34D"/>
+
+  <!-- STAGE 5: Tree of Life — 500×600 at (1640, 80) -->
+  <svg x="1640" y="80" width="500" height="600" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="60" rx="38" ry="36" fill="#FCD34D" opacity="0.2"/>
+    <ellipse cx="40" cy="60" rx="30" ry="28" fill="#FDE68A" opacity="0.25"/>
+    <rect x="36" y="44" width="8" height="44" rx="4" fill="#92400E"/>
+    <circle cx="40" cy="28" r="22" fill="#34D399"/>
+    <circle cx="40" cy="24" r="18" fill="#4ADE80"/>
+    <circle cx="28" cy="30" r="12" fill="#6EE7B7"/>
+    <circle cx="52" cy="30" r="12" fill="#4ADE80"/>
+    <circle cx="40" cy="14" r="12" fill="#6EE7B7"/>
+    <circle cx="30" cy="22" r="4" fill="#F87171"/>
+    <circle cx="50" cy="20" r="4" fill="#FCA5A5"/>
+    <circle cx="40" cy="34" r="4" fill="#F87171"/>
+    <circle cx="24" cy="34" r="3" fill="#FCD34D"/>
+    <circle cx="56" cy="32" r="3" fill="#FCD34D"/>
+    <circle cx="34" cy="55" r="2.5" fill="#78350F"/>
+    <circle cx="46" cy="55" r="2.5" fill="#78350F"/>
+    <circle cx="34.6" cy="54.4" r="0.8" fill="white"/>
+    <circle cx="46.6" cy="54.4" r="0.8" fill="white"/>
+    <path d="M32 63 Q40 69 48 63" stroke="#78350F" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <circle cx="8"  cy="28" r="2.2" fill="#FEF3C7" opacity="0.9"/>
+    <circle cx="72" cy="24" r="1.8" fill="#FEF3C7" opacity="0.8"/>
+    <circle cx="6"  cy="48" r="1.6" fill="#FEF3C7" opacity="0.7"/>
+    <circle cx="74" cy="44" r="1.4" fill="#FEF3C7" opacity="0.7"/>
+  </svg>
+  <text x="1890" y="706" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#B45309">Tree of Life</text>
+  <text x="1890" y="730" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#92400E" opacity="0.7">201+ seeds</text>
+</svg>

@@ -4,9 +4,23 @@ import Footer from '@/components/layout/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Bible Reading Chart — Little Bible',
+  title: '30-Day Bible Reading Chart — Little Bible',
   description:
     'A free 30-day family Bible reading tracker for children ages 4–7. Track streaks, celebrate milestones, and build the Bible habit together. Works for families, Sunday school classes, and homeschool groups.',
+  openGraph: {
+    title: 'Free 30-Day Bible Reading Chart — Little Bible',
+    description: 'Track 30 days of family Bible reading with milestone badges at days 7, 14, 21 & 30. Free printable tracker for families, Sunday school & homeschool.',
+    url: 'https://littlebible.org/free/reading-chart',
+    siteName: 'Little Bible',
+    images: [{ url: '/brand/free/reading-chart-cover.svg', width: 1200, height: 630, alt: 'Little Bible 30-Day Reading Chart' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free 30-Day Bible Reading Chart — Little Bible',
+    description: 'Track 30 days of family Bible reading with milestone badges. Free for families, Sunday school & homeschool.',
+    images: ['/brand/free/reading-chart-cover.svg'],
+  },
 };
 
 const DAYS = Array.from({ length: 30 }, (_, i) => i + 1);

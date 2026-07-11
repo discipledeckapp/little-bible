@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="dev-bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#1C0A00"/>
+      <stop offset="40%"  stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#dev-bg)"/>
+  <!-- 7 day circles orbiting a central Bible -->
+  <!-- Central Bible glow -->
+  <ellipse cx="600" cy="315" rx="180" ry="160" fill="#FCD34D" opacity="0.12"/>
+  <!-- Central open Bible -->
+  <path d="M460 220 L580 208 L580 380 L460 368 Q448 368 448 356 L448 232 Q448 220 460 220Z" fill="rgba(255,255,255,0.95)"/>
+  <path d="M620 208 L740 220 L740 368 L620 380 Q620 380 620 356 L620 209Z" fill="rgba(255,255,255,0.78)"/>
+  <rect x="580" y="208" width="20" height="172" fill="rgba(120,53,15,0.22)"/>
+  <!-- Cross above spine -->
+  <rect x="588" y="158" width="4" height="46" rx="2" fill="#FDE68A" opacity="0.95"/>
+  <rect x="570" y="178" width="40" height="4"  rx="2" fill="#FDE68A" opacity="0.95"/>
+  <!-- Bible lines -->
+  <rect x="462" y="248" width="106" height="6" rx="3" fill="rgba(120,53,15,0.22)"/>
+  <rect x="462" y="268" width="96"  height="6" rx="3" fill="rgba(120,53,15,0.16)"/>
+  <rect x="462" y="288" width="110" height="6" rx="3" fill="rgba(120,53,15,0.13)"/>
+  <rect x="462" y="308" width="88"  height="6" rx="3" fill="rgba(120,53,15,0.10)"/>
+  <rect x="626" y="248" width="100" height="6" rx="3" fill="rgba(120,53,15,0.18)"/>
+  <rect x="626" y="268" width="90"  height="6" rx="3" fill="rgba(120,53,15,0.13)"/>
+  <rect x="626" y="288" width="104" height="6" rx="3" fill="rgba(120,53,15,0.10)"/>
+
+  <!-- 7 day indicator circles -->
+  <circle cx="600" cy="120" r="28" fill="#FCD34D" opacity="0.25" stroke="#FDE68A" stroke-width="2" opacity="0.6"/>
+  <text x="600" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="white">1</text>
+  <circle cx="740" cy="158" r="22" fill="#FCD34D" opacity="0.2" stroke="#FDE68A" stroke-width="2" opacity="0.5"/>
+  <text x="740" y="165" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="white">2</text>
+  <circle cx="800" cy="300" r="22" fill="#FCD34D" opacity="0.2" stroke="#FDE68A" stroke-width="2" opacity="0.5"/>
+  <text x="800" y="308" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="white">3</text>
+  <circle cx="740" cy="442" r="22" fill="#FCD34D" opacity="0.2" stroke="#FDE68A" stroke-width="2" opacity="0.5"/>
+  <text x="740" y="450" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="white">4</text>
+  <circle cx="460" cy="442" r="22" fill="#FCD34D" opacity="0.2" stroke="#FDE68A" stroke-width="2" opacity="0.5"/>
+  <text x="460" y="450" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="white">5</text>
+  <circle cx="400" cy="300" r="22" fill="#FCD34D" opacity="0.2" stroke="#FDE68A" stroke-width="2" opacity="0.5"/>
+  <text x="400" y="308" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="white">6</text>
+  <circle cx="460" cy="158" r="22" fill="#FCD34D" opacity="0.2" stroke="#FDE68A" stroke-width="2" opacity="0.5"/>
+  <text x="460" y="165" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="white">7</text>
+
+  <!-- Right text panel -->
+  <text x="870" y="200" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#FDE68A" opacity="0.7" letter-spacing="3">FREE RESOURCE</text>
+  <text x="870" y="290" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="white" letter-spacing="-1">7-Day</text>
+  <text x="870" y="370" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="white" letter-spacing="-1">Family</text>
+  <text x="870" y="450" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="white" letter-spacing="-1">Devotional</text>
+  <text x="870" y="520" font-family="Georgia, serif" font-size="32" fill="#FDE68A" opacity="0.8">God Loves Me &#x2014; A First Journey</text>
+  <text x="870" y="565" font-family="system-ui, sans-serif" font-size="28" fill="white" opacity="0.5">littlebible.org/free</text>
+
+  <!-- Small Lumi bottom-left -->
+  <svg x="30" y="400" width="200" height="200" viewBox="0 0 80 80" fill="none">
+    <ellipse cx="40" cy="48" rx="30" ry="28" fill="#FCD34D" opacity="0.18"/>
+    <ellipse cx="40" cy="50" rx="18" ry="21" fill="#FBBF24"/>
+    <ellipse cx="40" cy="44" rx="18" ry="13" fill="#F59E0B"/>
+    <path d="M40 26 Q28 14 33 5 Q47 9 40 26Z" fill="#34D399"/>
+    <circle cx="33.5" cy="46" r="2.5" fill="#78350F"/>
+    <circle cx="46.5" cy="46" r="2.5" fill="#78350F"/>
+    <circle cx="34.2" cy="45.3" r="0.8" fill="white"/>
+    <circle cx="47.2" cy="45.3" r="0.8" fill="white"/>
+    <path d="M34 54 Q40 59 46 54" stroke="#78350F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  </svg>
+</svg>

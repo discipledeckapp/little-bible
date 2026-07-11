@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="hj-bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#hj-bg)"/>
+  <circle cx="200" cy="200" r="194" fill="none" stroke="#6EE7B7" stroke-width="4" opacity="0.3"/>
+  <!-- Lumi flying -->
+  <svg x="60" y="30" width="280" height="260" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="42" cy="52" rx="36" ry="30" fill="#FCD34D" opacity="0.22"/>
+    <circle cx="8"  cy="72" r="3.5" fill="#FEF3C7" opacity="0.6"/>
+    <circle cx="16" cy="66" r="2.8" fill="#FEF3C7" opacity="0.55"/>
+    <circle cx="24" cy="60" r="2.2" fill="#FDE68A" opacity="0.5"/>
+    <g transform="rotate(-12, 44, 55)">
+      <ellipse cx="44" cy="58" rx="20" ry="23" fill="#FBBF24"/>
+      <ellipse cx="44" cy="51" rx="20" ry="16" fill="#F59E0B"/>
+      <path d="M44 30 Q32 18 36 8 Q50 12 44 30Z" fill="#34D399" transform="rotate(40, 44, 20)"/>
+      <circle cx="37.5" cy="54" r="3"   fill="#78350F"/>
+      <circle cx="50.5" cy="54" r="3"   fill="#78350F"/>
+      <circle cx="38.3" cy="53.1" r="1" fill="white"/>
+      <circle cx="51.3" cy="53.1" r="1" fill="white"/>
+      <path d="M37 63 Q44 69 51 63" stroke="#78350F" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </g>
+    <circle cx="68" cy="42" r="2.2" fill="#FEF3C7" opacity="0.8"/>
+    <circle cx="74" cy="36" r="1.6" fill="#FEF3C7" opacity="0.65"/>
+  </svg>
+  <text x="200" y="340" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Journeys</text>
+  <text x="200" y="385" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" fill="#6EE7B7" opacity="0.75">littlebible.org</text>
+</svg>

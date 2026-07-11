@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="hs-bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7C2D12"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <clipPath id="hs-clip"><circle cx="200" cy="200" r="200"/></clipPath>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#hs-bg)"/>
+  <circle cx="200" cy="200" r="194" fill="none" stroke="#FDE68A" stroke-width="4" opacity="0.3"/>
+  <!-- Lumi reading (small) -->
+  <svg x="60" y="40" width="280" height="240" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="60" rx="34" ry="32" fill="#FCD34D" opacity="0.22"/>
+    <ellipse cx="40" cy="60" rx="26" ry="24" fill="#FDE68A" opacity="0.25"/>
+    <path d="M22 30 L37 28 L37 44 L22 42 Q21 42 21 41 L21 31 Q21 30 22 30Z" fill="rgba(255,255,255,0.97)"/>
+    <path d="M43 28 L58 30 L58 42 L43 44 Q43 44 43 41 L43 29Z" fill="rgba(255,255,255,0.80)"/>
+    <rect x="37" y="28" width="2" height="16" fill="rgba(120,53,15,0.25)"/>
+    <rect x="37.65" y="21" width="0.7" height="6" rx="0.35" fill="#FDE68A" opacity="0.95"/>
+    <rect x="35.2" y="23.8" width="5.6" height="0.7" rx="0.35" fill="#FDE68A" opacity="0.95"/>
+    <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+    <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+    <path d="M40 34 Q28 20 33 11 Q47 15 40 34Z" fill="#34D399"/>
+    <circle cx="33.5" cy="57" r="3.2" fill="#78350F"/>
+    <circle cx="46.5" cy="57" r="3.2" fill="#78350F"/>
+    <circle cx="34.4" cy="56" r="1.1" fill="white"/>
+    <circle cx="47.4" cy="56" r="1.1" fill="white"/>
+    <path d="M33.5 66 Q40 72 46.5 66" stroke="#78350F" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <circle cx="20" cy="53" r="2.5" fill="#FEF3C7" opacity="0.9"/>
+    <circle cx="62" cy="50" r="2"   fill="#FEF3C7" opacity="0.8"/>
+  </svg>
+  <text x="200" y="340" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Stories</text>
+  <text x="200" y="385" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" fill="#FDE68A" opacity="0.75">littlebible.org</text>
+</svg>

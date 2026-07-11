@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" width="480" height="576" fill="none">
+  <rect width="80" height="96" fill="#FFFBF5"/>
+  <!-- Glow -->
+  <ellipse cx="40" cy="68" rx="34" ry="28" fill="#FCD34D" opacity="0.22"/>
+  <ellipse cx="40" cy="68" rx="26" ry="20" fill="#FDE68A" opacity="0.28"/>
+  <!-- Stem -->
+  <rect x="37.5" y="22" width="5" height="38" rx="2.5" fill="#34D399"/>
+  <!-- Lower leaves -->
+  <path d="M40 50 Q18 42 18 28 Q36 28 40 50Z" fill="#4ADE80"/>
+  <path d="M40 56 Q62 48 62 34 Q44 34 40 56Z" fill="#34D399"/>
+  <!-- Upper leaves -->
+  <path d="M40 36 Q24 26 26 14 Q40 16 40 36Z" fill="#6EE7B7"/>
+  <path d="M40 30 Q56 20 54 10 Q40 12 40 30Z" fill="#4ADE80"/>
+  <!-- Fruit buds -->
+  <circle cx="26" cy="13" r="4" fill="#FCD34D"/>
+  <circle cx="55" cy="9"  r="3.5" fill="#FDE68A"/>
+  <circle cx="29" cy="12" r="2.5" fill="#F87171" opacity="0.8"/>
+  <!-- Body -->
+  <ellipse cx="40" cy="76" rx="18" ry="19" fill="#FBBF24"/>
+  <ellipse cx="40" cy="70" rx="18" ry="13" fill="#F59E0B"/>
+  <!-- Eyes -->
+  <circle cx="33.5" cy="73" r="2.8" fill="#78350F"/>
+  <circle cx="46.5" cy="73" r="2.8" fill="#78350F"/>
+  <circle cx="34.2" cy="72.2" r="0.9" fill="white"/>
+  <circle cx="47.2" cy="72.2" r="0.9" fill="white"/>
+  <!-- Big smile -->
+  <path d="M32 81 Q40 88 48 81" stroke="#78350F" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <!-- Sparkles -->
+  <circle cx="14" cy="50" r="2.2" fill="#FEF3C7" opacity="0.8"/>
+  <circle cx="66" cy="46" r="1.8" fill="#FEF3C7" opacity="0.7"/>
+  <circle cx="10" cy="64" r="1.5" fill="#FEF3C7" opacity="0.6"/>
+  <!-- Stage label -->
+  <text x="40" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" font-weight="bold" fill="#B45309" opacity="0.7">Young Sapling</text>
+</svg>

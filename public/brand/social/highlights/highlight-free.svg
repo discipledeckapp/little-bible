@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="hf-bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#581C87"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#hf-bg)"/>
+  <circle cx="200" cy="200" r="194" fill="none" stroke="#E9D5FF" stroke-width="4" opacity="0.3"/>
+  <!-- Lumi with gift sparkle -->
+  <svg x="70" y="40" width="260" height="240" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="60" rx="32" ry="30" fill="#FCD34D" opacity="0.22"/>
+    <ellipse cx="40" cy="60" rx="24" ry="22" fill="#FDE68A" opacity="0.25"/>
+    <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+    <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+    <path d="M40 34 Q30 22 34 14 Q46 18 40 34Z" fill="#34D399"/>
+    <!-- Star gift above -->
+    <circle cx="62" cy="28" r="10" fill="#A855F7" opacity="0.3"/>
+    <path d="M62 19 L63.5 26 L71 26 L65 30.5 L67.5 38 L62 33.5 L56.5 38 L59 30.5 L53 26 L60.5 26 Z" fill="#E9D5FF" opacity="0.9"/>
+    <circle cx="33.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="46.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="34.2" cy="57.2" r="0.9" fill="white"/>
+    <circle cx="47.2" cy="57.2" r="0.9" fill="white"/>
+    <path d="M34 67 Q40 72 46 67" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="22" cy="50" r="2.2" fill="#FEF3C7" opacity="0.85"/>
+  </svg>
+  <text x="200" y="340" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Free</text>
+  <text x="200" y="383" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" fill="#E9D5FF" opacity="0.75">Free resources</text>
+</svg>

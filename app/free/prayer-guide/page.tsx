@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   title: "Children's Prayer Guide — Little Bible",
   description:
     "Teaching your child to pray in 7 simple steps. A free guide for parents with model prayers, conversation starters, and a daily prayer prompt card for children ages 4–7.",
+  openGraph: {
+    title: "Free Children's Prayer Guide — Little Bible",
+    description: 'Teach your child to pray in 7 simple steps. Model prayers, daily prompts & conversation starters. Free guide for parents of children ages 4–7.',
+    url: 'https://littlebible.org/free/prayer-guide',
+    siteName: 'Little Bible',
+    images: [{ url: '/brand/free/prayer-guide-cover.svg', width: 1200, height: 630, alt: "Little Bible Children's Prayer Guide" }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Free Children's Prayer Guide — Little Bible",
+    description: 'Teach your child to pray in 7 simple steps. Model prayers & daily prompts. Free for parents.',
+    images: ['/brand/free/prayer-guide-cover.svg'],
+  },
 };
 
 const STEPS = [

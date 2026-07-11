@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" fill="none">
+  <defs>
+    <linearGradient id="ip-bg" x1="0" y1="0" x2="1200" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#7C2D12"/>
+      <stop offset="55%"  stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#ip-bg)"/>
+
+  <!-- Icon centred -->
+  <svg x="200" y="180" width="800" height="800" viewBox="0 0 36 36" fill="none">
+    <rect x="17.25" y="3" width="1.5" height="10" rx="0.75" fill="#FDE68A" opacity="0.92"/>
+    <rect x="13" y="6.5" width="10" height="1.5" rx="0.75" fill="#FDE68A" opacity="0.92"/>
+    <path d="M7 14.5 L17 13.5 L17 28 L7 27 Q6 27 6 26 L6 15.5 Q6 14.5 7 14.5Z" fill="rgba(255,255,255,0.96)"/>
+    <path d="M29 14.5 L19 13.5 L19 28 L29 27 Q30 27 30 26 L30 15.5 Q30 14.5 29 14.5Z" fill="rgba(255,255,255,0.76)"/>
+    <rect x="17" y="13.5" width="2" height="14.5" fill="rgba(120,53,15,0.22)"/>
+    <rect x="8"  y="16.5" width="7"   height="1.2" rx="0.6" fill="rgba(120,53,15,0.28)"/>
+    <rect x="8"  y="19.5" width="8"   height="1.2" rx="0.6" fill="rgba(120,53,15,0.20)"/>
+    <rect x="8"  y="22.5" width="6"   height="1.2" rx="0.6" fill="rgba(120,53,15,0.18)"/>
+    <rect x="8"  y="25.5" width="7"   height="1.2" rx="0.6" fill="rgba(120,53,15,0.14)"/>
+    <rect x="21" y="16.5" width="6.5" height="1.2" rx="0.6" fill="rgba(120,53,15,0.20)"/>
+    <rect x="21" y="19.5" width="7.5" height="1.2" rx="0.6" fill="rgba(120,53,15,0.15)"/>
+    <rect x="21" y="22.5" width="5.5" height="1.2" rx="0.6" fill="rgba(120,53,15,0.13)"/>
+    <rect x="21" y="25.5" width="7"   height="1.2" rx="0.6" fill="rgba(120,53,15,0.11)"/>
+  </svg>
+
+  <!-- Lumi seed peeking bottom-right -->
+  <svg x="820" y="900" width="300" height="360" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="60" rx="32" ry="30" fill="#FCD34D" opacity="0.18"/>
+    <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+    <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+    <path d="M40 34 Q30 22 34 14 Q46 18 40 34Z" fill="#34D399"/>
+    <circle cx="33.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="46.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="34.2" cy="57.2" r="0.9" fill="white"/>
+    <circle cx="47.2" cy="57.2" r="0.9" fill="white"/>
+    <path d="M34 67 Q40 72 46 67" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <text x="600" y="1150" text-anchor="middle" font-family="Georgia, serif" font-size="110" font-weight="bold" fill="white" letter-spacing="1">Little Bible</text>
+</svg>

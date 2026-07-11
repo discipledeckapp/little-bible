@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="ht-bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0C4A6E"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#ht-bg)"/>
+  <circle cx="200" cy="200" r="194" fill="none" stroke="#BAE6FD" stroke-width="4" opacity="0.3"/>
+  <!-- Lumi with curious expression -->
+  <svg x="70" y="40" width="260" height="260" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="60" rx="32" ry="30" fill="#FCD34D" opacity="0.22"/>
+    <ellipse cx="40" cy="60" rx="24" ry="22" fill="#FDE68A" opacity="0.25"/>
+    <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+    <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+    <!-- Leaf tilted left (curious) -->
+    <path d="M40 34 Q24 25 26 14 Q42 16 40 34Z" fill="#34D399" transform="rotate(-15, 40, 24)"/>
+    <!-- Eyes: one slightly wider (curious) -->
+    <circle cx="33.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="46.5" cy="57" r="3.2" fill="#78350F"/>
+    <circle cx="34.2" cy="57.2" r="0.9" fill="white"/>
+    <circle cx="47.4" cy="56" r="1.1" fill="white"/>
+    <!-- Hmm expression -->
+    <path d="M35 67 Q40 69 45 66" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="26" cy="50" r="2.2" fill="#FEF3C7" opacity="0.85"/>
+    <circle cx="56" cy="47" r="1.6" fill="#FEF3C7" opacity="0.75"/>
+    <!-- Question sparkle -->
+    <circle cx="58" cy="38" r="4" fill="#BAE6FD" opacity="0.5"/>
+    <text x="55" y="42" font-family="Georgia, serif" font-size="7" fill="white" opacity="0.9">?</text>
+  </svg>
+  <text x="200" y="340" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Topics</text>
+  <text x="200" y="385" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" fill="#BAE6FD" opacity="0.75">littlebible.org</text>
+</svg>

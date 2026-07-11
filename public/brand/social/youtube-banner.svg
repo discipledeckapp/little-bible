@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 1440" fill="none">
+  <defs>
+    <linearGradient id="yt-bg" x1="0" y1="0" x2="2560" y2="1440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#3B0764"/>
+      <stop offset="30%"  stop-color="#7C2D12"/>
+      <stop offset="70%"  stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="yt-glow" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FDE68A" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FDE68A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2560" height="1440" fill="url(#yt-bg)"/>
+
+  <!-- Subtle scripture-line texture -->
+  <rect x="0"   y="180" width="2560" height="2" fill="#FDE68A" opacity="0.06"/>
+  <rect x="0"   y="360" width="2560" height="2" fill="#FDE68A" opacity="0.04"/>
+  <rect x="0"   y="540" width="2560" height="2" fill="#FDE68A" opacity="0.06"/>
+  <rect x="0"   y="720" width="2560" height="2" fill="#FDE68A" opacity="0.04"/>
+  <rect x="0"   y="900" width="2560" height="2" fill="#FDE68A" opacity="0.06"/>
+  <rect x="0"  y="1080" width="2560" height="2" fill="#FDE68A" opacity="0.04"/>
+  <rect x="0"  y="1260" width="2560" height="2" fill="#FDE68A" opacity="0.06"/>
+
+  <!-- Large Lumi (reading pose) — left of safe zone -->
+  <!-- Lumi at x=140, centered vertically, 640px tall (viewBox 80x96 → scale 6.67) -->
+  <svg x="140" y="400" width="534" height="640" viewBox="0 0 80 96" fill="none">
+    <!-- Glow -->
+    <ellipse cx="40" cy="58" rx="38" ry="36" fill="#FCD34D" opacity="0.22"/>
+    <ellipse cx="40" cy="58" rx="30" ry="28" fill="#FDE68A" opacity="0.28"/>
+    <!-- Floating Bible -->
+    <path d="M14 24 L37 21 L37 40 L14 37 Q12 37 12 35 L12 26 Q12 24 14 24Z" fill="rgba(255,255,255,0.96)"/>
+    <path d="M43 21 L66 24 L66 37 L43 40 Q43 40 43 37 L43 22Z" fill="rgba(255,255,255,0.80)"/>
+    <rect x="37" y="21" width="3" height="19" fill="rgba(120,53,15,0.25)"/>
+    <rect x="38.5" y="13" width="1" height="7" rx="0.5" fill="#FDE68A" opacity="0.95"/>
+    <rect x="35.5" y="16" width="7" height="1" rx="0.5" fill="#FDE68A" opacity="0.95"/>
+    <rect x="15" y="28" width="19" height="1.2" rx="0.6" fill="rgba(120,53,15,0.22)"/>
+    <rect x="15" y="31" width="17" height="1.2" rx="0.6" fill="rgba(120,53,15,0.16)"/>
+    <rect x="15" y="34" width="15" height="1.2" rx="0.6" fill="rgba(120,53,15,0.12)"/>
+    <rect x="45" y="28" width="17" height="1.2" rx="0.6" fill="rgba(120,53,15,0.18)"/>
+    <rect x="45" y="31" width="15" height="1.2" rx="0.6" fill="rgba(120,53,15,0.13)"/>
+    <!-- Body -->
+    <ellipse cx="40" cy="66" rx="20" ry="23" fill="#FBBF24"/>
+    <ellipse cx="40" cy="59" rx="20" ry="16" fill="#F59E0B"/>
+    <path d="M40 38 Q27 25 31 15 Q46 19 40 38Z" fill="#34D399"/>
+    <!-- Eyes: wide and delighted -->
+    <circle cx="33.5" cy="61" r="3.2" fill="#78350F"/>
+    <circle cx="46.5" cy="61" r="3.2" fill="#78350F"/>
+    <circle cx="34.4" cy="60" r="1.1" fill="white"/>
+    <circle cx="47.4" cy="60" r="1.1" fill="white"/>
+    <path d="M33.5 70 Q40 76 46.5 70" stroke="#78350F" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <circle cx="20" cy="53" r="2.5" fill="#FEF3C7" opacity="0.9"/>
+    <circle cx="62" cy="50" r="2"   fill="#FEF3C7" opacity="0.8"/>
+    <circle cx="14" cy="66" r="1.8" fill="#FEF3C7" opacity="0.7"/>
+  </svg>
+
+  <!-- Safe zone: 1546×423 centred → x=507 to 2053, y=508 to 931 -->
+  <!-- Logo icon (small) top-left of safe zone -->
+  <svg x="700" y="540" width="100" height="100" viewBox="0 0 36 36" fill="none">
+    <defs>
+      <linearGradient id="yt-icon-bg" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+        <stop offset="0%"   stop-color="#7C2D12"/>
+        <stop offset="55%"  stop-color="#B45309"/>
+        <stop offset="100%" stop-color="#D97706"/>
+      </linearGradient>
+    </defs>
+    <rect width="36" height="36" rx="9" fill="url(#yt-icon-bg)"/>
+    <rect x="17.25" y="3" width="1.5" height="10" rx="0.75" fill="#FDE68A" opacity="0.92"/>
+    <rect x="13" y="6.5" width="10" height="1.5" rx="0.75" fill="#FDE68A" opacity="0.92"/>
+    <path d="M7 14.5 L17 13.5 L17 28 L7 27 Q6 27 6 26 L6 15.5 Q6 14.5 7 14.5Z" fill="rgba(255,255,255,0.96)"/>
+    <path d="M29 14.5 L19 13.5 L19 28 L29 27 Q30 27 30 26 L30 15.5 Q30 14.5 29 14.5Z" fill="rgba(255,255,255,0.76)"/>
+    <rect x="17" y="13.5" width="2" height="14.5" fill="rgba(120,53,15,0.22)"/>
+    <rect x="8" y="16.5" width="7" height="1.2" rx="0.6" fill="rgba(120,53,15,0.28)"/>
+    <rect x="8" y="19.5" width="8" height="1.2" rx="0.6" fill="rgba(120,53,15,0.20)"/>
+    <rect x="8" y="22.5" width="6" height="1.2" rx="0.6" fill="rgba(120,53,15,0.18)"/>
+    <rect x="8" y="25.5" width="7" height="1.2" rx="0.6" fill="rgba(120,53,15,0.14)"/>
+    <rect x="21" y="16.5" width="6.5" height="1.2" rx="0.6" fill="rgba(120,53,15,0.20)"/>
+    <rect x="21" y="19.5" width="7.5" height="1.2" rx="0.6" fill="rgba(120,53,15,0.15)"/>
+    <rect x="21" y="22.5" width="5.5" height="1.2" rx="0.6" fill="rgba(120,53,15,0.13)"/>
+    <rect x="21" y="25.5" width="7"   height="1.2" rx="0.6" fill="rgba(120,53,15,0.11)"/>
+  </svg>
+
+  <!-- Title: Little Bible -->
+  <text x="820" y="770" font-family="Georgia, 'Times New Roman', serif" font-size="260" font-weight="bold" fill="white" letter-spacing="-4" opacity="0.97">Little Bible</text>
+  <!-- Tagline -->
+  <text x="824" y="870" font-family="Georgia, 'Times New Roman', serif" font-size="90" fill="#FDE68A" opacity="0.85">God&#x2019;s Word for Little Hearts</text>
+  <!-- URL -->
+  <text x="824" y="950" font-family="system-ui, sans-serif" font-size="64" fill="white" opacity="0.55" letter-spacing="2">littlebible.org</text>
+
+  <!-- Right decorative badges -->
+  <rect x="1960" y="540" width="320" height="100" rx="50" fill="white" opacity="0.12"/>
+  <text x="2120" y="603" text-anchor="middle" font-family="system-ui, sans-serif" font-size="46" font-weight="bold" fill="white">&#x1F4D6; Stories</text>
+
+  <rect x="1960" y="660" width="320" height="100" rx="50" fill="white" opacity="0.12"/>
+  <text x="2120" y="723" text-anchor="middle" font-family="system-ui, sans-serif" font-size="46" font-weight="bold" fill="white">&#x1F33F; Journeys</text>
+
+  <rect x="1960" y="780" width="320" height="100" rx="50" fill="white" opacity="0.12"/>
+  <text x="2120" y="843" text-anchor="middle" font-family="system-ui, sans-serif" font-size="46" font-weight="bold" fill="white">&#x2728; Topics</text>
+
+  <rect x="1960" y="900" width="320" height="100" rx="50" fill="white" opacity="0.12"/>
+  <text x="2120" y="963" text-anchor="middle" font-family="system-ui, sans-serif" font-size="46" font-weight="bold" fill="white">Ages 4&#x2013;7</text>
+
+  <!-- Sparkle stars far left/right (outside safe zone) -->
+  <circle cx="60"   cy="300"  r="14" fill="#FEF3C7" opacity="0.4"/>
+  <circle cx="40"   cy="900"  r="10" fill="#FEF3C7" opacity="0.3"/>
+  <circle cx="2500" cy="400"  r="12" fill="#FEF3C7" opacity="0.35"/>
+  <circle cx="2480" cy="1000" r="9"  fill="#FEF3C7" opacity="0.28"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="hv-bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#hv-bg)"/>
+  <circle cx="200" cy="200" r="194" fill="none" stroke="#FDE68A" stroke-width="4" opacity="0.3"/>
+  <!-- Open Bible icon centred -->
+  <path d="M90 140 L190 128 L190 272 L90 260 Q80 260 80 250 L80 150 Q80 140 90 140Z" fill="rgba(255,255,255,0.95)"/>
+  <path d="M310 140 L210 128 L210 272 L310 260 Q320 260 320 250 L320 150 Q320 140 310 140Z" fill="rgba(255,255,255,0.78)"/>
+  <rect x="190" y="128" width="20" height="144" fill="rgba(120,53,15,0.22)"/>
+  <!-- Cross above spine -->
+  <rect x="198" y="80" width="4" height="40" rx="2" fill="#FDE68A" opacity="0.95"/>
+  <rect x="181" y="98" width="38" height="4" rx="2" fill="#FDE68A" opacity="0.95"/>
+  <!-- Text lines on pages -->
+  <rect x="96"  y="164" width="82" height="6" rx="3" fill="rgba(120,53,15,0.25)"/>
+  <rect x="96"  y="180" width="78" height="6" rx="3" fill="rgba(120,53,15,0.18)"/>
+  <rect x="96"  y="196" width="70" height="6" rx="3" fill="rgba(120,53,15,0.15)"/>
+  <rect x="96"  y="212" width="76" height="6" rx="3" fill="rgba(120,53,15,0.12)"/>
+  <rect x="218" y="164" width="78" height="6" rx="3" fill="rgba(120,53,15,0.20)"/>
+  <rect x="218" y="180" width="82" height="6" rx="3" fill="rgba(120,53,15,0.15)"/>
+  <rect x="218" y="196" width="68" height="6" rx="3" fill="rgba(120,53,15,0.12)"/>
+  <rect x="218" y="212" width="76" height="6" rx="3" fill="rgba(120,53,15,0.10)"/>
+  <!-- Small Lumi peeking from bottom-right of Bible -->
+  <svg x="240" y="220" width="120" height="144" viewBox="0 0 80 96" fill="none">
+    <ellipse cx="40" cy="60" rx="24" ry="22" fill="#FDE68A" opacity="0.22"/>
+    <ellipse cx="40" cy="62" rx="20" ry="23" fill="#FBBF24"/>
+    <ellipse cx="40" cy="55" rx="20" ry="16" fill="#F59E0B"/>
+    <path d="M40 34 Q30 22 34 14 Q46 18 40 34Z" fill="#34D399"/>
+    <circle cx="33.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="46.5" cy="58" r="2.8" fill="#78350F"/>
+    <circle cx="34.2" cy="57.2" r="0.9" fill="white"/>
+    <circle cx="47.2" cy="57.2" r="0.9" fill="white"/>
+    <path d="M34 67 Q40 72 46 67" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </svg>
+  <text x="200" y="355" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Verses</text>
+  <text x="200" y="392" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" fill="#FDE68A" opacity="0.75">Memory verses</text>
+</svg>
