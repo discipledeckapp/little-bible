@@ -3,7 +3,7 @@
   "name": "little-bible",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-07-11",
-  "compatibility_flags": ["nodejs_compat", "wasm_unsafe_eval"],
+  "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
