@@ -1,4 +1,8 @@
-import { PrismaClient } from '@prisma/client';
+// Must import from 'edge' — the default '@prisma/client' entry resolves to
+// index.js (base64 Wasm) in esbuild's node platform mode, which Cloudflare
+// Workers forbid. The '/edge' entry always resolves to edge.js which uses the
+// wasm-worker-loader that does a static .wasm import wrangler can bundle natively.
+import { PrismaClient } from '@prisma/client/edge';
 import { PrismaD1 } from '@prisma/adapter-d1';
 import { getCloudflareContext } from '@opennextjs/cloudflare';
 
