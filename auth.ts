@@ -4,7 +4,9 @@ import { PrismaAdapter } from '@auth/prisma-adapter';
 import { prisma } from '@/lib/prisma';
 import { sendEmail, welcomeEmailHtml } from '@/lib/email';
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
+// Lazy callback: called at request time, after OpenNext has injected CF
+// secrets into process.env. Avoids undefined clientId/secret at module init.
+export const { handlers, auth, signIn, signOut } = NextAuth(() => ({
   adapter: PrismaAdapter(prisma),
   providers: [
     Google({
@@ -37,4 +39,4 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     signIn: '/',
     error:  '/',
   },
-});
+}));
