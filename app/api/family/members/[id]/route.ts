@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
+import { parseStrArray } from '@/lib/db-json';
 
 async function getMemberAndVerifyOwnership(memberId: string, userId: string) {
   const member = await prisma.familyMember.findUnique({
@@ -21,17 +22,18 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   const member = await getMemberAndVerifyOwnership(id, session.user.id);
   if (!member) return NextResponse.json({ error: 'Not found' }, { status: 404 });
 
-  const body = await req.json().catch(() => ({}));
+  const body = await req.json().catch(() => ({})) as
+    { name?: string; age?: string; avatarId?: string; accentColor?: string; faithGoals?: string[]; sortOrder?: number };
   const data: Record<string, unknown> = {};
   if ('name' in body && body.name?.trim()) data.name = body.name.trim();
   if ('age' in body) data.age = body.age ? parseInt(body.age) : null;
   if ('avatarId' in body) data.avatarId = body.avatarId;
   if ('accentColor' in body) data.accentColor = body.accentColor;
-  if ('faithGoals' in body) data.faithGoals = body.faithGoals;
+  if ('faithGoals' in body) data.faithGoals = JSON.stringify(body.faithGoals ?? []);
   if ('sortOrder' in body) data.sortOrder = body.sortOrder;
 
   const updated = await prisma.familyMember.update({ where: { id }, data });
-  return NextResponse.json(updated);
+  return NextResponse.json({ ...updated, faithGoals: parseStrArray(updated.faithGoals) });
 }
 
 // DELETE /api/family/members/[id]

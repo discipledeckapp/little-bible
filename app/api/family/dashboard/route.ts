@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
+import { parseStrArray } from '@/lib/db-json';
 
 // GET /api/family/dashboard
 export async function GET() {
@@ -84,13 +85,13 @@ export async function GET() {
         age: m.age,
         avatarId: m.avatarId,
         accentColor: m.accentColor,
-        faithGoals: m.faithGoals,
+        faithGoals: parseStrArray(m.faithGoals),
         seeds: m.seeds,
         sortOrder: m.sortOrder,
         lastReadBook: m.progress?.lastReadBook ?? null,
         lastReadChapter: m.progress?.lastReadChapter ?? null,
         lastReadAt: m.progress?.lastReadAt?.toISOString() ?? null,
-        completedChapters: m.progress?.completedChapters ?? [],
+        completedChapters: parseStrArray(m.progress?.completedChapters),
       })),
       streak: family.streak
         ? {

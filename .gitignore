@@ -49,3 +49,8 @@ mobile/android/.gradle/
 mobile/android/local.properties
 mobile/ios/Pods/
 mobile/ios/.symlinks/
+cloudflare-env.d.ts
+worker-configuration.d.ts
+.open-next/
+.wrangler/
+prisma/.local.db*

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ROLE_LABELS, ROLE_COLORS } from '@/lib/admin/permissions';
-import type { AdminRole } from '@prisma/client';
+import type { AdminRole } from '@/lib/admin/roles';
 
 export const metadata: Metadata = { title: 'Settings' };
 

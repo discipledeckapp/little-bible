@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { parseStrArray } from '@/lib/db-json';
 import { requireAdminApi } from '@/lib/admin/auth';
 
 export async function GET(req: NextRequest) {
@@ -73,7 +74,7 @@ export async function GET(req: NextRequest) {
       ? {
           seeds:   u.progress.wisdomSeeds,
           streak:  u.progress.streak,
-          chapters: u.progress.completedChapters.length,
+          chapters: parseStrArray(u.progress.completedChapters).length,
         }
       : null,
   }));
@@ -92,7 +93,7 @@ export async function PATCH(req: NextRequest) {
   const result = await requireAdminApi('users');
   if (result.error) return result.error;
 
-  const body = await req.json().catch(() => ({}));
+  const body = await req.json().catch(() => ({})) as { userId?: string; role?: string | null };
   const { userId, role } = body;
 
   if (!userId) return NextResponse.json({ error: 'userId required' }, { status: 400 });

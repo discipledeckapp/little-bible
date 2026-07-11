@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
+import { parseStrArray } from '@/lib/db-json';
 
 // POST /api/family/progress
 // Body: { memberId, bookSlug, chapter, verse, mode, type: 'verse' | 'chapter' | 'session' }
@@ -8,7 +9,8 @@ export async function POST(req: NextRequest) {
   const session = await auth();
   if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const body = await req.json().catch(() => null);
+  const body = await req.json().catch(() => null) as
+    { memberId?: string; bookSlug?: string; chapter?: string; verse?: string; mode?: string; type?: string } | null;
   if (!body) return NextResponse.json({ error: 'Invalid body' }, { status: 400 });
 
   const { memberId, bookSlug, chapter, verse, mode, type } = body;
@@ -70,7 +72,7 @@ export async function POST(req: NextRequest) {
 
   if (type === 'chapter') {
     // Award 5 bonus seeds per unique chapter
-    const chapters = existing?.completedChapters ?? [];
+    const chapters = parseStrArray(existing?.completedChapters);
     if (!chapters.includes(chapterKey)) {
       chapters.push(chapterKey);
       seedsToAdd = 5;
@@ -80,13 +82,13 @@ export async function POST(req: NextRequest) {
       where: { memberId },
       create: {
         memberId,
-        completedChapters: chapters,
+        completedChapters: JSON.stringify(chapters),
         lastReadBook: bookSlug,
         lastReadChapter: parseInt(chapter),
         lastReadAt: new Date(),
       },
       update: {
-        completedChapters: chapters,
+        completedChapters: JSON.stringify(chapters),
         lastReadBook: bookSlug,
         lastReadChapter: parseInt(chapter),
         lastReadAt: new Date(),

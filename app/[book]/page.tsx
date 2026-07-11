@@ -12,6 +12,8 @@ interface PageProps {
   params: Promise<{ book: string }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return BIBLE_BOOKS.map((b) => ({ book: b.slug }));
 }

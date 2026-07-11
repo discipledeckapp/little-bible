@@ -2,17 +2,18 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// Cloudflare D1 (SQLite). Runtime connection is supplied by the
-// @prisma/adapter-d1 driver adapter (see lib/prisma.ts); the CLI uses a
-// local file url from prisma.config.ts only for `migrate diff`/`studio`.
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
 }
 
-// NOTE: SQLite/D1 has no native enums. AdminRole is stored as a String.
-// Allowed values: SUPER_ADMIN | CONTENT_EDITOR | THEOLOGICAL_REVIEWER
-//                 CURRICULUM_MANAGER | SUPPORT_ADMIN | ANALYTICS_VIEWER
-// Validation is enforced in application code (see lib/admin/roles.ts).
+enum AdminRole {
+  SUPER_ADMIN
+  CONTENT_EDITOR
+  THEOLOGICAL_REVIEWER
+  CURRICULUM_MANAGER
+  SUPPORT_ADMIN
+  ANALYTICS_VIEWER
+}
 
 // ── NextAuth required tables ─────────────────────────────────────────────────
 
@@ -22,12 +23,12 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?
-  access_token      String?
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String?
+  id_token          String? @db.Text
   session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -50,7 +51,7 @@ model User {
   emailVerified DateTime?
   image         String?
   createdAt     DateTime   @default(now())
-  role          String?    // AdminRole enum value (see note above); null = regular user
+  role          AdminRole?
   accounts      Account[]
   sessions      Session[]
   progress      UserProgress?
@@ -79,10 +80,10 @@ model UserProgress {
   wisdomSeeds          Int      @default(0)
   streak               Int      @default(0)
   lastActiveDate       String   @default("")
-  completedVersesJson  String   @default("{}")
-  completedChapters    String   @default("[]") // JSON array of chapter refs (was String[])
-  badgesJson           String   @default("[]")
-  sessionsJson         String   @default("[]")
+  completedVersesJson  String   @default("{}") @db.Text
+  completedChapters    String[] @default([])
+  badgesJson           String   @default("[]") @db.Text
+  sessionsJson         String   @default("[]") @db.Text
   updatedAt            DateTime @updatedAt
 }
 
@@ -109,7 +110,7 @@ model FamilyMember {
   age         Int?
   avatarId    String   @default("lion")
   accentColor String?
-  faithGoals  String   @default("[]") // JSON array of goals (was String[])
+  faithGoals  String[] @default([])
   seeds       Int      @default(0)
   sortOrder   Int      @default(0)
   progress    MemberProgress?
@@ -123,9 +124,9 @@ model MemberProgress {
   id                  String   @id @default(cuid())
   memberId            String   @unique
   member              FamilyMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
-  completedVersesJson String   @default("{}")
-  completedChapters   String   @default("[]") // JSON array of chapter refs (was String[])
-  memoryVersesJson    String   @default("[]")
+  completedVersesJson String   @default("{}") @db.Text
+  completedChapters   String[] @default([])
+  memoryVersesJson    String   @default("[]") @db.Text
   lastReadBook        String?
   lastReadChapter     Int?
   lastReadAt          DateTime?
@@ -161,7 +162,7 @@ model FamilyPrayer {
   bookSlug   String
   chapter    Int
   verse      Int
-  prayerText String
+  prayerText String   @db.Text
   answered   Boolean  @default(false)
   savedAt    DateTime @default(now())
 }
@@ -201,7 +202,7 @@ model AnalyticsEvent {
   verseNum  Int?
   storyId   String?
   mode      String?
-  props     String?  // JSON object (was Json?)
+  props     Json?
   createdAt DateTime @default(now())
 
   @@index([event, createdAt])
@@ -217,7 +218,7 @@ model ContentReview {
   verseNum   Int?
   status     String   @default("pending") // pending | approved | needs_revision | flagged
   concern    String?  // theological | too_difficult | language | other
-  notes      String?
+  notes      String?  @db.Text
   reviewerId String?
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
@@ -233,7 +234,7 @@ model AdminAuditLog {
   admin     User     @relation(fields: [adminId], references: [id])
   action    String
   targetId  String?
-  details   String?  // JSON object (was Json?)
+  details   Json?
   createdAt DateTime @default(now())
 
   @@index([adminId, createdAt])

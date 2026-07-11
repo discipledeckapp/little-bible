@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
 import { can } from '@/lib/admin/permissions';
-import type { AdminRole } from '@prisma/client';
+import type { AdminRole } from '@/lib/admin/roles';
 
 export const metadata: Metadata = { title: 'Dashboard' };
 

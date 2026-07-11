@@ -45,6 +45,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+// Content is a fixed static set read from the filesystem at build time; disallow
+// on-demand params so unknown slugs 404 instead of attempting a runtime fs read
+// on the Cloudflare Worker (where the data tree isn't on disk).
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   try {
     const books = getLanguageIndex('en');

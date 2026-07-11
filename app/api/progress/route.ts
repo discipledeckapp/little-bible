@@ -1,5 +1,6 @@
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
+import { parseStrArray } from '@/lib/db-json';
 import type { Progress } from '@/types';
 
 export async function GET() {
@@ -17,7 +18,7 @@ export async function GET() {
     streak:           row.streak,
     lastActiveDate:   row.lastActiveDate,
     completedVerses:  JSON.parse(row.completedVersesJson),
-    completedChapters: row.completedChapters,
+    completedChapters: parseStrArray(row.completedChapters),
     badges:           JSON.parse(row.badgesJson),
     sessions:         JSON.parse(row.sessionsJson),
   };
@@ -39,7 +40,7 @@ export async function POST(req: Request) {
       streak:              p.streak,
       lastActiveDate:      p.lastActiveDate,
       completedVersesJson: JSON.stringify(p.completedVerses),
-      completedChapters:   p.completedChapters,
+      completedChapters:   JSON.stringify(p.completedChapters),
       badgesJson:          JSON.stringify(p.badges),
       sessionsJson:        JSON.stringify(p.sessions.slice(-100)),
     },
@@ -48,7 +49,7 @@ export async function POST(req: Request) {
       streak:              p.streak,
       lastActiveDate:      p.lastActiveDate,
       completedVersesJson: JSON.stringify(p.completedVerses),
-      completedChapters:   p.completedChapters,
+      completedChapters:   JSON.stringify(p.completedChapters),
       badgesJson:          JSON.stringify(p.badges),
       sessionsJson:        JSON.stringify(p.sessions.slice(-100)),
     },

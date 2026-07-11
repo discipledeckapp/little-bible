@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { isAdmin, can, type AdminModule } from './permissions';
-import type { AdminRole } from '@prisma/client';
+import type { AdminRole } from './roles';
 
 interface AdminAuthResult {
   session: { user: { id: string; role: AdminRole } };

@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "little-bible",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-07-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "little-bible-db",
+      "database_id": "e611fa87-0643-408e-8195-6f508650cee4",
+      "migrations_dir": "prisma/d1-migrations"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "NEXT_INC_CACHE_KV",
+      "id": "0da2ebd2cbb6420d8fc1267fee5e89a6"
+    }
+  ]
+}

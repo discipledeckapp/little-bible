@@ -1,13 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
+import { parseStrArray } from '@/lib/db-json';
 
 // POST /api/family/members — add a child profile
 export async function POST(req: NextRequest) {
   const session = await auth();
   if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const body = await req.json().catch(() => ({}));
+  const body = await req.json().catch(() => ({})) as
+    { name?: string; age?: string; avatarId?: string; accentColor?: string; faithGoals?: string[] };
   const { name, age, avatarId, accentColor, faithGoals } = body;
 
   if (!name?.trim()) return NextResponse.json({ error: 'Name is required' }, { status: 400 });
@@ -24,10 +26,10 @@ export async function POST(req: NextRequest) {
       age: age ? parseInt(age) : null,
       avatarId: avatarId ?? 'lion',
       accentColor: accentColor ?? null,
-      faithGoals: faithGoals ?? [],
+      faithGoals: JSON.stringify(faithGoals ?? []),
       sortOrder: count,
     },
   });
 
-  return NextResponse.json(member, { status: 201 });
+  return NextResponse.json({ ...member, faithGoals: parseStrArray(member.faithGoals) }, { status: 201 });
 }

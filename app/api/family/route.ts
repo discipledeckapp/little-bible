@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
+import { parseStrArray } from '@/lib/db-json';
 import type { Family, FamilyMember, FamilyStreak, MemberProgress } from '@prisma/client';
 
 type FamilyWithAll = Family & {
@@ -34,7 +35,7 @@ export async function POST(req: NextRequest) {
   const session = await auth();
   if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const body = await req.json().catch(() => ({}));
+  const body = await req.json().catch(() => ({})) as { name?: string };
   const name: string | null = body.name?.trim() || null;
 
   const existing = await prisma.family.findUnique({ where: { ownerId: session.user.id } });
@@ -59,7 +60,7 @@ export async function PATCH(req: NextRequest) {
   const session = await auth();
   if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const body = await req.json().catch(() => ({}));
+  const body = await req.json().catch(() => ({})) as { name?: string; journeyId?: string };
   const data: { name?: string | null; journeyId?: string | null } = {};
   if ('name' in body) data.name = body.name?.trim() || null;
   if ('journeyId' in body) data.journeyId = body.journeyId || null;
@@ -88,13 +89,13 @@ function shapeFamilyResponse(family: FamilyWithAll) {
       age: m.age,
       avatarId: m.avatarId,
       accentColor: m.accentColor,
-      faithGoals: m.faithGoals,
+      faithGoals: parseStrArray(m.faithGoals),
       seeds: m.seeds,
       sortOrder: m.sortOrder,
       lastReadBook: m.progress?.lastReadBook ?? null,
       lastReadChapter: m.progress?.lastReadChapter ?? null,
       lastReadAt: m.progress?.lastReadAt?.toISOString() ?? null,
-      completedChapters: m.progress?.completedChapters ?? [],
+      completedChapters: parseStrArray(m.progress?.completedChapters),
     })),
     streak: family.streak
       ? {

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { prisma } from '@/lib/prisma';
+import { parseStrArray } from '@/lib/db-json';
 import Link from 'next/link';
 import { ROLE_COLORS, ROLE_LABELS } from '@/lib/admin/permissions';
-import type { AdminRole } from '@prisma/client';
+import type { AdminRole } from '@/lib/admin/roles';
 
 export const metadata: Metadata = { title: 'Users' };
 
@@ -144,7 +145,7 @@ export default async function UsersPage({ searchParams }: PageProps) {
                     {u.progress ? (
                       <div>
                         <p className="text-xs font-semibold text-stone-700">{u.progress.wisdomSeeds} seeds</p>
-                        <p className="text-xs text-stone-400">{u.progress.completedChapters.length} chapters</p>
+                        <p className="text-xs text-stone-400">{parseStrArray(u.progress.completedChapters).length} chapters</p>
                       </div>
                     ) : (
                       <span className="text-stone-300 text-xs">—</span>
