@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/proverbs/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/john/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/luke/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/genesis/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/psalms/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/matthew/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/mark/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/stories/*)",
+      "Write(/Users/seyiadelaju/Projects/Little_Bible/public/data/en/activities/*)"
+    ]
+  }
+}
