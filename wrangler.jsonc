@@ -3,7 +3,7 @@
   "name": "little-bible",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-07-11",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": ["nodejs_compat", "wasm_unsafe_eval"],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
@@ -28,6 +28,7 @@
   "vars": {
     "NEXT_PUBLIC_APP_URL": "https://littlebible.org",
     "NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY": "pk_test_c8e8d830b4b77a467767a4b2893ba7f8d13e53fb",
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "pk_test_REPLACE_ME"
+    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "pk_test_REPLACE_ME",
+    "AUTH_TRUST_HOST": "1"
   }
 }
