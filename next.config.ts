@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
+  // Exclude @vercel/og WASM from the Workers bundle — we don't use ImageResponse.
+  // Without this, resvg.wasm (~1.3 MB) and yoga.wasm are bundled unnecessarily.
+  serverExternalPackages: ['@vercel/og'],
   images: {
     remotePatterns: [
       {

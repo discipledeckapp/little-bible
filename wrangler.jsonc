@@ -24,5 +24,10 @@
       "binding": "NEXT_INC_CACHE_KV",
       "id": "0da2ebd2cbb6420d8fc1267fee5e89a6"
     }
-  ]
+  ],
+  "vars": {
+    "NEXT_PUBLIC_APP_URL": "https://littlebible.org",
+    "NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY": "pk_test_c8e8d830b4b77a467767a4b2893ba7f8d13e53fb",
+    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "pk_test_REPLACE_ME"
+  }
 }
