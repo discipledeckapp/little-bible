@@ -1,0 +1,4 @@
+interface:
+  display_name: "Little Bible Child Review"
+  short_description: "Review child learning and safeguarding quality"
+  default_prompt: "Use $little-bible-child-review to review this chapter for child learning and safeguarding."

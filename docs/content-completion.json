@@ -1,0 +1,88 @@
+{
+  "standardVersion": "2.1",
+  "updatedAt": "2026-08-02",
+  "legacyContentPolicy": "freeze-existing",
+  "statusDefinitions": [
+    "missing",
+    "reserved",
+    "drafted",
+    "theology_reviewed",
+    "child_reviewed",
+    "approved",
+    "published",
+    "translation_revision_required",
+    "blocked"
+  ],
+  "summary": {
+    "booksStarted": 7,
+    "chaptersPresent": 96,
+    "chaptersMissingWithinStartedBooks": 225,
+    "existingVerseRecords": 3189,
+    "newStandardPublishedChapters": 5
+  },
+  "books": {
+    "genesis": { "totalChapters": 50, "present": 17, "missing": 33, "nextMissing": 18 },
+    "psalms": { "totalChapters": 150, "present": 7, "missing": 143, "presentChapters": [1, 22, 23, 100, 121, 139, 150] },
+    "proverbs": { "totalChapters": 31, "present": 31, "missing": 0 },
+    "matthew": { "totalChapters": 28, "present": 7, "missing": 21, "presentChapters": [5, 6, 7, 8, 9, 27, 28] },
+    "mark": { "totalChapters": 16, "present": 5, "missing": 11, "presentChapters": [1, 2, 3, 4, 10] },
+    "luke": { "totalChapters": 24, "present": 11, "missing": 13, "presentChapters": [1, 2, 3, 4, 5, 6, 10, 15, 22, 23, 24] },
+    "john": { "totalChapters": 21, "present": 18, "missing": 3, "presentChapters": [1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "nextBatch": 8 }
+  },
+  "currentBatch": {
+    "book": "John",
+    "chapter": 8,
+    "status": "reserved",
+    "theologyReview": "pending",
+    "childLearningReview": "pending",
+    "validation": "pending",
+    "indexed": false
+  },
+  "completedUnderStandard2": [
+    {
+      "book": "John",
+      "chapter": 14,
+      "status": "published",
+      "completedAt": "2026-08-01",
+      "verseRecords": 31,
+      "theologyReview": "approved_standard_2_1",
+      "childLearningReview": "approved_standard_2_1"
+    },
+    {
+      "book": "John",
+      "chapter": 15,
+      "status": "published",
+      "completedAt": "2026-08-01",
+      "verseRecords": 27,
+      "theologyReview": "approved_standard_2_1",
+      "childLearningReview": "approved_standard_2_1"
+    },
+    {
+      "book": "John",
+      "chapter": 16,
+      "status": "published",
+      "completedAt": "2026-08-01",
+      "verseRecords": 33,
+      "theologyReview": "approved_standard_2_1",
+      "childLearningReview": "approved_standard_2_1"
+    },
+    {
+      "book": "John",
+      "chapter": 17,
+      "status": "published",
+      "completedAt": "2026-08-01",
+      "verseRecords": 26,
+      "theologyReview": "approved_standard_2_1",
+      "childLearningReview": "approved_standard_2_1"
+    },
+    {
+      "book": "John",
+      "chapter": 7,
+      "status": "published",
+      "completedAt": "2026-08-01",
+      "verseRecords": 53,
+      "theologyReview": "approved_standard_2_1",
+      "childLearningReview": "approved_standard_2_1"
+    }
+  ]
+}

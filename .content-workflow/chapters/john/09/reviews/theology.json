@@ -1,0 +1,45 @@
+{
+  "role": "theology",
+  "verdict": "FAIL",
+  "draftHash": "9935de0fce4268625971c293ff9f6db35a15e886a42d430de0e04b348259b551",
+  "standardVersion": "2.1",
+  "reviewedAt": "2026-08-02T06:48:10.414625+00:00",
+  "accessBandReviewed": "Emerging Reader 6–8 and Independent Reader 9–12 with adult support; selected verses for Early Learner 3–5",
+  "findings": [
+    {
+      "chapter": 9,
+      "verse": 3,
+      "field": "little_bible",
+      "reason": "In modern standalone wording, ‘Neither this man nor his parents sinned’ can assert that neither person ever sinned, rather than answering the disciples’ proposed causal link between particular sin and congenital blindness. Preserve that relationship explicitly while retaining the difficult works-of-God clause.",
+      "replacement": "Jesus answered, “It was not because this man sinned or because his parents sinned. But the works of God were to be revealed in him."
+    },
+    {
+      "chapter": 9,
+      "verse": 18,
+      "field": "little_bible",
+      "reason": "‘The Jewish leaders’ replaces the KJV’s ‘the Jews’ with an interpreted referent not stated in this verse. The anti-Jewish safeguard belongs in meaning or parent_guide; little_bible must preserve the source wording and ambiguity.",
+      "replacement": "But the Jews did not believe that he had been blind and had received his sight until they called the parents of the man who had received his sight."
+    },
+    {
+      "chapter": 9,
+      "verse": 22,
+      "field": "little_bible",
+      "reason": "‘The Jewish leaders’ and the later ‘the leaders’ twice resolve the KJV’s ‘the Jews’ inside the translation. ‘Confessed Jesus as the Christ’ also names a contextual referent where the verse says ‘confess that he was Christ.’ Keep the verse translation source-bound and place the contextual safeguard in meaning/parent_guide.",
+      "replacement": "His parents said these things because they feared the Jews, for the Jews had already agreed that anyone who confessed that he was the Christ would be put out of the synagogue."
+    },
+    {
+      "chapter": 9,
+      "verse": 39,
+      "field": "little_reader_adaptation",
+      "reason": "The adaptation changes Jesus’ stated purpose and outcomes (‘for judgment,’ non-seers seeing, and seers becoming blind) into the commentary that his coming ‘uncovers who truly sees.’ A simplified paraphrase may not silently remove these difficult essential claims.",
+      "replacement": "Jesus said, “I came for judgment: those who do not see may see, and those who see may become blind.”"
+    },
+    {
+      "chapter": 9,
+      "verse": 41,
+      "field": "little_reader_adaptation",
+      "reason": "The adaptation omits the entire conditional claim ‘If you were blind, you would have no sin,’ which is essential even though difficult. Preserve both sides of Jesus’ contrast; explain the metaphor separately in meaning.",
+      "replacement": "Jesus said, “If you were blind, you would have no sin. But because you say, ‘We see,’ your sin remains.”"
+    }
+  ]
+}

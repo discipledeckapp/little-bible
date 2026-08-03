@@ -3,5 +3,10 @@
   { "book": "John", "chapter": 2, "file": "john_chapter_02.json" },
   { "book": "John", "chapter": 3, "file": "john_chapter_03.json" },
   { "book": "John", "chapter": 4, "file": "john_chapter_04.json" },
-  { "book": "John", "chapter": 6, "file": "john_chapter_06.json" }
+  { "book": "John", "chapter": 6, "file": "john_chapter_06.json" },
+  { "book": "John", "chapter": 14, "file": "john_chapter_14.json" },
+  { "book": "John", "chapter": 15, "file": "john_chapter_15.json" },
+  { "book": "John", "chapter": 16, "file": "john_chapter_16.json" },
+  { "book": "John", "chapter": 17, "file": "john_chapter_17.json" },
+  { "book": "John", "chapter": 7, "file": "john_chapter_07.json" }
 ]

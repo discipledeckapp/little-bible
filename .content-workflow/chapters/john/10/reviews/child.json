@@ -1,0 +1,46 @@
+{
+  "role": "child",
+  "verdict": "FAIL",
+  "draftHash": "b5c093c7d78a5cf664ee235f4fcc1d6bbb52352c164e3f40859a0c824c0c59d5",
+  "standardVersion": "2.1",
+  "reviewedAt": "2026-08-02T06:46:05.976284+00:00",
+  "ageAccess": {
+    "default": "Independent Reader 9–12 with adult guidance",
+    "limited": "Selected shepherd passages may be used for Emerging Reader 6–8 with adult guidance",
+    "earlyLearner": "Not approved as an unrestricted chapter for ages 3–5"
+  },
+  "blockingFindings": [
+    {
+      "verse": 5,
+      "field": "memory_phrase",
+      "issue": "The imperative 'do not follow strangers' turns sheep-metaphor narration into a direct child rule and can reinforce an overbroad stranger-danger message despite the later family qualification.",
+      "replacement": "sheep avoid strange voices"
+    },
+    {
+      "verse": 18,
+      "field": "little_bible",
+      "issue": "'I lay it down by myself' can mean without assistance rather than voluntarily, losing the source relationship expressed by 'of myself'.",
+      "replacement": "No one takes it from me, but I lay it down by my own choice. I have authority to lay it down, and I have authority to take it up again. I received this command from my Father."
+    },
+    {
+      "verse": 35,
+      "field": "little_bible",
+      "issue": "'Those people' resolves the disputed Psalm 82 referent as human even though the meaning field correctly preserves multiple interpretations. Standard 2.1 forbids resolving that ambiguity inside the translation.",
+      "replacement": "If he called them gods, to whom God's word came—and Scripture cannot be broken—"
+    },
+    {
+      "verse": 36,
+      "field": "little_bible",
+      "issue": "The independent verse record begins with a lowercase continuation and ends with an unmatched quotation mark, so it is not natural or self-contained when displayed or read alone.",
+      "replacement": "Then why do you say of the one whom the Father set apart and sent into the world, 'You are blaspheming,' because I said, 'I am the Son of God'?"
+    }
+  ],
+  "resolvedAreas": [
+    "Chapter-level age access and sensitivity are declared.",
+    "Violence, abandonment, sacrifice, physical-protection promises, religious prejudice, mental-health stigma, unsafe obedience, private-voice framing, and forced reconciliation are handled in appropriate non-translation fields.",
+    "Questions and activities are varied, non-coercive, and generally permit safe adult support or passing where sensitive.",
+    "Illustrations are non-graphic, non-stigmatizing, and avoid literal depictions of the Father or Spirit.",
+    "All other chapter and verse fields pass this child-learning and safeguarding review."
+  ],
+  "passCondition": "Apply only the four listed corrections, reseal the chapter, and obtain fresh theology and child reviews for the new hash."
+}

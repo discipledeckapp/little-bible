@@ -1,0 +1,4 @@
+interface:
+  display_name: "Little Bible Theology Review"
+  short_description: "Review Bible content for theological fidelity"
+  default_prompt: "Use $little-bible-theology-review to review this chapter for source and theological fidelity."

@@ -1,0 +1,11 @@
+{
+  "book": "John",
+  "bookSlug": "john",
+  "chapter": 10,
+  "standardVersion": "2.1",
+  "state": "reviewing",
+  "draftHash": "a3c40ccca3d9a0e0734755593a7d58c5e010aa20fda538b9b79a2a358dc73cc3",
+  "createdAt": "2026-08-02T06:26:36.432477+00:00",
+  "updatedAt": "2026-08-02T07:08:45.246603+00:00",
+  "publishedAt": null
+}

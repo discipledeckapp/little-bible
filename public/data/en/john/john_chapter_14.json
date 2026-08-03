@@ -1,0 +1,635 @@
+{
+  "book": "John",
+  "chapter": 14,
+  "chapter_summary": "Jesus comforts His disciples before His death. He says He is the way to the Father, promises the Holy Spirit, and gives His peace.",
+  "main_lesson": "Jesus reveals the Father and prepares His followers for His departure. The Holy Spirit will teach them and remain with them.",
+  "memory_verse": {
+    "ref": "John 14:6",
+    "kjv": "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
+    "little_bible": "Jesus says to him, I am the way, the truth, and the life: no one comes to the Father, but by me."
+  },
+  "parent_guide": "Access: default for ages 6–8 and 9–12 with adult context; ages 3–5 receive only curated passages with an adult. Sensitivity: anticipatory grief, death, abandonment, fear, religious exclusivity, complex Trinitarian language, prayer expectations, spiritual conflict, and obedience. John 14 is Jesus’ farewell teaching before the crucifixion. Its promises first address His disciples. Prayer in Jesus’ name is not a formula guaranteeing every desired outcome, and “greater works” does not promise miracles to each child. Father and Son are distinct yet united; traditions explain verses 3, 12, and 28 differently. Peace never suppresses grief, fear, boundaries, or reporting harm. Obedience responds to love and never authorizes unsafe adults.",
+  "application_for_children": "Children may bring honest questions, listen to Jesus, and receive His words of peace. Do not present prayer as magic, obedience as earning love, or peace as never feeling afraid.",
+  "verses": [
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 1,
+      "kjv": "Let not your heart be troubled: ye believe in God, believe also in me.",
+      "little_bible": "Do not let your heart be troubled: you believe in God, believe also in me.",
+      "little_reader_adaptation": "Jesus said, “Do not be troubled. Believe in God and me.”",
+      "meaning": "Jesus comforts disciples facing his death. Trust does not erase grief, fear, or the need to tell a safe adult when something is wrong.",
+      "memory_phrase": "Trust Jesus",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What can help when your heart feels troubled?",
+      "family_discussion": "Share a gentle way your family supports someone who is worried.",
+      "do_it_today": "Optionally breathe slowly and hear Jesus’ first sentence again.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:1, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 2,
+      "kjv": "In my Father’s house are many mansions: if it were not so, I would have told you. I go to prepare a place for you.",
+      "little_bible": "In my Father’s house are many rooms: if it were not so, I would have told you. I am going to prepare a place for you.",
+      "little_reader_adaptation": "Jesus said, “My Father’s house has many rooms. I would have told you otherwise. I am preparing a place.”",
+      "meaning": "The Father’s house has abundant room; Jesus assures them he would not mislead them and prepares a place. This hope must not rush a grieving child past sadness.",
+      "memory_phrase": "The Father’s house",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How might Jesus’ honest reassurance comfort the disciples?",
+      "family_discussion": "Discuss how Christian hope can sit beside real grief without silencing it.",
+      "do_it_today": "Draw a welcoming house with room for guests.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:2, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 3,
+      "kjv": "And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.",
+      "little_bible": "And if I go and prepare a place for you, I will come again, and receive you to myself; that where I am, there you may be also.",
+      "little_reader_adaptation": "Jesus said, “I will return and take you to be with me.”",
+      "meaning": "Jesus promises to return and bring his disciples into his presence. Christians relate this promise to death and Christ’s final return in different ways; it does not invite children to seek death.",
+      "memory_phrase": "Jesus will return",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How can hope and sadness both be present?",
+      "family_discussion": "Talk about ways to comfort someone who misses a person who died. You may pass.",
+      "do_it_today": "If you wish, make a card for someone who is grieving.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:3, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 4,
+      "kjv": "And whither I go ye know, and the way ye know.",
+      "little_bible": "And where I am going you know, and the way you know.",
+      "little_reader_adaptation": "Jesus said, “You know where I am going and the way.”",
+      "meaning": "The disciples have received enough of Jesus’ teaching to know that he leads to the Father, though their next question shows they remain confused.",
+      "memory_phrase": "Jesus knows the way",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What might “the way” mean in this conversation?",
+      "family_discussion": "Trace how Jesus answers the disciples’ question across verses 4–6.",
+      "do_it_today": "Trace a path and label its safe destination.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:4, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 5,
+      "kjv": "Thomas saith unto him, Lord, we know not whither thou goest; and how can we know the way?",
+      "little_bible": "Thomas says to him, Lord, we do not know where you go; and how can we know the way?",
+      "little_reader_adaptation": "Thomas asked, “How can we know the way?”",
+      "meaning": "Thomas voices honest uncertainty. His question shows that faithful learners may ask directly when they do not understand.",
+      "memory_phrase": "Thomas asks",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What does Thomas show us about asking questions?",
+      "family_discussion": "Practise saying, “I do not understand yet; may I ask?”",
+      "do_it_today": "Ask a trusted adult one honest question, or choose to pass.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:5, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 6,
+      "kjv": "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
+      "little_bible": "Jesus says to him, I am the way, the truth, and the life: no one comes to the Father, but by me.",
+      "little_reader_adaptation": "Jesus said, “I am the way, truth, and life. People come to the Father through me.”",
+      "meaning": "Jesus uniquely identifies himself as the way, truth, and life and the only access to the Father. This Christian claim must never be used to mock, pressure, or treat people of other beliefs with contempt.",
+      "memory_phrase": "Jesus is the way",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How can Christians hold this belief while treating others kindly?",
+      "family_discussion": "Discuss faithful conviction alongside respect for neighbours of other beliefs.",
+      "do_it_today": "Practise one kind sentence for a neighbour who believes differently.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:6, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 7,
+      "kjv": "If ye had known me, ye should have known my Father also: and from henceforth ye know him, and have seen him.",
+      "little_bible": "If you had known me, you would have known my Father also: and from now on you know him, and have seen him.",
+      "little_reader_adaptation": "Jesus said, “Knowing me means knowing my Father.”",
+      "meaning": "Knowing the Son reveals the Father. Jesus speaks first to disciples who have encountered him, not as a claim that children understand God perfectly.",
+      "memory_phrase": "Jesus reveals Father",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What does Jesus help the disciples know about the Father?",
+      "family_discussion": "Compare what verses 7–11 say about Jesus and the Father.",
+      "do_it_today": "Notice one thing Jesus says about the Father.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:7, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 8,
+      "kjv": "Philip saith unto him, Lord, shew us the Father, and it sufficeth us.",
+      "little_bible": "Philip says to him, Lord, show us the Father, and it is enough for us.",
+      "little_reader_adaptation": "Philip said, “Lord, show us the Father.”",
+      "meaning": "Philip asks for a direct sight of the Father, believing this would satisfy the disciples.",
+      "memory_phrase": "Show us Father",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "Why might Philip have wanted something he could see?",
+      "family_discussion": "Talk about why seeing is not the only way people learn to trust.",
+      "do_it_today": "Draw Philip respectfully asking his question.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:8, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 9,
+      "kjv": "Jesus saith unto him, Have I been so long time with you, and yet hast thou not known me, Philip? he that hath seen me hath seen the Father; and how sayest thou then, Shew us the Father?",
+      "little_bible": "Jesus says to him, Have I been with you so long, and yet have you not known me, Philip? The one who has seen me has seen the Father; and how do you then say, Show us the Father?",
+      "little_reader_adaptation": "Jesus asked Philip, “Have you not known me? Seeing me shows you the Father. Why ask to see him?”",
+      "meaning": "Jesus says the Son truly reveals the Father. Historic Trinitarian teaching distinguishes Father and Son as persons while affirming their unity; Jesus is not saying he is the Father.",
+      "memory_phrase": "Jesus reveals Father",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How are Father and Son united yet distinct?",
+      "family_discussion": "Name what the verse affirms about unity and what it does not erase.",
+      "do_it_today": "Place two distinct circles side by side and label Father and Son.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:9, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 10,
+      "kjv": "Believest thou not that I am in the Father, and the Father in me? the words that I speak unto you I speak not of myself: but the Father that dwelleth in me, he doeth the works.",
+      "little_bible": "Do you not believe that I am in the Father, and the Father in me? The words that I speak to you I do not speak from myself: but the Father who lives in me, he does the works.",
+      "little_reader_adaptation": "Jesus asked them to believe: “I am in the Father, and he is in me. The Father does his works through me.”",
+      "meaning": "Jesus asks for faith in his mutual indwelling with the Father. The Father and Son remain distinct, while Jesus’ words and works reveal their unique unity.",
+      "memory_phrase": "The Father works",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What do Jesus’ words and works reveal?",
+      "family_discussion": "Look for the separate actions of Father and Son in the verse.",
+      "do_it_today": "Listen for what belongs to Jesus and what belongs to the Father.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:10, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 11,
+      "kjv": "Believe me that I am in the Father, and the Father in me: or else believe me for the very works’ sake.",
+      "little_bible": "Believe me that I am in the Father, and the Father in me: or else believe me because of the works themselves.",
+      "little_reader_adaptation": "Jesus said, “Believe my words, or believe because of my works.”",
+      "meaning": "Jesus offers his works as evidence of his unity with the Father. The works point beyond spectacle to the identity and mission of Jesus.",
+      "memory_phrase": "Believe the works",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What kind of evidence does Jesus invite them to notice?",
+      "family_discussion": "Recall one work in John and ask what it reveals about Jesus.",
+      "do_it_today": "Choose one work of Jesus in John to revisit.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:11, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 12,
+      "kjv": "Verily, verily, I say unto you, He that believeth on me, the works that I do shall he do also; and greater works than these shall he do; because I go unto my Father.",
+      "little_bible": "Truly, truly, I say to you, the one who believes in me will also do the works that I do; and he will do greater works than these, because I am going to my Father.",
+      "little_reader_adaptation": "Jesus said believers would do his works—and greater works—because he was going to the Father.",
+      "meaning": "Believers will continue Jesus’ mission after he goes to the Father. “Greater works” is disputed and may concern the mission’s reach or Spirit-empowered ministry; it never guarantees a child miracles or power.",
+      "memory_phrase": "Continue Jesus’ work",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What might continuing Jesus’ work look like without expecting miracles?",
+      "family_discussion": "Choose one ordinary act that continues Jesus’ loving mission.",
+      "do_it_today": "With an adult, choose one quiet act of service.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:12, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 13,
+      "kjv": "And whatsoever ye shall ask in my name, that will I do, that the Father may be glorified in the Son.",
+      "little_bible": "And whatever you ask in my name, I will do, so that the Father may be glorified in the Son.",
+      "little_reader_adaptation": "Jesus said he would answer requests in his name, bringing glory to the Father.",
+      "meaning": "Prayer in Jesus’ name seeks what fits Jesus’ character and mission so the Father is glorified. It is not magic words or a guarantee of every desired outcome.",
+      "memory_phrase": "Pray in Jesus’ name",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How does God’s glory shape a prayer?",
+      "family_discussion": "Discuss a prayer that seeks God’s will rather than controlling an outcome.",
+      "do_it_today": "If you wish, pray briefly and leave the outcome with God. You may pass.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:13, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 14,
+      "kjv": "If ye shall ask any thing in my name, I will do it.",
+      "little_bible": "If you ask anything in my name, I will do it.",
+      "little_reader_adaptation": "Jesus said, “Ask in my name, and I will do it.”",
+      "meaning": "This repeats the prayer promise. Asking in Jesus’ name means asking under his authority and according to his will, not controlling God with a phrase.",
+      "memory_phrase": "Prayer seeks Jesus’ will.",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "Why is Jesus’ name more than magic words?",
+      "family_discussion": "Name the difference between a sincere prayer and a magic formula.",
+      "do_it_today": "If you wish, ask Jesus for guidance according to his will. You may pass.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:14, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 15,
+      "kjv": "If ye love me, keep my commandments.",
+      "little_bible": "If you love me, keep my commandments.",
+      "little_reader_adaptation": "Jesus said, “If you love me, keep my commands.”",
+      "meaning": "Love for Jesus responds through keeping his commands. Obedience does not earn God’s love and never authorizes unsafe instructions from adults; children may refuse harm and tell a trusted safe adult.",
+      "memory_phrase": "Love responds to Jesus.",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How can love lead to safe obedience?",
+      "family_discussion": "Review the family rule: children may refuse harm and tell a safe adult.",
+      "do_it_today": "Choose one safe teaching of Jesus to practise.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:15, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 16,
+      "kjv": "And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever;",
+      "little_bible": "And I will ask the Father, and he will give you another Comforter, that he may remain with you forever;",
+      "little_reader_adaptation": "Jesus said the Father would give another Comforter to stay with them forever.",
+      "meaning": "Jesus promises another Comforter, the Holy Spirit, to remain with the disciples. “With you” stresses enduring presence, not a fleeting visit.",
+      "memory_phrase": "The Comforter comes",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "Why would lasting help matter to the disciples?",
+      "family_discussion": "Discuss why Jesus calls the Spirit “another” Comforter.",
+      "do_it_today": "Make a card saying, “The Spirit stays with God’s people.”",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:16, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 17,
+      "kjv": "Even the Spirit of truth; whom the world cannot receive, because it seeth him not, neither knoweth him: but ye know him; for he dwelleth with you, and shall be in you.",
+      "little_bible": "Even the Spirit of truth, whom the world cannot receive, because it does not see him or know him: but you know him, because he lives with you, and will be in you.",
+      "little_reader_adaptation": "The world cannot receive the Spirit of truth because it does not see or know him. The disciples knew him; he lived with them and would be in them.",
+      "meaning": "The Spirit of truth is known through God’s promised presence, not private audible commands that a child must obey. The world’s present inability is explained by not seeing or knowing him.",
+      "memory_phrase": "Spirit of truth",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How is the Spirit described here?",
+      "family_discussion": "List only the descriptions of the Spirit actually found in the verse.",
+      "do_it_today": "Listen again for every description of the Spirit.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:17, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 18,
+      "kjv": "I will not leave you comfortless: I will come to you.",
+      "little_bible": "I will not leave you as orphans: I will come to you.",
+      "little_reader_adaptation": "Jesus said, “I will not leave you alone. I will come.”",
+      "meaning": "“Comfortless” carries the sense of orphaned or abandoned. Jesus promises not to abandon his disciples as his death approaches; children who feel abandoned should still seek help from safe adults.",
+      "memory_phrase": "Not left alone",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What does Jesus promise to disciples who fear abandonment? You may pass.",
+      "family_discussion": "Talk about where a child can seek safe help when feeling alone. You may pass.",
+      "do_it_today": "Name a trusted safe adult you may contact, or pass.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:18, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 19,
+      "kjv": "Yet a little while, and the world seeth me no more; but ye see me: because I live, ye shall live also.",
+      "little_bible": "In a little while, the world will no longer see me, but you will see me. Because I live, you will live also.",
+      "little_reader_adaptation": "Jesus said, “The world will not see me, but you will. Because I live, you will live too.”",
+      "meaning": "Jesus speaks beyond his death toward his living presence and the disciples’ life in him. This hope does not deny the reality or pain of death.",
+      "memory_phrase": "Because Jesus lives",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How can people hold hope while still grieving death? You may pass.",
+      "family_discussion": "Make space for both resurrection hope and honest sadness. You may pass.",
+      "do_it_today": "Light an electric candle to remember hope, if your family wishes.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:19, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 20,
+      "kjv": "At that day ye shall know that I am in my Father, and ye in me, and I in you.",
+      "little_bible": "At that day you will know that I am in my Father, and you in me, and I in you.",
+      "little_reader_adaptation": "Jesus said, ‘I am in my Father. You are joined to me, and I am with you.’",
+      "meaning": "The disciples will understand the Son’s relation to the Father and their union with Christ. This is spiritual relationship, not physical merging or loss of identity.",
+      "memory_phrase": "Life joined to Jesus",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What might spiritual union mean without physical merging?",
+      "family_discussion": "Use linked paper circles to picture relationship without becoming the same person.",
+      "do_it_today": "Link paper rings while keeping each ring distinct.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:20, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 21,
+      "kjv": "He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him.",
+      "little_bible": "The one who has my commandments and keeps them is the one who loves me: and the one who loves me will be loved by my Father, and I will love him and reveal myself to him.",
+      "little_reader_adaptation": "Jesus said those who love him receive and keep his commands. The Father and Jesus love them, and Jesus reveals himself.",
+      "meaning": "Receiving and keeping Jesus’ commands shows love for him; it does not purchase the Father’s or Son’s love. Safe boundaries remain valid.",
+      "memory_phrase": "Love and obedience",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "Why is obedience a response to love, not its price?",
+      "family_discussion": "Discuss why love cannot be bought by perfect behaviour.",
+      "do_it_today": "Receive kindness today without trying to earn it.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:21, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 22,
+      "kjv": "Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world?",
+      "little_bible": "Judas says to him, not Iscariot, Lord, how is it that you will reveal yourself to us, and not to the world?",
+      "little_reader_adaptation": "Judas asked why Jesus would show himself to them, but not the world.",
+      "meaning": "Judas, not the betrayer, asks why Jesus’ coming self-revelation will be to disciples rather than a public display to the world.",
+      "memory_phrase": "Judas asks why",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What question would you ask Jesus here?",
+      "family_discussion": "Let each person offer one honest question, with permission to pass.",
+      "do_it_today": "Write one question you would ask, or leave the page blank.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:22, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 23,
+      "kjv": "Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him.",
+      "little_bible": "Jesus answered and said to him, If a person loves me, he will keep my words: and my Father will love him, and we will come to him and make our home with him.",
+      "little_reader_adaptation": "Jesus said, “The Father and I will make our home with the person who loves me and keeps my words.”",
+      "meaning": "Jesus answers that the Father and Son will dwell with the person who loves Jesus and keeps his word. The Father and Son are the clear “we”; obedience does not earn love or require unsafe compliance.",
+      "memory_phrase": "God makes his home",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What could God’s presence mean in ordinary life?",
+      "family_discussion": "Describe hospitality as one picture of making a home together.",
+      "do_it_today": "Help make one shared space welcoming.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:23, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 24,
+      "kjv": "He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father’s which sent me.",
+      "little_bible": "The one who does not love me does not keep my sayings: and the word which you hear is not mine, but the Father’s, who sent me.",
+      "little_reader_adaptation": "Jesus said rejecting his words rejects the Father’s words too.",
+      "meaning": "Rejecting Jesus is shown in rejecting his words, which come with the Father’s authority. This does not grant parents or leaders unlimited divine authority over children.",
+      "memory_phrase": "The Father’s words",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How can we test whether teaching truly matches Jesus’ words?",
+      "family_discussion": "Discuss why no human leader’s words automatically equal God’s words.",
+      "do_it_today": "Check a teaching against Jesus’ recorded words with an adult.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:24, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 25,
+      "kjv": "These things have I spoken unto you, being yet present with you.",
+      "little_bible": "I have spoken these things to you while I am still with you.",
+      "little_reader_adaptation": "Jesus told them these things while he was with them.",
+      "meaning": "Jesus has taught these things while physically present, preparing the disciples for his departure.",
+      "memory_phrase": "Jesus prepares them",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How might advance teaching prepare someone for change?",
+      "family_discussion": "Imagine what the disciples may feel as Jesus prepares them to part.",
+      "do_it_today": "Pack something needed tomorrow as a picture of preparation.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:25, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 26,
+      "kjv": "But the Comforter, which is the Holy Ghost, whom the Father will send in my name, he shall teach you all things, and bring all things to your remembrance, whatsoever I have said unto you.",
+      "little_bible": "But the Comforter, the Holy Spirit, whom the Father will send in my name, will teach you all things and remind you of everything I have said to you.",
+      "little_reader_adaptation": "Jesus said the Holy Spirit would teach them and remind them of his words.",
+      "meaning": "The Father will send the Holy Spirit to teach the apostles and recall Jesus’ words. This supports their witness; it does not promise every believer perfect memory or make private impressions equal to Scripture.",
+      "memory_phrase": "The Spirit teaches",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How does the Spirit help the apostles preserve Jesus’ teaching?",
+      "family_discussion": "Compare the Spirit’s promised help to claims of perfect memory or private commands.",
+      "do_it_today": "Ask an adult to help recall one saying of Jesus accurately.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:26, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 27,
+      "kjv": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
+      "little_bible": "Peace I leave with you, my peace I give to you: I do not give to you as the world gives. Do not let your heart be troubled, and do not let it be afraid.",
+      "little_reader_adaptation": "Jesus gave them his peace and said not to be troubled or afraid.",
+      "meaning": "Jesus gives peace rooted in himself amid danger. Peace does not forbid fear, tears, asking questions, leaving danger, or reporting harm to a trusted safe adult.",
+      "memory_phrase": "Jesus gives peace",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How can peace and asking for help belong together? You may pass.",
+      "family_discussion": "Create a family sentence: “Peace means we can still tell when something hurts.”",
+      "do_it_today": "Choose a quiet activity, and remember you may still report harm.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:27, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 28,
+      "kjv": "Ye have heard how I said unto you, I go away, and come again unto you. If ye loved me, ye would rejoice, because I said, I go unto the Father: for my Father is greater than I.",
+      "little_bible": "You have heard how I said to you, I am going away, and I am coming again to you. If you loved me, you would rejoice, because I said, I am going to the Father: for my Father is greater than I.",
+      "little_reader_adaptation": "Jesus said he was going to the Father and would return. He said they could rejoice, because the Father was greater than he.",
+      "meaning": "Jesus says his return to the Father can bring joy even alongside grief. “The Father is greater than I” is read in historic Trinitarian theology chiefly through the Son’s incarnate mission; traditions explain its wording differently without denying Christ’s divinity.",
+      "memory_phrase": "Jesus goes to Father",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "Why need joy not cancel grief? You may pass.",
+      "family_discussion": "Name both joy and sorrow the disciples might feel. You may pass.",
+      "do_it_today": "Name one joyful and one sad feeling, or pass.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:28, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 29,
+      "kjv": "And now I have told you before it come to pass, that, when it is come to pass, ye might believe.",
+      "little_bible": "And now I have told you before it happens, so that when it happens, you may believe.",
+      "little_reader_adaptation": "Jesus told them beforehand so they could believe later.",
+      "meaning": "Jesus’ advance warning is intended to strengthen belief when his departure and promised events occur.",
+      "memory_phrase": "Told beforehand",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How can a warning given beforehand build trust?",
+      "family_discussion": "Recall a time preparation made a change less confusing.",
+      "do_it_today": "Explain one coming change to someone kindly and early.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:29, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 30,
+      "kjv": "Hereafter I will not talk much with you: for the prince of this world cometh, and hath nothing in me.",
+      "little_bible": "From now on I will not talk much with you: for the ruler of this world comes, and has nothing in me.",
+      "little_reader_adaptation": "Jesus said the world’s ruler was coming, but had no claim on him.",
+      "meaning": "The ruler of this world refers to Satan acting through coming evil. “Nothing in me” means no rightful claim or hold on Jesus; Satan is created, limited, and never God’s equal, so the verse should not be dramatized to frighten children.",
+      "memory_phrase": "Evil cannot rule Jesus",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "What does Jesus’ freedom from evil’s claim show? You may pass.",
+      "family_discussion": "Reassure younger listeners that evil is limited and not equal to God. You may pass.",
+      "do_it_today": "Say together, “Evil is not equal to God,” or simply listen.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:30, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "verse": 31,
+      "kjv": "But that the world may know that I love the Father; and as the Father gave me commandment, even so I do. Arise, let us go hence.",
+      "little_bible": "But so that the world may know that I love the Father, I do just as the Father commanded me. Arise, let us go from here.",
+      "little_reader_adaptation": "Jesus obeyed the Father so the world would know his love. Then Jesus said, ‘Get up. Let us leave.’",
+      "meaning": "Jesus willingly obeys the Father and thereby displays his love. His unique obedience leads toward the cross; it does not teach children to follow unsafe adult commands.",
+      "memory_phrase": "Jesus willingly loves Father.",
+      "prayer": "Jesus, help me listen carefully to your words.",
+      "discussion_question": "How is Jesus’ obedience different from unsafe compliance?",
+      "family_discussion": "Review how safe obedience differs from obeying harmful or secretive requests.",
+      "do_it_today": "Follow one safe, loving instruction you understand, or ask a question.",
+      "illustration_prompt": "Respectful storybook watercolour of John 14:31, with Jesus teaching his disciples in an upper room, warm lamplight, historically appropriate clothing, no text.",
+      "keywords": [
+        "Jesus",
+        "disciples",
+        "farewell"
+      ]
+    }
+  ]
+}

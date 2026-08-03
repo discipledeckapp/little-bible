@@ -1,0 +1,125 @@
+{
+  "role": "child",
+  "verdict": "FAIL",
+  "draftHash": "1e03cd6b9a2573c62c913cd884d02122e56372052605d4a4daa121e0d5b01bc6",
+  "standardVersion": "2.1",
+  "reviewedAt": "2026-08-02T06:55:56.240690+00:00",
+  "ageAccess": {
+    "default": "Emerging Reader 6–8 and Independent Reader 9–12 with adult support",
+    "earlyLearner": "Ages 3–5 may receive only explicitly curated, adult-led selections such as verses 1, 9, 12, 25, and 35–38; the full chapter is not approved for unrestricted Early Learner access"
+  },
+  "chapterLevelBlockers": [
+    {
+      "fields": ["prayer"],
+      "scope": "verses 1–41",
+      "issue": "Only two generic prayers are repeated across the whole chapter. They are not naturally connected to each verse as Standard 2.1 requires.",
+      "requiredCorrection": "Write a brief, optional, verse-specific model response for every verse. Do not add healing guarantees, disability blame, compelled disclosure, fear suppression, or pressure to profess belief."
+    },
+    {
+      "fields": ["discussion_question"],
+      "scope": "verses 1–41",
+      "issue": "Every question is the same recall template with only the verse number changed. This does not provide distinct observation, sequencing, emotion, perspective, meaning, or safe-application learning.",
+      "requiredCorrection": "Replace every question with a verse-specific prompt. Examples: v2 'What harmful assumption did the disciples make?'; v9 'Why is it important that the man speaks for himself?'; v25 'What does the man know, and what does he say he does not know?'; v34 'What misuse of power occurs here? You may pass.'"
+    },
+    {
+      "fields": ["family_discussion"],
+      "scope": "verses 1–41",
+      "issue": "Every entry is a read-the-verse placeholder and offers no passage-specific family scaffolding.",
+      "requiredCorrection": "Replace every entry with a distinct, context-aware discussion. Explicitly address disability dignity/blame (vv1–3, 39–41), non-medical imitation (vv6–7), listening to the man (vv8–12, 15–17, 24–3), coercion/exclusion and safe help (vv18‑23, 26‑35), and voluntary belief without pressure (vv35‑38). Sensitive prompts must say 'You may pass.'"
+    },
+    {
+      "fields": ["do_it_today"],
+      "scope": "verses 1–41",
+      "issue": "Every activity is the same retelling task. Activities are not varied, optional, or developmentally responsive, and repetitive retelling of stigmatizing accusations can rehearse harm.",
+      "requiredCorrection": "Create varied optional actions, including listening, ordering events, identifying what is known/unknown, practising a safe boundary, correcting a disability myth, and seeking trusted help. Never imitate saliva/mud treatment, demand health or trauma disclosure, role-play coercive interrogation, force prayer/profession, or make blindness a game. Some sensitive verses should state 'No action needed; listen or pass.'"
+    },
+    {
+      "fields": ["illustration_prompt"],
+      "scope": "verses 1‑41",
+      "issue": "Every prompt is a generic numbered placeholder rather than a scene-specific visual instruction. Although it requests dignity, it does not control who is shown, the action, coercive power dynamics, or sight-metaphor risks.",
+      "requiredCorrection": "Write a scene-specific prompt for every verse. Keep the man as a dignified adult rather than a helpless caricature; avoid blank/clouded eyes, darkness as disability, threatening crowds, humiliating postures, saliva close-ups, or cure-as-human-worth imagery. Distinguish literal blindness in vv1‑38 from metaphorical blindness in vv39‑41."
+    },
+    {
+      "fields": ["parent_guide"],
+      "scope": "chapter",
+      "issue": "The guide says 'selected verses for ages 3–5' without identifying them, leaving the access gate operationally ambiguous.",
+      "requiredCorrection": "Name the approved Early Learner selections or state that none are enabled by default. The review recommends only adult-led verses 1, 9, 12, 25, and 35‑38, with the full chapter unavailable to ages 3–5."
+    }
+  ],
+  "verseLevelBlockers": [
+    {
+      "verse": 2,
+      "field": "little_reader_adaptation",
+      "issue": "It omits the causal claim that the alleged sin resulted in the man being born blind.",
+      "replacement": "The disciples asked whether the man or his parents had sinned so that he was born blind."
+    },
+    {
+      "verse": 4,
+      "field": "little_reader_adaptation",
+      "issue": "It deletes the day/night metaphor and the claim that no one can work when night comes.",
+      "replacement": "Jesus must do the Sender's works while it is day. Night is coming, when no one can work."
+    },
+    {
+      "verse": 6,
+      "field": "little_reader_adaptation",
+      "issue": "It silently removes the saliva/spitting used to make the mud, the difficult detail that most needs faithful adult context.",
+      "replacement": "Jesus spat on the ground, made mud with the saliva, and put it on the man's eyes."
+    },
+    {
+      "verse": 7,
+      "field": "little_reader_adaptation",
+      "issue": "It deletes Jesus' command and the named pool, reducing the verse to outcome narration.",
+      "replacement": "Jesus told him to wash in the pool of Siloam. He went, washed, and came back seeing."
+    },
+    {
+      "verse": 11,
+      "field": "little_reader_adaptation",
+      "issue": "'He told what Jesus did' is a summary that removes every source action.",
+      "replacement": "He said Jesus put mud on his eyes and told him to wash in Siloam. He washed and received sight."
+    },
+    {
+      "verse": 16,
+      "field": "little_reader_adaptation",
+      "issue": "It removes both sides' stated Sabbath/sign reasoning and only reports disagreement.",
+      "replacement": "Some Pharisees said Jesus was not from God because he did not keep the Sabbath. Others asked how a sinner could do such signs."
+    },
+    {
+      "verse": 17,
+      "field": "little_reader_adaptation",
+      "issue": "It removes the leaders' question and keeps only the answer.",
+      "replacement": "They asked what the man thought about Jesus. He said, 'He is a prophet.'"
+    },
+    {
+      "verse": 18,
+      "field": "little_reader_adaptation",
+      "issue": "It replaces the source's 'the Jews' with the interpreted referent 'leaders'; that explanation belongs in meaning, not the adaptation.",
+      "replacement": "The Jews did not believe that he had been blind and received sight until they called his parents."
+    },
+    {
+      "verse": 21,
+      "field": "little_reader_adaptation",
+      "issue": "It omits the parents' stated uncertainty about how he sees and who opened his eyes.",
+      "replacement": "His parents said they did not know how he now saw or who opened his eyes. They said he was old enough to speak for himself."
+    },
+    {
+      "verses": [3, 5, 20, 21, 28, 29, 30, 31, 32, 33],
+      "field": "little_bible",
+      "issue": "Direct speech is split across independent JSON records using unmatched opening or closing quotation marks. Each verse may be displayed alone and must be grammatical and self-contained.",
+      "requiredCorrection": "Normalize quotation marks per record: close v3; remove the orphaned close in v5; close v20 and open v21; close v28 and open v29; close v30 and open/close each of vv31‑33 as direct speech. Do not change the source claims."
+    },
+    {
+      "verse": 34,
+      "field": "little_bible",
+      "issue": "'Threw him out' suggests physical throwing, while the context/source describes exclusion or expulsion.",
+      "replacement": "They answered him, 'You were completely born in sins, and are you teaching us?' Then they put him out."
+    }
+  ],
+  "resolvedAreas": [
+    "Chapter summary, main lesson, application, and adult meanings consistently reject disability blame and physical-blindness stigma.",
+    "The mud treatment is identified as descriptive rather than medical advice.",
+    "Jewish context is not generalized to all Jewish people.",
+    "Coercive questioning, religious exclusion, and voluntary belief are recognized in adult-facing fields.",
+    "The sealed source is valid JSON with 41 sequential verse records."
+  ],
+  "passCondition": "Replace the five chapter-wide placeholder field families, make age access operationally explicit, correct all listed translation/adaptation blockers, reseal, and obtain fresh theology and child reviews for the new hash."
+}

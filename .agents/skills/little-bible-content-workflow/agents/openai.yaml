@@ -1,0 +1,4 @@
+interface:
+  display_name: "Little Bible Content Workflow"
+  short_description: "Coordinate concurrent chapter production safely"
+  default_prompt: "Use $little-bible-content-workflow to coordinate concurrent chapter production and review."

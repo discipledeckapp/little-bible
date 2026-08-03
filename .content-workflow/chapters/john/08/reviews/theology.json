@@ -1,0 +1,100 @@
+{
+  "role": "theology",
+  "verdict": "FAIL",
+  "draftHash": "8e0ec3e7d151018d9b244186c79afb5717095c46f98913448f621635b6a056ef",
+  "standardVersion": "2.1",
+  "reviewedAt": "2026-08-02T06:45:14.937877+00:00",
+  "findings": [
+    {
+      "chapter": 8,
+      "verse": "1-59",
+      "field": "meaning",
+      "reason": "Every verse uses the same generic placeholder instead of explaining that verse's literary and historical meaning, theological claims, audience, and disputed readings. This fails Standard 2.1 and leaves the adultery account, Father-Son witness, death-in-sins warnings, freedom/slavery imagery, anti-Judaism risks, eternal versus physical death, Abraham's vision, and Christ's pre-existence unexplained.",
+      "replacement": "Write a verse-specific adult explanation for every verse. At minimum identify the manuscript status of 8:1-11, contextual judgment in 8:15-18, the disputed translation of 8:25, eternal rather than physical death in 8:51, interpretations of Abraham seeing Christ's day in 8:56, and the pre-existence/divine-identity force of 8:58."
+    },
+    {
+      "chapter": 8,
+      "verse": "1-59",
+      "field": "memory_phrase",
+      "reason": "Every memory phrase is merely a verse reference such as 'John 8:1', not a labelled summary of the verse as required.",
+      "replacement": "Replace each reference placeholder with a faithful short summary, normally four words or fewer, without presenting it as Scripture or creating a new promise."
+    },
+    {
+      "chapter": 8,
+      "verse": "1-59",
+      "field": "little_reader_adaptation",
+      "reason": "Every reader adaptation duplicates little_bible verbatim. It is not a shorter reading-support paraphrase and repeats all source-fidelity defects, malformed quotations, and difficult adult wording.",
+      "replacement": "Draft each field independently as a shorter faithful paraphrase while retaining every difficult essential claim, including adultery/stoning, death-in-sins, slavery to sin, devil/father language in its immediate audience, eternal death, and 'Before Abraham was, I am.'"
+    },
+    {
+      "chapter": 8,
+      "verse": "1-59",
+      "field": "prayer, discussion_question, family_discussion, do_it_today",
+      "reason": "These fields are repeated templates keyed only to verse numbers. They are not verse-connected pastoral responses or meaningful discussion/application and do not address the chapter's sexual-content, self-harm, coercion, prejudice, judgment, slavery, and violence safeguards.",
+      "replacement": "Write optional verse-specific material. Never solicit sexual or family secrets, confession to the app, self-harm disclosure to the app, demon diagnoses, identification of a 'devil's child', confrontation, unsafe reconciliation, or silence about abuse."
+    },
+    {
+      "chapter": 8,
+      "verse": "1-11",
+      "field": "parent_guide",
+      "reason": "The guide notes manuscript status but does not explain that the first-stone saying does not abolish safeguarding/reporting, that the absent male participant must not be supplied with an invented motive, or that 'neither do I condemn thee' does not remove accountability or force unsafe reconciliation.",
+      "replacement": "Append guidance that mercy and 'sin no more' remain together; victims may report harm and maintain boundaries; forgiveness does not require restored access; and Jesus' first-stone challenge must never silence legitimate protection or justice."
+    },
+    {
+      "chapter": 8,
+      "verse": "25, 44, 51, 56, 58-59",
+      "field": "parent_guide",
+      "reason": "Required theological/textual issues are absent: the disputed wording of 8:25, the restricted immediate audience and anti-Judaism boundary for 8:44, eternal versus physical death in 8:51, disputed understandings of Abraham seeing Jesus' day in 8:56, the pre-existence/divine-name discussion in 8:58, and textual/violence caution in 8:59.",
+      "replacement": "Add concise adult guidance for each issue without deciding disputed readings inside little_bible or applying Jesus' accusation in 8:44 to Jewish people or to children who lie."
+    },
+    {
+      "chapter": 8,
+      "verse": "1-12",
+      "field": "little_bible",
+      "reason": "Multiple source clauses and connectors are changed or added: v1 adds 'but'; v2 replaces 'And' with 'Now' and adds 'very'; v3 omits 'And' and 'unto him'; v4 changes passive 'was taken' to 'we found' and has an unclosed quotation; v5 adds 'our', identifies 'such' as women, drops 'but', and adds 'about her'; v6 omits 'as though he heard them not'; v7 changes 'So' to 'But' and 'lifted up himself' to 'looked up'; v8 adds 'with his finger'; vv9-10 omit or reshape essential clauses; v11 adds 'your way' and 'from now on'; v12 adds 'therefore'.",
+      "replacement": "Retranslate vv1-12 clause by clause. Examples: v1 'Jesus went to the Mount of Olives.'; v6 must end 'as though he did not hear them'; v8 'And again he stooped down and wrote on the ground.'; v11 'She said, No one, Lord. And Jesus said to her, Neither do I condemn you: go, and sin no more.'"
+    },
+    {
+      "chapter": 8,
+      "verse": "14, 16, 19-25",
+      "field": "little_bible",
+      "reason": "Translation boundaries fail through malformed quotes and changed logic: v14 is unclosed; v16 changes 'I and the Father' into 'I am with the Father'; v19 changes 'Then' to 'therefore'; v20 changes laying hands on Jesus into the interpreted legal action 'arrested'; vv21-22 add 'therefore'; v23 is unclosed; v25 both adds 'therefore' and smooths a textually disputed saying into one settled interpretation.",
+      "replacement": "Restore each source connector and ambiguity. v16 should end 'for I am not alone, but I and the Father who sent me.' v25 must preserve the KJV reading while its translation dispute is explained only in meaning."
+    },
+    {
+      "chapter": 8,
+      "verse": "28-32",
+      "field": "little_bible",
+      "reason": "v28 changes 'Then' to 'therefore' and is unclosed; v29 omits opening 'And'; v30 changes 'these words' to 'these things'; v31 changes 'Then' to 'therefore' and shifts 'believed on him' to past-perfect 'had believed'; v32 omits opening 'And'.",
+      "replacement": "Restore the explicit connectors, tense, and repeated wording. Keep vv28-32 as continuous direct speech/narration without adding causal inference."
+    },
+    {
+      "chapter": 8,
+      "verse": "34-45",
+      "field": "little_bible",
+      "reason": "The section contains unclosed speech and altered contrasts: v35 omits 'And' and 'but'; v38 adds 'also'; v39 is unclosed; v41 omits 'Then'; v42 adds 'Therefore', changes 'neither' to a causal 'For', and is unclosed; v44 changes past 'abode not' to present 'does not stand' and resolves 'father of it' to 'father of lies'; v45 changes 'And' to 'But' and omits the audience 'you' from 'tell you the truth'.",
+      "replacement": "Retranslate with every connector, tense, pronoun, and ambiguity preserved. v45: 'And because I tell you the truth, you do not believe me.' Explain the immediate hostile audience and anti-Judaism safeguards outside little_bible."
+    },
+    {
+      "chapter": 8,
+      "verse": "46-59",
+      "field": "little_bible",
+      "reason": "Connectors, pronouns, modality, and agency are altered: v46 omits 'And'; v49 is unclosed; v50 changes 'And' to 'But'; v52 has malformed nested quotation; v54 changes 'your God' to 'our God' and substitutes glory for honour; v55 omits 'Yet' and changes 'should say/shall be' to 'said/would be'; v57 changes 'Then' to 'therefore'; v58 adds interpretive all-caps 'I AM' and expands 'was'; v59 changes 'Then' to 'Therefore' and active 'Jesus hid himself' to passive 'Jesus was hidden'.",
+      "replacement": "Retranslate vv46-59 directly from KJV. v54 must say 'of whom you say that he is your God'; v58 must visibly preserve 'Before Abraham was, I am' without typographic doctrinal commentary; v59 must preserve Jesus as the subject who hid himself."
+    },
+    {
+      "chapter": 8,
+      "verse": "14, 23, 25, 28, 31, 34, 39, 42, 49, 52, 54",
+      "field": "little_bible, little_reader_adaptation",
+      "reason": "These records contain unmatched quotation marks. Because each verse is stored and may be rendered independently, malformed direct speech is a content defect and obscures where speakers change.",
+      "replacement": "Balance quotation marks within each stored verse while retaining direct speech and without adding a speaker label absent from that verse."
+    },
+    {
+      "chapter": 8,
+      "verse": "12-59",
+      "field": "meaning",
+      "reason": "The placeholders fail especially serious doctrinal and anti-bias requirements: Father and Son must remain distinct in vv12-20; death-in-sins warnings require audience and pastoral scope in vv21-24; truth/freedom and slavery require non-perfectionist explanation in vv31-36; Abrahamic ancestry must not be denied in vv37-43; v44 must not become ethnic demonization; vv48-49 must reject the Samaritan insult and demon/mental-health stigma; vv51-59 require eternal-life, pre-existence, and violence context.",
+      "replacement": "Provide verse-specific exegesis that preserves severe claims without universalizing hostile accusations to Jewish people, other religions, questioning children, disabled learners, or children who have lied."
+    }
+  ]
+}

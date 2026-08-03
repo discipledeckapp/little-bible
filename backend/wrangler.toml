@@ -1,0 +1,16 @@
+name = "little-bible-backend"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "little-bible-db"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+[[r2_buckets]]
+binding = "CONTENT"
+bucket_name = "little-bible-content"
+
+[[kv_namespaces]]
+binding = "MANIFEST_KV"
+id = "REPLACE_WITH_YOUR_KV_ID"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Little Bible Content Writer"
+  short_description: "Write faithful child-readable Bible content"
+  default_prompt: "Use $little-bible-content-writer to draft the next reserved Little Bible chapter."

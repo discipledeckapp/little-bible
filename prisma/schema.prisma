@@ -45,22 +45,29 @@ model Session {
 }
 
 model User {
-  id            String     @id @default(cuid())
-  name          String?
-  email         String?    @unique
-  emailVerified DateTime?
-  image         String?
-  createdAt     DateTime   @default(now())
-  role          String?    // AdminRole enum value (see note above); null = regular user
-  accounts      Account[]
-  sessions      Session[]
-  progress      UserProgress?
-  donations     Donation[]
-  family        Family?
-  auditLogs     AdminAuditLog[]
-  appInterest   AppInterest?
-  activityRecords      ActivityRecord[]
-  memoryVerseProgress  MemoryVerseProgress[]
+  id                  String                @id @default(cuid())
+  name                String?
+  email               String?               @unique
+  emailVerified       DateTime?
+  image               String?
+  createdAt           DateTime              @default(now())
+  role                String? // AdminRole enum value (see note above); null = regular user
+  accounts            Account[]
+  sessions            Session[]
+  progress            UserProgress?
+  donations           Donation[]
+  family              Family?
+  auditLogs           AdminAuditLog[]
+  appInterest         AppInterest?
+  activityRecords     ActivityRecord[]
+  memoryVerseProgress MemoryVerseProgress[]
+  analyticsEvents     AnalyticsEvent[]
+  mobileProgress      MobileProgress[]
+  mobileEntitlements  MobileEntitlement[]
+  wantsEmailDigest    Boolean               @default(false)
+  wantsNotifications  Boolean               @default(false)
+  cloudSyncEnabled    Boolean               @default(false)
+  consentedAt         DateTime?
 }
 
 model VerificationToken {
@@ -74,74 +81,74 @@ model VerificationToken {
 // ── App data ─────────────────────────────────────────────────────────────────
 
 model UserProgress {
-  id                   String   @id @default(cuid())
-  userId               String   @unique
-  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  wisdomSeeds          Int      @default(0)
-  streak               Int      @default(0)
-  lastActiveDate       String   @default("")
-  completedVersesJson  String   @default("{}")
-  completedChapters    String   @default("[]") // JSON array of chapter refs (was String[])
-  badgesJson           String   @default("[]")
-  sessionsJson         String   @default("[]")
-  updatedAt            DateTime @updatedAt
+  id                  String   @id @default(cuid())
+  userId              String   @unique
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wisdomSeeds         Int      @default(0)
+  streak              Int      @default(0)
+  lastActiveDate      String   @default("")
+  completedVersesJson String   @default("{}")
+  completedChapters   String   @default("[]") // JSON array of chapter refs (was String[])
+  badgesJson          String   @default("[]")
+  sessionsJson        String   @default("[]")
+  updatedAt           DateTime @updatedAt
 }
 
 // ── Family Identity System ────────────────────────────────────────────────────
 
 model Family {
-  id         String   @id @default(cuid())
+  id         String            @id @default(cuid())
   name       String?
-  ownerId    String   @unique
-  owner      User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId    String            @unique
+  owner      User              @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   members    FamilyMember[]
   streak     FamilyStreak?
   prayers    FamilyPrayer[]
   milestones FamilyMilestone[]
   journeyId  String?
-  createdAt  DateTime @default(now())
+  createdAt  DateTime          @default(now())
 }
 
 model FamilyMember {
-  id          String   @id @default(cuid())
-  familyId    String
-  family      Family   @relation(fields: [familyId], references: [id], onDelete: Cascade)
-  name        String
-  age         Int?
-  avatarId    String   @default("lion")
-  accentColor String?
-  faithGoals  String   @default("[]") // JSON array of goals (was String[])
-  seeds       Int      @default(0)
-  sortOrder   Int      @default(0)
-  progress    MemberProgress?
-  sessions    MemberSession[]
-  activityRecords      ActivityRecord[]
-  memoryVerseProgress  MemoryVerseProgress[]
-  createdAt   DateTime @default(now())
+  id                  String                @id @default(cuid())
+  familyId            String
+  family              Family                @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  name                String
+  age                 Int?
+  avatarId            String                @default("lion")
+  accentColor         String?
+  faithGoals          String                @default("[]") // JSON array of goals (was String[])
+  seeds               Int                   @default(0)
+  sortOrder           Int                   @default(0)
+  progress            MemberProgress?
+  sessions            MemberSession[]
+  activityRecords     ActivityRecord[]
+  memoryVerseProgress MemoryVerseProgress[]
+  createdAt           DateTime              @default(now())
 }
 
 model MemberProgress {
-  id                  String   @id @default(cuid())
-  memberId            String   @unique
+  id                  String       @id @default(cuid())
+  memberId            String       @unique
   member              FamilyMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
-  completedVersesJson String   @default("{}")
-  completedChapters   String   @default("[]") // JSON array of chapter refs (was String[])
-  memoryVersesJson    String   @default("[]")
+  completedVersesJson String       @default("{}")
+  completedChapters   String       @default("[]") // JSON array of chapter refs (was String[])
+  memoryVersesJson    String       @default("[]")
   lastReadBook        String?
   lastReadChapter     Int?
   lastReadAt          DateTime?
-  updatedAt           DateTime @updatedAt
+  updatedAt           DateTime     @updatedAt
 }
 
 model MemberSession {
-  id       String   @id @default(cuid())
+  id       String       @id @default(cuid())
   memberId String
   member   FamilyMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
   bookSlug String
   chapter  Int
   verse    Int
   mode     String
-  readAt   DateTime @default(now())
+  readAt   DateTime     @default(now())
 }
 
 model FamilyStreak {
@@ -179,15 +186,15 @@ model FamilyMilestone {
 // ── Donations ─────────────────────────────────────────────────────────────────
 
 model Donation {
-  id         String   @id @default(cuid())
-  userId     String?
-  user       User?    @relation(fields: [userId], references: [id])
-  amount     Int      // in smallest unit (cents / kobo)
-  currency   String   // 'usd' | 'ngn'
-  provider   String   // 'stripe' | 'paystack'
-  status     String   @default("pending") // 'pending' | 'completed' | 'failed'
-  reference  String?  @unique
-  createdAt  DateTime @default(now())
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  amount    Int // in smallest unit (cents / kobo)
+  currency  String // 'usd' | 'ngn'
+  provider  String // 'stripe' | 'paystack'
+  status    String   @default("pending") // 'pending' | 'completed' | 'failed'
+  reference String?  @unique
+  createdAt DateTime @default(now())
 }
 
 // ── Admin ─────────────────────────────────────────────────────────────────────
@@ -202,13 +209,46 @@ model AnalyticsEvent {
   verseNum  Int?
   storyId   String?
   mode      String?
-  props     String?  // JSON object (was Json?)
+  props     String? // JSON object (was Json?)
   createdAt DateTime @default(now())
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([event, createdAt])
   @@index([userId, createdAt])
   @@index([bookSlug, chapter])
   @@index([createdAt])
+}
+
+/// Privacy-minimised mobile progress. profileId is a random app identifier;
+/// nickname, drawings, free text and exact birth dates are never uploaded.
+model MobileProgress {
+  id         String   @id @default(cuid())
+  userId     String
+  profileId  String
+  operation  String
+  payload    String
+  clientId   String
+  createdAt  DateTime
+  receivedAt DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, clientId])
+  @@index([userId, profileId, receivedAt])
+}
+
+model MobileEntitlement {
+  id            String    @id @default(cuid())
+  userId        String
+  productId     String
+  platform      String
+  transactionId String    @unique
+  status        String    @default("active")
+  verifiedAt    DateTime  @default(now())
+  revokedAt     DateTime?
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+  @@index([userId, status])
 }
 
 model ContentReview {
@@ -217,7 +257,7 @@ model ContentReview {
   chapter    Int
   verseNum   Int?
   status     String   @default("pending") // pending | approved | needs_revision | flagged
-  concern    String?  // theological | too_difficult | language | other
+  concern    String? // theological | too_difficult | language | other
   notes      String?
   reviewerId String?
   createdAt  DateTime @default(now())
@@ -234,7 +274,7 @@ model AdminAuditLog {
   admin     User     @relation(fields: [adminId], references: [id])
   action    String
   targetId  String?
-  details   String?  // JSON object (was Json?)
+  details   String? // JSON object (was Json?)
   createdAt DateTime @default(now())
 
   @@index([adminId, createdAt])
@@ -269,14 +309,14 @@ model ActivityRecord {
   userId       String?
   memberId     String?
   storyId      String
-  activityType String   // 'memory-builder' | 'story-sequence' | 'character-match' | 'application'
+  activityType String // 'memory-builder' | 'story-sequence' | 'character-match' | 'application'
   score        Int      @default(0)
   perfect      Boolean  @default(false)
   seedsEarned  Int      @default(0)
   attempts     Int      @default(1)
   createdAt    DateTime @default(now())
 
-  user   User?         @relation(fields: [userId],   references: [id], onDelete: SetNull)
+  user   User?         @relation(fields: [userId], references: [id], onDelete: SetNull)
   member FamilyMember? @relation(fields: [memberId], references: [id], onDelete: SetNull)
 
   @@index([storyId])
@@ -298,7 +338,7 @@ model MemoryVerseProgress {
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
-  user   User?         @relation(fields: [userId],   references: [id], onDelete: SetNull)
+  user   User?         @relation(fields: [userId], references: [id], onDelete: SetNull)
   member FamilyMember? @relation(fields: [memberId], references: [id], onDelete: SetNull)
 
   @@unique([userId, verseRef])

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Little Bible Record Keeper"
+  short_description: "Validate, publish, and track approved chapters"
+  default_prompt: "Use $little-bible-record-keeper to validate and publish an approved chapter."
