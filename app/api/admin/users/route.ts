@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { parseStrArray } from '@/lib/db-json';
 import { requireAdminApi } from '@/lib/admin/auth';
+import { permanentlyDeleteUser } from '@/lib/account-deletion';
 
 export async function GET(req: NextRequest) {
   const result = await requireAdminApi('users');
@@ -105,4 +106,21 @@ export async function PATCH(req: NextRequest) {
   });
 
   return NextResponse.json(user);
+}
+
+export async function DELETE(req: NextRequest) {
+  const result = await requireAdminApi('users');
+  if (result.error) return result.error;
+  if (result.session.user.role !== 'SUPER_ADMIN') {
+    return NextResponse.json({ error: 'Only SUPER_ADMIN may permanently delete user data' }, { status: 403 });
+  }
+  const body = await req.json().catch(() => null) as { userId?: unknown; confirmation?: unknown } | null;
+  if (typeof body?.userId !== 'string' || body.confirmation !== 'DELETE') {
+    return NextResponse.json({ error: 'userId and DELETE confirmation required' }, { status: 400 });
+  }
+  if (body.userId === result.session.user.id) {
+    return NextResponse.json({ error: 'Use account settings to delete your own account' }, { status: 409 });
+  }
+  const deleted = await permanentlyDeleteUser(body.userId);
+  return NextResponse.json({ deleted });
 }

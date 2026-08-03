@@ -1,6 +1,19 @@
 # Little Bible — Project Instructions for Claude
 **Read this file before performing any work in this repository.**
 
+## Shared role skills
+
+Claude and Codex use the same canonical skills in `.agents/skills/`. Claude-facing skill adapters also exist in `.claude/skills/`.
+
+- `little-bible-content-workflow` coordinates concurrent work.
+- `little-bible-content-writer` owns chapter drafting.
+- `little-bible-theology-review` performs independent theology/source review.
+- `little-bible-child-review` performs independent child-learning/safeguarding review.
+- `little-bible-record-keeper` alone publishes and updates records.
+- `little-bible-scene-animation` owns story scene illustration and animation (`CustomPainter` vector art).
+
+For new content, `docs/LittleBible_Content_Standard_v2.md` Standard 2.1 or later overrides conflicting legacy limits in this file or older guides. The role ownership and work-packet protocol are mandatory.
+
 ---
 
 ## What This Project Is
@@ -67,6 +80,8 @@ All project standards are in `/docs/`. Read the relevant file before working in 
 | `LittleBible_Theology_Guide.md` | Doctrinal handling for all major themes | Writing any verse with God, sin, salvation, judgment, etc. |
 | `LittleBible_Review_Checklist.md` | Chapter approval checklist | Before publishing any new chapter |
 | `LittleBible_Product_Vision.md` | Platform phases and design principles | Adding features; making design decisions |
+| `LittleBible_Brand_Identity.md` | Lumi, the two marks, palette, app icon rules | Touching any logo, icon, or mascot artwork |
+| `LittleBible_Scene_Animation_Standard.md` | Scene illustration + animation rules, design box, art rules, verification | Drawing or animating any story scene |
 
 ---
 
