@@ -2,11 +2,27 @@ import Stripe from 'stripe';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2026-05-27.dahlia',
-});
+// Constructed per request, not at module scope. `next build` imports every
+// route module during "Collecting page data", so a module-scope client throws
+// "Neither apiKey nor config.authenticator provided" and fails the whole build
+// wherever STRIPE_SECRET_KEY is absent — which is every CI run, since the key
+// lives in .env.local and is gitignored.
+function getStripe(): Stripe | null {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) return null;
+  return new Stripe(key, { apiVersion: '2026-05-27.dahlia' });
+}
 
 export async function POST(req: Request) {
+  const stripe = getStripe();
+  if (!stripe) {
+    console.error('STRIPE_SECRET_KEY is not configured; USD donations are unavailable.');
+    return Response.json(
+      { error: 'Card donations are temporarily unavailable. Please try again later.' },
+      { status: 503 },
+    );
+  }
+
   const session = await auth();
   const { amount, currency = 'usd' } = await req.json() as { amount: number; currency?: string };
 
