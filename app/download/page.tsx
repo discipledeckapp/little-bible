@@ -4,11 +4,12 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import LumiMascot from '@/components/mascot/LumiMascot';
 import AppInterestPanel from '@/components/app-interest/AppInterestPanel';
+import { PLAY_STORE_URL } from '@/lib/appStore';
 
 export const metadata: Metadata = {
   title: 'Get the App — Little Bible',
   description:
-    'Little Bible is coming to iPhone and Android. Be the first to know when it launches — all 66 books of Scripture for little hearts, on your phone.',
+    'Little Bible is out now on Google Play, with iPhone on the way — all 66 books of Scripture for little hearts, on your phone.',
 };
 
 const FEATURES = [
@@ -33,9 +34,9 @@ export default function DownloadPage() {
             <LumiMascot stage="tree-of-life" className="w-32 h-32 sm:w-40 sm:h-40" animate />
           </div>
 
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-2 border border-white/15 mb-6">
-            <span className="text-base">📱</span>
-            <p className="text-amber-200 text-xs font-bold tracking-wide uppercase">App Coming Soon</p>
+          <div className="inline-flex items-center gap-2 bg-emerald-500/15 backdrop-blur-sm rounded-2xl px-4 py-2 border border-emerald-400/30 mb-6">
+            <span className="text-base">🎉</span>
+            <p className="text-emerald-200 text-xs font-bold tracking-wide uppercase">Now on Google Play</p>
           </div>
 
           <h1
@@ -48,26 +49,31 @@ export default function DownloadPage() {
 
           <p className="text-amber-100/80 text-lg leading-relaxed mb-6 max-w-md mx-auto">
             All 66 books of Scripture, faithfully adapted for children ages 4–7.
-            We&apos;re building the app — be the first to know when it launches.
+            Out now on Android — iPhone is on the way.
           </p>
 
-          {/* App store badges — coming soon */}
-          <div className="flex items-center justify-center gap-3 mb-8">
-            {[
-              { icon: '🍎', name: 'App Store',   sub: 'iOS · Coming Soon'     },
-              { icon: '🤖', name: 'Google Play', sub: 'Android · Coming Soon' },
-            ].map(b => (
-              <div
-                key={b.name}
-                className="flex items-center gap-2.5 bg-white/10 border border-white/15 rounded-2xl px-5 py-3 opacity-70"
-              >
-                <span className="text-2xl">{b.icon}</span>
-                <div className="text-left">
-                  <p className="text-white text-xs font-bold leading-tight">{b.name}</p>
-                  <p className="text-amber-300/70 text-[10px] font-medium">{b.sub}</p>
-                </div>
+          {/* App store badges — Android live, iOS pending */}
+          <div className="flex items-center justify-center gap-3 mb-8 flex-wrap">
+            <a
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 bg-white hover:bg-amber-50 rounded-2xl px-5 py-3 shadow-lg transition-colors"
+            >
+              <span className="text-2xl">🤖</span>
+              <div className="text-left">
+                <p className="text-stone-500 text-[10px] font-medium leading-tight">GET IT ON</p>
+                <p className="text-stone-900 text-sm font-bold leading-tight">Google Play</p>
               </div>
-            ))}
+            </a>
+
+            <div className="flex items-center gap-2.5 bg-white/10 border border-white/15 rounded-2xl px-5 py-3 opacity-70">
+              <span className="text-2xl">🍎</span>
+              <div className="text-left">
+                <p className="text-white text-xs font-bold leading-tight">App Store</p>
+                <p className="text-amber-300/70 text-[10px] font-medium">iOS · Coming Soon</p>
+              </div>
+            </div>
           </div>
 
           <p className="text-amber-400/60 text-sm">

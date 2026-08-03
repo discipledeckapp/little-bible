@@ -221,8 +221,8 @@ export default function HeroScene({ lumiStage = 'sapling' }: HeroSceneProps) {
       >
         <div className="flex items-center gap-1.5 bg-black/20 backdrop-blur-sm rounded-full px-3.5 py-1.5 border border-white/12">
           <span className="text-[11px]">🌐</span>
-          <span className="text-white/85 text-[10px] font-semibold tracking-wide">Free on the web now</span>
-          <span className="text-amber-300/50 text-[10px] font-medium">· App coming soon</span>
+          <span className="text-white/85 text-[10px] font-semibold tracking-wide">Free on the web</span>
+          <span className="text-amber-300/70 text-[10px] font-medium">· Now on Google Play</span>
         </div>
       </div>
 

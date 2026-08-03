@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { PLAY_STORE_URL } from '@/lib/appStore';
 
 export default function Footer() {
   return (
@@ -104,21 +105,27 @@ export default function Footer() {
 
         {/* App store chips */}
         <div className="flex items-center gap-3 flex-wrap mb-8">
-          <p className="text-amber-600/70 text-xs font-semibold uppercase tracking-widest">App coming soon:</p>
-          {[
-            { icon: '🍎', label: 'App Store',   href: '/download' },
-            { icon: '🤖', label: 'Google Play', href: '/download' },
-          ].map(b => (
-            <Link
-              key={b.label}
-              href={b.href}
-              className="flex items-center gap-2 bg-white/8 hover:bg-white/14 border border-white/12 rounded-xl px-3.5 py-2 transition-colors"
-            >
-              <span className="text-base">{b.icon}</span>
-              <span className="text-amber-200/80 text-xs font-semibold">{b.label}</span>
-              <span className="text-amber-500/60 text-[10px] font-medium">Soon</span>
-            </Link>
-          ))}
+          <p className="text-amber-600/70 text-xs font-semibold uppercase tracking-widest">Get the app:</p>
+
+          <a
+            href={PLAY_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white/12 hover:bg-white/20 border border-white/20 rounded-xl px-3.5 py-2 transition-colors"
+          >
+            <span className="text-base">🤖</span>
+            <span className="text-amber-100 text-xs font-semibold">Google Play</span>
+            <span className="text-emerald-300/80 text-[10px] font-bold">Available</span>
+          </a>
+
+          <Link
+            href="/download"
+            className="flex items-center gap-2 bg-white/8 hover:bg-white/14 border border-white/12 rounded-xl px-3.5 py-2 transition-colors"
+          >
+            <span className="text-base">🍎</span>
+            <span className="text-amber-200/80 text-xs font-semibold">App Store</span>
+            <span className="text-amber-500/60 text-[10px] font-medium">Soon</span>
+          </Link>
         </div>
 
         {/* Divider */}

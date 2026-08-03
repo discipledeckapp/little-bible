@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AppInterestPanel from './AppInterestPanel';
+import { PLAY_STORE_URL } from '@/lib/appStore';
 
 export default function AppInterestBanner() {
   return (
@@ -11,7 +12,7 @@ export default function AppInterestBanner() {
           <div className="inline-flex items-center gap-2 bg-amber-800/60 rounded-2xl px-4 py-2 border border-amber-700/40 mb-5">
             <span className="text-xl">📱</span>
             <p className="text-amber-300 text-xs font-bold uppercase tracking-widest">
-              Coming to Your Phone
+              Out Now on Android
             </p>
           </div>
 
@@ -24,8 +25,8 @@ export default function AppInterestBanner() {
           </h2>
 
           <p className="text-amber-200/70 text-base max-w-md mx-auto leading-relaxed">
-            The app is in development. Be the first to know when it launches
-            on your platform — no marketing, just one message.
+            Little Bible is out now on Google Play. Tell us if you want the
+            iPhone version and we&apos;ll send one message when it lands.
           </p>
         </div>
 
@@ -34,24 +35,31 @@ export default function AppInterestBanner() {
           <AppInterestPanel compact />
         </div>
 
-        {/* App store badges — coming soon */}
-        <div className="flex items-center justify-center gap-4 mt-8">
-          {[
-            { icon: '🍎', label: 'App Store',    sub: 'iOS — Coming Soon'     },
-            { icon: '🤖', label: 'Google Play',  sub: 'Android — Coming Soon' },
-          ].map(b => (
-            <div
-              key={b.label}
-              className="flex items-center gap-3 bg-white/8 border border-white/12 rounded-2xl px-5 py-3 opacity-60"
-              aria-label={`${b.label} — ${b.sub}`}
-            >
-              <span className="text-2xl">{b.icon}</span>
-              <div>
-                <p className="text-white text-xs font-semibold">{b.label}</p>
-                <p className="text-amber-400/70 text-[10px] font-medium">{b.sub}</p>
-              </div>
+        {/* App store badges — Android live, iOS pending */}
+        <div className="flex items-center justify-center gap-4 mt-8 flex-wrap">
+          <a
+            href={PLAY_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 bg-white hover:bg-amber-50 rounded-2xl px-5 py-3 shadow-lg transition-colors"
+          >
+            <span className="text-2xl">🤖</span>
+            <div className="text-left">
+              <p className="text-stone-500 text-[10px] font-medium leading-tight">GET IT ON</p>
+              <p className="text-stone-900 text-sm font-bold leading-tight">Google Play</p>
             </div>
-          ))}
+          </a>
+
+          <div
+            className="flex items-center gap-3 bg-white/8 border border-white/12 rounded-2xl px-5 py-3 opacity-60"
+            aria-label="App Store — iOS, coming soon"
+          >
+            <span className="text-2xl">🍎</span>
+            <div>
+              <p className="text-white text-xs font-semibold">App Store</p>
+              <p className="text-amber-400/70 text-[10px] font-medium">iOS — Coming Soon</p>
+            </div>
+          </div>
         </div>
 
         <p className="text-center mt-6">
