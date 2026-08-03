@@ -11,8 +11,8 @@ import Footer from '@/components/layout/Footer';
 // contact details. Confirm the mailbox actually receives mail and that the
 // controller name matches the entity that will answer a regulator.
 // ─────────────────────────────────────────────────────────────────────────────
-const CONTACT_EMAIL = 'littlebible.org@gmail.com';
-const CONTROLLER = 'Little Bible';
+const CONTACT_EMAIL = 'seyiadelaju@gmail.com';
+const CONTROLLER = 'Growth Figures Limited';
 const EFFECTIVE_DATE = '3 August 2026';
 
 export const metadata: Metadata = {
