@@ -1,0 +1,61 @@
+{
+  "id": "noahs-rainbow-promise",
+  "sensitivityTier": "general",
+  "title": "God's Rainbow Promise",
+  "subtitle": "After the flood, God made a promise He will keep forever",
+  "collection": "the-great-flood",
+  "mainTruth": "God keeps His promises, and every rainbow is a reminder of His faithfulness.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 8-9",
+  "durationMinutes": 5,
+  "coverEmoji": "🌈",
+  "coverColor": "#F59E0B",
+  "illustrationPrompt": "A brilliant rainbow over calm water after a storm, Noah and his family looking up, the ark behind them on a mountain, gouache storybook illustration in warm celebration colours",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "The rain had stopped. For weeks and weeks the water had covered everything — but now it was going down. Noah's ark drifted on the still water, and inside, all the animals waited.\n\nFinally, the ark came to rest on a mountain. Noah sent out a dove, and when it came back with a fresh olive leaf in its beak, Noah knew — the earth was growing again! He waited a little longer, and then God said: 'Come out.'\n\nNoah and his family stepped off the ark onto dry land. They could smell the earth. They could hear birds. The animals — elephants and deer, birds and beetles — streamed out into the wide world.\n\nThe first thing Noah did was thank God.\n\nAnd God made a promise. Not just to Noah and his family. To every living creature. To every person who would ever be born. He said: 'I promise that a flood like this will never destroy the whole earth again. And here is the sign of my promise:' And across the sky, God stretched a rainbow — red, orange, yellow, green, blue, and violet — arching from one horizon to the other.\n\n'Every time I bring clouds over the earth,' God said, 'the rainbow will appear — and I will remember my promise to you.'\n\nGod keeps His promises. Every rainbow you see is a reminder — painted across the sky by God Himself.",
+      "childText": "After Noah's big boat landed safely, God made a promise. He painted a rainbow in the sky and said: 'I will never forget you.' Every rainbow you see is God keeping that promise. God always keeps His promises!",
+      "verses": [
+        {
+          "ref": "Genesis 8:1",
+          "kjv": "And God remembered Noah, and every living thing, and all the cattle that was with him in the ark: and God made a wind to pass over the earth, and the waters asswaged.",
+          "little_bible": "God remembered Noah. He sent a wind. The water began to go down."
+        },
+        {
+          "ref": "Genesis 9:13",
+          "kjv": "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth.",
+          "little_bible": "God put a rainbow in the sky. The rainbow is God's promise sign. He will never forget us."
+        },
+        {
+          "ref": "Genesis 9:16",
+          "kjv": "And the bow shall be in the cloud; and I will look upon it, that I may remember the everlasting covenant between God and every living creature of all flesh that is upon the earth.",
+          "little_bible": "When I see the rainbow in the clouds, I will remember my promise — my forever promise — to every living creature on earth."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "God chose a rainbow as a sign of His promise. Why do you think He chose something beautiful that appears after rain?",
+      "parentGuide": "The rainbow follows the storm — beauty after difficulty. You don't need to force the application, but it's there: God's promises often come to light through hard times. Let your child sit with that image.",
+      "familyQuestion": "Can you think of a promise someone made to you that they kept? How did that make you feel?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank you for keeping your promises. Thank you for the rainbow — for painting it in the sky to remind us that you never forget. Help us to trust you even when things are hard, because we know you always keep your word. Amen.",
+      "childPrompt": "You can thank God for one promise of His that you love!"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "When I see the rainbow in the clouds, I will remember my forever promise to every living creature on earth.",
+      "ref": "Genesis 9:16",
+      "memoryPhrase": "God's rainbow — His forever promise!",
+      "tip": "Draw a rainbow in the air with your finger when you say 'rainbow'!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Draw or paint a rainbow together. Write underneath it one promise of God that your family wants to remember.",
+      "parentNote": "God's covenant with Noah is the first of many biblical covenants — a long chain of God binding Himself to His people. This is a wonderful entry point: God's promises are not suggestions, they are commitments He makes to all creation, including this child."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-saves",
+  "memoryBuilder": {
+    "phrase": "Jesus has risen — He is alive!",
+    "phraseWords": ["Jesus", "has", "risen", "—", "He", "is", "alive!"],
+    "verseRef": "Luke 24:6",
+    "verseText": "He is not here — He has risen!",
+    "verseWords": ["He", "is", "not", "here", "—", "He", "has", "risen!"]
+  },
+  "sequence": {
+    "prompt": "What happened when Jesus saved us? Put it in order.",
+    "items": [
+      { "id": "cross",  "label": "Jesus died on the cross",    "emoji": "✝️", "order": 1 },
+      { "id": "tomb",   "label": "Jesus was put in the tomb",  "emoji": "🪨", "order": 2 },
+      { "id": "rise",   "label": "Jesus rose from the dead",   "emoji": "✨", "order": 3 },
+      { "id": "alive",  "label": "Jesus is alive forever",     "emoji": "🌅", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match what happened with what it means for us.",
+    "questionTemplate": "What does it mean that {left}?",
+    "pairs": [
+      { "leftId": "died",   "left": "Jesus died",      "leftEmoji": "✝️", "rightId": "sins",    "right": "Takes away our wrongs",  "rightEmoji": "❤️" },
+      { "leftId": "rose",   "left": "Jesus rose",      "leftEmoji": "✨", "rightId": "life",    "right": "Gives us life with God", "rightEmoji": "🌱" },
+      { "leftId": "alive",  "left": "Jesus is alive",  "leftEmoji": "🙏", "rightId": "hears",   "right": "He hears our prayers",   "rightEmoji": "👂" }
+    ]
+  },
+  "application": {
+    "question": "The angels said 'He has risen!' That means Jesus is alive RIGHT NOW. How does that make you feel?",
+    "options": [
+      { "id": "happy",   "label": "So happy!",      "emoji": "😄" },
+      { "id": "amazed",  "label": "Amazed!",        "emoji": "🤩" },
+      { "id": "safe",    "label": "Safe and loved", "emoji": "🤗" }
+    ],
+    "followUp": "All of those feelings are right! Jesus rising from the dead is the best news anyone has ever heard. He is alive, and that changes everything."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "birth-of-jesus",
+  "sensitivityTier": "general",
+  "title": "The Night Jesus Was Born",
+  "subtitle": "God kept the greatest promise of all — and wrapped it in a baby",
+  "collection": "jesus-is-here",
+  "mainTruth": "Jesus, God's own Son, came into our world as a baby because He loves us.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 2:1-20",
+  "durationMinutes": 6,
+  "coverEmoji": "⭐",
+  "coverColor": "#1E3A5F",
+  "illustrationPrompt": "Nativity scene in a warm stable, bright star overhead, Mary and Joseph with the baby Jesus in a manger, gouache illustration, deep navy sky and warm lantern light",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Long, long ago, God made a promise. He said that one day, someone very special would come — someone who would rescue His people and make everything right. For hundreds of years, people waited. Would God keep His promise?\n\nThen, one night in a little town called Bethlehem, the promise came true in the most surprising way. Mary and Joseph had travelled a long way and there was no room for them inside. So the baby came in a stable — a place for animals, with hay on the floor and stars above the roof.\n\nBut this was no ordinary baby. An angel had told Mary: this child would be God's own Son. His name would be Jesus, which means 'God saves.'\n\nThat same night, out in the dark fields, shepherds were watching their sheep. Suddenly the sky blazed with light — and an angel appeared! 'Do not be afraid!' the angel said. 'I bring you wonderful news for everyone. Today in Bethlehem, the Saviour has been born!'\n\nThe shepherds ran to see. And there He was — tiny, lying in a manger — the Son of God, come to be with us. The God who made the stars had wrapped Himself in human skin. God had kept His promise.",
+      "childText": "One night in Bethlehem, something amazing happened. A baby was born — but not just any baby. This was Jesus, God's own Son! Angels told the shepherds, and the shepherds ran to see Him. Jesus came to be with us because God loves us so much.",
+      "verses": [
+        {
+          "ref": "Luke 2:7",
+          "kjv": "And she brought forth her firstborn son, and wrapped him in swaddling clothes, and laid him in a manger; because there was no room for them in the inn.",
+          "little_bible": "There was no room inside. Mary laid baby Jesus in a manger."
+        },
+        {
+          "ref": "Luke 2:10",
+          "kjv": "And the angel said unto them, Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people.",
+          "little_bible": "The angel said: Do not be afraid! I bring you great news — joy for everyone!"
+        },
+        {
+          "ref": "Luke 2:11",
+          "kjv": "For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+          "little_bible": "Today in Bethlehem, the Saviour has been born — Jesus, the Lord!"
+        },
+        {
+          "ref": "John 1:14",
+          "kjv": "And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.",
+          "little_bible": "God became a person and lived among us. He was full of love and truth."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why do you think God chose to send Jesus as a tiny baby instead of a big powerful king?",
+      "parentGuide": "There is no single right answer — let your child wonder. One thread to draw on: a baby needs people to care for him; Jesus coming as a baby shows He came to be close to us, to be part of a family, to grow up just like we do.",
+      "familyQuestion": "If you had been one of the shepherds, what would you have done when you got back home?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank you for sending Jesus. Thank you that He came as a baby, just like us, so we could know how much you love us. We are so glad Jesus is here. Amen.",
+      "childPrompt": "You can tell Jesus you're glad He came!"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Today in Bethlehem, the Saviour has been born — Jesus, the Lord!",
+      "ref": "Luke 2:11",
+      "memoryPhrase": "Jesus, the Saviour, is born!",
+      "tip": "Hold your arms like you're rocking a baby when you say 'born'!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Look at the night sky together tonight, just like the shepherds did. Tell your child: 'The same God who made those stars sent Jesus just for us.'",
+      "parentNote": "Christmas and the nativity lose their power when they become familiar. Help your child stay amazed by anchoring the story to the night sky — vast, beautiful, and made by the same God who chose to come close."
+    }
+  }
+}

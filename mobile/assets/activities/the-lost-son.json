@@ -1,0 +1,37 @@
+{
+  "storyId": "the-lost-son",
+  "memoryBuilder": {
+    "phrase": "God runs to meet us!",
+    "phraseWords": ["God", "runs", "to", "meet", "us!"],
+    "verseRef": "Luke 15:20",
+    "verseText": "While the son was still far off, his father saw him and ran to meet him and hugged him.",
+    "verseWords": ["While", "the", "son", "was", "still", "far", "off,", "his", "father", "saw", "him", "and", "ran", "to", "meet", "him", "and", "hugged", "him."]
+  },
+  "sequence": {
+    "prompt": "What happened to the lost son? Put the story in order.",
+    "items": [
+      { "id": "leaves",  "label": "Son leaves home",           "emoji": "🚶", "order": 1 },
+      { "id": "hungry",  "label": "Son is hungry and sorry",   "emoji": "😔", "order": 2 },
+      { "id": "returns", "label": "Son goes back home",        "emoji": "🏠", "order": 3 },
+      { "id": "party",   "label": "Father has a big party",    "emoji": "🎉", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match what the father did when the son came back.",
+    "questionTemplate": "What was the {left}?",
+    "pairs": [
+      { "leftId": "saw",    "left": "father's first act",   "leftEmoji": "👀", "rightId": "ran",    "right": "He ran to meet his son",     "rightEmoji": "🏃" },
+      { "leftId": "robe",   "left": "father's gift",        "leftEmoji": "🎁", "rightId": "best",   "right": "The best robe",              "rightEmoji": "👘" },
+      { "leftId": "reason", "left": "reason to celebrate",  "leftEmoji": "🎉", "rightId": "found",  "right": "The lost son was found",     "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "The father RAN to his son before the son could finish saying sorry. What does that show you about God?",
+    "options": [
+      { "id": "patient", "label": "God is patient",   "emoji": "⏳" },
+      { "id": "love",    "label": "God loves us first","emoji": "❤️" },
+      { "id": "ready",   "label": "God is always ready to forgive", "emoji": "✅" }
+    ],
+    "followUp": "God is all of those things! He is patient, He loves us first, and He is always ready to welcome us back. You never have to earn your way back to God — He is already running toward you."
+  }
+}

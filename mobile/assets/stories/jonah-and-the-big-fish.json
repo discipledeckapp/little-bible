@@ -1,0 +1,61 @@
+{
+  "id": "jonah-and-the-big-fish",
+  "sensitivityTier": "guided",
+  "title": "Jonah and the Big Fish",
+  "subtitle": "You can't run away from God — and that is wonderful news",
+  "collection": "brave-and-faithful",
+  "mainTruth": "When we run from God, He comes after us — because He loves us and the people He sends us to.",
+  "ageRange": "4-7",
+  "bibleRef": "Jonah 1-3",
+  "durationMinutes": 6,
+  "coverEmoji": "🐋",
+  "coverColor": "#0F2447",
+  "illustrationPrompt": "Jonah inside the belly of a great fish, curled up in prayer, shafts of light filtering through the water, deep ocean blues and teals, gouache storybook illustration, peaceful despite danger",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God spoke to a man named Jonah. 'Go to the city of Nineveh,' God said. 'Tell the people there that I see what they are doing wrong, and they need to turn back to me.'\n\nBut Jonah didn't want to go. He didn't like the people of Nineveh. So instead of going east to Nineveh, he went to a harbour and jumped on a ship sailing the other way — far away from where God had told him to go.\n\nBut you can't run from God. Out at sea, a great storm blew up. The waves crashed and the sailors were terrified. They figured out that Jonah was running from his God. Jonah told them to throw him overboard — and when they did, the storm stopped immediately.\n\nJonah sank down into the cold dark sea. But God had made a plan. A great fish came and swallowed Jonah whole. Inside the fish, in the dark and the smell, Jonah finally prayed. He thanked God for saving him. He said, 'I will do what I promised.'\n\nAfter three days, the fish spat Jonah up onto dry land.\n\nAnd God spoke again: 'Go to Nineveh.' This time, Jonah went. He told the people to turn back to God — and they listened! They stopped doing wrong and turned to God. And God forgave them, every one.\n\nGod had chased after Jonah because He loved him. And God had sent Jonah because He loved the people of Nineveh too. Nobody was too far gone for God to reach.",
+      "childText": "God told Jonah to go and tell people about God. But Jonah ran away! A big storm came, and Jonah ended up inside a huge fish. Inside the fish, Jonah prayed and said sorry. Then the fish spat him out — and Jonah went to tell the people about God after all!",
+      "verses": [
+        {
+          "ref": "Jonah 2:2",
+          "kjv": "And said, I cried by reason of mine affliction unto the LORD, and he heard me; out of the belly of hell cried I, and thou heardest my voice.",
+          "little_bible": "From inside the fish, Jonah cried to God. God heard him."
+        },
+        {
+          "ref": "Jonah 2:9",
+          "kjv": "Salvation is of the LORD.",
+          "little_bible": "Only God can save us."
+        },
+        {
+          "ref": "Jonah 3:10",
+          "kjv": "And God saw their works, that they turned from their evil way; and God repented of the evil, that he had said that he would do unto them; and he did it not.",
+          "little_bible": "The people of Nineveh stopped doing wrong. They turned back to God. And God forgave them."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Jonah tried to run away from what God asked him to do. Have you ever not wanted to do something you knew was right?",
+      "parentGuide": "Don't rush to the moral lesson. The heart of this story is that God chased Jonah — not to punish him, but to bring him back. God's pursuit is the good news. Help your child feel that before landing on obedience.",
+      "familyQuestion": "Why do you think God cared so much about the people of Nineveh, even though Jonah didn't?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank you that you never give up on us. When we run away or do what we want instead of what's right, you still come after us because you love us. Help us to listen to you and not run away. Amen.",
+      "childPrompt": "You can tell God something you find hard to obey, and ask Him to help you!"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Only God can save us.",
+      "ref": "Jonah 2:9",
+      "memoryPhrase": "Only God saves!",
+      "tip": "Point up to the sky and then to your heart when you say this!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Draw a picture of Jonah inside the fish, then draw him outside on the beach. Talk about how God brought him back.",
+      "parentNote": "Jonah is not primarily a story about obedience — it is a story about God's relentless love for everyone, even the people we don't like. Let that theme breathe. If your child asks why Jonah didn't want to go, you can say honestly: 'Sometimes we don't want to be kind to people we don't like. But God loves them too.'"
+    }
+  }
+}

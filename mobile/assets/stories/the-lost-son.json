@@ -1,0 +1,61 @@
+{
+  "id": "the-lost-son",
+  "sensitivityTier": "general",
+  "title": "The Lost Son",
+  "subtitle": "He was still far off when his father saw him and ran",
+  "collection": "what-jesus-taught",
+  "mainTruth": "No matter how far we wander, God runs to welcome us home.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 15:11-32",
+  "durationMinutes": 7,
+  "coverEmoji": "🏃",
+  "coverColor": "#F59E0B",
+  "illustrationPrompt": "A father running down a road toward his son in the distance, warm golden light, dusty road, arms wide open, gouache storybook illustration",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus told another story about being lost and found. A man had two sons. The younger son came to his father and said something surprising and hurtful: 'Give me my share of everything now — I don't want to wait.'\n\nThe father gave it to him. And the younger son took all of it and left home. He went far away and spent everything — on things that didn't matter, on people who didn't really care about him. When the money ran out, so did his friends. He ended up hungry, alone, looking after pigs just to survive.\n\nOne day he came to his senses. He thought: 'Even the workers at my father's house have more than enough food. I will go back. I'll say I'm sorry. I'll ask to be a servant — I'm not worthy to be called his son any more.'\n\nSo he got up and went home.\n\nBut while he was still far off, his father saw him. And the father ran. He didn't wait for his son to arrive — he ran to him, threw his arms around him, and kissed him. The son started his apology but the father interrupted. He called for a party — the best robe, a ring, a feast. 'My son was lost,' he said, 'and is found!'\n\nJesus told this story so we would know what God is like. When we come back to Him — no matter how far we've gone — He runs to meet us. He doesn't make us earn our way back. He celebrates.",
+      "childText": "A boy left home and wasted all his money. When he had nothing left, he went home to say sorry. But his father saw him far away and RAN to him! The father hugged him and had a big party! Jesus says that is what God is like — He runs to welcome us home.",
+      "verses": [
+        {
+          "ref": "Luke 15:18",
+          "kjv": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee.",
+          "little_bible": "I will get up and go home. I will say sorry to my father."
+        },
+        {
+          "ref": "Luke 15:20",
+          "kjv": "And he arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him.",
+          "little_bible": "While the son was still far off, his father saw him and ran to meet him and hugged him."
+        },
+        {
+          "ref": "Luke 15:24",
+          "kjv": "For this my son was dead, and is alive again; he was lost, and is found. And they began to be merry.",
+          "little_bible": "The father cried out: My son was lost. Now he is found! Let us celebrate!"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "The father ran to the son before the son could even finish saying sorry. What does that tell you about how God feels about you?",
+      "parentGuide": "The key image is the running father — God doesn't wait at a distance for us to earn our way back. He sees us while we're still far off and moves toward us. This is the heart of the gospel, made picture-shaped for a child.",
+      "familyQuestion": "Have you ever done something wrong and been afraid to say sorry? What happened when you did say sorry?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank you that you are like the father who runs. Thank you that you don't make us earn our way back. When we do wrong, help us to come back to you — and remind us that you will always run to meet us. Amen.",
+      "childPrompt": "You can tell God: 'Thank you for always running to meet me!'"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "While the son was still far off, his father saw him and ran to meet him and hugged him.",
+      "ref": "Luke 15:20",
+      "memoryPhrase": "God runs to meet us!",
+      "tip": "Pretend to run on the spot and hold out your arms wide when you say this!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Give someone in your family a big unexpected hug today — before they do anything to earn it. Tell them: 'This is what God's love is like!'",
+      "parentNote": "This parable is not primarily about repentance — it's about the father's response. Children need to know the party came before the son finished his speech. God's welcome is not conditional on a perfect apology. Model this in your own family."
+    }
+  }
+}

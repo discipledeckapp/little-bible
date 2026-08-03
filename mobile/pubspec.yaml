@@ -1,0 +1,132 @@
+name: little_bible
+description: "God's Word for Little Hearts — Bible stories, games, and verse memory for children."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── Local database (offline-first source of truth) ──────────────────────────
+  drift: ^2.22.1
+  # Bundles SQLite .so for Android (API 24+). iOS uses the system SQLite — no-op there.
+  sqlite3_flutter_libs: ^0.5.0
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # ── State management ─────────────────────────────────────────────────────────
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+
+  # ── Navigation ───────────────────────────────────────────────────────────────
+  go_router: ^14.6.2
+
+  # ── TTS (free, offline, platform-native) ─────────────────────────────────────
+  flutter_tts: ^4.2.1
+
+  # ── Audio playback (pre-generated Edge TTS narration MP3s) ───────────────────
+  audioplayers: ^6.1.0
+
+  # ── Animations ───────────────────────────────────────────────────────────────
+  rive: ^0.13.17
+  flutter_animate: ^4.5.2
+
+  # ── IAP (one-time unlock) ────────────────────────────────────────────────────
+  in_app_purchase: ^3.2.0
+
+  # ── Network (sync only — never in the read path) ────────────────────────────
+  dio: ^5.7.0
+
+  # ── Push notifications ───────────────────────────────────────────────────────
+  flutter_local_notifications: ^18.0.1
+
+  # ── Background sync ──────────────────────────────────────────────────────────
+  # workmanager: ^0.5.2  — Sprint 4; v0.5.x uses removed V1 embedding (upgrade to ^0.9.1 when adding)
+
+  # ── Auth (parent only) ─────────────────────────────────────────────────────
+  # google_sign_in: ^6.2.2  — deferred until cloud sync sprint
+  flutter_secure_storage: ^9.2.2
+
+  # ── Serialisation helpers ────────────────────────────────────────────────────
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # ── Sharing / saving paintings ─────────────────────────────────────────────
+  share_plus: ^10.1.4
+
+  # ── Utilities ────────────────────────────────────────────────────────────────
+  uuid: ^4.5.1
+  intl: ^0.20.2
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+  # ── Code generation ──────────────────────────────────────────────────────────
+  drift_dev: ^2.22.1
+  build_runner: ^2.4.13
+  riverpod_generator: ^2.6.1
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+
+  # ── Testing ──────────────────────────────────────────────────────────────────
+  mocktail: ^1.0.4
+
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.1
+
+# Icons are generated from the vector sources in assets/brand/*.svg.
+# Never hand-edit the PNGs — edit the SVG, re-run tool/render_icons.mjs, then
+# `dart run flutter_launcher_icons`.
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/brand/app_icon.png"
+  # Deep brown, so the amber Lumi actually contrasts against it.
+  adaptive_icon_background: "#7C2D12"
+  adaptive_icon_foreground: "assets/brand/app_icon_foreground.png"
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/stories/
+    - assets/activities/
+    - assets/audio/stories/god-made-everything/
+    - assets/audio/stories/god-made-me/
+    - assets/audio/stories/noahs-big-boat/
+    - assets/audio/stories/noahs-rainbow-promise/
+    - assets/audio/stories/birth-of-jesus/
+    - assets/audio/stories/jesus-loves-children/
+    - assets/audio/stories/david-the-shepherd-boy/
+    - assets/audio/stories/daniel-and-the-lions/
+    - assets/audio/stories/jonah-and-the-big-fish/
+    - assets/audio/stories/the-lost-sheep/
+    - assets/audio/stories/the-lost-son/
+    - assets/audio/stories/the-good-shepherd/
+    - assets/audio/stories/how-to-pray/
+    - assets/audio/stories/the-good-neighbour/
+    - assets/audio/stories/jesus-saves/
+    - assets/audio/stories/_ui/
+    - assets/audio/sfx/
+    - assets/audio/ambient/
+
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito[wght].ttf
+        - asset: assets/fonts/Nunito-Italic[wght].ttf
+          style: italic
+    - family: Lora
+      fonts:
+        - asset: assets/fonts/Lora[wght].ttf
+        - asset: assets/fonts/Lora-Italic[wght].ttf
+          style: italic

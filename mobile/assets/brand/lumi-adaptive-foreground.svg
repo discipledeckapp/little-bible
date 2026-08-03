@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!--
+    Little Bible — Android adaptive icon foreground.
+
+    Transparent. The background comes from the adaptive-icon XML, not from here.
+
+    The scale is >1 on purpose. flutter_launcher_icons generates
+    mipmap-anydpi-v26/ic_launcher.xml with <inset android:inset="16%"> around
+    the foreground, which shrinks this drawable to 68% of the 108dp canvas.
+    Scaling up by 1.05 here means the artwork lands at ~50% of the final canvas
+    — about 76% of the 72dp visible mask, which is the size adaptive icons want.
+    Doing the compensation here rather than by editing the generated XML means
+    re-running the tool can't silently break it.
+
+    Geometry is otherwise identical to lumi-app-icon.svg — keep them in sync.
+  -->
+  <g transform="translate(512 512) scale(1.05) translate(-512 -523.5)">
+    <!-- Sprout -->
+    <rect x="496" y="230" width="32" height="110" rx="16" fill="#10B981"/>
+    <ellipse cx="394" cy="238" rx="112" ry="55" transform="rotate(-30 394 238)" fill="#4ADE80"/>
+    <ellipse cx="630" cy="238" rx="112" ry="55" transform="rotate(30 630 238)"  fill="#34D399"/>
+
+    <!-- Body: teardrop seed -->
+    <path d="M512 318
+             C638 372 780 516 780 655
+             C780 788 660 882 512 882
+             C364 882 244 788 244 655
+             C244 516 386 372 512 318 Z" fill="#F59E0B"/>
+    <ellipse cx="465" cy="540" rx="120" ry="82" fill="#FBBF24" opacity="0.75"/>
+    <ellipse cx="432" cy="505" rx="62"  ry="42" fill="#FDE68A" opacity="0.70"/>
+
+    <!-- Face -->
+    <circle cx="404" cy="655" r="48" fill="#78350F"/>
+    <circle cx="620" cy="655" r="48" fill="#78350F"/>
+    <circle cx="419" cy="639" r="16" fill="#FFFFFF" opacity="0.92"/>
+    <circle cx="635" cy="639" r="16" fill="#FFFFFF" opacity="0.92"/>
+    <path d="M402 772 Q512 856 622 772" stroke="#78350F" stroke-width="30"
+          stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

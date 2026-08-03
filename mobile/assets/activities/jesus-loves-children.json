@@ -1,0 +1,36 @@
+{
+  "storyId": "jesus-loves-children",
+  "memoryBuilder": {
+    "phrase": "Let the children come!",
+    "phraseWords": ["Let", "the", "children", "come!"],
+    "verseRef": "Mark 10:14",
+    "verseText": "Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God.",
+    "verseWords": ["Let", "the", "little", "children", "come", "to", "me."]
+  },
+  "sequence": {
+    "prompt": "What happened when families came to see Jesus? Put it in order.",
+    "items": [
+      { "id": "families",   "label": "Families came to see Jesus",      "emoji": "👨‍👩‍👧", "order": 1 },
+      { "id": "disciples",  "label": "Disciples told them to stop",     "emoji": "🚫",    "order": 2 },
+      { "id": "jesus-call", "label": "Jesus said: Let them come!",      "emoji": "💛",    "order": 3 },
+      { "id": "blessing",   "label": "Jesus blessed the children",      "emoji": "🌟",    "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Who said what?",
+    "pairs": [
+      { "leftId": "jesus1",     "left": "Jesus",        "leftEmoji": "💛", "rightId": "come",    "right": "Let the children come to Me",             "rightEmoji": "💬" },
+      { "leftId": "disciples1", "left": "Disciples",    "leftEmoji": "👬", "rightId": "stop",    "right": "These children should stop",              "rightEmoji": "✋" },
+      { "leftId": "jesus2",     "left": "Jesus also",   "leftEmoji": "❤️", "rightId": "kingdom", "right": "God's kingdom belongs to children",       "rightEmoji": "👑" }
+    ]
+  },
+  "application": {
+    "question": "Jesus loves children — He loves YOU! What would you say to Jesus right now?",
+    "options": [
+      { "id": "thankyou", "label": "Thank You for loving me!", "emoji": "🙏" },
+      { "id": "hello",    "label": "Hello, Jesus!",            "emoji": "👋" },
+      { "id": "love",     "label": "I love You, Jesus!",       "emoji": "❤️" }
+    ],
+    "followUp": "Jesus heard your heart! He loves hearing from you — any time, any place. He is always near."
+  }
+}

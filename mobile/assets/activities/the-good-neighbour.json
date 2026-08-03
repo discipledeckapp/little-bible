@@ -1,0 +1,36 @@
+{
+  "storyId": "the-good-neighbour",
+  "memoryBuilder": {
+    "phrase": "Love your neighbour — go and help!",
+    "phraseWords": ["Love", "your", "neighbour", "—", "go", "and", "help!"],
+    "verseRef": "Luke 10:37",
+    "verseText": "Jesus said: 'Go and do the same.'",
+    "verseWords": ["Jesus", "said:", "'Go", "and", "do", "the", "same.'"]
+  },
+  "sequence": {
+    "prompt": "What happened on the road to Jericho? Put it in order.",
+    "items": [
+      { "id": "hurt",     "label": "A man is hurt on the road",   "emoji": "🤕", "order": 1 },
+      { "id": "pass",     "label": "Two men walk past",           "emoji": "🚶", "order": 2 },
+      { "id": "help",     "label": "Samaritan stops and helps",   "emoji": "🤝", "order": 3 },
+      { "id": "inn",      "label": "He takes the man to safety",  "emoji": "🏠", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each person to what they did.",
+    "pairs": [
+      { "leftId": "priest",    "left": "The Priest",    "leftEmoji": "👤", "rightId": "passed",  "right": "Walked past",       "rightEmoji": "🚶" },
+      { "leftId": "levite",    "left": "The Levite",    "leftEmoji": "👤", "rightId": "crossed", "right": "Crossed the road",  "rightEmoji": "↔️" },
+      { "leftId": "samaritan", "left": "The Samaritan", "leftEmoji": "❤️", "rightId": "stopped", "right": "Stopped and helped","rightEmoji": "🤝" }
+    ]
+  },
+  "application": {
+    "question": "Jesus said your neighbour is anyone who needs your help. Who could you be a good neighbour to this week?",
+    "options": [
+      { "id": "friend",   "label": "A friend",           "emoji": "👫" },
+      { "id": "stranger", "label": "Someone I don't know","emoji": "👋" },
+      { "id": "family",   "label": "Someone in my family","emoji": "👨‍👩‍👧" }
+    ],
+    "followUp": "Your neighbour can be any of those people — anyone who needs you to stop and help. Go and do the same, just like the Good Samaritan!"
+  }
+}

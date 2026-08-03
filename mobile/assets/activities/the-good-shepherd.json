@@ -1,0 +1,36 @@
+{
+  "storyId": "the-good-shepherd",
+  "memoryBuilder": {
+    "phrase": "Jesus knows my name!",
+    "phraseWords": ["Jesus", "knows", "my", "name!"],
+    "verseRef": "John 10:14",
+    "verseText": "I am the good shepherd, and know my sheep, and am known of mine.",
+    "verseWords": ["I", "am", "the", "good", "shepherd,", "and", "know", "my", "sheep."]
+  },
+  "sequence": {
+    "prompt": "What happens when a sheep gets lost? Put it in order.",
+    "items": [
+      { "id": "counting", "label": "Shepherd counts the sheep",       "emoji": "🐑", "order": 1 },
+      { "id": "lost",     "label": "One sheep is missing",            "emoji": "😟", "order": 2 },
+      { "id": "search",   "label": "Shepherd goes to find it",        "emoji": "🔦", "order": 3 },
+      { "id": "found",    "label": "Sheep is found and carried home", "emoji": "🎉", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match these to what the Good Shepherd does.",
+    "pairs": [
+      { "leftId": "jesus",    "left": "The Good Shepherd", "leftEmoji": "💛", "rightId": "knows",  "right": "Knows each sheep by name",    "rightEmoji": "📝" },
+      { "leftId": "sheep",    "left": "The Sheep",         "leftEmoji": "🐑", "rightId": "hears",  "right": "Hear the shepherd's voice",   "rightEmoji": "👂" },
+      { "leftId": "hireling", "left": "The Hired Helper",  "leftEmoji": "🧑", "rightId": "runs",   "right": "Runs away when danger comes", "rightEmoji": "🏃" }
+    ]
+  },
+  "application": {
+    "question": "Jesus knows YOUR name! How does it make you feel to know that Jesus knows you?",
+    "options": [
+      { "id": "loved",    "label": "Loved and safe",       "emoji": "🤗" },
+      { "id": "happy",    "label": "Happy and surprised",  "emoji": "😊" },
+      { "id": "thankful", "label": "Thankful",             "emoji": "🙏" }
+    ],
+    "followUp": "Jesus knows your name — your actual name! He knows everything about you and He chose you. You are never lost to Him."
+  }
+}

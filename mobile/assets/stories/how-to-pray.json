@@ -1,0 +1,61 @@
+{
+  "id": "how-to-pray",
+  "sensitivityTier": "general",
+  "title": "How to Pray",
+  "subtitle": "Jesus taught us to talk to God like a loving Father",
+  "collection": "what-jesus-taught",
+  "mainTruth": "We can talk to God about anything — He is our Father who hears and cares.",
+  "ageRange": "4-7",
+  "bibleRef": "Matthew 6:9-13",
+  "durationMinutes": 5,
+  "coverEmoji": "🙏",
+  "coverColor": "#A78BFA",
+  "illustrationPrompt": "A child kneeling in prayer with eyes closed, warm soft light from a window, peaceful bedroom, gouache storybook illustration in soft purples and golds",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "One day Jesus' friends said to Him, 'Teach us how to pray.' They had seen Jesus pray — early in the morning, late at night, before meals, during storms. He talked to God like someone who knew Him very well.\n\nJesus said, 'When you pray, don't try to sound impressive. God is your Father — talk to Him simply, like you would talk to someone who loves you. Here is how:'\n\n'Our Father in heaven — remember who you are talking to. God is your Father, and He is in heaven, which means He is everywhere and knows everything.\n\n'Your name is holy — tell God that He is wonderful and that you love Him.\n\n'Let your kingdom come — ask for God's good plans to happen in the world and in your life.\n\n'Give us today what we need — God cares about your everyday needs. You can ask Him.\n\n'Forgive us when we do wrong — God is ready to forgive. You just have to ask.\n\n'Help us to forgive others — we ask God to help us forgive the people who hurt us.\n\n'Keep us from evil — ask God to keep you safe and to help you choose what is right.'\n\nJesus wasn't giving us magic words to say. He was showing us what prayer is: a child talking honestly to a Father who always listens.",
+      "childText": "Jesus' friends asked Him how to pray. Jesus said: Talk to God like your Father! Thank Him, ask for what you need, say sorry when you do wrong, and ask for help. God loves to hear you pray — any time, anywhere, any words!",
+      "verses": [
+        {
+          "ref": "Matthew 6:9",
+          "kjv": "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",
+          "little_bible": "This is how to pray: Our Father in heaven, your name is holy."
+        },
+        {
+          "ref": "Matthew 6:11",
+          "kjv": "Give us this day our daily bread.",
+          "little_bible": "Ask God for what you need today. He will give you what is good."
+        },
+        {
+          "ref": "Matthew 6:13",
+          "kjv": "And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen.",
+          "little_bible": "God, help me choose what is right today. Keep me safe from wrong."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What is something you have never told God before? You can tell Him anything — He is your Father and He listens.",
+      "parentGuide": "Resist the urge to filter your child's prayer topics. A child who wants to pray about their toy, their fear, or their friend at school is doing exactly what Jesus described. God is interested in the whole of their life.",
+      "familyQuestion": "What part of the Lord's Prayer do you think is hardest to mean? Why?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Our Father in heaven, your name is holy. We love you and we are glad you are our Father. Please give us what we need today. Forgive us when we do wrong. Help us to forgive others. Keep us safe and help us choose what is right. Amen.",
+      "childPrompt": "Now add your own words! Tell God one thing that is on your mind today."
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "This is how to pray: Our Father in heaven, your name is holy.",
+      "ref": "Matthew 6:9",
+      "memoryPhrase": "God is our Father — we can talk to Him!",
+      "tip": "Point up when you say 'Father in heaven', then hold your hands together when you say 'pray'!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Pray the Lord's Prayer together slowly today, pausing after each line to talk about what it means.",
+      "parentNote": "The Lord's Prayer is not a formula — it is a shape. Children who learn it young have a framework that carries them through their whole life. But its power is in understanding, not recitation. Take your time with each line."
+    }
+  }
+}

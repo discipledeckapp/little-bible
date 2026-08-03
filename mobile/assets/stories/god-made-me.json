@@ -1,0 +1,61 @@
+{
+  "id": "god-made-me",
+  "sensitivityTier": "general",
+  "title": "God Made Me",
+  "subtitle": "Before you were born, God already knew and loved you",
+  "collection": "the-beginning",
+  "mainTruth": "God made each of us on purpose, and we are wonderfully made.",
+  "ageRange": "4-7",
+  "bibleRef": "Psalm 139:13-14",
+  "durationMinutes": 5,
+  "coverEmoji": "🌟",
+  "coverColor": "#A78BFA",
+  "illustrationPrompt": "A child sitting under stars being watched over by God's hands, warm purple and gold tones, gouache storybook illustration",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Have you ever looked at your hands and wondered how they work? Your fingers can bend and grip and feel. Your heart beats without you telling it to. Your eyes can see colours and shapes and the faces of the people you love. None of that happened by accident.\n\nKing David wrote a song about this — Psalm 139. He said that God knew him before he was even born. While he was still growing, hidden away where no one could see, God was there, making him carefully and on purpose. God counted every part of him. God knew the shape of his hands, the sound of his laugh, the thoughts in his heart — before anyone else did.\n\nAnd the same is true for you. Before you were born, God already knew your name. He made you on purpose — not by accident, not by mistake. He chose the colour of your eyes, the sound of your voice, the way you laugh. And when He finished making you, He was glad. You are not ordinary — you are wonderfully made by a God who loves you.",
+      "childText": "Did you know God made YOU? Every part of you — your eyes, your hands, your laugh. God made all of it. And before you were even born, God already knew you and loved you. You are not a mistake. You are wonderfully made!",
+      "verses": [
+        {
+          "ref": "Jeremiah 1:5",
+          "kjv": "Before I formed thee in the belly I knew thee; and before thou camest forth out of the womb I sanctified thee.",
+          "little_bible": "Before you were born, God already knew you!"
+        },
+        {
+          "ref": "Psalm 139:13",
+          "kjv": "For thou hast possessed my reins: thou hast covered me in my mother's womb.",
+          "little_bible": "God made all of me. He put me together before I was born."
+        },
+        {
+          "ref": "Psalm 139:14",
+          "kjv": "I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+          "little_bible": "I praise you, God — you made me in a wonderful way. Everything you make is marvellous, and I know that is true."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What is something amazing about how God made your body?",
+      "parentGuide": "Help your child notice concrete things — their heartbeat, that they can run, that they have a unique fingerprint. Ground the wonder in the physical before moving to the spiritual.",
+      "familyQuestion": "If God knew you before you were born, what do you think He was thinking when He made you?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank you for making me. Thank you for my hands and my eyes and my heart. Thank you that you knew me before I was born, and you love me. Help me to remember that I am wonderfully made by you. Amen.",
+      "childPrompt": "Now you can tell God one thing you love about how He made you!"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "I praise you, God — you made me in a wonderful way.",
+      "ref": "Psalm 139:14",
+      "memoryPhrase": "God made me wonderful!",
+      "tip": "Point to yourself when you say 'me' and spread your arms wide when you say 'wonderful'!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Trace around your child's hand on paper and write inside it: 'God made me wonderfully.' Put it somewhere they can see it.",
+      "parentNote": "Psalm 139 is a powerful anchor for identity. Children who know they are made on purpose by a loving God are far more resilient to shame and comparison. Return to this story any time your child feels left out or not enough."
+    }
+  }
+}

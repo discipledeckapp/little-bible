@@ -1,0 +1,37 @@
+{
+  "storyId": "how-to-pray",
+  "memoryBuilder": {
+    "phrase": "God is our Father — we can talk to Him!",
+    "phraseWords": ["God", "is", "our", "Father", "—", "we", "can", "talk", "to", "Him!"],
+    "verseRef": "Matthew 6:9",
+    "verseText": "This is how to pray: Our Father in heaven, your name is holy.",
+    "verseWords": ["This", "is", "how", "to", "pray:", "Our", "Father", "in", "heaven,", "your", "name", "is", "holy."]
+  },
+  "sequence": {
+    "prompt": "The Lord's Prayer has different parts. Put them in order.",
+    "items": [
+      { "id": "father",   "label": "Our Father in heaven",   "emoji": "🙏", "order": 1 },
+      { "id": "kingdom",  "label": "Let your kingdom come",  "emoji": "👑", "order": 2 },
+      { "id": "bread",    "label": "Give us what we need",   "emoji": "🍞", "order": 3 },
+      { "id": "forgive",  "label": "Forgive us",             "emoji": "❤️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the Lord's Prayer to what it is about.",
+    "questionTemplate": "What is '{left}' about?",
+    "pairs": [
+      { "leftId": "father",  "left": "Our Father",     "leftEmoji": "🙏", "rightId": "who",    "right": "Who we're talking to", "rightEmoji": "❤️" },
+      { "leftId": "daily",   "left": "Daily bread",    "leftEmoji": "🍞", "rightId": "needs",  "right": "What we need",          "rightEmoji": "🛒" },
+      { "leftId": "forgive", "left": "Forgive us",     "leftEmoji": "✅", "rightId": "sorry",  "right": "Saying sorry to God",   "rightEmoji": "🥺" }
+    ]
+  },
+  "application": {
+    "question": "Jesus said to talk to God like a father who loves you. What would you most like to tell God right now?",
+    "options": [
+      { "id": "thanks",  "label": "Say thank you",   "emoji": "😊" },
+      { "id": "help",    "label": "Ask for help",    "emoji": "🙋" },
+      { "id": "sorry",   "label": "Say sorry",       "emoji": "🥺" }
+    ],
+    "followUp": "You can tell God all of those things! He loves to hear every part of your life. Prayer is just talking to your Father."
+  }
+}

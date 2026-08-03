@@ -1,0 +1,61 @@
+{
+  "id": "daniel-and-the-lions",
+  "sensitivityTier": "guided",
+  "title": "Daniel and the Lions",
+  "subtitle": "Daniel prayed even when it was dangerous — and God was with him",
+  "collection": "brave-and-faithful",
+  "mainTruth": "We can trust God and keep praying even when it is hard or scary.",
+  "ageRange": "4-7",
+  "bibleRef": "Daniel 6",
+  "durationMinutes": 5,
+  "coverEmoji": "🦁",
+  "coverColor": "#D97706",
+  "illustrationPrompt": "Daniel kneeling in prayer in a den surrounded by calm lions, a shaft of light from above, deep golden and amber tones, gouache storybook illustration, peaceful and brave",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Daniel lived far from home, in a country called Babylon. He worked for the king, and he was so wise and honest that the king trusted him more than anyone else. But some jealous men wanted to get rid of Daniel. They watched him closely — but they couldn't find anything wrong. Daniel was too faithful.\n\nSo they came up with a plan. They tricked the king into making a new law: for thirty days, no one was allowed to pray to any god or person except the king. Anyone who disobeyed would be thrown into the lions' den.\n\nDaniel heard about the new law. And then he did exactly what he always did. He went to his room, opened his window towards Jerusalem, and prayed to God — three times that day, just like every day before.\n\nThe men saw him and reported it to the king. The king was sad — he liked Daniel — but he couldn't change his own law. So Daniel was thrown into the lions' den. A stone was rolled across the opening. The king didn't sleep all night.\n\nAt first light, the king ran to the den. 'Daniel!' he called out. 'Has your God been able to rescue you?'\n\nAnd Daniel answered from inside the den: 'O king, live for ever! My God sent His angel and closed the lions' mouths. They have not hurt me, because I was found innocent before God.'\n\nDaniel was lifted out — not a scratch on him. And everyone in the kingdom heard: Daniel's God was the living God, who saves.",
+      "childText": "Daniel prayed to God every day. When a mean law said he couldn't, he prayed anyway! He was put in a den with lions — but God sent an angel to keep him safe. God was with Daniel, and Daniel trusted God no matter what.",
+      "verses": [
+        {
+          "ref": "Daniel 6:10",
+          "kjv": "Now when Daniel knew that the writing was signed, he went into his house; and his windows being open in his chamber toward Jerusalem, he kneeled upon his knees three times a day, and prayed, and gave thanks before his God, as he did aforetime.",
+          "little_bible": "Daniel heard the new law. He still prayed three times a day."
+        },
+        {
+          "ref": "Daniel 6:22",
+          "kjv": "My God hath sent his angel, and hath shut the lions' mouths, that they have not hurt me.",
+          "little_bible": "My God sent His angel and closed the lions' mouths so they could not hurt me."
+        },
+        {
+          "ref": "Daniel 6:26",
+          "kjv": "I make a decree, That in every dominion of my kingdom men tremble and fear before the God of Daniel: for he is the living God, and stedfast for ever, and his kingdom that which shall not be destroyed, and his dominion shall be even unto the end.",
+          "little_bible": "The king told everyone: Honour Daniel's God! He is the living God. He rules forever."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Daniel prayed even when it was dangerous. Is there anything that makes it hard for you to pray or talk about God?",
+      "parentGuide": "Be honest with your child about your own experience — faith can feel awkward, prayer can feel silly. Normalising the difficulty helps. Daniel's courage didn't make praying easy; it made him do it anyway.",
+      "familyQuestion": "If you had been Daniel's friend watching from outside, what would you have prayed for him?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank you for being with Daniel when he was afraid. Thank you that you are with us too. Help us to keep praying and trusting you even when things are hard. You are the living God who keeps your promises. Amen.",
+      "childPrompt": "You can ask God to help you be brave like Daniel!"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "My God sent His angel and closed the lions' mouths so they could not hurt me.",
+      "ref": "Daniel 6:22",
+      "memoryPhrase": "God closed the lions' mouths!",
+      "tip": "Snap your hands shut like a lion's mouth closing when you say 'closed the lions' mouths'!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Pray together three times today — morning, afternoon, and night. Just like Daniel!",
+      "parentNote": "Daniel's rhythm of prayer (three times a day, facing Jerusalem) wasn't a rule — it was a relationship habit. Helping children develop a daily prayer rhythm at this age gives them an anchor that can last a lifetime."
+    }
+  }
+}

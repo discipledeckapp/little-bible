@@ -1,0 +1,61 @@
+{
+  "id": "david-the-shepherd-boy",
+  "sensitivityTier": "general",
+  "title": "David the Shepherd Boy",
+  "subtitle": "God doesn't choose the biggest or the strongest — He looks at the heart",
+  "collection": "brave-and-faithful",
+  "mainTruth": "God looks at our hearts, not our size, and chooses people to do great things.",
+  "ageRange": "4-7",
+  "bibleRef": "1 Samuel 16; Psalm 23",
+  "durationMinutes": 6,
+  "coverEmoji": "🐑",
+  "coverColor": "#16A34A",
+  "illustrationPrompt": "Young David on a green hillside with sheep, holding a sling, confident posture, soft rolling hills at sunset, gouache storybook illustration, warm greens and golden light",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "David was the youngest of eight brothers. He wasn't the tallest or the strongest. While his older brothers did important things, David looked after the sheep — out in the fields, day after day, just him and the flock.\n\nBut David didn't just sit around. He learned to play music, and he sang songs to God. He learned to use a sling to protect his sheep. Once a lion came, and once a bear — and David trusted God and chased them away.\n\nOne day, God told the prophet Samuel to go and find the next king of Israel. Samuel went to Jesse's house and looked at all seven older brothers. Each one was tall and handsome. But God said to Samuel, 'Don't look at how they look on the outside. I don't see the way people see. People look at the outside. I look at the heart.'\n\nFinally David came in from the fields — dusty and sunburned. And God said, 'This is the one.' Not the tallest. Not the eldest. The shepherd boy who trusted God and had a faithful heart.\n\nWhen David became king, he remembered what it had been like to be a shepherd. He wrote a song about it: 'The Lord is my shepherd — He takes care of me, He leads me to green meadows, He is with me even in the darkest valleys.' David had learned that God was his shepherd, just as he had been a shepherd to his sheep.",
+      "childText": "David was the youngest brother and he looked after sheep. But God looked at David's heart and chose him to be king! God doesn't choose the biggest and strongest — He chooses people who love and trust Him.",
+      "verses": [
+        {
+          "ref": "1 Samuel 16:7",
+          "kjv": "The LORD seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart.",
+          "little_bible": "God does not see the way people see. People look at the outside. God looks at the heart."
+        },
+        {
+          "ref": "1 Samuel 16:13",
+          "kjv": "Then Samuel took the horn of oil, and anointed him in the midst of his brethren: and the Spirit of the LORD came upon David from that day forward.",
+          "little_bible": "Samuel poured oil on David's head. God had chosen David. God's Spirit came upon him."
+        },
+        {
+          "ref": "Psalm 23:1",
+          "kjv": "The LORD is my shepherd; I shall not want.",
+          "little_bible": "David wrote: God is my shepherd. With Him, I have everything I need."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "When David was alone with the sheep, he practised being brave and trusting God. What small things can you practise when no one is watching?",
+      "parentGuide": "This story is about character formed in hiddenness. David's greatness didn't start when he was chosen — it was already there in the fields. Help your child see that faithfulness in small things matters.",
+      "familyQuestion": "God chose David because of his heart. What do you think God sees when He looks at your heart?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear God, thank you that you look at our hearts, not just how we look or how big we are. Help us to have hearts that love you and trust you — even when no one is watching. Thank you that you are our shepherd too. Amen.",
+      "childPrompt": "You can ask God to help you have a brave, trusting heart — just like David!"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God does not see the way people see. People look at the outside. God looks at the heart.",
+      "ref": "1 Samuel 16:7",
+      "memoryPhrase": "God looks at the heart!",
+      "tip": "Point to your eyes on 'see', then point to your heart on 'heart'!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Do something helpful today that no one will see or know about. When you're done, remember: God saw it and it matters to Him.",
+      "parentNote": "Children absorb that value comes from being seen and praised. David's story counters this directly — his greatness was built in hiddenness. Affirming your child's unseen faithfulness is one of the most powerful things a parent can do."
+    }
+  }
+}

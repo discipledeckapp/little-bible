@@ -1,0 +1,36 @@
+{
+  "storyId": "daniel-and-the-lions",
+  "memoryBuilder": {
+    "phrase": "God closed the lions' mouths!",
+    "phraseWords": ["God", "closed", "the", "lions'", "mouths!"],
+    "verseRef": "Daniel 6:22",
+    "verseText": "My God sent His angel and closed the lions' mouths so they could not hurt me.",
+    "verseWords": ["My", "God", "sent", "His", "angel", "and", "closed", "the", "lions'", "mouths", "so", "they", "could", "not", "hurt", "me."]
+  },
+  "sequence": {
+    "prompt": "What happened to Daniel? Put it in order.",
+    "items": [
+      { "id": "pray",   "label": "Daniel prays to God",       "emoji": "🙏", "order": 1 },
+      { "id": "caught", "label": "Mean men catch Daniel",     "emoji": "😠", "order": 2 },
+      { "id": "den",    "label": "Daniel is put in the den",  "emoji": "🦁", "order": 3 },
+      { "id": "safe",   "label": "God keeps Daniel safe",     "emoji": "✨", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each person to what they did.",
+    "pairs": [
+      { "leftId": "daniel",  "left": "Daniel",     "leftEmoji": "🙏", "rightId": "prayed",   "right": "Prayed to God",       "rightEmoji": "❤️" },
+      { "leftId": "king",    "left": "The King",   "leftEmoji": "👑", "rightId": "sad",      "right": "Was sad all night",    "rightEmoji": "😔" },
+      { "leftId": "angel",   "left": "God's angel","leftEmoji": "✨", "rightId": "closed",   "right": "Closed lions' mouths", "rightEmoji": "🦁" }
+    ]
+  },
+  "application": {
+    "question": "Daniel prayed even when it was dangerous. When do YOU find it hard to talk to God or do what's right?",
+    "options": [
+      { "id": "scared",  "label": "When I'm scared",    "emoji": "😨" },
+      { "id": "friends", "label": "With my friends",    "emoji": "👫" },
+      { "id": "busy",    "label": "When I'm very busy", "emoji": "🏃" }
+    ],
+    "followUp": "Whatever makes it hard, God is with you just like He was with Daniel. He can help you be brave!"
+  }
+}

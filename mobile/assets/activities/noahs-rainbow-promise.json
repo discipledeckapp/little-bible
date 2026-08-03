@@ -1,0 +1,37 @@
+{
+  "storyId": "noahs-rainbow-promise",
+  "memoryBuilder": {
+    "phrase": "God's rainbow — His forever promise!",
+    "phraseWords": ["God's", "rainbow", "—", "His", "forever", "promise!"],
+    "verseRef": "Genesis 9:16",
+    "verseText": "When I see the rainbow in the clouds, I will remember my forever promise to every living creature on earth.",
+    "verseWords": ["When", "I", "see", "the", "rainbow", "in", "the", "clouds,", "I", "will", "remember", "my", "forever", "promise", "to", "every", "living", "creature", "on", "earth."]
+  },
+  "sequence": {
+    "prompt": "What happened after Noah left the ark? Put it in order.",
+    "items": [
+      { "id": "land",    "label": "Ark lands on mountain",    "emoji": "⛰️", "order": 1 },
+      { "id": "dove",    "label": "Dove brings olive leaf",   "emoji": "🕊️", "order": 2 },
+      { "id": "out",     "label": "Everyone comes out",       "emoji": "🐘", "order": 3 },
+      { "id": "rainbow", "label": "God gives rainbow promise","emoji": "🌈", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match the rainbow to what it means.",
+    "questionTemplate": "What does {left} mean?",
+    "pairs": [
+      { "leftId": "sign",     "left": "The rainbow",       "leftEmoji": "🌈", "rightId": "promise",  "right": "God's promise",             "rightEmoji": "📜" },
+      { "leftId": "who",      "left": "God's promise",     "leftEmoji": "❤️", "rightId": "every",    "right": "For all living creatures",  "rightEmoji": "🐾" },
+      { "leftId": "when",     "left": "Seeing the rainbow","leftEmoji": "👁️", "rightId": "remembers","right": "God remembers us",          "rightEmoji": "💛" }
+    ]
+  },
+  "application": {
+    "question": "Every rainbow you see is God keeping His promise. What promise of God means the most to you?",
+    "options": [
+      { "id": "withme",  "label": "He is always with me",  "emoji": "🤗" },
+      { "id": "loves",   "label": "He loves me forever",   "emoji": "❤️" },
+      { "id": "hears",   "label": "He hears my prayers",   "emoji": "🙏" }
+    ],
+    "followUp": "All of God's promises are true — He is with you, He loves you forever, and He hears every prayer. Next time you see a rainbow, remember: that is God's sign that He keeps every promise He makes."
+  }
+}

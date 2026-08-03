@@ -1,0 +1,61 @@
+{
+  "id": "the-good-neighbour",
+  "sensitivityTier": "guided",
+  "title": "The Good Neighbour",
+  "subtitle": "Jesus shows us what it looks like to really love people",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Our neighbour is anyone who needs our help — and Jesus calls us to love them.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 10:25-37",
+  "durationMinutes": 6,
+  "coverEmoji": "🤝",
+  "coverColor": "#60A5FA",
+  "illustrationPrompt": "The Good Samaritan kneeling beside an injured traveler on a road, helping and bandaging, warm afternoon light, rocky path, gouache storybook illustration",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "A man asked Jesus a question: 'Who is my neighbour?' He wanted to know exactly who he had to be kind to — and who he didn't.\n\nJesus answered by telling a story.\n\nA man was travelling from Jerusalem to Jericho. On the road, he was attacked by robbers. They took everything, hurt him badly, and left him there. He couldn't move.\n\nA priest came down the road — a religious man, someone you'd expect to help. But he crossed to the other side and walked past.\n\nAnother religious leader came. He also crossed over and walked past.\n\nThen a third man came — a Samaritan. Now, Samaritans and Jewish people didn't like each other. But when this Samaritan saw the injured man, he felt deep pity. He went to him. He cleaned his wounds and bandaged them. He put the man on his own donkey, took him to an inn, stayed with him through the night, and paid for his care. 'Take care of him,' he told the innkeeper, 'and if it costs more, I will pay you on my way back.'\n\nJesus asked, 'Which of these three do you think was a neighbour to the man who was hurt?'\n\nThe answer was obvious: the one who helped.\n\n'Go,' said Jesus, 'and do the same.'",
+      "childText": "A man got hurt on a road. Some important people walked past and did nothing. But a stranger stopped and helped him — paid for his care and everything! Jesus said THAT is what it means to love your neighbour. Your neighbour is anyone who needs your help.",
+      "verses": [
+        {
+          "ref": "Luke 10:27",
+          "kjv": "And he answering said, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy strength, and with all thy mind; and thy neighbour as thyself.",
+          "little_bible": "Love God with all your heart. Love your neighbour the way you love yourself."
+        },
+        {
+          "ref": "Luke 10:33",
+          "kjv": "But a certain Samaritan, as he journeyed, came where he was: and when he saw him, he had compassion on him.",
+          "little_bible": "A Samaritan came and saw the hurt man. He felt sad and stopped to help."
+        },
+        {
+          "ref": "Luke 10:37",
+          "kjv": "Then said Jesus unto him, Go, and do thou likewise.",
+          "little_bible": "Jesus said: 'Go and do the same.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "The Good Samaritan stopped when others didn't. Can you think of a time you could stop and help someone who needs it?",
+      "parentGuide": "The priest and Levite aren't villains — they probably had good reasons (ritual purity, fear, busyness). Help your child see that love often costs us something: time, comfort, resources. The Samaritan paid with all three.",
+      "familyQuestion": "Who around us — at school, in our street, in our family — might need someone to stop and help them this week?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear Jesus, thank you for this story. Help us to be like the Good Samaritan — to stop when we see someone who needs help, even when it costs us something. Show us who our neighbours are. Amen.",
+      "childPrompt": "Ask Jesus to help you notice someone who needs help — and give you the courage to stop!"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus said: 'Go and do the same.'",
+      "ref": "Luke 10:37",
+      "memoryPhrase": "Love your neighbour — go and help!",
+      "tip": "Point forward when you say 'Go' — as if you're ready to help someone right now!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Do one kind thing today for someone outside your usual circle — maybe a neighbour, a classmate you don't usually play with, or someone you don't know well.",
+      "parentNote": "This parable deliberately makes the hero the unexpected person. Jesus is expanding his disciples' understanding of 'neighbour'. Help your child see people who are easy to overlook — the lonely child at school, the elderly neighbour, the person at the checkout."
+    }
+  }
+}

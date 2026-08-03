@@ -1,0 +1,37 @@
+{
+  "storyId": "god-made-me",
+  "memoryBuilder": {
+    "phrase": "God made me wonderful!",
+    "phraseWords": ["God", "made", "me", "wonderful!"],
+    "verseRef": "Psalm 139:14",
+    "verseText": "I praise you, God — you made me in a wonderful way.",
+    "verseWords": ["I", "praise", "you,", "God", "—", "you", "made", "me", "in", "a", "wonderful", "way."]
+  },
+  "sequence": {
+    "prompt": "David wrote Psalm 139 about how God made us. Put these ideas in the right order from the story.",
+    "items": [
+      { "id": "known",    "label": "God knew me",        "emoji": "❤️", "order": 1 },
+      { "id": "made",     "label": "God made me",        "emoji": "🤲", "order": 2 },
+      { "id": "wonderful","label": "I am wonderful",     "emoji": "🌟", "order": 3 },
+      { "id": "praise",   "label": "We praise God",      "emoji": "🙌", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match what God made to what it is for.",
+    "questionTemplate": "What are {left} for?",
+    "pairs": [
+      { "leftId": "eyes",   "left": "my eyes",    "leftEmoji": "👀", "rightId": "see",    "right": "To see",       "rightEmoji": "🌈" },
+      { "leftId": "hands",  "left": "my hands",   "leftEmoji": "🤲", "rightId": "touch",  "right": "To touch",     "rightEmoji": "🌸" },
+      { "leftId": "heart",  "left": "my heart",   "leftEmoji": "❤️", "rightId": "love",   "right": "To love",      "rightEmoji": "🥰" }
+    ]
+  },
+  "application": {
+    "question": "God made every part of you on purpose! Which part of how God made you are you most thankful for?",
+    "options": [
+      { "id": "body",   "label": "My body",   "emoji": "💪" },
+      { "id": "mind",   "label": "My mind",   "emoji": "🧠" },
+      { "id": "heart",  "label": "My heart",  "emoji": "❤️" }
+    ],
+    "followUp": "All of you — your body, your mind, your heart — was made by God, on purpose, with love. You are wonderfully made!"
+  }
+}

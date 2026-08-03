@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!--
+    Little Bible — app icon
+    Lumi: a seed of light. "The seed is the word of God." (Luke 8:11)
+
+    Rules this file obeys (see docs/LittleBible_Brand_Identity.md):
+      · The body is a TEARDROP, not a circle. This is load-bearing: a gold
+        sphere with green leaves on top reads as a clementine no matter what
+        else you do to it. A body that tapers to a point where the sprout
+        emerges reads as a seed. Do not round it back off.
+      · Full-bleed square. Launchers apply their own corner mask.
+      · Background gradient is LogoMark's gradient — the two marks are one family.
+      · Flat fills on the character. No blur filters, no body gradient: they
+        turn to mud at 29px. The only gradients are the background and the
+        halo, both large soft areas that downscale cleanly.
+      · Eyes are solid dark discs: the highest-contrast reading of a face at
+        small sizes.
+  -->
+  <defs>
+    <linearGradient id="lb-icon-bg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#7C2D12"/>
+      <stop offset="55%"  stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <radialGradient id="lb-icon-halo">
+      <stop offset="50%"  stop-color="#FCD34D" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#FCD34D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#lb-icon-bg)"/>
+
+  <!-- Halo -->
+  <circle cx="512" cy="610" r="420" fill="url(#lb-icon-halo)"/>
+
+  <!-- Sparkles — the "light" half of the metaphor -->
+  <path d="M210 396 Q210 430 244 430 Q210 430 210 464 Q210 430 176 430 Q210 430 210 396 Z" fill="#FEF3C7" opacity="0.70"/>
+  <path d="M816 348 Q816 372 840 372 Q816 372 816 396 Q816 372 792 372 Q816 372 816 348 Z" fill="#FEF3C7" opacity="0.55"/>
+  <path d="M846 678 Q846 706 874 706 Q846 706 846 734 Q846 706 818 706 Q846 706 846 678 Z" fill="#FEF3C7" opacity="0.50"/>
+  <path d="M188 680 Q188 700 208 700 Q188 700 188 720 Q188 700 168 700 Q188 700 188 680 Z" fill="#FEF3C7" opacity="0.45"/>
+
+  <!-- Sprout: stem, then two cotyledon leaves -->
+  <rect x="496" y="230" width="32" height="110" rx="16" fill="#10B981"/>
+  <ellipse cx="394" cy="238" rx="112" ry="55" transform="rotate(-30 394 238)" fill="#4ADE80"/>
+  <ellipse cx="630" cy="238" rx="112" ry="55" transform="rotate(30 630 238)"  fill="#34D399"/>
+
+  <!-- Body: teardrop seed — tapers to a point where the sprout emerges -->
+  <path d="M512 318
+           C638 372 780 516 780 655
+           C780 788 660 882 512 882
+           C364 882 244 788 244 655
+           C244 516 386 372 512 318 Z" fill="#F59E0B"/>
+  <ellipse cx="465" cy="540" rx="120" ry="82" fill="#FBBF24" opacity="0.75"/>
+  <ellipse cx="432" cy="505" rx="62"  ry="42" fill="#FDE68A" opacity="0.70"/>
+
+  <!-- Face — sits low, in the wide part of the teardrop -->
+  <circle cx="404" cy="655" r="48" fill="#78350F"/>
+  <circle cx="620" cy="655" r="48" fill="#78350F"/>
+  <circle cx="419" cy="639" r="16" fill="#FFFFFF" opacity="0.92"/>
+  <circle cx="635" cy="639" r="16" fill="#FFFFFF" opacity="0.92"/>
+  <path d="M402 772 Q512 856 622 772" stroke="#78350F" stroke-width="30"
+        stroke-linecap="round" fill="none"/>
+</svg>

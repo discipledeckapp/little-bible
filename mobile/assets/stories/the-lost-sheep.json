@@ -1,0 +1,61 @@
+{
+  "id": "the-lost-sheep",
+  "sensitivityTier": "general",
+  "title": "The Lost Sheep",
+  "subtitle": "Jesus leaves the ninety-nine to find the one that is lost",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Jesus loves every single person and will always come looking for them.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 15:3-7",
+  "durationMinutes": 5,
+  "coverEmoji": "🐑",
+  "coverColor": "#34D399",
+  "illustrationPrompt": "A shepherd on a hillside searching for a lost sheep, warm sunset light, rolling green hills, gouache storybook illustration",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus loved to tell stories that helped people understand what God is like. One day He told this story:\n\nA shepherd had one hundred sheep. He loved every one of them — he knew their faces, he knew their voices, he called them each by name. One day he counted them and found that one was missing. Just one out of a hundred.\n\nSome people might have said, 'Never mind — you still have ninety-nine.' But the shepherd didn't think that way. He left the ninety-nine safe in the field and went out searching for the one lost sheep. Over hills, through valleys, in the dark — he kept looking and calling until he found it.\n\nWhen he finally did, he didn't scold the sheep for wandering. He picked it up and carried it home on his shoulders, singing all the way. And when he got home, he called all his friends and neighbours and said, 'Celebrate with me! I found my lost sheep!'\n\nJesus said: 'That is what it is like in heaven when even one person who was lost comes back to God. There is great celebration — more joy over that one than over ninety-nine who were never lost at all.'\n\nJesus is the shepherd. And you — you are the sheep He came looking for.",
+      "childText": "Jesus told a story about a shepherd who had 100 sheep. When one got lost, the shepherd went to find it! He didn't give up. He searched and searched until he found it. Then he carried it home and had a big celebration! Jesus says that is what He is like — He always comes looking for us.",
+      "verses": [
+        {
+          "ref": "Luke 15:4",
+          "kjv": "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine in the wilderness, and go after that which is lost, until he find it?",
+          "little_bible": "A shepherd had 100 sheep. One was lost. He left the others to search for it."
+        },
+        {
+          "ref": "Luke 15:5",
+          "kjv": "And when he hath found it, he layeth it on his shoulders, rejoicing.",
+          "little_bible": "The shepherd found the sheep! He carried it home on his shoulders."
+        },
+        {
+          "ref": "Luke 15:7",
+          "kjv": "I say unto you, that likewise joy shall be in heaven over one sinner that repenteth, more than over ninety and nine just persons, which need no repentance.",
+          "little_bible": "There is great joy in heaven over one person who was lost and comes back to God."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "The shepherd left the ninety-nine to look for the one lost sheep. What does that tell you about how much Jesus loves you?",
+      "parentGuide": "Help your child feel the weight of being the 'one' — not just any sheep, but the specific one the shepherd came for. Jesus' love is particular, not general. He doesn't love 'children' abstractly; He loves this child.",
+      "familyQuestion": "Have you ever felt lost or like you didn't belong? What would it mean to know Jesus came looking for you?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear Jesus, thank you that you are our shepherd and you always come looking for us. Thank you that you don't give up on anyone. Help us to know we are found — that you carry us home. Amen.",
+      "childPrompt": "You can tell Jesus: 'Thank you that you came looking for me!'"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "There is great joy in heaven over one person who was lost and comes back to God.",
+      "ref": "Luke 15:7",
+      "memoryPhrase": "Jesus always comes looking!",
+      "tip": "Cup your hands around your eyes like you're searching when you say 'comes looking'!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Play a hiding game today. When you find the person hiding, celebrate loudly! Then talk about how Jesus celebrates when someone is found by Him.",
+      "parentNote": "This parable has massive implications for how children understand belonging. A child who feels 'too naughty to be loved' needs this story specifically — the shepherd doesn't find a perfect sheep, he finds a lost one. The lostness is the reason for the search, not a barrier to it."
+    }
+  }
+}

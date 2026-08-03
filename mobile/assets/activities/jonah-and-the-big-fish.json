@@ -1,0 +1,36 @@
+{
+  "storyId": "jonah-and-the-big-fish",
+  "memoryBuilder": {
+    "phrase": "Only God saves!",
+    "phraseWords": ["Only", "God", "saves!"],
+    "verseRef": "Jonah 2:9",
+    "verseText": "Only God can save us.",
+    "verseWords": ["Only", "God", "can", "save", "us."]
+  },
+  "sequence": {
+    "prompt": "What happened to Jonah? Put the story in order.",
+    "items": [
+      { "id": "run",    "label": "Jonah runs away",          "emoji": "🚢", "order": 1 },
+      { "id": "storm",  "label": "A big storm comes",        "emoji": "⛈️", "order": 2 },
+      { "id": "fish",   "label": "A big fish swallows Jonah","emoji": "🐋", "order": 3 },
+      { "id": "goes",   "label": "Jonah goes to Nineveh",    "emoji": "🏙️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Who did what? Match each character to what they did.",
+    "pairs": [
+      { "leftId": "jonah",   "left": "Jonah",      "leftEmoji": "🧔", "rightId": "ran",   "right": "Ran away from God",      "rightEmoji": "🚢" },
+      { "leftId": "god",     "left": "God",         "leftEmoji": "✨", "rightId": "fish",  "right": "Sent a big fish",        "rightEmoji": "🐋" },
+      { "leftId": "people",  "left": "The People",  "leftEmoji": "🏙️", "rightId": "sorry", "right": "Said sorry to God",      "rightEmoji": "🙏" }
+    ]
+  },
+  "application": {
+    "question": "Jonah prayed to God even from inside the fish. Where can you pray to God?",
+    "options": [
+      { "id": "bed",      "label": "In my bed",       "emoji": "🛏️" },
+      { "id": "anywhere", "label": "Anywhere!",       "emoji": "🌍" },
+      { "id": "church",   "label": "At church",       "emoji": "⛪" }
+    ],
+    "followUp": "You can pray anywhere — just like Jonah prayed inside a fish! God always hears you."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "storyId": "birth-of-jesus",
+  "memoryBuilder": {
+    "phrase": "Jesus, the Saviour, is born!",
+    "phraseWords": ["Jesus,", "the", "Saviour,", "is", "born!"],
+    "verseRef": "Luke 2:11",
+    "verseText": "Today in Bethlehem, the Saviour has been born — Jesus, the Lord!",
+    "verseWords": ["Today", "in", "Bethlehem,", "the", "Saviour", "has", "been", "born", "—", "Jesus,", "the", "Lord!"]
+  },
+  "sequence": {
+    "prompt": "What happened on the night Jesus was born? Put it in order.",
+    "items": [
+      { "id": "travel",   "label": "Mary and Joseph travel",  "emoji": "🚶", "order": 1 },
+      { "id": "stable",   "label": "Jesus is born in a stable", "emoji": "🏠", "order": 2 },
+      { "id": "angels",   "label": "Angels tell the shepherds", "emoji": "✨", "order": 3 },
+      { "id": "visit",    "label": "Shepherds visit Jesus",   "emoji": "🐑", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each person to what they did.",
+    "pairs": [
+      { "leftId": "mary",    "left": "Mary",     "leftEmoji": "👩", "rightId": "held",    "right": "Held baby Jesus",     "rightEmoji": "👶" },
+      { "leftId": "angels",  "left": "Angels",   "leftEmoji": "✨", "rightId": "told",    "right": "Told the good news",  "rightEmoji": "📢" },
+      { "leftId": "shepherds","left": "Shepherds","leftEmoji": "🐑", "rightId": "visited", "right": "Visited Jesus",       "rightEmoji": "🌟" }
+    ]
+  },
+  "application": {
+    "question": "The angel said the news about Jesus was for EVERYONE. Who would you want to tell about Jesus?",
+    "options": [
+      { "id": "friend",  "label": "A friend",   "emoji": "👫" },
+      { "id": "family",  "label": "My family",  "emoji": "👨‍👩‍👧" },
+      { "id": "everyone","label": "Everyone!",  "emoji": "🌍" }
+    ],
+    "followUp": "The angel said the news about Jesus is for ALL people everywhere. That includes you, and everyone you love!"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "jesus-saves",
+  "sensitivityTier": "guided",
+  "title": "Jesus Saves",
+  "subtitle": "Jesus died and rose again — and that changes everything",
+  "collection": "jesus-saves",
+  "mainTruth": "Jesus gave His life for us and rose from the dead so we could be with God forever.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 23-24",
+  "durationMinutes": 7,
+  "coverEmoji": "✝️",
+  "coverColor": "#78350F",
+  "illustrationPrompt": "An empty tomb at sunrise, rolled-away stone, warm golden dawn light flooding in, flowers at the entrance, gouache storybook illustration, deeply hopeful",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "This is the most important story in the whole Bible.\n\nJesus had spent three years teaching people, healing the sick, loving the forgotten. But the religious leaders were afraid of Him and angry. They had Him arrested. Pilate, the Roman governor, could find nothing wrong with Jesus — but to keep the peace, he let the crowd decide. They said: 'Crucify Him.'\n\nJesus was nailed to a cross. As He hung there, some people mocked Him: 'If you're really God's Son, save yourself!' But Jesus didn't come down. He stayed — because He wasn't dying for Himself. He was dying in place of us. All the wrong things we have ever done, will ever do — He was taking them all, so we wouldn't have to.\n\nJesus spoke from the cross. To the criminal dying next to him who asked to be remembered, He said: 'Today you will be with me in paradise.' To God the Father, He said: 'Forgive them — they don't know what they're doing.' And finally: 'It is finished.' And He died.\n\nHis friends wrapped His body and placed it in a tomb. A large stone was rolled in front. The soldiers were posted to guard it. It was over.\n\nExcept it wasn't.\n\nThree days later, early in the morning, some women came to the tomb with spices. But the stone was rolled away. And two angels stood inside: 'Why do you look for the living among the dead? He is not here. He has risen!'\n\nJesus was alive. Death could not hold Him. And because He rose, everyone who trusts Him will rise too. The worst thing became the best thing. This is why we call it Good News.",
+      "childText": "Jesus died on a cross to take away all the wrong things we ever do. His friends were very sad. They put His body in a tomb. But three days later — Jesus was ALIVE! The angels said: 'He is not here — He has risen!' Jesus dying and coming back to life is the best news ever!",
+      "verses": [
+        {
+          "ref": "John 3:16",
+          "kjv": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+          "little_bible": "God loved the world so much. He gave His only Son. Trust in Jesus and live with God forever!"
+        },
+        {
+          "ref": "Romans 5:8",
+          "kjv": "But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.",
+          "little_bible": "We were doing wrong. But Jesus died for us anyway. That is love."
+        },
+        {
+          "ref": "Luke 24:6",
+          "kjv": "He is not here, but is risen.",
+          "little_bible": "He is not here — He has risen!"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Jesus rose from the dead and that is real. How does it make you feel to know that Jesus is alive right now?",
+      "parentGuide": "Be honest if this feels big or confusing — it's supposed to. The resurrection is the hinge of history. Let your child wonder. Don't rush to tidy up their questions. 'I don't fully understand it either, but I believe it' is a completely valid and powerful thing for a parent to say.",
+      "familyQuestion": "If Jesus is alive right now, what do you think He is doing?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Dear Jesus, thank you for dying for us — for all the wrong things we do. Thank you for rising again. Thank you that you are alive right now. Help us to believe it and to trust you with our whole lives. Amen.",
+      "childPrompt": "You can tell Jesus thank you — He is alive and He hears you!"
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "He is not here — He has risen!",
+      "ref": "Luke 24:6",
+      "memoryPhrase": "Jesus has risen — He is alive!",
+      "tip": "Start with your hands down and then throw them up when you shout 'risen'!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find something in your house or garden that was dead or dry and has come back to life (a plant, a seed, a flower). Use it to talk about what Jesus rising from the dead means.",
+      "parentNote": "Easter and the resurrection are not just for Easter Sunday. They are the foundation of everything. Revisit this story at the start of each new season — spring especially. The whole natural world is stitched with the pattern of death and resurrection."
+    }
+  }
+}

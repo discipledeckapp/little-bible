@@ -1,0 +1,37 @@
+{
+  "storyId": "the-lost-sheep",
+  "memoryBuilder": {
+    "phrase": "Jesus always comes looking!",
+    "phraseWords": ["Jesus", "always", "comes", "looking!"],
+    "verseRef": "Luke 15:7",
+    "verseText": "There is great joy in heaven over one person who was lost and comes back to God.",
+    "verseWords": ["There", "is", "great", "joy", "in", "heaven", "over", "one", "person", "who", "was", "lost", "and", "comes", "back", "to", "God."]
+  },
+  "sequence": {
+    "prompt": "What happened in the story of the lost sheep? Put it in order.",
+    "items": [
+      { "id": "missing",  "label": "One sheep goes missing",        "emoji": "🐑", "order": 1 },
+      { "id": "search",   "label": "Shepherd searches everywhere",  "emoji": "🔍", "order": 2 },
+      { "id": "found",    "label": "Shepherd finds the sheep",      "emoji": "✨", "order": 3 },
+      { "id": "celebrate","label": "Everyone celebrates!",          "emoji": "🎉", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each number to what it counts.",
+    "questionTemplate": "How many {left}?",
+    "pairs": [
+      { "leftId": "total",  "left": "sheep were there",    "leftEmoji": "💯", "rightId": "hundred",    "right": "One hundred", "rightEmoji": "🔢" },
+      { "leftId": "safe",   "left": "sheep stayed safe",   "leftEmoji": "✅",  "rightId": "ninetynine", "right": "Ninety-nine", "rightEmoji": "😊" },
+      { "leftId": "lost",   "left": "sheep were lost",     "leftEmoji": "❓", "rightId": "one",        "right": "Just one",    "rightEmoji": "🐑" }
+    ]
+  },
+  "application": {
+    "question": "The shepherd left the ninety-nine to find the one lost sheep. What does that tell you about how much Jesus loves YOU?",
+    "options": [
+      { "id": "alot",    "label": "A whole lot!",     "emoji": "❤️" },
+      { "id": "special", "label": "I am special to Him", "emoji": "🌟" },
+      { "id": "never",   "label": "He never gives up", "emoji": "💪" }
+    ],
+    "followUp": "All of those are true! Jesus loves you a whole lot, you are special to Him, and He never gives up on you — just like the shepherd never gave up on that one lost sheep."
+  }
+}
