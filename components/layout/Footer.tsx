@@ -91,6 +91,11 @@ export default function Footer() {
                     👨‍👩‍👧 Family Setup
                   </Link>
                 </li>
+                <li>
+                  <Link href="/privacy" className="text-amber-200/80 hover:text-white text-sm transition-colors">
+                    🔒 Privacy Policy
+                  </Link>
+                </li>
               </ul>
             </div>
 

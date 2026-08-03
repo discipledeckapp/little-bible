@@ -17,6 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/journeys`,   lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
     { url: `${BASE}/download`,   lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE}/donate`,     lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE}/privacy`,    lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
   ];
 
   // ── All 66 book index pages ──────────────────────────────────────────────
