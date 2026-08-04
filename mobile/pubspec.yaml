@@ -49,6 +49,7 @@ dependencies:
   # ── Auth (parent only) ─────────────────────────────────────────────────────
   # google_sign_in: ^6.2.2  — deferred until cloud sync sprint
   flutter_secure_storage: ^9.2.2
+  local_auth: ^2.3.0
 
   # ── Serialisation helpers ────────────────────────────────────────────────────
   freezed_annotation: ^2.4.4
@@ -97,14 +98,72 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/bible/en/
     - assets/bible/en/genesis/
-    - assets/bible/en/john/
-    - assets/bible/en/luke/
-    - assets/bible/en/mark/
-    - assets/bible/en/matthew/
-    - assets/bible/en/proverbs/
+    - assets/bible/en/exodus/
+    - assets/bible/en/leviticus/
+    - assets/bible/en/numbers/
+    - assets/bible/en/deuteronomy/
+    - assets/bible/en/joshua/
+    - assets/bible/en/judges/
+    - assets/bible/en/ruth/
+    - assets/bible/en/1-samuel/
+    - assets/bible/en/2-samuel/
+    - assets/bible/en/1-kings/
+    - assets/bible/en/2-kings/
+    - assets/bible/en/1-chronicles/
+    - assets/bible/en/2-chronicles/
+    - assets/bible/en/ezra/
+    - assets/bible/en/nehemiah/
+    - assets/bible/en/esther/
+    - assets/bible/en/job/
     - assets/bible/en/psalms/
+    - assets/bible/en/proverbs/
+    - assets/bible/en/ecclesiastes/
+    - assets/bible/en/song-of-solomon/
+    - assets/bible/en/isaiah/
+    - assets/bible/en/jeremiah/
+    - assets/bible/en/lamentations/
+    - assets/bible/en/ezekiel/
+    - assets/bible/en/daniel/
+    - assets/bible/en/hosea/
+    - assets/bible/en/joel/
+    - assets/bible/en/amos/
+    - assets/bible/en/obadiah/
+    - assets/bible/en/jonah/
+    - assets/bible/en/micah/
+    - assets/bible/en/nahum/
+    - assets/bible/en/habakkuk/
+    - assets/bible/en/zephaniah/
+    - assets/bible/en/haggai/
+    - assets/bible/en/zechariah/
+    - assets/bible/en/malachi/
+    - assets/bible/en/matthew/
+    - assets/bible/en/mark/
+    - assets/bible/en/luke/
+    - assets/bible/en/john/
+    - assets/bible/en/acts/
+    - assets/bible/en/romans/
+    - assets/bible/en/1-corinthians/
+    - assets/bible/en/2-corinthians/
+    - assets/bible/en/galatians/
+    - assets/bible/en/ephesians/
+    - assets/bible/en/philippians/
+    - assets/bible/en/colossians/
+    - assets/bible/en/1-thessalonians/
+    - assets/bible/en/2-thessalonians/
+    - assets/bible/en/1-timothy/
+    - assets/bible/en/2-timothy/
+    - assets/bible/en/titus/
+    - assets/bible/en/philemon/
+    - assets/bible/en/hebrews/
+    - assets/bible/en/james/
+    - assets/bible/en/1-peter/
+    - assets/bible/en/2-peter/
+    - assets/bible/en/1-john/
+    - assets/bible/en/2-john/
+    - assets/bible/en/3-john/
+    - assets/bible/en/jude/
+    - assets/bible/en/revelation/
     - assets/images/
     - assets/stories/
     - assets/activities/
@@ -132,6 +191,19 @@ flutter:
     - assets/audio/stories/bread-in-the-wilderness/
     - assets/audio/stories/gods-good-commands/
     - assets/audio/stories/god-lives-with-his-people/
+    - assets/audio/stories/twelve-spies/
+    - assets/audio/stories/joshua-and-the-walls/
+    - assets/audio/stories/deborah-leads-gods-people/
+    - assets/audio/stories/gideons-tiny-army/
+    - assets/audio/stories/ruth-finds-a-home/
+    - assets/audio/stories/samuel-listens-to-god/
+    - assets/audio/stories/saul-the-king/
+    - assets/audio/stories/david-and-the-giant/
+    - assets/audio/stories/davids-sin-and-gods-mercy/
+    - assets/audio/stories/gods-forever-king-promise/
+    - assets/audio/stories/solomon-asks-for-wisdom/
+    - assets/audio/stories/elijah-and-the-only-true-god/
+    - assets/audio/stories/the-prophets-promise-new-hearts/
     - assets/audio/stories/birth-of-jesus/
     - assets/audio/stories/jesus-loves-children/
     - assets/audio/stories/david-the-shepherd-boy/
