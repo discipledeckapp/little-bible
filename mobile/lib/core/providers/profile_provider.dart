@@ -111,6 +111,15 @@ class ProfileRepository {
         .write(const ChildProfilesCompanion(isUnlocked: Value(true)));
   }
 
+  /// Marks every profile on this device as unlocked.
+  /// Called on purchase and on each app start when the device-unlock flag is set,
+  /// so profiles created after the original purchase are caught automatically.
+  Future<void> setAllUnlocked() async {
+    await _db
+        .update(_db.childProfiles)
+        .write(const ChildProfilesCompanion(isUnlocked: Value(true)));
+  }
+
   Future<void> updateSettings(
     String profileId, {
     bool? autoplayEnabled,
@@ -167,6 +176,21 @@ class ProfileRepository {
             ..where((t) => t.id.equals(profileId)))
           .go();
     });
+  }
+
+  Future<void> editProfile(
+    String profileId, {
+    required String nickname,
+    required String ageBand,
+    required String avatarId,
+  }) {
+    return (_db.update(_db.childProfiles)
+          ..where((t) => t.id.equals(profileId)))
+        .write(ChildProfilesCompanion(
+      nickname: Value(nickname),
+      ageBand:  Value(ageBand),
+      avatarId: Value(avatarId),
+    ));
   }
 
   Future<void> switchActive(String profileId) async {

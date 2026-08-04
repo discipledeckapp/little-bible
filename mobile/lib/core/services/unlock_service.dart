@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../database/app_database.dart';
@@ -11,6 +12,10 @@ part 'unlock_service.g.dart';
 
 // Product ID must match what you register in App Store Connect and Google Play Console.
 const kUnlockProductId = 'com.littlebible.unlock';
+
+// Device-level flag persisted in the keychain / EncryptedSharedPreferences.
+// Set once on purchase; read on every launch so profiles added later auto-unlock.
+const _kDeviceUnlockKey = 'com.littlebible.device_unlock';
 
 enum UnlockStatus { idle, loading, purchased, unavailable, error }
 
@@ -53,12 +58,27 @@ class UnlockService extends ChangeNotifier {
 
   final AppDatabase _db;
   final ProfileRepository _profileRepo;
+  final _storage = const FlutterSecureStorage(
+    aOptions: AndroidOptions(encryptedSharedPreferences: true),
+  );
 
   StreamSubscription<List<PurchaseDetails>>? _purchaseSub;
   UnlockState _state = const UnlockState();
   UnlockState get state => _state;
 
+  bool _deviceUnlocked = false;
+  /// True when the non-consumable purchase has been made on this store account.
+  bool get isDeviceUnlocked => _deviceUnlocked;
+
   Future<void> _init() async {
+    // Re-apply the device-level unlock to any profiles created after the
+    // original purchase (covers reinstalls and multi-profile households).
+    final flag = await _storage.read(key: _kDeviceUnlockKey);
+    if (flag == '1') {
+      _deviceUnlocked = true;
+      await _profileRepo.setAllUnlocked();
+    }
+
     final available = await InAppPurchase.instance.isAvailable();
     if (!available) {
       _state = _state.copyWith(status: UnlockStatus.unavailable);
@@ -85,10 +105,16 @@ class UnlockService extends ChangeNotifier {
     final response = await InAppPurchase.instance
         .queryProductDetails({kUnlockProductId});
     if (response.productDetails.isNotEmpty) {
-      final product = response.productDetails.first;
-      _state = _state.copyWith(localPrice: product.price);
-      notifyListeners();
+      _state = _state.copyWith(localPrice: response.productDetails.first.price);
+    } else if (response.error != null) {
+      _state = _state.copyWith(
+        errorMessage: 'Could not load product: ${response.error!.message}',
+      );
     }
+    // notFoundIDs being non-empty with no error means the product ID isn't
+    // registered in the store yet — price stays null and the CTA still works
+    // (purchase() re-queries and returns a clear error message).
+    notifyListeners();
   }
 
   Future<void> purchase() async {
@@ -156,13 +182,18 @@ class UnlockService extends ChangeNotifier {
   }
 
   Future<void> _applyUnlock(PurchaseDetails purchase) async {
-    // Find the active profile and mark it unlocked.
+    // Write the device-level flag first — persists across profile additions.
+    await _storage.write(key: _kDeviceUnlockKey, value: '1');
+    _deviceUnlocked = true;
+
+    // Unlock every profile on the device (non-consumable = whole family).
+    await _profileRepo.setAllUnlocked();
+
+    // Queue the store-signed verification data against the active profile for
+    // server-side receipt validation.
     final profiles = await _db.select(_db.childProfiles).get();
     final active = profiles.where((p) => p.isActive).firstOrNull;
     if (active != null) {
-      await _profileRepo.setUnlocked(active.id);
-
-      // Queue the store-signed verification data for fail-closed server validation.
       await _db.into(_db.syncQueue).insert(
         SyncQueueCompanion.insert(
           profileId: active.id,
