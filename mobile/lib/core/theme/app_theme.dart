@@ -101,8 +101,29 @@ class AppTheme {
         seedColor: AppColours.lumiGold,
         brightness: Brightness.light,
         surface: AppColours.cream,
+        // Pin onSurface so TextField input text and body text are always
+        // high-contrast dark, not the amber tint fromSeed would derive.
+        onSurface: AppColours.textDark,
+        onSurfaceVariant: AppColours.textMuted,
       ),
       scaffoldBackgroundColor: AppColours.cream,
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: AppColours.surface,
+        hintStyle: AppTextStyles.label.copyWith(color: AppColours.textMuted),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: AppColours.textMuted.withValues(alpha: 0.3)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: AppColours.textMuted.withValues(alpha: 0.3)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: AppColours.lumiGold, width: 2),
+        ),
+      ),
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: AppColours.surface,
         indicatorColor: AppColours.lumiGold.withValues(alpha: 0.15),
@@ -144,6 +165,8 @@ class AppTheme {
         seedColor: AppColours.lumiGold,
         brightness: Brightness.dark,
         surface: AppColours.darkBg,
+        onSurface: AppColours.textLight,
+        onSurfaceVariant: AppColours.textSubtle,
       ),
       scaffoldBackgroundColor: AppColours.darkBg,
     );

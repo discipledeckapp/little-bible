@@ -1,7 +1,7 @@
 name: little_bible
 description: "God's Word for Little Hearts — Bible stories, games, and verse memory for children."
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.1.0+3
 
 environment:
   sdk: ^3.10.1
@@ -97,13 +97,41 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/bible/en/
+    - assets/bible/en/genesis/
+    - assets/bible/en/john/
+    - assets/bible/en/luke/
+    - assets/bible/en/mark/
+    - assets/bible/en/matthew/
+    - assets/bible/en/proverbs/
+    - assets/bible/en/psalms/
     - assets/images/
     - assets/stories/
     - assets/activities/
     - assets/audio/stories/god-made-everything/
     - assets/audio/stories/god-made-me/
+    - assets/audio/stories/the-first-family/
+    - assets/audio/stories/the-very-sad-choice/
+    - assets/audio/stories/god-promises-a-rescuer/
+    - assets/audio/stories/two-brothers/
     - assets/audio/stories/noahs-big-boat/
     - assets/audio/stories/noahs-rainbow-promise/
+    - assets/audio/stories/the-tall-tower/
+    - assets/audio/stories/god-calls-abraham/
+    - assets/audio/stories/stars-in-the-sky/
+    - assets/audio/stories/the-promised-son/
+    - assets/audio/stories/god-provides-a-lamb/
+    - assets/audio/stories/jacob-learns-grace/
+    - assets/audio/stories/joseph-and-his-brothers/
+    - assets/audio/stories/joseph-forgives-his-family/
+    - assets/audio/stories/baby-moses-is-kept-safe/
+    - assets/audio/stories/god-calls-from-the-fire/
+    - assets/audio/stories/let-my-people-go/
+    - assets/audio/stories/the-passover-lamb/
+    - assets/audio/stories/a-way-through-the-sea/
+    - assets/audio/stories/bread-in-the-wilderness/
+    - assets/audio/stories/gods-good-commands/
+    - assets/audio/stories/god-lives-with-his-people/
     - assets/audio/stories/birth-of-jesus/
     - assets/audio/stories/jesus-loves-children/
     - assets/audio/stories/david-the-shepherd-boy/

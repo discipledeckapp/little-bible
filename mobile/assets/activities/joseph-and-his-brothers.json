@@ -1,0 +1,36 @@
+{
+  "storyId": "joseph-and-his-brothers",
+  "memoryBuilder": {
+    "phrase": "God meant it for good.",
+    "phraseWords": ["God", "meant", "it", "for", "good."],
+    "verseRef": "Genesis 50:20",
+    "verseText": "You meant it for evil. But God meant it for good.",
+    "verseWords": ["You", "meant", "it", "for", "evil.", "But", "God", "meant", "it", "for", "good."]
+  },
+  "sequence": {
+    "prompt": "What happened to Joseph? Put it in order.",
+    "items": [
+      { "id": "coat",    "label": "Jacob gave Joseph a coloured coat", "emoji": "🧥", "order": 1 },
+      { "id": "dreams",  "label": "Joseph told them about his dreams", "emoji": "💭", "order": 2 },
+      { "id": "sold",    "label": "His brothers sold him to traders",  "emoji": "🐫", "order": 3 },
+      { "id": "egypt",   "label": "God was with Joseph in Egypt",      "emoji": "✨", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "jacob",    "left": "Jacob",           "leftEmoji": "🧔", "rightId": "coat",   "right": "Gave Joseph a coloured coat",        "rightEmoji": "🧥" },
+      { "leftId": "brothers", "left": "Joseph's brothers","leftEmoji": "😠", "rightId": "sold",   "right": "Sold their own brother to traders",  "rightEmoji": "🐫" },
+      { "leftId": "god",      "left": "God",             "leftEmoji": "✨", "rightId": "stayed", "right": "Stayed with Joseph far from home",    "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "What the brothers did was wrong, and God did not pretend it was fine. When has something felt really unfair to you?",
+    "options": [
+      { "id": "blamed", "label": "Being blamed unfairly", "emoji": "😞" },
+      { "id": "left",   "label": "Being left out",        "emoji": "🚪" },
+      { "id": "took",   "label": "Someone took something", "emoji": "😢" }
+    ],
+    "followUp": "God never calls a wrong thing good. But He does not leave either — He stayed with Joseph the whole way, and He stays with you."
+  }
+}

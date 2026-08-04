@@ -238,16 +238,8 @@ class _StepNicknameAvatar extends StatelessWidget {
           TextField(
             controller: controller,
             maxLength: 20,
-            decoration: InputDecoration(
-              hintText: 'e.g. Noah',
-              hintStyle: AppTextStyles.label.copyWith(color: AppColours.textMuted),
-              filled: true,
-              fillColor: AppColours.surface,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(color: AppColours.textMuted.withValues(alpha: 0.3)),
-              ),
-            ),
+            style: AppTextStyles.label.copyWith(color: AppColours.textDark),
+            decoration: const InputDecoration(hintText: 'e.g. Noah'),
           ),
           const SizedBox(height: 28),
           Text("Pick an avatar",

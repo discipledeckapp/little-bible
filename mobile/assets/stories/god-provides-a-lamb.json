@@ -1,0 +1,70 @@
+{
+  "id": "god-provides-a-lamb",
+  "sensitivityTier": "guided",
+  "title": "God Provides a Lamb",
+  "subtitle": "Abraham walked up a mountain with a question — and God answered it Himself",
+  "collection": "promise-family",
+  "mainTruth": "God provides the offering Himself. Someone else stands in the place we could not stand.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 22:1-19",
+  "durationMinutes": 6,
+  "coverEmoji": "🐏",
+  "coverColor": "#7C2D12",
+  "illustrationPrompt": "A ram caught by its horns in a thicket of thorn bushes on a rocky mountain top, morning light striking it, an empty stone altar nearby, two small figures further down the slope, painterly gouache illustration on parchment paper, warm stone and thorn-brown palette with one shaft of gold light, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, relief and provision, no violence --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Isaac grew up — the promised boy, the child Abraham had waited a lifetime for, the son the whole promise depended on.\n\nThen God asked Abraham to do the hardest thing anyone has ever been asked. God told him to take Isaac up a mountain and offer him there. In those days, people made offerings to God by giving something precious and laying it on an altar. And God was asking for Isaac.\n\nWe do not know everything Abraham felt that night. But early the next morning he cut the wood, saddled his donkey, and set out — because he had learned that God can be trusted, even when God does not explain.\n\nOn the way up the mountain, Isaac carried the wood himself, and he asked his father a question. 'Father — we have the fire and the wood. But where is the lamb?'\n\nAnd Abraham gave the answer that this whole story is for: 'My son, God will provide Himself a lamb.'\n\nAt the top, Abraham built the altar and laid the wood. And just as he was about to obey, God called out from heaven: 'Abraham! Abraham! Do not touch the boy. Now I know that you trust Me.'\n\nAbraham looked up. And there, caught by its horns in a thorn bush, was a ram. God had provided it. The ram was offered instead of Isaac. Isaac walked back down that mountain alive, because something else had taken his place.\n\nAbraham named that place 'The Lord Will Provide'. And many, many years later, on a hill not far from that very spot, God kept the promise all the way. He gave His own Son as the Lamb — so that we could walk away alive.",
+      "childText": "Isaac grew up. Then God asked Abraham to do the hardest thing ever — to take Isaac up a mountain and give him back to God. Abraham trusted God, so he went. On the way, Isaac asked, 'Father, where is the lamb?' Abraham said, 'God will provide Himself a lamb.' At the top, just as Abraham was about to obey, God called out: 'Stop! Do not touch the boy!' Abraham looked up — and there was a ram caught in a bush. God had provided it. The ram went in Isaac's place, and Isaac walked home safe. Years later God gave His own Son as the Lamb, so that we could go free too.",
+      "verses": [
+        {
+          "ref": "Genesis 22:7",
+          "kjv": "And Isaac spake unto Abraham his father, and said, My father: ... Behold the fire and the wood: but where is the lamb for a burnt offering?",
+          "little_bible": "Isaac asked: 'Father, where is the lamb?'"
+        },
+        {
+          "ref": "Genesis 22:8",
+          "kjv": "And Abraham said, My son, God will provide himself a lamb for a burnt offering.",
+          "little_bible": "Abraham said: 'God will give us the lamb Himself.'"
+        },
+        {
+          "ref": "Genesis 22:12",
+          "kjv": "And he said, Lay not thine hand upon the lad, neither do thou any thing unto him.",
+          "little_bible": "God called out: 'Stop! Do not hurt the boy.'"
+        },
+        {
+          "ref": "John 1:29",
+          "kjv": "Behold the Lamb of God, which taketh away the sin of the world.",
+          "little_bible": "Look! Jesus is God's Lamb. He takes away our sin."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Who did God provide instead of Isaac?",
+      "parentGuide": "Read this one sitting beside your child. It is the hardest story in the World and also the most important — substitution is the idea the cross cannot be understood without. Keep three things clear. God never wanted Isaac harmed and stopped it Himself. The whole story turns on Abraham's answer: God will provide the lamb, and He did. And this points straight at Jesus, who was the Lamb God provided when there was no substitute for Him. If your child is troubled, do not brush it off — say plainly, 'God stopped it. Isaac walked home. Nobody was hurt,' and let them ask again another day.",
+      "familyQuestion": "Has anyone ever taken something hard for you so that you did not have to?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You provided the lamb Yourself. Thank You that Isaac walked home safe. Thank You most of all for Jesus, the Lamb You gave for us. We could never have done it ourselves. Thank You. Amen.",
+      "childPrompt": "Can you thank God for giving us Jesus, the Lamb?",
+      "prayerPoints": [
+        "Thank God that He provides what we cannot provide",
+        "Thank God for Jesus, the Lamb who took our place"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Abraham said: 'God will give us the lamb Himself.'",
+      "ref": "Genesis 22:8",
+      "memoryPhrase": "God will provide!",
+      "tip": "Hold out both empty hands and say 'we have nothing' — then look up, and say: 'God will provide!' Do it three times, opening your hands wider each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Give away one thing today that you would rather keep — a snack, a turn, a favourite toy — and notice how it feels.",
+      "parentNote": "This is a gentle echo, not an equivalence. The point your child can hold is that giving up something precious is real and costly, and that God gave first. Thank them specifically afterwards."
+    }
+  }
+}

@@ -84,6 +84,101 @@ class $VersesTable extends Verses with TableInfo<$VersesTable, Verse> {
     ),
     defaultValue: Constant(false),
   );
+  static const VerificationMeta _kjvMeta = const VerificationMeta('kjv');
+  @override
+  late final GeneratedColumn<String> kjv = GeneratedColumn<String>(
+    'kjv',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _littleBibleMeta = const VerificationMeta(
+    'littleBible',
+  );
+  @override
+  late final GeneratedColumn<String> littleBible = GeneratedColumn<String>(
+    'little_bible',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _littleReaderAdaptationMeta =
+      const VerificationMeta('littleReaderAdaptation');
+  @override
+  late final GeneratedColumn<String> littleReaderAdaptation =
+      GeneratedColumn<String>(
+        'little_reader_adaptation',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _meaningMeta = const VerificationMeta(
+    'meaning',
+  );
+  @override
+  late final GeneratedColumn<String> meaning = GeneratedColumn<String>(
+    'meaning',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _memoryPhraseMeta = const VerificationMeta(
+    'memoryPhrase',
+  );
+  @override
+  late final GeneratedColumn<String> memoryPhrase = GeneratedColumn<String>(
+    'memory_phrase',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _prayerMeta = const VerificationMeta('prayer');
+  @override
+  late final GeneratedColumn<String> prayer = GeneratedColumn<String>(
+    'prayer',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _discussionQuestionMeta =
+      const VerificationMeta('discussionQuestion');
+  @override
+  late final GeneratedColumn<String> discussionQuestion =
+      GeneratedColumn<String>(
+        'discussion_question',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _familyDiscussionMeta = const VerificationMeta(
+    'familyDiscussion',
+  );
+  @override
+  late final GeneratedColumn<String> familyDiscussion = GeneratedColumn<String>(
+    'family_discussion',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _doItTodayMeta = const VerificationMeta(
+    'doItToday',
+  );
+  @override
+  late final GeneratedColumn<String> doItToday = GeneratedColumn<String>(
+    'do_it_today',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -93,6 +188,15 @@ class $VersesTable extends Verses with TableInfo<$VersesTable, Verse> {
     body,
     source,
     isAdapted,
+    kjv,
+    littleBible,
+    littleReaderAdaptation,
+    meaning,
+    memoryPhrase,
+    prayer,
+    discussionQuestion,
+    familyDiscussion,
+    doItToday,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -153,6 +257,75 @@ class $VersesTable extends Verses with TableInfo<$VersesTable, Verse> {
         isAdapted.isAcceptableOrUnknown(data['is_adapted']!, _isAdaptedMeta),
       );
     }
+    if (data.containsKey('kjv')) {
+      context.handle(
+        _kjvMeta,
+        kjv.isAcceptableOrUnknown(data['kjv']!, _kjvMeta),
+      );
+    }
+    if (data.containsKey('little_bible')) {
+      context.handle(
+        _littleBibleMeta,
+        littleBible.isAcceptableOrUnknown(
+          data['little_bible']!,
+          _littleBibleMeta,
+        ),
+      );
+    }
+    if (data.containsKey('little_reader_adaptation')) {
+      context.handle(
+        _littleReaderAdaptationMeta,
+        littleReaderAdaptation.isAcceptableOrUnknown(
+          data['little_reader_adaptation']!,
+          _littleReaderAdaptationMeta,
+        ),
+      );
+    }
+    if (data.containsKey('meaning')) {
+      context.handle(
+        _meaningMeta,
+        meaning.isAcceptableOrUnknown(data['meaning']!, _meaningMeta),
+      );
+    }
+    if (data.containsKey('memory_phrase')) {
+      context.handle(
+        _memoryPhraseMeta,
+        memoryPhrase.isAcceptableOrUnknown(
+          data['memory_phrase']!,
+          _memoryPhraseMeta,
+        ),
+      );
+    }
+    if (data.containsKey('prayer')) {
+      context.handle(
+        _prayerMeta,
+        prayer.isAcceptableOrUnknown(data['prayer']!, _prayerMeta),
+      );
+    }
+    if (data.containsKey('discussion_question')) {
+      context.handle(
+        _discussionQuestionMeta,
+        discussionQuestion.isAcceptableOrUnknown(
+          data['discussion_question']!,
+          _discussionQuestionMeta,
+        ),
+      );
+    }
+    if (data.containsKey('family_discussion')) {
+      context.handle(
+        _familyDiscussionMeta,
+        familyDiscussion.isAcceptableOrUnknown(
+          data['family_discussion']!,
+          _familyDiscussionMeta,
+        ),
+      );
+    }
+    if (data.containsKey('do_it_today')) {
+      context.handle(
+        _doItTodayMeta,
+        doItToday.isAcceptableOrUnknown(data['do_it_today']!, _doItTodayMeta),
+      );
+    }
     return context;
   }
 
@@ -190,6 +363,42 @@ class $VersesTable extends Verses with TableInfo<$VersesTable, Verse> {
         DriftSqlType.bool,
         data['${effectivePrefix}is_adapted'],
       )!,
+      kjv: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kjv'],
+      ),
+      littleBible: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}little_bible'],
+      ),
+      littleReaderAdaptation: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}little_reader_adaptation'],
+      ),
+      meaning: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}meaning'],
+      ),
+      memoryPhrase: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}memory_phrase'],
+      ),
+      prayer: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}prayer'],
+      ),
+      discussionQuestion: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}discussion_question'],
+      ),
+      familyDiscussion: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}family_discussion'],
+      ),
+      doItToday: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}do_it_today'],
+      ),
     );
   }
 
@@ -207,6 +416,15 @@ class Verse extends DataClass implements Insertable<Verse> {
   final String body;
   final String source;
   final bool isAdapted;
+  final String? kjv;
+  final String? littleBible;
+  final String? littleReaderAdaptation;
+  final String? meaning;
+  final String? memoryPhrase;
+  final String? prayer;
+  final String? discussionQuestion;
+  final String? familyDiscussion;
+  final String? doItToday;
   const Verse({
     required this.id,
     required this.book,
@@ -215,6 +433,15 @@ class Verse extends DataClass implements Insertable<Verse> {
     required this.body,
     required this.source,
     required this.isAdapted,
+    this.kjv,
+    this.littleBible,
+    this.littleReaderAdaptation,
+    this.meaning,
+    this.memoryPhrase,
+    this.prayer,
+    this.discussionQuestion,
+    this.familyDiscussion,
+    this.doItToday,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -226,6 +453,35 @@ class Verse extends DataClass implements Insertable<Verse> {
     map['body'] = Variable<String>(body);
     map['source'] = Variable<String>(source);
     map['is_adapted'] = Variable<bool>(isAdapted);
+    if (!nullToAbsent || kjv != null) {
+      map['kjv'] = Variable<String>(kjv);
+    }
+    if (!nullToAbsent || littleBible != null) {
+      map['little_bible'] = Variable<String>(littleBible);
+    }
+    if (!nullToAbsent || littleReaderAdaptation != null) {
+      map['little_reader_adaptation'] = Variable<String>(
+        littleReaderAdaptation,
+      );
+    }
+    if (!nullToAbsent || meaning != null) {
+      map['meaning'] = Variable<String>(meaning);
+    }
+    if (!nullToAbsent || memoryPhrase != null) {
+      map['memory_phrase'] = Variable<String>(memoryPhrase);
+    }
+    if (!nullToAbsent || prayer != null) {
+      map['prayer'] = Variable<String>(prayer);
+    }
+    if (!nullToAbsent || discussionQuestion != null) {
+      map['discussion_question'] = Variable<String>(discussionQuestion);
+    }
+    if (!nullToAbsent || familyDiscussion != null) {
+      map['family_discussion'] = Variable<String>(familyDiscussion);
+    }
+    if (!nullToAbsent || doItToday != null) {
+      map['do_it_today'] = Variable<String>(doItToday);
+    }
     return map;
   }
 
@@ -238,6 +494,31 @@ class Verse extends DataClass implements Insertable<Verse> {
       body: Value(body),
       source: Value(source),
       isAdapted: Value(isAdapted),
+      kjv: kjv == null && nullToAbsent ? const Value.absent() : Value(kjv),
+      littleBible: littleBible == null && nullToAbsent
+          ? const Value.absent()
+          : Value(littleBible),
+      littleReaderAdaptation: littleReaderAdaptation == null && nullToAbsent
+          ? const Value.absent()
+          : Value(littleReaderAdaptation),
+      meaning: meaning == null && nullToAbsent
+          ? const Value.absent()
+          : Value(meaning),
+      memoryPhrase: memoryPhrase == null && nullToAbsent
+          ? const Value.absent()
+          : Value(memoryPhrase),
+      prayer: prayer == null && nullToAbsent
+          ? const Value.absent()
+          : Value(prayer),
+      discussionQuestion: discussionQuestion == null && nullToAbsent
+          ? const Value.absent()
+          : Value(discussionQuestion),
+      familyDiscussion: familyDiscussion == null && nullToAbsent
+          ? const Value.absent()
+          : Value(familyDiscussion),
+      doItToday: doItToday == null && nullToAbsent
+          ? const Value.absent()
+          : Value(doItToday),
     );
   }
 
@@ -254,6 +535,19 @@ class Verse extends DataClass implements Insertable<Verse> {
       body: serializer.fromJson<String>(json['body']),
       source: serializer.fromJson<String>(json['source']),
       isAdapted: serializer.fromJson<bool>(json['isAdapted']),
+      kjv: serializer.fromJson<String?>(json['kjv']),
+      littleBible: serializer.fromJson<String?>(json['littleBible']),
+      littleReaderAdaptation: serializer.fromJson<String?>(
+        json['littleReaderAdaptation'],
+      ),
+      meaning: serializer.fromJson<String?>(json['meaning']),
+      memoryPhrase: serializer.fromJson<String?>(json['memoryPhrase']),
+      prayer: serializer.fromJson<String?>(json['prayer']),
+      discussionQuestion: serializer.fromJson<String?>(
+        json['discussionQuestion'],
+      ),
+      familyDiscussion: serializer.fromJson<String?>(json['familyDiscussion']),
+      doItToday: serializer.fromJson<String?>(json['doItToday']),
     );
   }
   @override
@@ -267,6 +561,17 @@ class Verse extends DataClass implements Insertable<Verse> {
       'body': serializer.toJson<String>(body),
       'source': serializer.toJson<String>(source),
       'isAdapted': serializer.toJson<bool>(isAdapted),
+      'kjv': serializer.toJson<String?>(kjv),
+      'littleBible': serializer.toJson<String?>(littleBible),
+      'littleReaderAdaptation': serializer.toJson<String?>(
+        littleReaderAdaptation,
+      ),
+      'meaning': serializer.toJson<String?>(meaning),
+      'memoryPhrase': serializer.toJson<String?>(memoryPhrase),
+      'prayer': serializer.toJson<String?>(prayer),
+      'discussionQuestion': serializer.toJson<String?>(discussionQuestion),
+      'familyDiscussion': serializer.toJson<String?>(familyDiscussion),
+      'doItToday': serializer.toJson<String?>(doItToday),
     };
   }
 
@@ -278,6 +583,15 @@ class Verse extends DataClass implements Insertable<Verse> {
     String? body,
     String? source,
     bool? isAdapted,
+    Value<String?> kjv = const Value.absent(),
+    Value<String?> littleBible = const Value.absent(),
+    Value<String?> littleReaderAdaptation = const Value.absent(),
+    Value<String?> meaning = const Value.absent(),
+    Value<String?> memoryPhrase = const Value.absent(),
+    Value<String?> prayer = const Value.absent(),
+    Value<String?> discussionQuestion = const Value.absent(),
+    Value<String?> familyDiscussion = const Value.absent(),
+    Value<String?> doItToday = const Value.absent(),
   }) => Verse(
     id: id ?? this.id,
     book: book ?? this.book,
@@ -286,6 +600,21 @@ class Verse extends DataClass implements Insertable<Verse> {
     body: body ?? this.body,
     source: source ?? this.source,
     isAdapted: isAdapted ?? this.isAdapted,
+    kjv: kjv.present ? kjv.value : this.kjv,
+    littleBible: littleBible.present ? littleBible.value : this.littleBible,
+    littleReaderAdaptation: littleReaderAdaptation.present
+        ? littleReaderAdaptation.value
+        : this.littleReaderAdaptation,
+    meaning: meaning.present ? meaning.value : this.meaning,
+    memoryPhrase: memoryPhrase.present ? memoryPhrase.value : this.memoryPhrase,
+    prayer: prayer.present ? prayer.value : this.prayer,
+    discussionQuestion: discussionQuestion.present
+        ? discussionQuestion.value
+        : this.discussionQuestion,
+    familyDiscussion: familyDiscussion.present
+        ? familyDiscussion.value
+        : this.familyDiscussion,
+    doItToday: doItToday.present ? doItToday.value : this.doItToday,
   );
   Verse copyWithCompanion(VersesCompanion data) {
     return Verse(
@@ -296,6 +625,25 @@ class Verse extends DataClass implements Insertable<Verse> {
       body: data.body.present ? data.body.value : this.body,
       source: data.source.present ? data.source.value : this.source,
       isAdapted: data.isAdapted.present ? data.isAdapted.value : this.isAdapted,
+      kjv: data.kjv.present ? data.kjv.value : this.kjv,
+      littleBible: data.littleBible.present
+          ? data.littleBible.value
+          : this.littleBible,
+      littleReaderAdaptation: data.littleReaderAdaptation.present
+          ? data.littleReaderAdaptation.value
+          : this.littleReaderAdaptation,
+      meaning: data.meaning.present ? data.meaning.value : this.meaning,
+      memoryPhrase: data.memoryPhrase.present
+          ? data.memoryPhrase.value
+          : this.memoryPhrase,
+      prayer: data.prayer.present ? data.prayer.value : this.prayer,
+      discussionQuestion: data.discussionQuestion.present
+          ? data.discussionQuestion.value
+          : this.discussionQuestion,
+      familyDiscussion: data.familyDiscussion.present
+          ? data.familyDiscussion.value
+          : this.familyDiscussion,
+      doItToday: data.doItToday.present ? data.doItToday.value : this.doItToday,
     );
   }
 
@@ -308,14 +656,39 @@ class Verse extends DataClass implements Insertable<Verse> {
           ..write('verse: $verse, ')
           ..write('body: $body, ')
           ..write('source: $source, ')
-          ..write('isAdapted: $isAdapted')
+          ..write('isAdapted: $isAdapted, ')
+          ..write('kjv: $kjv, ')
+          ..write('littleBible: $littleBible, ')
+          ..write('littleReaderAdaptation: $littleReaderAdaptation, ')
+          ..write('meaning: $meaning, ')
+          ..write('memoryPhrase: $memoryPhrase, ')
+          ..write('prayer: $prayer, ')
+          ..write('discussionQuestion: $discussionQuestion, ')
+          ..write('familyDiscussion: $familyDiscussion, ')
+          ..write('doItToday: $doItToday')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode =>
-      Object.hash(id, book, chapter, verse, body, source, isAdapted);
+  int get hashCode => Object.hash(
+    id,
+    book,
+    chapter,
+    verse,
+    body,
+    source,
+    isAdapted,
+    kjv,
+    littleBible,
+    littleReaderAdaptation,
+    meaning,
+    memoryPhrase,
+    prayer,
+    discussionQuestion,
+    familyDiscussion,
+    doItToday,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -326,7 +699,16 @@ class Verse extends DataClass implements Insertable<Verse> {
           other.verse == this.verse &&
           other.body == this.body &&
           other.source == this.source &&
-          other.isAdapted == this.isAdapted);
+          other.isAdapted == this.isAdapted &&
+          other.kjv == this.kjv &&
+          other.littleBible == this.littleBible &&
+          other.littleReaderAdaptation == this.littleReaderAdaptation &&
+          other.meaning == this.meaning &&
+          other.memoryPhrase == this.memoryPhrase &&
+          other.prayer == this.prayer &&
+          other.discussionQuestion == this.discussionQuestion &&
+          other.familyDiscussion == this.familyDiscussion &&
+          other.doItToday == this.doItToday);
 }
 
 class VersesCompanion extends UpdateCompanion<Verse> {
@@ -337,6 +719,15 @@ class VersesCompanion extends UpdateCompanion<Verse> {
   final Value<String> body;
   final Value<String> source;
   final Value<bool> isAdapted;
+  final Value<String?> kjv;
+  final Value<String?> littleBible;
+  final Value<String?> littleReaderAdaptation;
+  final Value<String?> meaning;
+  final Value<String?> memoryPhrase;
+  final Value<String?> prayer;
+  final Value<String?> discussionQuestion;
+  final Value<String?> familyDiscussion;
+  final Value<String?> doItToday;
   const VersesCompanion({
     this.id = const Value.absent(),
     this.book = const Value.absent(),
@@ -345,6 +736,15 @@ class VersesCompanion extends UpdateCompanion<Verse> {
     this.body = const Value.absent(),
     this.source = const Value.absent(),
     this.isAdapted = const Value.absent(),
+    this.kjv = const Value.absent(),
+    this.littleBible = const Value.absent(),
+    this.littleReaderAdaptation = const Value.absent(),
+    this.meaning = const Value.absent(),
+    this.memoryPhrase = const Value.absent(),
+    this.prayer = const Value.absent(),
+    this.discussionQuestion = const Value.absent(),
+    this.familyDiscussion = const Value.absent(),
+    this.doItToday = const Value.absent(),
   });
   VersesCompanion.insert({
     this.id = const Value.absent(),
@@ -354,6 +754,15 @@ class VersesCompanion extends UpdateCompanion<Verse> {
     required String body,
     this.source = const Value.absent(),
     this.isAdapted = const Value.absent(),
+    this.kjv = const Value.absent(),
+    this.littleBible = const Value.absent(),
+    this.littleReaderAdaptation = const Value.absent(),
+    this.meaning = const Value.absent(),
+    this.memoryPhrase = const Value.absent(),
+    this.prayer = const Value.absent(),
+    this.discussionQuestion = const Value.absent(),
+    this.familyDiscussion = const Value.absent(),
+    this.doItToday = const Value.absent(),
   }) : book = Value(book),
        chapter = Value(chapter),
        verse = Value(verse),
@@ -366,6 +775,15 @@ class VersesCompanion extends UpdateCompanion<Verse> {
     Expression<String>? body,
     Expression<String>? source,
     Expression<bool>? isAdapted,
+    Expression<String>? kjv,
+    Expression<String>? littleBible,
+    Expression<String>? littleReaderAdaptation,
+    Expression<String>? meaning,
+    Expression<String>? memoryPhrase,
+    Expression<String>? prayer,
+    Expression<String>? discussionQuestion,
+    Expression<String>? familyDiscussion,
+    Expression<String>? doItToday,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -375,6 +793,16 @@ class VersesCompanion extends UpdateCompanion<Verse> {
       if (body != null) 'body': body,
       if (source != null) 'source': source,
       if (isAdapted != null) 'is_adapted': isAdapted,
+      if (kjv != null) 'kjv': kjv,
+      if (littleBible != null) 'little_bible': littleBible,
+      if (littleReaderAdaptation != null)
+        'little_reader_adaptation': littleReaderAdaptation,
+      if (meaning != null) 'meaning': meaning,
+      if (memoryPhrase != null) 'memory_phrase': memoryPhrase,
+      if (prayer != null) 'prayer': prayer,
+      if (discussionQuestion != null) 'discussion_question': discussionQuestion,
+      if (familyDiscussion != null) 'family_discussion': familyDiscussion,
+      if (doItToday != null) 'do_it_today': doItToday,
     });
   }
 
@@ -386,6 +814,15 @@ class VersesCompanion extends UpdateCompanion<Verse> {
     Value<String>? body,
     Value<String>? source,
     Value<bool>? isAdapted,
+    Value<String?>? kjv,
+    Value<String?>? littleBible,
+    Value<String?>? littleReaderAdaptation,
+    Value<String?>? meaning,
+    Value<String?>? memoryPhrase,
+    Value<String?>? prayer,
+    Value<String?>? discussionQuestion,
+    Value<String?>? familyDiscussion,
+    Value<String?>? doItToday,
   }) {
     return VersesCompanion(
       id: id ?? this.id,
@@ -395,6 +832,16 @@ class VersesCompanion extends UpdateCompanion<Verse> {
       body: body ?? this.body,
       source: source ?? this.source,
       isAdapted: isAdapted ?? this.isAdapted,
+      kjv: kjv ?? this.kjv,
+      littleBible: littleBible ?? this.littleBible,
+      littleReaderAdaptation:
+          littleReaderAdaptation ?? this.littleReaderAdaptation,
+      meaning: meaning ?? this.meaning,
+      memoryPhrase: memoryPhrase ?? this.memoryPhrase,
+      prayer: prayer ?? this.prayer,
+      discussionQuestion: discussionQuestion ?? this.discussionQuestion,
+      familyDiscussion: familyDiscussion ?? this.familyDiscussion,
+      doItToday: doItToday ?? this.doItToday,
     );
   }
 
@@ -422,6 +869,35 @@ class VersesCompanion extends UpdateCompanion<Verse> {
     if (isAdapted.present) {
       map['is_adapted'] = Variable<bool>(isAdapted.value);
     }
+    if (kjv.present) {
+      map['kjv'] = Variable<String>(kjv.value);
+    }
+    if (littleBible.present) {
+      map['little_bible'] = Variable<String>(littleBible.value);
+    }
+    if (littleReaderAdaptation.present) {
+      map['little_reader_adaptation'] = Variable<String>(
+        littleReaderAdaptation.value,
+      );
+    }
+    if (meaning.present) {
+      map['meaning'] = Variable<String>(meaning.value);
+    }
+    if (memoryPhrase.present) {
+      map['memory_phrase'] = Variable<String>(memoryPhrase.value);
+    }
+    if (prayer.present) {
+      map['prayer'] = Variable<String>(prayer.value);
+    }
+    if (discussionQuestion.present) {
+      map['discussion_question'] = Variable<String>(discussionQuestion.value);
+    }
+    if (familyDiscussion.present) {
+      map['family_discussion'] = Variable<String>(familyDiscussion.value);
+    }
+    if (doItToday.present) {
+      map['do_it_today'] = Variable<String>(doItToday.value);
+    }
     return map;
   }
 
@@ -434,7 +910,592 @@ class VersesCompanion extends UpdateCompanion<Verse> {
           ..write('verse: $verse, ')
           ..write('body: $body, ')
           ..write('source: $source, ')
-          ..write('isAdapted: $isAdapted')
+          ..write('isAdapted: $isAdapted, ')
+          ..write('kjv: $kjv, ')
+          ..write('littleBible: $littleBible, ')
+          ..write('littleReaderAdaptation: $littleReaderAdaptation, ')
+          ..write('meaning: $meaning, ')
+          ..write('memoryPhrase: $memoryPhrase, ')
+          ..write('prayer: $prayer, ')
+          ..write('discussionQuestion: $discussionQuestion, ')
+          ..write('familyDiscussion: $familyDiscussion, ')
+          ..write('doItToday: $doItToday')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $BibleChaptersTable extends BibleChapters
+    with TableInfo<$BibleChaptersTable, BibleChapter> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $BibleChaptersTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _bookMeta = const VerificationMeta('book');
+  @override
+  late final GeneratedColumn<String> book = GeneratedColumn<String>(
+    'book',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _chapterMeta = const VerificationMeta(
+    'chapter',
+  );
+  @override
+  late final GeneratedColumn<int> chapter = GeneratedColumn<int>(
+    'chapter',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _chapterSummaryMeta = const VerificationMeta(
+    'chapterSummary',
+  );
+  @override
+  late final GeneratedColumn<String> chapterSummary = GeneratedColumn<String>(
+    'chapter_summary',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _mainLessonMeta = const VerificationMeta(
+    'mainLesson',
+  );
+  @override
+  late final GeneratedColumn<String> mainLesson = GeneratedColumn<String>(
+    'main_lesson',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _memoryVerseRefMeta = const VerificationMeta(
+    'memoryVerseRef',
+  );
+  @override
+  late final GeneratedColumn<String> memoryVerseRef = GeneratedColumn<String>(
+    'memory_verse_ref',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _memoryVerseLittleBibleMeta =
+      const VerificationMeta('memoryVerseLittleBible');
+  @override
+  late final GeneratedColumn<String> memoryVerseLittleBible =
+      GeneratedColumn<String>(
+        'memory_verse_little_bible',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      );
+  static const VerificationMeta _parentGuideMeta = const VerificationMeta(
+    'parentGuide',
+  );
+  @override
+  late final GeneratedColumn<String> parentGuide = GeneratedColumn<String>(
+    'parent_guide',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _applicationForChildrenMeta =
+      const VerificationMeta('applicationForChildren');
+  @override
+  late final GeneratedColumn<String> applicationForChildren =
+      GeneratedColumn<String>(
+        'application_for_children',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      );
+  @override
+  List<GeneratedColumn> get $columns => [
+    book,
+    chapter,
+    chapterSummary,
+    mainLesson,
+    memoryVerseRef,
+    memoryVerseLittleBible,
+    parentGuide,
+    applicationForChildren,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'bible_chapters';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<BibleChapter> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('book')) {
+      context.handle(
+        _bookMeta,
+        book.isAcceptableOrUnknown(data['book']!, _bookMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_bookMeta);
+    }
+    if (data.containsKey('chapter')) {
+      context.handle(
+        _chapterMeta,
+        chapter.isAcceptableOrUnknown(data['chapter']!, _chapterMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_chapterMeta);
+    }
+    if (data.containsKey('chapter_summary')) {
+      context.handle(
+        _chapterSummaryMeta,
+        chapterSummary.isAcceptableOrUnknown(
+          data['chapter_summary']!,
+          _chapterSummaryMeta,
+        ),
+      );
+    }
+    if (data.containsKey('main_lesson')) {
+      context.handle(
+        _mainLessonMeta,
+        mainLesson.isAcceptableOrUnknown(data['main_lesson']!, _mainLessonMeta),
+      );
+    }
+    if (data.containsKey('memory_verse_ref')) {
+      context.handle(
+        _memoryVerseRefMeta,
+        memoryVerseRef.isAcceptableOrUnknown(
+          data['memory_verse_ref']!,
+          _memoryVerseRefMeta,
+        ),
+      );
+    }
+    if (data.containsKey('memory_verse_little_bible')) {
+      context.handle(
+        _memoryVerseLittleBibleMeta,
+        memoryVerseLittleBible.isAcceptableOrUnknown(
+          data['memory_verse_little_bible']!,
+          _memoryVerseLittleBibleMeta,
+        ),
+      );
+    }
+    if (data.containsKey('parent_guide')) {
+      context.handle(
+        _parentGuideMeta,
+        parentGuide.isAcceptableOrUnknown(
+          data['parent_guide']!,
+          _parentGuideMeta,
+        ),
+      );
+    }
+    if (data.containsKey('application_for_children')) {
+      context.handle(
+        _applicationForChildrenMeta,
+        applicationForChildren.isAcceptableOrUnknown(
+          data['application_for_children']!,
+          _applicationForChildrenMeta,
+        ),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {book, chapter};
+  @override
+  BibleChapter map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return BibleChapter(
+      book: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}book'],
+      )!,
+      chapter: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}chapter'],
+      )!,
+      chapterSummary: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}chapter_summary'],
+      ),
+      mainLesson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}main_lesson'],
+      ),
+      memoryVerseRef: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}memory_verse_ref'],
+      ),
+      memoryVerseLittleBible: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}memory_verse_little_bible'],
+      ),
+      parentGuide: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}parent_guide'],
+      ),
+      applicationForChildren: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}application_for_children'],
+      ),
+    );
+  }
+
+  @override
+  $BibleChaptersTable createAlias(String alias) {
+    return $BibleChaptersTable(attachedDatabase, alias);
+  }
+}
+
+class BibleChapter extends DataClass implements Insertable<BibleChapter> {
+  final String book;
+  final int chapter;
+  final String? chapterSummary;
+  final String? mainLesson;
+  final String? memoryVerseRef;
+  final String? memoryVerseLittleBible;
+  final String? parentGuide;
+  final String? applicationForChildren;
+  const BibleChapter({
+    required this.book,
+    required this.chapter,
+    this.chapterSummary,
+    this.mainLesson,
+    this.memoryVerseRef,
+    this.memoryVerseLittleBible,
+    this.parentGuide,
+    this.applicationForChildren,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['book'] = Variable<String>(book);
+    map['chapter'] = Variable<int>(chapter);
+    if (!nullToAbsent || chapterSummary != null) {
+      map['chapter_summary'] = Variable<String>(chapterSummary);
+    }
+    if (!nullToAbsent || mainLesson != null) {
+      map['main_lesson'] = Variable<String>(mainLesson);
+    }
+    if (!nullToAbsent || memoryVerseRef != null) {
+      map['memory_verse_ref'] = Variable<String>(memoryVerseRef);
+    }
+    if (!nullToAbsent || memoryVerseLittleBible != null) {
+      map['memory_verse_little_bible'] = Variable<String>(
+        memoryVerseLittleBible,
+      );
+    }
+    if (!nullToAbsent || parentGuide != null) {
+      map['parent_guide'] = Variable<String>(parentGuide);
+    }
+    if (!nullToAbsent || applicationForChildren != null) {
+      map['application_for_children'] = Variable<String>(
+        applicationForChildren,
+      );
+    }
+    return map;
+  }
+
+  BibleChaptersCompanion toCompanion(bool nullToAbsent) {
+    return BibleChaptersCompanion(
+      book: Value(book),
+      chapter: Value(chapter),
+      chapterSummary: chapterSummary == null && nullToAbsent
+          ? const Value.absent()
+          : Value(chapterSummary),
+      mainLesson: mainLesson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(mainLesson),
+      memoryVerseRef: memoryVerseRef == null && nullToAbsent
+          ? const Value.absent()
+          : Value(memoryVerseRef),
+      memoryVerseLittleBible: memoryVerseLittleBible == null && nullToAbsent
+          ? const Value.absent()
+          : Value(memoryVerseLittleBible),
+      parentGuide: parentGuide == null && nullToAbsent
+          ? const Value.absent()
+          : Value(parentGuide),
+      applicationForChildren: applicationForChildren == null && nullToAbsent
+          ? const Value.absent()
+          : Value(applicationForChildren),
+    );
+  }
+
+  factory BibleChapter.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return BibleChapter(
+      book: serializer.fromJson<String>(json['book']),
+      chapter: serializer.fromJson<int>(json['chapter']),
+      chapterSummary: serializer.fromJson<String?>(json['chapterSummary']),
+      mainLesson: serializer.fromJson<String?>(json['mainLesson']),
+      memoryVerseRef: serializer.fromJson<String?>(json['memoryVerseRef']),
+      memoryVerseLittleBible: serializer.fromJson<String?>(
+        json['memoryVerseLittleBible'],
+      ),
+      parentGuide: serializer.fromJson<String?>(json['parentGuide']),
+      applicationForChildren: serializer.fromJson<String?>(
+        json['applicationForChildren'],
+      ),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'book': serializer.toJson<String>(book),
+      'chapter': serializer.toJson<int>(chapter),
+      'chapterSummary': serializer.toJson<String?>(chapterSummary),
+      'mainLesson': serializer.toJson<String?>(mainLesson),
+      'memoryVerseRef': serializer.toJson<String?>(memoryVerseRef),
+      'memoryVerseLittleBible': serializer.toJson<String?>(
+        memoryVerseLittleBible,
+      ),
+      'parentGuide': serializer.toJson<String?>(parentGuide),
+      'applicationForChildren': serializer.toJson<String?>(
+        applicationForChildren,
+      ),
+    };
+  }
+
+  BibleChapter copyWith({
+    String? book,
+    int? chapter,
+    Value<String?> chapterSummary = const Value.absent(),
+    Value<String?> mainLesson = const Value.absent(),
+    Value<String?> memoryVerseRef = const Value.absent(),
+    Value<String?> memoryVerseLittleBible = const Value.absent(),
+    Value<String?> parentGuide = const Value.absent(),
+    Value<String?> applicationForChildren = const Value.absent(),
+  }) => BibleChapter(
+    book: book ?? this.book,
+    chapter: chapter ?? this.chapter,
+    chapterSummary: chapterSummary.present
+        ? chapterSummary.value
+        : this.chapterSummary,
+    mainLesson: mainLesson.present ? mainLesson.value : this.mainLesson,
+    memoryVerseRef: memoryVerseRef.present
+        ? memoryVerseRef.value
+        : this.memoryVerseRef,
+    memoryVerseLittleBible: memoryVerseLittleBible.present
+        ? memoryVerseLittleBible.value
+        : this.memoryVerseLittleBible,
+    parentGuide: parentGuide.present ? parentGuide.value : this.parentGuide,
+    applicationForChildren: applicationForChildren.present
+        ? applicationForChildren.value
+        : this.applicationForChildren,
+  );
+  BibleChapter copyWithCompanion(BibleChaptersCompanion data) {
+    return BibleChapter(
+      book: data.book.present ? data.book.value : this.book,
+      chapter: data.chapter.present ? data.chapter.value : this.chapter,
+      chapterSummary: data.chapterSummary.present
+          ? data.chapterSummary.value
+          : this.chapterSummary,
+      mainLesson: data.mainLesson.present
+          ? data.mainLesson.value
+          : this.mainLesson,
+      memoryVerseRef: data.memoryVerseRef.present
+          ? data.memoryVerseRef.value
+          : this.memoryVerseRef,
+      memoryVerseLittleBible: data.memoryVerseLittleBible.present
+          ? data.memoryVerseLittleBible.value
+          : this.memoryVerseLittleBible,
+      parentGuide: data.parentGuide.present
+          ? data.parentGuide.value
+          : this.parentGuide,
+      applicationForChildren: data.applicationForChildren.present
+          ? data.applicationForChildren.value
+          : this.applicationForChildren,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('BibleChapter(')
+          ..write('book: $book, ')
+          ..write('chapter: $chapter, ')
+          ..write('chapterSummary: $chapterSummary, ')
+          ..write('mainLesson: $mainLesson, ')
+          ..write('memoryVerseRef: $memoryVerseRef, ')
+          ..write('memoryVerseLittleBible: $memoryVerseLittleBible, ')
+          ..write('parentGuide: $parentGuide, ')
+          ..write('applicationForChildren: $applicationForChildren')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    book,
+    chapter,
+    chapterSummary,
+    mainLesson,
+    memoryVerseRef,
+    memoryVerseLittleBible,
+    parentGuide,
+    applicationForChildren,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is BibleChapter &&
+          other.book == this.book &&
+          other.chapter == this.chapter &&
+          other.chapterSummary == this.chapterSummary &&
+          other.mainLesson == this.mainLesson &&
+          other.memoryVerseRef == this.memoryVerseRef &&
+          other.memoryVerseLittleBible == this.memoryVerseLittleBible &&
+          other.parentGuide == this.parentGuide &&
+          other.applicationForChildren == this.applicationForChildren);
+}
+
+class BibleChaptersCompanion extends UpdateCompanion<BibleChapter> {
+  final Value<String> book;
+  final Value<int> chapter;
+  final Value<String?> chapterSummary;
+  final Value<String?> mainLesson;
+  final Value<String?> memoryVerseRef;
+  final Value<String?> memoryVerseLittleBible;
+  final Value<String?> parentGuide;
+  final Value<String?> applicationForChildren;
+  final Value<int> rowid;
+  const BibleChaptersCompanion({
+    this.book = const Value.absent(),
+    this.chapter = const Value.absent(),
+    this.chapterSummary = const Value.absent(),
+    this.mainLesson = const Value.absent(),
+    this.memoryVerseRef = const Value.absent(),
+    this.memoryVerseLittleBible = const Value.absent(),
+    this.parentGuide = const Value.absent(),
+    this.applicationForChildren = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  BibleChaptersCompanion.insert({
+    required String book,
+    required int chapter,
+    this.chapterSummary = const Value.absent(),
+    this.mainLesson = const Value.absent(),
+    this.memoryVerseRef = const Value.absent(),
+    this.memoryVerseLittleBible = const Value.absent(),
+    this.parentGuide = const Value.absent(),
+    this.applicationForChildren = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : book = Value(book),
+       chapter = Value(chapter);
+  static Insertable<BibleChapter> custom({
+    Expression<String>? book,
+    Expression<int>? chapter,
+    Expression<String>? chapterSummary,
+    Expression<String>? mainLesson,
+    Expression<String>? memoryVerseRef,
+    Expression<String>? memoryVerseLittleBible,
+    Expression<String>? parentGuide,
+    Expression<String>? applicationForChildren,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (book != null) 'book': book,
+      if (chapter != null) 'chapter': chapter,
+      if (chapterSummary != null) 'chapter_summary': chapterSummary,
+      if (mainLesson != null) 'main_lesson': mainLesson,
+      if (memoryVerseRef != null) 'memory_verse_ref': memoryVerseRef,
+      if (memoryVerseLittleBible != null)
+        'memory_verse_little_bible': memoryVerseLittleBible,
+      if (parentGuide != null) 'parent_guide': parentGuide,
+      if (applicationForChildren != null)
+        'application_for_children': applicationForChildren,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  BibleChaptersCompanion copyWith({
+    Value<String>? book,
+    Value<int>? chapter,
+    Value<String?>? chapterSummary,
+    Value<String?>? mainLesson,
+    Value<String?>? memoryVerseRef,
+    Value<String?>? memoryVerseLittleBible,
+    Value<String?>? parentGuide,
+    Value<String?>? applicationForChildren,
+    Value<int>? rowid,
+  }) {
+    return BibleChaptersCompanion(
+      book: book ?? this.book,
+      chapter: chapter ?? this.chapter,
+      chapterSummary: chapterSummary ?? this.chapterSummary,
+      mainLesson: mainLesson ?? this.mainLesson,
+      memoryVerseRef: memoryVerseRef ?? this.memoryVerseRef,
+      memoryVerseLittleBible:
+          memoryVerseLittleBible ?? this.memoryVerseLittleBible,
+      parentGuide: parentGuide ?? this.parentGuide,
+      applicationForChildren:
+          applicationForChildren ?? this.applicationForChildren,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (book.present) {
+      map['book'] = Variable<String>(book.value);
+    }
+    if (chapter.present) {
+      map['chapter'] = Variable<int>(chapter.value);
+    }
+    if (chapterSummary.present) {
+      map['chapter_summary'] = Variable<String>(chapterSummary.value);
+    }
+    if (mainLesson.present) {
+      map['main_lesson'] = Variable<String>(mainLesson.value);
+    }
+    if (memoryVerseRef.present) {
+      map['memory_verse_ref'] = Variable<String>(memoryVerseRef.value);
+    }
+    if (memoryVerseLittleBible.present) {
+      map['memory_verse_little_bible'] = Variable<String>(
+        memoryVerseLittleBible.value,
+      );
+    }
+    if (parentGuide.present) {
+      map['parent_guide'] = Variable<String>(parentGuide.value);
+    }
+    if (applicationForChildren.present) {
+      map['application_for_children'] = Variable<String>(
+        applicationForChildren.value,
+      );
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('BibleChaptersCompanion(')
+          ..write('book: $book, ')
+          ..write('chapter: $chapter, ')
+          ..write('chapterSummary: $chapterSummary, ')
+          ..write('mainLesson: $mainLesson, ')
+          ..write('memoryVerseRef: $memoryVerseRef, ')
+          ..write('memoryVerseLittleBible: $memoryVerseLittleBible, ')
+          ..write('parentGuide: $parentGuide, ')
+          ..write('applicationForChildren: $applicationForChildren, ')
+          ..write('rowid: $rowid')
           ..write(')'))
         .toString();
   }
@@ -3242,6 +4303,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
   late final $VersesTable verses = $VersesTable(this);
+  late final $BibleChaptersTable bibleChapters = $BibleChaptersTable(this);
   late final $ChildProfilesTable childProfiles = $ChildProfilesTable(this);
   late final $StoryProgressTable storyProgress = $StoryProgressTable(this);
   late final $VerseMasteryTable verseMastery = $VerseMasteryTable(this);
@@ -3255,6 +4317,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   @override
   List<DatabaseSchemaEntity> get allSchemaEntities => [
     verses,
+    bibleChapters,
     childProfiles,
     storyProgress,
     verseMastery,
@@ -3272,6 +4335,15 @@ typedef $$VersesTableCreateCompanionBuilder =
       required String body,
       Value<String> source,
       Value<bool> isAdapted,
+      Value<String?> kjv,
+      Value<String?> littleBible,
+      Value<String?> littleReaderAdaptation,
+      Value<String?> meaning,
+      Value<String?> memoryPhrase,
+      Value<String?> prayer,
+      Value<String?> discussionQuestion,
+      Value<String?> familyDiscussion,
+      Value<String?> doItToday,
     });
 typedef $$VersesTableUpdateCompanionBuilder =
     VersesCompanion Function({
@@ -3282,6 +4354,15 @@ typedef $$VersesTableUpdateCompanionBuilder =
       Value<String> body,
       Value<String> source,
       Value<bool> isAdapted,
+      Value<String?> kjv,
+      Value<String?> littleBible,
+      Value<String?> littleReaderAdaptation,
+      Value<String?> meaning,
+      Value<String?> memoryPhrase,
+      Value<String?> prayer,
+      Value<String?> discussionQuestion,
+      Value<String?> familyDiscussion,
+      Value<String?> doItToday,
     });
 
 class $$VersesTableFilterComposer
@@ -3325,6 +4406,51 @@ class $$VersesTableFilterComposer
 
   ColumnFilters<bool> get isAdapted => $composableBuilder(
     column: $table.isAdapted,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kjv => $composableBuilder(
+    column: $table.kjv,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get littleBible => $composableBuilder(
+    column: $table.littleBible,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get littleReaderAdaptation => $composableBuilder(
+    column: $table.littleReaderAdaptation,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get meaning => $composableBuilder(
+    column: $table.meaning,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get memoryPhrase => $composableBuilder(
+    column: $table.memoryPhrase,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get prayer => $composableBuilder(
+    column: $table.prayer,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get discussionQuestion => $composableBuilder(
+    column: $table.discussionQuestion,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get familyDiscussion => $composableBuilder(
+    column: $table.familyDiscussion,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get doItToday => $composableBuilder(
+    column: $table.doItToday,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -3372,6 +4498,51 @@ class $$VersesTableOrderingComposer
     column: $table.isAdapted,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<String> get kjv => $composableBuilder(
+    column: $table.kjv,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get littleBible => $composableBuilder(
+    column: $table.littleBible,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get littleReaderAdaptation => $composableBuilder(
+    column: $table.littleReaderAdaptation,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get meaning => $composableBuilder(
+    column: $table.meaning,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get memoryPhrase => $composableBuilder(
+    column: $table.memoryPhrase,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get prayer => $composableBuilder(
+    column: $table.prayer,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get discussionQuestion => $composableBuilder(
+    column: $table.discussionQuestion,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get familyDiscussion => $composableBuilder(
+    column: $table.familyDiscussion,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get doItToday => $composableBuilder(
+    column: $table.doItToday,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$VersesTableAnnotationComposer
@@ -3403,6 +4574,43 @@ class $$VersesTableAnnotationComposer
 
   GeneratedColumn<bool> get isAdapted =>
       $composableBuilder(column: $table.isAdapted, builder: (column) => column);
+
+  GeneratedColumn<String> get kjv =>
+      $composableBuilder(column: $table.kjv, builder: (column) => column);
+
+  GeneratedColumn<String> get littleBible => $composableBuilder(
+    column: $table.littleBible,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get littleReaderAdaptation => $composableBuilder(
+    column: $table.littleReaderAdaptation,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get meaning =>
+      $composableBuilder(column: $table.meaning, builder: (column) => column);
+
+  GeneratedColumn<String> get memoryPhrase => $composableBuilder(
+    column: $table.memoryPhrase,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get prayer =>
+      $composableBuilder(column: $table.prayer, builder: (column) => column);
+
+  GeneratedColumn<String> get discussionQuestion => $composableBuilder(
+    column: $table.discussionQuestion,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get familyDiscussion => $composableBuilder(
+    column: $table.familyDiscussion,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get doItToday =>
+      $composableBuilder(column: $table.doItToday, builder: (column) => column);
 }
 
 class $$VersesTableTableManager
@@ -3440,6 +4648,15 @@ class $$VersesTableTableManager
                 Value<String> body = const Value.absent(),
                 Value<String> source = const Value.absent(),
                 Value<bool> isAdapted = const Value.absent(),
+                Value<String?> kjv = const Value.absent(),
+                Value<String?> littleBible = const Value.absent(),
+                Value<String?> littleReaderAdaptation = const Value.absent(),
+                Value<String?> meaning = const Value.absent(),
+                Value<String?> memoryPhrase = const Value.absent(),
+                Value<String?> prayer = const Value.absent(),
+                Value<String?> discussionQuestion = const Value.absent(),
+                Value<String?> familyDiscussion = const Value.absent(),
+                Value<String?> doItToday = const Value.absent(),
               }) => VersesCompanion(
                 id: id,
                 book: book,
@@ -3448,6 +4665,15 @@ class $$VersesTableTableManager
                 body: body,
                 source: source,
                 isAdapted: isAdapted,
+                kjv: kjv,
+                littleBible: littleBible,
+                littleReaderAdaptation: littleReaderAdaptation,
+                meaning: meaning,
+                memoryPhrase: memoryPhrase,
+                prayer: prayer,
+                discussionQuestion: discussionQuestion,
+                familyDiscussion: familyDiscussion,
+                doItToday: doItToday,
               ),
           createCompanionCallback:
               ({
@@ -3458,6 +4684,15 @@ class $$VersesTableTableManager
                 required String body,
                 Value<String> source = const Value.absent(),
                 Value<bool> isAdapted = const Value.absent(),
+                Value<String?> kjv = const Value.absent(),
+                Value<String?> littleBible = const Value.absent(),
+                Value<String?> littleReaderAdaptation = const Value.absent(),
+                Value<String?> meaning = const Value.absent(),
+                Value<String?> memoryPhrase = const Value.absent(),
+                Value<String?> prayer = const Value.absent(),
+                Value<String?> discussionQuestion = const Value.absent(),
+                Value<String?> familyDiscussion = const Value.absent(),
+                Value<String?> doItToday = const Value.absent(),
               }) => VersesCompanion.insert(
                 id: id,
                 book: book,
@@ -3466,6 +4701,15 @@ class $$VersesTableTableManager
                 body: body,
                 source: source,
                 isAdapted: isAdapted,
+                kjv: kjv,
+                littleBible: littleBible,
+                littleReaderAdaptation: littleReaderAdaptation,
+                meaning: meaning,
+                memoryPhrase: memoryPhrase,
+                prayer: prayer,
+                discussionQuestion: discussionQuestion,
+                familyDiscussion: familyDiscussion,
+                doItToday: doItToday,
               ),
           withReferenceMapper: (p0) => p0
               .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
@@ -3487,6 +4731,275 @@ typedef $$VersesTableProcessedTableManager =
       $$VersesTableUpdateCompanionBuilder,
       (Verse, BaseReferences<_$AppDatabase, $VersesTable, Verse>),
       Verse,
+      PrefetchHooks Function()
+    >;
+typedef $$BibleChaptersTableCreateCompanionBuilder =
+    BibleChaptersCompanion Function({
+      required String book,
+      required int chapter,
+      Value<String?> chapterSummary,
+      Value<String?> mainLesson,
+      Value<String?> memoryVerseRef,
+      Value<String?> memoryVerseLittleBible,
+      Value<String?> parentGuide,
+      Value<String?> applicationForChildren,
+      Value<int> rowid,
+    });
+typedef $$BibleChaptersTableUpdateCompanionBuilder =
+    BibleChaptersCompanion Function({
+      Value<String> book,
+      Value<int> chapter,
+      Value<String?> chapterSummary,
+      Value<String?> mainLesson,
+      Value<String?> memoryVerseRef,
+      Value<String?> memoryVerseLittleBible,
+      Value<String?> parentGuide,
+      Value<String?> applicationForChildren,
+      Value<int> rowid,
+    });
+
+class $$BibleChaptersTableFilterComposer
+    extends Composer<_$AppDatabase, $BibleChaptersTable> {
+  $$BibleChaptersTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get book => $composableBuilder(
+    column: $table.book,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get chapter => $composableBuilder(
+    column: $table.chapter,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get chapterSummary => $composableBuilder(
+    column: $table.chapterSummary,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get mainLesson => $composableBuilder(
+    column: $table.mainLesson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get memoryVerseRef => $composableBuilder(
+    column: $table.memoryVerseRef,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get memoryVerseLittleBible => $composableBuilder(
+    column: $table.memoryVerseLittleBible,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get parentGuide => $composableBuilder(
+    column: $table.parentGuide,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get applicationForChildren => $composableBuilder(
+    column: $table.applicationForChildren,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$BibleChaptersTableOrderingComposer
+    extends Composer<_$AppDatabase, $BibleChaptersTable> {
+  $$BibleChaptersTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get book => $composableBuilder(
+    column: $table.book,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get chapter => $composableBuilder(
+    column: $table.chapter,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get chapterSummary => $composableBuilder(
+    column: $table.chapterSummary,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get mainLesson => $composableBuilder(
+    column: $table.mainLesson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get memoryVerseRef => $composableBuilder(
+    column: $table.memoryVerseRef,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get memoryVerseLittleBible => $composableBuilder(
+    column: $table.memoryVerseLittleBible,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get parentGuide => $composableBuilder(
+    column: $table.parentGuide,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get applicationForChildren => $composableBuilder(
+    column: $table.applicationForChildren,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$BibleChaptersTableAnnotationComposer
+    extends Composer<_$AppDatabase, $BibleChaptersTable> {
+  $$BibleChaptersTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get book =>
+      $composableBuilder(column: $table.book, builder: (column) => column);
+
+  GeneratedColumn<int> get chapter =>
+      $composableBuilder(column: $table.chapter, builder: (column) => column);
+
+  GeneratedColumn<String> get chapterSummary => $composableBuilder(
+    column: $table.chapterSummary,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get mainLesson => $composableBuilder(
+    column: $table.mainLesson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get memoryVerseRef => $composableBuilder(
+    column: $table.memoryVerseRef,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get memoryVerseLittleBible => $composableBuilder(
+    column: $table.memoryVerseLittleBible,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get parentGuide => $composableBuilder(
+    column: $table.parentGuide,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get applicationForChildren => $composableBuilder(
+    column: $table.applicationForChildren,
+    builder: (column) => column,
+  );
+}
+
+class $$BibleChaptersTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $BibleChaptersTable,
+          BibleChapter,
+          $$BibleChaptersTableFilterComposer,
+          $$BibleChaptersTableOrderingComposer,
+          $$BibleChaptersTableAnnotationComposer,
+          $$BibleChaptersTableCreateCompanionBuilder,
+          $$BibleChaptersTableUpdateCompanionBuilder,
+          (
+            BibleChapter,
+            BaseReferences<_$AppDatabase, $BibleChaptersTable, BibleChapter>,
+          ),
+          BibleChapter,
+          PrefetchHooks Function()
+        > {
+  $$BibleChaptersTableTableManager(_$AppDatabase db, $BibleChaptersTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$BibleChaptersTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$BibleChaptersTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$BibleChaptersTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> book = const Value.absent(),
+                Value<int> chapter = const Value.absent(),
+                Value<String?> chapterSummary = const Value.absent(),
+                Value<String?> mainLesson = const Value.absent(),
+                Value<String?> memoryVerseRef = const Value.absent(),
+                Value<String?> memoryVerseLittleBible = const Value.absent(),
+                Value<String?> parentGuide = const Value.absent(),
+                Value<String?> applicationForChildren = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => BibleChaptersCompanion(
+                book: book,
+                chapter: chapter,
+                chapterSummary: chapterSummary,
+                mainLesson: mainLesson,
+                memoryVerseRef: memoryVerseRef,
+                memoryVerseLittleBible: memoryVerseLittleBible,
+                parentGuide: parentGuide,
+                applicationForChildren: applicationForChildren,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String book,
+                required int chapter,
+                Value<String?> chapterSummary = const Value.absent(),
+                Value<String?> mainLesson = const Value.absent(),
+                Value<String?> memoryVerseRef = const Value.absent(),
+                Value<String?> memoryVerseLittleBible = const Value.absent(),
+                Value<String?> parentGuide = const Value.absent(),
+                Value<String?> applicationForChildren = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => BibleChaptersCompanion.insert(
+                book: book,
+                chapter: chapter,
+                chapterSummary: chapterSummary,
+                mainLesson: mainLesson,
+                memoryVerseRef: memoryVerseRef,
+                memoryVerseLittleBible: memoryVerseLittleBible,
+                parentGuide: parentGuide,
+                applicationForChildren: applicationForChildren,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$BibleChaptersTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $BibleChaptersTable,
+      BibleChapter,
+      $$BibleChaptersTableFilterComposer,
+      $$BibleChaptersTableOrderingComposer,
+      $$BibleChaptersTableAnnotationComposer,
+      $$BibleChaptersTableCreateCompanionBuilder,
+      $$BibleChaptersTableUpdateCompanionBuilder,
+      (
+        BibleChapter,
+        BaseReferences<_$AppDatabase, $BibleChaptersTable, BibleChapter>,
+      ),
+      BibleChapter,
       PrefetchHooks Function()
     >;
 typedef $$ChildProfilesTableCreateCompanionBuilder =
@@ -4892,6 +6405,8 @@ class $AppDatabaseManager {
   $AppDatabaseManager(this._db);
   $$VersesTableTableManager get verses =>
       $$VersesTableTableManager(_db, _db.verses);
+  $$BibleChaptersTableTableManager get bibleChapters =>
+      $$BibleChaptersTableTableManager(_db, _db.bibleChapters);
   $$ChildProfilesTableTableManager get childProfiles =>
       $$ChildProfilesTableTableManager(_db, _db.childProfiles);
   $$StoryProgressTableTableManager get storyProgress =>

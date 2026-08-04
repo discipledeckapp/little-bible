@@ -1,0 +1,70 @@
+{
+  "id": "the-very-sad-choice",
+  "sensitivityTier": "guided",
+  "title": "The Very Sad Choice",
+  "subtitle": "The day people stopped trusting God — and why everything changed",
+  "collection": "in-the-beginning",
+  "mainTruth": "Sin is not trusting God and not obeying Him — and every single person has done it.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 3:1-13",
+  "durationMinutes": 5,
+  "coverEmoji": "🍎",
+  "coverColor": "#4C1D24",
+  "illustrationPrompt": "A garden at dusk with one tree standing apart, long shadows stretching across the grass, two small figures turning away toward the shade, a coiled shape low in the branches, painterly gouache illustration on parchment paper, muted green and dusk-plum palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sombre but never frightening --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God had given the first family everything. A whole garden of good things. Fruit from every tree. Work to enjoy and each other to love. And God Himself to walk with. There was only one thing God asked them not to do: do not eat from one tree — the tree in the middle of the garden. Not because God was mean, but because God knew what was good and they did not.\n\nThen a snake came, and the snake spoke. But he did not say 'disobey God.' He said something far more dangerous. He said: 'Did God really say that? God is keeping something good from you.' That was a lie. And the sad thing is — they believed it. They stopped trusting that God was good. And once they stopped trusting Him, disobeying Him was easy. So they took the fruit, and they ate it.\n\nNothing looked different at first. But everything was different. For the first time they felt afraid, and they hid from God among the trees. God, who loved them, came looking for them and called out, 'Where are you?' Not because He did not know — but because He wanted them to come back. That is what sin does. It is choosing not to trust God, and it pulls us away and makes us hide. And the Bible says every single person since that day has done it. Every one of us. Which is exactly why we need someone to come and find us.",
+      "childText": "God gave the first family a whole garden of good things. He asked them not to eat from just one tree. Then a snake told them a lie: 'God is keeping something good from you.' They believed the lie. They stopped trusting God, and they ate the fruit. Straight away they felt afraid, and they hid. But God came looking for them and called, 'Where are you?' — because He still loved them. Choosing not to trust God is called sin. Everyone has done it. That is why we all need help.",
+      "verses": [
+        {
+          "ref": "Genesis 2:16-17",
+          "kjv": "And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat: But of the tree of the knowledge of good and evil, thou shalt not eat of it.",
+          "little_bible": "God said: 'Eat from every tree. But not from that one.'"
+        },
+        {
+          "ref": "Genesis 3:6",
+          "kjv": "And when the woman saw that the tree was good for food... she took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat.",
+          "little_bible": "They took the fruit and ate it. They did not obey God."
+        },
+        {
+          "ref": "Genesis 3:9",
+          "kjv": "And the LORD God called unto Adam, and said unto him, Where art thou?",
+          "little_bible": "God called out to them: 'Where are you?' He wanted them back."
+        },
+        {
+          "ref": "Romans 3:23",
+          "kjv": "For all have sinned, and come short of the glory of God.",
+          "little_bible": "Everyone has sinned. Everyone needs God to help them."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did they hide from God?",
+      "parentGuide": "This is the story that makes the whole Bible make sense — do not rush it, and do not soften it. Sin here is not 'being naughty'; it is believing that God is not good and then living as if that were true. Two things must land together: sin is real and serious, AND God came looking. Say out loud that you sin too — children need to hear that adults are not the exception. If your child says 'I do that', do not correct or reassure it away; thank them for being honest, and tell them the next story is God's answer.",
+      "familyQuestion": "When we do something wrong, what makes us want to hide?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, we are sorry that people stopped trusting You. We are sorry for the wrong things we do too. Thank You that You came looking, even when they were hiding. Please help us to trust that You are always good. Amen.",
+      "childPrompt": "Can you tell God one thing you are sorry for?",
+      "prayerPoints": [
+        "Tell God honestly about something you did wrong",
+        "Thank God that He comes looking for us instead of leaving us"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Everyone has sinned. Everyone needs God to help them.",
+      "ref": "Romans 3:23",
+      "memoryPhrase": "Everyone has done wrong.",
+      "tip": "Point to yourself, then to the person beside you, then all around the room as you say: 'Everyone has done wrong.' Then hold your hands open and add: 'And God still comes looking.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "If you did something wrong today, do not hide it. Go and tell a grown-up who loves you, and say sorry out loud.",
+      "parentNote": "The habit being built here is confession without fear. When your child comes to you, your first reaction teaches them what God is like — so receive it warmly before you address the behaviour. If anything your child tells you concerns their safety, follow it up with a trusted adult straight away."
+    }
+  }
+}

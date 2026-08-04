@@ -1,0 +1,70 @@
+{
+  "id": "joseph-and-his-brothers",
+  "sensitivityTier": "guided",
+  "title": "Joseph and His Jealous Brothers",
+  "subtitle": "Something terribly unfair happened to Joseph — and God was still there in it",
+  "collection": "promise-family",
+  "mainTruth": "Wrong things are still wrong. But God is able to work even inside what people meant for harm.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 37",
+  "durationMinutes": 5,
+  "coverEmoji": "🧥",
+  "coverColor": "#92400E",
+  "illustrationPrompt": "A brightly striped coat lying alone on desert sand at the mouth of a dry well, a caravan of camels and traders receding into the distance under a hot pale sky, painterly gouache illustration on parchment paper, sun-bleached ochre with one vivid stripe of colour, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sorrowful and quiet, no violence shown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jacob had twelve sons, and he loved Joseph more than all the others. He even gave Joseph a beautiful coat of many colours, and none of the brothers got one. That was not fair of Jacob, and his brothers hated it.\n\nThen Joseph had two dreams, and in both of them his family was bowing down to him. And — this was not wise — he told his brothers all about them. Now they hated him even more.\n\nOne day the brothers were far from home looking after the sheep, and Jacob sent Joseph out to check on them. They saw him coming in his coloured coat, and their jealousy boiled over. They grabbed him, pulled off his coat, and threw him into an empty well in the ground. Then some traders came past on their way to Egypt, and the brothers sold their own brother to them for twenty pieces of silver.\n\nThen they dipped the beautiful coat in goat's blood, carried it home, and let their father believe Joseph had been killed by a wild animal. Jacob wept and would not be comforted.\n\nThis was a terrible thing to do, and the Bible never pretends otherwise. Jealousy started in their hearts — do you remember Cain? — and it grew until it did real harm.\n\nBut here is what the Bible tells us next, in one short line: the Lord was with Joseph. Down in Egypt, far from home, sold and alone — God was with him. God did not make the wrong thing happen. But God did not leave, and God was not finished. Years later, Joseph himself would say to his brothers: 'You meant it for evil. God meant it for good.'",
+      "childText": "Jacob had twelve sons, but he loved Joseph best and gave him a beautiful coloured coat. His brothers were very jealous. Then Joseph had dreams where his family bowed to him — and he told them! Now they hated him even more. One day, far from home, they grabbed Joseph, took his coat, and sold him to traders going to Egypt. Then they told their father a lion had eaten him. It was a terrible thing to do, and it was very unfair. But the Bible says: the Lord was with Joseph. God did not make the bad thing happen — but God did not leave him either.",
+      "verses": [
+        {
+          "ref": "Genesis 37:3",
+          "kjv": "Now Israel loved Joseph more than all his children... and he made him a coat of many colours.",
+          "little_bible": "Jacob loved Joseph best. He gave him a coloured coat."
+        },
+        {
+          "ref": "Genesis 37:4",
+          "kjv": "And when his brethren saw that their father loved him more than all his brethren, they hated him.",
+          "little_bible": "His brothers saw it, and they were jealous of him."
+        },
+        {
+          "ref": "Genesis 39:2",
+          "kjv": "And the LORD was with Joseph, and he was a prosperous man.",
+          "little_bible": "The Lord was with Joseph, far away in Egypt."
+        },
+        {
+          "ref": "Genesis 50:20",
+          "kjv": "But as for you, ye thought evil against me; but God meant it unto good.",
+          "little_bible": "You meant it for evil. But God meant it for good."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Was what the brothers did all right? Why not?",
+      "parentGuide": "Providence in suffering is the concept, and it is easy to teach it badly. Never say 'so it was a good thing really' — the Bible calls it evil, and Joseph does too. The right shape is: this was genuinely wrong, God did not cause it, God did not leave, and God was able to bring rescue out of it later. Retrieve Cain and Abel — jealousy crouching at the door, now grown up. If your child has suffered something unfair, this is the story that says God does not pretend it was fine. Tell them again that anything that frightens or hurts them should be told to a trusted adult.",
+      "familyQuestion": "When something is unfair, what do we want to happen next?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, some things are not fair, and You do not pretend they are. Thank You that You stayed with Joseph even in Egypt. When things go wrong for us, please stay with us too, and help us to trust that You are not finished. Amen.",
+      "childPrompt": "Can you tell God about something that felt unfair to you?",
+      "prayerPoints": [
+        "Tell God about something that has felt unfair",
+        "Thank God that He stays with us in hard places"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "You meant it for evil. But God meant it for good.",
+      "ref": "Genesis 50:20",
+      "memoryPhrase": "God meant it for good.",
+      "tip": "Hold both hands low and sad for the first part, then lift them up high for: 'But God meant it for good.' Do it three times, lifting a little higher each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "If you feel jealous of someone today, say something good about them out loud instead of keeping the jealous feeling inside.",
+      "parentNote": "This is the direct application of Cain's warning and Joseph's brothers' failure — jealousy grows in silence. Speaking well of the person breaks the loop. Name it warmly when you see your child do it."
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "let-my-people-go",
+  "sensitivityTier": "guided",
+  "title": "Let My People Go",
+  "subtitle": "Moses stood in front of the most powerful king on earth and said four words from God",
+  "collection": "god-rescues-a-people",
+  "mainTruth": "God is stronger than anything that holds His people. When He says He will rescue, no king can stop Him.",
+  "ageRange": "4-7",
+  "bibleRef": "Exodus 5-11",
+  "durationMinutes": 5,
+  "coverEmoji": "🏛️",
+  "coverColor": "#1E3A8A",
+  "illustrationPrompt": "A vast Egyptian throne hall with towering painted columns, a small shepherd figure with a wooden staff standing alone before a distant seated king, shafts of light falling between the pillars, painterly gouache illustration on parchment paper, lapis blue and sandstone gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, one small man made brave by a great God --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "So Moses went back to Egypt, and he walked into the palace of Pharaoh, the most powerful king in the world. Moses was a shepherd with a wooden stick. And he said: 'The Lord says — let My people go.'\n\nPharaoh laughed at him. 'Who is the Lord? I do not know Him, and I will not obey Him.' And then, to punish them, Pharaoh made the Israelites work even harder than before.\n\nBut God had said He would rescue His people, so God kept coming. Again and again Moses returned: let My people go. And each time Pharaoh said no, God sent a warning across Egypt — the river, then frogs, then flies, then the animals, then storms, then locusts, then a darkness so thick you could feel it. Nine warnings, and every single one showed that the things Egypt worshipped were not gods at all. Only the Lord is God.\n\nAnd here is the sad thing about Pharaoh. Every time, he had a real chance to say yes. Every time, he made his heart harder instead. He would rather keep his slaves than bow to God.\n\nBut Pharaoh could not win. He was powerful, but God is the King over all kings. God had promised Abraham, He had heard His people crying, and He had said 'I will bring you out.' No king on earth was going to stop that.\n\nGod says a word about His people that is worth remembering: 'I will redeem you.' To redeem means to buy someone back — to pay whatever it takes to bring them home. That is what God was doing. And that is exactly what Jesus came to do for us.",
+      "childText": "Moses went back to Egypt and stood in front of Pharaoh, the most powerful king in the world. Moses was just a shepherd with a wooden stick. He said, 'The Lord says — let My people go!' But Pharaoh said no, and made the people work even harder. So God kept coming. Again and again Moses said, 'Let My people go!' And each time Pharaoh said no, God sent a warning across Egypt. Every warning showed that only the Lord is really God. Pharaoh was strong — but God is the King over all kings. God had promised to bring His people out, and nobody could stop Him!",
+      "verses": [
+        {
+          "ref": "Exodus 5:1",
+          "kjv": "Thus saith the LORD God of Israel, Let my people go.",
+          "little_bible": "Moses said: 'The Lord says — let My people go!'"
+        },
+        {
+          "ref": "Exodus 5:2",
+          "kjv": "And Pharaoh said, Who is the LORD, that I should obey his voice?",
+          "little_bible": "Pharaoh said: 'Who is the Lord? I will not obey Him.'"
+        },
+        {
+          "ref": "Exodus 6:6",
+          "kjv": "I will bring you out from under the burdens of the Egyptians... and I will redeem you with a stretched out arm.",
+          "little_bible": "God said: 'I will bring you out. I will buy you back.'"
+        },
+        {
+          "ref": "Exodus 9:16",
+          "kjv": "And in very deed for this cause have I raised thee up, for to shew in thee my power.",
+          "little_bible": "God showed everyone how strong He really is."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Who is stronger — Pharaoh or God?",
+      "parentGuide": "Keep the warnings brief and non-graphic; the point is not the plagues but the contest — every one showed that Egypt's gods were nothing and only the Lord is God. Introduce 'redeem' plainly: to buy someone back, to pay whatever it costs to bring them home. And do not skip Pharaoh's hardening — he was given real chances and chose his slaves over God every time, which is exactly what a hard heart looks like. Retrieve Two Brothers: sin crouching at the door, now in a king. Say plainly that Jesus is how God redeems us.",
+      "familyQuestion": "What is something that feels too big for us? Who is bigger than it?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, You are the King over every king. Nothing is too strong for You. Thank You that when You say You will rescue, nobody can stop You. Please keep our hearts soft, so we say yes to You. Amen.",
+      "childPrompt": "Can you ask God to keep your heart soft toward Him?",
+      "prayerPoints": [
+        "Thank God that He is stronger than anything you are afraid of",
+        "Ask God to keep your heart soft so you say yes to Him"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'I will bring you out. I will buy you back.'",
+      "ref": "Exodus 6:6",
+      "memoryPhrase": "God is the strongest!",
+      "tip": "Make your strongest muscles and growl, then shake your head and point up high as you say: 'God is the strongest!' Do it three times, each one bigger."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "When a grown-up asks you to do something today, say yes the first time — a soft heart says yes quickly.",
+      "parentNote": "Pharaoh's problem was not ignorance but hardness, and hardness starts small. Naming quick obedience as a soft heart gives your child a picture they can recognise in themselves. Notice it out loud when they manage it."
+    }
+  }
+}

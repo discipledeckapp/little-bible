@@ -1,0 +1,37 @@
+{
+  "storyId": "stars-in-the-sky",
+  "memoryBuilder": {
+    "phrase": "Abram believed God!",
+    "phraseWords": ["Abram", "believed", "God!"],
+    "verseRef": "Genesis 15:6",
+    "verseText": "Abram believed God. So God said Abram was right with Him.",
+    "verseWords": ["Abram", "believed", "God.", "So", "God", "said", "Abram", "was", "right", "with", "Him."]
+  },
+  "sequence": {
+    "prompt": "What happened on the night of the stars? Put it in order.",
+    "items": [
+      { "id": "waited",   "label": "Abram waited years with no children", "emoji": "⏳", "order": 1 },
+      { "id": "told",     "label": "Abram told God how he felt",          "emoji": "💬", "order": 2 },
+      { "id": "outside",  "label": "God took him outside to see the stars","emoji": "✨", "order": 3 },
+      { "id": "believed", "label": "Abram believed God",                  "emoji": "❤️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "stars",  "left": "the stars",        "leftEmoji": "✨", "rightId": "family", "right": "How big Abram's family would be",   "rightEmoji": "👨‍👩‍👧" },
+      { "leftId": "honest", "left": "Abram's honest words", "leftEmoji": "💬", "rightId": "ok", "right": "God listened instead of scolding",  "rightEmoji": "👂" },
+      { "leftId": "belief", "left": "Abram's believing", "leftEmoji": "❤️", "rightId": "right", "right": "It made him right with God",        "rightEmoji": "🤝" }
+    ]
+  },
+  "application": {
+    "question": "Abram had nothing in his hands but a promise. What are you still waiting for?",
+    "options": [
+      { "id": "friend", "label": "A good friend",    "emoji": "🧒" },
+      { "id": "better", "label": "Something to get better", "emoji": "🩹" },
+      { "id": "wish",   "label": "Something I wish for", "emoji": "⭐" }
+    ],
+    "followUp": "You can tell God honestly, just like Abram did. He does not scold — sometimes He takes us outside and shows us the stars."
+  }
+}

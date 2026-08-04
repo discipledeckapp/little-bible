@@ -1,0 +1,37 @@
+{
+  "storyId": "god-provides-a-lamb",
+  "memoryBuilder": {
+    "phrase": "God will provide!",
+    "phraseWords": ["God", "will", "provide!"],
+    "verseRef": "Genesis 22:8",
+    "verseText": "Abraham said: 'God will give us the lamb Himself.'",
+    "verseWords": ["God", "will", "give", "us", "the", "lamb", "Himself."]
+  },
+  "sequence": {
+    "prompt": "What happened on the mountain? Put it in order.",
+    "items": [
+      { "id": "climb", "label": "Abraham and Isaac climbed the mountain", "emoji": "⛰️", "order": 1 },
+      { "id": "ask",   "label": "Isaac asked, 'Where is the lamb?'",      "emoji": "❓", "order": 2 },
+      { "id": "stop",  "label": "God called out, 'Stop! Do not hurt him'", "emoji": "🛑", "order": 3 },
+      { "id": "ram",   "label": "God provided a ram in the bush",         "emoji": "🐏", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "question", "left": "Isaac's question", "leftEmoji": "❓", "rightId": "lamb",  "right": "'Father, where is the lamb?'",     "rightEmoji": "🐑" },
+      { "leftId": "ram",      "left": "the ram",          "leftEmoji": "🐏", "rightId": "place", "right": "It went in Isaac's place",         "rightEmoji": "🔄" },
+      { "leftId": "jesus",    "left": "God's own Lamb",   "leftEmoji": "✝️", "rightId": "jesus", "right": "Jesus, who took our place",        "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "God provided what Abraham could not provide. What do you need that only God can give?",
+    "options": [
+      { "id": "brave",   "label": "To be brave",      "emoji": "🦁" },
+      { "id": "forgive", "label": "To be forgiven",   "emoji": "🕊️" },
+      { "id": "help",    "label": "Help with something hard", "emoji": "🤲" }
+    ],
+    "followUp": "Abraham walked up that mountain with empty hands and a promise. God provided the lamb then — and He provided Jesus for us."
+  }
+}

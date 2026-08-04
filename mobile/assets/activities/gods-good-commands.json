@@ -1,0 +1,37 @@
+{
+  "storyId": "gods-good-commands",
+  "memoryBuilder": {
+    "phrase": "God rescued us first.",
+    "phraseWords": ["God", "rescued", "us", "first."],
+    "verseRef": "Exodus 20:2",
+    "verseText": "God said: 'I am your God. I brought you out of Egypt.'",
+    "verseWords": ["I", "am", "your", "God.", "I", "brought", "you", "out", "of", "Egypt."]
+  },
+  "sequence": {
+    "prompt": "What happened at the mountain? Put it in order.",
+    "items": [
+      { "id": "camp",   "label": "God's people camped at the mountain",    "emoji": "⛺", "order": 1 },
+      { "id": "came",   "label": "God came down in cloud and fire",        "emoji": "🔥", "order": 2 },
+      { "id": "first",  "label": "God said, 'I brought you out of Egypt'", "emoji": "🚶", "order": 3 },
+      { "id": "rules",  "label": "Then God gave His good commands",        "emoji": "📜", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "order",   "left": "the order God did it in", "leftEmoji": "1️⃣", "rightId": "rescue", "right": "Rescue first, then commands",        "rightEmoji": "📜" },
+      { "leftId": "commands","left": "God's commands",          "leftEmoji": "📜", "rightId": "gift",   "right": "A gift showing how to love",         "rightEmoji": "🎁" },
+      { "leftId": "biggest", "left": "the biggest command",     "leftEmoji": "❤️", "rightId": "love",   "right": "Love God, and love people",          "rightEmoji": "🤝" }
+    ]
+  },
+  "application": {
+    "question": "God rescued His people before He asked them for anything. Which command is hardest for you?",
+    "options": [
+      { "id": "honour", "label": "Honouring my parents",  "emoji": "👨‍👩‍👧" },
+      { "id": "truth",  "label": "Always telling the truth", "emoji": "💬" },
+      { "id": "want",   "label": "Not wanting what others have", "emoji": "👀" }
+    ],
+    "followUp": "You do not obey God to make Him love you — He rescued you first. You obey Him because He already does."
+  }
+}

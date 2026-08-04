@@ -1,0 +1,37 @@
+{
+  "storyId": "the-tall-tower",
+  "memoryBuilder": {
+    "phrase": "God is greater!",
+    "phraseWords": ["God", "is", "greater!"],
+    "verseRef": "Proverbs 16:18",
+    "verseText": "Being too proud comes right before a fall.",
+    "verseWords": ["Being", "too", "proud", "comes", "right", "before", "a", "fall."]
+  },
+  "sequence": {
+    "prompt": "What happened at the tall tower? Put it in order.",
+    "items": [
+      { "id": "same",  "label": "Everybody spoke the same language", "emoji": "💬", "order": 1 },
+      { "id": "build", "label": "They built a tower to be famous",    "emoji": "🗼", "order": 2 },
+      { "id": "down",  "label": "God came down to look at it",        "emoji": "👀", "order": 3 },
+      { "id": "mixed", "label": "God mixed up their words",           "emoji": "🌀", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what the story says.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "tower", "left": "the tower",     "leftEmoji": "🗼", "rightId": "small", "right": "So small that God came down to see it", "rightEmoji": "👀" },
+      { "leftId": "pride", "left": "pride",         "leftEmoji": "😤", "rightId": "big",   "right": "Wanting to be big all by yourself",     "rightEmoji": "🙋" },
+      { "leftId": "babel", "left": "the name Babel","leftEmoji": "🌀", "rightId": "mixed", "right": "It means all mixed up",                 "rightEmoji": "💬" }
+    ]
+  },
+  "application": {
+    "question": "They wanted everyone to look at them. When do you most want people to notice you?",
+    "options": [
+      { "id": "good",  "label": "When I do something well", "emoji": "🏅" },
+      { "id": "new",   "label": "When I have something new", "emoji": "🎁" },
+      { "id": "left",  "label": "When I feel left out",      "emoji": "😔" }
+    ],
+    "followUp": "Wanting to be noticed is very normal. The good news is you do not have to build a tower — God already sees you, and He already loves you."
+  }
+}

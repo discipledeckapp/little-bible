@@ -1,0 +1,36 @@
+{
+  "storyId": "god-calls-abraham",
+  "memoryBuilder": {
+    "phrase": "God said go!",
+    "phraseWords": ["God", "said", "go!"],
+    "verseRef": "Genesis 12:2",
+    "verseText": "God said: 'I will bless you. I will make your name great.'",
+    "verseWords": ["I", "will", "bless", "you.", "I", "will", "make", "your", "name", "great."]
+  },
+  "sequence": {
+    "prompt": "How did God call Abram? Put it in order.",
+    "items": [
+      { "id": "spoke",   "label": "God spoke to Abram",                    "emoji": "💬", "order": 1 },
+      { "id": "leave",   "label": "God said, 'Leave your home and go'",    "emoji": "🚶", "order": 2 },
+      { "id": "promise", "label": "God promised to bless every family",    "emoji": "🌍", "order": 3 },
+      { "id": "went",    "label": "Abram packed up and went",             "emoji": "🐫", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "god",   "left": "God",           "leftEmoji": "✨", "rightId": "called", "right": "Called Abram and made a big promise", "rightEmoji": "💬" },
+      { "leftId": "abram", "left": "Abram",         "leftEmoji": "🧔", "rightId": "went",   "right": "Went, without knowing the road",      "rightEmoji": "🚶" },
+      { "leftId": "family","left": "Abram's family","leftEmoji": "👨‍👩‍👧", "rightId": "packed", "right": "Packed the tents and the sheep",      "rightEmoji": "⛺" }
+    ]
+  },
+  "application": {
+    "question": "God asked Abram to go without telling him where. When is it hardest for you not to know what is coming?",
+    "options": [
+      { "id": "new",   "label": "Going somewhere new", "emoji": "🚪" },
+      { "id": "change","label": "When things change",  "emoji": "🔄" },
+      { "id": "alone", "label": "When I am on my own", "emoji": "🧍" }
+    ],
+    "followUp": "Abram did not know the road — but he knew the One who called him. You can know Him too, whatever is coming next."
+  }
+}

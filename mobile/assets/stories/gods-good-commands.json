@@ -1,0 +1,70 @@
+{
+  "id": "gods-good-commands",
+  "sensitivityTier": "general",
+  "title": "God's Good Commands",
+  "subtitle": "God rescued His people first — and then told them how to live",
+  "collection": "god-rescues-a-people",
+  "mainTruth": "God's rules do not buy His love. He rescued us first, and then showed us how to love Him and each other.",
+  "ageRange": "4-7",
+  "bibleRef": "Exodus 19-20; Matthew 22:37-40",
+  "durationMinutes": 5,
+  "coverEmoji": "📜",
+  "coverColor": "#57534E",
+  "illustrationPrompt": "Two upright stone tablets standing on a rocky mountain ledge, cloud and warm light behind the summit, a camp of small tents far below on the plain, painterly gouache illustration on parchment paper, granite grey and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, weighty and kind rather than stern --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Three months after God brought His people out of Egypt, they camped at the foot of a great mountain called Sinai. And God came down onto the mountain in cloud and fire and thunder, and He spoke to His people.\n\nNow notice very carefully the first thing God said. He did not say, 'Here are My rules — obey them and then I will rescue you.' He said: 'I am the Lord your God, who brought you out of Egypt.' That came first. He had already rescued them. They already belonged to Him. They were already free.\n\nAnd then He gave them His commands.\n\nGod told them: I am the only God, so do not worship anything else. Do not make statues to bow down to. Treat My name as precious. Keep one day a week for rest and for Me. Honour your father and your mother. Do not murder. Do not break your marriage promise. Do not steal. Do not tell lies about people. Do not spend your life wanting what belongs to somebody else.\n\nThose commands were a gift. They showed God's people what He is like, and they showed them how to live so that everybody in the camp was safe and loved.\n\nBut here is the thing — the commands could never make anybody good enough for God. They are like a mirror: they show us clearly that we need help.\n\nAnd long afterwards, someone asked Jesus which command was the biggest. Jesus said: love God with all your heart, and love your neighbour as yourself. All the rest hangs on those two. That is what God has wanted all along.",
+      "childText": "Three months after God brought His people out of Egypt, they camped at a big mountain called Sinai. God came down in cloud and fire, and He spoke. But listen to what God said FIRST: 'I am the Lord your God, who brought you out of Egypt.' He had already rescued them! They already belonged to Him. THEN He gave them His commands: worship only God, keep His name special, rest one day a week, honour your mum and dad, do not hurt people, do not steal, do not tell lies, do not keep wanting other people's things. They were a gift! Later Jesus said the biggest ones are: love God, and love people.",
+      "verses": [
+        {
+          "ref": "Exodus 19:4",
+          "kjv": "Ye have seen what I did unto the Egyptians, and how I bare you on eagles' wings, and brought you unto myself.",
+          "little_bible": "God said: 'You saw what I did. I carried you to Myself.'"
+        },
+        {
+          "ref": "Exodus 20:2",
+          "kjv": "I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage.",
+          "little_bible": "God said: 'I am your God. I brought you out of Egypt.'"
+        },
+        {
+          "ref": "Exodus 20:12",
+          "kjv": "Honour thy father and thy mother.",
+          "little_bible": "God said: 'Honour your father and your mother.'"
+        },
+        {
+          "ref": "Matthew 22:37-39",
+          "kjv": "Thou shalt love the Lord thy God with all thy heart... Thou shalt love thy neighbour as thyself.",
+          "little_bible": "Jesus said: 'Love God with all your heart. Love people too.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did God do first — rescue His people, or give His rules?",
+      "parentGuide": "This is the story that protects your child from a lifetime of trying to earn God's love, so make the order unmissable: rescue first, then commands. God's opening line at Sinai is His rescue, not His demand. Two guardrails. Do not let the commands become a ladder — they show us what God is like and reveal that we need help; they never make us good enough. And do not let them become optional — they are genuinely good, and obeying them is how gratitude looks. Retrieve the sea and the manna. Then land on Jesus' summary: love God, love people.",
+      "familyQuestion": "Which of God's commands is easiest for you, and which is hardest?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You rescued us before You ever asked anything of us. Thank You that Your commands are good and show us how to love. Help us to obey You because we love You, not to make You love us. Amen.",
+      "childPrompt": "Can you thank God that He loved you first?",
+      "prayerPoints": [
+        "Thank God that He rescued first and asked second",
+        "Ask God to help you with the command you find hardest"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'I am your God. I brought you out of Egypt.'",
+      "ref": "Exodus 20:2",
+      "memoryPhrase": "God rescued us first.",
+      "tip": "Hold up one finger and say 'first — God rescued us', then hold up two fingers and say 'then — He showed us how to live.' The order is the whole point, so always do them that way round."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Pick one of God's commands and keep it on purpose today — honour your mum or dad, tell the whole truth, or be glad for what someone else has.",
+      "parentNote": "Let your child choose which one; ownership matters more than coverage. When they manage it, connect it back out loud — 'you did that because you love God, not to make Him love you' — because that sentence is the entire lesson."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "god-lives-with-his-people",
+  "memoryBuilder": {
+    "phrase": "God lives with us!",
+    "phraseWords": ["God", "lives", "with", "us!"],
+    "verseRef": "Exodus 25:8",
+    "verseText": "God said: 'Make Me a place, so I can live among you.'",
+    "verseWords": ["Make", "Me", "a", "place,", "so", "I", "can", "live", "among", "you."]
+  },
+  "sequence": {
+    "prompt": "How did God come to live with His people? Put it in order.",
+    "items": [
+      { "id": "asked",  "label": "God asked for a place to live",      "emoji": "💬", "order": 1 },
+      { "id": "gifts",  "label": "Everyone brought gifts gladly",      "emoji": "🎁", "order": 2 },
+      { "id": "built",  "label": "They built a beautiful tent",         "emoji": "🕍", "order": 3 },
+      { "id": "cloud",  "label": "The cloud came down and filled it",   "emoji": "☁️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "middle", "left": "where the tent stood", "leftEmoji": "🕍", "rightId": "centre", "right": "Right in the middle of the camp",  "rightEmoji": "⛺" },
+      { "leftId": "cloud",  "left": "the cloud",            "leftEmoji": "☁️", "rightId": "led",    "right": "It showed them when to go and stay", "rightEmoji": "🧭" },
+      { "leftId": "jesus",  "left": "Jesus",                "leftEmoji": "✝️", "rightId": "among",  "right": "He came and lived among us",       "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "God wanted to live right in the middle of His people. Where would you like God to be closest to you?",
+    "options": [
+      { "id": "home",  "label": "In our home",   "emoji": "🏠" },
+      { "id": "bed",   "label": "At bedtime",    "emoji": "🌙" },
+      { "id": "hard",  "label": "When things are hard", "emoji": "🫂" }
+    ],
+    "followUp": "God walked with the very first family in the garden, He pitched His tent in the middle of the camp, and Jesus came and lived among us. Being with you was always the plan."
+  }
+}

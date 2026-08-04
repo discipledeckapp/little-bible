@@ -1,0 +1,37 @@
+{
+  "storyId": "the-passover-lamb",
+  "memoryBuilder": {
+    "phrase": "The Lamb keeps us safe.",
+    "phraseWords": ["The", "Lamb", "keeps", "us", "safe."],
+    "verseRef": "Exodus 12:13",
+    "verseText": "God said: 'When I see the blood, I will pass over you.'",
+    "verseWords": ["When", "I", "see", "the", "blood,", "I", "will", "pass", "over", "you."]
+  },
+  "sequence": {
+    "prompt": "How did God keep His people safe that night? Put it in order.",
+    "items": [
+      { "id": "lamb",  "label": "Each family took a perfect lamb",     "emoji": "🐑", "order": 1 },
+      { "id": "door",  "label": "They marked their doorway",           "emoji": "🚪", "order": 2 },
+      { "id": "meal",  "label": "They ate the meal together inside",   "emoji": "🍽️", "order": 3 },
+      { "id": "free",  "label": "In the morning they walked out free", "emoji": "🚶", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "lamb",  "left": "the lamb",       "leftEmoji": "🐑", "rightId": "place", "right": "It died in the family's place",       "rightEmoji": "🔄" },
+      { "leftId": "door",  "left": "the marked door","leftEmoji": "🚪", "rightId": "safe",  "right": "Everyone inside was safe",           "rightEmoji": "🛡️" },
+      { "leftId": "jesus", "left": "Jesus",          "leftEmoji": "✝️", "rightId": "our",   "right": "He is our Passover Lamb",            "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "They were safe because of the lamb, not because they were good. Where do you go when you need to feel safe?",
+    "options": [
+      { "id": "grown", "label": "To a grown-up",  "emoji": "🤗" },
+      { "id": "home",  "label": "Home",           "emoji": "🏠" },
+      { "id": "god",   "label": "To God",         "emoji": "🙏" }
+    ],
+    "followUp": "Nobody inside those houses was safe because they were braver or better. They were safe because of the lamb. We are safe because of Jesus."
+  }
+}

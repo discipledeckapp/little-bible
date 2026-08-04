@@ -1,0 +1,70 @@
+{
+  "id": "baby-moses-is-kept-safe",
+  "sensitivityTier": "guided",
+  "title": "Baby Moses Is Kept Safe",
+  "subtitle": "God's people cried out in a hard land — and God was already keeping a baby safe",
+  "collection": "god-rescues-a-people",
+  "mainTruth": "God hears His people when they cry, and He is already at work before we can see it.",
+  "ageRange": "4-7",
+  "bibleRef": "Exodus 1:8-2:10",
+  "durationMinutes": 5,
+  "coverEmoji": "🧺",
+  "coverColor": "#0E7490",
+  "illustrationPrompt": "A small woven reed basket floating among tall green bulrushes at the edge of a wide river, a baby's blanket visible inside, a girl watching from behind the reeds, morning light on the water, painterly gouache illustration on parchment paper, river-green and warm sand palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, tender and protective, no threat shown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Many years after Joseph died, his family had grown into a huge people — the Israelites. But a new king came to power in Egypt who did not remember Joseph at all, and he was afraid of how many Israelites there were. So he made them slaves. He made them work in the hot sun making bricks, and he was cruel to them, and he gave a terrible order about their baby boys.\n\nGod's people cried out. Day after day they cried out to God in that hard place. And the Bible says something we must not miss: God heard their groaning. God remembered His promise to Abraham, and Isaac, and Jacob. He had not forgotten a single word of it.\n\nAnd while the people were crying, God was already working — and He started with one baby.\n\nA mother had a beautiful baby boy, and she hid him for three months to keep him safe. When she could not hide him any longer, she made a little basket out of reeds, coated it so it would float, laid her baby inside, and set it gently among the tall grasses at the edge of the river. His big sister Miriam stood watching nearby.\n\nThen the king's own daughter came down to the river. She found the basket, and she opened it, and the baby cried — and her heart went out to him. Miriam ran over and offered to fetch someone to nurse him, and so the baby's own mother got to care for him after all.\n\nThe princess named him Moses. And so the baby who should not have been safe grew up in the palace of the very king who wanted to harm him. God's people did not know it yet, but God was already preparing their rescuer.",
+      "childText": "Long after Joseph died, his family had grown into a great people. But a new king of Egypt made them slaves and was very cruel to them. God's people cried out to Him — and God heard them. God remembered His promise. And God was already working! One mother made a little basket out of reeds, laid her baby boy inside, and hid it in the tall grass by the river. His sister Miriam watched. Then the king's daughter found the basket, and she loved the baby straight away. She called him Moses. So the baby grew up safe in the palace — and God was getting a rescuer ready.",
+      "verses": [
+        {
+          "ref": "Exodus 1:11",
+          "kjv": "Therefore they did set over them taskmasters to afflict them with their burdens.",
+          "little_bible": "The king made God's people work as slaves. It was very hard."
+        },
+        {
+          "ref": "Exodus 2:3",
+          "kjv": "She took for him an ark of bulrushes... and laid it in the flags by the river's brink.",
+          "little_bible": "She made a basket for her baby. She hid it by the river."
+        },
+        {
+          "ref": "Exodus 2:6",
+          "kjv": "And when she had opened it, she saw the child: and, behold, the babe wept. And she had compassion on him.",
+          "little_bible": "The princess opened the basket. She loved the baby at once."
+        },
+        {
+          "ref": "Exodus 2:24",
+          "kjv": "And God heard their groaning, and God remembered his covenant with Abraham, with Isaac, and with Jacob.",
+          "little_bible": "God heard His people crying. God remembered His promise."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did God do when His people cried out?",
+      "parentGuide": "The new idea is that God hears the cries of people who are being treated badly — He is not distant from suffering. Two things to hold together: the situation was genuinely cruel, and God was already at work before anyone could see it. Keep the king's order about the babies brief and non-graphic; your child does not need detail, only that it was very wrong and that God protected Moses. Retrieve Joseph — the same family, the same God, the same promise. If your child mentions anything frightening in their own life, tell them plainly that God hears them and that they should always tell you or another trusted adult.",
+      "familyQuestion": "Who do we know that needs help right now? Can we pray for them tonight?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You hear people when they cry. Thank You that You never forget Your promises. Please help people who are having a very hard time today, and thank You that You are already working, even when we cannot see it. Amen.",
+      "childPrompt": "Can you ask God to help someone who is having a hard time?",
+      "prayerPoints": [
+        "Ask God to help someone you know who is struggling",
+        "Thank God that He hears every cry and forgets no promise"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God heard His people crying. God remembered His promise.",
+      "ref": "Exodus 2:24",
+      "memoryPhrase": "God hears us!",
+      "tip": "Cup your hand behind your ear and lean in, then say: 'God hears us!' Whisper it the first time, say it normally the second, and shout it the third."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Listen carefully to someone today — really listen, without talking about yourself — and then do one thing to help them.",
+      "parentNote": "Being properly heard is how a child learns what it means that God hears. Model it deliberately today: get down to their level, put your phone away, and let them finish. It teaches the doctrine better than the explanation does."
+    }
+  }
+}

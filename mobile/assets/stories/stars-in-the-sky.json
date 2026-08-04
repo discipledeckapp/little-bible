@@ -1,0 +1,70 @@
+{
+  "id": "stars-in-the-sky",
+  "sensitivityTier": "general",
+  "title": "Stars in the Sky",
+  "subtitle": "God took an old man outside at night and showed him what a promise looks like",
+  "collection": "promise-family",
+  "mainTruth": "God counted Abram as right with Him — not because Abram was good, but because Abram believed God.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 15:1-6",
+  "durationMinutes": 5,
+  "coverEmoji": "✨",
+  "coverColor": "#0C1445",
+  "illustrationPrompt": "An old man standing alone outside his tent on a desert night, head tilted back, arms slightly open, beneath an overwhelming field of stars filling the whole sky, a single lamp glowing in the tent behind him, painterly gouache illustration on parchment paper, deep midnight blue and silver-white palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, vast and quietly overwhelming --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Years went by. Abram had gone where God sent him, and God had promised to make him into a great nation — but Abram and his wife Sarai still had no children at all. Not one. And they were getting old.\n\nSo Abram told God exactly how he felt. 'Lord God, what can You give me? I have no child. Everything I own will go to a servant.' Notice that Abram did not pretend. He was honest with God about the promise that had not come yet.\n\nAnd God did not scold him. Instead God took him outside, into the cold dark night, and said: 'Look up. Look at the sky. Count the stars — if you can.' Abram looked up. There were stars behind stars behind stars, more than anyone could ever count. And God said, 'That is how many your family will be.'\n\nThen the Bible says something so important that the rest of the Bible keeps coming back to it. Abram believed God. And God counted that believing as being right with Him.\n\nStop and think about that. Abram did not do a single good thing to earn it. He had no child, no proof, nothing in his hands but a promise and a sky full of stars. He simply believed what God said. And God said: that is enough — you are right with Me.\n\nThat is how anyone becomes right with God, even today. Not by being good enough. By trusting what God has promised.",
+      "childText": "Years went by, and Abram still had no children — and he was getting old. So he told God honestly, 'Lord, You promised, but I have no child.' God did not scold him. God took him outside into the dark night and said, 'Look up! Count the stars — if you can!' There were more stars than anyone could ever count. God said, 'That is how big your family will be.' And Abram believed God. God said that believing made Abram right with Him. Abram had nothing in his hands — just a promise, and a sky full of stars!",
+      "verses": [
+        {
+          "ref": "Genesis 15:1",
+          "kjv": "Fear not, Abram: I am thy shield, and thy exceeding great reward.",
+          "little_bible": "God said: 'Do not be afraid, Abram. I will keep you safe.'"
+        },
+        {
+          "ref": "Genesis 15:5",
+          "kjv": "And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them.",
+          "little_bible": "God said: 'Look up. Count the stars, if you can!'"
+        },
+        {
+          "ref": "Genesis 15:6",
+          "kjv": "And he believed in the LORD; and he counted it to him for righteousness.",
+          "little_bible": "Abram believed God. So God said Abram was right with Him."
+        },
+        {
+          "ref": "Romans 4:3",
+          "kjv": "For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness.",
+          "little_bible": "Abraham believed God. That is how he was made right."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did Abram do that made God count him right?",
+      "parentGuide": "This is the doctrinal heart of the whole World, and Paul builds the gospel on this verse in Romans 4. The answer to the discussion question is deliberately uncomfortable: Abram did nothing except believe. Guard both sides — do not let it become 'believing is my good work that earns God', and do not let it become 'so being good does not matter.' The right shape is: God promises, we trust, God counts us right, and grateful obedience follows. Also model Abram's honesty — he told God his disappointment, and God answered with stars.",
+      "familyQuestion": "Is there something you are still waiting for? Can we tell God about it tonight?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that Abram could tell You honestly how he felt. Thank You that You did not scold him — You showed him the stars. Help us to believe what You have said, even when we cannot see it yet. Amen.",
+      "childPrompt": "Can you tell God honestly about something you are waiting for?",
+      "prayerPoints": [
+        "Tell God honestly about something that feels like a long wait",
+        "Thank God that trusting Him is what makes us right with Him"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Abram believed God. So God said Abram was right with Him.",
+      "ref": "Genesis 15:6",
+      "memoryPhrase": "Abram believed God!",
+      "tip": "Go outside after dark if you can, or look out of a window. Point up at the sky and say: 'Abram believed God!' If you can see even one star, count it out loud first."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Go outside tonight and look up. Count as many stars as you can, then say thank You to God for keeping His promises.",
+      "parentNote": "Do this literally if at all possible — the physical act of standing under a night sky is what God chose to teach Abram, and it works on children for the same reason. If your sky is cloudy or city-lit, use a picture, but go outside anyway."
+    }
+  }
+}

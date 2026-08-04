@@ -1,0 +1,70 @@
+{
+  "id": "a-way-through-the-sea",
+  "sensitivityTier": "general",
+  "title": "A Way Through the Sea",
+  "subtitle": "The sea in front, the army behind, and nowhere to go — which is exactly when God works",
+  "collection": "god-rescues-a-people",
+  "mainTruth": "When God's people could do absolutely nothing, God did everything. Salvation is His victory, not ours.",
+  "ageRange": "4-7",
+  "bibleRef": "Exodus 13:17-14:31",
+  "durationMinutes": 5,
+  "coverEmoji": "🌊",
+  "coverColor": "#0C4A6E",
+  "illustrationPrompt": "Two towering walls of standing water with a wide dry sand path running between them, a long line of small travelling figures walking through, a tall pillar of cloud and fire behind them, painterly gouache illustration on parchment paper, deep teal and turquoise with amber firelight, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, immense and awe-filled, no drowning shown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God's people were free. They walked out of Egypt with everything they owned, and God Himself went in front of them — a tall pillar of cloud by day and a pillar of fire by night, so they always knew where He was.\n\nThen the road ran out. In front of them was the sea, huge and deep and impossible. And behind them came a sound they had hoped never to hear again: Pharaoh had changed his mind, and his whole army was thundering after them.\n\nThe people were terrified. Sea in front. Army behind. Nowhere to run. They could not swim it, they could not fight, they could not go back. There was absolutely nothing they could do.\n\nAnd Moses said: 'Do not be afraid. Stand still, and watch what God will do. The Lord will fight for you — you only need to be still.'\n\nThen God moved. The pillar of cloud shifted round behind them and stood between His people and the army all night long. And God told Moses to lift up his stick over the water — and God sent a strong wind, and the sea opened. A wide dry path appeared straight through, with walls of water standing on either side.\n\nAll night God's people walked through the sea on dry ground. Every one of them came out the other side. And when the army tried to follow, the waters came back and the danger was gone for ever.\n\nSo God's people stood on the far shore, safe, and they sang. Not one of them had rescued themselves. That is what salvation is. God does it, and we stand still and trust Him, and then we sing.",
+      "childText": "God's people were free! God went in front of them — a tall cloud by day and a pillar of fire by night. Then the road ran out. In front was the deep sea. Behind came Pharaoh's whole army! The people were terrified. They could not swim it and they could not fight. There was nothing they could do. So Moses said, 'Do not be afraid. Stand still — the Lord will fight for you!' Then God sent a strong wind, and the sea opened up. A wide dry path went straight through, with walls of water on both sides! All night God's people walked through and came out safe. Then they sang, because God had done it all.",
+      "verses": [
+        {
+          "ref": "Exodus 13:21",
+          "kjv": "And the LORD went before them by day in a pillar of a cloud... and by night in a pillar of fire.",
+          "little_bible": "God went in front of them. A cloud by day, fire by night."
+        },
+        {
+          "ref": "Exodus 14:13",
+          "kjv": "Fear ye not, stand still, and see the salvation of the LORD.",
+          "little_bible": "Moses said: 'Do not be afraid. Stand still and watch God.'"
+        },
+        {
+          "ref": "Exodus 14:14",
+          "kjv": "The LORD shall fight for you, and ye shall hold your peace.",
+          "little_bible": "God said: 'I will fight for you. You can be still.'"
+        },
+        {
+          "ref": "Exodus 14:22",
+          "kjv": "And the children of Israel went into the midst of the sea upon the dry ground.",
+          "little_bible": "God's people walked through the sea on dry ground."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What could the people do to save themselves?",
+      "parentGuide": "The answer is nothing at all, and that is the doctrine — salvation is God's victory when His people are helpless. Watch out for the hero-swap here: Moses did not part the sea, God did, and Moses' stick was simply obedience. 'Stand still' is not laziness; it is trust when there is genuinely nothing left to try. Retrieve the Passover: rescued by the lamb, now rescued through the sea. Keep the army's end brief — the danger was ended, and God's people were safe. Paul later calls this a picture of baptism: going down into the water and coming out free.",
+      "familyQuestion": "When has something felt impossible, and then worked out?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, You made a way where there was no way at all. Thank You that You fight for Your people. When we are frightened and there is nothing we can do, help us to stand still and trust You. Amen.",
+      "childPrompt": "Can you tell God about something that feels impossible?",
+      "prayerPoints": [
+        "Tell God about something that feels impossible right now",
+        "Thank God that He fights for His people"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'I will fight for you. You can be still.'",
+      "ref": "Exodus 14:14",
+      "memoryPhrase": "God fights for us!",
+      "tip": "Hold both arms straight up like two walls of water, stand completely still for three seconds, then say: 'God fights for us!' Then walk through the gap between your arms."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Next time you feel worried today, stand still, take three slow breaths, and say: 'God fights for me.'",
+      "parentNote": "This gives your child a physical action for the moment worry arrives, which is far more usable than a concept. Practise it once now while everyone is calm, so the body remembers it when they are not."
+    }
+  }
+}

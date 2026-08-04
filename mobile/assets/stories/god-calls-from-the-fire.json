@@ -1,0 +1,70 @@
+{
+  "id": "god-calls-from-the-fire",
+  "sensitivityTier": "general",
+  "title": "God Calls from the Fire",
+  "subtitle": "A bush burned but did not burn up — and God told Moses His name",
+  "collection": "god-rescues-a-people",
+  "mainTruth": "God is holy, and He is always there. His name is I AM — He has never needed anyone to make Him.",
+  "ageRange": "4-7",
+  "bibleRef": "Exodus 3:1-15",
+  "durationMinutes": 5,
+  "coverEmoji": "🔥",
+  "coverColor": "#7C2D12",
+  "illustrationPrompt": "A desert thorn bush wrapped in bright golden flame but with every green leaf still whole, a shepherd's sandals set on the stony ground before it, a figure kneeling with head bowed, dry mountains behind, painterly gouache illustration on parchment paper, ember-gold and dry-stone palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, holy awe rather than danger --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Moses grew up. He left Egypt and lived far away in the desert, looking after sheep, for forty long years. He probably thought his life was small now, and that nothing was ever going to change.\n\nThen one ordinary day, out on the mountainside with his sheep, Moses saw something that stopped him where he stood. A bush was on fire. But the bush was not burning up. The flames kept going and the leaves stayed green. So Moses turned aside to look.\n\nAnd God called out from the middle of the fire: 'Moses! Moses!'\n\nMoses said, 'Here I am.'\n\nGod said, 'Do not come closer. Take off your sandals — the ground you are standing on is holy.' Holy means completely good, completely pure, completely set apart. Not a little bit better than us. Utterly different. Moses hid his face.\n\nThen God said the thing His people had been waiting four hundred years to hear: 'I have seen how My people are suffering. I have heard them crying. I know all about it. And I have come down to rescue them. I am sending you.'\n\nMoses was frightened. 'Who shall I say sent me?'\n\nAnd God told Moses His name. 'I AM WHO I AM. Tell them I AM has sent you.'\n\nWhat a name. Nobody made God. Nobody started Him. He does not have a beginning and He will never have an end. He simply is — always, everywhere, right now. That is who was speaking from the fire. And that is who had come down to rescue.",
+      "childText": "Moses grew up and went far away to look after sheep for forty years. Then one day he saw something amazing — a bush was on fire, but it was not burning up! So he went closer. And God called out from the fire: 'Moses! Moses!' God said, 'Take off your sandals. This ground is holy.' Then God said, 'I have seen My people suffering. I have heard them crying. I am coming to rescue them — and I am sending you.' Moses asked, 'Who shall I say sent me?' God said, 'I AM. Tell them I AM sent you.' Nobody made God. He always was, and He always will be!",
+      "verses": [
+        {
+          "ref": "Exodus 3:2",
+          "kjv": "And he looked, and, behold, the bush burned with fire, and the bush was not consumed.",
+          "little_bible": "The bush was on fire. But it did not burn up!"
+        },
+        {
+          "ref": "Exodus 3:5",
+          "kjv": "Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground.",
+          "little_bible": "God said: 'Take off your sandals. This ground is holy.'"
+        },
+        {
+          "ref": "Exodus 3:7",
+          "kjv": "I have surely seen the affliction of my people... and have heard their cry.",
+          "little_bible": "God said: 'I have seen My people. I have heard them cry.'"
+        },
+        {
+          "ref": "Exodus 3:14",
+          "kjv": "And God said unto Moses, I AM THAT I AM.",
+          "little_bible": "God said: 'I AM. Tell them I AM has sent you.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did God tell Moses to take off his sandals?",
+      "parentGuide": "Two big ideas arrive together here, so name them separately. Holy: God is not simply the strongest or the kindest person around — He is a completely different kind of good, which is why Moses hid his face. Do not soften this into 'God is nice'; the fear of the Lord belongs in a child's picture of God. And I AM: God was not made, started or caused. A four-year-old can grasp 'nobody made God — He was always there.' Retrieve the last story: God heard them. Now God says it Himself, out loud. Later Jesus says 'Before Abraham was, I AM' — the same name.",
+      "familyQuestion": "What is the most amazing thing you have ever seen?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, You are holy. Nobody made You — You have always been there and You always will be. Thank You that You see us and hear us. Help us to know how great You are, and to come to You anyway. Amen.",
+      "childPrompt": "Can you tell God that He is holy and great?",
+      "prayerPoints": [
+        "Tell God that He is holy — completely good and completely different",
+        "Thank God that He sees and hears you right now"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'I AM. Tell them I AM has sent you.'",
+      "ref": "Exodus 3:14",
+      "memoryPhrase": "God is always there!",
+      "tip": "Slip off your shoes together like Moses did, stand very still and quiet for three seconds, then say softly: 'God is always there!' Whisper it — it is that kind of moment."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find one quiet minute today, be completely still, and say to God: 'You are holy, and You are here.'",
+      "parentNote": "Stillness is a learned skill and a short one is plenty at this age. Do it with your child rather than sending them off to do it. One unhurried minute of shared quiet teaches reverence in a way that words cannot."
+    }
+  }
+}

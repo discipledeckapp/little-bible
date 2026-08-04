@@ -1,0 +1,70 @@
+{
+  "id": "jacob-learns-grace",
+  "sensitivityTier": "general",
+  "title": "Jacob Learns Grace",
+  "subtitle": "He cheated, he ran away, and he slept on a stone — and God came to him anyway",
+  "collection": "promise-family",
+  "mainTruth": "God's blessing is not a prize for good people. It is a gift He gives to people who do not deserve it.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 27; 28:10-22",
+  "durationMinutes": 5,
+  "coverEmoji": "🪜",
+  "coverColor": "#1E1B4B",
+  "illustrationPrompt": "A man asleep on bare desert ground with his head resting on a stone, above him a great stairway of light rising from the earth into an opening sky with figures moving up and down it, painterly gouache illustration on parchment paper, deep night blue and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, awe breaking into a lonely place --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Isaac grew up and had two sons: Esau and Jacob. Esau was the older one, and in those days the older son received the father's special blessing.\n\nBut Jacob wanted that blessing so badly that he cheated to get it. His father Isaac was old and could hardly see, so Jacob dressed up in his brother's clothes, put goatskin on his arms so he would feel hairy like Esau, walked in, and lied straight to his father's face. And it worked. Jacob got the blessing that was not his.\n\nWhen Esau found out, he was furious. So Jacob ran. He ran away from his home and his family and everything he had cheated to get, out into the empty country with nothing.\n\nThat night he lay down in the middle of nowhere with a stone for a pillow. He was a liar. He was a thief. He was alone, and it was entirely his own fault.\n\nAnd that is exactly where God came to him.\n\nJacob dreamed of a great stairway going up from the earth into heaven, with angels going up and down it — and God standing above it. And God said, 'I am the God of Abraham and Isaac. This land is for you and your family. Through your family, every family on earth will be blessed. And look — I am with you. I will keep you wherever you go. I will not leave you until I have done what I promised.'\n\nNot one word about what Jacob deserved. Jacob woke up amazed and said, 'God was in this place — and I did not know it.'\n\nThat is grace. God gives good things to people who have not earned them. Which is very good news, because that is all of us.",
+      "childText": "Isaac had two sons, Esau and Jacob. The special blessing belonged to Esau, the older one. But Jacob wanted it so much that he dressed up as his brother and lied to his father to get it! When Esau found out, Jacob had to run away. That night he slept out in the wild with a stone for a pillow — a liar, alone, all his own fault. And that is where God came to him! Jacob dreamed of a stairway up to heaven, and God said, 'I am with you. I will keep you wherever you go. I will not leave you.' God said nothing about what Jacob deserved. That is called grace!",
+      "verses": [
+        {
+          "ref": "Genesis 27:35",
+          "kjv": "And he said, Thy brother came with subtilty, and hath taken away thy blessing.",
+          "little_bible": "Jacob tricked his father. He took his brother's blessing."
+        },
+        {
+          "ref": "Genesis 28:12",
+          "kjv": "And he dreamed, and behold a ladder set up on the earth, and the top of it reached to heaven.",
+          "little_bible": "Jacob dreamed of a stairway going up to heaven."
+        },
+        {
+          "ref": "Genesis 28:15",
+          "kjv": "And, behold, I am with thee, and will keep thee in all places whither thou goest.",
+          "little_bible": "God said: 'I am with you. I will keep you everywhere you go.'"
+        },
+        {
+          "ref": "Genesis 28:16",
+          "kjv": "Surely the LORD is in this place; and I knew it not.",
+          "little_bible": "Jacob said: 'God was here — and I did not know it!'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did Jacob do to make God come to him?",
+      "parentGuide": "The answer to that question is: nothing. Grace is the concept, and the whole force of the story is the timing — God appeared at Jacob's lowest and least deserving moment. Do not sand off Jacob's sin to make him likeable; the story only works if he is genuinely in the wrong. Retrieve story 11 (Abram believed and was counted right) — same God, same principle. And note Jesus later says He Himself is that stairway between heaven and earth.",
+      "familyQuestion": "Has someone ever been kind to you right after you got something wrong?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You came to Jacob when he had done wrong and run away. Thank You that You do not only come to people who deserve it. Thank You for being with us wherever we go. Amen.",
+      "childPrompt": "Can you thank God that He stays with you even when you get it wrong?",
+      "prayerPoints": [
+        "Thank God that His kindness is not a prize we earn",
+        "Thank God that He is with you wherever you go"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'I am with you. I will keep you everywhere you go.'",
+      "ref": "Genesis 28:15",
+      "memoryPhrase": "God is with me!",
+      "tip": "Walk around the room saying 'everywhere I go...' — then stop, put a hand on your heart, and say: 'God is with me!' Try it in three different rooms."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Be kind today to someone who has been unkind to you — not because they deserve it, but because that is what God did for Jacob.",
+      "parentNote": "Undeserved kindness is the only way a child can act out grace rather than just hear about it. Keep it small and voluntary; if your child is being genuinely mistreated, protect them first and save this for another day."
+    }
+  }
+}

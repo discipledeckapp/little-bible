@@ -1,0 +1,37 @@
+{
+  "storyId": "god-calls-from-the-fire",
+  "memoryBuilder": {
+    "phrase": "God is always there!",
+    "phraseWords": ["God", "is", "always", "there!"],
+    "verseRef": "Exodus 3:14",
+    "verseText": "God said: 'I AM. Tell them I AM has sent you.'",
+    "verseWords": ["I", "AM.", "Tell", "them", "I", "AM", "has", "sent", "you."]
+  },
+  "sequence": {
+    "prompt": "What happened at the burning bush? Put it in order.",
+    "items": [
+      { "id": "sheep",   "label": "Moses was looking after sheep",        "emoji": "🐑", "order": 1 },
+      { "id": "bush",    "label": "He saw a bush on fire, not burning up", "emoji": "🔥", "order": 2 },
+      { "id": "sandals", "label": "God said, 'Take off your sandals'",     "emoji": "👣", "order": 3 },
+      { "id": "name",    "label": "God said, 'I AM has sent you'",         "emoji": "✨", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "bush",   "left": "the burning bush", "leftEmoji": "🔥", "rightId": "whole",  "right": "It burned but did not burn up",     "rightEmoji": "🌿" },
+      { "leftId": "holy",   "left": "holy ground",      "leftEmoji": "👣", "rightId": "shoes",  "right": "Moses had to take off his sandals", "rightEmoji": "🙇" },
+      { "leftId": "iam",    "left": "the name I AM",    "leftEmoji": "✨", "rightId": "always", "right": "Nobody made God — He always was",   "rightEmoji": "♾️" }
+    ]
+  },
+  "application": {
+    "question": "God is holy, and God is right here. Where do you most want to remember that God is with you?",
+    "options": [
+      { "id": "dark",   "label": "In the dark",        "emoji": "🌙" },
+      { "id": "new",    "label": "Somewhere new",      "emoji": "🚪" },
+      { "id": "alone",  "label": "When I am on my own", "emoji": "🧍" }
+    ],
+    "followUp": "God's name means He is always there — He has no beginning and no end. Wherever you go, I AM is already there."
+  }
+}

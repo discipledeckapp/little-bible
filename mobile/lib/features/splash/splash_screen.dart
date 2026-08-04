@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../../core/services/bible_content_loader.dart';
 import '../../core/theme/app_theme.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
@@ -81,6 +82,9 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
       await _lumiCtrl.forward();
       await _titleCtrl.forward();
       await _taglineCtrl.forward();
+      if (!mounted) return;
+      // Seed Bible content after animations complete; non-blocking if already seeded.
+      await ref.read(bibleContentLoaderProvider).seed();
       if (!mounted) return;
       _navigateTimer = Timer(const Duration(milliseconds: 500), () {
         if (mounted) context.go('/');

@@ -62,6 +62,46 @@ class _UnlockScreenState extends ConsumerState<UnlockScreen> {
     final errorMsg = service.state.errorMessage;
     final unavailable = service.state.status == UnlockStatus.unavailable;
 
+    return UnlockContent(
+      price: price,
+      isLoading: isLoading,
+      unavailable: unavailable,
+      errorMessage: errorMsg,
+      onClose: () => context.pop(),
+      onPurchase: () => ref.read(unlockServiceProvider).purchase(),
+      onRestore: () => ref.read(unlockServiceProvider).restore(),
+    );
+  }
+}
+
+/// The paywall's presentation, with no providers, navigation or StoreKit.
+///
+/// Split out of [UnlockScreen] so it can be rendered on its own — the App Store
+/// Connect in-app-purchase review screenshot is generated from this exact
+/// widget, so the image Apple reviews cannot drift from the real paywall.
+class UnlockContent extends StatelessWidget {
+  const UnlockContent({
+    super.key,
+    this.price,
+    this.isLoading = false,
+    this.unavailable = false,
+    this.errorMessage,
+    this.onClose,
+    this.onPurchase,
+    this.onRestore,
+  });
+
+  final String? price;
+  final bool isLoading;
+  final bool unavailable;
+  final String? errorMessage;
+  final VoidCallback? onClose;
+  final VoidCallback? onPurchase;
+  final VoidCallback? onRestore;
+
+  @override
+  Widget build(BuildContext context) {
+    final errorMsg = errorMessage;
     return Scaffold(
       backgroundColor: AppColours.cream,
       body: SafeArea(
@@ -75,7 +115,7 @@ class _UnlockScreenState extends ConsumerState<UnlockScreen> {
                 child: IconButton(
                   icon: const Icon(Icons.close_rounded),
                   color: AppColours.textDark,
-                  onPressed: () => context.pop(),
+                  onPressed: onClose,
                 ),
               ),
               const SizedBox(height: 12),
@@ -162,7 +202,7 @@ class _UnlockScreenState extends ConsumerState<UnlockScreen> {
                   child: ElevatedButton(
                     onPressed: isLoading
                         ? null
-                        : () => ref.read(unlockServiceProvider).purchase(),
+                        : onPurchase,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColours.lumiGold,
                       foregroundColor: Colors.white,
@@ -193,7 +233,7 @@ class _UnlockScreenState extends ConsumerState<UnlockScreen> {
                 TextButton(
                   onPressed: isLoading
                       ? null
-                      : () => ref.read(unlockServiceProvider).restore(),
+                      : onRestore,
                   child: Text(
                     'Restore purchase',
                     style: AppTextStyles.label

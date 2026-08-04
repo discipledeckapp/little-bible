@@ -209,13 +209,28 @@ class _StoryPlayerScreenState extends ConsumerState<StoryPlayerScreen>
     final text = _sceneIndex < total ? scenes[_sceneIndex] : '';
     final isLast = _sceneIndex >= total - 1;
 
-    return Column(
+    final size = MediaQuery.sizeOf(context);
+    // On phones (~360–430dp wide) scene is 260px. On tablets it grows to 40%
+    // of screen height, capped at 420px so the text area stays generous.
+    final sceneHeight = (size.height * 0.32).clamp(240.0, 420.0);
+    // Side padding scales with width: phone 28dp, wide tablet up to 48dp.
+    final sidePad = (size.width * 0.07).clamp(24.0, 48.0);
+    // Body font scales from 22sp (phone) up to 26sp (large tablet).
+    final bodySize = (size.shortestSide / 18).clamp(22.0, 26.0);
+    // On wide screens centre the content in a max-width column.
+    final maxW = size.width > 600 ? 560.0 : double.infinity;
+
+    return Align(
+      alignment: Alignment.topCenter,
+      child: SizedBox(
+        width: maxW,
+        child: Column(
       children: [
         // ── Cover header ─────────────────────────────────────────────────
         Stack(
           children: [
             SizedBox(
-              height: 260,
+              height: sceneHeight,
               width: double.infinity,
               child: AnimatedStoryScene(
                 storyId: widget.storyId,
@@ -227,7 +242,7 @@ class _StoryPlayerScreenState extends ConsumerState<StoryPlayerScreen>
             Positioned(
               bottom: 0, left: 0, right: 0,
               child: Container(
-                height: 130,
+                height: sceneHeight * 0.5,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -260,12 +275,12 @@ class _StoryPlayerScreenState extends ConsumerState<StoryPlayerScreen>
 
         // ── Title ─────────────────────────────────────────────────────────
         Padding(
-          padding: const EdgeInsets.fromLTRB(24, 18, 24, 6),
+          padding: EdgeInsets.fromLTRB(sidePad, 18, sidePad, 6),
           child: Text(
             story.title,
             style: AppTextStyles.heading.copyWith(
               color: AppColours.textDark,
-              fontSize: 28,
+              fontSize: (size.shortestSide / 14).clamp(26.0, 34.0),
             ),
             textAlign: TextAlign.center,
           ),
@@ -306,7 +321,7 @@ class _StoryPlayerScreenState extends ConsumerState<StoryPlayerScreen>
         else ...[
           Expanded(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(28, 16, 28, 16),
+              padding: EdgeInsets.fromLTRB(sidePad, 16, sidePad, 16),
               child: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 300),
                 child: Text(
@@ -314,7 +329,7 @@ class _StoryPlayerScreenState extends ConsumerState<StoryPlayerScreen>
                   key: ValueKey(_sceneIndex),
                   style: AppTextStyles.storyBody.copyWith(
                     color: AppColours.textDark,
-                    fontSize: 22,
+                    fontSize: bodySize,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -351,6 +366,8 @@ class _StoryPlayerScreenState extends ConsumerState<StoryPlayerScreen>
           ),
         ],
       ],
+        ),
+      ),
     );
   }
 }

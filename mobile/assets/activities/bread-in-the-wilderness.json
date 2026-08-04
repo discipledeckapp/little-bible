@@ -1,0 +1,37 @@
+{
+  "storyId": "bread-in-the-wilderness",
+  "memoryBuilder": {
+    "phrase": "God gives what we need.",
+    "phraseWords": ["God", "gives", "what", "we", "need."],
+    "verseRef": "Exodus 16:4",
+    "verseText": "God said: 'I will rain bread from the sky. Gather enough for today.'",
+    "verseWords": ["I", "will", "rain", "bread", "from", "the", "sky.", "Gather", "enough", "for", "today."]
+  },
+  "sequence": {
+    "prompt": "How did God feed His people in the desert? Put it in order.",
+    "items": [
+      { "id": "hungry", "label": "God's people got very hungry",        "emoji": "😟", "order": 1 },
+      { "id": "grumble","label": "They grumbled about Egypt",           "emoji": "💬", "order": 2 },
+      { "id": "flakes", "label": "The ground was covered in flakes",    "emoji": "❄️", "order": 3 },
+      { "id": "today",  "label": "God said, 'Gather enough for today'", "emoji": "🧺", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "manna",  "left": "the word manna",   "leftEmoji": "🍞", "rightId": "what",  "right": "It means 'what is it?'",            "rightEmoji": "❓" },
+      { "leftId": "oneday", "left": "one day's worth",  "leftEmoji": "🧺", "rightId": "trust", "right": "God would be there again tomorrow", "rightEmoji": "🌅" },
+      { "leftId": "jesus",  "left": "Jesus",            "leftEmoji": "✝️", "rightId": "bread", "right": "He said 'I am the bread of life'",   "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "God gave just enough for one day, every day. What do you need from God today?",
+    "options": [
+      { "id": "food",  "label": "Food and a home",  "emoji": "🍞" },
+      { "id": "brave", "label": "Help to be brave", "emoji": "🦁" },
+      { "id": "kind",  "label": "Help to be kind",  "emoji": "❤️" }
+    ],
+    "followUp": "God fed them every single morning for forty years. He did not give them a pile — He gave them Himself, one day at a time."
+  }
+}

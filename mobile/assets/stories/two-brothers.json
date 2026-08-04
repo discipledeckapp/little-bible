@@ -1,0 +1,70 @@
+{
+  "id": "two-brothers",
+  "sensitivityTier": "guided",
+  "title": "Two Brothers and Jealous Hearts",
+  "subtitle": "God warned Cain that something was waiting at his door — and He warns us too",
+  "collection": "in-the-beginning",
+  "mainTruth": "Wrong things start inside our hearts — and God helps us rule over them before they rule over us.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 4:1-16",
+  "durationMinutes": 5,
+  "coverEmoji": "🌾",
+  "coverColor": "#3F2E12",
+  "illustrationPrompt": "An open field at low evening light, two simple altars with rising smoke — one column climbing straight upward, one drifting sideways low across the ground, a lone figure standing with head bowed and shoulders turned away, painterly gouache illustration on parchment paper, ochre and dark umber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, serious and tender, no violence shown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "The first family had children, and two of them were brothers. Cain was a farmer who grew things from the ground. Abel looked after sheep. When it was time to bring a gift to God, both brothers brought something. Abel brought the very best he had — the first and finest of his flock. Cain brought some of his crops, but not his best, and not with a heart that loved God.\n\nGod was pleased with Abel's gift. He was not pleased with Cain's. And Cain became very, very angry. His face went dark and he looked down at the ground.\n\nThen God did something kind: He came and talked to Cain about it, before anything happened. God said, 'Why are you angry? If you do what is right, will you not be accepted? But be careful — sin is crouching at your door. It wants to have you. You must rule over it.' God was warning him: something dangerous is waiting inside you, and you can still turn away from it.\n\nBut Cain did not listen. He let the anger grow, and he hurt his brother Abel, and Abel died. It was a terrible thing, and God did not pretend otherwise. God asked Cain, 'Where is your brother?' Cain tried to hide it. There were real consequences, and Cain had to leave that place. Yet even then, God put a mark of protection on Cain so that no one would harm him. Even to a man who had done a terrible thing, God was still merciful.\n\nHere is what this story is for. Wrong things do not start with our hands — they start inside, with wanting and envying and being angry. That is why God says: rule over it. And that is why we need Jesus — not just to forgive what we have done, but to change what is inside us.",
+      "childText": "The first family had two sons. Abel looked after sheep. Cain grew crops. Both brought a gift to God. Abel gave his very best. Cain did not. God was pleased with Abel's gift, and Cain became very angry. So God came and warned him kindly: 'Sin is waiting at your door. You must rule over it.' But Cain did not listen. He let his anger grow, and he hurt his brother Abel, and Abel died. It was very sad. God still cared for Cain, even then. Wrong things start inside our hearts. That is why we ask God to rule our hearts.",
+      "verses": [
+        {
+          "ref": "Genesis 4:4",
+          "kjv": "And Abel, he also brought of the firstlings of his flock and of the fat thereof. And the LORD had respect unto Abel and to his offering.",
+          "little_bible": "Abel brought God his very best. God was pleased with Abel."
+        },
+        {
+          "ref": "Genesis 4:6",
+          "kjv": "And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?",
+          "little_bible": "God asked Cain: 'Why are you so angry?'"
+        },
+        {
+          "ref": "Genesis 4:7",
+          "kjv": "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him.",
+          "little_bible": "God said: 'Sin waits at your door. You must rule over it.'"
+        },
+        {
+          "ref": "Genesis 4:9",
+          "kjv": "And the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?",
+          "little_bible": "God asked: 'Where is your brother?' Cain would not tell the truth."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Where do wrong things start?",
+      "parentGuide": "Read this one with your child beside you. Abel's death is told plainly and without detail — do not add any. The new idea here is that sin is not only something we do, it is something that wants us; God's warning came before Cain acted, which means there is always a moment where turning back is possible. Help your child name the feeling that comes just before they lash out — jealousy, anger, wanting what someone else has. Naming it is how a child learns to rule it. If your child seems upset or asks about death, answer simply and honestly, and tell them they can always talk to you or another trusted adult about anything that worries them.",
+      "familyQuestion": "What do you feel in your body just before you get cross?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, You know what is inside our hearts. When we feel jealous or angry, please help us to stop and turn to You. Rule our hearts, God, so that our hearts do not rule us. Thank You for warning us because You love us. Amen.",
+      "childPrompt": "Can you ask God to help you when you feel angry?",
+      "prayerPoints": [
+        "Ask God to help you notice jealousy and anger early",
+        "Thank God that He warns us before we go wrong, because He loves us"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'Sin waits at your door. You must rule over it.'",
+      "ref": "Genesis 4:7",
+      "memoryPhrase": "God rules my heart!",
+      "tip": "Knock on a door or a table three times — knock, knock, knock — then put both hands on your heart and say: 'God rules my heart!' The knock is the warning; the hands are the answer."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Next time you feel jealous or cross today, stop and say quietly: 'God, help me.' Then do one kind thing for the person you were cross with.",
+      "parentNote": "This is heart-level obedience, and it is hard — expect it to take many repetitions. Catch your child doing it and name it out loud: 'You felt cross and you chose kind. That is ruling over it.' Model it yourself when you get it wrong in front of them."
+    }
+  }
+}

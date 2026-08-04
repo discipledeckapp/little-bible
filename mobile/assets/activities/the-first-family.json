@@ -1,0 +1,37 @@
+{
+  "storyId": "the-first-family",
+  "memoryBuilder": {
+    "phrase": "We belong with God!",
+    "phraseWords": ["We", "belong", "with", "God!"],
+    "verseRef": "Genesis 2:18",
+    "verseText": "God said: 'It is not good to be alone.'",
+    "verseWords": ["God", "said:", "It", "is", "not", "good", "to", "be", "alone."]
+  },
+  "sequence": {
+    "prompt": "How did God make the first family? Put it in order.",
+    "items": [
+      { "id": "dust",   "label": "God made the man from the dust",     "emoji": "🤲", "order": 1 },
+      { "id": "garden", "label": "God planted a beautiful garden",     "emoji": "🌳", "order": 2 },
+      { "id": "alone",  "label": "God said it is not good to be alone", "emoji": "💬", "order": 3 },
+      { "id": "helper", "label": "God made a helper to be with him",   "emoji": "👫", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "breath", "left": "God's breath",   "leftEmoji": "🌬️", "rightId": "alive",   "right": "It made the first man come alive",  "rightEmoji": "✨" },
+      { "leftId": "garden", "left": "the garden",     "leftEmoji": "🌳", "rightId": "good",    "right": "The good place God planted for them", "rightEmoji": "🍎" },
+      { "leftId": "helper", "left": "the woman",      "leftEmoji": "👩", "rightId": "notalone","right": "God's answer to being alone",       "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "God made us to be close to Him and close to each other. Who will you be close to today?",
+    "options": [
+      { "id": "family", "label": "My family", "emoji": "👨‍👩‍👧" },
+      { "id": "friend", "label": "My friend", "emoji": "🧒" },
+      { "id": "god",    "label": "God",       "emoji": "🙏" }
+    ],
+    "followUp": "God walked in the garden with the very first people. He made you for that same closeness — with Him, and with the people He has given you. You were never meant to be alone."
+  }
+}

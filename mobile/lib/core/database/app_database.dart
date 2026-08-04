@@ -18,6 +18,31 @@ class Verses extends Table {
   // 'little-bible' | 'web'
   TextColumn get source    => text().withDefault(Constant('web'))();
   BoolColumn get isAdapted => boolean().withDefault(Constant(false))();
+
+  // Bible reader fields (nullable — added in schema v4)
+  TextColumn get kjv                    => text().nullable()();
+  TextColumn get littleBible            => text().nullable()();
+  TextColumn get littleReaderAdaptation => text().nullable()();
+  TextColumn get meaning                => text().nullable()();
+  TextColumn get memoryPhrase           => text().nullable()();
+  TextColumn get prayer                 => text().nullable()();
+  TextColumn get discussionQuestion     => text().nullable()();
+  TextColumn get familyDiscussion       => text().nullable()();
+  TextColumn get doItToday              => text().nullable()();
+}
+
+class BibleChapters extends Table {
+  TextColumn get book                    => text()();
+  IntColumn  get chapter                 => integer()();
+  TextColumn get chapterSummary          => text().nullable()();
+  TextColumn get mainLesson              => text().nullable()();
+  TextColumn get memoryVerseRef          => text().nullable()();
+  TextColumn get memoryVerseLittleBible  => text().nullable()();
+  TextColumn get parentGuide             => text().nullable()();
+  TextColumn get applicationForChildren  => text().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {book, chapter};
 }
 
 class ChildProfiles extends Table {
@@ -104,6 +129,7 @@ class ContentVersions extends Table {
 
 @DriftDatabase(tables: [
   Verses,
+  BibleChapters,
   ChildProfiles,
   StoryProgress,
   VerseMastery,
@@ -114,7 +140,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor]) : super(executor ?? _openConnection());
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   // ─── Sync Queue DAOs ─────────────────────────────────────────────────────────
 
@@ -152,6 +178,38 @@ class AppDatabase extends _$AppDatabase {
     );
   }
 
+  // ─── Bible Reader DAOs ───────────────────────────────────────────────────────
+
+  Future<List<BibleChapter>> getLoadedChapters(String book) {
+    return (select(bibleChapters)
+          ..where((t) => t.book.equals(book))
+          ..orderBy([(t) => OrderingTerm.asc(t.chapter)]))
+        .get();
+  }
+
+  Future<List<Verse>> getChapterVerses(String book, int chapter) {
+    return (select(verses)
+          ..where((t) => t.book.equals(book) & t.chapter.equals(chapter))
+          ..orderBy([(t) => OrderingTerm.asc(t.verse)]))
+        .get();
+  }
+
+  Future<bool> isBibleSeeded() async {
+    final row = await (select(contentVersions)
+          ..where((t) => t.contentType.equals('bible_v2')))
+        .getSingleOrNull();
+    return row != null;
+  }
+
+  Future<void> markBibleSeeded() {
+    return into(contentVersions).insertOnConflictUpdate(
+      ContentVersionsCompanion.insert(
+        contentType: 'bible_v2',
+        version: '1.0',
+      ),
+    );
+  }
+
   // ─── User Data ───────────────────────────────────────────────────────────────
 
   /// Wipes all child-owned data (profiles, progress, verse mastery, sync queue).
@@ -185,6 +243,18 @@ class AppDatabase extends _$AppDatabase {
         await m.addColumn(childProfiles, childProfiles.reducedMotion);
         await m.addColumn(childProfiles, childProfiles.wifiOnlyDownloads);
         await m.addColumn(childProfiles, childProfiles.cloudSyncEnabled);
+      }
+      if (from < 4) {
+        await m.createTable(bibleChapters);
+        await m.addColumn(verses, verses.kjv);
+        await m.addColumn(verses, verses.littleBible);
+        await m.addColumn(verses, verses.littleReaderAdaptation);
+        await m.addColumn(verses, verses.meaning);
+        await m.addColumn(verses, verses.memoryPhrase);
+        await m.addColumn(verses, verses.prayer);
+        await m.addColumn(verses, verses.discussionQuestion);
+        await m.addColumn(verses, verses.familyDiscussion);
+        await m.addColumn(verses, verses.doItToday);
       }
     },
     beforeOpen: (details) async {

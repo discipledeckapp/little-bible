@@ -1,0 +1,70 @@
+{
+  "id": "the-passover-lamb",
+  "sensitivityTier": "guided",
+  "title": "The Passover Lamb",
+  "subtitle": "One lamb for each family, and a mark on the door — and everyone inside was safe",
+  "collection": "god-rescues-a-people",
+  "mainTruth": "God said: when I see the blood, I will pass over you. We are safe because of what He provided, not because of us.",
+  "ageRange": "4-7",
+  "bibleRef": "Exodus 12:1-32",
+  "durationMinutes": 6,
+  "coverEmoji": "🚪",
+  "coverColor": "#7F1D1D",
+  "illustrationPrompt": "A simple stone doorway at night with the wooden doorframe marked, warm lamplight and a family sharing a meal glowing inside, dark quiet street outside, painterly gouache illustration on parchment paper, deep night blue with warm amber interior light, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, shelter and safety, nothing frightening shown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Nine times Pharaoh had said no. Now God said there would be one last night — a night when judgment would come to Egypt, because Egypt had refused God again and again.\n\nBut God did not leave His people to face that night on their own. He gave them a way to be safe, and it was not clever, and it was not hard. It was this.\n\nEach family was to take a lamb — a perfect one, with nothing wrong with it. The lamb would die in the family's place. Then they were to take some of its blood and paint it on the wooden doorframe of their house, on the sides and across the top. Then they were to go inside, cook the lamb, eat it together with bread made in a hurry, and stay in the house until morning.\n\nAnd God said: 'When I see the blood, I will pass over you.'\n\nThink about what that means. The families inside were not safe because they were braver, or better, or more Israelite. They were safe because of the lamb. A family was safe if the blood was on the door — and that was all. God provided the way, and they simply trusted it and went inside.\n\nThat night everything changed. God's people walked out of Egypt free, after four hundred years. And God told them to remember that meal every single year, for ever, so that no child would forget how they got out.\n\nAnd hundreds of years later, at that very meal, Jesus took the bread and said, 'This is My body, given for you.' John had already called Him 'the Lamb of God'. Jesus is the perfect Lamb, and everyone sheltered by Him is safe.",
+      "childText": "Nine times Pharaoh had said no. Now God said there would be one last night. But God gave His people a way to be safe. Each family took a perfect lamb. The lamb died in their place. Then they painted its blood on the wooden doorframe, went inside, and ate the lamb together. And God said, 'When I see the blood, I will pass over you.' They were not safe because they were good or brave. They were safe because of the lamb! That night God's people walked out of Egypt free. Long after, Jesus came — and John called Him the Lamb of God. Everyone who shelters in Jesus is safe.",
+      "verses": [
+        {
+          "ref": "Exodus 12:5",
+          "kjv": "Your lamb shall be without blemish, a male of the first year.",
+          "little_bible": "The lamb must be perfect. Nothing wrong with it at all."
+        },
+        {
+          "ref": "Exodus 12:7",
+          "kjv": "And they shall take of the blood, and strike it on the two side posts and on the upper door post.",
+          "little_bible": "They painted the lamb's blood on their doorway."
+        },
+        {
+          "ref": "Exodus 12:13",
+          "kjv": "And when I see the blood, I will pass over you.",
+          "little_bible": "God said: 'When I see the blood, I will pass over you.'"
+        },
+        {
+          "ref": "1 Corinthians 5:7",
+          "kjv": "For even Christ our passover is sacrificed for us.",
+          "little_bible": "Jesus is our Passover Lamb. He was given for us."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why were the families inside the houses safe?",
+      "parentGuide": "Sit with your child for this one. The answer to the question is the whole doctrine: because of the lamb — not because they were better people. That is atoning blood, and it is the direct lens for the cross. Handle the judgment on Egypt truthfully and briefly: Egypt had refused God nine times, God warned them every time, and God provided a shelter for anyone who would use it. Do not dwell on it or add detail. Retrieve God Provides a Lamb from World 2 — Abraham said 'God will provide the lamb', and here He does it again, for every family. Then name Jesus.",
+      "familyQuestion": "Where do we go when we need to feel safe?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You did not leave Your people alone on that night. Thank You that You gave them a lamb and a way to be safe. Thank You most of all for Jesus, our Passover Lamb. We shelter in Him. Amen.",
+      "childPrompt": "Can you thank God for Jesus, the Lamb who keeps us safe?",
+      "prayerPoints": [
+        "Thank God that we are safe because of the Lamb, not because of us",
+        "Thank God for Jesus, the perfect Passover Lamb"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'When I see the blood, I will pass over you.'",
+      "ref": "Exodus 12:13",
+      "memoryPhrase": "The Lamb keeps us safe.",
+      "tip": "Stand in a doorway together. Touch one side of the frame, then the other, then the top — one touch for each part of 'The Lamb keeps us safe.' Then step inside and say it all together."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Have a meal together today, and while you eat, tell each other one thing God has rescued you from.",
+      "parentNote": "God commanded a shared meal as the memory device, so use the one He chose. Go first yourself with something real but age-appropriate — children remember what they saw their parent say at the table far longer than a lesson."
+    }
+  }
+}

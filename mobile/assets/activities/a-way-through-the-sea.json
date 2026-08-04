@@ -1,0 +1,37 @@
+{
+  "storyId": "a-way-through-the-sea",
+  "memoryBuilder": {
+    "phrase": "God fights for us!",
+    "phraseWords": ["God", "fights", "for", "us!"],
+    "verseRef": "Exodus 14:14",
+    "verseText": "God said: 'I will fight for you. You can be still.'",
+    "verseWords": ["I", "will", "fight", "for", "you.", "You", "can", "be", "still."]
+  },
+  "sequence": {
+    "prompt": "How did God get His people through the sea? Put it in order.",
+    "items": [
+      { "id": "trapped", "label": "The sea in front, the army behind",   "emoji": "😨", "order": 1 },
+      { "id": "still",   "label": "Moses said, 'Stand still and watch'", "emoji": "🤚", "order": 2 },
+      { "id": "open",    "label": "God sent a wind and the sea opened",  "emoji": "🌊", "order": 3 },
+      { "id": "sang",    "label": "They walked through and sang",        "emoji": "🎶", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "pillar", "left": "the cloud and fire", "leftEmoji": "🔥", "rightId": "front", "right": "God went in front of His people",    "rightEmoji": "🧭" },
+      { "leftId": "people", "left": "God's people",       "leftEmoji": "👨‍👩‍👧", "rightId": "nothing", "right": "There was nothing they could do", "rightEmoji": "🤷" },
+      { "leftId": "sea",    "left": "the open sea",       "leftEmoji": "🌊", "rightId": "path",  "right": "A dry path straight through",       "rightEmoji": "👣" }
+    ]
+  },
+  "application": {
+    "question": "They could not save themselves at all. What feels too big for you to fix?",
+    "options": [
+      { "id": "scared", "label": "Something that scares me", "emoji": "😰" },
+      { "id": "hard",   "label": "Something too hard",       "emoji": "🧱" },
+      { "id": "sad",    "label": "Something that makes me sad", "emoji": "😢" }
+    ],
+    "followUp": "Not one of them rescued themselves — God did all of it, and then they sang. When you cannot fix it, stand still and let God fight for you."
+  }
+}

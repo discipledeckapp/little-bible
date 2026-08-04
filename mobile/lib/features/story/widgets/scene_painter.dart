@@ -50,8 +50,28 @@ abstract class ScenePainter extends CustomPainter {
 final Map<String, List<ScenePainter Function(double)>> kSceneRegistry = {
   'god-made-everything':    [_CreationScenePainter.new],
   'god-made-me':            [_GodMadeMeScenePainter.new],
+  'the-first-family':       [_FirstFamilyScenePainter.new],
+  'the-very-sad-choice':    [_SadChoiceScenePainter.new],
+  'god-promises-a-rescuer': [_RescuerPromiseScenePainter.new],
+  'two-brothers':           [_TwoBrothersScenePainter.new],
   'noahs-big-boat':         [_NoahScenePainter.new],
   'noahs-rainbow-promise':  [_RainbowScenePainter.new],
+  'the-tall-tower':            [_TallTowerScenePainter.new],
+  'god-calls-abraham':         [_AbrahamCallScenePainter.new],
+  'stars-in-the-sky':          [_StarsScenePainter.new],
+  'the-promised-son':          [_PromisedSonScenePainter.new],
+  'god-provides-a-lamb':       [_ProvidesLambScenePainter.new],
+  'jacob-learns-grace':        [_JacobScenePainter.new],
+  'joseph-and-his-brothers':   [_JosephBrothersScenePainter.new],
+  'joseph-forgives-his-family':[_JosephForgivesScenePainter.new],
+  'baby-moses-is-kept-safe':   [_BabyMosesScenePainter.new],
+  'god-calls-from-the-fire':   [_BurningBushScenePainter.new],
+  'let-my-people-go':          [_LetMyPeopleGoScenePainter.new],
+  'the-passover-lamb':         [_PassoverScenePainter.new],
+  'a-way-through-the-sea':     [_ThroughTheSeaScenePainter.new],
+  'bread-in-the-wilderness':   [_MannaScenePainter.new],
+  'gods-good-commands':        [_CommandsScenePainter.new],
+  'god-lives-with-his-people': [_TabernacleScenePainter.new],
   'birth-of-jesus':         [_NativityScenePainter.new],
   'jesus-loves-children':   [_JesusChildrenScenePainter.new],
   'david-the-shepherd-boy': [_DavidScenePainter.new],
@@ -181,6 +201,12 @@ void _person(
     );
   }
 
+  // Neck — bridges head to shoulders so the head never reads as floating (§ 4.2)
+  canvas.drawRect(
+    Rect.fromLTRB(cx - hR * 0.36, headY + hR * 0.6, cx + hR * 0.36, shoulderY + 2),
+    Paint()..color = skin,
+  );
+
   // Robe — A-line trapezoid, wider at feet (§ 4.2 head/torso/limbs visibly connected)
   canvas.drawPath(
     Path()
@@ -238,6 +264,12 @@ void _kneeling(
   final hR = height * 0.18;
   final headY = groundY - height + hR;
   final shoulderY = headY + hR * 1.8;
+
+  // Neck — bridges head to shoulders so the head never reads as floating (§ 4.2)
+  canvas.drawRect(
+    Rect.fromLTRB(cx - hR * 0.34, headY + hR * 0.6, cx + hR * 0.34, shoulderY + 2),
+    Paint()..color = skin,
+  );
 
   // Robe body
   canvas.drawPath(
@@ -1178,6 +1210,1922 @@ class _JesusSavesScenePainter extends ScenePainter {
     if (sunA > 0) {
       canvas.drawCircle(const Offset(500, kHorizon), 55,
           Paint()..color = const Color(0xFFFDE68A).withValues(alpha: sunA));
+    }
+  }
+}
+
+// ── 16. The First Family with God ─────────────────────────────────────────────
+// Intent: Two people stand together in God's garden under His life-giving light —
+//         nobody here is alone.
+// ANIM 1: breath-of-life glow descending and widening (t 0→1)
+// ANIM 2: fruit appearing on the garden tree (t 0.35→1)
+// ANIM 3: the two figures stepping toward each other (t 0→0.7)
+class _FirstFamilyScenePainter extends ScenePainter {
+  const _FirstFamilyScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=640 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 640.0;
+
+    _sky(canvas, const Color(0xFF38BDF8), const Color(0xFFFEF3C7));
+
+    // Breath-of-life glow — descends from above and widens (ANIM 1)
+    // Radial falloff so it reads as light, not as a pale dome (§ 4.4).
+    final glowC = Offset(500, _lerp(110, 290, t));
+    final glowR = _lerp(90, 340, t);
+    canvas.drawCircle(
+      glowC,
+      glowR,
+      Paint()
+        ..shader = RadialGradient(
+          colors: [
+            const Color(0xFFFDE68A).withValues(alpha: _lerp(0.40, 0.62, t)),
+            const Color(0xFFFDE68A).withValues(alpha: 0.0),
+          ],
+        ).createShader(Rect.fromCircle(center: glowC, radius: glowR)),
+    );
+
+    // Ground — garden green, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF14532D), kHorizon);
+    // Nearer grass bank, darker still, so ground reads as a receding plane
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1020), width: 1700, height: 640),
+      Paint()..color = const Color(0xFF124A28),
+    );
+
+    // River running through Eden (Genesis 2:10) — static
+    canvas.drawPath(
+      Path()
+        ..moveTo(0, kHorizon + 34)
+        ..quadraticBezierTo(320, kHorizon + 6, 570, kHorizon + 66)
+        ..quadraticBezierTo(820, kHorizon + 126, 1000, kHorizon + 84)
+        ..lineTo(1000, kHorizon + 148)
+        ..quadraticBezierTo(790, kHorizon + 188, 545, kHorizon + 128)
+        ..quadraticBezierTo(310, kHorizon + 70, 0, kHorizon + 98)
+        ..close(),
+      Paint()..color = const Color(0xFF0E7490),
+    );
+
+    // Garden tree — trunk + three-lobe canopy (silhouette reads as "tree" § 4.1)
+    canvas.drawRect(const Rect.fromLTWH(152, 420, 46, 240),
+        Paint()..color = const Color(0xFF78350F));
+    final canopy = Paint()..color = const Color(0xFF15803D);
+    canvas.drawCircle(const Offset(175, 372), 122, canopy);
+    canvas.drawCircle(const Offset(78, 424), 86, canopy);
+    canvas.drawCircle(const Offset(272, 424), 86, canopy);
+
+    // Fruit appearing on the tree (ANIM 2, t 0.35→1)
+    final fruitA = _cl(0, 1, t, 0.35, 1.0);
+    if (fruitA > 0) {
+      final fP = Paint()..color = const Color(0xFFDC2626).withValues(alpha: fruitA);
+      const fruit = [[112, 352], [212, 328], [162, 440], [258, 396], [72, 442]];
+      for (final f in fruit) {
+        canvas.drawCircle(Offset(f[0].toDouble(), f[1].toDouble()), 17, fP);
+      }
+    }
+
+    // The first two people — stepping toward each other (ANIM 3, t 0→0.7)
+    // Feet at y=778 so the whole figure survives the widest crop (y 208–792).
+    // § 4.2 limb rule: 120°/10° = 110° apart ✓ ; 170°/60° = 110° apart ✓
+    _person(canvas, _cl(370, 432, t, 0, 0.7), 778, 286,
+        const Color(0xFF8D5524), const Color(0xFF1D4ED8),
+        armAngleL: 120, armAngleR: 10);
+    _person(canvas, _cl(658, 594, t, 0, 0.7), 778, 270,
+        const Color(0xFFC68642), const Color(0xFFBE185D),
+        armAngleL: 170, armAngleR: 60);
+  }
+}
+
+// ── 17. The Very Sad Choice ───────────────────────────────────────────────────
+// Intent: Two people turn away from the light and into the shadow of one tree —
+//         the garden is still there, but something has gone out of it.
+// ANIM 1: the garden's warm light draining away (t 0→1)
+// ANIM 2: shadow spreading across the ground from the right (t 0.2→1)
+// ANIM 3: the two figures walking away toward the shadow (t 0→0.8)
+class _SadChoiceScenePainter extends ScenePainter {
+  const _SadChoiceScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=630 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 630.0;
+
+    _sky(canvas, const Color(0xFF312E81), const Color(0xFFC4B5FD));
+
+    // The garden's warm light draining away (ANIM 1, t 0→1)
+    const lightC = Offset(320, 210);
+    const lightR = 330.0;
+    canvas.drawCircle(
+      lightC,
+      lightR,
+      Paint()
+        ..shader = RadialGradient(
+          colors: [
+            const Color(0xFFFDE68A).withValues(alpha: _lerp(0.55, 0.06, t)),
+            const Color(0xFFFDE68A).withValues(alpha: 0.0),
+          ],
+        ).createShader(Rect.fromCircle(center: lightC, radius: lightR)),
+    );
+
+    // Ground — mid earth, still clearly darker than sky (§ 4.4 ✓).
+    // Kept mid-tone so ANIM 2's shadow has something to fall across.
+    _ground(canvas, const Color(0xFF6B4B2A), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1030), width: 1700, height: 660),
+      Paint()..color = const Color(0xFF5B3F22),
+    );
+
+    // The one tree — trunk + canopy, right of centre so the figures have room
+    canvas.drawRect(const Rect.fromLTWH(688, 396, 54, 254),
+        Paint()..color = const Color(0xFF44291A));
+    final canopy = Paint()..color = const Color(0xFF14532D);
+    canvas.drawCircle(const Offset(715, 336), 128, canopy);
+    canvas.drawCircle(const Offset(616, 392), 86, canopy);
+    canvas.drawCircle(const Offset(814, 392), 86, canopy);
+
+    // Fruit on the tree — static, three only, so it reads as "that one tree"
+    final fP = Paint()..color = const Color(0xFFB91C1C);
+    for (final f in const [[656, 366], [762, 340], [716, 428]]) {
+      canvas.drawCircle(Offset(f[0].toDouble(), f[1].toDouble()), 18, fP);
+    }
+
+    // The snake — wound down the trunk with a visible head, so it reads as a
+    // snake rather than a squiggle. Small, calm, no fangs (§ child safety).
+    final snakeP = Paint()
+      ..color = const Color(0xFF3F6212)
+      ..strokeWidth = 17
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke;
+    canvas.drawPath(
+      Path()
+        ..moveTo(760, 470)
+        ..quadraticBezierTo(686, 488, 700, 528)
+        ..quadraticBezierTo(716, 566, 668, 586)
+        ..quadraticBezierTo(624, 604, 618, 566),
+      snakeP,
+    );
+    canvas.drawCircle(const Offset(618, 560), 15, Paint()..color = const Color(0xFF4D7C0F));
+    canvas.drawCircle(const Offset(613, 555), 4, Paint()..color = const Color(0xFF1C1917));
+
+    // Shadow spreading across the ground from the right (ANIM 2, t 0.2→1)
+    final shW = _cl(0, 1000, t, 0.2, 1.0);
+    if (shW > 0) {
+      canvas.drawRect(
+        Rect.fromLTWH(1000 - shW, kHorizon, shW, 1000 - kHorizon),
+        Paint()..color = const Color(0xFF1C1917).withValues(alpha: 0.5),
+      );
+    }
+
+    // The two people — walking away from the light (ANIM 3, t 0→0.8)
+    // Feet at y≤780 so the whole figure survives the widest crop (y 208–792).
+    // § 4.2 limb rule: 115°/65° = 50° apart ✓ ; 125°/55° = 70° apart ✓
+    _person(canvas, _cl(470, 396, t, 0, 0.8), 778, 282,
+        const Color(0xFF8D5524), const Color(0xFF3730A3),
+        armAngleL: 115, armAngleR: 65);
+    _person(canvas, _cl(316, 232, t, 0, 0.8), 782, 262,
+        const Color(0xFFC68642), const Color(0xFF6D28D9),
+        armAngleL: 125, armAngleR: 55);
+  }
+}
+
+// ── 18. God Promises a Rescuer ────────────────────────────────────────────────
+// Intent: One bright star rises over the closed garden gate and lays a path of
+//         light on the ground in front of the two who have to leave.
+// ANIM 1: the promise star rising and brightening (t 0→0.8)
+// ANIM 2: the path of light widening across the ground (t 0.3→1)
+// ANIM 3: the surrounding stars fading in (t 0.45→1)
+class _RescuerPromiseScenePainter extends ScenePainter {
+  const _RescuerPromiseScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=690 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 690.0;
+
+    _sky(canvas, const Color(0xFF0C1445), const Color(0xFF3730A3));
+
+    // The star's position and size (ANIM 1, t 0→0.8)
+    final starY = _cl(430, 258, t, 0, 0.8);
+    final starR = _cl(24, 52, t, 0, 0.8);
+    const starX = 690.0;
+
+    // Surrounding stars fading in (ANIM 3, t 0.45→1)
+    final dotA = _cl(0, 0.9, t, 0.45, 1.0);
+    const dots = [
+      [110, 150, 5], [232, 96, 4], [352, 190, 5], [148, 300, 4],
+      [452, 108, 4], [846, 168, 5], [930, 300, 4], [782, 92, 4],
+      [60, 420, 4], [560, 250, 4],
+    ];
+    for (final d in dots) {
+      _dot(canvas, d[0].toDouble(), d[1].toDouble(), d[2].toDouble(), dotA);
+    }
+
+    // Ground — dark earth outside the garden, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF241A14), kHorizon);
+
+    // Light lying on the ground beneath the star (ANIM 2, t 0.3→1).
+    // A flat ellipse, NOT a tapering wedge — a wedge reads as a mountain (§ 4.4).
+    final poolW = _cl(0, 900, t, 0.3, 1.0);
+    if (poolW > 0) {
+      final poolRect = Rect.fromCenter(
+          center: const Offset(starX, 860), width: poolW, height: poolW * 0.34);
+      canvas.drawOval(
+        poolRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFDE68A).withValues(alpha: 0.34),
+              const Color(0xFFFDE68A).withValues(alpha: 0.0),
+            ],
+          ).createShader(poolRect),
+      );
+    }
+
+    // Garden gate — two posts and an arch, closed behind them (§ 4.1 silhouette)
+    final stone = Paint()..color = const Color(0xFF44403C);
+    canvas.drawRect(const Rect.fromLTWH(112, 402, 56, 288), stone);
+    canvas.drawRect(const Rect.fromLTWH(320, 402, 56, 288), stone);
+    canvas.drawArc(const Rect.fromLTWH(112, 300, 264, 210), math.pi, math.pi, false,
+        Paint()
+          ..color = const Color(0xFF44403C)
+          ..strokeWidth = 56
+          ..style = PaintingStyle.stroke);
+
+    // The star itself — a soft halo plus an eight-point star shape, so it reads
+    // as a star and not as a moon (the earlier disc+cross did the latter).
+    final haloRect = Rect.fromCircle(center: Offset(starX, starY), radius: starR * 3.2);
+    canvas.drawOval(
+      haloRect,
+      Paint()
+        ..shader = RadialGradient(
+          colors: [
+            const Color(0xFFFDE68A).withValues(alpha: _lerp(0.28, 0.5, t)),
+            const Color(0xFFFDE68A).withValues(alpha: 0.0),
+          ],
+        ).createShader(haloRect),
+    );
+    final starPath = Path();
+    for (int i = 0; i < 8; i++) {
+      final a = i * math.pi / 4 - math.pi / 2;
+      final b = a + math.pi / 8;
+      final long = (i.isEven ? starR * 2.5 : starR * 1.7);
+      final x1 = starX + long * math.cos(a);
+      final y1 = starY + long * math.sin(a);
+      final x2 = starX + starR * 0.52 * math.cos(b);
+      final y2 = starY + starR * 0.52 * math.sin(b);
+      if (i == 0) {
+        starPath.moveTo(x1, y1);
+      } else {
+        starPath.lineTo(x1, y1);
+      }
+      starPath.lineTo(x2, y2);
+    }
+    starPath.close();
+    canvas.drawPath(starPath, Paint()..color = const Color(0xFFFEF3C7));
+
+    // The two people, leaving the garden but turned toward the promise.
+    // Feet at y≤780 so the whole figure survives the widest crop (y 208–792).
+    // § 4.2 limb rule: 140°/45° = 95° apart ✓ ; 118°/62° = 56° apart ✓
+    _person(canvas, 452, 776, 268, const Color(0xFF8D5524), const Color(0xFF7C2D12),
+        armAngleL: 140, armAngleR: 45);
+    _person(canvas, 286, 782, 246, const Color(0xFFC68642), const Color(0xFF831843),
+        armAngleL: 118, armAngleR: 62);
+  }
+}
+
+// ── 19. Two Brothers and Jealous Hearts ───────────────────────────────────────
+// Intent: Two gifts on two altars — one smoke rises straight up to God, the other
+//         drifts low along the ground — and Cain stands between them, deciding.
+// ANIM 1: Abel's smoke rising straight upward (t 0→1)
+// ANIM 2: Cain's smoke drifting sideways and staying low (t 0→1)
+// ANIM 3: God's warm light widening above (t 0.4→1)
+class _TwoBrothersScenePainter extends ScenePainter {
+  const _TwoBrothersScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=660 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 660.0;
+
+    _sky(canvas, const Color(0xFFFBBF24), const Color(0xFFB45309));
+
+    // God's warm light widening above Abel's altar (ANIM 3, t 0.4→1)
+    final lightR = _cl(0, 300, t, 0.4, 1.0);
+    if (lightR > 0) {
+      final lightRect = Rect.fromCircle(center: const Offset(752, 150), radius: lightR);
+      canvas.drawOval(
+        lightRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFEF3C7).withValues(alpha: 0.46),
+              const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+            ],
+          ).createShader(lightRect),
+      );
+    }
+
+    // Ground — dry field, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF451A03), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1040), width: 1700, height: 680),
+      Paint()..color = const Color(0xFF3B1503),
+    );
+
+    // Cain's smoke — drifts left and stays low (ANIM 2, t 0→1).
+    // Travels away from Cain (who stands at x≈500) so it never crosses his head.
+    final cDX = _lerp(0, -172, t);
+    final cDY = _lerp(0, -46, t);
+    for (int i = 0; i < 5; i++) {
+      final f = i / 4.0;
+      canvas.drawCircle(
+        Offset(268 + cDX * f, 600 + cDY * f),
+        18 + f * 20,
+        Paint()..color = const Color(0xFF57534E).withValues(alpha: 0.55 - f * 0.34),
+      );
+    }
+
+    // Abel's smoke — rises straight up to God (ANIM 1, t 0→1)
+    final aH = _lerp(0, 388, t);
+    for (int i = 0; i < 6; i++) {
+      final f = i / 5.0;
+      canvas.drawCircle(
+        Offset(752, 600 - aH * f),
+        16 + f * 24,
+        Paint()..color = const Color(0xFFFEF3C7).withValues(alpha: 0.72 - f * 0.44),
+      );
+    }
+
+    // Two altars — stacked stone blocks (§ 4.1 identifiable silhouette)
+    final stone = Paint()..color = const Color(0xFF78716C);
+    final stoneDark = Paint()..color = const Color(0xFF57534E);
+    // Cain's altar (far left) — sheaves of grain on top
+    canvas.drawRect(const Rect.fromLTWH(190, 614, 156, 102), stone);
+    canvas.drawRect(const Rect.fromLTWH(170, 694, 196, 40), stoneDark);
+    final grain = Paint()
+      ..color = const Color(0xFFCA8A04)
+      ..strokeWidth = 11
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(const Offset(238, 612), const Offset(224, 562), grain);
+    canvas.drawLine(const Offset(268, 612), const Offset(268, 556), grain);
+    canvas.drawLine(const Offset(298, 612), const Offset(312, 562), grain);
+    // Abel's altar (far right) — a lamb on top: body, head, ear and legs
+    canvas.drawRect(const Rect.fromLTWH(674, 614, 156, 102), stone);
+    canvas.drawRect(const Rect.fromLTWH(654, 694, 196, 40), stoneDark);
+    final legP = Paint()
+      ..color = const Color(0xFF57534E)
+      ..strokeWidth = 9
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(const Offset(716, 600), const Offset(716, 616), legP);
+    canvas.drawLine(const Offset(766, 600), const Offset(766, 616), legP);
+    final wool = Paint()..color = const Color(0xFFFAFAF9);
+    canvas.drawOval(const Rect.fromLTWH(694, 546, 116, 58), wool);
+    canvas.drawCircle(const Offset(806, 558), 21, wool);
+    canvas.drawCircle(const Offset(816, 540), 9, Paint()..color = const Color(0xFFE7E5E4));
+    canvas.drawCircle(const Offset(813, 556), 4, Paint()..color = const Color(0xFF44403C));
+
+    // Cain — standing between the two altars, arms down, deciding.
+    // Feet at y=778 so the whole figure survives the widest crop (y 208–792).
+    // § 4.2 limb rule: 112°/68° = 44° apart ✓
+    _person(canvas, 500, 778, 292, const Color(0xFF8D5524), const Color(0xFF7C2D12),
+        armAngleL: 112, armAngleR: 68);
+  }
+}
+
+// ── 20. The Tall Tower ────────────────────────────────────────────────────────
+// Intent: However high people stack their bricks, God has to come DOWN to look
+//         at it — the tower is tiny under an enormous sky.
+// ANIM 1: the tower gaining its upper tiers (t 0→0.6)
+// ANIM 2: God's light coming down from above (t 0.35→1)
+// ANIM 3: the people scattering outward as their words are mixed (t 0.65→1)
+class _TallTowerScenePainter extends ScenePainter {
+  const _TallTowerScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=700 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 700.0;
+
+    _sky(canvas, const Color(0xFF60A5FA), const Color(0xFFFEF3C7));
+
+    // God's light coming DOWN from above the tower (ANIM 2, t 0.35→1).
+    // Drawn as a soft descending disc, never a wedge (§ 4.4 no wrong-shape road).
+    final beamY = _cl(60, 300, t, 0.35, 1.0);
+    final beamR = _cl(60, 300, t, 0.35, 1.0);
+    if (beamR > 0) {
+      final beamRect = Rect.fromCircle(center: Offset(500, beamY), radius: beamR);
+      canvas.drawOval(
+        beamRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFEF3C7).withValues(alpha: 0.55),
+              const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+            ],
+          ).createShader(beamRect),
+      );
+    }
+
+    // Ground — dusty plain, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF92400E), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1060), width: 1700, height: 700),
+      Paint()..color = const Color(0xFF7C2D12),
+    );
+
+    // Stepped tower — four tiers, the top two arriving with ANIM 1 (t 0→0.6).
+    // Each tier is a plain block: the stacked silhouette reads as "tower" (§ 4.1).
+    final brick = Paint()..color = const Color(0xFFC2703B);
+    final brickDark = Paint()..color = const Color(0xFFA1522B);
+    const tiers = [
+      [280.0, 620.0, 440.0, 80.0],
+      [320.0, 540.0, 360.0, 80.0],
+      [360.0, 460.0, 280.0, 80.0],
+      [400.0, 380.0, 200.0, 80.0],
+    ];
+    final builtTiers = _cl(2, 4, t, 0, 0.6);
+    for (int i = 0; i < tiers.length; i++) {
+      if (i >= builtTiers) break;
+      final tier = tiers[i];
+      canvas.drawRect(Rect.fromLTWH(tier[0], tier[1], tier[2], tier[3]),
+          i.isEven ? brick : brickDark);
+      // Brick courses so the block reads as masonry, not a plain box
+      final line = Paint()
+        ..color = const Color(0xFF7C2D12).withValues(alpha: 0.4)
+        ..strokeWidth = 3;
+      canvas.drawLine(Offset(tier[0], tier[1] + 40), Offset(tier[0] + tier[2], tier[1] + 40), line);
+    }
+
+    // Ramp up the side — a flat parallelogram, not a triangle (§ 4.4)
+    canvas.drawPath(
+      Path()
+        ..moveTo(280, 700)
+        ..lineTo(360, 620)
+        ..lineTo(400, 620)
+        ..lineTo(320, 700)
+        ..close(),
+      Paint()..color = const Color(0xFF7C2D12),
+    );
+
+    // People scattering as their words are mixed up (ANIM 3, t 0.65→1)
+    final spread = _cl(0, 300, t, 0.65, 1.0);
+    final peopleA = _cl(1.0, 0.45, t, 0.65, 1.0);
+    final pP = Paint()..color = const Color(0xFF44290F).withValues(alpha: peopleA);
+    for (final dir in const [-1, 1]) {
+      for (int i = 0; i < 3; i++) {
+        final x = 500 + dir * (110 + i * 70 + spread);
+        final y = 748 + i * 22.0;
+        canvas.drawOval(Rect.fromCenter(center: Offset(x, y), width: 26, height: 44), pP);
+        canvas.drawCircle(Offset(x, y - 34), 15, pP);
+      }
+    }
+  }
+}
+
+// ── 21. God Calls Abraham ─────────────────────────────────────────────────────
+// Intent: One family walks out of everything they know, toward a sunrise they
+//         cannot see the end of, because God said go.
+// ANIM 1: the sun rising over the horizon (t 0→0.8)
+// ANIM 2: Abram walking away from the tent, toward the light (t 0→0.8)
+// ANIM 3: the flock following behind him (t 0.15→1)
+class _AbrahamCallScenePainter extends ScenePainter {
+  const _AbrahamCallScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=620 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 620.0;
+
+    _sky(canvas, const Color(0xFFF59E0B), const Color(0xFFFED7AA));
+
+    // Sun rising over the horizon (ANIM 1, t 0→0.8)
+    final sunY = _cl(kHorizon + 40, kHorizon - 70, t, 0, 0.8);
+    final sunR = _cl(58, 96, t, 0, 0.8);
+    final sunRect = Rect.fromCircle(center: Offset(760, sunY), radius: sunR * 2.6);
+    canvas.drawOval(
+      sunRect,
+      Paint()
+        ..shader = RadialGradient(
+          colors: [
+            const Color(0xFFFEF3C7).withValues(alpha: 0.55),
+            const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+          ],
+        ).createShader(sunRect),
+    );
+    canvas.drawCircle(Offset(760, sunY), sunR, Paint()..color = const Color(0xFFFEF3C7));
+
+    // Ground — desert, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF9A5B1E), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1000), width: 1700, height: 620),
+      Paint()..color = const Color(0xFF7C4514),
+    );
+
+    // The tent being left behind — triangle with a dark doorway (§ 4.1)
+    canvas.drawPath(
+      Path()
+        ..moveTo(120, 640)
+        ..lineTo(230, 452)
+        ..lineTo(340, 640)
+        ..close(),
+      Paint()..color = const Color(0xFF7C2D12),
+    );
+    canvas.drawPath(
+      Path()
+        ..moveTo(200, 640)
+        ..lineTo(230, 540)
+        ..lineTo(260, 640)
+        ..close(),
+      Paint()..color = const Color(0xFF3F1D0A),
+    );
+
+    // The flock following behind (ANIM 3, t 0.15→1)
+    final flockX = _cl(210, 340, t, 0.15, 1.0);
+    final flockP = Paint()..color = const Color(0xFFE7E5E4);
+    for (int i = 0; i < 3; i++) {
+      final x = flockX + i * 62;
+      canvas.drawOval(
+          Rect.fromCenter(center: Offset(x, 726 - i * 6), width: 74, height: 46), flockP);
+      canvas.drawCircle(Offset(x + 32, 706 - i * 6), 17,
+          Paint()..color = const Color(0xFF57534E));
+    }
+
+    // Abram walking toward the sunrise (ANIM 2, t 0→0.8)
+    // § 4.2 limb rule: 128°/40° = 88° apart ✓ (one arm swinging forward)
+    _person(canvas, _cl(400, 570, t, 0, 0.8), 780, 294,
+        const Color(0xFF8D5524), const Color(0xFF166534),
+        armAngleL: 128, armAngleR: 40);
+  }
+}
+
+// ── 22. Stars in the Sky ──────────────────────────────────────────────────────
+// Intent: One old man stands outside his tent under a sky with more stars than
+//         he could ever count, holding nothing but a promise.
+// ANIM 1: the stars filling the sky (t 0→0.85)
+// ANIM 2: Abram walking out from the tent to look up (t 0→0.6)
+// ANIM 3: the tent lamp glowing behind him (t 0.25→1)
+class _StarsScenePainter extends ScenePainter {
+  const _StarsScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=700 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 700.0;
+
+    _sky(canvas, const Color(0xFF050B2E), const Color(0xFF1E1B4B));
+
+    // Stars filling the sky in three waves (ANIM 1, t 0→0.85).
+    // More than a child can count — that is the whole point of the picture.
+    const waves = [
+      [
+        [70, 110, 5], [190, 60, 4], [300, 140, 6], [430, 80, 4], [560, 150, 5],
+        [690, 70, 5], [820, 130, 4], [930, 66, 5], [150, 220, 4], [380, 250, 5],
+      ],
+      [
+        [610, 240, 4], [860, 240, 5], [40, 320, 4], [250, 340, 5], [470, 330, 4],
+        [720, 350, 5], [950, 330, 4], [120, 420, 4], [340, 440, 5], [890, 430, 4],
+      ],
+      [
+        [560, 430, 4], [660, 470, 3], [40, 500, 3], [230, 520, 4], [430, 540, 3],
+        [800, 520, 4], [960, 480, 3], [310, 610, 3], [630, 600, 3], [900, 620, 3],
+      ],
+    ];
+    for (int w = 0; w < waves.length; w++) {
+      final a = _cl(0, 0.95, t, w * 0.28, w * 0.28 + 0.3);
+      for (final s in waves[w]) {
+        _dot(canvas, s[0].toDouble(), s[1].toDouble(), s[2].toDouble(), a);
+      }
+    }
+
+    // Ground — night desert, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF17120E), kHorizon);
+
+    // The tent, with its lamp glowing inside (ANIM 3, t 0.25→1)
+    canvas.drawPath(
+      Path()
+        ..moveTo(60, 712)
+        ..lineTo(200, 488)
+        ..lineTo(340, 712)
+        ..close(),
+      Paint()..color = const Color(0xFF44290F),
+    );
+    final lampA = _cl(0, 0.9, t, 0.25, 1.0);
+    if (lampA > 0) {
+      final lampRect = Rect.fromCircle(center: const Offset(200, 660), radius: 96);
+      canvas.drawOval(
+        lampRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFBBF24).withValues(alpha: lampA * 0.85),
+              const Color(0xFFFBBF24).withValues(alpha: 0.0),
+            ],
+          ).createShader(lampRect),
+      );
+    }
+    canvas.drawPath(
+      Path()
+        ..moveTo(168, 712)
+        ..lineTo(200, 596)
+        ..lineTo(232, 712)
+        ..close(),
+      Paint()..color = const Color(0xFF1C1004),
+    );
+
+    // Abram walking out to look up (ANIM 2, t 0→0.6)
+    // § 4.2 limb rule: 145°/55° = 90° apart ✓ (arms open toward the sky)
+    _person(canvas, _cl(400, 560, t, 0, 0.6), 778, 288,
+        const Color(0xFF8D5524), const Color(0xFF3730A3),
+        armAngleL: 145, armAngleR: 55);
+  }
+}
+
+// ── 23. The Promised Son ──────────────────────────────────────────────────────
+// Intent: Three visitors sit in the shade by the tent, and the impossible
+//         promise is spoken out loud where Sarah can hear it.
+// ANIM 1: the shade of the great tree spreading (t 0→0.7)
+// ANIM 2: Abraham hurrying across to welcome the visitors (t 0→0.7)
+// ANIM 3: light at the tent doorway where Sarah is listening (t 0.4→1)
+class _PromisedSonScenePainter extends ScenePainter {
+  const _PromisedSonScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=660 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 660.0;
+
+    _sky(canvas, const Color(0xFFFCD34D), const Color(0xFFFEF3C7));
+
+    // Ground — sunbaked earth, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFFA16207), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1030), width: 1700, height: 660),
+      Paint()..color = const Color(0xFF854D0E),
+    );
+
+    // The shade of the great tree spreading over the ground (ANIM 1, t 0→0.7)
+    final shadeW = _cl(180, 620, t, 0, 0.7);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(320, 748), width: shadeW, height: shadeW * 0.3),
+      Paint()..color = const Color(0xFF422006).withValues(alpha: 0.45),
+    );
+
+    // The great tree of Mamre — trunk plus a wide three-lobe canopy
+    canvas.drawRect(const Rect.fromLTWH(292, 400, 58, 264),
+        Paint()..color = const Color(0xFF78350F));
+    final canopy = Paint()..color = const Color(0xFF15803D);
+    canvas.drawCircle(const Offset(320, 322), 150, canopy);
+    canvas.drawCircle(const Offset(178, 388), 100, canopy);
+    canvas.drawCircle(const Offset(464, 388), 100, canopy);
+
+    // The tent, with light at the doorway where Sarah listens (ANIM 3, t 0.4→1)
+    canvas.drawPath(
+      Path()
+        ..moveTo(700, 672)
+        ..lineTo(830, 452)
+        ..lineTo(960, 672)
+        ..close(),
+      Paint()..color = const Color(0xFF7C2D12),
+    );
+    final doorA = _cl(0, 0.85, t, 0.4, 1.0);
+    if (doorA > 0) {
+      final doorRect = Rect.fromCircle(center: const Offset(830, 616), radius: 90);
+      canvas.drawOval(
+        doorRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFDE68A).withValues(alpha: doorA),
+              const Color(0xFFFDE68A).withValues(alpha: 0.0),
+            ],
+          ).createShader(doorRect),
+      );
+    }
+    canvas.drawPath(
+      Path()
+        ..moveTo(798, 672)
+        ..lineTo(830, 552)
+        ..lineTo(862, 672)
+        ..close(),
+      Paint()..color = const Color(0xFF3F1D0A),
+    );
+
+    // The three visitors, seated in the shade (static — the still centre)
+    const robes = [Color(0xFFF8FAFC), Color(0xFFE2E8F0), Color(0xFFCBD5E1)];
+    for (int i = 0; i < 3; i++) {
+      final x = 210 + i * 108.0;
+      canvas.drawPath(
+        Path()
+          ..moveTo(x - 34, 592)
+          ..lineTo(x - 52, 706)
+          ..lineTo(x + 52, 706)
+          ..lineTo(x + 34, 592)
+          ..close(),
+        Paint()..color = robes[i],
+      );
+      canvas.drawCircle(Offset(x, 556), 36, Paint()..color = const Color(0xFFC68642));
+      final eye = Paint()..color = const Color(0xFF78350F);
+      canvas.drawCircle(Offset(x - 12, 550), 5, eye);
+      canvas.drawCircle(Offset(x + 12, 550), 5, eye);
+    }
+
+    // Abraham hurrying across to welcome them (ANIM 2, t 0→0.7)
+    // § 4.2 limb rule: 135°/38° = 97° apart ✓ (one arm out in welcome)
+    _person(canvas, _cl(700, 566, t, 0, 0.7), 782, 286,
+        const Color(0xFF8D5524), const Color(0xFF9F1239),
+        armAngleL: 135, armAngleR: 38);
+  }
+}
+
+// ── 24. God Provides a Lamb ───────────────────────────────────────────────────
+// Intent: The altar is empty and a ram stands caught in the thicket — God has
+//         provided the offering Himself.
+// ANIM 1: a shaft of light reaching down to the ram (t 0→0.7)
+// ANIM 2: warm light gathering around the ram (t 0.35→1)
+// ANIM 3: Abraham turning toward what God has provided (t 0.2→1)
+class _ProvidesLambScenePainter extends ScenePainter {
+  const _ProvidesLambScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=640 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 640.0;
+
+    _sky(canvas, const Color(0xFF7DD3FC), const Color(0xFFFEF3C7));
+
+    // A shaft of light reaching down to the ram (ANIM 1, t 0→0.7).
+    // Vertical-sided band, not a taper — a taper would read as a mountain (§ 4.4).
+    final shaftH = _cl(0, 520, t, 0, 0.7);
+    if (shaftH > 0) {
+      canvas.drawRect(
+        Rect.fromLTWH(674, 80, 132, shaftH),
+        Paint()
+          ..shader = LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              const Color(0xFFFEF3C7).withValues(alpha: 0.12),
+              const Color(0xFFFEF3C7).withValues(alpha: 0.5),
+            ],
+          ).createShader(Rect.fromLTWH(674, 80, 132, shaftH)),
+      );
+    }
+
+    // Ground — rocky mountain top, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF78350F), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1010), width: 1700, height: 640),
+      Paint()..color = const Color(0xFF603010),
+    );
+
+    // The empty altar — stacked stone, nothing on it (§ 4.1 silhouette)
+    canvas.drawRect(const Rect.fromLTWH(168, 596, 190, 110),
+        Paint()..color = const Color(0xFF78716C));
+    canvas.drawRect(const Rect.fromLTWH(146, 684, 234, 44),
+        Paint()..color = const Color(0xFF57534E));
+    // Wood laid on top, unlit
+    final wood = Paint()
+      ..color = const Color(0xFF92400E)
+      ..strokeWidth = 12
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(const Offset(194, 588), const Offset(332, 588), wood);
+    canvas.drawLine(const Offset(206, 572), const Offset(320, 578), wood);
+
+    // Warm light gathering around the ram (ANIM 2, t 0.35→1)
+    final glowR = _cl(0, 190, t, 0.35, 1.0);
+    if (glowR > 0) {
+      final glowRect = Rect.fromCircle(center: const Offset(740, 596), radius: glowR);
+      canvas.drawOval(
+        glowRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFDE68A).withValues(alpha: 0.55),
+              const Color(0xFFFDE68A).withValues(alpha: 0.0),
+            ],
+          ).createShader(glowRect),
+      );
+    }
+
+    // The thicket behind the ram — a low tangled bush, drawn light enough to
+    // read against the dark ground but never spiky-menacing (§ child safety).
+    final bush = Paint()
+      ..color = const Color(0xFF5A4632)
+      ..strokeWidth = 11
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke;
+    for (final b in const [
+      [618, 690, 656, 586], [656, 586, 726, 552], [726, 552, 812, 560],
+      [812, 560, 872, 610], [872, 610, 886, 692], [640, 636, 720, 606],
+      [790, 600, 866, 634],
+    ]) {
+      canvas.drawLine(Offset(b[0].toDouble(), b[1].toDouble()),
+          Offset(b[2].toDouble(), b[3].toDouble()), bush);
+    }
+
+    // The ram — body, head, and the curled horn that names it (§ 4.1)
+    final wool = Paint()..color = const Color(0xFFFAFAF9);
+    canvas.drawOval(const Rect.fromLTWH(672, 574, 152, 84), wool);
+    canvas.drawCircle(const Offset(818, 570), 30, wool);
+    final legP = Paint()
+      ..color = const Color(0xFF57534E)
+      ..strokeWidth = 11
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(const Offset(710, 652), const Offset(710, 700), legP);
+    canvas.drawLine(const Offset(782, 652), const Offset(782, 700), legP);
+    canvas.drawArc(const Rect.fromLTWH(818, 530, 74, 62), -math.pi * 0.9, math.pi * 1.5,
+        false,
+        Paint()
+          ..color = const Color(0xFF57534E)
+          ..strokeWidth = 13
+          ..style = PaintingStyle.stroke);
+    canvas.drawCircle(const Offset(828, 566), 5, Paint()..color = const Color(0xFF44403C));
+
+    // Two thin twigs across the ram's legs only — this is what makes him read as
+    // caught, without ever obscuring the animal itself.
+    final twig = Paint()
+      ..color = const Color(0xFF4A3826)
+      ..strokeWidth = 7
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(const Offset(668, 682), const Offset(806, 662), twig);
+    canvas.drawLine(const Offset(692, 700), const Offset(842, 686), twig);
+
+    // Abraham, turning toward what God has provided (ANIM 3, t 0.2→1)
+    // § 4.2 limb rule: 132°/34° = 98° apart ✓ (one arm reaching toward the ram)
+    _person(canvas, _cl(452, 522, t, 0.2, 1.0), 782, 290,
+        const Color(0xFF8D5524), const Color(0xFF1E3A8A),
+        armAngleL: 132, armAngleR: 34);
+  }
+}
+
+// ── 25. Jacob Learns Grace ────────────────────────────────────────────────────
+// Intent: A man who cheated and ran sleeps on bare ground with a stone under his
+//         head — and heaven opens right over him.
+// ANIM 1: the stairway rising step by step out of the ground (t 0→0.8)
+// ANIM 2: light opening at the top of the stairway (t 0.45→1)
+// ANIM 3: stars appearing across the night (t 0.2→1)
+class _JacobScenePainter extends ScenePainter {
+  const _JacobScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=620 — outside forbidden zone y 450–550 (§ 4.4).
+    // Kept high enough that the sleeping figure sits inside the widest crop.
+    const kHorizon = 620.0;
+
+    _sky(canvas, const Color(0xFF0C1445), const Color(0xFF312E81));
+
+    // Stars appearing (ANIM 3, t 0.2→1)
+    final starA = _cl(0, 0.85, t, 0.2, 1.0);
+    for (final s in const [
+      [80, 120, 5], [210, 210, 4], [120, 330, 4], [330, 96, 4], [880, 140, 5],
+      [940, 300, 4], [790, 230, 4], [60, 470, 3], [930, 470, 3], [250, 430, 3],
+    ]) {
+      _dot(canvas, s[0].toDouble(), s[1].toDouble(), s[2].toDouble(), starA);
+    }
+
+    // Light opening at the top of the stairway (ANIM 2, t 0.45→1)
+    final openR = _cl(0, 250, t, 0.45, 1.0);
+    if (openR > 0) {
+      final openRect = Rect.fromCircle(center: const Offset(680, 170), radius: openR);
+      canvas.drawOval(
+        openRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFDE68A).withValues(alpha: 0.6),
+              const Color(0xFFFDE68A).withValues(alpha: 0.0),
+            ],
+          ).createShader(openRect),
+      );
+    }
+
+    // Ground — bare night earth, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF1C1512), kHorizon);
+
+    // The stairway — steps rising from the ground into the light (ANIM 1, t 0→0.8).
+    // Drawn as discrete rungs so it reads as stairs, not as a beam or a hill.
+    final steps = _cl(2, 9, t, 0, 0.8);
+    for (int i = 0; i < 9; i++) {
+      if (i >= steps) break;
+      final f = i / 8.0;
+      final y = _lerp(610, 220, f);
+      final w = _lerp(230, 96, f);
+      final x = _lerp(620, 680, f);
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(
+          Rect.fromCenter(center: Offset(x, y), width: w, height: 20),
+          const Radius.circular(6),
+        ),
+        Paint()..color = const Color(0xFFFDE68A).withValues(alpha: 0.85 - f * 0.25),
+      );
+    }
+
+    // Jacob asleep on the ground, head on a stone.
+    // Lying figure: ~330 design units long, with two face features (§ 4.2).
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+        const Rect.fromLTWH(160, 676, 310, 96),
+        const Radius.circular(46),
+      ),
+      Paint()..color = const Color(0xFF7C2D12),
+    );
+    // Stone pillow
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+        const Rect.fromLTWH(88, 704, 100, 66),
+        const Radius.circular(16),
+      ),
+      Paint()..color = const Color(0xFF57534E),
+    );
+    // Head resting on it
+    canvas.drawCircle(const Offset(176, 688), 50, Paint()..color = const Color(0xFF8D5524));
+    // Closed eyes — two small arcs, so he reads as asleep, not unwell
+    final eyeP = Paint()
+      ..color = const Color(0xFF78350F)
+      ..strokeWidth = 5
+      ..style = PaintingStyle.stroke;
+    canvas.drawArc(
+        Rect.fromCenter(center: const Offset(158, 680), width: 22, height: 13),
+        math.pi, math.pi, false, eyeP);
+    canvas.drawArc(
+        Rect.fromCenter(center: const Offset(196, 680), width: 22, height: 13),
+        math.pi, math.pi, false, eyeP);
+  }
+}
+
+// ── 26. Joseph and His Jealous Brothers ───────────────────────────────────────
+// Intent: The coloured coat is left behind by the empty well while the caravan
+//         carries Joseph away — and a light stays with him even so.
+// ANIM 1: the caravan receding toward the horizon (t 0→1)
+// ANIM 2: dust drifting across the sand (t 0→1)
+// ANIM 3: God's light settling over the well (t 0.5→1)
+class _JosephBrothersScenePainter extends ScenePainter {
+  const _JosephBrothersScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=430 — outside forbidden zone y 450–550 (§ 4.4).
+    // Set high so the coat and the well both sit inside the widest crop.
+    const kHorizon = 430.0;
+
+    _sky(canvas, const Color(0xFFFDBA74), const Color(0xFFFEF3C7));
+
+    // Ground — bleached sand, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFFB45309), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 900), width: 1700, height: 700),
+      Paint()..color = const Color(0xFF9A4508),
+    );
+
+    // The caravan receding toward the horizon (ANIM 1, t 0→1).
+    // It shrinks as it goes, which is what makes the distance read.
+    final cx = _lerp(520, 860, t);
+    final cs = _lerp(1.35, 0.6, t);
+    final camel = Paint()..color = const Color(0xFF7C2D12);
+    for (int i = 0; i < 3; i++) {
+      final x = cx + i * 66 * cs;
+      final y = kHorizon - 10 - i * 6;
+      canvas.drawOval(
+          Rect.fromCenter(center: Offset(x, y), width: 78 * cs, height: 42 * cs), camel);
+      canvas.drawCircle(Offset(x + 32 * cs, y - 32 * cs), 15 * cs, camel);
+      canvas.drawLine(Offset(x + 28 * cs, y - 22 * cs), Offset(x + 32 * cs, y - 32 * cs),
+          Paint()
+            ..color = const Color(0xFF7C2D12)
+            ..strokeWidth = 8 * cs);
+    }
+
+    // Dust drifting across the sand (ANIM 2, t 0→1)
+    final dustX = _lerp(0, 160, t);
+    final dustP = Paint()..color = const Color(0xFFFDE68A).withValues(alpha: 0.35);
+    for (final d in const [[260, 500], [430, 544], [660, 512], [820, 560], [140, 566]]) {
+      canvas.drawOval(
+        Rect.fromCenter(
+            center: Offset(d[0] + dustX, d[1].toDouble()), width: 100, height: 26),
+        dustP,
+      );
+    }
+
+    // The empty well — dark mouth in the ground with a stone rim (§ 4.1)
+    canvas.drawOval(const Rect.fromLTWH(612, 596, 306, 132),
+        Paint()..color = const Color(0xFF78716C));
+    canvas.drawOval(const Rect.fromLTWH(644, 614, 242, 98),
+        Paint()..color = const Color(0xFF1C1210));
+
+    // God's light settling over it all (ANIM 3, t 0.5→1) — "the Lord was with Joseph"
+    final lightR = _cl(0, 300, t, 0.5, 1.0);
+    if (lightR > 0) {
+      final lightRect = Rect.fromCircle(center: const Offset(762, 640), radius: lightR);
+      canvas.drawOval(
+        lightRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFEF3C7).withValues(alpha: 0.42),
+              const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+            ],
+          ).createShader(lightRect),
+      );
+    }
+
+    // The coat, dropped on the sand — the subject of the picture.
+    // ~330 design units wide, with sleeves and stripes so it reads as a coat.
+    canvas.drawPath(
+      Path()
+        ..moveTo(150, 588)
+        ..lineTo(118, 654)
+        ..lineTo(188, 680)
+        ..lineTo(206, 756)
+        ..lineTo(438, 756)
+        ..lineTo(456, 680)
+        ..lineTo(526, 654)
+        ..lineTo(494, 588)
+        ..lineTo(388, 562)
+        ..lineTo(256, 562)
+        ..close(),
+      Paint()..color = const Color(0xFFF59E0B),
+    );
+    const stripes = [
+      Color(0xFFDC2626), Color(0xFF1D4ED8), Color(0xFF15803D), Color(0xFF7C3AED),
+    ];
+    for (int i = 0; i < stripes.length; i++) {
+      canvas.drawRect(
+        Rect.fromLTWH(216, 592 + i * 38.0, 212, 20),
+        Paint()..color = stripes[i],
+      );
+    }
+  }
+}
+
+// ── 27. Joseph Forgives His Family ────────────────────────────────────────────
+// Intent: The brother they threw away steps down from power with open arms, and
+//         the family that broke is put back together.
+// ANIM 1: Joseph stepping down toward his brothers (t 0→0.7)
+// ANIM 2: warm light widening between them (t 0.3→1)
+// ANIM 3: a brother lifting his head as the fear leaves (t 0.5→1)
+class _JosephForgivesScenePainter extends ScenePainter {
+  const _JosephForgivesScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=680 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 680.0;
+
+    _sky(canvas, const Color(0xFFFBBF24), const Color(0xFFFDE68A));
+
+    // Hall columns behind — plain shafts, so the place reads as somewhere grand
+    final column = Paint()..color = const Color(0xFFD6A85F);
+    for (final x in const [60.0, 900.0]) {
+      canvas.drawRect(Rect.fromLTWH(x, 150, 76, 530), column);
+      canvas.drawRect(Rect.fromLTWH(x - 16, 150, 108, 40), column);
+    }
+
+    // Ground — hall floor, darker than the light above (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF7C4514), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1060), width: 1700, height: 700),
+      Paint()..color = const Color(0xFF62360F),
+    );
+
+    // Grain sacks stacked high — the food that saved them all
+    final sack = Paint()..color = const Color(0xFFCA8A04);
+    final sackDark = Paint()..color = const Color(0xFFA16207);
+    for (int i = 0; i < 3; i++) {
+      canvas.drawOval(
+          Rect.fromCenter(center: Offset(112 + i * 92, 646), width: 108, height: 130),
+          i.isEven ? sack : sackDark);
+    }
+    canvas.drawOval(
+        const Rect.fromLTWH(150, 458, 108, 130), sackDark);
+
+    // Warm light widening between Joseph and his brothers (ANIM 2, t 0.3→1)
+    final lightR = _cl(0, 320, t, 0.3, 1.0);
+    if (lightR > 0) {
+      final lightRect = Rect.fromCircle(center: const Offset(600, 560), radius: lightR);
+      canvas.drawOval(
+        lightRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFEF3C7).withValues(alpha: 0.5),
+              const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+            ],
+          ).createShader(lightRect),
+      );
+    }
+
+    // Two brothers kneeling — one lifts his head as the fear leaves (ANIM 3)
+    _kneeling(canvas, 388, 792, 232,
+        const Color(0xFF8D5524), const Color(0xFF57534E),
+        prayerOpenDeg: _cl(0, 0.8, t, 0.5, 1.0));
+    _kneeling(canvas, 224, 800, 224,
+        const Color(0xFFC68642), const Color(0xFF44403C));
+
+    // Joseph, stepping down with both arms open (ANIM 1, t 0→0.7)
+    // § 4.2 limb rule: 160°/20° = 140° apart ✓ (arms wide in welcome)
+    _person(canvas, _cl(760, 654, t, 0, 0.7), 786, 300,
+        const Color(0xFF8D5524), const Color(0xFF0F766E),
+        armAngleL: 160, armAngleR: 20);
+  }
+}
+
+// ── 28. Baby Moses Is Kept Safe ───────────────────────────────────────────────
+// Intent: A tiny basket rests safe among the tall reeds while a sister watches —
+//         God is already protecting the rescuer nobody has met yet.
+// ANIM 1: the river current drifting past (t 0→1)
+// ANIM 2: the basket settling into the safety of the reeds (t 0→0.7)
+// ANIM 3: a protecting light gathering over the basket (t 0.4→1)
+class _BabyMosesScenePainter extends ScenePainter {
+  const _BabyMosesScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=380 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 380.0;
+
+    _sky(canvas, const Color(0xFF7DD3FC), const Color(0xFFFEF3C7));
+
+    // Far bank — a low band so the river reads as a river, not the sea
+    canvas.drawRect(const Rect.fromLTWH(0, kHorizon, 1000, 70),
+        Paint()..color = const Color(0xFF4D7C0F));
+
+    // Water — darker than sky (§ 4.4 ✓)
+    canvas.drawRect(
+      const Rect.fromLTWH(0, kHorizon + 70, 1000, 1000 - kHorizon - 70),
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topCenter, end: Alignment.bottomCenter,
+          colors: [Color(0xFF0E7490), Color(0xFF134E4A)],
+        ).createShader(const Rect.fromLTWH(0, kHorizon + 70, 1000, 550)),
+    );
+
+    // River current drifting past (ANIM 1, t 0→1)
+    final flow = _lerp(0, 200, t);
+    final rippleP = Paint()
+      ..color = const Color(0xFFA5F3FC).withValues(alpha: 0.4)
+      ..strokeWidth = 7
+      ..strokeCap = StrokeCap.round;
+    for (final r in const [[80, 520], [340, 570], [620, 540], [860, 600], [200, 650]]) {
+      final x = (r[0] + flow) % 1100 - 50;
+      canvas.drawLine(Offset(x, r[1].toDouble()), Offset(x + 110, r[1].toDouble()), rippleP);
+    }
+
+    // Protecting light gathering over the basket (ANIM 3, t 0.4→1)
+    final lightR = _cl(0, 280, t, 0.4, 1.0);
+    if (lightR > 0) {
+      final lightRect = Rect.fromCircle(center: const Offset(560, 600), radius: lightR);
+      canvas.drawOval(
+        lightRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFEF3C7).withValues(alpha: 0.45),
+              const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+            ],
+          ).createShader(lightRect),
+      );
+    }
+
+    // Tall reeds along the near bank — vertical strokes, the safe hiding place
+    final reed = Paint()
+      ..color = const Color(0xFF3F6212)
+      ..strokeWidth = 15
+      ..strokeCap = StrokeCap.round;
+    for (final r in const [
+      [40, 700, 60, 430], [110, 730, 96, 460], [180, 700, 210, 440],
+      [700, 720, 686, 450], [790, 740, 810, 470], [880, 700, 866, 430],
+      [960, 730, 976, 460],
+    ]) {
+      canvas.drawLine(Offset(r[0].toDouble(), r[1].toDouble()),
+          Offset(r[2].toDouble(), r[3].toDouble()), reed);
+    }
+
+    // The basket settling into the reeds (ANIM 2, t 0→0.7)
+    final bY = _cl(566, 596, t, 0, 0.7);
+    // Woven body
+    canvas.drawPath(
+      Path()
+        ..moveTo(430, bY)
+        ..lineTo(452, bY + 96)
+        ..lineTo(668, bY + 96)
+        ..lineTo(690, bY)
+        ..close(),
+      Paint()..color = const Color(0xFFCA8A04),
+    );
+    // Weave lines so it reads as woven reeds (§ 4.1)
+    final weave = Paint()
+      ..color = const Color(0xFF92400E).withValues(alpha: 0.55)
+      ..strokeWidth = 5;
+    for (int i = 1; i < 4; i++) {
+      canvas.drawLine(Offset(436 + i * 4, bY + i * 24), Offset(684 - i * 4, bY + i * 24), weave);
+    }
+    // Rim
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+          Rect.fromLTWH(414, bY - 20, 292, 30), const Radius.circular(14)),
+      Paint()..color = const Color(0xFFA16207),
+    );
+    // The baby's blanket and face, just visible inside
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+          Rect.fromLTWH(496, bY - 46, 128, 34), const Radius.circular(16)),
+      Paint()..color = const Color(0xFFFAFAF9),
+    );
+    canvas.drawCircle(Offset(560, bY - 52), 26, Paint()..color = const Color(0xFF8D5524));
+    final eyeP = Paint()..color = const Color(0xFF78350F);
+    canvas.drawCircle(Offset(551, bY - 56), 4, eyeP);
+    canvas.drawCircle(Offset(569, bY - 56), 4, eyeP);
+
+    // Near bank in the foreground, so Miriam stands on land rather than in the
+    // river — without it she reads as wading, which the story never says.
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1010), width: 1700, height: 500),
+      Paint()..color = const Color(0xFF3F6212),
+    );
+
+    // Miriam, watching from among the reeds on the bank
+    // § 4.2 limb rule: 126°/54° = 72° apart ✓
+    _person(canvas, 218, 776, 268, const Color(0xFFC68642), const Color(0xFF9F1239),
+        armAngleL: 126, armAngleR: 54);
+  }
+}
+
+// ── 29. God Calls from the Fire ───────────────────────────────────────────────
+// Intent: A bush is wrapped in flame and every leaf is still green — this is holy
+//         ground, and God is speaking out of it.
+// ANIM 1: the flames rising around the bush (t 0→1)
+// ANIM 2: holy light spreading out from the bush (t 0.3→1)
+// ANIM 3: Moses drawing near, then bowing his head (t 0→0.6)
+class _BurningBushScenePainter extends ScenePainter {
+  const _BurningBushScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=600 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 600.0;
+
+    _sky(canvas, const Color(0xFF92400E), const Color(0xFFFDBA74));
+
+    // Holy light spreading out from the bush (ANIM 2, t 0.3→1)
+    final holyR = _cl(0, 420, t, 0.3, 1.0);
+    if (holyR > 0) {
+      final holyRect = Rect.fromCircle(center: const Offset(690, 480), radius: holyR);
+      canvas.drawOval(
+        holyRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFEF3C7).withValues(alpha: 0.5),
+              const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+            ],
+          ).createShader(holyRect),
+      );
+    }
+
+    // Ground — dry stony mountainside, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF57534E), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 990), width: 1700, height: 620),
+      Paint()..color = const Color(0xFF44403C),
+    );
+
+    // The flames rising around the bush (ANIM 1, t 0→1).
+    // Drawn first so the green leaves sit on top — that is the whole miracle.
+    final flameH = _lerp(96, 210, t);
+    for (int i = 0; i < 5; i++) {
+      final fx = 574 + i * 58.0;
+      final h = flameH * (i.isEven ? 1.0 : 0.78);
+      canvas.drawPath(
+        Path()
+          ..moveTo(fx - 34, 596)
+          ..quadraticBezierTo(fx - 20, 596 - h * 0.6, fx, 596 - h)
+          ..quadraticBezierTo(fx + 20, 596 - h * 0.6, fx + 34, 596)
+          ..close(),
+        Paint()..color = const Color(0xFFFBBF24).withValues(alpha: 0.9),
+      );
+      canvas.drawPath(
+        Path()
+          ..moveTo(fx - 18, 596)
+          ..quadraticBezierTo(fx - 10, 596 - h * 0.5, fx, 596 - h * 0.62)
+          ..quadraticBezierTo(fx + 10, 596 - h * 0.5, fx + 18, 596)
+          ..close(),
+        Paint()..color = const Color(0xFFFEF3C7),
+      );
+    }
+
+    // The bush — every leaf whole and green, sitting inside the fire (§ 4.1)
+    final leaf = Paint()..color = const Color(0xFF15803D);
+    for (final l in const [
+      [690, 512, 122], [612, 552, 86], [768, 552, 86], [652, 486, 66], [730, 486, 66],
+    ]) {
+      canvas.drawCircle(
+          Offset(l[0].toDouble(), l[1].toDouble()), l[2].toDouble() / 2, leaf);
+    }
+    canvas.drawRect(const Rect.fromLTWH(676, 556, 28, 48),
+        Paint()..color = const Color(0xFF44291A));
+
+    // Moses' sandals, set aside on the holy ground
+    final sandal = Paint()..color = const Color(0xFF7C2D12);
+    canvas.drawOval(const Rect.fromLTWH(398, 726, 62, 30), sandal);
+    canvas.drawOval(const Rect.fromLTWH(472, 736, 62, 30), sandal);
+
+    // Moses drawing near with his head bowed (ANIM 3, t 0→0.6)
+    // § 4.2 limb rule: 118°/38° = 80° apart ✓ (one hand raised to shield his eyes)
+    _person(canvas, _cl(230, 318, t, 0, 0.6), 776, 286,
+        const Color(0xFF8D5524), const Color(0xFF1E3A8A),
+        armAngleL: 118, armAngleR: 38);
+  }
+}
+
+// ── 30. Let My People Go ──────────────────────────────────────────────────────
+// Intent: One shepherd with a wooden staff stands in a vast throne hall and says
+//         God's words to the most powerful king on earth.
+// ANIM 1: light breaking between the columns (t 0.25→1)
+// ANIM 2: Moses walking forward into the hall (t 0→0.7)
+// ANIM 3: Moses' staff lifting as he speaks (t 0.5→1)
+class _LetMyPeopleGoScenePainter extends ScenePainter {
+  const _LetMyPeopleGoScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon (floor line) at y=660 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 660.0;
+
+    _sky(canvas, const Color(0xFF1E3A8A), const Color(0xFF60A5FA));
+
+    // Light breaking between the columns (ANIM 2 of the palette, ANIM 1 here)
+    final beamA = _cl(0, 0.4, t, 0.25, 1.0);
+    if (beamA > 0) {
+      for (final bx in const [222.0, 560.0]) {
+        canvas.drawRect(
+          Rect.fromLTWH(bx, 90, 96, kHorizon - 90),
+          Paint()
+            ..shader = LinearGradient(
+              begin: Alignment.topCenter, end: Alignment.bottomCenter,
+              colors: [
+                const Color(0xFFFEF3C7).withValues(alpha: beamA),
+                const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+              ],
+            ).createShader(Rect.fromLTWH(bx, 90, 96, kHorizon - 90)),
+        );
+      }
+    }
+
+    // Floor — darker than the hall above (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF78350F), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1030), width: 1700, height: 660),
+      Paint()..color = const Color(0xFF62290D),
+    );
+
+    // Towering painted columns — plain shafts with capitals (§ 4.1)
+    final stone = Paint()..color = const Color(0xFFD6A85F);
+    final stoneDark = Paint()..color = const Color(0xFFB98B45);
+    for (final cx in const [96.0, 356.0, 700.0, 900.0]) {
+      canvas.drawRect(Rect.fromLTWH(cx, 150, 98, kHorizon - 150), stone);
+      canvas.drawRect(Rect.fromLTWH(cx - 18, 150, 134, 46), stoneDark);
+      // A single banded stripe so the column reads as painted, not blank
+      canvas.drawRect(Rect.fromLTWH(cx, 400, 98, 26), stoneDark);
+    }
+
+    // Pharaoh's throne, raised at the far right — power, seen at a distance
+    canvas.drawRect(const Rect.fromLTWH(760, 560, 190, 100),
+        Paint()..color = const Color(0xFF854D0E));
+    canvas.drawRect(const Rect.fromLTWH(796, 424, 118, 140),
+        Paint()..color = const Color(0xFFCA8A04));
+    canvas.drawCircle(const Offset(855, 470), 34, Paint()..color = const Color(0xFF8D5524));
+    // Crown
+    canvas.drawPath(
+      Path()
+        ..moveTo(821, 442)
+        ..lineTo(831, 408)
+        ..lineTo(846, 434)
+        ..lineTo(861, 404)
+        ..lineTo(876, 434)
+        ..lineTo(889, 442)
+        ..close(),
+      Paint()..color = const Color(0xFFFBBF24),
+    );
+
+    // Moses walking forward (ANIM 2, t 0→0.7)
+    final mX = _cl(196, 330, t, 0, 0.7);
+    // § 4.2 limb rule: 120°/44° = 76° apart ✓
+    _person(canvas, mX, 780, 296, const Color(0xFF8D5524), const Color(0xFF166534),
+        armAngleL: 120, armAngleR: 44);
+
+    // The staff lifting as he speaks (ANIM 3, t 0.5→1)
+    final staffTop = _cl(560, 396, t, 0.5, 1.0);
+    canvas.drawLine(
+      Offset(mX + 96, 772),
+      Offset(mX + 96, staffTop),
+      Paint()
+        ..color = const Color(0xFF7C2D12)
+        ..strokeWidth = 17
+        ..strokeCap = StrokeCap.round,
+    );
+  }
+}
+
+// ── 31. The Passover Lamb ─────────────────────────────────────────────────────
+// Intent: A marked doorway with warm light and a family meal inside — everyone
+//         sheltered here is safe.
+// ANIM 1: the doorframe being marked, side to side then across the top (t 0→0.6)
+// ANIM 2: lamplight strengthening inside the house (t 0.2→1)
+// ANIM 3: the night deepening outside (t 0→1)
+class _PassoverScenePainter extends ScenePainter {
+  const _PassoverScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // The night sky deepening outside (ANIM 3, t 0→1)
+    final top = Color.lerp(const Color(0xFF312E81), const Color(0xFF0C1445), t)!;
+    final bottom = Color.lerp(const Color(0xFF4338CA), const Color(0xFF1E1B4B), t)!;
+    _sky(canvas, top, bottom);
+
+    // Street — darker than the sky (§ 4.4 ✓). Line at y=760, well below 450–550.
+    _ground(canvas, const Color(0xFF1C1917), 760);
+
+    // The house wall
+    canvas.drawRect(const Rect.fromLTWH(120, 180, 760, 580),
+        Paint()..color = const Color(0xFF57534E));
+    // A few stone courses so the wall reads as built, not as a flat block
+    final course = Paint()
+      ..color = const Color(0xFF44403C)
+      ..strokeWidth = 5;
+    for (int i = 1; i < 5; i++) {
+      canvas.drawLine(Offset(120, 180 + i * 116), Offset(880, 180 + i * 116), course);
+    }
+
+    // Lamplight strengthening inside the doorway (ANIM 2, t 0.2→1)
+    final lampA = _cl(0.25, 1.0, t, 0.2, 1.0);
+    canvas.drawRect(
+      const Rect.fromLTWH(372, 320, 256, 440),
+      Paint()..color = Color.lerp(const Color(0xFF7C2D12),
+          const Color(0xFFFDE68A), lampA)!,
+    );
+    // Warm spill onto the street
+    final spillRect = Rect.fromCircle(center: const Offset(500, 760), radius: 300);
+    canvas.drawOval(
+      spillRect,
+      Paint()
+        ..shader = RadialGradient(
+          colors: [
+            const Color(0xFFFDE68A).withValues(alpha: 0.42 * lampA),
+            const Color(0xFFFDE68A).withValues(alpha: 0.0),
+          ],
+        ).createShader(spillRect),
+    );
+
+    // The family at the meal inside, in silhouette against the lamplight
+    final sil = Paint()..color = const Color(0xFF7C2D12);
+    for (final f in const [[430.0, 236.0], [500.0, 262.0], [570.0, 236.0]]) {
+      final h = f[1];
+      canvas.drawPath(
+        Path()
+          ..moveTo(f[0] - 30, 760 - h)
+          ..lineTo(f[0] - 44, 760)
+          ..lineTo(f[0] + 44, 760)
+          ..lineTo(f[0] + 30, 760 - h)
+          ..close(),
+        sil,
+      );
+      canvas.drawCircle(Offset(f[0], 760 - h - 26), 26, sil);
+    }
+
+    // The doorframe, being marked side, side, then across the top (ANIM 1)
+    final markP = Paint()..color = const Color(0xFF9F1239);
+    final leftH = _cl(0, 440, t, 0, 0.22);
+    canvas.drawRect(Rect.fromLTWH(340, 760 - leftH, 34, leftH), markP);
+    final rightH = _cl(0, 440, t, 0.22, 0.44);
+    canvas.drawRect(Rect.fromLTWH(626, 760 - rightH, 34, rightH), markP);
+    final topW = _cl(0, 320, t, 0.44, 0.6);
+    canvas.drawRect(Rect.fromLTWH(340, 288, topW, 34), markP);
+  }
+}
+
+// ── 32. A Way Through the Sea ─────────────────────────────────────────────────
+// Intent: Two walls of water stand open with a dry path between them, and God's
+//         people walk through on solid ground.
+// ANIM 1: the two walls of water rising and parting (t 0→0.6)
+// ANIM 2: the people walking through the gap (t 0.3→1)
+// ANIM 3: the pillar of fire standing guard behind them (t 0→0.8)
+class _ThroughTheSeaScenePainter extends ScenePainter {
+  const _ThroughTheSeaScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=360 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 360.0;
+
+    _sky(canvas, const Color(0xFF0C4A6E), const Color(0xFF7DD3FC));
+
+    // Sea bed — the dry path, darker than the sky (§ 4.4 ✓).
+    // Sandy, so it clearly reads as dry ground against the blue walls.
+    _ground(canvas, const Color(0xFFC08A52), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 940), width: 1700, height: 660),
+      Paint()..color = const Color(0xFFA36F3A),
+    );
+
+    // The two walls of water rising and parting (ANIM 1, t 0→0.6).
+    // Vertical-sided slabs, never tapering wedges (§ 4.4 no mountain read).
+    // The gap stays narrower than the walls, or the walls stop reading as walls.
+    final gap = _cl(96, 200, t, 0, 0.6);
+    final wallTop = _cl(kHorizon + 200, 110, t, 0, 0.6);
+    final water = Paint()
+      ..shader = const LinearGradient(
+        begin: Alignment.topCenter, end: Alignment.bottomCenter,
+        colors: [Color(0xFF22D3EE), Color(0xFF0E7490)],
+      ).createShader(const Rect.fromLTWH(0, 130, 1000, 700));
+    // Left wall
+    canvas.drawRect(Rect.fromLTRB(0, wallTop, 500 - gap, 830), water);
+    // Right wall
+    canvas.drawRect(Rect.fromLTRB(500 + gap, wallTop, 1000, 830), water);
+    // Crests along the inside faces so the walls read as standing water
+    final crest = Paint()
+      ..color = const Color(0xFFCFFAFE).withValues(alpha: 0.75)
+      ..strokeWidth = 13
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(Offset(500 - gap, wallTop), Offset(500 - gap, 830), crest);
+    canvas.drawLine(Offset(500 + gap, wallTop), Offset(500 + gap, 830), crest);
+    final foam = Paint()..color = const Color(0xFFCFFAFE).withValues(alpha: 0.5);
+    for (int i = 0; i < 4; i++) {
+      final y = wallTop + 60 + i * 150;
+      canvas.drawOval(
+          Rect.fromCenter(center: Offset(500 - gap - 60, y), width: 130, height: 44), foam);
+      canvas.drawOval(
+          Rect.fromCenter(center: Offset(500 + gap + 60, y), width: 130, height: 44), foam);
+    }
+
+    // The pillar of fire standing guard behind them (ANIM 3, t 0→0.8).
+    // Kept far up the path so it never sits behind the walkers' heads.
+    final pillarH = _cl(0, 300, t, 0, 0.8);
+    if (pillarH > 0) {
+      final pRect = Rect.fromLTWH(462, 470 - pillarH, 76, pillarH);
+      canvas.drawRect(
+        pRect,
+        Paint()
+          ..shader = LinearGradient(
+            begin: Alignment.topCenter, end: Alignment.bottomCenter,
+            colors: [
+              const Color(0xFFFBBF24).withValues(alpha: 0.15),
+              const Color(0xFFFDE68A).withValues(alpha: 0.85),
+            ],
+          ).createShader(pRect),
+      );
+    }
+
+    // God's people walking through the gap (ANIM 2, t 0.3→1).
+    // Two smaller figures further up the path first, so the line reads as a
+    // crowd receding rather than a huddle.
+    _person(canvas, 396, 604, 232, const Color(0xFFC68642), const Color(0xFF1E3A8A),
+        armAngleL: 116, armAngleR: 56);
+    _person(canvas, 604, 596, 226, const Color(0xFF8D5524), const Color(0xFF166534),
+        armAngleL: 130, armAngleR: 50);
+    // Front figure: height must never dip below the 220-unit floor _person asserts,
+    // so scale from a base that keeps the minimum above it at every t.
+    final walkY = _cl(660, 780, t, 0.3, 1.0);
+    // § 4.2 limb rule: 124°/48° = 76° apart ✓
+    _person(canvas, 500, walkY, 286 * (walkY / 780),
+        const Color(0xFF8D5524), const Color(0xFF9F1239),
+        armAngleL: 124, armAngleR: 48);
+  }
+}
+
+// ── 33. Bread in the Wilderness ───────────────────────────────────────────────
+// Intent: Morning in the camp, and the whole desert floor is covered in bread
+//         that nobody worked for.
+// ANIM 1: dawn breaking over the camp (t 0→0.7)
+// ANIM 2: the manna appearing across the ground (t 0.2→1)
+// ANIM 3: a child crouching to gather it into a basket (t 0.4→1)
+class _MannaScenePainter extends ScenePainter {
+  const _MannaScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=600 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 600.0;
+
+    // Dawn breaking (ANIM 1, t 0→0.7)
+    final skyTop = Color.lerp(const Color(0xFF6D28D9), const Color(0xFF7DD3FC),
+        _cl(0, 1, t, 0, 0.7))!;
+    final skyLow = Color.lerp(const Color(0xFFB45309), const Color(0xFFFEF3C7),
+        _cl(0, 1, t, 0, 0.7))!;
+    _sky(canvas, skyTop, skyLow);
+
+    // Sun cresting the horizon
+    final sunR = _cl(30, 80, t, 0, 0.7);
+    canvas.drawCircle(Offset(800, kHorizon - 20), sunR,
+        Paint()..color = const Color(0xFFFEF3C7));
+
+    // Ground — desert floor, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF9A6B32), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 990), width: 1700, height: 620),
+      Paint()..color = const Color(0xFF7C531E),
+    );
+
+    // The camp — three tents on the skyline (§ 4.1 silhouette)
+    final tent = Paint()..color = const Color(0xFFA8A29E);
+    final tentDark = Paint()..color = const Color(0xFF78716C);
+    for (final tx in const [110.0, 300.0, 900.0]) {
+      canvas.drawPath(
+        Path()
+          ..moveTo(tx - 96, kHorizon + 16)
+          ..lineTo(tx, kHorizon - 130)
+          ..lineTo(tx + 96, kHorizon + 16)
+          ..close(),
+        tent,
+      );
+      canvas.drawPath(
+        Path()
+          ..moveTo(tx - 26, kHorizon + 16)
+          ..lineTo(tx, kHorizon - 60)
+          ..lineTo(tx + 26, kHorizon + 16)
+          ..close(),
+        tentDark,
+      );
+    }
+
+    // The manna appearing across the ground (ANIM 2, t 0.2→1)
+    final mannaA = _cl(0, 1, t, 0.2, 1.0);
+    if (mannaA > 0) {
+      final mP = Paint()..color = const Color(0xFFFEF3C7).withValues(alpha: mannaA);
+      for (int row = 0; row < 6; row++) {
+        final y = 640 + row * 56.0;
+        final r = 9 + row * 2.5;
+        for (int i = 0; i < 11; i++) {
+          final x = 40 + i * 92.0 + (row.isEven ? 0 : 46);
+          canvas.drawOval(
+              Rect.fromCenter(center: Offset(x, y), width: r * 2.4, height: r * 1.5), mP);
+        }
+      }
+    }
+
+    // A child crouching to gather manna into a basket (ANIM 3, t 0.4→1).
+    // Drawn here rather than via _kneeling: that helper's prayer-hands cross the
+    // chest, which reads as folded arms — wrong for someone reaching down.
+    const cx = 470.0;
+    const feetY = 782.0;
+    const bodyH = 250.0;
+    const headR = 44.0;
+    const shoulderY = feetY - bodyH + headR * 2.4;
+    const skin = Color(0xFF8D5524);
+    // Crouched body — a squat A-line, wider and shorter than a standing robe
+    canvas.drawPath(
+      Path()
+        ..moveTo(cx - 50, shoulderY)
+        ..lineTo(cx - 96, feetY)
+        ..lineTo(cx + 96, feetY)
+        ..lineTo(cx + 50, shoulderY)
+        ..close(),
+      Paint()..color = const Color(0xFF0F766E),
+    );
+    // Neck, then head, so nothing floats (§ 4.2)
+    canvas.drawRect(
+      Rect.fromLTRB(cx - 15, feetY - bodyH + headR * 0.6, cx + 15, shoulderY + 2),
+      Paint()..color = skin,
+    );
+    canvas.drawCircle(const Offset(cx, feetY - bodyH + headR), headR,
+        Paint()..color = skin);
+    final childEye = Paint()..color = const Color(0xFF78350F);
+    canvas.drawCircle(const Offset(cx - 14, feetY - bodyH + headR - 4), 6, childEye);
+    canvas.drawCircle(const Offset(cx + 14, feetY - bodyH + headR - 4), 6, childEye);
+    canvas.drawArc(
+      Rect.fromCenter(
+          center: const Offset(cx, feetY - bodyH + headR + 16), width: 32, height: 16),
+      0.1, math.pi * 0.8, false,
+      Paint()
+        ..color = const Color(0xFF78350F)
+        ..strokeWidth = 5
+        ..style = PaintingStyle.stroke,
+    );
+    // One arm reaching down toward the ground (ANIM 3, t 0.4→1), the other
+    // resting on the knee. § 4.2 limb rule: 78°/136° = 58° apart ✓
+    final reach = _cl(78, 96, t, 0.4, 1.0);
+    final armP = Paint()
+      ..color = skin
+      ..strokeWidth = 26
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke;
+    canvas.drawLine(
+      const Offset(cx + 32, shoulderY + 16),
+      Offset(cx + 32 + 116 * math.cos(reach * math.pi / 180),
+          shoulderY + 16 + 116 * math.sin(reach * math.pi / 180)),
+      armP,
+    );
+    canvas.drawLine(
+      const Offset(cx - 32, shoulderY + 16),
+      Offset(cx - 32 + 92 * math.cos(136 * math.pi / 180),
+          shoulderY + 16 + 92 * math.sin(136 * math.pi / 180)),
+      armP,
+    );
+    // The basket beside them, filling up
+    canvas.drawPath(
+      Path()
+        ..moveTo(636, 700)
+        ..lineTo(652, 776)
+        ..lineTo(760, 776)
+        ..lineTo(776, 700)
+        ..close(),
+      Paint()..color = const Color(0xFFCA8A04),
+    );
+    final fillH = _cl(0, 52, t, 0.5, 1.0);
+    if (fillH > 0) {
+      canvas.drawRect(Rect.fromLTWH(648, 700 - fillH + 4, 116, fillH),
+          Paint()..color = const Color(0xFFFEF3C7));
+    }
+  }
+}
+
+// ── 34. God's Good Commands ───────────────────────────────────────────────────
+// Intent: Two stone tablets stand on the mountain, given by the God who had
+//         already rescued the camp waiting below.
+// ANIM 1: cloud and light gathering on the summit (t 0→0.7)
+// ANIM 2: the two tablets rising into place (t 0.25→0.85)
+// ANIM 3: writing appearing on the tablets (t 0.6→1)
+class _CommandsScenePainter extends ScenePainter {
+  const _CommandsScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=620 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 620.0;
+
+    _sky(canvas, const Color(0xFF44403C), const Color(0xFFFDBA74));
+
+    // Cloud and light gathering on the summit (ANIM 1, t 0→0.7)
+    final cloudR = _cl(90, 360, t, 0, 0.7);
+    final cloudRect = Rect.fromCircle(center: const Offset(500, 250), radius: cloudR);
+    canvas.drawOval(
+      cloudRect,
+      Paint()
+        ..shader = RadialGradient(
+          colors: [
+            const Color(0xFFFEF3C7).withValues(alpha: 0.6),
+            const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+          ],
+        ).createShader(cloudRect),
+    );
+
+    // Ground — the mountain ledge, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF57534E), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 1000), width: 1700, height: 640),
+      Paint()..color = const Color(0xFF44403C),
+    );
+
+    // The camp far below on the plain — small tents, so the scale reads
+    final tent = Paint()..color = const Color(0xFFA8A29E);
+    for (final tx in const [90.0, 190.0, 830.0, 930.0]) {
+      canvas.drawPath(
+        Path()
+          ..moveTo(tx - 42, 706)
+          ..lineTo(tx, 640)
+          ..lineTo(tx + 42, 706)
+          ..close(),
+        tent,
+      );
+    }
+
+    // The two tablets rising into place (ANIM 2, t 0.25→0.85)
+    final tabY = _cl(700, 400, t, 0.25, 0.85);
+    final tabletP = Paint()..color = const Color(0xFFD6D3D1);
+    final edgeP = Paint()
+      ..color = const Color(0xFF78716C)
+      ..strokeWidth = 8
+      ..style = PaintingStyle.stroke;
+    for (final tx in const [352.0, 552.0]) {
+      final r = Rect.fromLTWH(tx, tabY, 148, 300);
+      final rr = RRect.fromRectAndCorners(r,
+          topLeft: const Radius.circular(72), topRight: const Radius.circular(72));
+      canvas.drawRRect(rr, tabletP);
+      canvas.drawRRect(rr, edgeP);
+    }
+
+    // Writing appearing on the tablets (ANIM 3, t 0.6→1)
+    final lines = _cl(0, 5, t, 0.6, 1.0);
+    final ink = Paint()
+      ..color = const Color(0xFF44403C)
+      ..strokeWidth = 11
+      ..strokeCap = StrokeCap.round;
+    for (int i = 0; i < 5; i++) {
+      if (i >= lines) break;
+      final y = tabY + 122 + i * 34;
+      canvas.drawLine(Offset(374, y), Offset(478, y), ink);
+      canvas.drawLine(Offset(574, y), Offset(678, y), ink);
+    }
+  }
+}
+
+// ── 35. God Lives with His People ─────────────────────────────────────────────
+// Intent: God's tent stands right in the middle of the camp with His cloud
+//         resting on it — He did not rescue and leave, He moved in.
+// ANIM 1: the camp tents gathering in around the centre (t 0→0.7)
+// ANIM 2: the cloud settling onto the tabernacle roof (t 0.2→0.8)
+// ANIM 3: God's glory filling the tent (t 0.55→1)
+class _TabernacleScenePainter extends ScenePainter {
+  const _TabernacleScenePainter(super.t);
+
+  @override
+  void paintScene(Canvas canvas) {
+    // Horizon at y=580 — outside forbidden zone y 450–550 (§ 4.4).
+    const kHorizon = 580.0;
+
+    _sky(canvas, const Color(0xFF312E81), const Color(0xFFFDBA74));
+
+    // Ground — evening desert, darker than sky (§ 4.4 ✓)
+    _ground(canvas, const Color(0xFF6B4B2A), kHorizon);
+    canvas.drawOval(
+      Rect.fromCenter(center: const Offset(500, 980), width: 1700, height: 640),
+      Paint()..color = const Color(0xFF573C20),
+    );
+
+    // The cloud settling onto the roof (ANIM 2, t 0.2→0.8)
+    final cloudY = _cl(150, 300, t, 0.2, 0.8);
+    final cloudP = Paint()..color = const Color(0xFFE7E5E4).withValues(alpha: 0.9);
+    for (final c in const [[500.0, 0.0, 150.0], [396.0, 26.0, 104.0], [604.0, 26.0, 104.0]]) {
+      canvas.drawCircle(Offset(c[0], cloudY + c[1]), c[2] / 2 + 22, cloudP);
+    }
+
+    // The camp tents gathering in around the centre (ANIM 1, t 0→0.7).
+    // They move INWARD, which is what says "God is in the middle".
+    final pull = _cl(150, 0, t, 0, 0.7);
+    final tent = Paint()..color = const Color(0xFFA8A29E);
+    final tentDark = Paint()..color = const Color(0xFF78716C);
+    const camp = [
+      [96.0, 700.0, 92.0], [252.0, 664.0, 78.0],
+      [904.0, 700.0, 92.0], [748.0, 664.0, 78.0],
+    ];
+    for (final c in camp) {
+      final dir = c[0] < 500 ? -1 : 1;
+      final tx = c[0] + dir * pull;
+      final base = c[1];
+      final w = c[2];
+      canvas.drawPath(
+        Path()
+          ..moveTo(tx - w, base)
+          ..lineTo(tx, base - w * 1.5)
+          ..lineTo(tx + w, base)
+          ..close(),
+        tent,
+      );
+      canvas.drawPath(
+        Path()
+          ..moveTo(tx - w * 0.26, base)
+          ..lineTo(tx, base - w * 0.7)
+          ..lineTo(tx + w * 0.26, base)
+          ..close(),
+        tentDark,
+      );
+    }
+
+    // The tabernacle itself — a curtained tent, right in the middle
+    // Courtyard curtain wall
+    canvas.drawRect(const Rect.fromLTWH(322, 646, 356, 90),
+        Paint()..color = const Color(0xFFFAFAF9));
+    for (int i = 1; i < 6; i++) {
+      canvas.drawLine(
+        Offset(322 + i * 59.0, 646),
+        Offset(322 + i * 59.0, 736),
+        Paint()
+          ..color = const Color(0xFFD6D3D1)
+          ..strokeWidth = 5,
+      );
+    }
+    // The tent body — deep blue and purple, as God specified
+    canvas.drawRect(const Rect.fromLTWH(388, 470, 224, 180),
+        Paint()..color = const Color(0xFF3730A3));
+    canvas.drawRect(const Rect.fromLTWH(388, 470, 224, 40),
+        Paint()..color = const Color(0xFF6D28D9));
+    // Peaked roof so the silhouette reads as a tent (§ 4.1)
+    canvas.drawPath(
+      Path()
+        ..moveTo(360, 470)
+        ..lineTo(500, 382)
+        ..lineTo(640, 470)
+        ..close(),
+      Paint()..color = const Color(0xFF9F1239),
+    );
+    // Entrance curtain
+    canvas.drawRect(const Rect.fromLTWH(470, 528, 60, 122),
+        Paint()..color = const Color(0xFFCA8A04));
+
+    // God's glory filling the tent (ANIM 3, t 0.55→1)
+    final gloryA = _cl(0, 1.0, t, 0.55, 1.0);
+    if (gloryA > 0) {
+      final gRect = Rect.fromCircle(center: const Offset(500, 520), radius: 260);
+      canvas.drawOval(
+        gRect,
+        Paint()
+          ..shader = RadialGradient(
+            colors: [
+              const Color(0xFFFEF3C7).withValues(alpha: 0.62 * gloryA),
+              const Color(0xFFFEF3C7).withValues(alpha: 0.0),
+            ],
+          ).createShader(gRect),
+      );
     }
   }
 }

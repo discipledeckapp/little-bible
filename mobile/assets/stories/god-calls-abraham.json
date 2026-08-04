@@ -1,0 +1,70 @@
+{
+  "id": "god-calls-abraham",
+  "sensitivityTier": "general",
+  "title": "God Calls Abraham",
+  "subtitle": "God asked one man to leave everything — and promised to bless the whole world through him",
+  "collection": "promise-family",
+  "mainTruth": "God chose one family so that one day every family on earth could be blessed.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 12:1-9",
+  "durationMinutes": 5,
+  "coverEmoji": "🐫",
+  "coverColor": "#7C2D12",
+  "illustrationPrompt": "A small caravan of a family with tents and animals setting out across an open desert road at first light, long shadows behind them, a vast horizon ahead, painterly gouache illustration on parchment paper, warm sand and sunrise-rose palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, hopeful departure into the unknown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "There was a man called Abram who lived in a city called Ur, with his family and his home and everything he knew. He was not a specially good man, and he was not a specially famous man. He was simply a man God chose.\n\nOne day God spoke to him and said: 'Leave your country and your family and your father's house. Go to a land I will show you.' Notice God did not tell him where. He just said go — and I will show you.\n\nAnd then God made him the biggest promise anybody had ever been given. 'I will make you into a great nation. I will bless you. I will make your name great. And through you, every family on earth will be blessed.'\n\nDo you remember the people who built the tall tower? They tried to make a great name for themselves and it all fell apart. Here God simply gives a great name away, to a man who did nothing to earn it.\n\nSo Abram went. He packed up his tents and his sheep and his family, and he walked out of the only home he had ever known, because God had spoken. He did not know the road. He knew the One who called him.\n\nAnd that last promise — through you every family on earth will be blessed — is a promise about Jesus. Jesus would be born into Abram's family, thousands of years later, to bless the whole world.",
+      "childText": "God spoke to a man called Abram. God said, 'Leave your home and go to a land I will show you.' God did not even tell him where! Then God made a big promise: 'I will make you a great nation. I will make your name great. And through you, every family on earth will be blessed.' Abram did not earn any of it — God just gave it. So Abram packed up his tents and his sheep and went, because God had spoken. He did not know the road. But he knew the One who called him!",
+      "verses": [
+        {
+          "ref": "Genesis 12:1",
+          "kjv": "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee.",
+          "little_bible": "God said to Abram: 'Go to a land I will show you.'"
+        },
+        {
+          "ref": "Genesis 12:2",
+          "kjv": "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing.",
+          "little_bible": "God said: 'I will bless you. I will make your name great.'"
+        },
+        {
+          "ref": "Genesis 12:3",
+          "kjv": "And in thee shall all families of the earth be blessed.",
+          "little_bible": "God said: 'Every family on earth will be blessed through you.'"
+        },
+        {
+          "ref": "Genesis 12:4",
+          "kjv": "So Abram departed, as the LORD had spoken unto him.",
+          "little_bible": "So Abram went, just as God had told him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "How did Abram know where to go?",
+      "parentGuide": "Covenant call is the new idea, and its child-sized shape is: God chooses, God promises, the person goes. Two things to keep clear. First, Abram was not picked because he was good — this is grace, not reward. Second, the promise was never only about him: 'every family on earth' is the seed of the gospel going to every nation, including yours. Link it back to Babel — the great name people grabbed for, God gives away freely.",
+      "familyQuestion": "Have we ever moved somewhere new? What was hard, and what was good about it?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You for calling Abram, and for promising to bless every family on earth through him. Thank You that Your promise came all the way to us. Help us to go where You send us, even when we cannot see the road. Amen.",
+      "childPrompt": "Can you ask God to help you trust Him when you do not know what is coming?",
+      "prayerPoints": [
+        "Thank God that His promise to Abraham reached your family too",
+        "Ask God for courage when you do not know what happens next"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'I will bless you. I will make your name great.'",
+      "ref": "Genesis 12:2",
+      "memoryPhrase": "God said go!",
+      "tip": "March on the spot three times, then take one big step forward as you say: 'God said go!' Do it three times, stepping further each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Do one thing today that a grown-up asks, straight away, without needing to know the reason first.",
+      "parentNote": "Abram's obedience began before he had information. Practising first-time obedience in small, safe things builds the trust muscle your child will need for much bigger ones. Explain your reason afterwards — the point is the order, not the secrecy."
+    }
+  }
+}

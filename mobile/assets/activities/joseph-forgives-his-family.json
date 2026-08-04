@@ -1,0 +1,36 @@
+{
+  "storyId": "joseph-forgives-his-family",
+  "memoryBuilder": {
+    "phrase": "Do not be afraid.",
+    "phraseWords": ["Do", "not", "be", "afraid."],
+    "verseRef": "Genesis 50:21",
+    "verseText": "Joseph said: 'Do not be afraid. I will look after you.'",
+    "verseWords": ["Do", "not", "be", "afraid.", "I", "will", "look", "after", "you."]
+  },
+  "sequence": {
+    "prompt": "How did God save the promise family? Put it in order.",
+    "items": [
+      { "id": "charge",  "label": "The king put Joseph in charge",       "emoji": "👑", "order": 1 },
+      { "id": "store",   "label": "Joseph stored up mountains of grain", "emoji": "🌾", "order": 2 },
+      { "id": "come",    "label": "His brothers came to buy food",       "emoji": "🐫", "order": 3 },
+      { "id": "forgive", "label": "Joseph forgave them and hugged them", "emoji": "🤗", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "king",     "left": "The king of Egypt", "leftEmoji": "👑", "rightId": "charge",  "right": "Put Joseph in charge of the land",  "rightEmoji": "🌾" },
+      { "leftId": "brothers", "left": "The brothers",      "leftEmoji": "😨", "rightId": "bowed",   "right": "Bowed down without knowing him",    "rightEmoji": "🙇" },
+      { "leftId": "joseph",   "left": "Joseph",            "leftEmoji": "🤗", "rightId": "forgave", "right": "Wept, forgave them and fed them",   "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "Joseph forgave the people who hurt him most. Who is hardest for you to forgive?",
+    "options": [
+      { "id": "friend",  "label": "A friend",          "emoji": "🧒" },
+      { "id": "family",  "label": "Someone in my family", "emoji": "👨‍👩‍👧" },
+      { "id": "myself",  "label": "Myself",            "emoji": "🪞" }
+    ],
+    "followUp": "Joseph did not pretend it never happened — he said out loud what they had done, and forgave them anyway. That is what Jesus does for us."
+  }
+}

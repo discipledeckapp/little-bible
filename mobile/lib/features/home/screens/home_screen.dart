@@ -88,7 +88,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             error: (err, st) => const Center(child: Text('Something went wrong')),
           ),
         ),
-        // 2-item child nav — Parent Hub is behind Lumi long-press, not here
         bottomNavigationBar: NavigationBar(
           backgroundColor: AppColours.surface,
           selectedIndex: _selectedNav,
@@ -101,10 +100,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               icon: Icon(Icons.menu_book_rounded),
               label: 'Bible',
             ),
+            NavigationDestination(
+              icon: Icon(Icons.people_rounded),
+              label: 'Parent',
+            ),
           ],
           onDestinationSelected: (i) {
             setState(() => _selectedNav = i);
             if (i == 1) context.go(AppRoutes.bibleNav);
+            if (i == 2) context.go(AppRoutes.parentHub);
           },
         ),
       ),
@@ -124,12 +128,17 @@ class _HomeBody extends ConsumerWidget {
     final completedIds =
         ref.watch(completedStoryIdsProvider(profile.id)).valueOrNull ??
             const <String>{};
+    // Free-allowance meter: every story this child has opened, any status.
+    final consumedIds =
+        ref.watch(consumedStoryIdsProvider(profile.id)).valueOrNull ??
+            const <String>{};
 
     return storiesAsync.when(
       data: (stories) => _Layout(
         profile: profile,
         stories: stories,
         completedIds: completedIds,
+        consumedIds: consumedIds,
       ),
       loading: () => const Center(child: CircularProgressIndicator()),
       error: (err, st) => const SizedBox.shrink(),
@@ -144,11 +153,13 @@ class _Layout extends StatefulWidget {
     required this.profile,
     required this.stories,
     required this.completedIds,
+    required this.consumedIds,
   });
 
   final ChildProfile profile;
   final List<StoryModel> stories;
   final Set<String> completedIds;
+  final Set<String> consumedIds;
 
   @override
   State<_Layout> createState() => _LayoutState();
@@ -186,7 +197,11 @@ class _LayoutState extends State<_Layout> {
     final nextStory = (stories.isEmpty || allDone) ? null : stories[nextIndex];
     final isNextLocked = nextStory == null
         ? false
-        : (nextIndex >= _kFreeStoryCount && !profile.isUnlocked);
+        : storyPaywallLocked(
+            storyId: nextStory.id,
+            profileUnlocked: profile.isUnlocked,
+            consumedIds: widget.consumedIds,
+          );
 
     final avatarEmoji = _avatarEmoji(profile.avatarId);
 
@@ -391,6 +406,7 @@ class _LayoutState extends State<_Layout> {
             world: _kWorlds[_selectedWorld],
             allStories: stories,
             completedIds: completedIds,
+            consumedIds: widget.consumedIds,
             profileUnlocked: profile.isUnlocked,
           ),
         ),
@@ -470,9 +486,10 @@ class _ProfileAvatarChip extends StatelessWidget {
       };
 }
 
-// ─── First free story count ──────────────────────────────────────────────────
-
-const _kFreeStoryCount = 20;
+// The free allowance lives in story_progress_repository.dart as
+// `kFreeStoryAllowance` + `storyPaywallLocked`. It is consumption-based — any 20
+// stories the child opens are free — so it must never be reintroduced here as a
+// positional "first N in curriculum order" check.
 
 // ─── Story slot: available (has content) or coming soon ──────────────────────
 
@@ -520,10 +537,10 @@ const _kWorlds = [
     slots: [
       _StorySlot('god-made-everything',   'God Made Everything',               emoji: '🌍'),
       _StorySlot('god-made-me',            'God Made Me',                       emoji: '🧒'),
-      _StorySlot('the-first-family',       'The First Family with God',          emoji: '🌿', comingSoon: true),
-      _StorySlot('the-very-sad-choice',    'The Very Sad Choice',               emoji: '🍎', comingSoon: true),
-      _StorySlot('god-promises-a-rescuer', 'God Promises a Rescuer',            emoji: '⭐', comingSoon: true),
-      _StorySlot('two-brothers',           'Two Brothers and Jealous Hearts',   emoji: '😢', comingSoon: true),
+      _StorySlot('the-first-family',       'The First Family with God',          emoji: '🌿'),
+      _StorySlot('the-very-sad-choice',    'The Very Sad Choice',               emoji: '🍎'),
+      _StorySlot('god-promises-a-rescuer', 'God Promises a Rescuer',            emoji: '⭐'),
+      _StorySlot('two-brothers',           'Two Brothers and Jealous Hearts',   emoji: '🌾'),
       _StorySlot('noahs-big-boat',         'Noah\'s Big Boat',                  emoji: '🚢'),
       _StorySlot('noahs-rainbow-promise',  'Noah\'s Rainbow Promise',           emoji: '🌈'),
     ],
@@ -537,14 +554,14 @@ const _kWorlds = [
     color: Color(0xFF8B5CF6),
     description: 'Abraham, Isaac, Jacob, Joseph — faith and covenant',
     slots: [
-      _StorySlot('the-tall-tower',              'The Tall Tower',                  emoji: '🗼', comingSoon: true),
-      _StorySlot('god-calls-abraham',            'God Calls Abraham',               emoji: '🌟', comingSoon: true),
-      _StorySlot('stars-in-the-sky',             'Stars in the Sky',                emoji: '🌌', comingSoon: true),
-      _StorySlot('the-promised-son',             'The Promised Son',                emoji: '👶', comingSoon: true),
-      _StorySlot('god-provides-a-lamb',          'God Provides a Lamb',             emoji: '🐑', comingSoon: true),
-      _StorySlot('jacob-learns-grace',           'Jacob Learns Grace',              emoji: '🙏', comingSoon: true),
-      _StorySlot('joseph-and-his-brothers',      'Joseph and His Jealous Brothers', emoji: '🌈', comingSoon: true),
-      _StorySlot('joseph-forgives-his-family',   'Joseph Forgives His Family',      emoji: '🤗', comingSoon: true),
+      _StorySlot('the-tall-tower',              'The Tall Tower',                  emoji: '🗼'),
+      _StorySlot('god-calls-abraham',            'God Calls Abraham',               emoji: '🐫'),
+      _StorySlot('stars-in-the-sky',             'Stars in the Sky',                emoji: '✨'),
+      _StorySlot('the-promised-son',             'The Promised Son',                emoji: '👶'),
+      _StorySlot('god-provides-a-lamb',          'God Provides a Lamb',             emoji: '🐏'),
+      _StorySlot('jacob-learns-grace',           'Jacob Learns Grace',              emoji: '🪜'),
+      _StorySlot('joseph-and-his-brothers',      'Joseph and His Jealous Brothers', emoji: '🧥'),
+      _StorySlot('joseph-forgives-his-family',   'Joseph Forgives His Family',      emoji: '🤗'),
     ],
   ),
 
@@ -556,14 +573,14 @@ const _kWorlds = [
     color: Color(0xFFF97316),
     description: 'Moses, the Exodus, the Law, and the Tabernacle',
     slots: [
-      _StorySlot('baby-moses-is-kept-safe',      'Baby Moses Is Kept Safe',        emoji: '🧺', comingSoon: true),
-      _StorySlot('god-calls-from-the-fire',      'God Calls from the Fire',        emoji: '🔥', comingSoon: true),
-      _StorySlot('let-my-people-go',             'Let My People Go',               emoji: '🏛️', comingSoon: true),
-      _StorySlot('the-passover-lamb',            'The Passover Lamb',              emoji: '🐑', comingSoon: true),
-      _StorySlot('a-way-through-the-sea',        'A Way Through the Sea',          emoji: '🌊', comingSoon: true),
-      _StorySlot('bread-in-the-wilderness',      'Bread in the Wilderness',        emoji: '🍞', comingSoon: true),
-      _StorySlot('gods-good-commands',           'God\'s Good Commands',           emoji: '📜', comingSoon: true),
-      _StorySlot('god-lives-with-his-people',    'God Lives with His People',      emoji: '🕍', comingSoon: true),
+      _StorySlot('baby-moses-is-kept-safe',      'Baby Moses Is Kept Safe',        emoji: '🧺'),
+      _StorySlot('god-calls-from-the-fire',      'God Calls from the Fire',        emoji: '🔥'),
+      _StorySlot('let-my-people-go',             'Let My People Go',               emoji: '🏛️'),
+      _StorySlot('the-passover-lamb',            'The Passover Lamb',              emoji: '🚪'),
+      _StorySlot('a-way-through-the-sea',        'A Way Through the Sea',          emoji: '🌊'),
+      _StorySlot('bread-in-the-wilderness',      'Bread in the Wilderness',        emoji: '🍞'),
+      _StorySlot('gods-good-commands',           'God\'s Good Commands',           emoji: '📜'),
+      _StorySlot('god-lives-with-his-people',    'God Lives with His People',      emoji: '🕍'),
     ],
   ),
 
@@ -1107,12 +1124,14 @@ class _WorldSection extends StatelessWidget {
     required this.world,
     required this.allStories,
     required this.completedIds,
+    required this.consumedIds,
     required this.profileUnlocked,
   });
 
   final _WorldDef world;
   final List<StoryModel> allStories;
   final Set<String> completedIds;
+  final Set<String> consumedIds;
   final bool profileUnlocked;
 
   @override
@@ -1243,8 +1262,11 @@ class _WorldSection extends StatelessWidget {
             }
             final prevDone =
                 prevAvailId == null || completedIds.contains(prevAvailId);
-            final paywallLocked = !profileUnlocked &&
-                allStories.indexOf(story) >= _kFreeStoryCount;
+            final paywallLocked = storyPaywallLocked(
+              storyId: story.id,
+              profileUnlocked: profileUnlocked,
+              consumedIds: consumedIds,
+            );
             final isLocked = !prevDone || paywallLocked;
 
             return _MapTile(

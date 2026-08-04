@@ -1,0 +1,70 @@
+{
+  "id": "god-promises-a-rescuer",
+  "sensitivityTier": "general",
+  "title": "God Promises a Rescuer",
+  "subtitle": "On the saddest day in the world, God made the best promise in the world",
+  "collection": "in-the-beginning",
+  "mainTruth": "On the very day people sinned, God promised to send Someone to defeat the snake and make it right.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 3:14-24",
+  "durationMinutes": 5,
+  "coverEmoji": "⭐",
+  "coverColor": "#1E1B4B",
+  "illustrationPrompt": "Night sky over a garden gate, one bright star low on the horizon casting a path of light onto the ground, two small figures walking away but looking back at the light, painterly gouache illustration on parchment paper, deep indigo and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sorrowful yet unmistakably hopeful --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "It was the saddest day the world had ever known. The first family had stopped trusting God. They had eaten the fruit. They had hidden in the trees. And now everything was spoiled — the garden, their work, even the way they loved each other. Sin had come into the world, and sin always breaks things.\n\nGod told them the truth. He did not pretend it was fine. He told them that from now on life would be hard, that the ground would fight them, and that one day their bodies would go back to the dust. It was all true, and it was all very sad.\n\nBut then — right there, on the worst day — God said something no one expected. He turned to the snake and said: one day a child will be born. He will be hurt by you. But He will crush your head. Someone was coming. A Rescuer. A person from this very family, who would beat the snake and undo the damage and put everything right again.\n\nAnd then God did something so gentle it is easy to miss. He made clothes for them out of animal skins, and He covered them Himself. They could not cover their own shame — so God covered it for them. That is what God is like. The Rescuer God promised that day is Jesus. Every story after this one is God keeping this promise.",
+      "childText": "It was the saddest day ever. Sin had come into the world and spoiled everything. God told them the truth — from now on life would be hard. But then God made a promise! He said to the snake, 'One day a child will come. He will crush your head.' Someone was coming to make it all right again! Then God made clothes for them and covered them Himself, because they could not do it. The Rescuer God promised is Jesus. God has been keeping that promise ever since.",
+      "verses": [
+        {
+          "ref": "Genesis 3:15",
+          "kjv": "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.",
+          "little_bible": "God said: 'One day He will crush the snake's head.'"
+        },
+        {
+          "ref": "Genesis 3:20",
+          "kjv": "And Adam called his wife's name Eve; because she was the mother of all living.",
+          "little_bible": "The man named his wife Eve. She would be everyone's mother."
+        },
+        {
+          "ref": "Genesis 3:21",
+          "kjv": "Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them.",
+          "little_bible": "God made them clothes. God covered them Himself."
+        },
+        {
+          "ref": "1 John 3:8",
+          "kjv": "For this purpose the Son of God was manifested, that he might destroy the works of the devil.",
+          "little_bible": "Jesus came to break everything the devil had done."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did God promise to send?",
+      "parentGuide": "This is the first gospel promise — theologians call Genesis 3:15 the 'protoevangelium', the gospel in seed form. The point for your child is timing: God did not wait until people deserved it, or until they asked. He promised a Rescuer on the same day they rebelled. Link it back to the last story ('Do you remember what they did?') and forward ('Who do you think the Rescuer is?'). If your child already knows about Jesus, let them make the connection themselves — it is far more powerful than being told.",
+      "familyQuestion": "Can you think of a promise someone kept for you, even a small one?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that on the saddest day You made the best promise. Thank You that You did not leave people to fix it themselves. Thank You for sending Jesus, the Rescuer You promised. Help us to trust Your promises. Amen.",
+      "childPrompt": "Can you thank God for keeping His promise to send Jesus?",
+      "prayerPoints": [
+        "Thank God that He promised a Rescuer before anyone asked",
+        "Thank God that Jesus is the promise, kept"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'One day He will crush the snake's head.'",
+      "ref": "Genesis 3:15",
+      "memoryPhrase": "God promised a Rescuer!",
+      "tip": "Hold up one finger for 'God', two hands over your heart for 'promised', then throw both arms wide for 'a Rescuer!' Do it three times — the third time as loud as you can."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Make a promise to someone in your family today — something small you can really do — and then keep it before bedtime.",
+      "parentNote": "Children learn what God's faithfulness means from watching promises kept at home. Keep yours today too, and if you cannot, say so out loud and explain why — that honesty teaches as much as the promise does."
+    }
+  }
+}

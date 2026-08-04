@@ -1,0 +1,36 @@
+{
+  "storyId": "jacob-learns-grace",
+  "memoryBuilder": {
+    "phrase": "God is with me!",
+    "phraseWords": ["God", "is", "with", "me!"],
+    "verseRef": "Genesis 28:15",
+    "verseText": "God said: 'I am with you. I will keep you everywhere you go.'",
+    "verseWords": ["I", "am", "with", "you.", "I", "will", "keep", "you", "everywhere", "you", "go."]
+  },
+  "sequence": {
+    "prompt": "What happened to Jacob? Put it in order.",
+    "items": [
+      { "id": "trick", "label": "Jacob tricked his father",              "emoji": "🎭", "order": 1 },
+      { "id": "ran",   "label": "Jacob ran away from home",              "emoji": "🏃", "order": 2 },
+      { "id": "stone", "label": "He slept outside with a stone pillow",  "emoji": "🪨", "order": 3 },
+      { "id": "dream", "label": "God came to him in a stairway dream",   "emoji": "🪜", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "jacob", "left": "Jacob", "leftEmoji": "🧔", "rightId": "trick", "right": "Tricked his father and ran away",     "rightEmoji": "🎭" },
+      { "leftId": "esau",  "left": "Esau",  "leftEmoji": "🧑", "rightId": "angry", "right": "Was angry that his blessing was taken", "rightEmoji": "😠" },
+      { "leftId": "god",   "left": "God",   "leftEmoji": "✨", "rightId": "came",  "right": "Came to Jacob anyway and promised to stay", "rightEmoji": "🪜" }
+    ]
+  },
+  "application": {
+    "question": "God came to Jacob when he least deserved it. When do you feel least like God would want you?",
+    "options": [
+      { "id": "wrong", "label": "When I have done wrong", "emoji": "😔" },
+      { "id": "cross", "label": "When I have been unkind", "emoji": "😠" },
+      { "id": "alone", "label": "When I feel all alone",   "emoji": "🧍" }
+    ],
+    "followUp": "Jacob was a liar, alone, and it was his own fault — and that is exactly where God turned up. Grace means God comes anyway."
+  }
+}

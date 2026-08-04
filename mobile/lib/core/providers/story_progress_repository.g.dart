@@ -179,5 +179,161 @@ class _CompletedStoryIdsProviderElement
   String get profileId => (origin as CompletedStoryIdsProvider).profileId;
 }
 
+String _$consumedStoryIdsHash() => r'496c4af3e74a38c31625efcf409dafce77b5b5da';
+
+/// Live set of story IDs this profile has *opened* — started or completed.
+///
+/// This is the free-allowance meter: the child may consume any
+/// [kFreeStoryAllowance] stories they choose, in any order. See
+/// [storyPaywallLocked].
+///
+/// Copied from [consumedStoryIds].
+@ProviderFor(consumedStoryIds)
+const consumedStoryIdsProvider = ConsumedStoryIdsFamily();
+
+/// Live set of story IDs this profile has *opened* — started or completed.
+///
+/// This is the free-allowance meter: the child may consume any
+/// [kFreeStoryAllowance] stories they choose, in any order. See
+/// [storyPaywallLocked].
+///
+/// Copied from [consumedStoryIds].
+class ConsumedStoryIdsFamily extends Family<AsyncValue<Set<String>>> {
+  /// Live set of story IDs this profile has *opened* — started or completed.
+  ///
+  /// This is the free-allowance meter: the child may consume any
+  /// [kFreeStoryAllowance] stories they choose, in any order. See
+  /// [storyPaywallLocked].
+  ///
+  /// Copied from [consumedStoryIds].
+  const ConsumedStoryIdsFamily();
+
+  /// Live set of story IDs this profile has *opened* — started or completed.
+  ///
+  /// This is the free-allowance meter: the child may consume any
+  /// [kFreeStoryAllowance] stories they choose, in any order. See
+  /// [storyPaywallLocked].
+  ///
+  /// Copied from [consumedStoryIds].
+  ConsumedStoryIdsProvider call(String profileId) {
+    return ConsumedStoryIdsProvider(profileId);
+  }
+
+  @override
+  ConsumedStoryIdsProvider getProviderOverride(
+    covariant ConsumedStoryIdsProvider provider,
+  ) {
+    return call(provider.profileId);
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'consumedStoryIdsProvider';
+}
+
+/// Live set of story IDs this profile has *opened* — started or completed.
+///
+/// This is the free-allowance meter: the child may consume any
+/// [kFreeStoryAllowance] stories they choose, in any order. See
+/// [storyPaywallLocked].
+///
+/// Copied from [consumedStoryIds].
+class ConsumedStoryIdsProvider extends AutoDisposeStreamProvider<Set<String>> {
+  /// Live set of story IDs this profile has *opened* — started or completed.
+  ///
+  /// This is the free-allowance meter: the child may consume any
+  /// [kFreeStoryAllowance] stories they choose, in any order. See
+  /// [storyPaywallLocked].
+  ///
+  /// Copied from [consumedStoryIds].
+  ConsumedStoryIdsProvider(String profileId)
+    : this._internal(
+        (ref) => consumedStoryIds(ref as ConsumedStoryIdsRef, profileId),
+        from: consumedStoryIdsProvider,
+        name: r'consumedStoryIdsProvider',
+        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+            ? null
+            : _$consumedStoryIdsHash,
+        dependencies: ConsumedStoryIdsFamily._dependencies,
+        allTransitiveDependencies:
+            ConsumedStoryIdsFamily._allTransitiveDependencies,
+        profileId: profileId,
+      );
+
+  ConsumedStoryIdsProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.profileId,
+  }) : super.internal();
+
+  final String profileId;
+
+  @override
+  Override overrideWith(
+    Stream<Set<String>> Function(ConsumedStoryIdsRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: ConsumedStoryIdsProvider._internal(
+        (ref) => create(ref as ConsumedStoryIdsRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        profileId: profileId,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeStreamProviderElement<Set<String>> createElement() {
+    return _ConsumedStoryIdsProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is ConsumedStoryIdsProvider && other.profileId == profileId;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, profileId.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+mixin ConsumedStoryIdsRef on AutoDisposeStreamProviderRef<Set<String>> {
+  /// The parameter `profileId` of this provider.
+  String get profileId;
+}
+
+class _ConsumedStoryIdsProviderElement
+    extends AutoDisposeStreamProviderElement<Set<String>>
+    with ConsumedStoryIdsRef {
+  _ConsumedStoryIdsProviderElement(super.provider);
+
+  @override
+  String get profileId => (origin as ConsumedStoryIdsProvider).profileId;
+}
+
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

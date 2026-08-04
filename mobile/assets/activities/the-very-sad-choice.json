@@ -1,0 +1,36 @@
+{
+  "storyId": "the-very-sad-choice",
+  "memoryBuilder": {
+    "phrase": "Everyone has done wrong.",
+    "phraseWords": ["Everyone", "has", "done", "wrong."],
+    "verseRef": "Romans 3:23",
+    "verseText": "Everyone has sinned. Everyone needs God to help them.",
+    "verseWords": ["Everyone", "has", "sinned.", "Everyone", "needs", "God", "to", "help", "them."]
+  },
+  "sequence": {
+    "prompt": "What happened on the very sad day? Put it in order.",
+    "items": [
+      { "id": "rule",  "label": "God said not to eat from one tree", "emoji": "🌳", "order": 1 },
+      { "id": "lie",   "label": "The snake told a lie about God",    "emoji": "🐍", "order": 2 },
+      { "id": "fruit", "label": "They ate the fruit",                "emoji": "🍎", "order": 3 },
+      { "id": "hide",  "label": "They felt afraid and hid",          "emoji": "🌿", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "snake",  "left": "The snake",        "leftEmoji": "🐍", "rightId": "lied",   "right": "Told a lie about God",              "rightEmoji": "💬" },
+      { "leftId": "family", "left": "The first family", "leftEmoji": "👫", "rightId": "ate",    "right": "Stopped trusting God and disobeyed", "rightEmoji": "🍎" },
+      { "leftId": "god",    "left": "God",              "leftEmoji": "✨", "rightId": "looked", "right": "Came looking and called, 'Where are you?'", "rightEmoji": "🔦" }
+    ]
+  },
+  "application": {
+    "question": "Everyone has done wrong things — everyone. What helps you most when you have done something wrong?",
+    "options": [
+      { "id": "truth",  "label": "Telling the truth", "emoji": "💬" },
+      { "id": "sorry",  "label": "Saying sorry",      "emoji": "🙏" },
+      { "id": "hug",    "label": "A big hug",         "emoji": "🤗" }
+    ],
+    "followUp": "They hid in the trees — but God did not wait for them to come out. He came looking, and He called their name. He comes looking for you too."
+  }
+}

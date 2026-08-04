@@ -1,0 +1,70 @@
+{
+  "id": "bread-in-the-wilderness",
+  "sensitivityTier": "general",
+  "title": "Bread in the Wilderness",
+  "subtitle": "God's people woke up hungry in an empty desert — and found breakfast on the ground",
+  "collection": "god-rescues-a-people",
+  "mainTruth": "God gives us what we need, one day at a time, so that we learn to depend on Him every day.",
+  "ageRange": "4-7",
+  "bibleRef": "Exodus 16:1-18",
+  "durationMinutes": 5,
+  "coverEmoji": "🍞",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "An early morning desert camp of tents with the ground covered in small pale flakes like frost, children crouching to gather them into baskets, soft dawn light, painterly gouache illustration on parchment paper, pale gold and soft sand palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, quiet everyday wonder --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God's people were out of Egypt and walking through the wilderness — a huge dry desert with no shops, no fields and no food. And they got hungry. Very hungry.\n\nSo they grumbled. They said the most extraordinary thing: 'We wish we were back in Egypt. At least there we had food.' Back in Egypt! Where they had been slaves! They had watched God open a sea for them just a few weeks before, and now they were sure He was going to let them starve.\n\nGod heard the grumbling. And here is what is so surprising: God did not shout at them. He fed them.\n\nGod said, 'I will rain bread down from the sky.' The next morning, when God's people came out of their tents, the whole ground was covered in small pale flakes, like frost. They had never seen anything like it. They said, 'What is it?' — and that is what they called it: manna, which means 'what is it?'. They gathered it up and it tasted sweet, like honey biscuits.\n\nBut God gave one instruction. Only gather enough for today. Do not stockpile it. And if anyone tried to hoard extra, by morning it had gone bad.\n\nWhy would God do that? Because He was teaching them something they could only learn by living it: I will be here again tomorrow. You do not need a pile. You need Me. Every single morning for forty years, the manna was there.\n\nAnd long afterwards, Jesus said, 'I am the bread of life.' And He taught us to pray, 'Give us today our daily bread' — the same lesson, still.",
+      "childText": "God's people were walking through a huge dry desert with no food anywhere. They got very hungry, and they grumbled: 'We wish we were back in Egypt!' Back where they were slaves! God heard them grumbling — and God fed them anyway. He said, 'I will rain bread from the sky.' Next morning the whole ground was covered in little pale flakes. The people said, 'What is it?' — so that is what they called it! It tasted sweet like honey. But God said, 'Only take enough for today.' God was teaching them: I will be here again tomorrow. And every morning for forty years, the bread was there!",
+      "verses": [
+        {
+          "ref": "Exodus 16:3",
+          "kjv": "Would to God we had died by the hand of the LORD in the land of Egypt.",
+          "little_bible": "The people grumbled: 'We wish we were back in Egypt!'"
+        },
+        {
+          "ref": "Exodus 16:4",
+          "kjv": "Behold, I will rain bread from heaven for you... they shall gather a certain rate every day.",
+          "little_bible": "God said: 'I will rain bread from the sky. Gather enough for today.'"
+        },
+        {
+          "ref": "Exodus 16:15",
+          "kjv": "And when the children of Israel saw it, they said one to another, It is manna: for they wist not what it was.",
+          "little_bible": "They asked: 'What is it?' So they called it manna."
+        },
+        {
+          "ref": "John 6:35",
+          "kjv": "I am the bread of life: he that cometh to me shall never hunger.",
+          "little_bible": "Jesus said: 'I am the bread of life.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did God only give them enough for one day?",
+      "parentGuide": "Daily dependence is the concept, and the answer to the question is the heart of it: so they would come back to God tomorrow. Notice God's response to the grumbling — He fed them. That is grace, and it is worth pointing out; God is not waiting to catch His people out. Do not moralise the grumbling into 'so never complain'; the honest version is that we forget quickly, and God provides anyway. Retrieve the sea — He had just parted it, and they still doubted. Then connect the Lord's Prayer: give us today our daily bread. If your family has known real want, be honest that God's provision has often come through people, and that asking for help is not a lack of faith.",
+      "familyQuestion": "What has God given us today that we did not have to make ourselves?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You for what You have given us today — our food, our home, the people who look after us. Thank You that You will be here again tomorrow. Help us to trust You one day at a time. Amen.",
+      "childPrompt": "Can you thank God for one thing He gave you today?",
+      "prayerPoints": [
+        "Thank God for one specific thing you were given today",
+        "Ask God to help you trust Him for tomorrow instead of worrying"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'I will rain bread from the sky. Gather enough for today.'",
+      "ref": "Exodus 16:4",
+      "memoryPhrase": "God gives what we need.",
+      "tip": "Hold out cupped hands as if catching something falling, look up, then say: 'God gives what we need.' Do it three times — once for today, once for tomorrow, once for every day."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "At your next meal, say thank you to God out loud before you eat — and name the food you are most glad about.",
+      "parentNote": "Naming the specific food rather than saying a set grace is what turns a habit into noticing. If your child is old enough, let them lead it themselves, and resist tidying up their wording."
+    }
+  }
+}

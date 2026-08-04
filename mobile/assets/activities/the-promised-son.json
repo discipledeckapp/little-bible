@@ -1,0 +1,37 @@
+{
+  "storyId": "the-promised-son",
+  "memoryBuilder": {
+    "phrase": "Nothing is too hard!",
+    "phraseWords": ["Nothing", "is", "too", "hard!"],
+    "verseRef": "Genesis 18:14",
+    "verseText": "Is anything too hard for God? No. Nothing at all.",
+    "verseWords": ["Is", "anything", "too", "hard", "for", "God?", "No.", "Nothing", "at", "all."]
+  },
+  "sequence": {
+    "prompt": "How did God keep His promise to Sarah? Put it in order.",
+    "items": [
+      { "id": "visitors", "label": "Three visitors came to the tent",    "emoji": "⛺", "order": 1 },
+      { "id": "said",     "label": "The Lord said Sarah would have a son","emoji": "💬", "order": 2 },
+      { "id": "laughed",  "label": "Sarah laughed — it seemed too late", "emoji": "😅", "order": 3 },
+      { "id": "isaac",    "label": "One year later, baby Isaac was born", "emoji": "👶", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "laugh1", "left": "Sarah's first laugh",  "leftEmoji": "😅", "rightId": "toolate", "right": "She thought it was far too late", "rightEmoji": "⏳" },
+      { "leftId": "isaac",  "left": "the name Isaac",       "leftEmoji": "👶", "rightId": "means",   "right": "It means 'he laughs'",            "rightEmoji": "😄" },
+      { "leftId": "laugh2", "left": "Sarah's second laugh", "leftEmoji": "🥳", "rightId": "joy",     "right": "This time it was pure joy",       "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "Nothing is too hard for God. What feels impossible to you right now?",
+    "options": [
+      { "id": "hard",  "label": "Something hard to learn", "emoji": "📚" },
+      { "id": "sad",   "label": "Something sad to fix",    "emoji": "😢" },
+      { "id": "long",  "label": "Something taking forever", "emoji": "⏳" }
+    ],
+    "followUp": "Sarah waited almost ninety years — and God was not late. Your impossible thing is not too hard for Him either."
+  }
+}

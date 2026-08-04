@@ -1,0 +1,36 @@
+{
+  "storyId": "two-brothers",
+  "memoryBuilder": {
+    "phrase": "God rules my heart!",
+    "phraseWords": ["God", "rules", "my", "heart!"],
+    "verseRef": "Genesis 4:7",
+    "verseText": "God said: 'Sin waits at your door. You must rule over it.'",
+    "verseWords": ["Sin", "waits", "at", "your", "door.", "You", "must", "rule", "over", "it."]
+  },
+  "sequence": {
+    "prompt": "What happened with the two brothers? Put it in order.",
+    "items": [
+      { "id": "gifts", "label": "Both brothers brought a gift to God",  "emoji": "🎁", "order": 1 },
+      { "id": "best",  "label": "God was pleased with Abel's best gift", "emoji": "🐑", "order": 2 },
+      { "id": "angry", "label": "Cain became very angry",                "emoji": "😠", "order": 3 },
+      { "id": "warn",  "label": "God warned Cain to rule over it",       "emoji": "⚠️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "abel", "left": "Abel", "leftEmoji": "🐑", "rightId": "best",  "right": "Brought God his very best",      "rightEmoji": "🎁" },
+      { "leftId": "cain", "left": "Cain", "leftEmoji": "🌾", "rightId": "anger", "right": "Let his anger keep growing",     "rightEmoji": "😠" },
+      { "leftId": "god",  "left": "God",  "leftEmoji": "✨", "rightId": "warn",  "right": "Warned Cain before he went wrong", "rightEmoji": "⚠️" }
+    ]
+  },
+  "application": {
+    "question": "Wrong things start inside our hearts. Which one is hardest for you?",
+    "options": [
+      { "id": "jealous", "label": "Feeling jealous", "emoji": "😔" },
+      { "id": "angry",   "label": "Feeling angry",   "emoji": "😠" },
+      { "id": "wanting", "label": "Wanting more",    "emoji": "🙅" }
+    ],
+    "followUp": "God warned Cain because He loved him — there was still time to turn back. When you feel it coming, stop and say: 'God, help me.' He will."
+  }
+}

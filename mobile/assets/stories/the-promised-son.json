@@ -1,0 +1,70 @@
+{
+  "id": "the-promised-son",
+  "sensitivityTier": "general",
+  "title": "The Promised Son",
+  "subtitle": "Sarah laughed when she heard it — and a year later she was laughing for a completely different reason",
+  "collection": "promise-family",
+  "mainTruth": "God's promises are never too late and never too hard. Nothing is too hard for God.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 18:1-15; 21:1-7",
+  "durationMinutes": 5,
+  "coverEmoji": "👶",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "Three visitors seated under a great spreading oak beside a desert tent at noon, a woman listening at the tent doorway with her hand over her mouth, warm dappled shade on the ground, painterly gouache illustration on parchment paper, sunlit ochre and deep shade-green palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, hospitable and full of hidden wonder --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God had changed Abram's name to Abraham, and Sarai's name to Sarah. But still, after all those years, there was no baby. Abraham was ninety-nine years old. Sarah was almost ninety. The promise about a family like the stars must have seemed further away than ever.\n\nOne blazing hot day, Abraham was sitting in the doorway of his tent when three visitors came. He hurried to welcome them — he brought water for their feet, and bread, and the best food he had. And one of those visitors was the Lord Himself.\n\nWhile they ate, the Lord said, 'This time next year, Sarah will have a son.' Sarah was listening just inside the tent, and she laughed. Not a happy laugh — a tired, this-cannot-possibly-happen laugh. She was old. Her body was old. It was far too late.\n\nAnd the Lord said the question that this whole story is built on: 'Is anything too hard for the Lord?'\n\nSarah was frightened and said she had not laughed. But God was not angry. He simply kept His promise.\n\nAnd one year later — one year later! — Sarah held a baby boy in her arms. They named him Isaac, and Isaac means 'he laughs'. Sarah said, 'God has made me laugh, and everyone who hears about it will laugh with me.' The laugh that had meant 'this is impossible' had turned into a laugh of pure joy.\n\nGod's promises are sometimes slow. They are never impossible.",
+      "childText": "Abraham was ninety-nine years old and Sarah was almost ninety — and still no baby. One hot day three visitors came, and one of them was the Lord. He said, 'This time next year, Sarah will have a son.' Sarah was listening in the tent, and she laughed — because it seemed far too late! Then the Lord asked, 'Is anything too hard for the Lord?' One year later, Sarah was holding a baby boy! They called him Isaac, which means 'he laughs'. Her sad laugh had turned into a happy one. God's promises can be slow. They are never impossible!",
+      "verses": [
+        {
+          "ref": "Genesis 18:10",
+          "kjv": "And he said, I will certainly return unto thee according to the time of life; and, lo, Sarah thy wife shall have a son.",
+          "little_bible": "The Lord said: 'Next year Sarah will have a son.'"
+        },
+        {
+          "ref": "Genesis 18:14",
+          "kjv": "Is any thing too hard for the LORD?",
+          "little_bible": "Is anything too hard for God? No. Nothing at all."
+        },
+        {
+          "ref": "Genesis 21:2",
+          "kjv": "For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him.",
+          "little_bible": "Sarah had a baby boy, exactly when God had said."
+        },
+        {
+          "ref": "Genesis 21:6",
+          "kjv": "And Sarah said, God hath made me to laugh, so that all that hear will laugh with me.",
+          "little_bible": "Sarah said: 'God has made me laugh with joy!'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did Sarah laugh the first time?",
+      "parentGuide": "The new idea is that a delayed promise is not a failed promise. Do not turn Sarah into the villain — her laugh was the honest reaction of a woman who had waited decades, and God answered it with a question rather than a rebuke. That tenderness matters for children who are waiting for something that feels hopeless. Retrieve story 11: Abram believed and God counted him right. Faith and honest struggle can live in the same family.",
+      "familyQuestion": "What is the longest you have ever had to wait for something good?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, nothing is too hard for You. Thank You that You kept Your promise to Abraham and Sarah, even when it looked far too late. When we are waiting for something, help us to remember that You are never late. Amen.",
+      "childPrompt": "Can you tell God that nothing is too hard for Him?",
+      "prayerPoints": [
+        "Thank God that He is never too late",
+        "Ask God to help you wait well for something you are hoping for"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Is anything too hard for God? No. Nothing at all.",
+      "ref": "Genesis 18:14",
+      "memoryPhrase": "Nothing is too hard!",
+      "tip": "Ask the question together — 'Is anything too hard for God?' — and everybody shouts back: 'Nothing is too hard!' Swap who asks each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Think of one thing that feels impossible for you right now. Tell God about it, and ask Him for help with it out loud.",
+      "parentNote": "Children carry impossible-feeling things too — a friendship, a fear, a skill they cannot master. Do not fix it for them today; just help them hand it over. Then come back to it in a few weeks and look at it together."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "god-promises-a-rescuer",
+  "memoryBuilder": {
+    "phrase": "God promised a Rescuer!",
+    "phraseWords": ["God", "promised", "a", "Rescuer!"],
+    "verseRef": "Genesis 3:15",
+    "verseText": "God said: 'One day He will crush the snake's head.'",
+    "verseWords": ["One", "day", "He", "will", "crush", "the", "snake's", "head."]
+  },
+  "sequence": {
+    "prompt": "What did God do on the saddest day? Put it in order.",
+    "items": [
+      { "id": "spoiled", "label": "Sin spoiled everything",             "emoji": "💔", "order": 1 },
+      { "id": "truth",   "label": "God told them the truth",            "emoji": "💬", "order": 2 },
+      { "id": "promise", "label": "God promised a Rescuer would come",  "emoji": "⭐", "order": 3 },
+      { "id": "covered", "label": "God made clothes and covered them",  "emoji": "🧥", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the promise to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "promise",  "left": "God's promise",     "leftEmoji": "⭐", "rightId": "crush",  "right": "Someone will crush the snake's head", "rightEmoji": "🐍" },
+      { "leftId": "clothes",  "left": "the clothes God made", "leftEmoji": "🧥", "rightId": "cover", "right": "God covered what they could not",     "rightEmoji": "🤲" },
+      { "leftId": "rescuer",  "left": "the Rescuer",      "leftEmoji": "✝️", "rightId": "jesus",  "right": "Jesus, who came to make it right",    "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "God made the best promise on the worst day. When is it hardest for you to believe good things are coming?",
+    "options": [
+      { "id": "sad",   "label": "When I am sad",       "emoji": "😢" },
+      { "id": "wait",  "label": "When I have to wait", "emoji": "⏳" },
+      { "id": "wrong", "label": "When I did wrong",    "emoji": "😔" }
+    ],
+    "followUp": "God did not wait until people deserved it. On the same day they turned away, He promised to send Someone. And He kept that promise — His name is Jesus."
+  }
+}

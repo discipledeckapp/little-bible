@@ -1,0 +1,36 @@
+{
+  "storyId": "let-my-people-go",
+  "memoryBuilder": {
+    "phrase": "God is the strongest!",
+    "phraseWords": ["God", "is", "the", "strongest!"],
+    "verseRef": "Exodus 6:6",
+    "verseText": "God said: 'I will bring you out. I will buy you back.'",
+    "verseWords": ["I", "will", "bring", "you", "out.", "I", "will", "buy", "you", "back."]
+  },
+  "sequence": {
+    "prompt": "What happened when Moses went to Pharaoh? Put it in order.",
+    "items": [
+      { "id": "went",   "label": "Moses went into Pharaoh's palace",     "emoji": "🏛️", "order": 1 },
+      { "id": "said",   "label": "He said, 'Let My people go!'",         "emoji": "📢", "order": 2 },
+      { "id": "no",     "label": "Pharaoh said no and made it harder",   "emoji": "🚫", "order": 3 },
+      { "id": "warn",   "label": "God sent warnings across Egypt",       "emoji": "⚡", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "moses",   "left": "Moses",   "leftEmoji": "🧔", "rightId": "spoke", "right": "Said 'Let My people go!' again and again", "rightEmoji": "📢" },
+      { "leftId": "pharaoh", "left": "Pharaoh", "leftEmoji": "👑", "rightId": "hard",  "right": "Made his heart harder every time",         "rightEmoji": "🪨" },
+      { "leftId": "god",     "left": "God",     "leftEmoji": "✨", "rightId": "showed","right": "Showed He is King over every king",        "rightEmoji": "⚡" }
+    ]
+  },
+  "application": {
+    "question": "Pharaoh made his heart hard every time. When is it hardest for you to say yes?",
+    "options": [
+      { "id": "stop",   "label": "When I have to stop playing", "emoji": "🧸" },
+      { "id": "share",  "label": "When I have to share",        "emoji": "🤝" },
+      { "id": "sorry",  "label": "When I have to say sorry",    "emoji": "😔" }
+    ],
+    "followUp": "Pharaoh got a real chance every single time, and every time he said no. A soft heart says yes quickly — and God is stronger than anything holding you."
+  }
+}

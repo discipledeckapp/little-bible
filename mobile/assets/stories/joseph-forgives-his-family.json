@@ -1,0 +1,70 @@
+{
+  "id": "joseph-forgives-his-family",
+  "sensitivityTier": "general",
+  "title": "Joseph Forgives His Family",
+  "subtitle": "The brothers who sold him were standing right there — and Joseph wept, and forgave them",
+  "collection": "promise-family",
+  "mainTruth": "God kept the promise family alive — and turned enemies back into family through forgiveness.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 41; 45:1-15; 50:15-21",
+  "durationMinutes": 6,
+  "coverEmoji": "🤗",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "A great hall in Egypt with grain sacks stacked high, a richly dressed ruler stepping down from his seat with open arms toward a group of travel-worn brothers who are kneeling, warm light through tall columns, painterly gouache illustration on parchment paper, gold, wheat and deep teal palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, overwhelming reunion and relief --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "In Egypt, Joseph went through many hard years. But God was with him, and God gave him the wisdom to understand a dream that no one else could — a dream that warned of seven good years of harvest followed by seven years of terrible hunger.\n\nSo Pharaoh, the king of Egypt, put Joseph in charge of the whole land. For seven years Joseph stored up grain, mountains of it. Then the hungry years came, exactly as God had said — and Egypt had food, because God had warned them through Joseph.\n\nThe hunger reached Joseph's family too, far away. So his brothers came to Egypt to buy grain — and they bowed down in front of the powerful Egyptian ruler without ever realising who he was.\n\nJoseph knew them at once. He could have done anything to them. He was the second most powerful man in the world, and they were kneeling in front of him.\n\nAnd Joseph wept. He wept so loudly the Egyptians outside could hear him. Then he said, 'I am Joseph, your brother — the one you sold.'\n\nThey were terrified. But Joseph said: 'Do not be afraid, and do not be angry with yourselves. You meant it for evil, but God meant it for good, to save many lives. I will look after you and your children.' And he kissed them all and held them, and they talked together at last.\n\nGod had kept the promise family alive through the very brother they had thrown away. Enemies became family again. And that is what God does — He is in the business of turning enemies into family. That is exactly what Jesus came to do for us.",
+      "childText": "In Egypt, God gave Joseph wisdom to understand a dream about seven years of food and seven years of hunger. So the king put Joseph in charge, and Joseph stored up mountains of grain. When the hungry years came, his brothers travelled to Egypt to buy food — and bowed down to him without knowing who he was! Joseph knew them straight away. He could have punished them. Instead he cried out loud and said, 'I am Joseph, your brother!' They were frightened. But Joseph said, 'Do not be afraid. You meant it for evil, but God meant it for good, to save many lives.' Then he hugged them all. Enemies became family again!",
+      "verses": [
+        {
+          "ref": "Genesis 41:39",
+          "kjv": "Forasmuch as God hath shewed thee all this, there is none so discreet and wise as thou art.",
+          "little_bible": "The king said: 'God has shown you this. You are wise.'"
+        },
+        {
+          "ref": "Genesis 45:4",
+          "kjv": "And Joseph said unto his brethren... I am Joseph your brother, whom ye sold into Egypt.",
+          "little_bible": "Joseph said: 'I am Joseph — your brother!'"
+        },
+        {
+          "ref": "Genesis 50:20",
+          "kjv": "Ye thought evil against me; but God meant it unto good, to bring to pass, as it is this day, to save much people alive.",
+          "little_bible": "You meant it for evil. God meant it for good, to save many people."
+        },
+        {
+          "ref": "Genesis 50:21",
+          "kjv": "Now therefore fear ye not: I will nourish you, and your little ones. And he comforted them.",
+          "little_bible": "Joseph said: 'Do not be afraid. I will look after you.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did Joseph say to his brothers instead of punishing them?",
+      "parentGuide": "This is the World's capstone: it gathers up covenant, faith, substitution, grace and providence and shows them working together in one family. Note carefully what forgiveness is and is not here — Joseph names what they did out loud ('the one you sold'), he does not pretend it did not happen, and he still chooses to feed and protect them. That is the biblical shape: truth first, then mercy. Ask your child what they remember from Abraham, Isaac and Jacob, and let them see the thread. Then say plainly that Jesus is how God turns His enemies into His family.",
+      "familyQuestion": "Is there anyone in our family we need to forgive this week?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You for keeping Your promise family safe, even through hard years. Thank You that Joseph forgave his brothers instead of hurting them. Help us to forgive too, and thank You that Jesus makes enemies into family. Amen.",
+      "childPrompt": "Is there someone you need to forgive? Can you tell God about them?",
+      "prayerPoints": [
+        "Ask God to help you forgive someone specific",
+        "Thank God that He turns enemies into family through Jesus"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Joseph said: 'Do not be afraid. I will look after you.'",
+      "ref": "Genesis 50:21",
+      "memoryPhrase": "Do not be afraid.",
+      "tip": "Give someone a big hug and say it into their shoulder: 'Do not be afraid.' Then let them hug you back and say it to you. Do it three times around the family."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Forgive one person today — go and tell them 'I forgive you' out loud, and then do something kind for them.",
+      "parentNote": "Forgiveness spoken aloud lands far deeper than forgiveness felt privately, and the kind act keeps it from being a mere formula. If the hurt is a serious one, do not rush your child — sit with them, and let forgiveness be a road rather than a single moment."
+    }
+  }
+}

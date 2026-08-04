@@ -1,0 +1,70 @@
+{
+  "id": "the-first-family",
+  "sensitivityTier": "general",
+  "title": "The First Family with God",
+  "subtitle": "God made a garden, a helper and a friendship — people were never meant to be alone",
+  "collection": "in-the-beginning",
+  "mainTruth": "God made people to walk with Him and to belong to each other.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 2",
+  "durationMinutes": 5,
+  "coverEmoji": "🌿",
+  "coverColor": "#14532D",
+  "illustrationPrompt": "A lush garden in Eden at golden hour, two small human figures walking together among fruit trees and a wide river, warm light falling through leaves, painterly gouache illustration on parchment paper, deep green and honey-gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, peaceful and full of belonging --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "After God had made the sky and the sea and every living thing, He did something especially tender. He knelt down in the dust of the ground, formed a man with His own hands, and breathed His own breath into him. The man opened his eyes — and the very first face he saw was God's.\n\nGod planted a garden for him, a place called Eden, full of rivers and fruit trees and every good thing. He gave the man real work to do: to care for the garden and keep it well. And God walked with him there. This was not a distant God watching from far away — this was a God who came close, who talked with the man, who shared the cool of the evening with him.\n\nThen God said something surprising. Everything He had made so far, He had called good. But now He said: 'It is not good for the man to be alone.' So God made a woman — someone to stand beside him, to help him, to belong with him. And there they were: the first family, together in the garden, walking with God and loving each other. That is what people were made for. Not to be alone. To be with God, and to be with one another.",
+      "childText": "God made the first man with His own hands, and breathed life into him. Then God planted a beautiful garden with rivers and fruit trees, and God walked there with him — they were friends! But God said, 'It is not good for the man to be alone.' So God made a woman to be with him. Now there was a family in the garden, close to God and close to each other. That is what God made us for!",
+      "verses": [
+        {
+          "ref": "Genesis 2:7",
+          "kjv": "And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.",
+          "little_bible": "God made the man from the dust. He breathed life into him."
+        },
+        {
+          "ref": "Genesis 2:8",
+          "kjv": "And the LORD God planted a garden eastward in Eden; and there he put the man whom he had formed.",
+          "little_bible": "God planted a beautiful garden. He put the man there."
+        },
+        {
+          "ref": "Genesis 2:15",
+          "kjv": "And the LORD God took the man, and put him into the garden of Eden to dress it and to keep it.",
+          "little_bible": "God gave the man good work. He cared for the garden."
+        },
+        {
+          "ref": "Genesis 2:18",
+          "kjv": "And the LORD God said, It is not good that the man should be alone; I will make him an help meet for him.",
+          "little_bible": "God said: 'It is not good to be alone.' So God made a helper."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Who has God given you to be close to?",
+      "parentGuide": "This story introduces fellowship — the truth that people were made for relationship, first with God and then with each other. Before your child ever hears about sin, they need to know what was lost. Name the people in your family out loud, and say plainly: 'God gave you to me.' If your child has experienced loss or loneliness, sit with that honestly — God's answer to 'it is not good to be alone' is still true today.",
+      "familyQuestion": "What is one thing our family loves doing together?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You for making us. Thank You for walking with us like You walked in the garden. Thank You for the people You have given us to love. Help us to stay close to You and close to each other. Amen.",
+      "childPrompt": "Can you thank God for one person He has given you?",
+      "prayerPoints": [
+        "Thank God that He made you and came close to you",
+        "Thank God for one person in your family by name"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "It is not good for the man to be alone.",
+      "ref": "Genesis 2:18",
+      "memoryPhrase": "We belong with God!",
+      "tip": "Hold hands in a circle and swing them gently as you say: 'We belong with God!' Then squeeze the hand of the person next to you three times — once for each word of 'with', 'each', 'other'."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find someone in your home today and do something together — build, cook, tidy or play. Being together is the point.",
+      "parentNote": "Fellowship is learned before it is understood. A shared task teaches a young child what 'not alone' feels like far better than an explanation does. Keep it small and unhurried."
+    }
+  }
+}

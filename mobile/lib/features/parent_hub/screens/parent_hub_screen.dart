@@ -945,6 +945,10 @@ class _SettingsCardState extends ConsumerState<_SettingsCard> {
 
   @override
   Widget build(BuildContext context) {
+    // Free allowance is consumption-based: count the stories this child has opened.
+    final storiesUsed =
+        ref.watch(consumedStoryIdsProvider(widget.profile.id)).valueOrNull?.length ?? 0;
+
     return _SectionCard(
       title: 'SETTINGS',
       icon: Icons.tune_rounded,
@@ -1020,7 +1024,9 @@ class _SettingsCardState extends ConsumerState<_SettingsCard> {
                     color: AppColours.textDark, fontSize: 14),
               ),
               Text(
-                widget.profile.isUnlocked ? 'All stories' : 'Free (20 stories)',
+                widget.profile.isUnlocked
+                    ? 'All stories'
+                    : '$storiesUsed of $kFreeStoryAllowance free stories used',
                 style: AppTextStyles.label.copyWith(
                     color: widget.profile.isUnlocked
                         ? AppColours.earth
@@ -1029,6 +1035,15 @@ class _SettingsCardState extends ConsumerState<_SettingsCard> {
               ),
             ],
           ),
+          if (!widget.profile.isUnlocked) ...[
+            const SizedBox(height: 6),
+            Text(
+              'Any $kFreeStoryAllowance stories are free — you choose which. '
+              'The Bible reader is always free.',
+              style: AppTextStyles.label.copyWith(
+                  color: AppColours.textMuted, fontSize: 11),
+            ),
+          ],
         ],
       ),
     );

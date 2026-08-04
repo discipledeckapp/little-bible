@@ -1,0 +1,70 @@
+{
+  "id": "the-tall-tower",
+  "sensitivityTier": "general",
+  "title": "The Tall Tower",
+  "subtitle": "People tried to make a big name for themselves — and God had a better idea",
+  "collection": "promise-family",
+  "mainTruth": "We do not have to make ourselves great. God gives His name and His blessing as a gift.",
+  "ageRange": "4-7",
+  "bibleRef": "Genesis 11:1-9",
+  "durationMinutes": 5,
+  "coverEmoji": "🗼",
+  "coverColor": "#78350F",
+  "illustrationPrompt": "An unfinished stepped brick tower rising out of a plain, tiny workers with baskets on the ramps, scaffolding half built, a wide pale sky above dwarfing the whole structure, painterly gouache illustration on parchment paper, terracotta and dusty gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, grand ambition made small by an enormous sky --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "After the flood, people spread out across the world, and for a long time everybody spoke the same language. They travelled east and found a wide flat plain, and they settled there.\n\nThen someone had an idea. 'Let's make bricks,' they said. 'Let's build a city, and a tower so tall it reaches the sky. Let us make a name for ourselves.' Do you hear what they wanted? Not to know God. Not to thank God. They wanted to be famous. They wanted everyone to look up and say how great they were. That wanting to be big and important all by ourselves has a name — it is called pride.\n\nSo they built. Brick upon brick, higher and higher, and they were very proud of it. But here is the thing. Their tower was meant to reach the sky — and God had to come down to look at it. Next to God, the tallest tower people could build was a tiny thing.\n\nGod saw that pride would only lead them further from Him and into more harm. So He mixed up their language. Suddenly nobody could understand anybody. The building stopped. The people scattered across the earth, and the place was called Babel, which means mixed up.\n\nThey wanted to make a great name for themselves. Very soon, you will hear about a man God called — and God said to him, 'I will make your name great.' The name they tried to grab, God simply gave away. That is how God works: not for people who climb, but for people who receive.",
+      "childText": "Long ago everybody spoke the same language. They said, 'Let's build a tower up to the sky, so everyone will say how great we are!' Wanting to be big all by yourself is called pride. So they built and built. But their tall tower was so small to God that He came down to look at it! God mixed up their words so nobody could understand each other, and they stopped building. They wanted a great name for themselves. But God gives a great name as a gift — you will see!",
+      "verses": [
+        {
+          "ref": "Genesis 11:4",
+          "kjv": "And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name.",
+          "little_bible": "They said: 'Let us build a tower. Let us be famous.'"
+        },
+        {
+          "ref": "Genesis 11:5",
+          "kjv": "And the LORD came down to see the city and the tower, which the children of men builded.",
+          "little_bible": "God came down to look at their tower. It was very small."
+        },
+        {
+          "ref": "Genesis 11:8",
+          "kjv": "So the LORD scattered them abroad from thence upon the face of all the earth: and they left off to build the city.",
+          "little_bible": "God spread them all over the earth. They stopped building."
+        },
+        {
+          "ref": "Proverbs 16:18",
+          "kjv": "Pride goeth before destruction, and an haughty spirit before a fall.",
+          "little_bible": "Being too proud comes right before a fall."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did they want to build the tower?",
+      "parentGuide": "Pride is the concept here, and young children grasp it best as 'wanting everyone to look at me and say I am the best.' Be careful not to teach that being pleased with good work is wrong — the problem at Babel was wanting greatness instead of God, not enjoying a job well done. Retrieve the last World: God made us, we sinned, God promised a Rescuer. Then point forward: God is about to make one man's name great as a gift, which is the exact opposite of what happened here.",
+      "familyQuestion": "What is the difference between being proud of something and being proud of yourself?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, You are the greatest one — much bigger than anything we could build. We do not need to make ourselves big. Thank You that You give good things as gifts. Help us to look up to You instead of showing off. Amen.",
+      "childPrompt": "Can you tell God one thing that makes Him great?",
+      "prayerPoints": [
+        "Tell God one thing that shows how great He is",
+        "Ask God to help you when you want to show off"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Being too proud comes right before a fall.",
+      "ref": "Proverbs 16:18",
+      "memoryPhrase": "God is greater!",
+      "tip": "Stretch up on tiptoes as high as you can and say 'so tall!' — then point up much higher and say: 'God is greater!' Do it three times."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Notice something someone else did well today, and tell them out loud how good it was — instead of talking about yourself.",
+      "parentNote": "Praising another person is the practical opposite of pride, and it is something a four-year-old can genuinely do. Point it out when your child does it, and model it toward them and toward other adults in front of them."
+    }
+  }
+}

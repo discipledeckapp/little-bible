@@ -21,6 +21,38 @@ Stream<Set<String>> completedStoryIds(Ref ref, String profileId) {
   return ref.watch(storyProgressRepositoryProvider).watchCompletedStoryIds(profileId);
 }
 
+/// Live set of story IDs this profile has *opened* — started or completed.
+///
+/// This is the free-allowance meter: the child may consume any
+/// [kFreeStoryAllowance] stories they choose, in any order. See
+/// [storyPaywallLocked].
+@riverpod
+Stream<Set<String>> consumedStoryIds(Ref ref, String profileId) {
+  return ref.watch(storyProgressRepositoryProvider).watchConsumedStoryIds(profileId);
+}
+
+/// How many stories a child may open before the unlock purchase is required.
+const kFreeStoryAllowance = 20;
+
+/// Whether [storyId] is behind the paywall for this profile.
+///
+/// The allowance is **consumption-based, not positional**: any 20 stories the
+/// child opens are free, whichever they pick. Deliberately NOT "the first 20 in
+/// curriculum order" — that rule silently paywalled the gospel as soon as Old
+/// Testament worlds were inserted ahead of the Jesus stories.
+///
+/// A story already opened never becomes locked again, so access is never revoked
+/// once given. The standalone Bible reader is not gated at all.
+bool storyPaywallLocked({
+  required String storyId,
+  required bool profileUnlocked,
+  required Set<String> consumedIds,
+}) {
+  if (profileUnlocked) return false;
+  if (consumedIds.contains(storyId)) return false;
+  return consumedIds.length >= kFreeStoryAllowance;
+}
+
 class StoryProgressRepository {
   StoryProgressRepository(this._db, this._profileRepo);
 
@@ -55,6 +87,14 @@ class StoryProgressRepository {
     return (_db.select(_db.storyProgress)
           ..where((t) =>
               t.profileId.equals(profileId) & t.status.equals('completed')))
+        .watch()
+        .map((rows) => rows.map((r) => r.storyId).toSet());
+  }
+
+  /// Live stream of every story ID this profile has opened (any status).
+  Stream<Set<String>> watchConsumedStoryIds(String profileId) {
+    return (_db.select(_db.storyProgress)
+          ..where((t) => t.profileId.equals(profileId)))
         .watch()
         .map((rows) => rows.map((r) => r.storyId).toSet());
   }

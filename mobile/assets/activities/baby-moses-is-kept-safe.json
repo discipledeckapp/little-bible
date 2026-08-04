@@ -1,0 +1,36 @@
+{
+  "storyId": "baby-moses-is-kept-safe",
+  "memoryBuilder": {
+    "phrase": "God hears us!",
+    "phraseWords": ["God", "hears", "us!"],
+    "verseRef": "Exodus 2:24",
+    "verseText": "God heard His people crying. God remembered His promise.",
+    "verseWords": ["God", "heard", "His", "people", "crying.", "God", "remembered", "His", "promise."]
+  },
+  "sequence": {
+    "prompt": "How did God keep baby Moses safe? Put it in order.",
+    "items": [
+      { "id": "slaves",  "label": "A new king made God's people slaves", "emoji": "🧱", "order": 1 },
+      { "id": "cried",   "label": "God's people cried out, and God heard", "emoji": "🙏", "order": 2 },
+      { "id": "basket",  "label": "His mother hid him in a reed basket",  "emoji": "🧺", "order": 3 },
+      { "id": "found",   "label": "The princess found him and loved him", "emoji": "👑", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "mother",   "left": "Moses' mother", "leftEmoji": "🧺", "rightId": "hid",   "right": "Made a basket and hid her baby",    "rightEmoji": "🌾" },
+      { "leftId": "miriam",   "left": "Miriam",        "leftEmoji": "👧", "rightId": "watch", "right": "Watched from the tall grass",       "rightEmoji": "👀" },
+      { "leftId": "god",      "left": "God",           "leftEmoji": "✨", "rightId": "heard", "right": "Heard them crying and remembered",  "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "God hears people when they cry. Who do you know that needs help right now?",
+    "options": [
+      { "id": "friend", "label": "A friend who is sad",  "emoji": "😢" },
+      { "id": "family", "label": "Someone in my family", "emoji": "👨‍👩‍👧" },
+      { "id": "far",    "label": "People far away",      "emoji": "🌍" }
+    ],
+    "followUp": "God heard His people for four hundred years, and He never forgot one word of His promise. He hears you, and He hears the person you just thought of."
+  }
+}

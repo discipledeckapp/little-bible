@@ -23,15 +23,17 @@ class AnimatedStoryScene extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final reduceMotion = MediaQuery.of(context).disableAnimations;
-    return AnimatedBuilder(
-      animation: animation,
-      builder: (context, _) {
-        final t = reduceMotion ? 1.0 : animation.value.clamp(0.0, 1.0);
-        return CustomPaint(
-          painter: sceneFor(storyId, sceneIndex, t),
-          child: const SizedBox.expand(),
-        );
-      },
+    return ClipRect(
+      child: AnimatedBuilder(
+        animation: animation,
+        builder: (context, _) {
+          final t = reduceMotion ? 1.0 : animation.value.clamp(0.0, 1.0);
+          return CustomPaint(
+            painter: sceneFor(storyId, sceneIndex, t),
+            child: const SizedBox.expand(),
+          );
+        },
+      ),
     );
   }
 }
@@ -45,9 +47,11 @@ class StaticStoryScene extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: sceneFor(storyId, sceneIndex, 1.0),
-      child: const SizedBox.expand(),
+    return ClipRect(
+      child: CustomPaint(
+        painter: sceneFor(storyId, sceneIndex, 1.0),
+        child: const SizedBox.expand(),
+      ),
     );
   }
 }

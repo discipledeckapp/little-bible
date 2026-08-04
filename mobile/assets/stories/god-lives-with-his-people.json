@@ -1,0 +1,70 @@
+{
+  "id": "god-lives-with-his-people",
+  "sensitivityTier": "general",
+  "title": "God Lives with His People",
+  "subtitle": "God did not rescue His people and then go away — He moved in",
+  "collection": "god-rescues-a-people",
+  "mainTruth": "God's whole plan was never just to rescue us from something. It was to live with us.",
+  "ageRange": "4-7",
+  "bibleRef": "Exodus 25:1-9; 40:16-38",
+  "durationMinutes": 6,
+  "coverEmoji": "🕍",
+  "coverColor": "#166534",
+  "illustrationPrompt": "A beautiful curtained tent standing at the centre of a wide camp of smaller tents arranged around it, a glowing cloud resting directly above its roof, evening light across the desert, painterly gouache illustration on parchment paper, deep indigo, gold and linen-white palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, homecoming and settled presence --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Think about everything God had done. He heard His people crying in Egypt. He called Moses from the fire. He stood up to Pharaoh. He gave them a lamb and passed over them. He opened the sea. He fed them every single morning. He gave them His good commands.\n\nAnd then God asked for something. Not more work, and not payment. He said: 'Build Me a place to live, so that I can dwell among you.'\n\nGod wanted to move in.\n\nSo the people brought gifts — gold and silver, blue and purple cloth, fine linen, precious stones — and every single person gave because they wanted to. Then skilled workers built a beautiful tent called the tabernacle: curtains and coverings, a lamp that always burned, a table, and at the very centre a special room where God's presence would rest.\n\nAnd here is the wonderful part about where they put it. Not far away on a mountain. Not at the edge of the camp. Right in the middle. God's tent stood in the centre with all His people's tents pitched round about it, so that whichever direction a child looked from their family's tent, they could see the place where God lived.\n\nWhen it was finished, the cloud came down and covered the tent, and God's glory filled it. And from then on the cloud went with them everywhere. When the cloud lifted, they packed up and followed. When it settled, they stayed. God travelled with His people.\n\nThat is what God has wanted from the very beginning. Do you remember the garden, right at the start? God walking with the very first family. This is that, coming back.\n\nAnd it gets better. The Bible says that Jesus came and lived among us — the Word became flesh and pitched His tent with us. And one day God will say, 'Look! My home is with My people now.' Rescue was never the end of the story. Living with us was always the point.",
+      "childText": "Look at everything God had done! He heard His people cry. He rescued them from Egypt. He opened the sea. He fed them every morning. He gave them His good commands. Then God asked for one more thing: 'Build Me a place to live, so I can be right among you.' God wanted to move in! So everyone brought gifts, and they built a beautiful tent. And they put it right in the middle of the camp — so every child could see the place where God lived. Then the cloud came down and God's glory filled it. Wherever the cloud went, God's people followed. God was living with them — just like in the garden at the very beginning!",
+      "verses": [
+        {
+          "ref": "Exodus 25:2",
+          "kjv": "Of every man that giveth it willingly with his heart ye shall take my offering.",
+          "little_bible": "Everyone gave gifts because they wanted to."
+        },
+        {
+          "ref": "Exodus 25:8",
+          "kjv": "And let them make me a sanctuary; that I may dwell among them.",
+          "little_bible": "God said: 'Make Me a place, so I can live among you.'"
+        },
+        {
+          "ref": "Exodus 40:34",
+          "kjv": "Then a cloud covered the tent of the congregation, and the glory of the LORD filled the tabernacle.",
+          "little_bible": "The cloud came down. God's glory filled the tent."
+        },
+        {
+          "ref": "John 1:14",
+          "kjv": "And the Word was made flesh, and dwelt among us.",
+          "little_bible": "Jesus came and lived right here among us."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Where did they put God's tent in the camp?",
+      "parentGuide": "This is World 3's capstone, so use it to gather the whole thread up: God heard, called, redeemed, sheltered them with the lamb, opened the sea, fed them, gave His commands — and then moved in. The answer to the question is the doctrine: right in the middle. Ask your child what they remember from the garden in story 3, and let them notice that God walking with people is where the Bible started. Then show them the line: Jesus 'dwelt among us' is the same word as God pitching His tent, and Revelation 21 is where it lands. Rescue was never the goal; presence was.",
+      "familyQuestion": "What would be different about our home if we remembered God lives with us?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You did not rescue us and then go away. Thank You that You wanted to live right in the middle of Your people. Thank You that Jesus came and lived among us. Please be at the centre of our home. Amen.",
+      "childPrompt": "Can you ask God to be right in the middle of your home?",
+      "prayerPoints": [
+        "Thank God that He wanted to live with His people, not just rescue them",
+        "Ask God to be at the centre of your family"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'Make Me a place, so I can live among you.'",
+      "ref": "Exodus 25:8",
+      "memoryPhrase": "God lives with us!",
+      "tip": "Stand in a circle with everyone facing inward, like the tents around the tabernacle. Look into the middle and say together: 'God lives with us!' Do it three times, stepping one pace closer each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Choose one spot in your home today to be your family's praying place, and pray there together before bed.",
+      "parentNote": "A physical place makes an invisible truth concrete for a young child, which is exactly why God asked for a tent rather than an idea. It does not need to be special — a chair, a step, a corner. Go back to it tomorrow."
+    }
+  }
+}

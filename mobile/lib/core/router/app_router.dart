@@ -12,6 +12,9 @@ import '../../features/story/screens/games_screen.dart';
 import '../../features/story/screens/bible_verse_screen.dart';
 import '../../features/story/screens/coloring_screen.dart';
 import '../../features/bible/screens/bible_nav_screen.dart';
+import '../../features/bible/screens/book_picker_screen.dart';
+import '../../features/bible/screens/chapter_picker_screen.dart';
+import '../../features/bible/screens/verse_reader_screen.dart';
 import '../../features/parent_hub/screens/parent_hub_screen.dart';
 import '../../features/unlock/screens/unlock_screen.dart';
 import '../../features/verse_practice/screens/verse_practice_screen.dart';
@@ -21,16 +24,17 @@ part 'app_router.g.dart';
 
 // ─── Route names (use these constants, never raw strings) ────────────────────
 class AppRoutes {
-  static const splash      = '/splash';
-  static const onboarding  = '/onboarding';
-  static const home        = '/';
-  static const story       = '/story/:storyId';
-  static const bibleNav    = '/bible';
-  static const bibleBook   = '/bible/:book';
+  static const splash       = '/splash';
+  static const onboarding   = '/onboarding';
+  static const home         = '/';
+  static const story        = '/story/:storyId';
+  static const bibleNav     = '/bible';
+  static const bibleMyVerses = '/bible/my-verses';
+  static const bibleBook    = '/bible/:book';
   static const bibleChapter = '/bible/:book/:chapter';
-  static const bibleVerse  = '/bible/:book/:chapter/:verse';
-  static const parentHub   = '/parent-hub';
-  static const unlock      = '/unlock';
+  static const bibleVerse   = '/bible/:book/:chapter/:verse';
+  static const parentHub    = '/parent-hub';
+  static const unlock       = '/unlock';
 }
 
 @riverpod
@@ -104,27 +108,32 @@ GoRouter appRouter(Ref ref) {
       ),
       GoRoute(
         path: AppRoutes.bibleNav,
-        builder: (context, state) => const BibleNavScreen(),
+        builder: (context, _) => const BookPickerScreen(),
         routes: [
           GoRoute(
+            path: 'my-verses',
+            builder: (context, _) => const BibleNavScreen(),
+          ),
+          GoRoute(
             path: ':book',
-            builder: (context, state) => BibleNavScreen(
-              book: state.pathParameters['book'],
+            builder: (context, state) => ChapterPickerScreen(
+              book: state.pathParameters['book']!,
             ),
             routes: [
               GoRoute(
                 path: ':chapter',
-                builder: (context, state) => BibleNavScreen(
-                  book:    state.pathParameters['book'],
-                  chapter: int.tryParse(state.pathParameters['chapter'] ?? ''),
+                builder: (context, state) => VerseReaderScreen(
+                  book:       state.pathParameters['book']!,
+                  chapter:    int.parse(state.pathParameters['chapter']!),
+                  startVerse: 1,
                 ),
                 routes: [
                   GoRoute(
                     path: ':verse',
-                    builder: (context, state) => BibleNavScreen(
-                      book:    state.pathParameters['book'],
-                      chapter: int.tryParse(state.pathParameters['chapter'] ?? ''),
-                      verse:   int.tryParse(state.pathParameters['verse'] ?? ''),
+                    builder: (context, state) => VerseReaderScreen(
+                      book:       state.pathParameters['book']!,
+                      chapter:    int.parse(state.pathParameters['chapter']!),
+                      startVerse: int.parse(state.pathParameters['verse']!),
                     ),
                   ),
                 ],
