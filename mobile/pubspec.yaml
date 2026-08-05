@@ -1,7 +1,7 @@
 name: little_bible
 description: "God's Word for Little Hearts — Bible stories, games, and verse memory for children."
 publish_to: 'none'
-version: 1.1.0+4
+version: 1.1.0+6
 
 environment:
   sdk: ^3.10.1
