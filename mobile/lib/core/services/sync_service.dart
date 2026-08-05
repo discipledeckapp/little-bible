@@ -6,6 +6,7 @@ import 'package:dio/dio.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../database/app_database.dart';
 import '../providers/database_provider.dart';
+import 'device_identity_service.dart';
 
 part 'sync_service.g.dart';
 
@@ -14,12 +15,15 @@ const _kBackendBase = 'https://littlebible.org';
 @riverpod
 SyncService syncService(Ref ref) {
   final db = ref.watch(databaseProvider);
-  return SyncService(db);
+  final deviceIdentity = ref.watch(deviceIdentityServiceProvider);
+  return SyncService(db, deviceIdentity);
 }
 
 class SyncService {
-  SyncService(this._db);
+  SyncService(this._db, this._deviceIdentity);
+
   final AppDatabase _db;
+  final DeviceIdentityService _deviceIdentity;
   bool _syncing = false;
 
   final _dio = Dio(BaseOptions(
@@ -28,9 +32,13 @@ class SyncService {
   ));
 
   /// Call on app foreground + after any story completion.
-  /// No-op if already syncing or no pending entries.
-  Future<void> drain({String? sessionCookie}) async {
-    if (_syncing || sessionCookie == null) return;
+  ///
+  /// Progress entries are authenticated with the device's Bearer token
+  /// (UUID in secure storage), which the backend stores against a deviceId
+  /// column — no user session required. Unlock entries authenticate on the
+  /// store-signed receipt itself and are sent without the token.
+  Future<void> drain() async {
+    if (_syncing) return;
     _syncing = true;
     try {
       final pending = await _db.getPendingSyncEntries();
@@ -46,12 +54,8 @@ class SyncService {
         }
       }
 
-      final headers = <String, String>{
-        'Content-Type': 'application/json',
-        'Cookie': sessionCookie,
-      };
-
       if (progressEntries.isNotEmpty) {
+        final deviceToken = await _deviceIdentity.getOrCreate();
         final entries = progressEntries.map((e) {
           final decoded = jsonDecode(e.payload) as Map<String, dynamic>;
           return <String, dynamic>{
@@ -66,7 +70,10 @@ class SyncService {
         final res = await _dio.post(
           '$_kBackendBase/api/mobile/progress',
           data: {'entries': entries},
-          options: Options(headers: headers),
+          options: Options(headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer $deviceToken',
+          }),
         );
         if (res.statusCode == 200) {
           await _db.markSyncEntriesSynced(progressEntries.map((e) => e.id).toList());
@@ -78,9 +85,13 @@ class SyncService {
         final res = await _dio.post(
           '$_kBackendBase/api/mobile/unlock',
           data: decoded,
-          options: Options(headers: headers),
+          options: Options(
+            headers: {'Content-Type': 'application/json'},
+            // 403 = store rejected receipt; it will never succeed, so clear it.
+            validateStatus: (s) => s != null && s < 500,
+          ),
         );
-        if (res.statusCode == 200) {
+        if (res.statusCode == 200 || res.statusCode == 403 || res.statusCode == 400) {
           await _db.markSyncEntriesSynced([e.id]);
         }
       }

@@ -68,6 +68,13 @@ model User {
   wantsNotifications  Boolean               @default(false)
   cloudSyncEnabled    Boolean               @default(false)
   consentedAt         DateTime?
+
+  // Content authoring & review (US-19 / US-20)
+  contentPackages   ContentPackage[]  @relation("ContentPackageAuthor")
+  contentVersions   ContentVersion[]  @relation("ContentVersionAuthor")
+  contentApprovals  ContentApproval[] @relation("ContentApprovalReviewer")
+  lbvVersesAuthored LbvVerseDraft[]   @relation("LbvVerseAuthor")
+  lbvVersesReviewed LbvVerseDraft[]   @relation("LbvVerseReviewer")
 }
 
 model VerificationToken {
@@ -221,34 +228,51 @@ model AnalyticsEvent {
 
 /// Privacy-minimised mobile progress. profileId is a random app identifier;
 /// nickname, drawings, free text and exact birth dates are never uploaded.
+/// Progress records from the mobile app.
+///
+/// Entries arriving via a session cookie carry `userId`; entries arriving via
+/// the device-token Bearer scheme carry `deviceId` (the app's secure-storage
+/// UUID) and leave `userId` null. This mirrors the design of MobileEntitlement.
 model MobileProgress {
   id         String   @id @default(cuid())
-  userId     String
+  userId     String?
+  deviceId   String?
   profileId  String
   operation  String
   payload    String
   clientId   String
   createdAt  DateTime
   receivedAt DateTime @default(now())
-  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user       User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, clientId])
+  @@unique([deviceId, clientId])
   @@index([userId, profileId, receivedAt])
+  @@index([deviceId, profileId, receivedAt])
 }
 
+/// A validated store purchase.
+///
+/// `userId` is OPTIONAL: the mobile app has no login, so most entitlements
+/// arrive with no user attached and are identified by `deviceId` instead. The
+/// store-signed receipt is what authenticates the request, and `transactionId`
+/// is the real idempotency key — it is the only uniqueness constraint that can
+/// be relied on. (There used to be a `@@unique([userId, productId])`, which
+/// silently assumed every purchase had a user.)
 model MobileEntitlement {
   id            String    @id @default(cuid())
-  userId        String
+  userId        String?
+  deviceId      String?
   productId     String
   platform      String
   transactionId String    @unique
   status        String    @default("active")
   verifiedAt    DateTime  @default(now())
   revokedAt     DateTime?
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user          User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@unique([userId, productId])
   @@index([userId, status])
+  @@index([deviceId])
 }
 
 model ContentReview {
@@ -344,4 +368,134 @@ model MemoryVerseProgress {
   @@unique([userId, verseRef])
   @@unique([memberId, verseRef])
   @@index([verseRef])
+}
+
+// ── Content authoring & review workflow (US-19 / US-20) ──────────────────────
+//
+// A content package is never edited in place. Every save produces a new
+// ContentVersion holding the whole package body, so the review trail, the
+// published bytes and the rollback target are all the same object. Publication
+// requires recorded approvals from three distinct reviewers, none of whom may be
+// the version's author (see lib/content/review-workflow.ts).
+
+model ContentPackage {
+  id                  String  @id // story id, e.g. "the-lost-son"
+  kind                String  @default("stories") // stories | activities
+  title               String
+  genre               String // narrative | wisdom | lament | teaching | parable | poetry
+  sensitivityTier     String // general | guided | parental_presence
+  ageBand             String  @default("emerging") // early | emerging | independent
+  learningObjective   String
+  originalContext     String
+  canonicalConnection String
+  disputedDoctrines   String? // free text; null = none flagged
+  status              String  @default("draft") // draft | in_review | approved | published | archived
+
+  createdById        String
+  createdBy          User    @relation("ContentPackageAuthor", fields: [createdById], references: [id])
+  publishedVersionId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  versions ContentVersion[]
+
+  @@index([status])
+  @@index([kind, status])
+}
+
+model ContentVersion {
+  id            String         @id @default(cuid())
+  packageId     String
+  package       ContentPackage @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  versionNumber Int
+  /// The complete package payload as published to R2. JSON string (D1 has no JSON type).
+  body          String
+  /// Matches the R2 key's content hash, so a version maps to exactly one object.
+  contentHash   String
+  changeNote    String?
+  status        String         @default("in_review") // in_review | approved | rejected | published | superseded
+
+  authorId String
+  author   User   @relation("ContentVersionAuthor", fields: [authorId], references: [id])
+
+  r2Key       String?
+  createdAt   DateTime  @default(now())
+  publishedAt DateTime?
+
+  approvals ContentApproval[]
+
+  @@unique([packageId, versionNumber])
+  @@index([status])
+  @@index([packageId, createdAt])
+}
+
+model ContentApproval {
+  id        String         @id @default(cuid())
+  versionId String
+  version   ContentVersion @relation(fields: [versionId], references: [id], onDelete: Cascade)
+
+  /// theological | christian_education | safeguarding
+  reviewKind String
+  reviewerId String
+  reviewer   User   @relation("ContentApprovalReviewer", fields: [reviewerId], references: [id])
+
+  /// approved | revision_requested
+  decision String
+  /// Required in both directions — an approval with no comment is not a review.
+  comment  String
+
+  createdAt DateTime @default(now())
+
+  /// One decision per review kind per version; re-reviewing replaces the row.
+  @@unique([versionId, reviewKind])
+  @@index([reviewerId])
+}
+
+model LbvVerseDraft {
+  id       String @id @default(cuid())
+  bookSlug String
+  chapter  Int
+  verseNum Int
+
+  /// Source text, never edited (Translation Charter §1.1).
+  kjv String
+  /// Read-only modern reference shown beside the adaptation.
+  web String @default("")
+  /// The Little Bible adaptation being authored.
+  lbv String
+
+  status String @default("draft") // draft | in_review | published
+
+  authorId      String
+  author        User    @relation("LbvVerseAuthor", fields: [authorId], references: [id])
+  reviewerId    String?
+  reviewer      User?   @relation("LbvVerseReviewer", fields: [reviewerId], references: [id])
+  reviewComment String?
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  publishedAt DateTime?
+
+  @@unique([bookSlug, chapter, verseNum])
+  @@index([status])
+}
+
+/// Published LBV verses served to the mobile app's verse resolution chain.
+/// `source` distinguishes an adaptation from the bundled public-domain text.
+model AdaptedVerse {
+  id       String @id @default(cuid())
+  bookSlug String
+  chapter  Int
+  verseNum Int
+
+  text      String
+  source    String  @default("little-bible")
+  isAdapted Boolean @default(true)
+
+  publishedAt DateTime @default(now())
+  draftId     String?
+
+  @@unique([bookSlug, chapter, verseNum])
+  @@index([bookSlug, chapter])
 }
