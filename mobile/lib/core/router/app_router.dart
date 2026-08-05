@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -22,6 +23,10 @@ import '../providers/profile_provider.dart';
 
 part 'app_router.g.dart';
 
+/// Shared navigator key so non-widget code (e.g. notification handlers) can
+/// push routes without needing a BuildContext.
+final appNavigatorKey = GlobalKey<NavigatorState>();
+
 // ─── Route names (use these constants, never raw strings) ────────────────────
 class AppRoutes {
   static const splash       = '/splash';
@@ -42,6 +47,7 @@ GoRouter appRouter(Ref ref) {
   final hasProfile = ref.watch(hasActiveProfileProvider);
 
   return GoRouter(
+    navigatorKey: appNavigatorKey,
     initialLocation: AppRoutes.splash,
     redirect: (context, state) {
       final loc = state.matchedLocation;

@@ -44,7 +44,10 @@ dependencies:
   flutter_local_notifications: ^18.0.1
 
   # ── Background sync ──────────────────────────────────────────────────────────
-  # workmanager: ^0.5.2  — Sprint 4; v0.5.x uses removed V1 embedding (upgrade to ^0.9.1 when adding)
+  workmanager: ^0.9.1
+
+  # ── Network connectivity ──────────────────────────────────────────────────────
+  connectivity_plus: ^6.1.3
 
   # ── Auth (parent only) ─────────────────────────────────────────────────────
   # google_sign_in: ^6.2.2  — deferred until cloud sync sprint
@@ -204,6 +207,12 @@ flutter:
     - assets/audio/stories/solomon-asks-for-wisdom/
     - assets/audio/stories/elijah-and-the-only-true-god/
     - assets/audio/stories/the-prophets-promise-new-hearts/
+    - assets/audio/stories/an-angel-visits-mary/
+    - assets/audio/stories/visitors-worship-the-king/
+    - assets/audio/stories/jesus-grows-and-obeys/
+    - assets/audio/stories/jesus-is-baptised/
+    - assets/audio/stories/jesus-says-no-to-tempter/
+    - assets/audio/stories/jesus-calls-his-helpers/
     - assets/audio/stories/birth-of-jesus/
     - assets/audio/stories/jesus-loves-children/
     - assets/audio/stories/david-the-shepherd-boy/

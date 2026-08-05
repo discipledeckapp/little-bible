@@ -1687,7 +1687,7 @@ class _FillGapGameState extends State<_FillGapGame>
 
 class _TorFQ { final String text; final bool isTrue; const _TorFQ({required this.text, required this.isTrue}); }
 
-class _TrueOrFalseGame extends StatefulWidget {
+class _TrueOrFalseGame extends ConsumerStatefulWidget {
   const _TrueOrFalseGame({
     super.key,
     required this.activity,
@@ -1699,10 +1699,10 @@ class _TrueOrFalseGame extends StatefulWidget {
   final String Function(bool correct) onAnswer;
 
   @override
-  State<_TrueOrFalseGame> createState() => _TrueOrFalseGameState();
+  ConsumerState<_TrueOrFalseGame> createState() => _TrueOrFalseGameState();
 }
 
-class _TrueOrFalseGameState extends State<_TrueOrFalseGame> {
+class _TrueOrFalseGameState extends ConsumerState<_TrueOrFalseGame> {
   int _qi = 0, _score = 0;
   bool _answered = false;
   bool? _chosenTrue;
@@ -1729,6 +1729,16 @@ class _TrueOrFalseGameState extends State<_TrueOrFalseGame> {
     final base = _buildBase();
     final pass2 = List<_TorFQ>.from(base)..shuffle(math.Random());
     _questions = [...base, ...pass2];
+    _speakQuestion();
+  }
+
+  Future<void> _speakQuestion() async {
+    await Future.delayed(const Duration(milliseconds: 350));
+    if (!mounted) return;
+    await ref.read(narrationServiceProvider).speakUi(
+      'lumi_true_or_false_q',
+      fallback: _questions[_qi].text,
+    );
   }
 
   void _onAnswer(bool answerTrue) {
@@ -1740,6 +1750,7 @@ class _TrueOrFalseGameState extends State<_TrueOrFalseGame> {
       if (!mounted) return;
       if (_qi < _questions.length - 1) {
         setState(() { _qi++; _answered = false; _chosenTrue = null; });
+        _speakQuestion();
       } else {
         widget.onDone(_score, _questions.length);
       }
