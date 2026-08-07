@@ -6,7 +6,7 @@ part of 'unlock_service.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$unlockServiceHash() => r'b7b54c88f5a49d73529b3fff58bf4eed1fe49acb';
+String _$unlockServiceHash() => r'a577135125b2b1577b5875793a7c2087c447e53f';
 
 /// See also [unlockService].
 @ProviderFor(unlockService)

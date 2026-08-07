@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -7,6 +8,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../database/app_database.dart';
 import '../providers/database_provider.dart';
 import '../providers/profile_provider.dart';
+import 'device_identity_service.dart';
 
 part 'unlock_service.g.dart';
 
@@ -46,18 +48,24 @@ class UnlockState {
 UnlockService unlockService(Ref ref) {
   final db = ref.watch(databaseProvider);
   final profileRepo = ref.watch(profileRepositoryProvider);
-  final service = UnlockService(db, profileRepo);
+  final deviceIdentity = ref.watch(deviceIdentityServiceProvider);
+  final service = UnlockService(db, profileRepo, deviceIdentity);
   ref.onDispose(service.dispose);
   return service;
 }
 
 class UnlockService extends ChangeNotifier {
-  UnlockService(this._db, this._profileRepo) {
+  UnlockService(this._db, this._profileRepo, this._deviceIdentity) {
     _init();
   }
 
   final AppDatabase _db;
   final ProfileRepository _profileRepo;
+
+  /// Shared with SyncService, so an entitlement and a progress row are attributed
+  /// to the SAME device. Minting a second identifier here would have split one
+  /// install across two device ids on the server.
+  final DeviceIdentityService _deviceIdentity;
   final _storage = const FlutterSecureStorage(
     aOptions: AndroidOptions(encryptedSharedPreferences: true),
   );
@@ -139,10 +147,37 @@ class UnlockService extends ChangeNotifier {
     await InAppPurchase.instance.buyNonConsumable(purchaseParam: param);
   }
 
+  /// Re-applies a previous purchase made on this store account.
+  ///
+  /// `restorePurchases()` emits nothing at all when there is no purchase to
+  /// restore, so waiting on the purchase stream alone left the button spinning
+  /// forever. If nothing has arrived shortly after the call returns, drop back
+  /// to idle and say so.
   Future<void> restore() async {
+    if (_state.status == UnlockStatus.loading) return;
     _state = _state.copyWith(status: UnlockStatus.loading);
     notifyListeners();
-    await InAppPurchase.instance.restorePurchases();
+
+    try {
+      await InAppPurchase.instance.restorePurchases();
+    } catch (e) {
+      _state = _state.copyWith(
+        status: UnlockStatus.error,
+        errorMessage: 'Could not reach the store. Please try again.',
+      );
+      notifyListeners();
+      return;
+    }
+
+    // Give the purchase stream a moment to deliver any restored purchase.
+    await Future.delayed(const Duration(seconds: 3));
+    if (_state.status == UnlockStatus.loading) {
+      _state = _state.copyWith(
+        status: UnlockStatus.error,
+        errorMessage: 'No previous purchase found on this store account.',
+      );
+      notifyListeners();
+    }
   }
 
   Future<void> _onPurchaseUpdate(List<PurchaseDetails> purchases) async {
@@ -191,6 +226,7 @@ class UnlockService extends ChangeNotifier {
 
     // Queue the store-signed verification data against the active profile for
     // server-side receipt validation.
+    final deviceId = await _deviceIdentity.getOrCreate();
     final profiles = await _db.select(_db.childProfiles).get();
     final active = profiles.where((p) => p.isActive).firstOrNull;
     if (active != null) {
@@ -198,7 +234,7 @@ class UnlockService extends ChangeNotifier {
         SyncQueueCompanion.insert(
           profileId: active.id,
           operation: 'unlock',
-          payload: _unlockPayload(purchase),
+          payload: _unlockPayload(purchase, deviceId),
         ),
       );
     }
@@ -211,18 +247,19 @@ class UnlockService extends ChangeNotifier {
     }
   }
 
-  String _unlockPayload(PurchaseDetails purchase) {
-    final escapedReceipt = purchase.verificationData.serverVerificationData
-        .replaceAll(r'\', r'\\')
-        .replaceAll('"', r'\"');
-    final escapedSource = purchase.verificationData.source
-        .replaceAll(r'\', r'\\')
-        .replaceAll('"', r'\"');
-    final escapedId = (purchase.purchaseID ?? '')
-        .replaceAll(r'\', r'\\')
-        .replaceAll('"', r'\"');
-    return '{"productId":"$kUnlockProductId","transactionId":"$escapedId",'
-        '"source":"$escapedSource","verificationData":"$escapedReceipt"}';
+  /// Builds the unlock payload with [jsonEncode].
+  ///
+  /// This used to hand-roll the JSON, escaping only backslashes and quotes. Any
+  /// newline or control character in a store receipt would have produced invalid
+  /// JSON and a silent 400 from the server.
+  String _unlockPayload(PurchaseDetails purchase, String deviceId) {
+    return jsonEncode({
+      'productId': kUnlockProductId,
+      'transactionId': purchase.purchaseID ?? '',
+      'source': purchase.verificationData.source,
+      'verificationData': purchase.verificationData.serverVerificationData,
+      'deviceId': deviceId,
+    });
   }
 
   @override
