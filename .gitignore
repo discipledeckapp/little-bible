@@ -13,6 +13,8 @@ backend/node_modules
 
 # testing
 /coverage
+/.venv-audio/
+/audio_output/
 
 # next.js
 /.next/
@@ -55,3 +57,6 @@ worker-configuration.d.ts
 .open-next/
 .wrangler/
 prisma/.local.db*
+
+# Local agent worktrees — scratch, never source
+.claude/worktrees/

@@ -7,6 +7,9 @@ export const ADMIN_ROLES = [
   'CONTENT_EDITOR',
   'THEOLOGICAL_REVIEWER',
   'CURRICULUM_MANAGER',
+  // The delivery plan requires a safeguarding sign-off distinct from the
+  // theological and Christian-education ones before any package is published.
+  'SAFEGUARDING_REVIEWER',
   'SUPPORT_ADMIN',
   'ANALYTICS_VIEWER',
 ] as const;

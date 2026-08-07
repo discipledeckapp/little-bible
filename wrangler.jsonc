@@ -23,6 +23,21 @@
     {
       "binding": "NEXT_INC_CACHE_KV",
       "id": "0da2ebd2cbb6420d8fc1267fee5e89a6"
+    },
+    // Holds the single mutable content pointer (content:manifest:v1). Everything
+    // it points at lives in R2 under immutable, version-addressed keys.
+    // Create with: npx wrangler kv namespace create CONTENT_KV
+    {
+      "binding": "CONTENT_KV",
+      "id": "REPLACE_WITH_CONTENT_KV_NAMESPACE_ID"
+    }
+  ],
+  // Story/activity/audio payloads (US-23). Zero egress, cached at the edge for a
+  // year. Create with: npx wrangler r2 bucket create little-bible-content
+  "r2_buckets": [
+    {
+      "binding": "CONTENT_BUCKET",
+      "bucket_name": "little-bible-content"
     }
   ],
   "vars": {

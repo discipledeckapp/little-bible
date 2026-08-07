@@ -20,7 +20,8 @@ export const ROLE_PERMISSIONS: Record<AdminRole, AdminModule[]> = {
   ],
   CONTENT_EDITOR:        ['dashboard', 'content', 'reviews'],
   THEOLOGICAL_REVIEWER:  ['dashboard', 'reviews', 'content'],
-  CURRICULUM_MANAGER:    ['dashboard', 'curriculum', 'content'],
+  CURRICULUM_MANAGER:    ['dashboard', 'curriculum', 'content', 'reviews'],
+  SAFEGUARDING_REVIEWER: ['dashboard', 'reviews', 'content'],
   SUPPORT_ADMIN:         ['dashboard', 'users', 'families', 'feedback'],
   ANALYTICS_VIEWER:      ['dashboard', 'analytics'],
 };
@@ -40,6 +41,7 @@ export const ROLE_LABELS: Record<AdminRole, string> = {
   CONTENT_EDITOR:        'Content Editor',
   THEOLOGICAL_REVIEWER:  'Theological Reviewer',
   CURRICULUM_MANAGER:    'Curriculum Manager',
+  SAFEGUARDING_REVIEWER: 'Safeguarding Reviewer',
   SUPPORT_ADMIN:         'Support Admin',
   ANALYTICS_VIEWER:      'Analytics Viewer',
 };
@@ -49,6 +51,7 @@ export const ROLE_COLORS: Record<AdminRole, string> = {
   CONTENT_EDITOR:        'bg-blue-100 text-blue-800',
   THEOLOGICAL_REVIEWER:  'bg-emerald-100 text-emerald-800',
   CURRICULUM_MANAGER:    'bg-amber-100 text-amber-800',
+  SAFEGUARDING_REVIEWER: 'bg-rose-100 text-rose-800',
   SUPPORT_ADMIN:         'bg-sky-100 text-sky-800',
   ANALYTICS_VIEWER:      'bg-stone-100 text-stone-700',
 };
