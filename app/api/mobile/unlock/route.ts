@@ -98,15 +98,14 @@ function unverifiedReceiptsAllowed(): boolean {
 // ── Apple App Store Server API (StoreKit 2) ───────────────────────────────────
 
 async function validateApple(signedTransaction: string, transactionId: string): Promise<boolean> {
-  const issuerId = process.env.APPLE_ISSUER_ID;
-  const keyId = process.env.APPLE_KEY_ID;
-  const privateKey = process.env.APPLE_PRIVATE_KEY;
-
-  if (!issuerId || !keyId || !privateKey) {
-    console.warn('[unlock] Apple credentials not configured — receipt not validated');
-    return unverifiedReceiptsAllowed();
-  }
-
+  // NOTE: APPLE_ISSUER_ID / APPLE_KEY_ID / APPLE_PRIVATE_KEY are deliberately
+  // NOT required here. Verifying a StoreKit 2 signed transaction is a signature
+  // check against Apple's certificate chain — it needs the root CAs and nothing
+  // else. Those three credentials authenticate OUTBOUND calls to the App Store
+  // Server API (refund/revocation lookups, history), which this route does not
+  // make. Gating on them, as this used to, blocked every Apple receipt on
+  // credentials the verification path never reads.
+  //
   // Apple's verifier needs the real root CAs as DER buffers. Passing an empty
   // array (as this used to) does NOT fall back to a bundled set — the library
   // has no bundled set, so verification could never succeed.
