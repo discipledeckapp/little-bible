@@ -40,6 +40,7 @@ class _BibleVerseScreenState extends ConsumerState<BibleVerseScreen>
   int _verseIndex = 0;
   bool _speaking = false;
   bool _heardCurrent = false;
+  bool _showKjv = false;
   int? _highlightStart;
   int? _highlightEnd;
 
@@ -74,8 +75,25 @@ class _BibleVerseScreenState extends ConsumerState<BibleVerseScreen>
     super.dispose();
   }
 
-  String _textOf(StoryVerse v) =>
-      v.littleBible.isNotEmpty ? v.littleBible : v.kjv;
+  String _textOf(StoryVerse v) {
+    if (_showKjv && v.kjv.isNotEmpty) return v.kjv;
+    return v.littleBible.isNotEmpty ? v.littleBible : v.kjv;
+  }
+
+  // "Genesis 12:2" → "/bible/genesis/12"
+  String? _passageRoute(List<StoryVerse> verses) {
+    if (verses.isEmpty) return null;
+    final ref = verses.first.ref;
+    final colonIdx = ref.indexOf(':');
+    if (colonIdx < 0) return null;
+    final beforeColon = ref.substring(0, colonIdx).trim();
+    final lastSpace = beforeColon.lastIndexOf(' ');
+    if (lastSpace < 0) return null;
+    final bookName = beforeColon.substring(0, lastSpace);
+    final chapter = beforeColon.substring(lastSpace + 1);
+    final bookSlug = bookName.toLowerCase().replaceAll(' ', '-');
+    return '/bible/$bookSlug/$chapter';
+  }
 
   String _verseKey(String ref) =>
       ref.toLowerCase().replaceAll(' ', '-').replaceAll(':', '-');
@@ -174,6 +192,7 @@ class _BibleVerseScreenState extends ConsumerState<BibleVerseScreen>
         _verseIndex++;
         _speaking = false;
         _heardCurrent = false;
+        _showKjv = false;
         _highlightStart = null;
         _highlightEnd = null;
       });
@@ -197,6 +216,7 @@ class _BibleVerseScreenState extends ConsumerState<BibleVerseScreen>
         _verseIndex--;
         _speaking = false;
         _heardCurrent = false;
+        _showKjv = false;
         _highlightStart = null;
         _highlightEnd = null;
       });
@@ -273,6 +293,11 @@ class _BibleVerseScreenState extends ConsumerState<BibleVerseScreen>
                         highlightEnd: _highlightEnd,
                         isLast: isLast,
                         onSpeak: () => _toggleRead(verses),
+                        showKjv: _showKjv,
+                        hasLbv: verse.littleBible.isNotEmpty,
+                        hasKjv: verse.kjv.isNotEmpty,
+                        onToggleVersion: () => setState(() => _showKjv = !_showKjv),
+                        passageRoute: _passageRoute(verses),
                       ),
                     ),
                   ),
@@ -310,8 +335,6 @@ class _Header extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
       child: Row(
         children: [
-          // 60×60: Material's 48dp floor is an adult minimum; small children
-          // need more.
           Semantics(
             label: 'Go back',
             button: true,
@@ -348,11 +371,25 @@ class _Header extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          // Dots, not "2 / 4" — the audience is pre-numeracy.
+          // Dots + "2 of 4" counter for parents and emerging readers
           SizedBox(
-            width: 60,
-            child: Center(
-              child: _Dots(current: current, total: total),
+            width: 72,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                _Dots(current: current, total: total),
+                if (total > 1) ...[
+                  const SizedBox(height: 3),
+                  Text(
+                    '${current + 1} of $total',
+                    style: AppTextStyles.label.copyWith(
+                      color: AppColours.textMuted,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ],
             ),
           ),
         ],
@@ -405,6 +442,11 @@ class _VerseBody extends StatelessWidget {
     required this.highlightEnd,
     required this.isLast,
     required this.onSpeak,
+    required this.showKjv,
+    required this.hasKjv,
+    required this.hasLbv,
+    required this.onToggleVersion,
+    required this.passageRoute,
   });
 
   final StoryVerse verse;
@@ -415,14 +457,19 @@ class _VerseBody extends StatelessWidget {
   final int? highlightEnd;
   final bool isLast;
   final VoidCallback onSpeak;
+  final bool showKjv;
+  final bool hasKjv;
+  final bool hasLbv;
+  final VoidCallback onToggleVersion;
+  final String? passageRoute;
 
   @override
   Widget build(BuildContext context) {
-    // Pre-readers get centred text because it reads as a picture. Readers get
-    // left-aligned text: a ragged left edge breaks line-tracking for someone
-    // still learning to follow a line.
     final isPreReader = band == 'early';
     final align = isPreReader ? TextAlign.center : TextAlign.start;
+    final showingLbv = hasLbv && !showKjv;
+    final versionLabel = showingLbv ? 'LBV' : (hasKjv ? 'KJV' : '');
+    final versionColor = showingLbv ? AppColours.lumiGold : AppColours.textMuted;
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(24, 8, 24, 16),
@@ -430,8 +477,7 @@ class _VerseBody extends StatelessWidget {
         crossAxisAlignment:
             isPreReader ? CrossAxisAlignment.center : CrossAxisAlignment.start,
         children: [
-          // Lumi reads to the child, so the child is not alone with a wall of
-          // text. Tapping repeats the verse.
+          // Lumi reads to the child — tapping replays.
           Center(
             child: LumiWidget(
               state: speaking ? LumiState.wonder : LumiState.encourage,
@@ -441,30 +487,68 @@ class _VerseBody extends StatelessWidget {
           ),
           const SizedBox(height: 4),
 
-          // Reference — kept for the parent reading alongside; deliberately the
-          // quietest thing on the screen.
+          // Reference + version badge row
           Center(
-            child: Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
-              decoration: BoxDecoration(
-                color: AppColours.lumiGold.withValues(alpha: 0.12),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                verse.ref,
-                style: AppTextStyles.label.copyWith(
-                  color: AppColours.textMuted,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 0.4,
+            child: Wrap(
+              alignment: WrapAlignment.center,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              spacing: 8,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: AppColours.lumiGold.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    verse.ref,
+                    style: AppTextStyles.label.copyWith(
+                      color: AppColours.textMuted,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 0.4,
+                    ),
+                  ),
                 ),
-              ),
+                // Version badge — tappable toggle when both versions available
+                if (versionLabel.isNotEmpty)
+                  GestureDetector(
+                    onTap: (hasLbv && hasKjv) ? onToggleVersion : null,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      decoration: BoxDecoration(
+                        color: versionColor.withValues(alpha: 0.12),
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: versionColor.withValues(alpha: 0.4),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            versionLabel,
+                            style: AppTextStyles.label.copyWith(
+                              color: versionColor,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 0.6,
+                            ),
+                          ),
+                          if (hasLbv && hasKjv) ...[
+                            const SizedBox(width: 3),
+                            Icon(Icons.swap_horiz_rounded, color: versionColor, size: 13),
+                          ],
+                        ],
+                      ),
+                    ),
+                  ),
+              ],
             ),
           ),
           const SizedBox(height: 20),
 
-          // The verse — the hero of the screen.
+          // The verse — hero of the screen.
           HighlightText(
             text: text,
             highlightStart: highlightStart,
@@ -480,8 +564,7 @@ class _VerseBody extends StatelessWidget {
           ),
           const SizedBox(height: 24),
 
-          // Secondary now that narration is automatic — this is "again", not
-          // "start".
+          // Audio replay button
           Align(
             alignment: isPreReader ? Alignment.center : Alignment.centerLeft,
             child: Semantics(
@@ -507,9 +590,7 @@ class _VerseBody extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Icon(
-                        speaking
-                            ? Icons.stop_rounded
-                            : Icons.volume_up_rounded,
+                        speaking ? Icons.stop_rounded : Icons.volume_up_rounded,
                         color: AppColours.deepEarth,
                         size: 24,
                       ),
@@ -528,6 +609,36 @@ class _VerseBody extends StatelessWidget {
               ),
             ),
           ),
+
+          // "Read passage" link — opens the full Bible chapter
+          if (passageRoute != null) ...[
+            const SizedBox(height: 12),
+            Align(
+              alignment: isPreReader ? Alignment.center : Alignment.centerLeft,
+              child: GestureDetector(
+                onTap: () => context.go(passageRoute!),
+                behavior: HitTestBehavior.opaque,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.menu_book_outlined,
+                        size: 14, color: AppColours.textMuted.withValues(alpha: 0.7)),
+                    const SizedBox(width: 5),
+                    Text(
+                      'Read full passage',
+                      style: AppTextStyles.label.copyWith(
+                        color: AppColours.textMuted.withValues(alpha: 0.8),
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        decoration: TextDecoration.underline,
+                        decorationColor: AppColours.textMuted.withValues(alpha: 0.4),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ],
       ),
     );

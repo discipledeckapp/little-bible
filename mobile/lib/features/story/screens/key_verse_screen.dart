@@ -111,7 +111,24 @@ class _KeyVerseScreenState extends ConsumerState<KeyVerseScreen> {
                     ),
                   ),
 
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 16),
+
+                  // Narrative context for the key verse — parent-facing, so the
+                  // verse is never read stripped of its original setting.
+                  if (story.verseContext.isNotEmpty) ...[
+                    Text(
+                      story.verseContext,
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.label.copyWith(
+                        color: AppColours.textMuted,
+                        fontSize: 13,
+                        height: 1.4,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                  ] else
+                    const SizedBox(height: 16),
 
                   // Verse card
                   Container(

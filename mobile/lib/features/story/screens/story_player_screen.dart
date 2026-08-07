@@ -5,6 +5,7 @@ import '../../../core/models/story_model.dart';
 import '../../../core/database/app_database.dart';
 import '../../../core/providers/profile_provider.dart';
 import '../../../core/providers/story_progress_repository.dart';
+import '../../../core/services/content_session.dart';
 import '../../../core/services/narration_provider.dart';
 import '../../../core/services/sound_service.dart';
 import '../../../core/theme/app_theme.dart';
@@ -39,9 +40,20 @@ class _StoryPlayerScreenState extends ConsumerState<StoryPlayerScreen>
   ChildProfile? _profile;
 
   @override
+  void initState() {
+    super.initState();
+    // Holds off content downloads for the duration of the session, so a
+    // download can never compete with narration playback (US-12).
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) ref.read(storySessionActiveProvider.notifier).begin();
+    });
+  }
+
+  @override
   void dispose() {
     _sceneAnim.dispose();
     ref.read(narrationServiceProvider).stop();
+    ref.read(storySessionActiveProvider.notifier).end();
     super.dispose();
   }
 

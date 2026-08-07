@@ -35,22 +35,22 @@ class ChapterPickerScreen extends ConsumerWidget {
           ),
         ),
       ),
-      body: FutureBuilder<List<BibleChapter>>(
-        future: db.getLoadedChapters(displayName),
+      // Live stream — updates automatically as background seeding adds chapters.
+      body: StreamBuilder<List<BibleChapter>>(
+        stream: db.watchLoadedChapters(displayName),
         builder: (context, snap) {
-          if (snap.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+          // Map chapter number → hasLbv (null = not yet seeded).
+          final seededMap = <int, bool>{};
+          for (final c in snap.data ?? []) {
+            // LBV chapters have chapterSummary populated; KJV-only chapters don't.
+            seededMap[c.chapter] = c.chapterSummary != null;
           }
-
-          // Build the set of chapter numbers that have LBV content
-          final loadedNums = <int>{
-            for (final c in snap.data ?? []) c.chapter,
-          };
 
           return _ChapterGrid(
             book: book,
             totalChapters: totalChapters,
-            loadedChapters: loadedNums,
+            seededMap: seededMap,
+            isLoading: snap.connectionState == ConnectionState.waiting,
           );
         },
       ),
@@ -69,12 +69,15 @@ class _ChapterGrid extends StatelessWidget {
   const _ChapterGrid({
     required this.book,
     required this.totalChapters,
-    required this.loadedChapters,
+    required this.seededMap,
+    required this.isLoading,
   });
 
   final String book;
   final int totalChapters;
-  final Set<int> loadedChapters;
+  /// chapter number → hasLbv; absent key = not yet seeded.
+  final Map<int, bool> seededMap;
+  final bool isLoading;
 
   static const double _spacing = 5.0;
   static const int _cols = 6;
@@ -92,10 +95,12 @@ class _ChapterGrid extends StatelessWidget {
       itemCount: totalChapters,
       itemBuilder: (context, i) {
         final ch = i + 1;
+        // null = not yet seeded, true = LBV, false = KJV-only
+        final hasLbv = seededMap[ch];
         return _ChapterChip(
           book: book,
           chapter: ch,
-          hasLbv: loadedChapters.contains(ch),
+          hasLbv: hasLbv,
         );
       },
     );
@@ -113,36 +118,57 @@ class _ChapterChip extends StatelessWidget {
 
   final String book;
   final int chapter;
-  final bool hasLbv;
+  /// null = not seeded yet; true = LBV available; false = KJV-only.
+  final bool? hasLbv;
 
   @override
   Widget build(BuildContext context) {
+    final isSeeded   = hasLbv != null;
+    final isLbv      = hasLbv == true;
+
+    // Visual states:
+    //   gold border + gold text  = LBV available
+    //   white bg + dark text     = KJV-only (readable)
+    //   dim parchment + muted    = not yet seeded
+    final bgColor = isLbv
+        ? AppColours.lumiGold.withValues(alpha: 0.10)
+        : isSeeded
+            ? AppColours.surface
+            : AppColours.parchment.withValues(alpha: 0.55);
+
+    final borderColor = isLbv
+        ? AppColours.lumiGold.withValues(alpha: 0.55)
+        : isSeeded
+            ? AppColours.textMuted.withValues(alpha: 0.35)
+            : AppColours.textMuted.withValues(alpha: 0.20);
+
+    final textColor = isLbv
+        ? AppColours.lumiGold
+        : isSeeded
+            ? AppColours.textDark
+            : AppColours.textMuted;
+
     return GestureDetector(
       onTap: () {
-        if (hasLbv) {
+        if (isSeeded) {
           context.go('/bible/$book/$chapter');
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text(
-                'Little Bible Version coming soon! KJV text will be added next.',
-              ),
+              content: Text('Bible content is loading — please try again in a moment.'),
               behavior: SnackBarBehavior.floating,
+              duration: Duration(seconds: 2),
             ),
           );
         }
       },
       child: Container(
         decoration: BoxDecoration(
-          color: hasLbv
-              ? AppColours.lumiGold.withValues(alpha: 0.10)
-              : AppColours.parchment.withValues(alpha: 0.55),
+          color: bgColor,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: hasLbv
-                ? AppColours.lumiGold.withValues(alpha: 0.55)
-                : AppColours.textMuted.withValues(alpha: 0.20),
-            width: hasLbv ? 1.5 : 1.0,
+            color: borderColor,
+            width: isLbv ? 1.5 : 1.0,
           ),
         ),
         child: Center(
@@ -151,11 +177,8 @@ class _ChapterChip extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'Nunito',
               fontSize: 15,
-              fontWeight:
-                  hasLbv ? FontWeight.w800 : FontWeight.w500,
-              color: hasLbv
-                  ? AppColours.lumiGold
-                  : AppColours.textMuted,
+              fontWeight: isLbv ? FontWeight.w800 : FontWeight.w500,
+              color: textColor,
             ),
           ),
         ),

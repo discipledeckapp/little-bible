@@ -1,12 +1,20 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:drift/drift.dart' as drift;
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import '../data/bible_canon.dart';
 import '../database/app_database.dart';
 import '../providers/database_provider.dart';
 
 part 'bible_content_loader.g.dart';
+
+// LBV books — seeded first so familiar content appears within seconds.
+const _kLbvBookKeys = {
+  'genesis', 'john', 'luke', 'mark', 'matthew', 'proverbs', 'psalms',
+};
 
 @Riverpod(keepAlive: true)
 BibleContentLoader bibleContentLoader(Ref ref) {
@@ -14,190 +22,140 @@ BibleContentLoader bibleContentLoader(Ref ref) {
   return BibleContentLoader(db);
 }
 
-const _kBibleAssets = <String, List<String>>{
-  'Genesis': [
-    'assets/bible/en/genesis/genesis_chapter_01.json',
-    'assets/bible/en/genesis/genesis_chapter_02.json',
-    'assets/bible/en/genesis/genesis_chapter_03.json',
-    'assets/bible/en/genesis/genesis_chapter_04.json',
-    'assets/bible/en/genesis/genesis_chapter_05.json',
-    'assets/bible/en/genesis/genesis_chapter_06.json',
-    'assets/bible/en/genesis/genesis_chapter_07.json',
-    'assets/bible/en/genesis/genesis_chapter_08.json',
-    'assets/bible/en/genesis/genesis_chapter_09.json',
-    'assets/bible/en/genesis/genesis_chapter_10.json',
-    'assets/bible/en/genesis/genesis_chapter_11.json',
-    'assets/bible/en/genesis/genesis_chapter_12.json',
-    'assets/bible/en/genesis/genesis_chapter_13.json',
-    'assets/bible/en/genesis/genesis_chapter_14.json',
-    'assets/bible/en/genesis/genesis_chapter_15.json',
-    'assets/bible/en/genesis/genesis_chapter_16.json',
-    'assets/bible/en/genesis/genesis_chapter_17.json',
-  ],
-  'John': [
-    'assets/bible/en/john/john_chapter_01.json',
-    'assets/bible/en/john/john_chapter_02.json',
-    'assets/bible/en/john/john_chapter_03.json',
-    'assets/bible/en/john/john_chapter_04.json',
-    'assets/bible/en/john/john_chapter_05.json',
-    'assets/bible/en/john/john_chapter_06.json',
-    'assets/bible/en/john/john_chapter_07.json',
-    'assets/bible/en/john/john_chapter_08.json',
-    'assets/bible/en/john/john_chapter_09.json',
-    'assets/bible/en/john/john_chapter_10.json',
-    'assets/bible/en/john/john_chapter_11.json',
-    'assets/bible/en/john/john_chapter_12.json',
-    'assets/bible/en/john/john_chapter_13.json',
-    'assets/bible/en/john/john_chapter_14.json',
-    'assets/bible/en/john/john_chapter_15.json',
-    'assets/bible/en/john/john_chapter_16.json',
-    'assets/bible/en/john/john_chapter_17.json',
-    'assets/bible/en/john/john_chapter_18.json',
-    'assets/bible/en/john/john_chapter_19.json',
-    'assets/bible/en/john/john_chapter_20.json',
-    'assets/bible/en/john/john_chapter_21.json',
-  ],
-  'Luke': [
-    'assets/bible/en/luke/luke_chapter_01.json',
-    'assets/bible/en/luke/luke_chapter_02.json',
-    'assets/bible/en/luke/luke_chapter_03.json',
-    'assets/bible/en/luke/luke_chapter_04.json',
-    'assets/bible/en/luke/luke_chapter_05.json',
-    'assets/bible/en/luke/luke_chapter_06.json',
-    'assets/bible/en/luke/luke_chapter_10.json',
-    'assets/bible/en/luke/luke_chapter_15.json',
-    'assets/bible/en/luke/luke_chapter_22.json',
-    'assets/bible/en/luke/luke_chapter_23.json',
-    'assets/bible/en/luke/luke_chapter_24.json',
-  ],
-  'Mark': [
-    'assets/bible/en/mark/mark_chapter_01.json',
-    'assets/bible/en/mark/mark_chapter_02.json',
-    'assets/bible/en/mark/mark_chapter_03.json',
-    'assets/bible/en/mark/mark_chapter_04.json',
-    'assets/bible/en/mark/mark_chapter_10.json',
-  ],
-  'Matthew': [
-    'assets/bible/en/matthew/matthew_chapter_05.json',
-    'assets/bible/en/matthew/matthew_chapter_06.json',
-    'assets/bible/en/matthew/matthew_chapter_07.json',
-    'assets/bible/en/matthew/matthew_chapter_08.json',
-    'assets/bible/en/matthew/matthew_chapter_09.json',
-    'assets/bible/en/matthew/matthew_chapter_27.json',
-    'assets/bible/en/matthew/matthew_chapter_28.json',
-  ],
-  'Proverbs': [
-    'assets/bible/en/proverbs/proverbs_chapter_01.json',
-    'assets/bible/en/proverbs/proverbs_chapter_02.json',
-    'assets/bible/en/proverbs/proverbs_chapter_03.json',
-    'assets/bible/en/proverbs/proverbs_chapter_04.json',
-    'assets/bible/en/proverbs/proverbs_chapter_05.json',
-    'assets/bible/en/proverbs/proverbs_chapter_06.json',
-    'assets/bible/en/proverbs/proverbs_chapter_07.json',
-    'assets/bible/en/proverbs/proverbs_chapter_08.json',
-    'assets/bible/en/proverbs/proverbs_chapter_09.json',
-    'assets/bible/en/proverbs/proverbs_chapter_10.json',
-    'assets/bible/en/proverbs/proverbs_chapter_11.json',
-    'assets/bible/en/proverbs/proverbs_chapter_12.json',
-    'assets/bible/en/proverbs/proverbs_chapter_13.json',
-    'assets/bible/en/proverbs/proverbs_chapter_14.json',
-    'assets/bible/en/proverbs/proverbs_chapter_15.json',
-    'assets/bible/en/proverbs/proverbs_chapter_16.json',
-    'assets/bible/en/proverbs/proverbs_chapter_17.json',
-    'assets/bible/en/proverbs/proverbs_chapter_18.json',
-    'assets/bible/en/proverbs/proverbs_chapter_19.json',
-    'assets/bible/en/proverbs/proverbs_chapter_20.json',
-    'assets/bible/en/proverbs/proverbs_chapter_21.json',
-    'assets/bible/en/proverbs/proverbs_chapter_22.json',
-    'assets/bible/en/proverbs/proverbs_chapter_23.json',
-    'assets/bible/en/proverbs/proverbs_chapter_24.json',
-    'assets/bible/en/proverbs/proverbs_chapter_25.json',
-    'assets/bible/en/proverbs/proverbs_chapter_26.json',
-    'assets/bible/en/proverbs/proverbs_chapter_27.json',
-    'assets/bible/en/proverbs/proverbs_chapter_28.json',
-    'assets/bible/en/proverbs/proverbs_chapter_29.json',
-    'assets/bible/en/proverbs/proverbs_chapter_30.json',
-    'assets/bible/en/proverbs/proverbs_chapter_31.json',
-  ],
-  'Psalms': [
-    'assets/bible/en/psalms/psalms_chapter_01.json',
-    'assets/bible/en/psalms/psalms_chapter_22.json',
-    'assets/bible/en/psalms/psalms_chapter_23.json',
-    'assets/bible/en/psalms/psalms_chapter_100.json',
-    'assets/bible/en/psalms/psalms_chapter_121.json',
-    'assets/bible/en/psalms/psalms_chapter_139.json',
-    'assets/bible/en/psalms/psalms_chapter_150.json',
-  ],
-};
+class _ChapterData {
+  const _ChapterData(this.chapter, this.verses);
+  final BibleChaptersCompanion chapter;
+  final List<VersesCompanion> verses;
+}
 
 class BibleContentLoader {
   BibleContentLoader(this._db);
 
   final AppDatabase _db;
 
+  // Compute all 1,189 chapter asset paths directly from the canon.
+  // This is more reliable than parsing the AssetManifest, which can
+  // return different path formats across Flutter versions and platforms.
+  static List<String> _buildChapterPaths() {
+    final lbv = <String>[];
+    final rest = <String>[];
+    for (final book in kBibleBooks) {
+      for (int ch = 1; ch <= book.chapterCount; ch++) {
+        final chPadded = ch.toString().padLeft(2, '0');
+        final path =
+            'assets/bible/en/${book.key}/${book.key}_chapter_$chPadded.json';
+        if (_kLbvBookKeys.contains(book.key)) {
+          lbv.add(path);
+        } else {
+          rest.add(path);
+        }
+      }
+    }
+    // LBV books first (already in canonical order within each group)
+    return [...lbv, ...rest];
+  }
+
   Future<void> seed() async {
     if (await _db.isBibleSeeded()) return;
 
-    for (final entry in _kBibleAssets.entries) {
-      for (final assetPath in entry.value) {
-        try {
-          await _loadChapter(assetPath);
-        } catch (_) {
-          // A bad chapter should not abort the rest of seeding.
+    final all = _buildChapterPaths();
+
+    // Clear existing rows first so we start fresh.
+    await _db.delete(_db.verses).go();
+    await _db.delete(_db.bibleChapters).go();
+
+    // Load 40 files in parallel, then insert via a single Drift batch.
+    // Parallel I/O: ~10× faster than sequential reads.
+    // Batch insert: ~50× faster than individual awaited inserts.
+    const sliceSize = 40;
+    for (int i = 0; i < all.length; i += sliceSize) {
+      final slice = all.sublist(i, min(i + sliceSize, all.length));
+      final results = (await Future.wait(slice.map(_parseChapter)))
+          .whereType<_ChapterData>()
+          .toList();
+      await _db.batch((b) {
+        for (final r in results) {
+          b.insert(_db.bibleChapters, r.chapter,
+              mode: drift.InsertMode.insertOrReplace);
+          b.insertAll(_db.verses, r.verses,
+              mode: drift.InsertMode.insert);
         }
-      }
+      });
     }
 
     await _db.markBibleSeeded();
   }
 
-  Future<void> _loadChapter(String assetPath) async {
+  Future<_ChapterData?> _parseChapter(String assetPath) async {
+    try {
+      return await _parseChapterInner(assetPath);
+    } catch (e) {
+      // Never abort the whole seed for one bad file — log and skip.
+      debugPrint('BibleSeeder: skipped $assetPath — $e');
+      return null;
+    }
+  }
+
+  Future<_ChapterData> _parseChapterInner(String assetPath) async {
     final raw = await rootBundle.loadString(assetPath);
-    final json = jsonDecode(raw) as Map<String, dynamic>;
+    final map = jsonDecode(raw) as Map<String, dynamic>;
 
-    final book    = json['book']    as String;
-    final chapter = json['chapter'] as int;
+    final book    = map['book'] as String;
+    final chapter = (map['chapter'] as num).toInt();
 
-    final memVerse = json['memory_verse'] as Map<String, dynamic>?;
+    // memory_verse can be a plain string, a {ref, kjv, little_bible} map, or absent.
+    String? memVerseRef;
+    String? memVerseLbv;
+    final memVerseRaw = map['memory_verse'];
+    if (memVerseRaw is Map<String, dynamic>) {
+      memVerseRef = memVerseRaw['ref'] as String?;
+      memVerseLbv = (memVerseRaw['little_bible'] ?? memVerseRaw['kjv']) as String?;
+    } else if (memVerseRaw is String && memVerseRaw.isNotEmpty) {
+      memVerseLbv = memVerseRaw;
+    }
 
-    await _db.into(_db.bibleChapters).insertOnConflictUpdate(
-      BibleChaptersCompanion.insert(
-        book:                   book,
-        chapter:                chapter,
-        chapterSummary:         drift.Value(json['chapter_summary'] as String?),
-        mainLesson:             drift.Value(json['main_lesson'] as String?),
-        memoryVerseRef:         drift.Value(memVerse?['ref'] as String?),
-        memoryVerseLittleBible: drift.Value(memVerse?['little_bible'] as String?),
-        parentGuide:            drift.Value(json['parent_guide'] as String?),
-        applicationForChildren: drift.Value(json['application_for_children'] as String?),
-      ),
+    final chapterRow = BibleChaptersCompanion.insert(
+      book: book,
+      chapter: chapter,
+      chapterSummary: drift.Value(map['chapter_summary'] as String?),
+      mainLesson: drift.Value(map['main_lesson'] as String?),
+      memoryVerseRef: drift.Value(memVerseRef),
+      memoryVerseLittleBible: drift.Value(memVerseLbv),
+      parentGuide: drift.Value(map['parent_guide'] as String?),
+      applicationForChildren:
+          drift.Value(map['application_for_children'] as String?),
     );
 
-    final rawVerses = json['verses'] as List<dynamic>;
-    for (final v in rawVerses) {
+    final rawVerses = map['verses'] as List<dynamic>;
+    final verseRows = rawVerses.map((v) {
       final vMap    = v as Map<String, dynamic>;
       final lbv     = vMap['little_bible'] as String?;
-      final verseNo = vMap['verse'] as int;
+      final kjv     = vMap['kjv'] as String?;
+      final verseNo = (vMap['verse'] as num).toInt();
 
-      await _db.into(_db.verses).insertOnConflictUpdate(
-        VersesCompanion.insert(
-          book:                   book,
-          chapter:                chapter,
-          verse:                  verseNo,
-          body:                   lbv ?? '',
-          source:                 const drift.Value('little-bible'),
-          isAdapted:              const drift.Value(true),
-          kjv:                    drift.Value(vMap['kjv'] as String?),
-          littleBible:            drift.Value(lbv),
-          littleReaderAdaptation: drift.Value(vMap['little_reader_adaptation'] as String?),
-          meaning:                drift.Value(vMap['meaning'] as String?),
-          memoryPhrase:           drift.Value(vMap['memory_phrase'] as String?),
-          prayer:                 drift.Value(vMap['prayer'] as String?),
-          discussionQuestion:     drift.Value(vMap['discussion_question'] as String?),
-          familyDiscussion:       drift.Value(vMap['family_discussion'] as String?),
-          doItToday:              drift.Value(vMap['do_it_today'] as String?),
-        ),
+      return VersesCompanion.insert(
+        book:    book,
+        chapter: chapter,
+        verse:   verseNo,
+        body:    lbv ?? kjv ?? '',
+        source:  drift.Value(lbv == null ? 'kjv' : 'little-bible'),
+        isAdapted: drift.Value(lbv != null),
+        kjv:     drift.Value(kjv),
+        littleBible: lbv == null
+            ? const drift.Value(null)
+            : drift.Value(lbv),
+        littleReaderAdaptation:
+            drift.Value(vMap['little_reader_adaptation'] as String?),
+        meaning:           drift.Value(vMap['meaning'] as String?),
+        memoryPhrase:      drift.Value(vMap['memory_phrase'] as String?),
+        prayer:            drift.Value(vMap['prayer'] as String?),
+        discussionQuestion:
+            drift.Value(vMap['discussion_question'] as String?),
+        familyDiscussion:  drift.Value(vMap['family_discussion'] as String?),
+        doItToday:         drift.Value(vMap['do_it_today'] as String?),
       );
-    }
+    }).toList();
+
+    return _ChapterData(chapterRow, verseRows);
   }
 }

@@ -125,6 +125,14 @@ class StoryModel {
   final StorySteps steps;
   final String sensitivityTier;
 
+  /// Biblical genre of the package — drives the genre-beat structure check at
+  /// authoring time. One of: narrative, wisdom, lament, teaching, parable, poetry.
+  final String genre;
+
+  /// One sentence of narrative context for the key verse, shown on the Key Verse
+  /// screen so the verse is never encountered stripped of its original setting.
+  final String verseContext;
+
   const StoryModel({
     required this.id,
     required this.title,
@@ -136,6 +144,8 @@ class StoryModel {
     required this.coverColor,
     required this.steps,
     this.sensitivityTier = 'general',
+    this.genre = 'narrative',
+    this.verseContext = '',
   });
 
   factory StoryModel.fromJson(Map<String, dynamic> j) {
@@ -152,6 +162,8 @@ class StoryModel {
       coverColor: color,
       steps: StorySteps.fromJson(j['steps'] as Map<String, dynamic>),
       sensitivityTier: (j['sensitivityTier'] as String?) ?? 'general',
+      genre: (j['genre'] as String?) ?? 'narrative',
+      verseContext: (j['verseContext'] as String?) ?? '',
     );
   }
 

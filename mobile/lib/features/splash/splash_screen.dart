@@ -83,10 +83,11 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
       await _titleCtrl.forward();
       await _taglineCtrl.forward();
       if (!mounted) return;
-      // Seed Bible content after animations complete; non-blocking if already seeded.
-      await ref.read(bibleContentLoaderProvider).seed();
-      if (!mounted) return;
-      _navigateTimer = Timer(const Duration(milliseconds: 500), () {
+      // Seed Bible content in the background — never block navigation.
+      // With 1,000+ chapters the seed runs for several seconds; the Bible tab
+      // shows grey "coming soon" chapters until the background seed finishes.
+      ref.read(bibleContentLoaderProvider).seed().ignore();
+      _navigateTimer = Timer(const Duration(milliseconds: 400), () {
         if (mounted) context.go('/');
       });
     } on TickerCanceled {
