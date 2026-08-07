@@ -406,8 +406,16 @@ class _EditProfileSheetState extends ConsumerState<_EditProfileSheet> {
           TextField(
             controller: _nicknameCtrl,
             textCapitalization: TextCapitalization.words,
+            style: AppTextStyles.label.copyWith(
+              color: AppColours.textDark,
+              fontSize: 16,
+            ),
+            cursorColor: AppColours.lumiGold,
             decoration: InputDecoration(
               labelText: 'Nickname',
+              labelStyle: AppTextStyles.label.copyWith(
+                color: AppColours.textMuted,
+              ),
               isDense: true,
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             ),
@@ -625,8 +633,16 @@ class _AddChildButtonState extends ConsumerState<_AddChildButton> {
           TextField(
             controller: _ctrl,
             textCapitalization: TextCapitalization.words,
+            style: AppTextStyles.label.copyWith(
+              color: AppColours.textDark,
+              fontSize: 16,
+            ),
+            cursorColor: AppColours.lumiGold,
             decoration: InputDecoration(
               labelText: 'Nickname',
+              labelStyle: AppTextStyles.label.copyWith(
+                color: AppColours.textMuted,
+              ),
               isDense: true,
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             ),
@@ -1004,6 +1020,7 @@ class _SettingsTabState extends ConsumerState<_SettingsTab> {
   late bool _reducedMotion;
   late bool _wifiOnly;
   late bool _cloudSync;
+  late bool _allowGuided;
 
   @override
   void initState() {
@@ -1016,6 +1033,7 @@ class _SettingsTabState extends ConsumerState<_SettingsTab> {
     _reducedMotion = p.reducedMotion;
     _wifiOnly      = p.wifiOnlyDownloads;
     _cloudSync     = p.cloudSyncEnabled;
+    _allowGuided   = p.allowGuidedStories;
   }
 
   @override
@@ -1026,6 +1044,30 @@ class _SettingsTabState extends ConsumerState<_SettingsTab> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 40),
       children: [
+        // ── Content ───────────────────────────────────────────────────────────
+        _SectionCard(
+          title: 'CONTENT',
+          icon: Icons.menu_book_rounded,
+          child: Column(
+            children: [
+              _ToggleRow(
+                label: 'Allow guided stories',
+                subtitle:
+                    'Some stories deal with harder things — sin, the cross, '
+                    'grief. Off: your child sees them but needs your PIN to '
+                    'open one. On: they can open them on their own.',
+                value: _allowGuided,
+                onChanged: (v) async {
+                  await ref.read(profileRepositoryProvider)
+                      .updateSettings(widget.profile.id, allowGuidedStories: v);
+                  if (mounted) setState(() => _allowGuided = v);
+                },
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 16),
+
         // ── Playback ──────────────────────────────────────────────────────────
         _SectionCard(
           title: 'PLAYBACK',

@@ -1761,6 +1761,20 @@ class $ChildProfilesTable extends ChildProfiles
     ),
     defaultValue: const Constant(false),
   );
+  static const VerificationMeta _allowGuidedStoriesMeta =
+      const VerificationMeta('allowGuidedStories');
+  @override
+  late final GeneratedColumn<bool> allowGuidedStories = GeneratedColumn<bool>(
+    'allow_guided_stories',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("allow_guided_stories" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -1782,6 +1796,7 @@ class $ChildProfilesTable extends ChildProfiles
     reducedMotion,
     wifiOnlyDownloads,
     cloudSyncEnabled,
+    allowGuidedStories,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -1940,6 +1955,15 @@ class $ChildProfilesTable extends ChildProfiles
         ),
       );
     }
+    if (data.containsKey('allow_guided_stories')) {
+      context.handle(
+        _allowGuidedStoriesMeta,
+        allowGuidedStories.isAcceptableOrUnknown(
+          data['allow_guided_stories']!,
+          _allowGuidedStoriesMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -2025,6 +2049,10 @@ class $ChildProfilesTable extends ChildProfiles
         DriftSqlType.bool,
         data['${effectivePrefix}cloud_sync_enabled'],
       )!,
+      allowGuidedStories: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}allow_guided_stories'],
+      )!,
     );
   }
 
@@ -2054,6 +2082,16 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
   final bool reducedMotion;
   final bool wifiOnlyDownloads;
   final bool cloudSyncEnabled;
+
+  /// Parent has approved `guided` stories for this child, so they open without
+  /// asking for the PIN each time.
+  ///
+  /// Stories carry a `sensitivityTier`. Content above a child's age band used to
+  /// be silently dropped from the feed, which made 31 of the 80 stories — the
+  /// crucifixion among them — invisible with no explanation and no way for a
+  /// parent to opt in. Now the story is always shown, and this flag decides
+  /// whether it needs the parent gate first.
+  final bool allowGuidedStories;
   const ChildProfile({
     required this.id,
     required this.nickname,
@@ -2074,6 +2112,7 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
     required this.reducedMotion,
     required this.wifiOnlyDownloads,
     required this.cloudSyncEnabled,
+    required this.allowGuidedStories,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -2099,6 +2138,7 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
     map['reduced_motion'] = Variable<bool>(reducedMotion);
     map['wifi_only_downloads'] = Variable<bool>(wifiOnlyDownloads);
     map['cloud_sync_enabled'] = Variable<bool>(cloudSyncEnabled);
+    map['allow_guided_stories'] = Variable<bool>(allowGuidedStories);
     return map;
   }
 
@@ -2125,6 +2165,7 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
       reducedMotion: Value(reducedMotion),
       wifiOnlyDownloads: Value(wifiOnlyDownloads),
       cloudSyncEnabled: Value(cloudSyncEnabled),
+      allowGuidedStories: Value(allowGuidedStories),
     );
   }
 
@@ -2155,6 +2196,7 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
       reducedMotion: serializer.fromJson<bool>(json['reducedMotion']),
       wifiOnlyDownloads: serializer.fromJson<bool>(json['wifiOnlyDownloads']),
       cloudSyncEnabled: serializer.fromJson<bool>(json['cloudSyncEnabled']),
+      allowGuidedStories: serializer.fromJson<bool>(json['allowGuidedStories']),
     );
   }
   @override
@@ -2180,6 +2222,7 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
       'reducedMotion': serializer.toJson<bool>(reducedMotion),
       'wifiOnlyDownloads': serializer.toJson<bool>(wifiOnlyDownloads),
       'cloudSyncEnabled': serializer.toJson<bool>(cloudSyncEnabled),
+      'allowGuidedStories': serializer.toJson<bool>(allowGuidedStories),
     };
   }
 
@@ -2203,6 +2246,7 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
     bool? reducedMotion,
     bool? wifiOnlyDownloads,
     bool? cloudSyncEnabled,
+    bool? allowGuidedStories,
   }) => ChildProfile(
     id: id ?? this.id,
     nickname: nickname ?? this.nickname,
@@ -2225,6 +2269,7 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
     reducedMotion: reducedMotion ?? this.reducedMotion,
     wifiOnlyDownloads: wifiOnlyDownloads ?? this.wifiOnlyDownloads,
     cloudSyncEnabled: cloudSyncEnabled ?? this.cloudSyncEnabled,
+    allowGuidedStories: allowGuidedStories ?? this.allowGuidedStories,
   );
   ChildProfile copyWithCompanion(ChildProfilesCompanion data) {
     return ChildProfile(
@@ -2273,6 +2318,9 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
       cloudSyncEnabled: data.cloudSyncEnabled.present
           ? data.cloudSyncEnabled.value
           : this.cloudSyncEnabled,
+      allowGuidedStories: data.allowGuidedStories.present
+          ? data.allowGuidedStories.value
+          : this.allowGuidedStories,
     );
   }
 
@@ -2297,7 +2345,8 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
           ..write('notificationsEnabled: $notificationsEnabled, ')
           ..write('reducedMotion: $reducedMotion, ')
           ..write('wifiOnlyDownloads: $wifiOnlyDownloads, ')
-          ..write('cloudSyncEnabled: $cloudSyncEnabled')
+          ..write('cloudSyncEnabled: $cloudSyncEnabled, ')
+          ..write('allowGuidedStories: $allowGuidedStories')
           ..write(')'))
         .toString();
   }
@@ -2323,6 +2372,7 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
     reducedMotion,
     wifiOnlyDownloads,
     cloudSyncEnabled,
+    allowGuidedStories,
   );
   @override
   bool operator ==(Object other) =>
@@ -2346,7 +2396,8 @@ class ChildProfile extends DataClass implements Insertable<ChildProfile> {
           other.notificationsEnabled == this.notificationsEnabled &&
           other.reducedMotion == this.reducedMotion &&
           other.wifiOnlyDownloads == this.wifiOnlyDownloads &&
-          other.cloudSyncEnabled == this.cloudSyncEnabled);
+          other.cloudSyncEnabled == this.cloudSyncEnabled &&
+          other.allowGuidedStories == this.allowGuidedStories);
 }
 
 class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
@@ -2369,6 +2420,7 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
   final Value<bool> reducedMotion;
   final Value<bool> wifiOnlyDownloads;
   final Value<bool> cloudSyncEnabled;
+  final Value<bool> allowGuidedStories;
   final Value<int> rowid;
   const ChildProfilesCompanion({
     this.id = const Value.absent(),
@@ -2390,6 +2442,7 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
     this.reducedMotion = const Value.absent(),
     this.wifiOnlyDownloads = const Value.absent(),
     this.cloudSyncEnabled = const Value.absent(),
+    this.allowGuidedStories = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   ChildProfilesCompanion.insert({
@@ -2412,6 +2465,7 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
     this.reducedMotion = const Value.absent(),
     this.wifiOnlyDownloads = const Value.absent(),
     this.cloudSyncEnabled = const Value.absent(),
+    this.allowGuidedStories = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : nickname = Value(nickname),
        ageBand = Value(ageBand);
@@ -2435,6 +2489,7 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
     Expression<bool>? reducedMotion,
     Expression<bool>? wifiOnlyDownloads,
     Expression<bool>? cloudSyncEnabled,
+    Expression<bool>? allowGuidedStories,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -2458,6 +2513,8 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
       if (reducedMotion != null) 'reduced_motion': reducedMotion,
       if (wifiOnlyDownloads != null) 'wifi_only_downloads': wifiOnlyDownloads,
       if (cloudSyncEnabled != null) 'cloud_sync_enabled': cloudSyncEnabled,
+      if (allowGuidedStories != null)
+        'allow_guided_stories': allowGuidedStories,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -2482,6 +2539,7 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
     Value<bool>? reducedMotion,
     Value<bool>? wifiOnlyDownloads,
     Value<bool>? cloudSyncEnabled,
+    Value<bool>? allowGuidedStories,
     Value<int>? rowid,
   }) {
     return ChildProfilesCompanion(
@@ -2504,6 +2562,7 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
       reducedMotion: reducedMotion ?? this.reducedMotion,
       wifiOnlyDownloads: wifiOnlyDownloads ?? this.wifiOnlyDownloads,
       cloudSyncEnabled: cloudSyncEnabled ?? this.cloudSyncEnabled,
+      allowGuidedStories: allowGuidedStories ?? this.allowGuidedStories,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -2568,6 +2627,9 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
     if (cloudSyncEnabled.present) {
       map['cloud_sync_enabled'] = Variable<bool>(cloudSyncEnabled.value);
     }
+    if (allowGuidedStories.present) {
+      map['allow_guided_stories'] = Variable<bool>(allowGuidedStories.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -2596,6 +2658,7 @@ class ChildProfilesCompanion extends UpdateCompanion<ChildProfile> {
           ..write('reducedMotion: $reducedMotion, ')
           ..write('wifiOnlyDownloads: $wifiOnlyDownloads, ')
           ..write('cloudSyncEnabled: $cloudSyncEnabled, ')
+          ..write('allowGuidedStories: $allowGuidedStories, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -5023,6 +5086,7 @@ typedef $$ChildProfilesTableCreateCompanionBuilder =
       Value<bool> reducedMotion,
       Value<bool> wifiOnlyDownloads,
       Value<bool> cloudSyncEnabled,
+      Value<bool> allowGuidedStories,
       Value<int> rowid,
     });
 typedef $$ChildProfilesTableUpdateCompanionBuilder =
@@ -5046,6 +5110,7 @@ typedef $$ChildProfilesTableUpdateCompanionBuilder =
       Value<bool> reducedMotion,
       Value<bool> wifiOnlyDownloads,
       Value<bool> cloudSyncEnabled,
+      Value<bool> allowGuidedStories,
       Value<int> rowid,
     });
 
@@ -5150,6 +5215,11 @@ class $$ChildProfilesTableFilterComposer
 
   ColumnFilters<bool> get cloudSyncEnabled => $composableBuilder(
     column: $table.cloudSyncEnabled,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get allowGuidedStories => $composableBuilder(
+    column: $table.allowGuidedStories,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -5257,6 +5327,11 @@ class $$ChildProfilesTableOrderingComposer
     column: $table.cloudSyncEnabled,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<bool> get allowGuidedStories => $composableBuilder(
+    column: $table.allowGuidedStories,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$ChildProfilesTableAnnotationComposer
@@ -5350,6 +5425,11 @@ class $$ChildProfilesTableAnnotationComposer
     column: $table.cloudSyncEnabled,
     builder: (column) => column,
   );
+
+  GeneratedColumn<bool> get allowGuidedStories => $composableBuilder(
+    column: $table.allowGuidedStories,
+    builder: (column) => column,
+  );
 }
 
 class $$ChildProfilesTableTableManager
@@ -5402,6 +5482,7 @@ class $$ChildProfilesTableTableManager
                 Value<bool> reducedMotion = const Value.absent(),
                 Value<bool> wifiOnlyDownloads = const Value.absent(),
                 Value<bool> cloudSyncEnabled = const Value.absent(),
+                Value<bool> allowGuidedStories = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => ChildProfilesCompanion(
                 id: id,
@@ -5423,6 +5504,7 @@ class $$ChildProfilesTableTableManager
                 reducedMotion: reducedMotion,
                 wifiOnlyDownloads: wifiOnlyDownloads,
                 cloudSyncEnabled: cloudSyncEnabled,
+                allowGuidedStories: allowGuidedStories,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -5446,6 +5528,7 @@ class $$ChildProfilesTableTableManager
                 Value<bool> reducedMotion = const Value.absent(),
                 Value<bool> wifiOnlyDownloads = const Value.absent(),
                 Value<bool> cloudSyncEnabled = const Value.absent(),
+                Value<bool> allowGuidedStories = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => ChildProfilesCompanion.insert(
                 id: id,
@@ -5467,6 +5550,7 @@ class $$ChildProfilesTableTableManager
                 reducedMotion: reducedMotion,
                 wifiOnlyDownloads: wifiOnlyDownloads,
                 cloudSyncEnabled: cloudSyncEnabled,
+                allowGuidedStories: allowGuidedStories,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0

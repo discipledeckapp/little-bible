@@ -130,6 +130,7 @@ class ProfileRepository {
     bool? reducedMotion,
     bool? wifiOnlyDownloads,
     bool? cloudSyncEnabled,
+    bool? allowGuidedStories,
   }) async {
     await (_db.update(_db.childProfiles)..where((t) => t.id.equals(profileId)))
         .write(ChildProfilesCompanion(
@@ -141,6 +142,7 @@ class ProfileRepository {
       reducedMotion: reducedMotion == null ? const Value.absent() : Value(reducedMotion),
       wifiOnlyDownloads: wifiOnlyDownloads == null ? const Value.absent() : Value(wifiOnlyDownloads),
       cloudSyncEnabled: cloudSyncEnabled == null ? const Value.absent() : Value(cloudSyncEnabled),
+      allowGuidedStories: allowGuidedStories == null ? const Value.absent() : Value(allowGuidedStories),
     ));
   }
 

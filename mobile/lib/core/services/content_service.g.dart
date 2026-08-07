@@ -6,7 +6,7 @@ part of 'content_service.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$contentServiceHash() => r'e2f84a4ec8a82ac29926314f5751e3b7962c5640';
+String _$contentServiceHash() => r'09dcd58853305de133f69459ca4db088ce647454';
 
 /// See also [contentService].
 @ProviderFor(contentService)
