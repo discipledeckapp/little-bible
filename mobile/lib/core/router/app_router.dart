@@ -15,6 +15,7 @@ import '../../features/story/screens/coloring_screen.dart';
 import '../../features/bible/screens/bible_nav_screen.dart';
 import '../../features/bible/screens/book_picker_screen.dart';
 import '../../features/bible/screens/chapter_picker_screen.dart';
+import '../../features/bible/screens/verse_picker_screen.dart';
 import '../../features/bible/screens/verse_reader_screen.dart';
 import '../../features/parent_hub/screens/parent_hub_screen.dart';
 import '../../features/unlock/screens/unlock_screen.dart';
@@ -127,11 +128,12 @@ GoRouter appRouter(Ref ref) {
             ),
             routes: [
               GoRoute(
+                // book → chapter → VERSE → reader. This used to open the reader
+                // directly at verse 1, so there was no way to jump to a verse.
                 path: ':chapter',
-                builder: (context, state) => VerseReaderScreen(
-                  book:       state.pathParameters['book']!,
-                  chapter:    int.parse(state.pathParameters['chapter']!),
-                  startVerse: 1,
+                builder: (context, state) => VersePickerScreen(
+                  book:    state.pathParameters['book']!,
+                  chapter: int.parse(state.pathParameters['chapter']!),
                 ),
                 routes: [
                   GoRoute(

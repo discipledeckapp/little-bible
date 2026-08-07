@@ -24,6 +24,22 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<!-- Export compliance, answered here so App Store Connect stops asking on
+	     every single upload and builds reach TestFlight without a manual visit
+	     to the dashboard.
+
+	     `false` = this app uses no NON-EXEMPT encryption. That is accurate:
+	       · HTTPS/TLS to littlebible.org — Apple-provided, exempt
+	       · flutter_secure_storage      — iOS Keychain, Apple-provided, exempt
+	       · local_auth                  — biometrics, not export-controlled
+	     There is no proprietary, custom or third-party cryptography in the app,
+	     which is what would make it non-exempt.
+
+	     If that EVER changes — bundling your own cipher, encrypting stored
+	     content yourself, or adding a VPN/proxy — this must be revisited and may
+	     also require a French declaration and a self-classification report. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
