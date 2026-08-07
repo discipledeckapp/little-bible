@@ -1,0 +1,171 @@
+{
+  "_comment": "Authored package-level metadata required by the pre-launch content gate: biblical genre (drives the genre-beat structure check) and verseContext (one sentence of narrative context for the key verse, shown on the Key Verse screen). Keep in sync with mobile/assets/stories/*.json via scripts/apply_story_metadata.py.",
+  "a-way-through-the-sea": {
+    "genre": "narrative",
+    "verseContext": "Moses says this to a terrified people caught between Pharaoh's army behind them and the sea in front of them, before God opens a path."
+  },
+  "baby-moses-is-kept-safe": {
+    "genre": "narrative",
+    "verseContext": "This comes after long years of slavery in Egypt, at the moment a baby boy is lifted safely out of the river."
+  },
+  "birth-of-jesus": {
+    "genre": "narrative",
+    "verseContext": "An angel says this to shepherds working through the night in the fields outside Bethlehem, on the night Jesus is born."
+  },
+  "bread-in-the-wilderness": {
+    "genre": "narrative",
+    "verseContext": "God says this in the desert, when the rescued people have run out of food and are afraid they will starve."
+  },
+  "daniel-and-the-lions": {
+    "genre": "narrative",
+    "verseContext": "Daniel calls this up out of the lions' den at sunrise, to a king who had stayed awake all night worrying about him."
+  },
+  "david-the-shepherd-boy": {
+    "genre": "narrative",
+    "verseContext": "God says this to Samuel just as Samuel is about to anoint the tallest, oldest brother, while David is still out in the fields with the sheep."
+  },
+  "deborah-leads-gods-people": {
+    "genre": "narrative",
+    "verseContext": "This is the opening line of the song Deborah sings after the battle, thanking God that the people gladly offered themselves."
+  },
+  "gideons-tiny-army": {
+    "genre": "narrative",
+    "verseContext": "God says this to Gideon while Gideon is hiding in a winepress, certain he is the weakest man in the weakest family."
+  },
+  "god-calls-abraham": {
+    "genre": "narrative",
+    "verseContext": "God says this to Abram in Haran, asking him to leave his country and his family for a land he has never seen."
+  },
+  "god-calls-from-the-fire": {
+    "genre": "narrative",
+    "verseContext": "God says His own name to Moses from a burning bush, when Moses asks who he should tell the people has sent him."
+  },
+  "god-lives-with-his-people": {
+    "genre": "narrative",
+    "verseContext": "God gives this instruction at Mount Sinai, asking the rescued people to build a tent so He can live right in the middle of their camp."
+  },
+  "god-made-everything": {
+    "genre": "narrative",
+    "verseContext": "This is the very first sentence of the Bible, spoken when there is nothing at all yet except God."
+  },
+  "god-made-me": {
+    "genre": "poetry",
+    "verseContext": "David sings this in a song about God knowing him completely, even while he was still being made."
+  },
+  "god-promises-a-rescuer": {
+    "genre": "narrative",
+    "verseContext": "God says this to the snake in the garden, moments after the first man and woman disobey — the very first promise of a rescuer."
+  },
+  "god-provides-a-lamb": {
+    "genre": "narrative",
+    "verseContext": "Abraham answers his son Isaac with this while they climb the mountain together, carrying fire and wood but no lamb."
+  },
+  "gods-good-commands": {
+    "genre": "teaching",
+    "verseContext": "God begins the Ten Commandments with this — telling His people who He is and what He has already done for them before He asks anything of them."
+  },
+  "how-to-pray": {
+    "genre": "teaching",
+    "verseContext": "Jesus says this on a hillside, teaching a crowd to talk with God simply instead of with long, showy words."
+  },
+  "jacob-learns-grace": {
+    "genre": "narrative",
+    "verseContext": "God says this to Jacob in a dream, on the night Jacob is running away alone after tricking his father and his brother."
+  },
+  "jesus-loves-children": {
+    "genre": "narrative",
+    "verseContext": "Jesus says this when His own friends try to turn away the parents who are bringing their children to Him."
+  },
+  "jesus-saves": {
+    "genre": "narrative",
+    "verseContext": "Angels say this to the women who came to Jesus' tomb early on Sunday morning expecting to find His body."
+  },
+  "jonah-and-the-big-fish": {
+    "genre": "narrative",
+    "verseContext": "Jonah prays this from inside the great fish, after running away from God as fast as a ship could carry him."
+  },
+  "joseph-and-his-brothers": {
+    "genre": "narrative",
+    "verseContext": "Joseph says this to his brothers many years after they sold him, once he is the one holding all the power over them."
+  },
+  "joseph-forgives-his-family": {
+    "genre": "narrative",
+    "verseContext": "Joseph says this to his frightened brothers after their father dies, when they are certain he will finally take revenge."
+  },
+  "joshua-and-the-walls": {
+    "genre": "narrative",
+    "verseContext": "God says this to Joshua as he takes over from Moses, facing a walled city and a job that feels far too big for him."
+  },
+  "let-my-people-go": {
+    "genre": "narrative",
+    "verseContext": "God makes this promise to Moses after Pharaoh has refused him and the people's work has only become harder."
+  },
+  "noahs-big-boat": {
+    "genre": "narrative",
+    "verseContext": "This is the Bible's summary of Noah, who built an enormous boat on dry land for years before a single drop of rain fell."
+  },
+  "noahs-rainbow-promise": {
+    "genre": "narrative",
+    "verseContext": "God says this as Noah's family steps out onto dry ground after the flood and sees the first rainbow."
+  },
+  "ruth-finds-a-home": {
+    "genre": "narrative",
+    "verseContext": "Ruth says this on the road out of Moab, refusing to leave Naomi even though going with her means being poor and a stranger."
+  },
+  "samuel-listens-to-god": {
+    "genre": "narrative",
+    "verseContext": "Young Samuel says this the fourth time God calls his name in the night, once Eli has taught him how to answer."
+  },
+  "saul-the-king": {
+    "genre": "narrative",
+    "verseContext": "Samuel says this to King Saul, who disobeyed God and then brought God a gift to try to make up for it."
+  },
+  "stars-in-the-sky": {
+    "genre": "narrative",
+    "verseContext": "This comes right after God takes childless Abram outside into the night and asks him to try counting the stars."
+  },
+  "the-first-family": {
+    "genre": "narrative",
+    "verseContext": "God says this in the garden, looking at the one thing in a finished and very good world that is not good yet."
+  },
+  "the-good-neighbour": {
+    "genre": "parable",
+    "verseContext": "Jesus says this at the end of the story, to a man who had asked Him to name exactly who counts as a neighbour."
+  },
+  "the-good-shepherd": {
+    "genre": "teaching",
+    "verseContext": "Jesus says this about Himself to a crowd arguing over who He is, using the picture of a shepherd who knows every single sheep by name."
+  },
+  "the-lost-sheep": {
+    "genre": "parable",
+    "verseContext": "Jesus tells this story to religious leaders who are complaining that He spends His time with the wrong kind of people."
+  },
+  "the-lost-son": {
+    "genre": "parable",
+    "verseContext": "This is the turning point of Jesus' story, while the son who wasted everything is still a long way from home."
+  },
+  "the-passover-lamb": {
+    "genre": "narrative",
+    "verseContext": "God gives this instruction on the last night in Egypt, telling every family to mark their doorway with the blood of a lamb."
+  },
+  "the-promised-son": {
+    "genre": "narrative",
+    "verseContext": "God asks this after Sarah laughs quietly to herself at the idea of having a baby when she is ninety years old."
+  },
+  "the-tall-tower": {
+    "genre": "narrative",
+    "verseContext": "This wisdom saying names what went wrong at Babel, where people built a tower to make themselves famous."
+  },
+  "the-very-sad-choice": {
+    "genre": "narrative",
+    "verseContext": "Paul writes this to explain what began in the garden — that first wrong choice is now everyone's story."
+  },
+  "twelve-spies": {
+    "genre": "narrative",
+    "verseContext": "Moses prays God's own words back to Him at the edge of the promised land, after the people believed ten frightened spies instead of God."
+  },
+  "two-brothers": {
+    "genre": "narrative",
+    "verseContext": "God says this to Cain as a warning, while Cain is still only angry and before he has done anything to his brother."
+  }
+}

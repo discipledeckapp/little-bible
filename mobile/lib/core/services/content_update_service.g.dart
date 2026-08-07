@@ -6,8 +6,25 @@ part of 'content_update_service.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+String _$contentStoreHash() => r'dd94235da7522a64867dd464f7172dfc9d36698c';
+
+/// See also [contentStore].
+@ProviderFor(contentStore)
+final contentStoreProvider = Provider<ContentStore>.internal(
+  contentStore,
+  name: r'contentStoreProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$contentStoreHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef ContentStoreRef = ProviderRef<ContentStore>;
 String _$contentUpdateServiceHash() =>
-    r'16b40822dd80db8bcdf38fab45ac280b7b4843da';
+    r'4339c72b28ae2ce2b4d0b99f9217c4bfa57ab9a8';
 
 /// See also [contentUpdateService].
 @ProviderFor(contentUpdateService)

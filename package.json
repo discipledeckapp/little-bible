@@ -11,7 +11,10 @@
     "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "d1:migrate:local": "wrangler d1 migrations apply little-bible-db --local",
-    "d1:migrate:remote": "wrangler d1 migrations apply little-bible-db --remote"
+    "d1:migrate:remote": "wrangler d1 migrations apply little-bible-db --remote",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "content:publish": "node scripts/publish-content.mjs"
   },
   "dependencies": {
     "@apple/app-store-server-library": "^3.1.0",
@@ -38,6 +41,7 @@
     "@types/react-dom": "^19",
     "prisma": "^7.8.0",
     "typescript": "^5",
+    "vitest": "^3.2.7",
     "wrangler": "^4.42.0"
   }
 }
