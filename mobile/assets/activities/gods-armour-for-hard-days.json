@@ -1,0 +1,37 @@
+{
+  "storyId": "gods-armour-for-hard-days",
+  "memoryBuilder": {
+    "phrase": "Strong in the Lord.",
+    "phraseWords": ["Strong", "in", "the", "Lord."],
+    "verseRef": "Ephesians 6:10",
+    "verseText": "Be strong in the Lord and in His great power.",
+    "verseWords": ["Be", "strong", "in", "the", "Lord", "and", "in", "His", "great", "power."]
+  },
+  "sequence": {
+    "prompt": "How did Paul's letter about God's armour come about? Put it in order.",
+    "items": [
+      { "id": "prison", "label": "Paul sat chained up in a prison",        "emoji": "⛓️", "order": 1 },
+      { "id": "armour", "label": "He looked at the soldier's armour",      "emoji": "🪖", "order": 2 },
+      { "id": "wrote",  "label": "He wrote, 'Be strong in the Lord'",      "emoji": "✍️", "order": 3 },
+      { "id": "stand",  "label": "God's people put God's armour on and stood", "emoji": "🛡️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "shield", "left": "the shield of faith",   "leftEmoji": "🛡️", "rightId": "arrows", "right": "It catches every burning arrow",     "rightEmoji": "🔥" },
+      { "leftId": "whose",  "left": "whose armour it is",    "leftEmoji": "🎁", "rightId": "gods",   "right": "God's own armour, given to us",      "rightEmoji": "🙌" },
+      { "leftId": "hard",   "left": "a hard day",            "leftEmoji": "🌧️", "rightId": "stand",  "right": "A day to stand, not to give up",     "rightEmoji": "🦶" }
+    ]
+  },
+  "application": {
+    "question": "Which hard day do you most need God's armour for?",
+    "options": [
+      { "id": "school", "label": "Being brave at school",     "emoji": "🎒" },
+      { "id": "night",  "label": "When I am scared at night",  "emoji": "🌙" },
+      { "id": "right",  "label": "When doing right is hard",   "emoji": "🤝" }
+    ],
+    "followUp": "Paul was chained to a soldier when he wrote this, so he was not pretending hard days are easy. He simply knew that God never sends His children out with nothing. Every piece of that armour is a gift, so you never have to be strong by yourself. Strong in the Lord."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "servant-king-washes-feet",
+  "memoryBuilder": {
+    "phrase": "Jesus serves. I serve.",
+    "phraseWords": ["Jesus", "serves.", "I", "serve."],
+    "verseRef": "John 13:15",
+    "verseText": "Jesus said: 'I have shown you. Now do the same.'",
+    "verseWords": ["I", "have", "shown", "you.", "Now", "do", "the", "same."]
+  },
+  "sequence": {
+    "prompt": "What happened on the last evening? Put it in order.",
+    "items": [
+      { "id": "supper", "label": "They sat down to supper with dirty feet", "emoji": "🍽️", "order": 1 },
+      { "id": "towel",  "label": "Jesus wrapped a towel round His waist",   "emoji": "🧻", "order": 2 },
+      { "id": "wash",   "label": "He knelt and washed their feet",          "emoji": "🪣", "order": 3 },
+      { "id": "same",   "label": "'Now do the same for each other'",        "emoji": "🤝", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "job",    "left": "washing feet",        "leftEmoji": "🦶", "rightId": "lowest", "right": "The lowest servant's job",              "rightEmoji": "🧹" },
+      { "leftId": "peter",  "left": "Peter's protest",     "leftEmoji": "✋", "rightId": "upside", "right": "It felt upside down — kings do not kneel", "rightEmoji": "👑" },
+      { "leftId": "great",  "left": "being great",         "leftEmoji": "⭐", "rightId": "towel",  "right": "It means picking up the towel",         "rightEmoji": "🧻" }
+    ]
+  },
+  "application": {
+    "question": "Jesus did the job nobody wanted. Which job could you do for somebody today?",
+    "options": [
+      { "id": "tidy",  "label": "Tidy up somebody else's mess", "emoji": "🧺" },
+      { "id": "help",  "label": "Help without being asked",     "emoji": "🤲" },
+      { "id": "last",  "label": "Let somebody else go first",   "emoji": "🚪" }
+    ],
+    "followUp": "Jesus knew He was God's Son with everything in His hands — and He knelt on the floor anyway. He even washed the feet of the friend who let Him down that same night. First He makes us clean; then we copy Him. Jesus serves. I serve."
+  }
+}

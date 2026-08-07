@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-will-come-again",
+  "memoryBuilder": {
+    "phrase": "Jesus is coming back.",
+    "phraseWords": ["Jesus", "is", "coming", "back."],
+    "verseRef": "Acts 1:11",
+    "verseText": "This same Jesus will come back, just as He went.",
+    "verseWords": ["This", "same", "Jesus", "will", "come", "back,", "just", "as", "He", "went."]
+  },
+  "sequence": {
+    "prompt": "What happened on the hill? Put it in order.",
+    "items": [
+      { "id": "bless", "label": "Jesus lifted His hands to bless them", "emoji": "🙌", "order": 1 },
+      { "id": "cloud", "label": "A cloud hid Him from their eyes",      "emoji": "☁️", "order": 2 },
+      { "id": "stare", "label": "They stood staring up at the sky",     "emoji": "👀", "order": 3 },
+      { "id": "work",  "label": "They walked down and got to work",     "emoji": "🚶", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "same",  "left": "'this same Jesus'",     "leftEmoji": "✝️", "rightId": "him",   "right": "Not a different one — the very same Jesus", "rightEmoji": "❤️" },
+      { "leftId": "ask",   "left": "the angels' question",  "leftEmoji": "😇", "rightId": "move",  "right": "Do not just stand there — get going",     "rightEmoji": "🏃" },
+      { "leftId": "wait",  "left": "waiting for Jesus",     "leftEmoji": "⏳", "rightId": "active","right": "Doing His job, not watching the sky",     "rightEmoji": "🛠️" }
+    ]
+  },
+  "application": {
+    "question": "Waiting means getting on with His work. What job could you do today?",
+    "options": [
+      { "id": "kind",  "label": "A kindness for somebody", "emoji": "🤗" },
+      { "id": "sorry", "label": "Say a sorry I owe",       "emoji": "😔" },
+      { "id": "tell",  "label": "Tell someone about Jesus", "emoji": "📣" }
+    ],
+    "followUp": "Nobody knows the day, and Jesus said so on purpose — being ready matters more than knowing when. So the friends walked down that hill full of joy and got to work. Jesus is coming back."
+  }
+}

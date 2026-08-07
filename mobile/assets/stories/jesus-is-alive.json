@@ -1,0 +1,72 @@
+{
+  "id": "jesus-is-alive",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Two angels say this to the women who came to the tomb early on Sunday morning, expecting to find a body.",
+  "title": "Jesus Is Alive",
+  "subtitle": "They went to look after a dead friend and found the stone rolled away",
+  "collection": "jesus-saves",
+  "mainTruth": "Jesus really died and really came back — with a body you could touch. Death met Jesus and lost, so it will lose with us too.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 24:1-12; John 20:11-20",
+  "durationMinutes": 5,
+  "coverEmoji": "🌅",
+  "coverColor": "#F59E0B",
+  "illustrationPrompt": "An open empty tomb cut into rock with a great round stone rolled aside, folded linen cloths lying neatly inside, brilliant sunrise light pouring across the garden and onto the grass outside, painterly gouache illustration on parchment paper, warm gold and fresh green palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, joy and morning --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus really died. His friends took His body down and laid it in a tomb cut out of rock, and they rolled a huge round stone across the doorway. Then they went home, and it was the saddest weekend there has ever been.\n\nVery early on Sunday morning, while it was still half dark, some women walked to the tomb carrying spices. They were going to look after His body, the way you do for somebody you love. On the way they were worrying about one thing: who is going to move that enormous stone for us?\n\nThey did not need to worry. When they arrived, the stone was already rolled away.\n\nThey went in. The body was gone. The cloths He had been wrapped in were lying there, folded, neatly — nobody in a hurry folds cloths.\n\nAnd then two angels in shining clothes were standing there, and the women were terrified and bowed right down. And the angels asked them the best question in the whole Bible: 'Why are you looking for the living among the dead? He is not here. He has risen — just as He told you He would!'\n\nMary stayed behind, crying by the tomb, and a man asked her why she was crying. She thought He was the gardener. And then He said one word: her name. 'Mary.'\n\nAnd she knew.\n\nJesus was not a ghost and He was not a nice memory. He ate a piece of fish in front of them. He told Thomas to touch His hands. He had a real body — the same one that had died, alive again and never going to die.\n\nEverything in this whole book has been walking towards this morning. Sin was paid for on Friday, and on Sunday death itself met Jesus and lost.\n\nSo when Christians say goodbye to somebody they love, they are sad — but not the way people are sad who have no hope. Because of this Sunday.",
+      "childText": "Jesus really died. His friends laid His body in a tomb cut out of rock and rolled a huge round stone across the doorway. It was the saddest weekend there has ever been. Very early on Sunday morning, while it was still half dark, some women walked to the tomb carrying spices to look after His body. All the way there they were worrying: who will move that enormous stone for us? They did not need to worry. When they arrived, the stone was already rolled away! They went in. The body was gone, and the cloths He had been wrapped in were lying there neatly folded — nobody in a hurry folds cloths. Then two shining angels asked them the best question in the whole Bible: 'Why are you looking for the living among the dead? He is not here. He has risen — just as He said!' Later Mary stood crying outside, and a man said one word: her name. And she knew. Jesus was alive.",
+      "verses": [
+        {
+          "ref": "Luke 24:2",
+          "kjv": "And they found the stone rolled away from the sepulchre.",
+          "little_bible": "They found the big stone already rolled away."
+        },
+        {
+          "ref": "Luke 24:5",
+          "kjv": "Why seek ye the living among the dead?",
+          "little_bible": "The angels asked: 'Why look for the living among the dead?'"
+        },
+        {
+          "ref": "Luke 24:6",
+          "kjv": "He is not here, but is risen: remember how he spake unto you.",
+          "little_bible": "He is not here. He is alive, just as He said!"
+        },
+        {
+          "ref": "John 20:16",
+          "kjv": "Jesus saith unto her, Mary. She turned herself, and saith unto him, Rabboni; which is to say, Master.",
+          "little_bible": "Jesus said her name: 'Mary.' And she knew Him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did the women expect to find at the tomb?",
+      "parentGuide": "The new concept is bodily resurrection, and the word to protect is bodily. Children hear 'He lives on in our hearts' from all sorts of places; be plain that Jesus' actual body came back to life, that He ate fish in front of His friends and told Thomas to touch His hands. It was the same body that had died, alive and never going to die again. Two details do a lot of work with young children: the women worried about the stone the whole way there and it was already moved, and the folded cloths, because nobody in a hurry folds anything. Let the joy be big here — this story has permission to be loud after the last one. Retrieve Jesus Dies for Sinners and hold them together: Friday paid for sin, Sunday beat death. If your child has lost someone, this is the story that will matter most to them for the rest of their life, so do not rush the last line about Christian sadness having hope in it.",
+      "familyQuestion": "How does Sunday change how we feel about sad things?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, You are alive! Thank You that death met You and lost. Thank You that You know our names. Help us live like people who know how the story ends. Amen.",
+      "childPrompt": "Can you tell Jesus that you are glad He is alive?",
+      "prayerPoints": [
+        "Thank Jesus that He is alive right now, not just a memory",
+        "Thank Jesus that He knows your name, like He knew Mary's"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "He is not here. He is alive, just as He said!",
+      "ref": "Luke 24:6",
+      "memoryPhrase": "Jesus is alive!",
+      "tip": "Crouch down small and dark like the closed tomb, then leap up with both arms high and shout: 'Jesus is alive!' Do it three times, louder every time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell one person today the good news in three words: 'Jesus is alive!' Say it out loud, not in a whisper.",
+      "parentNote": "Let them pick who. If they are shy, go together and say it with them — the point is that this is news to be told, not a secret to be kept."
+    }
+  }
+}

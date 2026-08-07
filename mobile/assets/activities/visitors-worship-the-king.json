@@ -1,0 +1,37 @@
+{
+  "storyId": "visitors-worship-the-king",
+  "memoryBuilder": {
+    "phrase": "Jesus is for everyone.",
+    "phraseWords": ["Jesus", "is", "for", "everyone."],
+    "verseRef": "Matthew 2:11",
+    "verseText": "They knelt down and worshipped Jesus, and gave Him gifts.",
+    "verseWords": ["They", "knelt", "down", "and", "worshipped", "Jesus,", "and", "gave", "Him", "gifts."]
+  },
+  "sequence": {
+    "prompt": "How did the visitors find Jesus? Put it in order.",
+    "items": [
+      { "id": "star",    "label": "They saw a brand-new star",        "emoji": "🌟", "order": 1 },
+      { "id": "travel",  "label": "They travelled for months",        "emoji": "🐪", "order": 2 },
+      { "id": "stopped", "label": "The star stopped over one house",   "emoji": "🏠", "order": 3 },
+      { "id": "knelt",   "label": "They knelt down and gave gifts",    "emoji": "🎁", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each gift to what it means.",
+    "questionTemplate": "What does {left} tell us about Jesus?",
+    "pairs": [
+      { "leftId": "gold",  "left": "the gold",       "leftEmoji": "🪙", "rightId": "king", "right": "Jesus is a King",           "rightEmoji": "👑" },
+      { "leftId": "frank", "left": "the frankincense", "leftEmoji": "💨", "rightId": "god", "right": "Jesus is God",             "rightEmoji": "✨" },
+      { "leftId": "myrrh", "left": "the myrrh",      "leftEmoji": "🫙", "rightId": "die",  "right": "One day He would die for us", "rightEmoji": "✝️" }
+    ]
+  },
+  "application": {
+    "question": "The visitors came from far away and belonged to Jesus too. Who could you welcome in this week?",
+    "options": [
+      { "id": "new",     "label": "Somebody new",           "emoji": "🙋" },
+      { "id": "alone",   "label": "Somebody playing alone", "emoji": "🧍" },
+      { "id": "differ",  "label": "Somebody different from me", "emoji": "🤝" }
+    ],
+    "followUp": "The first people ever to kneel down and worship Jesus were foreigners who spoke a different language. Right at the very beginning, God showed us: Jesus is for everyone."
+  }
+}

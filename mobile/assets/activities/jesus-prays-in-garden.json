@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-prays-in-garden",
+  "memoryBuilder": {
+    "phrase": "Not mine, but Yours.",
+    "phraseWords": ["Not", "mine,", "but", "Yours."],
+    "verseRef": "Mark 14:36",
+    "verseText": "Jesus prayed: 'Father, not what I want — what You want.'",
+    "verseWords": ["Father,", "not", "what", "I", "want", "what", "You", "want."]
+  },
+  "sequence": {
+    "prompt": "What happened in the garden? Put it in order.",
+    "items": [
+      { "id": "garden", "label": "They walked out to the olive garden", "emoji": "🌿", "order": 1 },
+      { "id": "sad",    "label": "Jesus became very sad and troubled",  "emoji": "😢", "order": 2 },
+      { "id": "pray",   "label": "He knelt and prayed to His Father",   "emoji": "🙏", "order": 3 },
+      { "id": "stood",  "label": "He stood up, because He had decided", "emoji": "🚶", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "feelings", "left": "how Jesus felt",       "leftEmoji": "😢", "rightId": "real",  "right": "Truly sad and truly trusting at once", "rightEmoji": "🤝" },
+      { "leftId": "honest",   "left": "what Jesus prayed",    "leftEmoji": "🙏", "rightId": "true",  "right": "He said honestly what He wanted",      "rightEmoji": "💬" },
+      { "leftId": "friends",  "left": "the sleeping friends", "leftEmoji": "😴", "rightId": "loved", "right": "They let Him down, and He still loved them", "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "Jesus told God exactly how He felt. What feeling could you tell God about today?",
+    "options": [
+      { "id": "scared", "label": "When I feel scared",  "emoji": "😨" },
+      { "id": "sad",    "label": "When I feel sad",     "emoji": "😢" },
+      { "id": "cross",  "label": "When I feel cross",   "emoji": "😤" }
+    ],
+    "followUp": "Being afraid is not the opposite of trusting God. Jesus was so sad He could hardly stand, and He trusted His Father completely at the very same moment. You can tell God the true thing and still say: not mine, but Yours."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "jesus-calls-his-helpers",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to two fishermen standing in the shallows with their nets, the first time He ever meets them.",
+  "title": "Jesus Calls His Helpers",
+  "subtitle": "He walked up to some ordinary working men and said two words: follow Me",
+  "collection": "jesus-is-here",
+  "mainTruth": "Jesus chooses ordinary people and asks them to come with Him. Following Jesus means going where He goes, and He is the one who does the choosing.",
+  "ageRange": "4-7",
+  "bibleRef": "Mark 1:14-20; Luke 5:1-11",
+  "durationMinutes": 5,
+  "coverEmoji": "🎣",
+  "coverColor": "#0369A1",
+  "illustrationPrompt": "Two fishermen standing knee deep at the edge of a bright lake with a heavy net between their hands, turning to look at a figure standing on the shore who has one hand extended in invitation, a wooden boat pulled up on the shingle, early morning light on the water, painterly gouache illustration on parchment paper, lake blue and warm sand palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, invitation and gladness --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus came out of the desert and began to travel round telling people the best news anybody had ever heard: 'God's kingdom is here! Turn back to God and believe the good news!'\n\nBut Jesus did not do it on His own. He could have. Instead He went looking for helpers — and where He looked is surprising.\n\nHe did not go to the temple and pick the cleverest students. He did not go to the palace and pick the most important men. He walked along the edge of a lake, early in the morning, where people were working.\n\nThere were two brothers there, Simon and Andrew, standing in the shallow water throwing their nets out. Fishing was their job. It was their father's job. It was all they had ever done, and their hands smelled of fish, and nobody had ever thought they were special.\n\nJesus stopped and said, 'Come, follow Me. I will make you fishers of people.'\n\nAnd straight away they left their nets and went with Him.\n\nA little further along He saw two more brothers, James and John, sitting in a boat with their father, mending nets. Jesus called them too. And they got out of the boat and followed Him.\n\nThink about what that took. They did not know where they were going, or how long for, or what they would eat. They just knew who was asking.\n\nIn the end Jesus chose twelve of them. Fishermen. A tax collector, who everybody hated. Ordinary men with ordinary jobs. Not one of them was famous, and not one of them was chosen because he was good enough. They got things wrong constantly, all the way through — and Jesus kept them anyway.\n\nHere is the part that is easy to miss: they did not choose Jesus first. He walked up to them, in the middle of an ordinary working morning, and He chose them.\n\nAnd that is still how it works. Following Jesus is not something clever people work out. It is answering somebody who came looking for you.",
+      "childText": "Jesus came out of the desert and began telling people the best news ever: 'God's kingdom is here! Turn back to God!' But Jesus did not do it on His own. He went looking for helpers — and where He looked is surprising. He did not pick the cleverest students at the temple. He did not pick the important men at the palace. He walked along the edge of a lake, early in the morning, where people were working. Two brothers were there, Simon and Andrew, standing in the shallow water throwing out their nets. Fishing was their job. It was all they had ever done, and their hands smelled of fish, and nobody had ever thought they were special. Jesus stopped and said, 'Come, follow Me!' And straight away they left their nets and went with Him. A bit further on, James and John were mending nets in a boat. Jesus called them too, and they came. They did not know where they were going, or for how long. They just knew who was asking. In the end Jesus chose twelve helpers. Fishermen. A tax collector everybody hated. Ordinary people. And they did not choose Jesus first — He came looking for them.",
+      "verses": [
+        {
+          "ref": "Mark 1:15",
+          "kjv": "The time is fulfilled, and the kingdom of God is at hand: repent ye, and believe the gospel.",
+          "little_bible": "Jesus said: 'God's kingdom is here! Believe the good news!'"
+        },
+        {
+          "ref": "Mark 1:17",
+          "kjv": "And Jesus said unto them, Come ye after me, and I will make you to become fishers of men.",
+          "little_bible": "Jesus said: 'Come, follow Me, and I will make you fishers of people.'"
+        },
+        {
+          "ref": "Mark 1:18",
+          "kjv": "And straightway they forsook their nets, and followed him.",
+          "little_bible": "Straight away they left their nets and followed Him."
+        },
+        {
+          "ref": "John 15:16",
+          "kjv": "Ye have not chosen me, but I have chosen you.",
+          "little_bible": "Jesus said: 'You did not choose Me. I chose you.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Where did Jesus go to find His helpers?",
+      "parentGuide": "The new concept is discipleship — following Jesus means going where He goes. Two things carry the story. First, who He picked: working men with fishy hands, and a tax collector everybody hated. Not the clever, not the important, not the qualified. If your child has quietly decided they are not the good one or not the clever one in the family, this is their story and it is worth saying so directly. Second, the direction of the choosing — they did not choose Jesus, He came looking for them on an ordinary working morning. That is what keeps following from becoming a performance. It is also honest to say the twelve got things wrong constantly and He kept them; children assume being chosen depends on staying impressive. Retrieve Samuel Listens to God, where God called a child by name.",
+      "familyQuestion": "What would following Jesus change about our week?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You come looking for ordinary people like us. Thank You that You chose us first. Help us leave our nets and follow You wherever You go. Amen.",
+      "childPrompt": "Can you tell Jesus you want to follow Him?",
+      "prayerPoints": [
+        "Thank Jesus that He chose you first, before you chose Him",
+        "Ask Jesus to help you follow Him this week"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus said: 'Come, follow Me, and I will make you fishers of people.'",
+      "ref": "Mark 1:17",
+      "memoryPhrase": "Jesus says follow Me.",
+      "tip": "Play follow-my-leader round the room, and every time you change direction call out: 'Jesus says follow Me!' Let your child lead the second round."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell one person today something true about Jesus — even just one sentence. That is what fishers of people do.",
+      "parentNote": "Help them choose the sentence beforehand and keep it to one they actually believe. Practise it out loud together once, and let their own words stand even if they come out wonky."
+    }
+  }
+}

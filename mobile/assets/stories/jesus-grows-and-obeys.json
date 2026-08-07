@@ -1,0 +1,72 @@
+{
+  "id": "jesus-grows-and-obeys",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Luke sums up Jesus' whole childhood in one sentence, after telling us that He went home and obeyed His parents.",
+  "title": "Jesus Grows and Obeys",
+  "subtitle": "Jesus was a child once too — and He got it right every single day",
+  "collection": "jesus-is-here",
+  "mainTruth": "Jesus lived a whole childhood without ever once disobeying. He did perfectly what none of us manage, and He did it for us.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 2:41-52",
+  "durationMinutes": 5,
+  "coverEmoji": "🌱",
+  "coverColor": "#0D9488",
+  "illustrationPrompt": "A boy of about twelve sitting on a stone step among seated bearded teachers in a temple courtyard, leaning forward listening intently, warm light on the stone, his mother appearing in an archway behind, painterly gouache illustration on parchment paper, teal and warm sandstone palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, curiosity and calm --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Here is something we do not think about often enough. Jesus was a child.\n\nHe was a baby who had to be carried. He was a toddler who had to learn to walk. He was a boy who had jobs to do and a bedtime and a mother who told Him when to come in. He grew taller. He learned things He had not known before. He had a village, and neighbours, and a father who taught Him to work with wood.\n\nAnd in all of it, He never once did wrong. Not once.\n\nWhen Jesus was twelve, His family went to Jerusalem for a big festival, along with a huge crowd of cousins and neighbours. When it was over, everybody set off home together, and Mary and Joseph assumed Jesus was somewhere in the group with the other children.\n\nHe was not. He was still in Jerusalem.\n\nThey went all the way back, and looked for three whole days. Have you ever been lost, or lost somebody? Mary said afterwards how frightened they had been.\n\nAnd they found Him in the temple, sitting among the teachers — the cleverest men in the country — listening to them and asking them questions. And everybody who heard Him was amazed, because His questions were not a twelve-year-old's questions.\n\nMary said, 'Why have You done this to us? We have been so worried!'\n\nAnd Jesus said, 'Did you not know I would be in My Father's house?'\n\nThat was the first time anybody heard Jesus say who His real Father was. He knew, at twelve, exactly who He was.\n\nAnd then — do not miss this part, because it is the whole point — Jesus went home with them to Nazareth. And He obeyed them.\n\nThe Son of God, who made the world, spent the next eighteen years being an obedient son in a small town, doing ordinary work, and nobody wrote a single story about it.\n\nRemember King Saul, who did most of what God said? Jesus did all of it. Every day. Every year. That is the obedience none of us has ever managed — and Jesus was doing it for us the whole time.",
+      "childText": "Here is something we do not think about often enough: Jesus was a child. He was a baby who had to be carried. He was a boy who had jobs to do and a bedtime and a mother who called Him in. He grew taller. He learned to work with wood. And in all of it, He never once did wrong. Not one single time! When Jesus was twelve, His family went to Jerusalem for a big festival with a huge crowd of cousins and neighbours. When it ended, everybody set off home, and Mary and Joseph thought Jesus was somewhere in the group. He was not! They went all the way back and looked for three whole days. They were so frightened. They found Him in the temple, sitting with the cleverest teachers in the country, listening and asking questions. Everyone was amazed. 'We have been so worried!' said Mary. And Jesus said, 'Did you not know I would be in My Father's house?' Then Jesus went home with them — and He obeyed them. The Son of God, who made the whole world, spent years being an obedient son in a small town. Remember King Saul, who did most of what God said? Jesus did all of it. Every single day. And He was doing it for us.",
+      "verses": [
+        {
+          "ref": "Luke 2:46",
+          "kjv": "They found him in the temple, sitting in the midst of the doctors, both hearing them, and asking them questions.",
+          "little_bible": "They found Jesus with the teachers, listening and asking questions."
+        },
+        {
+          "ref": "Luke 2:49",
+          "kjv": "Wist ye not that I must be about my Father's business?",
+          "little_bible": "Jesus said: 'Did you not know I would be in My Father's house?'"
+        },
+        {
+          "ref": "Luke 2:51",
+          "kjv": "And he went down with them, and came to Nazareth, and was subject unto them.",
+          "little_bible": "Jesus went home with them, and He obeyed them."
+        },
+        {
+          "ref": "Luke 2:52",
+          "kjv": "And Jesus increased in wisdom and stature, and in favour with God and man.",
+          "little_bible": "Jesus grew taller and wiser, and God was pleased with Him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Jesus was a child once. What did He do every single day?",
+      "parentGuide": "The new concept is Jesus' perfect human obedience, and this is the story in the whole curriculum that lands closest to your child's own life. Lean into the ordinary: Jesus had chores, a bedtime, a mother who called Him in, and He got it right every time. Then be careful in two directions. This is not 'so you should obey like Jesus did' — a child who takes that away has heard the law, not the gospel. It is 'Jesus obeyed perfectly, and He did it for you, because you cannot.' Say the second half out loud. And the eighteen quiet years matter: God was pleased with Jesus during years nobody recorded, which is worth a child hearing if they think only visible achievement counts. Retrieve Saul: The King Who Would Not Listen and set the two side by side — most of it, versus all of it.",
+      "familyQuestion": "Which ordinary job are we finding hardest right now?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You were a child too, and You understand exactly what our days are like. Thank You for obeying perfectly for us, because we cannot. Help us today. Amen.",
+      "childPrompt": "Can you tell Jesus about the bit of your day you find hardest?",
+      "prayerPoints": [
+        "Thank Jesus for obeying perfectly in your place",
+        "Tell Jesus which ordinary job you find hardest, since He knows"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus went home with them, and He obeyed them.",
+      "ref": "Luke 2:51",
+      "memoryPhrase": "Jesus always obeyed God.",
+      "tip": "Stand up straight, tap your head, shoulders, knees and toes in turn while you say one word each: 'Jesus — always — obeyed — God.' Speed it up each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Do the very next thing a grown-up asks you today straight away, first time, without being asked twice.",
+      "parentNote": "Notice it out loud when it happens, and thank Jesus for it in front of them rather than praising the performance. The aim is gratitude for His obedience, not pressure about theirs."
+    }
+  }
+}

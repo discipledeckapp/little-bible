@@ -1,0 +1,72 @@
+{
+  "id": "the-holy-spirit-comes",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to His friends just before He goes up to heaven, telling them what the Father is about to give them.",
+  "title": "The Holy Spirit Comes",
+  "subtitle": "God used to live with His people — now He came to live inside them",
+  "collection": "spirit-filled-family",
+  "mainTruth": "The Holy Spirit is God Himself, and He is given, never earned. God no longer lives in a tent in the middle of the camp — He lives inside His people.",
+  "ageRange": "4-7",
+  "bibleRef": "Acts 1:4-8; 2:1-41",
+  "durationMinutes": 5,
+  "coverEmoji": "🔥",
+  "coverColor": "#C2410C",
+  "illustrationPrompt": "A crowded sunlit courtyard of people from many nations with different skin tones and bright headwraps, small gentle flames of light resting above each head, warm wind lifting cloth and dust, a fisherman on the steps speaking with open hands, painterly gouache illustration on parchment paper, flame orange and warm terracotta palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, glad astonishment --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Before Jesus went up, He told His friends one thing to do: wait. 'Do not leave Jerusalem. Wait for the gift My Father promised. You will receive power when the Holy Spirit comes to you.'\n\nSo they waited. About a hundred and twenty of them, praying together in an upstairs room, day after day. They did not fetch the Spirit. They did not work hard enough to deserve Him. They waited, because gifts are given.\n\nThen came a festival morning, and Jerusalem was packed. It was the feast of Pentecost, and visitors had travelled in from everywhere — from Egypt, and from Libya near Cyrene, from Rome and Arabia and Crete, from lands north and south and east. Dozens of different languages, all in one crowded city.\n\nAnd suddenly, in that upstairs room, there was a sound like a great rushing wind, filling the whole house. And what looked like little flames of fire came and rested on each one of them. Not burning them. Resting on them.\n\nThey were all filled with the Holy Spirit.\n\nDo you remember what God promised through the prophet Ezekiel, hundreds of years earlier? 'I will put My Spirit inside you.' This was that day. God had lived in a tent in the middle of the camp, and then in a temple in the city. Now God came to live inside His people.\n\nAnd straight away they went out into the street and started to speak — and every single visitor heard them telling about the wonderful things God had done, in their own home language. A woman from Egypt heard it in her language. A man from Libya heard it in his. Nobody had to learn somebody else's language first in order to belong to God. God came and spoke theirs.\n\nThe crowd was astonished. Some of them laughed and said, 'They have had too much wine!'\n\nSo Peter stood up. Peter — who had run away, and said three times that he did not know Jesus. He stood in front of thousands of people and said, 'We are not drunk. This is what God promised long ago. You handed Jesus over to die, but God raised Him from the dead, and He is Lord and King. Turn back to God, and you will be given the gift of the Holy Spirit too.'\n\nAnd that day about three thousand people believed.\n\nThe Holy Spirit is not a feeling and not a force. He is God — the third person of the Trinity, the same Spirit who came down like a dove at the river when Jesus was baptised. And He is a gift. Never a prize.",
+      "childText": "Before Jesus went up, He told His friends to wait in Jerusalem for the gift the Father had promised. So they waited and prayed, day after day. Then came a festival morning, and the city was full of visitors from everywhere — from Egypt and Libya, from Rome and Arabia — all speaking different languages. Suddenly there was a sound like a great rushing wind filling the whole house, and what looked like little flames came and rested on each one of them. They were all filled with the Holy Spirit! Long ago God had promised, 'I will put My Spirit inside you.' This was that day. Then they went outside and spoke, and every visitor heard about God's wonderful works in their own home language. Nobody had to learn a new language to belong to God. Peter stood up and said, 'Turn back to God, and you will be given the Holy Spirit too.' Three thousand people believed.",
+      "verses": [
+        {
+          "ref": "Acts 1:8",
+          "kjv": "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me.",
+          "little_bible": "The Holy Spirit will come and give you power."
+        },
+        {
+          "ref": "Acts 2:2",
+          "kjv": "And suddenly there came a sound from heaven as of a rushing mighty wind, and it filled all the house.",
+          "little_bible": "A sound like rushing wind filled the whole house."
+        },
+        {
+          "ref": "Acts 2:4",
+          "kjv": "And they were all filled with the Holy Ghost, and began to speak with other tongues.",
+          "little_bible": "They were all filled with the Holy Spirit."
+        },
+        {
+          "ref": "Acts 2:11",
+          "kjv": "We do hear them speak in our tongues the wonderful works of God.",
+          "little_bible": "Everyone heard about God in their own language."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Who gave the Holy Spirit, and who had to wait?",
+      "parentGuide": "The new concept is the indwelling Holy Spirit: God no longer lives near His people, He lives inside them. Guard two things. First, the Spirit is given, not summoned. Children pick up quickly that if they pray hard enough or feel enough, God will turn up; the friends in that room simply waited while God acted, and Peter offers the Spirit as a gift to three thousand strangers who had done nothing to deserve Him. Second, the Spirit is a person, not a power source or a feeling — He is God, the same Spirit who came down like a dove at the Jordan. Retrieve The Prophets Promise New Hearts and read Ezekiel's promise again: I will put My Spirit inside you. Pentecost is that promise arriving. And notice the languages out loud: God spoke Egyptian and Libyan and Latin on day one, so no child ever has to become somebody else to belong to Him.",
+      "familyQuestion": "What is the difference between God being near us and God being in us?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Holy Spirit, You are God, and You came to live inside Your people. Thank You that You are a gift we could never earn. Please help us love Jesus, tell the truth about Him, and be brave like Peter. Amen.",
+      "childPrompt": "Can you thank God for the gift of His Spirit?",
+      "prayerPoints": [
+        "Thank God that His Spirit is a gift, not something you earn",
+        "Ask the Holy Spirit to give you power to tell somebody about Jesus"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "The Holy Spirit will come and give you power.",
+      "ref": "Acts 1:8",
+      "memoryPhrase": "God's Spirit lives inside.",
+      "tip": "Blow gently on your child's hand so they feel the wind, then place their own hand flat on their chest and say together: 'God's Spirit lives inside.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Learn how to say 'Jesus loves you' in one other language, and say it to somebody today.",
+      "parentNote": "Ask a neighbour, a grandparent or a friend from another country to teach you, rather than looking it up alone — the asking is part of the lesson. At Pentecost God spoke everybody's language, and this is a small way for your child to feel how wide His family is."
+    }
+  }
+}

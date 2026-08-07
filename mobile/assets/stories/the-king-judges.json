@@ -1,0 +1,72 @@
+{
+  "id": "the-king-judges",
+  "sensitivityTier": "guided",
+  "genre": "teaching",
+  "verseContext": "Jesus says this about Himself, explaining that a day is coming when everyone will hear His voice and rise.",
+  "title": "The King Judges and Raises the Dead",
+  "subtitle": "The Judge has scars on His hands — He is the one who died for us",
+  "collection": "king-makes-all-things-new",
+  "mainTruth": "Jesus will put every single wrong thing right. The Judge of the world is the same person who died to rescue us, so those who trust Him need not be afraid of that day.",
+  "ageRange": "4-7",
+  "bibleRef": "John 5:26-29; Revelation 20:11-13",
+  "durationMinutes": 5,
+  "coverEmoji": "⚖️",
+  "coverColor": "#1E3A5F",
+  "illustrationPrompt": "A great throne of warm light on a wide open plain at dawn, an enormous open book resting before it, crowds of people from every nation standing quietly in the soft light, no faces in distress, painterly gouache illustration on parchment paper, deep blue and radiant gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, awe and justice and hope, nothing frightening --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Have you ever said, 'That's not fair!' and meant it? Everybody has. Somebody cheated and got away with it. Somebody was cruel and nobody stopped them. And a horrible little thought creeps in: nobody is going to do anything about it.\n\nGod says: I am.\n\nJesus said that a day is coming when everyone who has ever died will hear His voice and come out of their graves. Everyone. And He will judge — which means He will look at every single thing that has ever happened and say what is true about it.\n\nEvery bully who was never caught. Every kindness nobody noticed. Every lie, every cruel word, every quiet good thing done in secret. Nothing will be missed and nothing will be forgotten. Everything hidden will be brought into the light and put right.\n\nThat is wonderful news if you have ever been treated unfairly. It means the story does not end with the cheat winning.\n\nBut it should also make us swallow hard. Because if Jesus sees everything, He sees our wrong things too. And we cannot argue our way out, because He was there.\n\nSo here is the most important sentence in this story. Look at who the Judge is.\n\nThe Judge is Jesus. The one who came as a baby. The one who washed His friends' feet. The one who took the punishment that belonged to us and said, 'It is finished.' The Judge of the whole world has scars on His hands, and He got them saving people like us.\n\nSo if you belong to Jesus, that day is not a day to dread. Your wrongs have already been dealt with — He carried them Himself. You will not stand there hoping you were good enough. You will stand there with the Judge on your side.\n\nEvery wrong thing will be put right. And the one holding the scales is the one who died for you.",
+      "childText": "Have you ever said 'That's not fair!' and really meant it? Somebody cheated and got away with it. Somebody was unkind and nobody stopped them. And a horrible little thought creeps in: nobody is going to do anything about it. God says: I am. Jesus said a day is coming when everyone will hear His voice, and He will judge — which means He will look at everything that ever happened and say what is true about it. Every unkindness nobody caught. Every good thing nobody noticed. Nothing missed, nothing forgotten, everything put right. That is wonderful news if you have ever been treated unfairly! But it should make us swallow hard too, because Jesus sees our wrong things as well. So look carefully at who the Judge is. It is Jesus — the one who washed His friends' feet and took the punishment that belonged to us. The Judge of the whole world has scars on His hands, and He got them saving people like us.",
+      "verses": [
+        {
+          "ref": "John 5:28",
+          "kjv": "All that are in the graves shall hear his voice.",
+          "little_bible": "Everyone in the graves will hear Jesus' voice."
+        },
+        {
+          "ref": "Acts 17:31",
+          "kjv": "He hath appointed a day, in the which he will judge the world in righteousness.",
+          "little_bible": "God has picked a day to put everything right."
+        },
+        {
+          "ref": "Revelation 20:12",
+          "kjv": "And the books were opened... and the dead were judged out of those things which were written in the books.",
+          "little_bible": "The books were opened. Nothing had been forgotten."
+        },
+        {
+          "ref": "Romans 8:1",
+          "kjv": "There is therefore now no condemnation to them which are in Christ Jesus.",
+          "little_bible": "Nobody who belongs to Jesus will be told off that day."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Who is the Judge, and what is on His hands?",
+      "parentGuide": "The new concept is final judgment, and it must never be used as a threat to make a child behave — a child frightened into obedience has learned the opposite of the gospel. Start where they already are: every child has a fierce sense of unfairness, and this doctrine is first of all the answer to it. Somebody IS going to do something about the cheat who got away with it. Then turn it: He sees ours too, and we cannot argue, because He was there. And then land it on who the Judge is — the one with scars, who already carried our wrong things. That is the whole comfort, and it is why a child who trusts Jesus can think about that day without dread. Do not describe hell's torments; 'being away from God for ever, which is the saddest thing there could be' is enough and is true. Retrieve Jesus Dies for Sinners — 'It is finished' is precisely why there is nothing left to be condemned for.",
+      "familyQuestion": "What unfair thing would you like God to put right?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You will put every wrong thing right. Thank You that the Judge is the one who died for us. Please help us trust You and not be afraid of that day. Amen.",
+      "childPrompt": "Is there something unfair you want to hand over to God?",
+      "prayerPoints": [
+        "Hand God one unfair thing and ask Him to put it right",
+        "Thank Jesus that He already carried your wrong things"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Nobody who belongs to Jesus will be told off that day.",
+      "ref": "Romans 8:1",
+      "memoryPhrase": "The Judge saved me.",
+      "tip": "Hold out both hands palms up and look at them, then close them into a hug across your chest and say: 'The Judge saved me.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Think of one unfair thing that bothers you. Tell God about it, and then let Him hold it instead of you.",
+      "parentNote": "Let them name it out loud, and resist explaining it away or defending the person. Handing it over is the practice; God is well able to be trusted with a child's sense of injustice."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "joshua-and-the-walls",
+  "memoryBuilder": {
+    "phrase": "God is with me!",
+    "phraseWords": ["God", "is", "with", "me!"],
+    "verseRef": "Joshua 1:9",
+    "verseText": "God said: 'Do not be afraid. I am with you everywhere you go.'",
+    "verseWords": ["Do", "not", "be", "afraid.", "I", "am", "with", "you", "everywhere", "you", "go."]
+  },
+  "sequence": {
+    "prompt": "How did the walls of Jericho fall? Put it in order.",
+    "items": [
+      { "id": "chose",  "label": "God chose Joshua to lead His people",    "emoji": "🧔", "order": 1 },
+      { "id": "walls",  "label": "Jericho's huge walls were shut tight",   "emoji": "🏰", "order": 2 },
+      { "id": "march",  "label": "They walked round in silence for six days", "emoji": "🚶", "order": 3 },
+      { "id": "shout",  "label": "They shouted and the walls fell flat",   "emoji": "📢", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "brave",  "left": "being brave",     "leftEmoji": "💪", "rightId": "with",   "right": "Obeying God because He is with you", "rightEmoji": "🤝" },
+      { "leftId": "plan",   "left": "God's strange plan", "leftEmoji": "🎺", "rightId": "quiet", "right": "Walk round quietly, do not attack",  "rightEmoji": "🤫" },
+      { "leftId": "walls",  "left": "the walls",       "leftEmoji": "🏰", "rightId": "god",    "right": "God knocked them down, not the people", "rightEmoji": "✨" }
+    ]
+  },
+  "application": {
+    "question": "Joshua was afraid, and God said 'be brave' anyway. When do you need to be brave?",
+    "options": [
+      { "id": "dark",  "label": "In the dark",        "emoji": "🌙" },
+      { "id": "new",   "label": "Somewhere new",      "emoji": "🚪" },
+      { "id": "ask",   "label": "Asking for help",    "emoji": "🙋" }
+    ],
+    "followUp": "God told Joshua not to be afraid three times — which means Joshua WAS afraid. Being brave is not feeling unafraid. It is obeying God because He is with you."
+  }
+}

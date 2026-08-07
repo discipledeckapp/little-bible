@@ -1,0 +1,72 @@
+{
+  "id": "the-last-supper",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Jesus says this over the cup at His last meal with His friends, the night before He died.",
+  "title": "The Last Supper",
+  "subtitle": "A meal that looked back at the lamb — and forward to the cross",
+  "collection": "jesus-saves",
+  "mainTruth": "Jesus turned the Passover meal into a picture of Himself. His body given and His blood poured out are the new promise God had said He would make.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 22:7-20",
+  "durationMinutes": 5,
+  "coverEmoji": "🍞",
+  "coverColor": "#7C2D12",
+  "illustrationPrompt": "A low table in warm lamplight with a broken loaf of bread and a simple clay cup at its centre, a man's open hands resting either side of the bread, friends seated in shadow around the edges, painterly gouache illustration on parchment paper, deep umber and warm amber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, quiet significance --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Every year for hundreds of years, God's people had eaten the same special meal. It was called Passover, and it remembered the night God rescued them out of Egypt — the night a lamb died and its blood on the doorpost meant that the family inside was safe.\n\nDo you remember that night? Every Passover meal since had been a way of saying: God rescued us, and a lamb died so we could live.\n\nOn the last evening of His life, Jesus sat down to eat that meal with His twelve friends. He had been longing for it, He told them.\n\nAnd then Jesus did something nobody had ever done. He took the bread — ordinary flat bread that had been part of that meal for centuries — and He gave thanks, and broke it, and said: 'This is My body, which is given for you. Do this to remember Me.'\n\nThen He picked up the cup and said: 'This cup is the new promise, in My blood, which is poured out for you.'\n\nHis friends must have gone very quiet. For hundreds of years this meal had pointed backwards to a lamb in Egypt. Jesus was telling them it had always been pointing forwards — to Him.\n\nHe was the Lamb. Tomorrow He would be the one who died so that others could live, and His blood would mean that everyone sheltering under it was safe.\n\nAnd remember what the prophets had promised, long ago, when God's people were far from home: a brand-new promise, hearts made new, sins forgiven and never mentioned again. Jesus lifted a cup and said, this is that. Tonight. In My blood.\n\nChristians all over the world still eat bread and drink from a cup together, because Jesus said to. It is not a magic meal. It is a family remembering, out loud, that somebody died so we could live — and that He is not dead any more.",
+      "childText": "Every year for hundreds of years, God's people ate a special meal called Passover. It remembered the night God rescued them out of Egypt — the night a lamb died and its blood on the doorpost meant the family inside was safe. On the last evening of His life, Jesus sat down to eat that meal with His twelve friends. And then Jesus did something nobody had ever done. He took the flat bread that had been part of that meal for hundreds of years, gave thanks, broke it, and said: 'This is My body, given for you.' Then He picked up the cup and said: 'This cup is the new promise, in My blood, poured out for you.' His friends must have gone very quiet. All those years the meal had pointed backwards to a lamb in Egypt. Jesus was telling them it had always pointed forwards — to Him. He was the Lamb. Tomorrow He would die so that others could live.",
+      "verses": [
+        {
+          "ref": "Luke 22:15",
+          "kjv": "With desire I have desired to eat this passover with you before I suffer.",
+          "little_bible": "Jesus said: 'I really wanted to eat this meal with you.'"
+        },
+        {
+          "ref": "Luke 22:19",
+          "kjv": "This is my body which is given for you: this do in remembrance of me.",
+          "little_bible": "Jesus said: 'This is My body, given for you.'"
+        },
+        {
+          "ref": "Luke 22:20",
+          "kjv": "This cup is the new testament in my blood, which is shed for you.",
+          "little_bible": "Jesus said: 'This cup is God's new promise, in My blood.'"
+        },
+        {
+          "ref": "1 Corinthians 11:26",
+          "kjv": "For as often as ye eat this bread, and drink this cup, ye do shew the Lord's death till he come.",
+          "little_bible": "Every time we eat it, we remember Jesus until He comes."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did the Passover meal always point towards?",
+      "parentGuide": "The new concept is the new covenant meal — the promise God made through the prophets, arriving. This story only works if the child already has the lamb, so Retrieve The Passover Lamb first and spend a moment there: blood on a doorpost meant the family inside was safe. Then the hinge: for centuries the meal looked backwards, and Jesus told them it had always been looking forwards to Him. Retrieve The Prophets Promise New Hearts too — 'a brand-new promise' is the same promise being lifted in a cup. Keep it concrete. Children may ask whether they are eating Jesus; say plainly that the bread stays bread, and it is a picture and a remembering that He gave His body for us. If your church gives communion, this is the story that explains what the grown-ups are doing.",
+      "familyQuestion": "What do we do to remember important things?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You are the Lamb. Thank You that You gave Your body and Your blood so that we could be safe and forgiven. Help us remember You every day. Amen.",
+      "childPrompt": "Can you thank Jesus for giving Himself for you?",
+      "prayerPoints": [
+        "Thank Jesus that He is the Lamb who died so we could live",
+        "Thank God for keeping the new promise the prophets spoke about"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus said: 'This is My body, given for you.'",
+      "ref": "Luke 22:19",
+      "memoryPhrase": "Given for you.",
+      "tip": "Break a piece of bread in half together, slowly, and as it breaks say: 'Given for you.' Give one half to each other and eat it."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Eat a meal together today with no screens, and before you start, say out loud one thing Jesus has given you.",
+      "parentNote": "Let the table be quiet for a moment before anyone speaks. This story is about a meal, so it teaches best at one — and children remember what a table felt like long after they forget what was said."
+    }
+  }
+}

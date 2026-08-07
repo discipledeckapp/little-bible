@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-dies-for-sinners",
+  "memoryBuilder": {
+    "phrase": "It is finished!",
+    "phraseWords": ["It", "is", "finished!"],
+    "verseRef": "John 19:30",
+    "verseText": "Jesus said: 'It is finished.' The work was all done.",
+    "verseWords": ["It", "is", "finished.", "The", "work", "was", "all", "done."]
+  },
+  "sequence": {
+    "prompt": "What happened on that day? Put it in order.",
+    "items": [
+      { "id": "cross",   "label": "They put Jesus on a cross",          "emoji": "✝️", "order": 1 },
+      { "id": "shout",   "label": "People shouted 'Save Yourself!'",    "emoji": "📢", "order": 2 },
+      { "id": "dark",    "label": "The sky went dark in the daytime",   "emoji": "🌑", "order": 3 },
+      { "id": "curtain", "label": "The temple curtain tore in two",     "emoji": "🪡", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does {left} mean?",
+    "pairs": [
+      { "leftId": "stayed",   "left": "Jesus staying there",   "leftEmoji": "✝️", "rightId": "chose",  "right": "He chose us instead of Himself",   "rightEmoji": "❤️" },
+      { "leftId": "finished", "left": "'It is finished'",      "leftEmoji": "✅", "rightId": "paid",   "right": "Paid and done — nothing left to add", "rightEmoji": "🧾" },
+      { "leftId": "curtain",  "left": "the torn curtain",      "leftEmoji": "🪡", "rightId": "open",   "right": "The way to God is open now",       "rightEmoji": "🚪" }
+    ]
+  },
+  "application": {
+    "question": "Jesus took what we deserved. What would you like to say to Him?",
+    "options": [
+      { "id": "thanks", "label": "Thank You",         "emoji": "🙏" },
+      { "id": "sorry",  "label": "I am sorry",        "emoji": "😔" },
+      { "id": "love",   "label": "I love You",        "emoji": "❤️" }
+    ],
+    "followUp": "Nobody took Jesus' life from Him — He gave it. He could have come down at any moment and He stayed, because saving Himself and saving us were two different things. And when the work was done He said it: it is finished!"
+  }
+}

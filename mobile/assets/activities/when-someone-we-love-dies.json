@@ -1,0 +1,37 @@
+{
+  "storyId": "when-someone-we-love-dies",
+  "memoryBuilder": {
+    "phrase": "Jesus cried too.",
+    "phraseWords": ["Jesus", "cried", "too."],
+    "verseRef": "John 11:35",
+    "verseText": "Jesus cried.",
+    "verseWords": ["Jesus", "cried.", "He", "was", "sad", "with", "His", "friends", "too."]
+  },
+  "sequence": {
+    "prompt": "What happened at Lazarus' grave? Put it in order.",
+    "items": [
+      { "id": "died",  "label": "Jesus' friend Lazarus died",        "emoji": "😢", "order": 1 },
+      { "id": "mary",  "label": "Mary fell down at Jesus' feet",     "emoji": "🧎", "order": 2 },
+      { "id": "wept",  "label": "Jesus wept with her",               "emoji": "💧", "order": 3 },
+      { "id": "hope",  "label": "Sad things will not last for ever", "emoji": "🌅", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what the story says.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "crying", "left": "crying when we are sad", "leftEmoji": "😢", "rightId": "right", "right": "It is right — Jesus did it too",     "rightEmoji": "💧" },
+      { "leftId": "death",  "left": "death",                  "leftEmoji": "🕊️", "rightId": "never", "right": "A horrible thing never meant to be here", "rightEmoji": "💔" },
+      { "leftId": "hope",   "left": "Christian sadness",      "leftEmoji": "🌅", "rightId": "hopeful","right": "Real tears and real hope together", "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "Jesus cried with His friends. Who could you tell when you feel sad?",
+    "options": [
+      { "id": "grown", "label": "A grown-up who loves me", "emoji": "🤗" },
+      { "id": "god",   "label": "God, in a prayer",        "emoji": "🙏" },
+      { "id": "both",  "label": "Both of them",            "emoji": "💛" }
+    ],
+    "followUp": "Jesus knew Lazarus would walk out of that tomb in a few minutes, and He still stood there and cried. So you are not doing it wrong when you are sad. Jesus cried too — and one day God will wipe every tear away."
+  }
+}

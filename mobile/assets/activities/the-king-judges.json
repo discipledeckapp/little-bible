@@ -1,0 +1,37 @@
+{
+  "storyId": "the-king-judges",
+  "memoryBuilder": {
+    "phrase": "The Judge saved me.",
+    "phraseWords": ["The", "Judge", "saved", "me."],
+    "verseRef": "Romans 8:1",
+    "verseText": "Nobody who belongs to Jesus will be told off that day.",
+    "verseWords": ["Nobody", "who", "belongs", "to", "Jesus", "will", "be", "told", "off", "that", "day."]
+  },
+  "sequence": {
+    "prompt": "What will happen on that day? Put it in order.",
+    "items": [
+      { "id": "voice", "label": "Everyone will hear Jesus' voice",     "emoji": "📣", "order": 1 },
+      { "id": "rise",  "label": "Everyone will rise up",               "emoji": "🌅", "order": 2 },
+      { "id": "books", "label": "The books will be opened",            "emoji": "📖", "order": 3 },
+      { "id": "right", "label": "Every wrong thing will be put right", "emoji": "⚖️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what the story says.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "unfair", "left": "unfair things",       "leftEmoji": "😠", "rightId": "fixed",  "right": "God will put every one of them right", "rightEmoji": "⚖️" },
+      { "leftId": "judge",  "left": "who the Judge is",    "leftEmoji": "✝️", "rightId": "jesus",  "right": "Jesus, with scars on His hands",       "rightEmoji": "🤲" },
+      { "leftId": "belong", "left": "belonging to Jesus",  "leftEmoji": "❤️", "rightId": "nodread","right": "That day is not one to dread",         "rightEmoji": "🕊️" }
+    ]
+  },
+  "application": {
+    "question": "God will put every wrong thing right. What unfair thing could you hand to Him?",
+    "options": [
+      { "id": "me",    "label": "Something unfair to me",     "emoji": "😔" },
+      { "id": "other", "label": "Something unfair to someone else", "emoji": "🧍" },
+      { "id": "world", "label": "Something unfair in the world", "emoji": "🌍" }
+    ],
+    "followUp": "Nothing will be missed and nothing forgotten — which is wonderful news if you have ever been treated unfairly. And look who is holding the scales: the one who took your punishment and said it is finished. The Judge saved me."
+  }
+}

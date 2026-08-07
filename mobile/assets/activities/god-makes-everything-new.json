@@ -1,0 +1,37 @@
+{
+  "storyId": "god-makes-everything-new",
+  "memoryBuilder": {
+    "phrase": "I make everything new!",
+    "phraseWords": ["I", "make", "everything", "new!"],
+    "verseRef": "Revelation 21:5",
+    "verseText": "God said: 'Look! I am making everything new!'",
+    "verseWords": ["Look!", "I", "am", "making", "everything", "new!"]
+  },
+  "sequence": {
+    "prompt": "How does the whole big story go? Put it in order.",
+    "items": [
+      { "id": "made",   "label": "God made everything, and it was good", "emoji": "🌍", "order": 1 },
+      { "id": "spoil",  "label": "People chose their own way and spoiled it", "emoji": "💔", "order": 2 },
+      { "id": "jesus",  "label": "Jesus came to rescue us",              "emoji": "✝️", "order": 3 },
+      { "id": "new",    "label": "God makes everything new again",       "emoji": "🌈", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what the new world will be like.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "tears", "left": "our tears",         "leftEmoji": "💧", "rightId": "wiped", "right": "God wipes every one away Himself",  "rightEmoji": "🤲" },
+      { "leftId": "world", "left": "this world",        "leftEmoji": "🌍", "rightId": "mended","right": "Made new and mended, not thrown away", "rightEmoji": "🔧" },
+      { "leftId": "gates", "left": "the city gates",    "leftEmoji": "🚪", "rightId": "open",  "right": "Standing wide open for every nation", "rightEmoji": "🌈" }
+    ]
+  },
+  "application": {
+    "question": "God is making everything new. What are you most looking forward to?",
+    "options": [
+      { "id": "nocry",  "label": "No more crying",        "emoji": "😊" },
+      { "id": "seejesus","label": "Seeing Jesus",         "emoji": "✝️" },
+      { "id": "together","label": "Being with everyone I love", "emoji": "🤗" }
+    ],
+    "followUp": "The Bible begins with God making a world and walking with His people — and it ends in exactly the same place, except this world can never be spoiled and nobody has to leave. That is where the story has been going the whole time. God says: I make everything new!"
+  }
+}

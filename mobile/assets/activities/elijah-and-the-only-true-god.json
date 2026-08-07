@@ -1,0 +1,37 @@
+{
+  "storyId": "elijah-and-the-only-true-god",
+  "memoryBuilder": {
+    "phrase": "The Lord is God!",
+    "phraseWords": ["The", "Lord", "is", "God!"],
+    "verseRef": "1 Kings 18:39",
+    "verseText": "The people shouted: 'The Lord — He is God!'",
+    "verseWords": ["The", "people", "shouted:", "The", "Lord", "He", "is", "God!"]
+  },
+  "sequence": {
+    "prompt": "What happened on the mountain? Put it in order.",
+    "items": [
+      { "id": "question", "label": "Elijah asked: 'Who will you follow?'", "emoji": "❓", "order": 1 },
+      { "id": "shout",    "label": "Baal's prophets shouted all day",     "emoji": "📢", "order": 2 },
+      { "id": "water",    "label": "Elijah poured water on the altar",    "emoji": "🪣", "order": 3 },
+      { "id": "fire",     "label": "Fire fell, and the people bowed down", "emoji": "🔥", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "baal",  "left": "the shouting at Baal", "leftEmoji": "📢", "rightId": "silence", "right": "Nobody answered — nobody was there", "rightEmoji": "🔇" },
+      { "leftId": "water", "left": "the twelve jars of water", "leftEmoji": "🪣", "rightId": "harder", "right": "Elijah made it harder on purpose", "rightEmoji": "💪" },
+      { "leftId": "quiet", "left": "Elijah's short prayer", "leftEmoji": "🙏", "rightId": "answered","right": "God answered it straight away",     "rightEmoji": "🔥" }
+    ]
+  },
+  "application": {
+    "question": "The people wanted God and other things too. What do you sometimes love more than God?",
+    "options": [
+      { "id": "screen", "label": "My screen or games",  "emoji": "📱" },
+      { "id": "stuff",  "label": "My favourite things", "emoji": "🧸" },
+      { "id": "win",    "label": "Always being the winner", "emoji": "🏆" }
+    ],
+    "followUp": "Four hundred and fifty people shouted all day and got silence. One person prayed quietly and fire fell. God is not one choice out of many — He is the only real one, and He always hears. The Lord is God!"
+  }
+}

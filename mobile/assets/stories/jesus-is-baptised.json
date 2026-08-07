@@ -1,0 +1,72 @@
+{
+  "id": "jesus-is-baptised",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "God the Father says this out loud from heaven, the moment Jesus comes up out of the river.",
+  "title": "Jesus Is Baptised",
+  "subtitle": "The one day you could see the Father, the Son and the Spirit all at once",
+  "collection": "jesus-is-here",
+  "mainTruth": "Father, Son and Holy Spirit are all there together at the river. Jesus had nothing to be washed of — He stepped into our place before He had done a single thing.",
+  "ageRange": "4-7",
+  "bibleRef": "Matthew 3:13-17",
+  "durationMinutes": 5,
+  "coverEmoji": "🕊️",
+  "coverColor": "#0369A1",
+  "illustrationPrompt": "A man standing waist deep in a wide river with water running from his hair and hands lifted slightly, a white dove descending in a shaft of golden light breaking through parted cloud above him, a second man beside him in the water, reeds on the bank, painterly gouache illustration on parchment paper, river blue and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, holy gladness --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus was about thirty years old when He walked out of Nazareth and down to the river Jordan.\n\nThere was a man at that river called John. He wore rough camel-hair clothes and ate wild honey, and crowds came out from the towns to hear him, because John told the truth. He said, 'Turn back to God! The kingdom of heaven is nearly here!' And when people were sorry for the wrong they had done, John dipped them right under the water, and they came up again — like being washed, and like starting new.\n\nThen Jesus came and stood in the queue.\n\nJohn was horrified. He knew who Jesus was. 'You should be baptising me!' he said. 'Why are You coming to me?' Because Jesus had nothing to be sorry for. There was nothing to wash off. He was the only person in that whole crowd who did not need it.\n\nAnd Jesus said, 'Let it be this way. This is the right thing to do.'\n\nSo Jesus stepped down into the water with everybody else. He had not done a single wrong thing — and He got in the queue with people who had. He was already standing where we stand. That is what He came to do, and He started on His very first day.\n\nThen three things happened at once.\n\nJesus came up out of the water. Heaven opened. And the Holy Spirit came down and rested on Him, gentle as a dove landing.\n\nAnd a voice came from heaven — God the Father, out loud, where everybody could hear: 'This is My Son, whom I love. I am very pleased with Him.'\n\nStop and see what is at that river. The Son, standing in the water. The Spirit, coming down. The Father, speaking from heaven. All three, at the same moment, and all three are God. One God — Father, Son and Holy Spirit.\n\nAnd notice when the Father said He was pleased. Before Jesus had preached a single sermon or healed a single person. God the Father loved His Son for who He was, not for what He had achieved yet.",
+      "childText": "Jesus was about thirty years old when He walked down to the river Jordan. There was a man at that river called John. He wore rough camel-hair clothes and ate wild honey, and crowds came to hear him because John told the truth. 'Turn back to God!' he said. And when people were sorry for the wrong they had done, John dipped them under the water, and they came up again — like being washed, and like starting new. Then Jesus came and stood in the queue! John was shocked. 'You should be baptising me!' he said. Because Jesus had nothing to be sorry for. He was the only person there who did not need it. But Jesus said, 'Let it be this way. This is the right thing to do.' So Jesus stepped into the water with everybody else. He was already standing where we stand. Then three things happened at once. Jesus came up out of the water. Heaven opened. And the Holy Spirit came down and rested on Him, gentle as a dove landing. And God the Father spoke out loud from heaven: 'This is My Son, whom I love. I am very pleased with Him.' The Son in the water. The Spirit coming down. The Father speaking. All three at once — and all three are God.",
+      "verses": [
+        {
+          "ref": "Matthew 3:14",
+          "kjv": "But John forbad him, saying, I have need to be baptized of thee, and comest thou to me?",
+          "little_bible": "John said: 'You should be baptising me!'"
+        },
+        {
+          "ref": "Matthew 3:15",
+          "kjv": "Suffer it to be so now: for thus it becometh us to fulfil all righteousness.",
+          "little_bible": "Jesus said: 'Let it be this way. It is the right thing.'"
+        },
+        {
+          "ref": "Matthew 3:16",
+          "kjv": "He saw the Spirit of God descending like a dove, and lighting upon him.",
+          "little_bible": "God's Spirit came down like a dove and rested on Jesus."
+        },
+        {
+          "ref": "Matthew 3:17",
+          "kjv": "And lo a voice from heaven, saying, This is my beloved Son, in whom I am well pleased.",
+          "little_bible": "God said: 'This is My Son. I love Him. I am pleased with Him.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Who was at the river — can you name all three?",
+      "parentGuide": "The new concept is the Trinity, and this is the clearest place in the Bible to show a child rather than define it. Do not reach for an illustration — no ice/water/steam, no three-leaf clover; every analogy for the Trinity is wrong in some way, and children remember the analogy instead of the fact. Just point at the scene: the Son is in the water, the Spirit comes down, the Father speaks, all at once, and all three are God. One God. If your child asks how that works, 'nobody can picture it, and it is still true' is an honest and sturdy answer. Two more things worth saying. Jesus did not need washing — He got in the queue anyway, which is the first thing He did for us. And the Father said He was pleased before Jesus had achieved anything, which is worth pressing gently if your child is a performer.",
+      "familyQuestion": "Does God love us for what we do, or for who we are?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Father, Son and Holy Spirit, You are one God and You are wonderful. Thank You, Jesus, for standing where we stand. Thank You, Father, that You love us before we do anything at all. Amen.",
+      "childPrompt": "Can you say thank You to the Father, the Son, and the Spirit?",
+      "prayerPoints": [
+        "Thank God the Father that He loves you before you achieve anything",
+        "Thank Jesus for stepping into the water in our place"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'This is My Son. I love Him. I am pleased with Him.'",
+      "ref": "Matthew 3:17",
+      "memoryPhrase": "This is My Son.",
+      "tip": "Cup your hands over your child's ears and say the Father's words to them slowly and warmly, then let them say it back about Jesus: 'This is My Son.' The tone is the lesson here."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell somebody in your family that you love them for who they are — not for anything they did today.",
+      "parentNote": "Go first, and say it to your child in those words. This is the one story where what you say about them will do more than anything you explain to them."
+    }
+  }
+}

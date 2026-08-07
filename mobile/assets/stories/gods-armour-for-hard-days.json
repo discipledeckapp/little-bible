@@ -1,0 +1,72 @@
+{
+  "id": "gods-armour-for-hard-days",
+  "sensitivityTier": "general",
+  "genre": "teaching",
+  "verseContext": "Paul writes this from a prison in Rome, chained to a soldier, to Christians who are finding it hard to keep going.",
+  "title": "God's Armour for Hard Days",
+  "subtitle": "Following Jesus is hard some days — so God does not send His children out with nothing",
+  "collection": "king-makes-all-things-new",
+  "mainTruth": "God never tells us to be strong on our own. He hands us His own armour and His own strength, so that on the hard days we can stand.",
+  "ageRange": "4-7",
+  "bibleRef": "Ephesians 6:10-18",
+  "durationMinutes": 5,
+  "coverEmoji": "🛡️",
+  "coverColor": "#4338CA",
+  "illustrationPrompt": "A seated man writing on a scroll in a dim stone prison, a soldier's oval shield, helmet and broad belt leaning beside him and catching one shaft of warm light from a high window, a loose chain resting at his ankle, painterly gouache illustration on parchment paper, deep indigo and burnished bronze palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, steady courage rather than battle --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Some days, following Jesus is hard.\n\nPaul knew that. He was writing from a prison in Rome, chained by the wrist to a Roman soldier. All day, every day, Paul sat beside a man wearing armour — a wide leather belt, a metal chest-plate, thick boots, a tall shield, a helmet, a short sword.\n\nAnd Paul, looking at that armour, wrote to God's people about hard days. Notice what he did not write. He did not write, 'Cheer up.' He did not write, 'Try harder.' He wrote: 'Be strong in the Lord, and in the power of His might.'\n\nStrong in the Lord. Not strong in yourself.\n\nThen Paul said something easy to read past: 'Put on the whole armour of God.' God's armour. Not armour we make, and not armour we earn — armour God hands us, piece by piece, because He does not send His children out bare.\n\nGod gives truth, holding us together like a belt when everything feels confusing. He gives Jesus' own goodness, covering our chest like a breastplate, so what guards our heart is not our record but His. He gives peace on our feet, so we are ready to go. He gives faith like a big shield — and Paul says that shield catches the burning arrows: the horrible thoughts that come flying in saying you are alone, you are useless, God has given up on you. He gives rescue like a helmet over our head. He gives His own words like a sword, the one piece that goes forwards. And He tells us to pray — all the time, about everything.\n\nHere is what the armour is for. Paul does not say, 'so that you can win a fight'. He says, 'so that you can stand'. Standing is the victory. On a hard day, a child who is still standing with God — still praying, still trusting, still coming back — has done the bravest thing there is.\n\nAnd every piece of it is God's. That is why this is good news and not one more list to manage. Anybody can wear armour they were given. The strength is in the Lord.\n\nPaul wrote all of that while wearing chains, sitting next to a soldier, on a very hard day of his own.",
+      "childText": "Paul was in a prison in Rome. He was chained to a soldier, so all day long Paul sat right beside a helmet, a shield, a belt and a pair of thick boots. And Paul picked up his pen, because he knew that some days following Jesus feels hard. He did not write, 'Cheer up!' He did not write, 'Try harder!' He wrote, 'Be strong in the Lord and in His great power.' Then he said, 'Put on God's armour.' Not your own armour — God's! God gives you truth to hold you together like a belt. He gives you Jesus' goodness to cover your chest. He gives you peace on your feet. He gives you faith like a big shield that catches every burning arrow. He gives you rescue like a helmet, and His words like a sword. And He gives you praying, any time at all. So on a hard day you do not stand alone. You stand in God's armour.",
+      "verses": [
+        {
+          "ref": "Ephesians 6:10",
+          "kjv": "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+          "little_bible": "Be strong in the Lord and in His great power."
+        },
+        {
+          "ref": "Ephesians 6:11",
+          "kjv": "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
+          "little_bible": "Put on God's armour so that you can stand firm."
+        },
+        {
+          "ref": "Ephesians 6:13",
+          "kjv": "Wherefore take unto you the whole armour of God, that ye may be able to withstand in the evil day.",
+          "little_bible": "Take God's armour with you for the hard days."
+        },
+        {
+          "ref": "Ephesians 6:16",
+          "kjv": "Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked.",
+          "little_bible": "Faith is a shield that catches every burning arrow."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Whose armour is it — ours or God's?",
+      "parentGuide": "The new concept is perseverance: keeping going on a hard day. Children hear armour and imagine a costume of virtues they must produce — brave enough, good enough, faithful enough — and that is exactly the misreading to head off. Every piece is God's, handed to a child who could not make any of it. Say the possessive out loud: God's truth, God's rescue, Jesus' goodness over my chest, not mine. The second thing worth naming is the goal. Paul does not promise your child a fight they win; he promises they can stand. Still praying, still coming back, is winning. Retrieve Jesus Says No to the Tempter — Jesus stood in the desert by holding on to God's words, which is the sword in this list. Then ask which hard day is coming this week, and put the armour on for that one thing rather than in general.",
+      "familyQuestion": "Which hard thing is coming this week that we need God's strength for?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, some days are hard and we are not strong enough. Thank You that You do not send us out with nothing. Please put Your armour on us today, and help us stand. Amen.",
+      "childPrompt": "Can you tell God about a hard day you are worried about?",
+      "prayerPoints": [
+        "Tell God about the hard thing you are facing this week",
+        "Ask God to make you strong with His strength, not your own"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Be strong in the Lord and in His great power.",
+      "ref": "Ephesians 6:10",
+      "memoryPhrase": "Strong in the Lord.",
+      "tip": "Stand up tall and plant your feet wide apart. Hold one hand out flat in front of you like a shield, and say: 'Strong in the Lord.' Do not let anybody wobble you."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Name one hard thing you have to do today. Then say out loud, one piece at a time, which bit of God's armour you need for it — and ask Him for it.",
+      "parentNote": "Name yours first, and make it a real one. Children copy the honesty rather than the words. If the hard thing goes badly today, say so tonight and point out that they were still standing — that is what the armour is for."
+    }
+  }
+}

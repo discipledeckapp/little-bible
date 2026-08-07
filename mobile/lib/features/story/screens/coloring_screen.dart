@@ -11,6 +11,7 @@ import '../../../core/providers/profile_provider.dart';
 import '../../../core/services/sound_service.dart';
 import '../../../core/services/tts_service.dart';
 import '../../../core/theme/app_theme.dart';
+import '../providers/story_provider.dart';
 
 // ─── Free-paint stroke ───────────────────────────────────────────────────────
 
@@ -207,6 +208,9 @@ class _ColoringScreenState extends ConsumerState<ColoringScreen>
 
   @override
   Widget build(BuildContext context) {
+    final storyAsync = ref.watch(storyProvider(widget.storyId));
+    final storyTitle = storyAsync.valueOrNull?.title ?? '';
+
     return Scaffold(
       backgroundColor: const Color(0xFFF0F9FF),
       body: SafeArea(
@@ -272,75 +276,129 @@ class _ColoringScreenState extends ConsumerState<ColoringScreen>
                   children: [
                     // Drawing canvas
                     Expanded(
-                      child: LayoutBuilder(
-                        builder: (context, constraints) {
-                          final size = Size(constraints.maxWidth, constraints.maxHeight);
-                          final profileAsync = ref.watch(activeProfileProvider);
-                          final nickname = profileAsync.valueOrNull?.nickname ?? '';
-                          return RepaintBoundary(
-                            key: _canvasKey,
-                            child: Column(
-                              children: [
-                                Expanded(
-                                  child: GestureDetector(
-                                    onTapDown: (d) => _onTapCanvas(d, size),
-                                    onPanStart: (d) => _startStroke(d.localPosition),
-                                    onPanUpdate: (d) => _continueStroke(d.localPosition),
-                                    onPanEnd: (_) => _endStroke(),
-                                    child: CustomPaint(
-                                      size: Size(constraints.maxWidth, constraints.maxHeight - 36),
-                                      painter: _ColoringPainter(
-                                        regions: _regions,
-                                        filled: Map.from(_filled),
-                                        sparkles: Map.fromEntries(
-                                          _sparkles.entries.map(
-                                            (e) => MapEntry(e.key, e.value.value),
-                                          ),
-                                        ),
-                                        strokes: List.from(_strokes),
-                                      ),
-                                      child: AnimatedBuilder(
-                                        animation: Listenable.merge(
-                                          _sparkles.values.toList(),
-                                        ),
-                                        builder: (_, _) => const SizedBox.expand(),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                // Branded signature strip (included in shared image)
-                                Container(
-                                  height: 36,
-                                  color: const Color(0xFFF0F9FF),
-                                  padding: const EdgeInsets.symmetric(horizontal: 14),
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        nickname.isNotEmpty ? '🎨 By $nickname' : '🎨 Little Bible',
-                                        style: const TextStyle(
-                                          fontFamily: 'Nunito',
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.w700,
-                                          color: Color(0xFF78716C),
-                                        ),
-                                      ),
-                                      const Spacer(),
-                                      const Text(
-                                        'littlebible.org',
-                                        style: TextStyle(
-                                          fontFamily: 'Nunito',
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.w600,
-                                          color: Color(0xFFF59E0B),
-                                        ),
+                      child: Stack(
+                        children: [
+                          LayoutBuilder(
+                            builder: (context, constraints) {
+                              final profileAsync = ref.watch(activeProfileProvider);
+                              final nickname = profileAsync.valueOrNull?.nickname ?? '';
+                              // Title bar height inside the card
+                              const titleBarHeight = 36.0;
+                              final drawSize = Size(
+                                constraints.maxWidth,
+                                constraints.maxHeight - titleBarHeight - 36,
+                              );
+                              return RepaintBoundary(
+                                key: _canvasKey,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withValues(alpha: 0.06),
+                                        blurRadius: 8,
+                                        offset: const Offset(0, 2),
                                       ),
                                     ],
                                   ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Column(
+                                      children: [
+                                        // Story title inside the coloring page
+                                        if (storyTitle.isNotEmpty)
+                                          Container(
+                                            height: titleBarHeight,
+                                            color: Colors.white,
+                                            alignment: Alignment.center,
+                                            padding: const EdgeInsets.symmetric(horizontal: 12),
+                                            child: Text(
+                                              storyTitle,
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
+                                              style: const TextStyle(
+                                                fontFamily: 'Nunito',
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w800,
+                                                color: Color(0xFF1C1917),
+                                                letterSpacing: 0.2,
+                                              ),
+                                            ),
+                                          ),
+                                        // Drawing area
+                                        Expanded(
+                                          child: GestureDetector(
+                                            onTapDown: (d) => _onTapCanvas(d, drawSize),
+                                            onPanStart: (d) => _startStroke(d.localPosition),
+                                            onPanUpdate: (d) => _continueStroke(d.localPosition),
+                                            onPanEnd: (_) => _endStroke(),
+                                            child: CustomPaint(
+                                              size: drawSize,
+                                              painter: _ColoringPainter(
+                                                regions: _regions,
+                                                filled: Map.from(_filled),
+                                                sparkles: Map.fromEntries(
+                                                  _sparkles.entries.map(
+                                                    (e) => MapEntry(e.key, e.value.value),
+                                                  ),
+                                                ),
+                                                strokes: List.from(_strokes),
+                                                drawCard: false,
+                                              ),
+                                              child: AnimatedBuilder(
+                                                animation: Listenable.merge(
+                                                  _sparkles.values.toList(),
+                                                ),
+                                                builder: (_, _) => const SizedBox.expand(),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        // Branded signature strip
+                                        Container(
+                                          height: 36,
+                                          color: Colors.white,
+                                          padding: const EdgeInsets.symmetric(horizontal: 14),
+                                          child: Row(
+                                            children: [
+                                              Text(
+                                                nickname.isNotEmpty ? '🎨 By $nickname' : '🎨 Little Bible',
+                                                style: const TextStyle(
+                                                  fontFamily: 'Nunito',
+                                                  fontSize: 11,
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Color(0xFF78716C),
+                                                ),
+                                              ),
+                                              const Spacer(),
+                                              const Text(
+                                                'littlebible.org',
+                                                style: TextStyle(
+                                                  fontFamily: 'Nunito',
+                                                  fontSize: 11,
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Color(0xFFF59E0B),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 ),
-                              ],
-                            ),
-                          );
-                        },
+                              );
+                            },
+                          ),
+
+                          // Reference thumbnail — outside RepaintBoundary so not in shared image
+                          Positioned(
+                            top: 44,
+                            right: 10,
+                            child: _ReferenceThumbnail(regions: _regions),
+                          ),
+                        ],
                       ),
                     ),
 
@@ -385,34 +443,33 @@ class _ColoringPainter extends CustomPainter {
     required this.filled,
     required this.sparkles,
     required this.strokes,
+    this.drawCard = true,
   });
 
   final List<_Region> regions;
   final Map<String, Color> filled;
   final Map<String, double> sparkles;
   final List<_Stroke> strokes;
+  final bool drawCard;
 
   @override
   void paint(Canvas canvas, Size size) {
-    // White backing card with subtle shadow
-    final card = RRect.fromRectAndRadius(
-      Rect.fromLTWH(0, 0, size.width, size.height),
-      const Radius.circular(20),
-    );
-    canvas.drawRRect(
-      card,
-      Paint()
-        ..color = Colors.white
-        ..style = PaintingStyle.fill,
-    );
-    canvas.drawRRect(
-      card,
-      Paint()
-        ..color = Colors.black.withValues(alpha: 0.06)
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1,
-    );
-    canvas.clipRRect(card);
+    if (drawCard) {
+      // White backing card with subtle shadow (used in reference thumbnail)
+      final card = RRect.fromRectAndRadius(
+        Rect.fromLTWH(0, 0, size.width, size.height),
+        const Radius.circular(12),
+      );
+      canvas.drawRRect(card, Paint()..color = Colors.white);
+      canvas.drawRRect(
+        card,
+        Paint()
+          ..color = Colors.black.withValues(alpha: 0.08)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1,
+      );
+      canvas.clipRRect(card);
+    }
 
     // Draw filled regions
     for (final region in regions) {
@@ -475,7 +532,133 @@ class _ColoringPainter extends CustomPainter {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Story scenes — 4 illustrated coloring pages
+// Reference thumbnail — coloured example the child can imitate
+// ─────────────────────────────────────────────────────────────────────────────
+
+Color _defaultColorForRegion(String id) {
+  if (id.contains('sky')) return const Color(0xFF7DD3FC);
+  if (id.contains('water') || id.contains('sea') || id.contains('river') || id.contains('lake')) return const Color(0xFF38BDF8);
+  if (id.contains('grass') || id.contains('ground')) return const Color(0xFF4ADE80);
+  if (id.contains('hill_far')) return const Color(0xFF86EFAC);
+  if (id.contains('hill_near')) return const Color(0xFF22C55E);
+  if (id.contains('leaf') || id.contains('tree_top') || id.contains('canopy')) return const Color(0xFF16A34A);
+  if (id.contains('tree_trunk') || id.contains('trunk') || id.contains('staff') || id.contains('rod')) return const Color(0xFF92400E);
+  if (id.contains('sun')) return const Color(0xFFFBBF24);
+  if (id.contains('ray')) return const Color(0xFFFDE68A);
+  if (id.contains('cloud')) return const Color(0xFFF1F5F9);
+  if (id.contains('rainbow_0')) return const Color(0xFFDC2626);
+  if (id.contains('rainbow_1')) return const Color(0xFFFB923C);
+  if (id.contains('rainbow_2')) return const Color(0xFFFBBF24);
+  if (id.contains('rainbow_3')) return const Color(0xFF16A34A);
+  if (id.contains('rainbow_4')) return const Color(0xFF38BDF8);
+  if (id.contains('flower') || id.contains('petal')) return const Color(0xFFF472B6);
+  if (id.contains('bird') || id.contains('dove') || id.contains('angel')) return const Color(0xFFF1F5F9);
+  if (id.contains('heart')) return const Color(0xFFF87171);
+  if (id.contains('star')) return const Color(0xFFFBBF24);
+  if (id.contains('sheep_body') || id.contains('sheep_head')) return const Color(0xFFF8FAFC);
+  if (id.contains('sheep_legs')) return const Color(0xFF94A3B8);
+  if (id.contains('background')) return const Color(0xFFFFE4B5);
+  if (id.contains('hull') || id.contains('cabin') || id.contains('roof') || id.contains('barn')) return const Color(0xFF92400E);
+  if (id.contains('robe_upper') || id.contains('tunic') || id.contains('body')) return const Color(0xFF60A5FA);
+  if (id.contains('robe_lower') || id.contains('skirt')) return const Color(0xFF3B82F6);
+  if (id.contains('head') || id.contains('face') || id.contains('arm') || id.contains('hand')) return const Color(0xFFD4B483);
+  if (id.contains('hair')) return const Color(0xFF92400E);
+  if (id.contains('fire') || id.contains('flame')) return const Color(0xFFFB923C);
+  if (id.contains('stone') || id.contains('tablet') || id.contains('altar') || id.contains('wall')) return const Color(0xFF94A3B8);
+  if (id.contains('lion') || id.contains('animal')) return const Color(0xFFFB923C);
+  if (id.contains('fish')) return const Color(0xFF38BDF8);
+  if (id.contains('ring')) return const Color(0xFFFBBF24);
+  if (id.contains('tent') || id.contains('tabernacle')) return const Color(0xFFD4B483);
+  if (id.contains('cross')) return const Color(0xFF92400E);
+  return const Color(0xFFD4B483);
+}
+
+Map<String, Color> _buildReferenceColors(List<_Region> regions) =>
+    { for (final r in regions) r.id: _defaultColorForRegion(r.id) };
+
+class _ReferenceThumbnail extends StatefulWidget {
+  const _ReferenceThumbnail({required this.regions});
+  final List<_Region> regions;
+
+  @override
+  State<_ReferenceThumbnail> createState() => _ReferenceThumbnailState();
+}
+
+class _ReferenceThumbnailState extends State<_ReferenceThumbnail> {
+  bool _expanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final refColors = _buildReferenceColors(widget.regions);
+
+    return GestureDetector(
+      onTap: () => setState(() => _expanded = !_expanded),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
+        curve: Curves.easeOut,
+        width: _expanded ? 160 : 64,
+        height: _expanded ? 160 : 64,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.15),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Stack(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: CustomPaint(
+                size: _expanded ? const Size(160, 160) : const Size(64, 64),
+                painter: _ColoringPainter(
+                  regions: widget.regions,
+                  filled: refColors,
+                  sparkles: const {},
+                  strokes: const [],
+                  drawCard: true,
+                ),
+              ),
+            ),
+            // "Example" label
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.black.withValues(alpha: 0.45),
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(12),
+                    bottomRight: Radius.circular(12),
+                  ),
+                ),
+                padding: const EdgeInsets.symmetric(vertical: 3),
+                child: Text(
+                  _expanded ? 'Tap to hide' : 'Example',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontFamily: 'Nunito',
+                    fontSize: 9,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                    letterSpacing: 0.3,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Story scenes — illustrated coloring pages
 // ─────────────────────────────────────────────────────────────────────────────
 
 
@@ -503,6 +686,51 @@ List<_Region> _sceneFor(String storyId) {
     case 'bread-in-the-wilderness':    return _mannaScene();
     case 'gods-good-commands':    return _commandsScene();
     case 'god-lives-with-his-people':  return _tabernacleScene();
+    case 'twelve-spies':          return _twelveSpiesScene();
+    case 'joshua-and-the-walls':  return _jerichoScene();
+    case 'deborah-leads-gods-people': return _deborahScene();
+    case 'gideons-tiny-army':     return _gideonScene();
+    case 'ruth-finds-a-home':     return _ruthScene();
+    case 'samuel-listens-to-god': return _samuelScene();
+    case 'saul-the-king':         return _saulScene();
+    case 'david-and-the-giant':   return _davidGiantScene();
+    case 'davids-sin-and-gods-mercy': return _davidMercyScene();
+    case 'gods-forever-king-promise': return _foreverKingScene();
+    case 'solomon-asks-for-wisdom': return _solomonScene();
+    case 'elijah-and-the-only-true-god': return _elijahScene();
+    case 'the-prophets-promise-new-hearts': return _newHeartsScene();
+    case 'jesus-calms-the-storm': return _calmsStormScene();
+    case 'jesus-heals-and-forgives': return _healsForgivesScene();
+    case 'jesus-feeds-the-crowd': return _feedsCrowdScene();
+    case 'jesus-raises-lazarus': return _lazarusScene();
+    case 'the-king-rides-in': return _kingRidesInScene();
+    case 'servant-king-washes-feet': return _washesFeetScene();
+    case 'the-last-supper': return _lastSupperScene();
+    case 'jesus-prays-in-garden': return _gethsemaneScene();
+    case 'jesus-dies-for-sinners': return _crucifixionScene();
+    case 'jesus-is-alive': return _risenScene();
+    case 'jesus-returns-to-his-father': return _ascensionScene();
+    case 'the-holy-spirit-comes': return _pentecostScene();
+    case 'a-new-sharing-family': return _sharingFamilyScene();
+    case 'stephen-sees-jesus': return _stephenScene();
+    case 'saul-meets-the-risen-jesus': return _saulRoadScene();
+    case 'peter-welcomes-cornelius': return _corneliusScene();
+    case 'paul-and-silas-in-prison': return _prisonSongScene();
+    case 'the-spirit-grows-good-fruit': return _goodFruitScene();
+    case 'gods-armour-for-hard-days': return _armourScene();
+    case 'when-anger-knocks': return _angerScene();
+    case 'when-i-feel-alone': return _aloneScene();
+    case 'when-life-feels-unfair': return _unfairScene();
+    case 'when-someone-we-love-dies': return _griefScene();
+    case 'jesus-will-come-again': return _comeAgainScene();
+    case 'the-king-judges': return _judgeScene();
+    case 'god-makes-everything-new': return _everythingNewScene();
+    case 'an-angel-visits-mary':   return _angelMaryScene();
+    case 'visitors-worship-the-king': return _magiScene();
+    case 'jesus-grows-and-obeys': return _jesusGrowsScene();
+    case 'jesus-is-baptised':     return _baptismScene();
+    case 'jesus-says-no-to-tempter': return _temptationScene();
+    case 'jesus-calls-his-helpers': return _callHelpersScene();
     case 'noahs-big-boat':        return _noahScene();
     case 'noahs-rainbow-promise': return _rainbowPromiseScene();
     case 'birth-of-jesus':        return _nativityScene();
@@ -3099,6 +3327,405 @@ List<_Region> _tabernacleScene() => [
         ..addRect(Rect.fromLTWH(s.width * 0.47, s.height * 0.528, s.width * 0.06, s.height * 0.122))),
     ];
 
+// ── Scene 36: Twelve Spies ───────────────────────────────────────────────────
+// Sky, hillside, 4 vine rows, pole, 10 grapes, 2 carriers, group of ten
+
+List<_Region> _twelveSpiesScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.40))),
+      _Region(id: 'hillside', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(0, s.height * 0.40, s.width, s.height * 0.60))),
+      ...List.generate(4, (i) => _Region(id: 'vine_$i', pathBuilder: (s) => Path()
+        ..addRRect(RRect.fromRectAndRadius(
+          Rect.fromLTWH(s.width * (0.06 + i * 0.014), s.height * (0.43 + i * 0.026),
+              s.width * (0.88 - i * 0.028), s.height * 0.012),
+          const Radius.circular(5))))),
+      _Region(id: 'pole', pathBuilder: (s) => Path()..addRRect(RRect.fromRectAndRadius(
+        Rect.fromLTWH(s.width * 0.25, s.height * 0.552, s.width * 0.30, s.height * 0.018),
+        const Radius.circular(8)))),
+      ...List.generate(4, (row) {
+        const counts = [4, 3, 2, 1];
+        return _Region(id: 'grapes_$row', pathBuilder: (s) {
+          final p = Path();
+          final n = counts[row];
+          final y = s.height * (0.60 + row * 0.045);
+          for (int i = 0; i < n; i++) {
+            final gx = s.width * 0.40 + (i - (n - 1) / 2) * s.width * 0.05;
+            p.addOval(Rect.fromCenter(center: Offset(gx, y),
+                width: s.width * 0.054, height: s.width * 0.054));
+          }
+          return p;
+        });
+      }),
+      _Region(id: 'carrier_l', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.185, s.height * 0.585);
+        p.lineTo(s.width * 0.155, s.height * 0.80);
+        p.lineTo(s.width * 0.29, s.height * 0.80);
+        p.lineTo(s.width * 0.26, s.height * 0.585);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(s.width * 0.2225, s.height * 0.535),
+            width: s.width * 0.10, height: s.width * 0.115));
+        return p;
+      }),
+      _Region(id: 'carrier_r', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.545, s.height * 0.59);
+        p.lineTo(s.width * 0.515, s.height * 0.80);
+        p.lineTo(s.width * 0.65, s.height * 0.80);
+        p.lineTo(s.width * 0.62, s.height * 0.59);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(s.width * 0.5825, s.height * 0.54),
+            width: s.width * 0.10, height: s.width * 0.115));
+        return p;
+      }),
+      _Region(id: 'the_ten', pathBuilder: (s) {
+        final p = Path();
+        for (int i = 0; i < 4; i++) {
+          final x = s.width * (0.80 + (i % 2) * 0.07);
+          final y = s.height * (0.615 + (i ~/ 2) * 0.055);
+          p.moveTo(x - s.width * 0.022, y);
+          p.lineTo(x - s.width * 0.034, y + s.height * 0.085);
+          p.lineTo(x + s.width * 0.034, y + s.height * 0.085);
+          p.lineTo(x + s.width * 0.022, y);
+          p.close();
+          p.addOval(Rect.fromCenter(center: Offset(x, y - s.width * 0.024),
+              width: s.width * 0.048, height: s.width * 0.048));
+        }
+        return p;
+      }),
+    ];
+
+// ── Scene 37: Joshua and the Strong Walls ────────────────────────────────────
+// Sky, plain, wall, 7 battlements, gate, 4 marchers with trumpets
+
+List<_Region> _jerichoScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.60))),
+      _Region(id: 'plain', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(0, s.height * 0.60, s.width, s.height * 0.40))),
+      _Region(id: 'wall', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTRB(s.width * 0.21, s.height * 0.30, s.width * 0.79, s.height * 0.60))),
+      ...List.generate(7, (i) => _Region(id: 'battlement_$i', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * (0.224 + i * 0.082), s.height * 0.274,
+            s.width * 0.046, s.height * 0.026)))),
+      _Region(id: 'gate', pathBuilder: (s) => Path()
+        ..addRRect(RRect.fromRectAndCorners(
+          Rect.fromLTRB(s.width * 0.452, s.height * 0.492, s.width * 0.548, s.height * 0.60),
+          topLeft: Radius.circular(s.width * 0.048),
+          topRight: Radius.circular(s.width * 0.048)))),
+      ...List.generate(4, (i) => _Region(id: 'marcher_$i', pathBuilder: (s) {
+        final x = s.width * (0.14 + i * 0.24);
+        final p = Path();
+        p.moveTo(x - s.width * 0.020, s.height * 0.704);
+        p.lineTo(x - s.width * 0.030, s.height * 0.782);
+        p.lineTo(x + s.width * 0.030, s.height * 0.782);
+        p.lineTo(x + s.width * 0.020, s.height * 0.704);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(x, s.height * 0.682),
+            width: s.width * 0.044, height: s.width * 0.044));
+        return p;
+      })),
+      ...List.generate(4, (i) => _Region(id: 'trumpet_$i', pathBuilder: (s) {
+        final x = s.width * (0.14 + i * 0.24);
+        return Path()
+          ..moveTo(x + s.width * 0.014, s.height * 0.694)
+          ..lineTo(x + s.width * 0.054, s.height * 0.660)
+          ..lineTo(x + s.width * 0.060, s.height * 0.676)
+          ..lineTo(x + s.width * 0.022, s.height * 0.706)
+          ..close();
+      })),
+    ];
+
+// ── Scene 38: Deborah Leads God's People ─────────────────────────────────────
+// Sky, hills, grass, palm trunk, 5 fronds, 3 dates, Deborah, 3 listeners
+
+List<_Region> _deborahScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.38))),
+      _Region(id: 'hills', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(0, s.height * 0.38);
+        p.quadraticBezierTo(s.width * 0.24, s.height * 0.29, s.width * 0.48, s.height * 0.38);
+        p.quadraticBezierTo(s.width * 0.72, s.height * 0.31, s.width, s.height * 0.38);
+        p.lineTo(s.width, s.height * 0.43); p.lineTo(0, s.height * 0.43); p.close(); return p;
+      }),
+      _Region(id: 'grass', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(0, s.height * 0.43, s.width, s.height * 0.57))),
+      _Region(id: 'palm_trunk', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.272, s.height * 0.70);
+        p.quadraticBezierTo(s.width * 0.292, s.height * 0.52, s.width * 0.30, s.height * 0.34);
+        p.lineTo(s.width * 0.336, s.height * 0.344);
+        p.quadraticBezierTo(s.width * 0.324, s.height * 0.524, s.width * 0.308, s.height * 0.70);
+        p.close(); return p;
+      }),
+      ...List.generate(5, (i) {
+        const angles = [-150.0, -118.0, -84.0, -50.0, -18.0];
+        return _Region(id: 'frond_$i', pathBuilder: (s) {
+          final rad = angles[i] * math.pi / 180;
+          final len = s.width * 0.21;
+          final ex = s.width * 0.318 + len * math.cos(rad);
+          final ey = s.height * 0.34 + len * math.sin(rad) * 0.75;
+          final p = Path();
+          p.moveTo(s.width * 0.318, s.height * 0.34 - s.width * 0.012);
+          p.lineTo(ex, ey - s.width * 0.012);
+          p.lineTo(ex, ey + s.width * 0.012);
+          p.lineTo(s.width * 0.318, s.height * 0.34 + s.width * 0.012);
+          p.close(); return p;
+        });
+      }),
+      _Region(id: 'dates', pathBuilder: (s) {
+        final p = Path();
+        for (final d in [[0.30, 0.356], [0.332, 0.35], [0.316, 0.372]]) {
+          p.addOval(Rect.fromCenter(center: Offset(s.width * d[0], s.height * d[1]),
+              width: s.width * 0.026, height: s.width * 0.026));
+        }
+        return p;
+      }),
+      _Region(id: 'deborah', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.253, s.height * 0.60);
+        p.lineTo(s.width * 0.235, s.height * 0.78);
+        p.lineTo(s.width * 0.365, s.height * 0.78);
+        p.lineTo(s.width * 0.347, s.height * 0.60);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(s.width * 0.30, s.height * 0.552),
+            width: s.width * 0.095, height: s.width * 0.105));
+        return p;
+      }),
+      ...List.generate(3, (i) => _Region(id: 'listener_$i', pathBuilder: (s) {
+        final x = s.width * (0.64 + i * 0.092);
+        final y = s.height * (0.69 + (i % 2) * 0.034);
+        final p = Path();
+        p.moveTo(x - s.width * 0.024, y);
+        p.lineTo(x - s.width * 0.036, y + s.height * 0.088);
+        p.lineTo(x + s.width * 0.036, y + s.height * 0.088);
+        p.lineTo(x + s.width * 0.024, y);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(x, y - s.width * 0.026),
+            width: s.width * 0.052, height: s.width * 0.052));
+        return p;
+      })),
+    ];
+
+// ── Scene 39: Gideon's Tiny Army ─────────────────────────────────────────────
+// Night sky, 6 stars, valley, 8 enemy tents, hillside, 4 clay jars, Gideon
+
+List<_Region> _gideonScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.42))),
+      ...List.generate(6, (i) {
+        const pos = [[0.07, 0.09], [0.20, 0.15], [0.33, 0.08], [0.55, 0.14], [0.75, 0.09], [0.92, 0.18]];
+        return _Region(id: 'star_$i', pathBuilder: (s) => _starPath(
+            s.width * pos[i][0], s.height * pos[i][1], s.width * 0.035));
+      }),
+      _Region(id: 'valley', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(0, s.height * 0.42, s.width, s.height * 0.58))),
+      ...List.generate(8, (i) => _Region(id: 'enemy_tent_$i', pathBuilder: (s) {
+        final row = i ~/ 4;
+        final x = s.width * (0.08 + (i % 4) * 0.24) + (row.isOdd ? s.width * 0.06 : 0);
+        final y = s.height * (0.462 + row * 0.05);
+        final w = s.width * (0.028 + row * 0.008);
+        return Path()
+          ..moveTo(x - w, y + w * 0.7)
+          ..lineTo(x, y - w * 0.9)
+          ..lineTo(x + w, y + w * 0.7)
+          ..close();
+      })),
+      _Region(id: 'hillside', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(0, s.height * 0.63);
+        p.quadraticBezierTo(s.width * 0.5, s.height * 0.585, s.width, s.height * 0.63);
+        p.lineTo(s.width, s.height); p.lineTo(0, s.height); p.close(); return p;
+      }),
+      ...List.generate(4, (i) {
+        const pos = [0.18, 0.38, 0.62, 0.82];
+        return _Region(id: 'jar_$i', pathBuilder: (s) {
+          final jx = s.width * pos[i];
+          final p = Path();
+          p.moveTo(jx - s.width * 0.030, s.height * 0.636);
+          p.lineTo(jx - s.width * 0.038, s.height * 0.70);
+          p.lineTo(jx + s.width * 0.038, s.height * 0.70);
+          p.lineTo(jx + s.width * 0.030, s.height * 0.636);
+          p.close();
+          p.addRRect(RRect.fromRectAndRadius(
+            Rect.fromLTWH(jx - s.width * 0.036, s.height * 0.616,
+                s.width * 0.072, s.height * 0.024),
+            const Radius.circular(7)));
+          return p;
+        });
+      }),
+      _Region(id: 'gideon', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.455, s.height * 0.60);
+        p.lineTo(s.width * 0.425, s.height * 0.786);
+        p.lineTo(s.width * 0.575, s.height * 0.786);
+        p.lineTo(s.width * 0.545, s.height * 0.60);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(s.width * 0.50, s.height * 0.552),
+            width: s.width * 0.10, height: s.width * 0.112));
+        return p;
+      }),
+    ];
+
+// ── Scene 40: Ruth Finds a Home ──────────────────────────────────────────────
+// Sky, field, 3 barley rows, Boaz, Ruth, gathered sheaf
+
+List<_Region> _ruthScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.36))),
+      _Region(id: 'field', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(0, s.height * 0.36, s.width, s.height * 0.64))),
+      ...List.generate(3, (row) => _Region(id: 'barley_$row', pathBuilder: (s) {
+        final p = Path();
+        final baseY = s.height * (0.43 + row * 0.052);
+        final h = s.height * (0.034 + row * 0.012);
+        for (int i = 0; i < 10; i++) {
+          final x = s.width * (0.03 + i * 0.104) + (row.isOdd ? s.width * 0.05 : 0);
+          p.addRRect(RRect.fromRectAndRadius(
+            Rect.fromLTWH(x, baseY - h, s.width * 0.009, h),
+            const Radius.circular(4)));
+        }
+        return p;
+      })),
+      _Region(id: 'boaz', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.695, s.height * 0.60);
+        p.lineTo(s.width * 0.665, s.height * 0.748);
+        p.lineTo(s.width * 0.79, s.height * 0.748);
+        p.lineTo(s.width * 0.76, s.height * 0.60);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(s.width * 0.7275, s.height * 0.558),
+            width: s.width * 0.09, height: s.width * 0.10));
+        return p;
+      }),
+      _Region(id: 'ruth', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.312, s.height * 0.615);
+        p.lineTo(s.width * 0.292, s.height * 0.80);
+        p.lineTo(s.width * 0.432, s.height * 0.80);
+        p.lineTo(s.width * 0.412, s.height * 0.615);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(s.width * 0.362, s.height * 0.565),
+            width: s.width * 0.098, height: s.width * 0.11));
+        return p;
+      }),
+      _Region(id: 'sheaf', pathBuilder: (s) {
+        final p = Path();
+        for (int i = 0; i < 7; i++) {
+          final a = (-140 + i * 20) * math.pi / 180;
+          final ex = s.width * 0.444 + s.width * 0.084 * math.cos(a);
+          final ey = s.height * 0.69 + s.width * 0.084 * math.sin(a);
+          p.moveTo(s.width * 0.444, s.height * 0.69 - s.width * 0.005);
+          p.lineTo(ex, ey - s.width * 0.005);
+          p.lineTo(ex, ey + s.width * 0.005);
+          p.lineTo(s.width * 0.444, s.height * 0.69 + s.width * 0.005);
+          p.close();
+        }
+        p.addOval(Rect.fromCenter(center: Offset(s.width * 0.444, s.height * 0.69),
+            width: s.width * 0.036, height: s.width * 0.036));
+        return p;
+      }),
+    ];
+
+// ── Scene 41: Samuel Listens to God ──────────────────────────────────────────
+// Room, 3 wall courses, floor, lamp stand, lamp base, lamp bowl, flame, mat, Samuel
+
+List<_Region> _samuelScene() => [
+      _Region(id: 'room', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.70))),
+      _Region(id: 'wall', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(0, s.height * 0.18, s.width, s.height * 0.52))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(0, s.height * 0.70, s.width, s.height * 0.30))),
+      _Region(id: 'lamp_stand', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.176, s.height * 0.56, s.width * 0.026, s.height * 0.14))),
+      _Region(id: 'lamp_base', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.14, s.height * 0.69, s.width * 0.098, s.height * 0.02))),
+      _Region(id: 'lamp_bowl', pathBuilder: (s) => Path()..addOval(
+        Rect.fromLTWH(s.width * 0.146, s.height * 0.528, s.width * 0.086, s.height * 0.040))),
+      _Region(id: 'flame', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.176, s.height * 0.532);
+        p.quadraticBezierTo(s.width * 0.184, s.height * 0.505, s.width * 0.189, s.height * 0.488);
+        p.quadraticBezierTo(s.width * 0.194, s.height * 0.505, s.width * 0.202, s.height * 0.532);
+        p.close(); return p;
+      }),
+      _Region(id: 'mat', pathBuilder: (s) => Path()..addRRect(RRect.fromRectAndRadius(
+        Rect.fromLTWH(s.width * 0.40, s.height * 0.736, s.width * 0.46, s.height * 0.044),
+        const Radius.circular(14)))),
+      _Region(id: 'samuel_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.548, s.height * 0.575);
+        p.lineTo(s.width * 0.528, s.height * 0.76);
+        p.lineTo(s.width * 0.672, s.height * 0.76);
+        p.lineTo(s.width * 0.652, s.height * 0.575);
+        p.close(); return p;
+      }),
+      _Region(id: 'samuel_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(
+        center: Offset(s.width * 0.60, s.height * 0.522), width: s.width * 0.10, height: s.width * 0.112))),
+    ];
+
+// ── Scene 42: Saul: The King Who Would Not Listen ────────────────────────────
+// Grey sky, hilltop, 3 kept sheep, Samuel walking away, Saul, crown, torn robe
+
+List<_Region> _saulScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.58))),
+      _Region(id: 'hilltop', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(0, s.height * 0.58);
+        p.quadraticBezierTo(s.width * 0.5, s.height * 0.555, s.width, s.height * 0.58);
+        p.lineTo(s.width, s.height); p.lineTo(0, s.height); p.close(); return p;
+      }),
+      ...List.generate(3, (i) {
+        const cfg = [[0.726, 0.648, 1.0], [0.846, 0.676, 0.86], [0.640, 0.690, 0.8]];
+        return _Region(id: 'sheep_$i', pathBuilder: (s) {
+          final p = Path();
+          final k = cfg[i][2];
+          p.addOval(Rect.fromCenter(
+            center: Offset(s.width * cfg[i][0], s.height * cfg[i][1]),
+            width: s.width * 0.116 * k, height: s.width * 0.068 * k));
+          p.addOval(Rect.fromCenter(
+            center: Offset(s.width * cfg[i][0] + s.width * 0.056 * k,
+                s.height * cfg[i][1] - s.width * 0.016 * k),
+            width: s.width * 0.044 * k, height: s.width * 0.044 * k));
+          return p;
+        });
+      }),
+      _Region(id: 'samuel_leaving', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.088, s.height * 0.585);
+        p.lineTo(s.width * 0.062, s.height * 0.76);
+        p.lineTo(s.width * 0.178, s.height * 0.76);
+        p.lineTo(s.width * 0.152, s.height * 0.585);
+        p.close();
+        p.addOval(Rect.fromCenter(center: Offset(s.width * 0.12, s.height * 0.545),
+            width: s.width * 0.084, height: s.width * 0.094));
+        return p;
+      }),
+      _Region(id: 'saul_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.502, s.height * 0.545);
+        p.lineTo(s.width * 0.462, s.height * 0.782);
+        p.lineTo(s.width * 0.658, s.height * 0.782);
+        p.lineTo(s.width * 0.618, s.height * 0.545);
+        p.close(); return p;
+      }),
+      _Region(id: 'saul_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(
+        center: Offset(s.width * 0.56, s.height * 0.528), width: s.width * 0.10, height: s.width * 0.115))),
+      _Region(id: 'crown', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.518, s.height * 0.492)
+        ..lineTo(s.width * 0.526, s.height * 0.452)
+        ..lineTo(s.width * 0.544, s.height * 0.480)
+        ..lineTo(s.width * 0.560, s.height * 0.446)
+        ..lineTo(s.width * 0.576, s.height * 0.480)
+        ..lineTo(s.width * 0.594, s.height * 0.452)
+        ..lineTo(s.width * 0.602, s.height * 0.492)
+        ..close()),
+      _Region(id: 'torn_robe', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.640, s.height * 0.636)
+        ..lineTo(s.width * 0.704, s.height * 0.660)
+        ..lineTo(s.width * 0.684, s.height * 0.700)
+        ..lineTo(s.width * 0.664, s.height * 0.676)
+        ..lineTo(s.width * 0.648, s.height * 0.692)
+        ..close()),
+    ];
+
 /// Five-pointed star path centred at (cx, cy) with outer radius r.
 Path _starPath(double cx, double cy, double r) {
   final p = Path();
@@ -3310,3 +3937,1026 @@ class _AllDoneBanner extends StatelessWidget {
     );
   }
 }
+
+// ── David and the Giant ───────────────────────────────────────────────────────
+// Background first, figures last — regions are hit-tested in reverse draw order.
+List<_Region> _davidGiantScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.60))),
+      _Region(id: 'left_hill', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.06, s.height * 0.66),
+            width: s.width * 0.72, height: s.height * 0.19))),
+      _Region(id: 'right_hill', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.95, s.height * 0.664),
+            width: s.width * 0.76, height: s.height * 0.20))),
+      _Region(id: 'valley_floor', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(0, s.height * 0.72);
+        p.quadraticBezierTo(s.width * 0.5, s.height * 0.685, s.width, s.height * 0.72);
+        p.lineTo(s.width, s.height); p.lineTo(0, s.height); p.close(); return p;
+      }),
+      _Region(id: 'giant_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.710, s.height * 0.464);
+        p.lineTo(s.width * 0.654, s.height * 0.772);
+        p.lineTo(s.width * 0.918, s.height * 0.772);
+        p.lineTo(s.width * 0.862, s.height * 0.464);
+        p.close(); return p;
+      }),
+      _Region(id: 'giant_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.786, s.height * 0.363),
+            width: s.width * 0.101, height: s.width * 0.101))),
+      _Region(id: 'helmet', pathBuilder: (s) => Path()
+        ..addArc(
+            Rect.fromCircle(
+                center: Offset(s.width * 0.786, s.height * 0.359),
+                radius: s.width * 0.058),
+            math.pi, math.pi)),
+      _Region(id: 'spear', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.906, s.height * 0.470)
+        ..lineTo(s.width * 0.930, s.height * 0.470)
+        ..lineTo(s.width * 0.956, s.height * 0.772)
+        ..lineTo(s.width * 0.932, s.height * 0.772)
+        ..close()),
+      _Region(id: 'david_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.215, s.height * 0.617);
+        p.lineTo(s.width * 0.173, s.height * 0.772);
+        p.lineTo(s.width * 0.327, s.height * 0.772);
+        p.lineTo(s.width * 0.285, s.height * 0.617);
+        p.close(); return p;
+      }),
+      _Region(id: 'david_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.25, s.height * 0.574),
+            width: s.width * 0.064, height: s.width * 0.064))),
+      _Region(id: 'sling_stone', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.52, s.height * 0.53),
+            width: s.width * 0.036, height: s.width * 0.036))),
+      ...List.generate(3, (i) {
+        const cfg = [[0.150, 0.786], [0.186, 0.794], [0.124, 0.800]];
+        return _Region(id: 'stone_$i', pathBuilder: (s) => Path()
+          ..addOval(Rect.fromCenter(
+              center: Offset(s.width * cfg[i][0], s.height * cfg[i][1]),
+              width: s.width * 0.030, height: s.width * 0.020)));
+      }),
+    ];
+
+// ── David's Sin and God's Mercy ───────────────────────────────────────────────
+List<_Region> _davidMercyScene() => [
+      _Region(id: 'night_sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.62))),
+      _Region(id: 'roof', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.62, s.width, s.height * 0.38))),
+      ...List.generate(5, (i) {
+        const cfg = [[0.128, 0.176], [0.268, 0.118], [0.612, 0.142], [0.762, 0.226], [0.896, 0.152]];
+        return _Region(id: 'star_$i', pathBuilder: (s) =>
+            _starPath(s.width * cfg[i][0], s.height * cfg[i][1], s.width * 0.026));
+      }),
+      _Region(id: 'crown_set_down', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.178, s.height * 0.776)
+        ..lineTo(s.width * 0.186, s.height * 0.736)
+        ..lineTo(s.width * 0.204, s.height * 0.764)
+        ..lineTo(s.width * 0.220, s.height * 0.730)
+        ..lineTo(s.width * 0.236, s.height * 0.764)
+        ..lineTo(s.width * 0.254, s.height * 0.736)
+        ..lineTo(s.width * 0.262, s.height * 0.776)
+        ..close()),
+      _Region(id: 'lamp', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromLTWH(s.width * 0.838, s.height * 0.742, s.width * 0.092, s.height * 0.042))),
+      _Region(id: 'lamp_flame', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.884, s.height * 0.716),
+            width: s.width * 0.040, height: s.width * 0.056))),
+      _Region(id: 'nathan_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.686, s.height * 0.585);
+        p.lineTo(s.width * 0.646, s.height * 0.782);
+        p.lineTo(s.width * 0.806, s.height * 0.782);
+        p.lineTo(s.width * 0.766, s.height * 0.585);
+        p.close(); return p;
+      }),
+      _Region(id: 'nathan_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.726, s.height * 0.545),
+            width: s.width * 0.083, height: s.width * 0.083))),
+      _Region(id: 'david_kneeling', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.332, s.height * 0.634);
+        p.lineTo(s.width * 0.284, s.height * 0.782);
+        p.lineTo(s.width * 0.500, s.height * 0.782);
+        p.lineTo(s.width * 0.452, s.height * 0.634);
+        p.close(); return p;
+      }),
+      _Region(id: 'david_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.392, s.height * 0.588),
+            width: s.width * 0.108, height: s.width * 0.108))),
+    ];
+
+// ── God's Forever-King Promise ────────────────────────────────────────────────
+List<_Region> _foreverKingScene() => [
+      _Region(id: 'night_sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.64))),
+      _Region(id: 'cedar_floor', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.64, s.width, s.height * 0.36))),
+      ...List.generate(6, (i) {
+        const cfg = [[0.096, 0.210], [0.214, 0.132], [0.452, 0.158], [0.672, 0.130], [0.788, 0.240], [0.906, 0.164]];
+        return _Region(id: 'star_$i', pathBuilder: (s) =>
+            _starPath(s.width * cfg[i][0], s.height * cfg[i][1], s.width * 0.028));
+      }),
+      _Region(id: 'forever_crown', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.392, s.height * 0.322)
+        ..lineTo(s.width * 0.404, s.height * 0.214)
+        ..lineTo(s.width * 0.446, s.height * 0.288)
+        ..lineTo(s.width * 0.500, s.height * 0.190)
+        ..lineTo(s.width * 0.554, s.height * 0.288)
+        ..lineTo(s.width * 0.596, s.height * 0.214)
+        ..lineTo(s.width * 0.608, s.height * 0.322)
+        ..close()),
+      _Region(id: 'crown_band', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.392, s.height * 0.322, s.width * 0.216, s.height * 0.026))),
+      _Region(id: 'ark_tent', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.838, s.height * 0.640)
+        ..lineTo(s.width * 0.946, s.height * 0.780)
+        ..lineTo(s.width * 0.730, s.height * 0.780)
+        ..close()),
+      _Region(id: 'ark', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.812, s.height * 0.724, s.width * 0.052, s.height * 0.056))),
+      _Region(id: 'david_seated', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.442, s.height * 0.636);
+        p.lineTo(s.width * 0.395, s.height * 0.780);
+        p.lineTo(s.width * 0.605, s.height * 0.780);
+        p.lineTo(s.width * 0.558, s.height * 0.636);
+        p.close(); return p;
+      }),
+      _Region(id: 'david_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.500, s.height * 0.593),
+            width: s.width * 0.105, height: s.width * 0.105))),
+    ];
+
+// ── Solomon Asks for Wisdom ───────────────────────────────────────────────────
+List<_Region> _solomonScene() => [
+      _Region(id: 'hall', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.612))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.612, s.width, s.height * 0.388))),
+      ...List.generate(4, (i) {
+        const cfg = [0.118, 0.262, 0.738, 0.882];
+        return _Region(id: 'pillar_$i', pathBuilder: (s) => Path()
+          ..addRect(Rect.fromLTWH(
+              s.width * cfg[i] - s.width * 0.034, s.height * 0.214,
+              s.width * 0.068, s.height * 0.398)));
+      }),
+      _Region(id: 'throne', pathBuilder: (s) => Path()
+        ..addRRect(RRect.fromRectAndRadius(
+            Rect.fromLTWH(s.width * 0.372, s.height * 0.336, s.width * 0.256, s.height * 0.446),
+            Radius.circular(s.width * 0.028)))),
+      _Region(id: 'throne_cushion', pathBuilder: (s) => Path()
+        ..addRRect(RRect.fromRectAndRadius(
+            Rect.fromLTWH(s.width * 0.396, s.height * 0.364, s.width * 0.208, s.height * 0.300),
+            Radius.circular(s.width * 0.020)))),
+      _Region(id: 'gold_chest', pathBuilder: (s) => Path()
+        ..addRRect(RRect.fromRectAndRadius(
+            Rect.fromLTWH(s.width * 0.120, s.height * 0.690, s.width * 0.176, s.height * 0.092),
+            Radius.circular(s.width * 0.012)))),
+      ...List.generate(3, (i) {
+        const cfg = [[0.156, 0.730], [0.200, 0.748], [0.246, 0.728]];
+        return _Region(id: 'coin_$i', pathBuilder: (s) => Path()
+          ..addOval(Rect.fromCenter(
+              center: Offset(s.width * cfg[i][0], s.height * cfg[i][1]),
+              width: s.width * 0.030, height: s.width * 0.030)));
+      }),
+      _Region(id: 'spare_crown', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.716, s.height * 0.780)
+        ..lineTo(s.width * 0.724, s.height * 0.736)
+        ..lineTo(s.width * 0.744, s.height * 0.766)
+        ..lineTo(s.width * 0.762, s.height * 0.730)
+        ..lineTo(s.width * 0.780, s.height * 0.766)
+        ..lineTo(s.width * 0.800, s.height * 0.736)
+        ..lineTo(s.width * 0.808, s.height * 0.780)
+        ..close()),
+      _Region(id: 'solomon_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.447, s.height * 0.630);
+        p.lineTo(s.width * 0.404, s.height * 0.764);
+        p.lineTo(s.width * 0.596, s.height * 0.764);
+        p.lineTo(s.width * 0.553, s.height * 0.630);
+        p.close(); return p;
+      }),
+      _Region(id: 'solomon_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.500, s.height * 0.592),
+            width: s.width * 0.096, height: s.width * 0.096))),
+    ];
+
+// ── Elijah and the Only True God ──────────────────────────────────────────────
+List<_Region> _elijahScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.624))),
+      _Region(id: 'mountain_top', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.624, s.width, s.height * 0.376))),
+      _Region(id: 'water_trench', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.500, s.height * 0.764),
+            width: s.width * 0.470, height: s.height * 0.058))),
+      ...List.generate(3, (row) {
+        return _Region(id: 'altar_row_$row', pathBuilder: (s) {
+          final cols = row == 2 ? 3 : 4;
+          final w = cols * 0.074;
+          final ry = 0.726 - row * 0.046;
+          final p = Path();
+          for (var c = 0; c < cols; c++) {
+            p.addRRect(RRect.fromRectAndRadius(
+              Rect.fromLTWH(
+                  s.width * (0.5 - w / 2 + c * 0.074 + 0.003), s.height * ry,
+                  s.width * 0.068, s.height * 0.040),
+              Radius.circular(s.width * 0.006)));
+          }
+          return p;
+        });
+      }),
+      _Region(id: 'wood', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.414, s.height * 0.606, s.width * 0.172, s.height * 0.020))),
+      _Region(id: 'fire', pathBuilder: (s) {
+        final p = Path();
+        for (final fx in const [0.440, 0.500, 0.560]) {
+          final k = fx == 0.500 ? 1.32 : 1.0;
+          p.moveTo(s.width * fx - s.width * 0.030 * k, s.height * 0.606);
+          p.quadraticBezierTo(
+              s.width * fx - s.width * 0.020 * k, s.height * (0.606 - 0.078 * k),
+              s.width * fx, s.height * (0.606 - 0.128 * k));
+          p.quadraticBezierTo(
+              s.width * fx + s.width * 0.020 * k, s.height * (0.606 - 0.078 * k),
+              s.width * fx + s.width * 0.030 * k, s.height * 0.606);
+          p.close();
+        }
+        return p;
+      }),
+      _Region(id: 'elijah_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.180, s.height * 0.610);
+        p.lineTo(s.width * 0.145, s.height * 0.778);
+        p.lineTo(s.width * 0.283, s.height * 0.778);
+        p.lineTo(s.width * 0.248, s.height * 0.610);
+        p.close(); return p;
+      }),
+      _Region(id: 'elijah_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.214, s.height * 0.570),
+            width: s.width * 0.081, height: s.width * 0.081))),
+      ...List.generate(3, (i) {
+        const cfg = [[0.788, 0.762], [0.858, 0.776], [0.924, 0.758]];
+        return _Region(id: 'person_$i', pathBuilder: (s) => Path()
+          ..addOval(Rect.fromCenter(
+              center: Offset(s.width * cfg[i][0], s.height * cfg[i][1]),
+              width: s.width * 0.046, height: s.height * 0.112)));
+      }),
+    ];
+
+// ── The Prophets Promise New Hearts ───────────────────────────────────────────
+List<_Region> _newHeartsScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.592))),
+      ...List.generate(3, (i) {
+        const cfg = [[0.092, 0.118, 0.470], [0.214, 0.086, 0.508], [0.318, 0.064, 0.528]];
+        return _Region(id: 'ruin_$i', pathBuilder: (s) => Path()
+          ..addRect(Rect.fromLTWH(s.width * cfg[i][0], s.height * cfg[i][2],
+              s.width * cfg[i][1], s.height * (0.592 - cfg[i][2]))));
+      }),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.592, s.width, s.height * 0.408))),
+      _Region(id: 'hands', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.286, s.height * 0.786);
+        p.quadraticBezierTo(s.width * 0.300, s.height * 0.606, s.width * 0.500, s.height * 0.620);
+        p.quadraticBezierTo(s.width * 0.700, s.height * 0.606, s.width * 0.714, s.height * 0.786);
+        p.close(); return p;
+      }),
+      _Region(id: 'heart', pathBuilder: (s) => _heartPath(
+          s.width * 0.500, s.height * 0.500, s.width * 0.132)),
+      _Region(id: 'stem', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(
+            s.width * 0.4925, s.height * 0.322, s.width * 0.015, s.height * 0.206))),
+      _Region(id: 'leaf_left', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.444, s.height * 0.380),
+            width: s.width * 0.108, height: s.height * 0.050))),
+      _Region(id: 'leaf_right', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.560, s.height * 0.344),
+            width: s.width * 0.096, height: s.height * 0.046))),
+    ];
+
+// ── An Angel Visits Mary ──────────────────────────────────────────────────────
+// Background first, figures last — regions are hit-tested in reverse draw order.
+List<_Region> _angelMaryScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.636))),
+      _Region(id: 'wall', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.636, s.width, s.height * 0.364))),
+      _Region(id: 'window_frame', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.096, s.height * 0.300, s.width * 0.172, s.height * 0.200))),
+      _Region(id: 'window_light', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.110, s.height * 0.314, s.width * 0.144, s.height * 0.172))),
+      ...List.generate(2, (i) {
+        return _Region(id: 'wing_$i', pathBuilder: (s) {
+          final sign = i == 0 ? -1.0 : 1.0;
+          final p = Path();
+          p.moveTo(s.width * (0.768 + sign * 0.044), s.height * 0.560);
+          p.quadraticBezierTo(
+              s.width * (0.768 + sign * 0.250), s.height * 0.400,
+              s.width * (0.768 + sign * 0.168), s.height * 0.664);
+          p.close();
+          return p;
+        });
+      }),
+      _Region(id: 'angel_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.716, s.height * 0.590);
+        p.lineTo(s.width * 0.654, s.height * 0.780);
+        p.lineTo(s.width * 0.882, s.height * 0.780);
+        p.lineTo(s.width * 0.820, s.height * 0.590);
+        p.close(); return p;
+      }),
+      _Region(id: 'angel_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.768, s.height * 0.535),
+            width: s.width * 0.095, height: s.width * 0.095))),
+      _Region(id: 'halo', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.768, s.height * 0.535),
+            width: s.width * 0.148, height: s.width * 0.148))),
+      _Region(id: 'mary_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.291, s.height * 0.618);
+        p.lineTo(s.width * 0.238, s.height * 0.780);
+        p.lineTo(s.width * 0.434, s.height * 0.780);
+        p.lineTo(s.width * 0.381, s.height * 0.618);
+        p.close(); return p;
+      }),
+      _Region(id: 'mary_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.336, s.height * 0.573),
+            width: s.width * 0.082, height: s.width * 0.082))),
+    ];
+
+// ── Visitors Worship the King ─────────────────────────────────────────────────
+List<_Region> _magiScene() => [
+      _Region(id: 'night_sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.660))),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.660, s.width, s.height * 0.340))),
+      _Region(id: 'star', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.300, s.height * 0.120)
+        ..lineTo(s.width * 0.320, s.height * 0.192)
+        ..lineTo(s.width * 0.392, s.height * 0.212)
+        ..lineTo(s.width * 0.320, s.height * 0.232)
+        ..lineTo(s.width * 0.300, s.height * 0.304)
+        ..lineTo(s.width * 0.280, s.height * 0.232)
+        ..lineTo(s.width * 0.208, s.height * 0.212)
+        ..lineTo(s.width * 0.280, s.height * 0.192)
+        ..close()),
+      _Region(id: 'house', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.196, s.height * 0.400, s.width * 0.300, s.height * 0.260))),
+      _Region(id: 'roof', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.178, s.height * 0.380, s.width * 0.336, s.height * 0.026))),
+      _Region(id: 'doorway', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.286, s.height * 0.452, s.width * 0.120, s.height * 0.208))),
+      _Region(id: 'mary_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.311, s.height * 0.505);
+        p.lineTo(s.width * 0.276, s.height * 0.660);
+        p.lineTo(s.width * 0.416, s.height * 0.660);
+        p.lineTo(s.width * 0.381, s.height * 0.505);
+        p.close(); return p;
+      }),
+      _Region(id: 'mary_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.346, s.height * 0.470),
+            width: s.width * 0.071, height: s.width * 0.071))),
+      _Region(id: 'baby', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.346, s.height * 0.556),
+            width: s.width * 0.088, height: s.height * 0.060))),
+      ...List.generate(3, (i) {
+        final bx = 0.620 + i * 0.128;
+        return _Region(id: 'visitor_$i', pathBuilder: (s) => Path()
+          ..addOval(Rect.fromCenter(
+              center: Offset(s.width * bx, s.height * 0.732),
+              width: s.width * 0.148, height: s.height * 0.096)));
+      }),
+      ...List.generate(3, (i) {
+        final gx = 0.600 + i * 0.128;
+        return _Region(id: 'gift_$i', pathBuilder: (s) => Path()
+          ..addRRect(RRect.fromRectAndRadius(
+              Rect.fromLTWH(s.width * gx, s.height * 0.762, s.width * 0.076, s.height * 0.034),
+              Radius.circular(s.width * 0.008))));
+      }),
+    ];
+
+// ── Jesus Grows and Obeys ─────────────────────────────────────────────────────
+List<_Region> _jesusGrowsScene() => [
+      _Region(id: 'courtyard_wall', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.624))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.624, s.width, s.height * 0.376))),
+      ...List.generate(2, (i) {
+        final px = i == 0 ? 0.128 : 0.872;
+        return _Region(id: 'pillar_$i', pathBuilder: (s) => Path()
+          ..addRect(Rect.fromLTWH(
+              s.width * px - s.width * 0.040, s.height * 0.214,
+              s.width * 0.080, s.height * 0.410)));
+      }),
+      ...List.generate(4, (i) {
+        const cfg = [0.214, 0.332, 0.668, 0.786];
+        return _Region(id: 'teacher_$i', pathBuilder: (s) {
+          final p = Path();
+          final sx = s.width * cfg[i];
+          p.moveTo(sx - s.width * 0.046, s.height * 0.660);
+          p.lineTo(sx - s.width * 0.066, s.height * 0.782);
+          p.lineTo(sx + s.width * 0.066, s.height * 0.782);
+          p.lineTo(sx + s.width * 0.046, s.height * 0.660);
+          p.close();
+          p.addOval(Rect.fromCenter(center: Offset(sx, s.height * 0.612),
+              width: s.width * 0.068, height: s.width * 0.068));
+          return p;
+        });
+      }),
+      ...List.generate(4, (i) {
+        const cfg = [0.214, 0.332, 0.668, 0.786];
+        return _Region(id: 'scroll_$i', pathBuilder: (s) => Path()
+          ..addRRect(RRect.fromRectAndRadius(
+              Rect.fromCenter(
+                center: Offset(s.width * cfg[i], s.height * 0.712),
+                width: s.width * 0.096, height: s.height * 0.030),
+              Radius.circular(s.width * 0.014))));
+      }),
+      _Region(id: 'jesus_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.448, s.height * 0.648);
+        p.lineTo(s.width * 0.406, s.height * 0.782);
+        p.lineTo(s.width * 0.594, s.height * 0.782);
+        p.lineTo(s.width * 0.552, s.height * 0.648);
+        p.close(); return p;
+      }),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.500, s.height * 0.610),
+            width: s.width * 0.094, height: s.width * 0.094))),
+    ];
+
+// ── Jesus Is Baptised ─────────────────────────────────────────────────────────
+List<_Region> _baptismScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.606))),
+      ...List.generate(2, (i) {
+        final cx = i == 0 ? 0.170 : 0.830;
+        return _Region(id: 'cloud_$i', pathBuilder: (s) => Path()
+          ..addOval(Rect.fromCenter(
+              center: Offset(s.width * cx, s.height * 0.208),
+              width: s.width * 0.460, height: s.height * 0.132)));
+      }),
+      _Region(id: 'light_shaft', pathBuilder: (s) => Path()
+        ..moveTo(s.width * 0.452, s.height * 0.214)
+        ..lineTo(s.width * 0.548, s.height * 0.214)
+        ..lineTo(s.width * 0.612, s.height * 0.606)
+        ..lineTo(s.width * 0.388, s.height * 0.606)
+        ..close()),
+      _Region(id: 'river', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.606, s.width, s.height * 0.394))),
+      _Region(id: 'near_water', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.700, s.width, s.height * 0.100))),
+      _Region(id: 'john_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.662, s.height * 0.598);
+        p.lineTo(s.width * 0.622, s.height * 0.778);
+        p.lineTo(s.width * 0.790, s.height * 0.778);
+        p.lineTo(s.width * 0.750, s.height * 0.598);
+        p.close(); return p;
+      }),
+      _Region(id: 'john_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.706, s.height * 0.556),
+            width: s.width * 0.081, height: s.width * 0.081))),
+      _Region(id: 'jesus_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.373, s.height * 0.596);
+        p.lineTo(s.width * 0.317, s.height * 0.782);
+        p.lineTo(s.width * 0.523, s.height * 0.782);
+        p.lineTo(s.width * 0.467, s.height * 0.596);
+        p.close(); return p;
+      }),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.420, s.height * 0.552),
+            width: s.width * 0.086, height: s.width * 0.086))),
+      _Region(id: 'dove', pathBuilder: (s) {
+        final p = Path();
+        p.addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.420, s.height * 0.452),
+            width: s.width * 0.076, height: s.height * 0.044));
+        p.addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.452, s.height * 0.432),
+            width: s.width * 0.038, height: s.width * 0.038));
+        return p;
+      }),
+      ...List.generate(2, (i) {
+        final sign = i == 0 ? -1.0 : 1.0;
+        return _Region(id: 'dove_wing_$i', pathBuilder: (s) {
+          final p = Path();
+          p.moveTo(s.width * 0.420, s.height * 0.446);
+          p.quadraticBezierTo(
+              s.width * (0.420 + sign * 0.062), s.height * 0.422,
+              s.width * (0.420 + sign * 0.096), s.height * 0.462);
+          p.close();
+          return p;
+        });
+      }),
+    ];
+
+// ── Jesus Says No to the Tempter ──────────────────────────────────────────────
+List<_Region> _temptationScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.618))),
+      _Region(id: 'haze_left', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.180, s.height * 0.646),
+            width: s.width * 0.900, height: s.height * 0.150))),
+      _Region(id: 'haze_right', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.880, s.height * 0.654),
+            width: s.width * 0.820, height: s.height * 0.160))),
+      _Region(id: 'ridge', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.618, s.width, s.height * 0.382))),
+      ...List.generate(3, (i) {
+        const cfg = [[0.196, 0.742, 1.0], [0.268, 0.776, 0.8], [0.140, 0.790, 0.7]];
+        return _Region(id: 'stone_$i', pathBuilder: (s) => Path()
+          ..addOval(Rect.fromCenter(
+              center: Offset(s.width * cfg[i][0], s.height * cfg[i][1]),
+              width: s.width * 0.074 * cfg[i][2], height: s.height * 0.046 * cfg[i][2])));
+      }),
+      _Region(id: 'shadow', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.596, s.height * 0.782);
+        p.quadraticBezierTo(s.width * 0.686, s.height * 0.742, s.width * 0.746, s.height * 0.786);
+        p.quadraticBezierTo(s.width * 0.686, s.height * 0.800, s.width * 0.596, s.height * 0.796);
+        p.close(); return p;
+      }),
+      _Region(id: 'jesus_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.403, s.height * 0.590);
+        p.lineTo(s.width * 0.344, s.height * 0.780);
+        p.lineTo(s.width * 0.560, s.height * 0.780);
+        p.lineTo(s.width * 0.501, s.height * 0.590);
+        p.close(); return p;
+      }),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.452, s.height * 0.545),
+            width: s.width * 0.090, height: s.width * 0.090))),
+      _Region(id: 'raised_hand', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.544, s.height * 0.470),
+            width: s.width * 0.058, height: s.width * 0.058))),
+      ...List.generate(2, (i) {
+        const cfg = [[0.792, 0.560], [0.886, 0.604]];
+        return _Region(id: 'angel_$i', pathBuilder: (s) =>
+            _starPath(s.width * cfg[i][0], s.height * cfg[i][1], s.width * 0.048));
+      }),
+    ];
+
+// ── Jesus Calls His Helpers ───────────────────────────────────────────────────
+List<_Region> _callHelpersScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(0, 0, s.width, s.height * 0.596))),
+      _Region(id: 'sun', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.820, s.height * 0.470),
+            width: s.width * 0.180, height: s.width * 0.180))),
+      _Region(id: 'lake', pathBuilder: (s) => Path()..addRect(
+          Rect.fromLTWH(0, s.height * 0.596, s.width, s.height * 0.404))),
+      _Region(id: 'shingle', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.500, s.height * 0.900),
+            width: s.width * 1.600, height: s.height * 0.300))),
+      _Region(id: 'boat', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.700, s.height * 0.700);
+        p.quadraticBezierTo(s.width * 0.820, s.height * 0.776, s.width * 0.952, s.height * 0.700);
+        p.lineTo(s.width * 0.936, s.height * 0.686);
+        p.quadraticBezierTo(s.width * 0.820, s.height * 0.748, s.width * 0.716, s.height * 0.686);
+        p.close(); return p;
+      }),
+      _Region(id: 'mast', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.820, s.height * 0.592, s.width * 0.012, s.height * 0.108))),
+      _Region(id: 'net', pathBuilder: (s) => Path()
+        ..addRect(Rect.fromLTWH(s.width * 0.446, s.height * 0.700, s.width * 0.166, s.height * 0.074))),
+      _Region(id: 'jesus_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.169, s.height * 0.592);
+        p.lineTo(s.width * 0.113, s.height * 0.780);
+        p.lineTo(s.width * 0.315, s.height * 0.780);
+        p.lineTo(s.width * 0.259, s.height * 0.592);
+        p.close(); return p;
+      }),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.214, s.height * 0.548),
+            width: s.width * 0.089, height: s.width * 0.089))),
+      _Region(id: 'fisher1_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.430, s.height * 0.628);
+        p.lineTo(s.width * 0.393, s.height * 0.776);
+        p.lineTo(s.width * 0.543, s.height * 0.776);
+        p.lineTo(s.width * 0.506, s.height * 0.628);
+        p.close(); return p;
+      }),
+      _Region(id: 'fisher1_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.468, s.height * 0.590),
+            width: s.width * 0.075, height: s.width * 0.075))),
+      _Region(id: 'fisher2_body', pathBuilder: (s) {
+        final p = Path();
+        p.moveTo(s.width * 0.560, s.height * 0.640);
+        p.lineTo(s.width * 0.525, s.height * 0.782);
+        p.lineTo(s.width * 0.667, s.height * 0.782);
+        p.lineTo(s.width * 0.632, s.height * 0.640);
+        p.close(); return p;
+      }),
+      _Region(id: 'fisher2_head', pathBuilder: (s) => Path()
+        ..addOval(Rect.fromCenter(
+            center: Offset(s.width * 0.596, s.height * 0.604),
+            width: s.width * 0.071, height: s.width * 0.071))),
+    ];
+
+
+// ── jesus-calms-the-storm ──
+List<_Region> _calmsStormScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.62))),
+      _Region(id: 'sea', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.62, s.width * 1.0, s.height * 0.38))),
+      _Region(id: 'wave', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.72), width: s.width * 0.9, height: s.height * 0.06))),
+      _Region(id: 'hull', pathBuilder: (s) => Path()..moveTo(s.width * 0.3, s.height * 0.66)..lineTo(s.width * 0.7, s.height * 0.66)..lineTo(s.width * 0.5, s.height * 0.78)..close()),
+      _Region(id: 'mast', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.492, s.height * 0.47, s.width * 0.016, s.height * 0.19))),
+      _Region(id: 'jesus_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.43, s.height * 0.617)..lineTo(s.width * 0.37, s.height * 0.662)..lineTo(s.width * 0.63, s.height * 0.662)..lineTo(s.width * 0.5700000000000001, s.height * 0.617)..close()),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.575), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'sun', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.43), width: s.width * 0.3, height: s.height * 0.3))),
+    ];
+
+// ── jesus-heals-and-forgives ──
+List<_Region> _healsForgivesScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.2))),
+      _Region(id: 'wall', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.2, s.width * 1.0, s.height * 0.44))),
+      _Region(id: 'roof_hole', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.33, s.height * 0.2, s.width * 0.3, s.height * 0.044))),
+      _Region(id: 'daylight', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.376, s.height * 0.2, s.width * 0.208, s.height * 0.04))),
+      _Region(id: 'mat', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.368, s.height * 0.636, s.width * 0.224, s.height * 0.03))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.64, s.width * 1.0, s.height * 0.36))),
+      _Region(id: 'jesus_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.68, s.height * 0.585)..lineTo(s.width * 0.61, s.height * 0.782)..lineTo(s.width * 0.91, s.height * 0.782)..lineTo(s.width * 0.84, s.height * 0.585)..close()),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.76, s.height * 0.545), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'man_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.25, s.height * 0.62)..lineTo(s.width * 0.19, s.height * 0.782)..lineTo(s.width * 0.45, s.height * 0.782)..lineTo(s.width * 0.39, s.height * 0.62)..close()),
+      _Region(id: 'man_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.32, s.height * 0.585), width: s.width * 0.07, height: s.height * 0.07))),
+    ];
+
+// ── jesus-feeds-the-crowd ──
+List<_Region> _feedsCrowdScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.596))),
+      _Region(id: 'hill', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.596, s.width * 1.0, s.height * 0.404))),
+      _Region(id: 'boy_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.155, s.height * 0.62)..lineTo(s.width * 0.1, s.height * 0.78)..lineTo(s.width * 0.33999999999999997, s.height * 0.78)..lineTo(s.width * 0.28500000000000003, s.height * 0.62)..close()),
+      _Region(id: 'boy_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.22, s.height * 0.585), width: s.width * 0.065, height: s.height * 0.065))),
+      _Region(id: 'basket1', pathBuilder: (s) => Path()..moveTo(s.width * 0.38999999999999996, s.height * 0.72)..lineTo(s.width * 0.414, s.height * 0.782)..lineTo(s.width * 0.526, s.height * 0.782)..lineTo(s.width * 0.5499999999999999, s.height * 0.72)..close()),
+      _Region(id: 'basket2', pathBuilder: (s) => Path()..moveTo(s.width * 0.5660000000000001, s.height * 0.72)..lineTo(s.width * 0.59, s.height * 0.782)..lineTo(s.width * 0.7020000000000001, s.height * 0.782)..lineTo(s.width * 0.726, s.height * 0.72)..close()),
+      _Region(id: 'basket3', pathBuilder: (s) => Path()..moveTo(s.width * 0.742, s.height * 0.72)..lineTo(s.width * 0.7659999999999999, s.height * 0.782)..lineTo(s.width * 0.878, s.height * 0.782)..lineTo(s.width * 0.9019999999999999, s.height * 0.72)..close()),
+      _Region(id: 'loaf1', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.47, s.height * 0.712), width: s.width * 0.076, height: s.height * 0.034))),
+      _Region(id: 'loaf2', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.646, s.height * 0.712), width: s.width * 0.076, height: s.height * 0.034))),
+      _Region(id: 'loaf3', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.822, s.height * 0.712), width: s.width * 0.076, height: s.height * 0.034))),
+    ];
+
+// ── jesus-raises-lazarus ──
+List<_Region> _lazarusScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.61))),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.61, s.width * 1.0, s.height * 0.39))),
+      _Region(id: 'rock', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.56, s.height * 0.3, s.width * 0.44, s.height * 0.31))),
+      _Region(id: 'tomb_mouth', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.75, s.height * 0.503), width: s.width * 0.2, height: s.height * 0.214))),
+      _Region(id: 'stone', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.52, s.height * 0.566), width: s.width * 0.196, height: s.height * 0.196))),
+      _Region(id: 'lazarus_body', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.654, s.height * 0.47, s.width * 0.092, s.height * 0.312))),
+      _Region(id: 'lazarus_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.7, s.height * 0.452), width: s.width * 0.088, height: s.height * 0.088))),
+      _Region(id: 'jesus_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.15000000000000002, s.height * 0.585)..lineTo(s.width * 0.08000000000000002, s.height * 0.782)..lineTo(s.width * 0.38, s.height * 0.782)..lineTo(s.width * 0.31, s.height * 0.585)..close()),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.23, s.height * 0.545), width: s.width * 0.084, height: s.height * 0.084))),
+    ];
+
+// ── the-king-rides-in ──
+List<_Region> _kingRidesInScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.64))),
+      _Region(id: 'road', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.64, s.width * 1.0, s.height * 0.36))),
+      _Region(id: 'wall', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.6, s.height * 0.38, s.width * 0.4, s.height * 0.26))),
+      _Region(id: 'gate', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.8, s.height * 0.555), width: s.width * 0.12, height: s.height * 0.17))),
+      _Region(id: 'donkey_body', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.42, s.height * 0.636), width: s.width * 0.3, height: s.height * 0.132))),
+      _Region(id: 'donkey_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.588, s.height * 0.534), width: s.width * 0.122, height: s.height * 0.076))),
+      _Region(id: 'rider_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.31999999999999995, s.height * 0.5)..lineTo(s.width * 0.26, s.height * 0.604)..lineTo(s.width * 0.5599999999999999, s.height * 0.604)..lineTo(s.width * 0.5, s.height * 0.5)..close()),
+      _Region(id: 'rider_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.41, s.height * 0.455), width: s.width * 0.088, height: s.height * 0.088))),
+      _Region(id: 'palm1', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.11, s.height * 0.744), width: s.width * 0.15, height: s.height * 0.05))),
+      _Region(id: 'palm2', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.278, s.height * 0.744), width: s.width * 0.15, height: s.height * 0.05))),
+    ];
+
+// ── servant-king-washes-feet ──
+List<_Region> _washesFeetScene() => [
+      _Region(id: 'room', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.6))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.6, s.width * 1.0, s.height * 0.4))),
+      _Region(id: 'friend_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.67, s.height * 0.53)..lineTo(s.width * 0.61, s.height * 0.7)..lineTo(s.width * 0.91, s.height * 0.7)..lineTo(s.width * 0.85, s.height * 0.53)..close()),
+      _Region(id: 'friend_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.76, s.height * 0.487), width: s.width * 0.094, height: s.height * 0.094))),
+      _Region(id: 'feet', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.66, s.height * 0.73), width: s.width * 0.118, height: s.height * 0.046))),
+      _Region(id: 'basin', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.56, s.height * 0.748), width: s.width * 0.18, height: s.height * 0.064))),
+      _Region(id: 'water', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.56, s.height * 0.742), width: s.width * 0.146, height: s.height * 0.044))),
+      _Region(id: 'jesus_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.23, s.height * 0.63)..lineTo(s.width * 0.17, s.height * 0.782)..lineTo(s.width * 0.47, s.height * 0.782)..lineTo(s.width * 0.41000000000000003, s.height * 0.63)..close()),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.32, s.height * 0.585), width: s.width * 0.096, height: s.height * 0.096))),
+      _Region(id: 'towel', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.25, s.height * 0.69, s.width * 0.148, s.height * 0.04))),
+    ];
+
+// ── the-last-supper ──
+List<_Region> _lastSupperScene() => [
+      _Region(id: 'room', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.62))),
+      _Region(id: 'table', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.62, s.width * 1.0, s.height * 0.38))),
+      _Region(id: 'friend1', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.144, s.height * 0.4, s.width * 0.092, s.height * 0.22))),
+      _Region(id: 'friend2', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.352, s.height * 0.4, s.width * 0.092, s.height * 0.22))),
+      _Region(id: 'friend3', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.56, s.height * 0.4, s.width * 0.092, s.height * 0.22))),
+      _Region(id: 'friend4', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.768, s.height * 0.4, s.width * 0.092, s.height * 0.22))),
+      _Region(id: 'bread_left', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.384, s.height * 0.69), width: s.width * 0.168, height: s.height * 0.078))),
+      _Region(id: 'bread_right', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.476, s.height * 0.69), width: s.width * 0.168, height: s.height * 0.078))),
+      _Region(id: 'cup', pathBuilder: (s) => Path()..moveTo(s.width * 0.64, s.height * 0.574)..lineTo(s.width * 0.6839999999999999, s.height * 0.644)..lineTo(s.width * 0.796, s.height * 0.644)..lineTo(s.width * 0.84, s.height * 0.574)..close()),
+      _Region(id: 'wine', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.74, s.height * 0.578), width: s.width * 0.096, height: s.height * 0.026))),
+    ];
+
+// ── jesus-prays-in-garden ──
+List<_Region> _gethsemaneScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.626))),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.626, s.width * 1.0, s.height * 0.374))),
+      _Region(id: 'tree1_canopy', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.13, s.height * 0.41), width: s.width * 0.22, height: s.height * 0.15))),
+      _Region(id: 'tree1_trunk', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.114, s.height * 0.43, s.width * 0.032, s.height * 0.2))),
+      _Region(id: 'tree2_canopy', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.83, s.height * 0.41), width: s.width * 0.22, height: s.height * 0.15))),
+      _Region(id: 'tree2_trunk', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.814, s.height * 0.43, s.width * 0.032, s.height * 0.2))),
+      _Region(id: 'moonlight', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.56, s.height * 0.38), width: s.width * 0.34, height: s.height * 0.34))),
+      _Region(id: 'jesus_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.39, s.height * 0.634)..lineTo(s.width * 0.31, s.height * 0.782)..lineTo(s.width * 0.69, s.height * 0.782)..lineTo(s.width * 0.61, s.height * 0.634)..close()),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.588), width: s.width * 0.108, height: s.height * 0.108))),
+      _Region(id: 'friend1', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.81, s.height * 0.75), width: s.width * 0.092, height: s.height * 0.046))),
+      _Region(id: 'friend2', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.87, s.height * 0.75), width: s.width * 0.092, height: s.height * 0.046))),
+    ];
+
+// ── jesus-dies-for-sinners ──
+List<_Region> _crucifixionScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.66))),
+      _Region(id: 'hill', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.66, s.width * 1.0, s.height * 0.34))),
+      _Region(id: 'light_shaft', pathBuilder: (s) => Path()..moveTo(s.width * 0.47, s.height * 0.2)..lineTo(s.width * 0.53, s.height * 0.2)..lineTo(s.width * 0.5, s.height * 0.66)..close()),
+      _Region(id: 'cross_left_post', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.29, s.height * 0.492, s.width * 0.02, s.height * 0.168))),
+      _Region(id: 'cross_left_arm', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.266, s.height * 0.536, s.width * 0.068, s.height * 0.02))),
+      _Region(id: 'cross_mid_post', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.487, s.height * 0.428, s.width * 0.026, s.height * 0.232))),
+      _Region(id: 'cross_mid_arm', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.454, s.height * 0.488, s.width * 0.092, s.height * 0.026))),
+      _Region(id: 'cross_right_post', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.69, s.height * 0.492, s.width * 0.02, s.height * 0.168))),
+      _Region(id: 'cross_right_arm', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.666, s.height * 0.536, s.width * 0.068, s.height * 0.02))),
+      _Region(id: 'curtain', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.796, s.height * 0.25, s.width * 0.164, s.height * 0.3))),
+    ];
+
+// ── jesus-is-alive ──
+List<_Region> _risenScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.618))),
+      _Region(id: 'grass', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.618, s.width * 1.0, s.height * 0.382))),
+      _Region(id: 'sunrise', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.76, s.height * 0.33), width: s.width * 0.32, height: s.height * 0.32))),
+      _Region(id: 'rock', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.12, s.height * 0.25, s.width * 0.46, s.height * 0.368))),
+      _Region(id: 'tomb_mouth', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.348, s.height * 0.484), width: s.width * 0.216, height: s.height * 0.268))),
+      _Region(id: 'stone', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.62, s.height * 0.566), width: s.width * 0.196, height: s.height * 0.196))),
+      _Region(id: 'cloth1', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.288, s.height * 0.54, s.width * 0.12, s.height * 0.02))),
+      _Region(id: 'cloth2', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.288, s.height * 0.566, s.width * 0.12, s.height * 0.02))),
+      _Region(id: 'cloth3', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.288, s.height * 0.592, s.width * 0.12, s.height * 0.02))),
+    ];
+
+// ── jesus-returns-to-his-father ──
+List<_Region> _ascensionScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.64))),
+      _Region(id: 'hill', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.64, s.width * 1.0, s.height * 0.36))),
+      _Region(id: 'cloud', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.372), width: s.width * 0.52, height: s.height * 0.19))),
+      _Region(id: 'angel1', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.672, s.height * 0.606, s.width * 0.068, s.height * 0.176))),
+      _Region(id: 'angel1_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.706, s.height * 0.588), width: s.width * 0.064, height: s.height * 0.064))),
+      _Region(id: 'angel2', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.806, s.height * 0.606, s.width * 0.068, s.height * 0.176))),
+      _Region(id: 'angel2_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.84, s.height * 0.588), width: s.width * 0.064, height: s.height * 0.064))),
+      _Region(id: 'watcher1', pathBuilder: (s) => Path()..moveTo(s.width * 0.12, s.height * 0.585)..lineTo(s.width * 0.06, s.height * 0.782)..lineTo(s.width * 0.32, s.height * 0.782)..lineTo(s.width * 0.26, s.height * 0.585)..close()),
+      _Region(id: 'watcher1_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.19, s.height * 0.545), width: s.width * 0.07, height: s.height * 0.07))),
+      _Region(id: 'watcher2', pathBuilder: (s) => Path()..moveTo(s.width * 0.274, s.height * 0.6)..lineTo(s.width * 0.22000000000000003, s.height * 0.782)..lineTo(s.width * 0.46, s.height * 0.782)..lineTo(s.width * 0.406, s.height * 0.6)..close()),
+      _Region(id: 'watcher2_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.34, s.height * 0.562), width: s.width * 0.066, height: s.height * 0.066))),
+    ];
+
+// ── the-holy-spirit-comes ──
+List<_Region> _pentecostScene() => [
+      _Region(id: 'room', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.64))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.64, s.width * 1.0, s.height * 0.36))),
+      _Region(id: 'p1_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.09999999999999999, s.height * 0.56)..lineTo(s.width * 0.055999999999999994, s.height * 0.782)..lineTo(s.width * 0.304, s.height * 0.782)..lineTo(s.width * 0.26, s.height * 0.56)..close()),
+      _Region(id: 'p1_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.18, s.height * 0.522), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'p1_flame', pathBuilder: (s) => Path()..moveTo(s.width * 0.16, s.height * 0.462)..lineTo(s.width * 0.2, s.height * 0.462)..lineTo(s.width * 0.18, s.height * 0.376)..close()),
+      _Region(id: 'p2_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.26, s.height * 0.56)..lineTo(s.width * 0.21600000000000003, s.height * 0.782)..lineTo(s.width * 0.464, s.height * 0.782)..lineTo(s.width * 0.42000000000000004, s.height * 0.56)..close()),
+      _Region(id: 'p2_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.34, s.height * 0.522), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'p2_flame', pathBuilder: (s) => Path()..moveTo(s.width * 0.32, s.height * 0.462)..lineTo(s.width * 0.36, s.height * 0.462)..lineTo(s.width * 0.34, s.height * 0.376)..close()),
+      _Region(id: 'p3_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.42, s.height * 0.56)..lineTo(s.width * 0.376, s.height * 0.782)..lineTo(s.width * 0.624, s.height * 0.782)..lineTo(s.width * 0.58, s.height * 0.56)..close()),
+      _Region(id: 'p3_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.522), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'p3_flame', pathBuilder: (s) => Path()..moveTo(s.width * 0.48, s.height * 0.462)..lineTo(s.width * 0.52, s.height * 0.462)..lineTo(s.width * 0.5, s.height * 0.376)..close()),
+      _Region(id: 'p4_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.5800000000000001, s.height * 0.56)..lineTo(s.width * 0.536, s.height * 0.782)..lineTo(s.width * 0.784, s.height * 0.782)..lineTo(s.width * 0.74, s.height * 0.56)..close()),
+      _Region(id: 'p4_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.66, s.height * 0.522), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'p4_flame', pathBuilder: (s) => Path()..moveTo(s.width * 0.64, s.height * 0.462)..lineTo(s.width * 0.68, s.height * 0.462)..lineTo(s.width * 0.66, s.height * 0.376)..close()),
+    ];
+
+// ── a-new-sharing-family ──
+List<_Region> _sharingFamilyScene() => [
+      _Region(id: 'room', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.636))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.636, s.width * 1.0, s.height * 0.364))),
+      _Region(id: 'table', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.09, s.height * 0.646, s.width * 0.82, s.height * 0.04))),
+      _Region(id: 's1', pathBuilder: (s) => Path()..moveTo(s.width * 0.08199999999999999, s.height * 0.47)..lineTo(s.width * 0.046, s.height * 0.646)..lineTo(s.width * 0.254, s.height * 0.646)..lineTo(s.width * 0.218, s.height * 0.47)..close()),
+      _Region(id: 's1_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.15, s.height * 0.434), width: s.width * 0.076, height: s.height * 0.076))),
+      _Region(id: 's2', pathBuilder: (s) => Path()..moveTo(s.width * 0.22199999999999998, s.height * 0.47)..lineTo(s.width * 0.186, s.height * 0.646)..lineTo(s.width * 0.39399999999999996, s.height * 0.646)..lineTo(s.width * 0.358, s.height * 0.47)..close()),
+      _Region(id: 's2_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.29, s.height * 0.434), width: s.width * 0.076, height: s.height * 0.076))),
+      _Region(id: 's3', pathBuilder: (s) => Path()..moveTo(s.width * 0.362, s.height * 0.47)..lineTo(s.width * 0.326, s.height * 0.646)..lineTo(s.width * 0.534, s.height * 0.646)..lineTo(s.width * 0.498, s.height * 0.47)..close()),
+      _Region(id: 's3_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.43, s.height * 0.434), width: s.width * 0.076, height: s.height * 0.076))),
+      _Region(id: 's4', pathBuilder: (s) => Path()..moveTo(s.width * 0.502, s.height * 0.47)..lineTo(s.width * 0.46599999999999997, s.height * 0.646)..lineTo(s.width * 0.6739999999999999, s.height * 0.646)..lineTo(s.width * 0.6379999999999999, s.height * 0.47)..close()),
+      _Region(id: 's4_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.57, s.height * 0.434), width: s.width * 0.076, height: s.height * 0.076))),
+      _Region(id: 'bread', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.64), width: s.width * 0.092, height: s.height * 0.034))),
+      _Region(id: 'empty_place', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.43, s.height * 0.706, s.width * 0.14, s.height * 0.066))),
+    ];
+
+// ── stephen-sees-jesus ──
+List<_Region> _stephenScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.646))),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.646, s.width * 1.0, s.height * 0.354))),
+      _Region(id: 'opening', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.3), width: s.width * 0.6, height: s.height * 0.6))),
+      _Region(id: 'figure', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.456, s.height * 0.21, s.width * 0.088, s.height * 0.21))),
+      _Region(id: 'figure_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.196), width: s.width * 0.08, height: s.height * 0.08))),
+      _Region(id: 'stephen_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.42, s.height * 0.58)..lineTo(s.width * 0.355, s.height * 0.782)..lineTo(s.width * 0.645, s.height * 0.782)..lineTo(s.width * 0.58, s.height * 0.58)..close()),
+      _Region(id: 'stephen_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.538), width: s.width * 0.08, height: s.height * 0.08))),
+    ];
+
+// ── saul-meets-the-risen-jesus ──
+List<_Region> _saulRoadScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.632))),
+      _Region(id: 'road', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.632, s.width * 1.0, s.height * 0.368))),
+      _Region(id: 'light', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.66, s.height * 0.33), width: s.width * 0.5, height: s.height * 0.5))),
+      _Region(id: 'saul_body', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.284, s.height * 0.592, s.width * 0.092, s.height * 0.19))),
+      _Region(id: 'saul_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.33, s.height * 0.564), width: s.width * 0.076, height: s.height * 0.076))),
+      _Region(id: 'saul_arm', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.2, s.height * 0.575, s.width * 0.09, s.height * 0.024))),
+      _Region(id: 'friend1', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.814, s.height * 0.636, s.width * 0.052, s.height * 0.146))),
+      _Region(id: 'friend1_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.84, s.height * 0.618), width: s.width * 0.052, height: s.height * 0.052))),
+      _Region(id: 'friend2', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.892, s.height * 0.636, s.width * 0.052, s.height * 0.146))),
+      _Region(id: 'friend2_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.918, s.height * 0.618), width: s.width * 0.052, height: s.height * 0.052))),
+    ];
+
+// ── peter-welcomes-cornelius ──
+List<_Region> _corneliusScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.636))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.636, s.width * 1.0, s.height * 0.364))),
+      _Region(id: 'house', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.24, s.height * 0.22, s.width * 0.52, s.height * 0.416))),
+      _Region(id: 'doorway', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.468), width: s.width * 0.36, height: s.height * 0.336))),
+      _Region(id: 'peter_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.16999999999999998, s.height * 0.585)..lineTo(s.width * 0.1, s.height * 0.782)..lineTo(s.width * 0.4, s.height * 0.782)..lineTo(s.width * 0.33, s.height * 0.585)..close()),
+      _Region(id: 'peter_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.25, s.height * 0.545), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'cornelius_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.682, s.height * 0.585)..lineTo(s.width * 0.612, s.height * 0.782)..lineTo(s.width * 0.912, s.height * 0.782)..lineTo(s.width * 0.842, s.height * 0.585)..close()),
+      _Region(id: 'cornelius_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.762, s.height * 0.545), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'clasp', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.506, s.height * 0.64), width: s.width * 0.06, height: s.height * 0.06))),
+    ];
+
+// ── paul-and-silas-in-prison ──
+List<_Region> _prisonSongScene() => [
+      _Region(id: 'cell', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.64))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.64, s.width * 1.0, s.height * 0.36))),
+      _Region(id: 'bars', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.62, s.height * 0.3, s.width * 0.36, s.height * 0.34))),
+      _Region(id: 'paul_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.14500000000000002, s.height * 0.6)..lineTo(s.width * 0.08499999999999999, s.height * 0.782)..lineTo(s.width * 0.355, s.height * 0.782)..lineTo(s.width * 0.295, s.height * 0.6)..close()),
+      _Region(id: 'paul_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.22, s.height * 0.558), width: s.width * 0.077, height: s.height * 0.077))),
+      _Region(id: 'silas_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.348, s.height * 0.615)..lineTo(s.width * 0.29, s.height * 0.782)..lineTo(s.width * 0.55, s.height * 0.782)..lineTo(s.width * 0.492, s.height * 0.615)..close()),
+      _Region(id: 'silas_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.42, s.height * 0.575), width: s.width * 0.073, height: s.height * 0.073))),
+      _Region(id: 'note1', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.3, s.height * 0.3), width: s.width * 0.026, height: s.height * 0.026))),
+      _Region(id: 'note2', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.42, s.height * 0.34), width: s.width * 0.026, height: s.height * 0.026))),
+      _Region(id: 'listener', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.69, s.height * 0.604, s.width * 0.06, s.height * 0.178))),
+    ];
+
+// ── the-spirit-grows-good-fruit ──
+List<_Region> _goodFruitScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.7))),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.7, s.width * 1.0, s.height * 0.3))),
+      _Region(id: 'trunk', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.096, s.height * 0.26, s.width * 0.108, s.height * 0.44))),
+      _Region(id: 'branch', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.19, s.height * 0.39, s.width * 0.71, s.height * 0.03))),
+      _Region(id: 'leaf1', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.3, s.height * 0.326), width: s.width * 0.118, height: s.height * 0.06))),
+      _Region(id: 'leaf2', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.44, s.height * 0.418), width: s.width * 0.118, height: s.height * 0.06))),
+      _Region(id: 'leaf3', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.58, s.height * 0.326), width: s.width * 0.118, height: s.height * 0.06))),
+      _Region(id: 'fruit1', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.36, s.height * 0.486), width: s.width * 0.08, height: s.height * 0.08))),
+      _Region(id: 'fruit2', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.52, s.height * 0.486), width: s.width * 0.08, height: s.height * 0.08))),
+      _Region(id: 'fruit3', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.68, s.height * 0.486), width: s.width * 0.08, height: s.height * 0.08))),
+      _Region(id: 'arm', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.508, s.height * 0.47, s.width * 0.04, s.height * 0.17))),
+      _Region(id: 'hand', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.52, s.height * 0.604), width: s.width * 0.088, height: s.height * 0.088))),
+    ];
+
+// ── gods-armour-for-hard-days ──
+List<_Region> _armourScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.66))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.66, s.width * 1.0, s.height * 0.34))),
+      _Region(id: 'helmet', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.33), width: s.width * 0.14, height: s.height * 0.14))),
+      _Region(id: 'breastplate', pathBuilder: (s) => Path()..moveTo(s.width * 0.33999999999999997, s.height * 0.372)..lineTo(s.width * 0.388, s.height * 0.54)..lineTo(s.width * 0.612, s.height * 0.54)..lineTo(s.width * 0.66, s.height * 0.372)..close()),
+      _Region(id: 'heart_plate', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.44), width: s.width * 0.096, height: s.height * 0.11))),
+      _Region(id: 'belt', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.438, s.height * 0.54, s.width * 0.124, s.height * 0.026))),
+      _Region(id: 'shield', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.16, s.height * 0.4, s.width * 0.19, s.height * 0.25))),
+      _Region(id: 'shield_boss', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.255, s.height * 0.525), width: s.width * 0.08, height: s.height * 0.08))),
+      _Region(id: 'sword_blade', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.742, s.height * 0.336, s.width * 0.026, s.height * 0.26))),
+      _Region(id: 'sword_hilt', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.704, s.height * 0.596, s.width * 0.102, s.height * 0.022))),
+      _Region(id: 'boot_left', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.426, s.height * 0.66, s.width * 0.052, s.height * 0.096))),
+      _Region(id: 'boot_right', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.502, s.height * 0.66, s.width * 0.052, s.height * 0.096))),
+    ];
+
+// ── when-anger-knocks ──
+List<_Region> _angerScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.2))),
+      _Region(id: 'wall', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.2, s.width * 1.0, s.height * 0.44))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.64, s.width * 1.0, s.height * 0.36))),
+      _Region(id: 'door', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.62, s.height * 0.3, s.width * 0.28, s.height * 0.34))),
+      _Region(id: 'handle', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.66, s.height * 0.47), width: s.width * 0.032, height: s.height * 0.032))),
+      _Region(id: 'knock1', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.76, s.height * 0.38), width: s.width * 0.052, height: s.height * 0.052))),
+      _Region(id: 'knock2', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.76, s.height * 0.45), width: s.width * 0.052, height: s.height * 0.052))),
+      _Region(id: 'child_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.21599999999999997, s.height * 0.585)..lineTo(s.width * 0.15, s.height * 0.782)..lineTo(s.width * 0.44999999999999996, s.height * 0.782)..lineTo(s.width * 0.384, s.height * 0.585)..close()),
+      _Region(id: 'child_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.3, s.height * 0.545), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'breath', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.3, s.height * 0.43), width: s.width * 0.24, height: s.height * 0.24))),
+    ];
+
+// ── when-i-feel-alone ──
+List<_Region> _aloneScene() => [
+      _Region(id: 'room', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.646))),
+      _Region(id: 'floor', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.646, s.width * 1.0, s.height * 0.354))),
+      _Region(id: 'window', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.7, s.height * 0.28, s.width * 0.21, s.height * 0.22))),
+      _Region(id: 'star1', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.75, s.height * 0.33), width: s.width * 0.026, height: s.height * 0.026))),
+      _Region(id: 'star2', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.83, s.height * 0.38), width: s.width * 0.026, height: s.height * 0.026))),
+      _Region(id: 'glow', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.36, s.height * 0.56), width: s.width * 0.4, height: s.height * 0.4))),
+      _Region(id: 'child_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.26, s.height * 0.634)..lineTo(s.width * 0.18, s.height * 0.782)..lineTo(s.width * 0.54, s.height * 0.782)..lineTo(s.width * 0.45999999999999996, s.height * 0.634)..close()),
+      _Region(id: 'child_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.36, s.height * 0.588), width: s.width * 0.099, height: s.height * 0.099))),
+      _Region(id: 'lamp', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.608, s.height * 0.762), width: s.width * 0.096, height: s.height * 0.04))),
+      _Region(id: 'lamp_flame', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.608, s.height * 0.728), width: s.width * 0.06, height: s.height * 0.06))),
+    ];
+
+// ── when-life-feels-unfair ──
+List<_Region> _unfairScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.656))),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.656, s.width * 1.0, s.height * 0.344))),
+      _Region(id: 'light', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.25), width: s.width * 0.36, height: s.height * 0.36))),
+      _Region(id: 'post', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.492, s.height * 0.3, s.width * 0.018, s.height * 0.356))),
+      _Region(id: 'beam', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.28, s.height * 0.302, s.width * 0.44, s.height * 0.016))),
+      _Region(id: 'pan_left', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.3, s.height * 0.394), width: s.width * 0.13, height: s.height * 0.074))),
+      _Region(id: 'pan_right', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.7, s.height * 0.394), width: s.width * 0.13, height: s.height * 0.074))),
+      _Region(id: 'child_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.13, s.height * 0.585)..lineTo(s.width * 0.065, s.height * 0.782)..lineTo(s.width * 0.355, s.height * 0.782)..lineTo(s.width * 0.29, s.height * 0.585)..close()),
+      _Region(id: 'child_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.21, s.height * 0.545), width: s.width * 0.081, height: s.height * 0.081))),
+    ];
+
+// ── when-someone-we-love-dies ──
+List<_Region> _griefScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.636))),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.636, s.width * 1.0, s.height * 0.364))),
+      _Region(id: 'light_break', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.72, s.height * 0.33), width: s.width * 0.34, height: s.height * 0.34))),
+      _Region(id: 'tomb', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.7, s.height * 0.43, s.width * 0.25, s.height * 0.21))),
+      _Region(id: 'tomb_stone', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.79, s.height * 0.56), width: s.width * 0.148, height: s.height * 0.148))),
+      _Region(id: 'jesus_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.38999999999999996, s.height * 0.585)..lineTo(s.width * 0.31999999999999995, s.height * 0.782)..lineTo(s.width * 0.62, s.height * 0.782)..lineTo(s.width * 0.5499999999999999, s.height * 0.585)..close()),
+      _Region(id: 'jesus_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.47, s.height * 0.524), width: s.width * 0.084, height: s.height * 0.084))),
+      _Region(id: 'tear', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.452, s.height * 0.575), width: s.width * 0.022, height: s.height * 0.03))),
+      _Region(id: 'friend_body', pathBuilder: (s) => Path()..moveTo(s.width * 0.12, s.height * 0.66)..lineTo(s.width * 0.06, s.height * 0.782)..lineTo(s.width * 0.36, s.height * 0.782)..lineTo(s.width * 0.3, s.height * 0.66)..close()),
+      _Region(id: 'friend_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.21, s.height * 0.618), width: s.width * 0.09, height: s.height * 0.09))),
+    ];
+
+// ── jesus-will-come-again ──
+List<_Region> _comeAgainScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.654))),
+      _Region(id: 'hill', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.654, s.width * 1.0, s.height * 0.346))),
+      _Region(id: 'cloud_break', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.56, s.height * 0.28), width: s.width * 0.46, height: s.height * 0.2))),
+      _Region(id: 'town1', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.07, s.height * 0.594, s.width * 0.054, s.height * 0.06))),
+      _Region(id: 'town2', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.14, s.height * 0.61, s.width * 0.054, s.height * 0.044))),
+      _Region(id: 'watcher1', pathBuilder: (s) => Path()..moveTo(s.width * 0.244, s.height * 0.6)..lineTo(s.width * 0.18, s.height * 0.782)..lineTo(s.width * 0.46, s.height * 0.782)..lineTo(s.width * 0.396, s.height * 0.6)..close()),
+      _Region(id: 'watcher1_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.32, s.height * 0.562), width: s.width * 0.076, height: s.height * 0.076))),
+      _Region(id: 'watcher2', pathBuilder: (s) => Path()..moveTo(s.width * 0.39799999999999996, s.height * 0.615)..lineTo(s.width * 0.33999999999999997, s.height * 0.782)..lineTo(s.width * 0.6, s.height * 0.782)..lineTo(s.width * 0.5419999999999999, s.height * 0.615)..close()),
+      _Region(id: 'watcher2_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.47, s.height * 0.578), width: s.width * 0.072, height: s.height * 0.072))),
+      _Region(id: 'angel1', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.686, s.height * 0.596, s.width * 0.068, s.height * 0.186))),
+      _Region(id: 'angel1_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.72, s.height * 0.574), width: s.width * 0.066, height: s.height * 0.066))),
+      _Region(id: 'angel2', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.824, s.height * 0.596, s.width * 0.068, s.height * 0.186))),
+      _Region(id: 'angel2_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.858, s.height * 0.574), width: s.width * 0.066, height: s.height * 0.066))),
+    ];
+
+// ── the-king-judges ──
+List<_Region> _judgeScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.668))),
+      _Region(id: 'plain', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.668, s.width * 1.0, s.height * 0.332))),
+      _Region(id: 'glow', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.38), width: s.width * 0.44, height: s.height * 0.44))),
+      _Region(id: 'throne', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.39, s.height * 0.3, s.width * 0.22, s.height * 0.368))),
+      _Region(id: 'throne_seat', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.414, s.height * 0.33, s.width * 0.172, s.height * 0.25))),
+      _Region(id: 'book', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.37, s.height * 0.6, s.width * 0.26, s.height * 0.074))),
+      _Region(id: 'person1', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.064, s.height * 0.632, s.width * 0.052, s.height * 0.15))),
+      _Region(id: 'person1_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.09, s.height * 0.614), width: s.width * 0.048, height: s.height * 0.048))),
+      _Region(id: 'person2', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.15, s.height * 0.632, s.width * 0.052, s.height * 0.15))),
+      _Region(id: 'person2_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.176, s.height * 0.614), width: s.width * 0.048, height: s.height * 0.048))),
+      _Region(id: 'person3', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.674, s.height * 0.632, s.width * 0.052, s.height * 0.15))),
+      _Region(id: 'person3_head', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.7, s.height * 0.614), width: s.width * 0.048, height: s.height * 0.048))),
+    ];
+
+// ── god-makes-everything-new ──
+List<_Region> _everythingNewScene() => [
+      _Region(id: 'sky', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0, s.width * 1.0, s.height * 0.622))),
+      _Region(id: 'ground', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0, s.height * 0.622, s.width * 1.0, s.height * 0.378))),
+      _Region(id: 'city', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.33, s.height * 0.33, s.width * 0.34, s.height * 0.292))),
+      _Region(id: 'battlement1', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.338, s.height * 0.296, s.width * 0.052, s.height * 0.036))),
+      _Region(id: 'battlement2', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.424, s.height * 0.296, s.width * 0.052, s.height * 0.036))),
+      _Region(id: 'battlement3', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.51, s.height * 0.296, s.width * 0.052, s.height * 0.036))),
+      _Region(id: 'gate', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.546), width: s.width * 0.096, height: s.height * 0.152))),
+      _Region(id: 'river', pathBuilder: (s) => Path()..moveTo(s.width * 0.47, s.height * 0.622)..lineTo(s.width * 0.53, s.height * 0.622)..lineTo(s.width * 0.5, s.height * 0.8)..close()),
+      _Region(id: 'tree_left', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.22, s.height * 0.64), width: s.width * 0.108, height: s.height * 0.108))),
+      _Region(id: 'tree_left_trunk', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.209, s.height * 0.66, s.width * 0.022, s.height * 0.1))),
+      _Region(id: 'tree_right', pathBuilder: (s) => Path()..addOval(Rect.fromCenter(center: Offset(s.width * 0.78, s.height * 0.64), width: s.width * 0.108, height: s.height * 0.108))),
+      _Region(id: 'tree_right_trunk', pathBuilder: (s) => Path()..addRect(Rect.fromLTWH(s.width * 0.769, s.height * 0.66, s.width * 0.022, s.height * 0.1))),
+    ];

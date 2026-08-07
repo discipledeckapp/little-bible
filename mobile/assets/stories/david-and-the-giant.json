@@ -1,0 +1,72 @@
+{
+  "id": "david-and-the-giant",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "David says this out loud to a giant, in front of two whole armies, before the fight has even started.",
+  "title": "David and the Giant",
+  "subtitle": "One boy stood out for everybody — and the victory belonged to them all",
+  "collection": "heroes-of-faith",
+  "mainTruth": "David won a battle his people could not win, and because he won it, they all won. God saves His people through a champion who stands in their place.",
+  "ageRange": "4-7",
+  "bibleRef": "1 Samuel 17",
+  "durationMinutes": 5,
+  "coverEmoji": "🪨",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "A small shepherd boy standing alone in a wide valley floor holding a simple sling, an enormous armoured shadow looming at the far edge of the frame, two armies watching from the hills on either side, warm dawn light on the boy, painterly gouache illustration on parchment paper, ochre and dusty gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, courage without gore --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God's people were lined up on one hill. Their enemies, the Philistines, were lined up on the hill opposite. And down in the valley between them stood a giant called Goliath.\n\nEvery morning for forty days he came out and shouted the same thing: 'Send me one man! If he beats me, we will serve you. If I beat him, you will serve us.' And every morning, every single soldier of God's people was afraid. Even the tall king Saul stayed in his tent.\n\nNobody would go. Because everybody was working out the same sum: Goliath is bigger than me.\n\nThen a shepherd boy called David arrived, bringing bread to his brothers. He heard the giant shouting and he asked a question nobody else had asked: 'Who is this man, that he should insult the armies of the living God?'\n\nDavid was doing a completely different sum. Everybody else was measuring the giant against themselves. David measured the giant against God.\n\nSo David went. King Saul put his own heavy armour on him, but David could hardly walk in it, so he took it off. He went down to the stream and chose five smooth stones, and he walked out into the valley with a sling and a shepherd's stick.\n\nGoliath laughed at him. And David called back: 'You come to me with a sword and a spear. I come to you in the name of the Lord! The battle is the Lord's — He does not need swords to save.'\n\nDavid ran towards the giant, swung his sling, and one stone flew straight and true. The giant fell.\n\nAnd here is the part that matters most. When David won, every soldier on that hill won too. They had not thrown a single stone. They had stood and watched while one man went into the valley for them — and his victory became their victory.\n\nThat is how God saves. One day another descendant of David would walk out alone to face an enemy far bigger than a giant, and win a victory His people could never have won for themselves. And His victory becomes ours.",
+      "childText": "A giant called Goliath shouted at God's people every morning. 'Send me one man to fight!' Everyone was afraid — even the king. They were all thinking the same thing: that giant is bigger than me. Then a shepherd boy called David came with bread for his brothers. David was not measuring the giant against himself. He was measuring the giant against God. The king's armour was far too heavy, so David took it off and picked five smooth stones. Goliath laughed at him. David called back, 'You come with a sword. I come in God's name. The battle belongs to God!' David swung his sling, and the giant fell. And every soldier on the hill won that day — without throwing one single stone. Somebody else went into the valley for them. That is exactly how Jesus saves us.",
+      "verses": [
+        {
+          "ref": "1 Samuel 17:26",
+          "kjv": "For who is this uncircumcised Philistine, that he should defy the armies of the living God?",
+          "little_bible": "David said: 'Who is this, shouting at God's people?'"
+        },
+        {
+          "ref": "1 Samuel 17:37",
+          "kjv": "The LORD that delivered me out of the paw of the lion... he will deliver me out of the hand of this Philistine.",
+          "little_bible": "God kept me safe before. He will keep me safe now."
+        },
+        {
+          "ref": "1 Samuel 17:45",
+          "kjv": "Thou comest to me with a sword... but I come to thee in the name of the LORD of hosts.",
+          "little_bible": "You come with a sword. I come in God's name."
+        },
+        {
+          "ref": "1 Samuel 17:47",
+          "kjv": "And all this assembly shall know that the LORD saveth not with sword and spear: for the battle is the LORD'S.",
+          "little_bible": "The battle belongs to God. He saves His own way."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "The soldiers won without fighting. How did that happen?",
+      "parentGuide": "The new concept here is representative victory — one person wins on behalf of everybody. Children already know this from a team: the striker scores, and the whole team has won. Do not let the story land as 'be brave like David', which is the usual and much weaker reading. Your child is not David in this story; your child is one of the terrified soldiers on the hill, watching someone else fight for them. That is why the last line points to Jesus. Retrieve David the Shepherd Boy — same boy, and God had already been training him in a field where nobody was watching. If your child worries about the giant dying, keep it plain and brief: the giant had been threatening to hurt God's people, and God stopped him.",
+      "familyQuestion": "Who is someone who has done something hard for us?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You save Your people. Thank You that Jesus went out and won the battle we could never win. When we feel small and afraid, help us remember who is fighting for us. Amen.",
+      "childPrompt": "Is there something that feels giant-sized to you right now?",
+      "prayerPoints": [
+        "Tell God about the thing that feels too big for you",
+        "Thank Jesus for winning a battle you could never have won"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "The battle belongs to God. He saves His own way.",
+      "ref": "1 Samuel 17:47",
+      "memoryPhrase": "The battle is God's.",
+      "tip": "Stand up as tall as you can, look up at the ceiling like it is a giant, and shout in your bravest voice: 'The battle is God's!' Do it three times."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find five smooth stones or pebbles today. Hold each one and name one thing that feels too big for you, then say together: 'The battle is God's.'",
+      "parentNote": "Keep the stones somewhere your child can see them this week. When the giant-sized thing comes up again, hand them the stone rather than a speech — the object does the remembering for them."
+    }
+  }
+}

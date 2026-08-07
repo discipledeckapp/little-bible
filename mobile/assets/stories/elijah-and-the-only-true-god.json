@@ -1,0 +1,72 @@
+{
+  "id": "elijah-and-the-only-true-god",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "The people shout this on Mount Carmel, after they see God answer Elijah's prayer with fire.",
+  "title": "Elijah and the Only True God",
+  "subtitle": "One prophet, one soaked altar, and a whole nation limping between two opinions",
+  "collection": "heroes-of-faith",
+  "mainTruth": "There is only one true God, and He alone answers. Everything else we might put in His place is silent.",
+  "ageRange": "4-7",
+  "bibleRef": "1 Kings 18:16-39",
+  "durationMinutes": 5,
+  "coverEmoji": "🔥",
+  "coverColor": "#C2410C",
+  "illustrationPrompt": "A lone prophet standing with arms raised beside a stone altar on a bare mountain top, water still running down the stones into a trench, a great column of fire falling from a dark sky onto the altar, a crowd kneeling at a distance, painterly gouache illustration on parchment paper, deep charcoal and blazing orange palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, awe not terror --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Years after Solomon, God's people had drifted a long way. They still said they believed in God — but they had also started bowing down to a made-up god called Baal, whose statues they had built all over the land. They wanted both. They wanted to keep God, and keep everything else too.\n\nSo God sent a prophet called Elijah. Elijah stood in front of the whole nation and asked one question: 'How long will you keep hopping between two opinions? If the Lord is God, follow Him. If Baal is god, follow him.'\n\nAnd nobody answered a word. Not one person.\n\nSo Elijah said, 'Let us find out.' He set up a test on top of Mount Carmel. Two altars. Two offerings. No fire lit by anybody. 'You call on your god,' said Elijah, 'and I will call on the Lord. The God who answers with fire — He is the real one.'\n\nThe prophets of Baal went first. There were four hundred and fifty of them. They shouted at their statue all morning. They danced round the altar. They called louder and louder from morning until the middle of the afternoon.\n\nAnd nothing happened. No voice. No answer. Nothing at all. Because there was nobody there to hear them.\n\nThen it was Elijah's turn — and Elijah made it harder. He rebuilt God's broken altar with twelve stones, one for each tribe. Then he told them to pour water over it. Four big jars. Then again. Then again. Twelve jars of water until the wood was soaked and the trench around the altar was full.\n\nNo one could ever say it was a trick.\n\nThen Elijah prayed a short, quiet prayer. Not shouting. Not dancing. Just: 'Lord, let these people know that You are God, and that You are turning their hearts back to You.'\n\nAnd fire fell from heaven. It burned the offering, the wood, the stones, the dust — and licked up every drop of water in the trench.\n\nThe people fell on their faces and cried out: 'The Lord — He is God! The Lord — He is God!'\n\nGod is not one option among many. He is the only One who is really there, and the only One who answers.",
+      "childText": "Long after Solomon, God's people had drifted away. They still said they believed in God — but they were bowing down to a made-up god called Baal too. They wanted both. So God sent a prophet called Elijah. 'How long will you hop between two opinions?' he asked. 'If the Lord is God, then follow Him!' Nobody said a word. So Elijah set up a test: two altars, and no fire lit by anybody. 'The God who answers with fire is the real one.' Baal's prophets went first. Four hundred and fifty of them shouted all day and danced round and round. And nothing happened. No voice. No answer — because nobody was there to hear them. Then Elijah made it harder. He poured water all over God's altar until the wood was soaking wet. Then he prayed one short, quiet prayer. And fire fell from heaven! The people fell down and shouted, 'The Lord — He is God!'",
+      "verses": [
+        {
+          "ref": "1 Kings 18:21",
+          "kjv": "How long halt ye between two opinions? if the LORD be God, follow him.",
+          "little_bible": "Elijah said: 'If the Lord is God, then follow Him!'"
+        },
+        {
+          "ref": "1 Kings 18:26",
+          "kjv": "But there was no voice, nor any that answered.",
+          "little_bible": "They shouted all day. But no one answered them."
+        },
+        {
+          "ref": "1 Kings 18:37",
+          "kjv": "Hear me, O LORD, hear me, that this people may know that thou art the LORD God.",
+          "little_bible": "Elijah prayed: 'Lord, let these people know You are God.'"
+        },
+        {
+          "ref": "1 Kings 18:39",
+          "kjv": "And when all the people saw it, they fell on their faces: and they said, The LORD, he is the God.",
+          "little_bible": "The people shouted: 'The Lord — He is God!'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did Elijah pour water on the altar first?",
+      "parentGuide": "The new concept is exclusive worship — God is not the best option, He is the only real one. The water is the detail children remember, so start there: Elijah made it impossible on purpose, because he was not nervous about whether God would turn up. Two comparisons do the teaching for you. Four hundred and fifty men shouting all day get silence; one man praying quietly gets fire — loudness is not what makes prayer work. And Baal could not answer because there was nobody home, which is the plainest way to say what an idol is. Then bring it close without moralising: our Baals are usually not statues but the things we would be most upset to lose. Ask yourself the question in front of your child, honestly, before you ask them. Retrieve God's Good Commands — 'no other gods before Me' is the first one, and this story is what it looks like when a nation forgets it.",
+      "familyQuestion": "What things do we sometimes love more than God?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, You are the only true God, and You always hear us. We are sorry for the times we want You and other things too. Turn our hearts back to You. Amen.",
+      "childPrompt": "Can you tell God that He is the only true God?",
+      "prayerPoints": [
+        "Thank God that He always answers, unlike anything else we trust",
+        "Ask God to turn your heart back when it wanders"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "The people shouted: 'The Lord — He is God!'",
+      "ref": "1 Kings 18:39",
+      "memoryPhrase": "The Lord is God!",
+      "tip": "Crouch right down low like the people falling on their faces, then jump up with both arms in the air and shout: 'The Lord is God!' Do it three times, louder each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Name one thing you would find really hard to give up. Hold it, and say to God: 'You are more important than this.'",
+      "parentNote": "Do this one yourself, out loud, with your own thing first. Children learn what worship costs from watching a grown-up name something real, not from being asked to name something small."
+    }
+  }
+}

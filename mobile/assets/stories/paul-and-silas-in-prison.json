@@ -1,0 +1,72 @@
+{
+  "id": "paul-and-silas-in-prison",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Paul wrote this later in a letter, from prison again, to a church in the very city where this happened.",
+  "title": "Paul and Silas Sing in Prison",
+  "subtitle": "Midnight, a locked cell, and the sound of singing",
+  "collection": "spirit-filled-family",
+  "mainTruth": "Joy is not the same as everything going well. Because God is with His people, they can sing in the dark — and the people listening notice.",
+  "ageRange": "4-7",
+  "bibleRef": "Acts 16:16-34",
+  "durationMinutes": 5,
+  "coverEmoji": "🎵",
+  "coverColor": "#4C1D95",
+  "illustrationPrompt": "Two men sitting upright in a dark stone cell at midnight with their heads lifted and mouths open in song, warm light glowing around them, other prisoners in neighbouring cells turning to listen, painterly gouache illustration on parchment paper, deep violet and warm amber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, hope in darkness, no cruelty shown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Paul and Silas had come to a city called Philippi to tell people about Jesus. A woman there had been trapped for years — some men were using her and making money out of her — and Paul set her free in Jesus' name.\n\nThe men who had been making money out of her were furious. They dragged Paul and Silas into the marketplace, told lies about them, and stirred up a crowd. Paul and Silas were beaten and thrown into the deepest part of the prison, and their feet were locked into heavy wooden blocks so they could not move.\n\nSo there they were. Sore. In the dark. Locked up for doing something good.\n\nAnd at about midnight, Paul and Silas were praying and singing hymns to God.\n\nNot sighing. Not complaining. Singing. Out loud, at midnight, in a prison.\n\nAnd the Bible tells us something lovely: the other prisoners were listening. Of course they were. What else do you do when someone starts singing in the dark?\n\nThen suddenly there was a great earthquake. The prison shook to its foundations, every door flew open and everybody's chains fell off.\n\nThe jailer woke up, saw the doors open, and was terrified — he thought all his prisoners had run. But Paul shouted out, 'Do not hurt yourself! We are all here!'\n\nNobody had run. That is almost stranger than the earthquake.\n\nThe jailer called for a light, ran in, fell down shaking in front of them and asked, 'What must I do to be saved?' And they told him about Jesus, right there in the middle of the night. Then he took them home, washed their wounds, and his whole household was baptised, and he set food in front of them, and the whole family was full of joy.\n\nThe men in that jail did not sing because everything was fine. Everything was not fine. They sang because God was with them, and He was.",
+      "childText": "Paul and Silas came to a city called Philippi to tell people about Jesus. When Paul set a trapped woman free, the men who had been making money out of her were furious. They told lies about Paul and Silas, and the two of them were hurt and thrown into the deepest part of the prison with their feet locked into heavy wooden blocks. So there they were: sore, in the dark, locked up for doing something good. And at about midnight, Paul and Silas were praying and singing hymns to God. Not sighing. Not complaining. Singing! And all the other prisoners lay there in the dark, listening. Then suddenly there was a huge earthquake. The prison shook, every door flew open and everybody's chains fell off — and nobody ran away. The jailer came running with a light, shaking, and asked, 'What must I do to be saved?' So they told him about Jesus. He took them home, looked after them, and his whole family was full of joy.",
+      "verses": [
+        {
+          "ref": "Acts 16:25",
+          "kjv": "And at midnight Paul and Silas prayed, and sang praises unto God: and the prisoners heard them.",
+          "little_bible": "At midnight they sang to God, and the prisoners listened."
+        },
+        {
+          "ref": "Acts 16:28",
+          "kjv": "But Paul cried with a loud voice, saying, Do thyself no harm: for we are all here.",
+          "little_bible": "Paul shouted: 'Do not hurt yourself! We are all here!'"
+        },
+        {
+          "ref": "Acts 16:31",
+          "kjv": "Believe on the Lord Jesus Christ, and thou shalt be saved, and thy house.",
+          "little_bible": "They said: 'Trust the Lord Jesus, and you will be saved.'"
+        },
+        {
+          "ref": "Philippians 4:4",
+          "kjv": "Rejoice in the Lord alway: and again I say, Rejoice.",
+          "little_bible": "Be glad in the Lord always. I will say it again — be glad!"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why could Paul and Silas sing in a dark prison?",
+      "parentGuide": "The new concept is joy in suffering, and it is very easy to teach badly. Joy is not pretending to be happy when you are sad, and this story must never be used to tell a child their sad feelings are wrong — the Bible is full of people telling God exactly how bad things are. Put it like this instead: everything was not fine, and God was with them, and both were true at once. That is why they could sing. Two details carry it. The other prisoners were listening, because singing in the dark is impossible to ignore — what we do when things go wrong is the loudest thing we ever say about God. And nobody ran when the doors opened, which is stranger than the earthquake and is why the jailer asked his question. Keep the beating brief and non-graphic. Retrieve Jesus Prays in the Garden — honest about the hard thing, and trusting anyway.",
+      "familyQuestion": "What do we do when something goes really wrong?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You are with us in dark places. When things go wrong, help us not to pretend — but help us sing, because You are still here. Amen.",
+      "childPrompt": "Is there a dark place you would like God to be with you in?",
+      "prayerPoints": [
+        "Tell God about something that has gone wrong for you",
+        "Thank God that He stays with you when things are hard"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Be glad in the Lord always. I will say it again — be glad!",
+      "ref": "Philippians 4:4",
+      "memoryPhrase": "Sing in the dark.",
+      "tip": "Turn all the lights off, hold hands in the dark, and sing one song together right to the end. Then say: 'Sing in the dark.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Next time something goes wrong today — however small — sing one line of a song about God instead of grumbling.",
+      "parentNote": "You will get the chance before they do, so use it. Children copy what a grown-up does at the exact moment something goes wrong far more than anything explained to them afterwards."
+    }
+  }
+}

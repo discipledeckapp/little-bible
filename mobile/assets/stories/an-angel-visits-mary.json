@@ -1,0 +1,72 @@
+{
+  "id": "an-angel-visits-mary",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "The angel Gabriel says this to Mary, after telling her something that sounded completely impossible.",
+  "title": "An Angel Visits Mary",
+  "subtitle": "God sent a message to an ordinary girl in a small town — and she said yes",
+  "collection": "jesus-is-here",
+  "mainTruth": "God kept His forever-King promise by becoming a baby. Nothing is too hard for God, and He does the biggest things through people nobody was watching.",
+  "ageRange": "4-7",
+  "bibleRef": "Luke 1:26-38",
+  "durationMinutes": 5,
+  "coverEmoji": "🕊️",
+  "coverColor": "#7C3AED",
+  "illustrationPrompt": "A young woman standing in a small plain room turning towards a tall shining figure of light in the doorway, her hands open in wonder, soft dawn coming through a low window, painterly gouache illustration on parchment paper, violet and warm cream palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, awe and gentleness, no fear --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Four hundred years went by. No new prophets. No new messages. God's people waited in the quiet, holding on to the promises — a King from David's family, a brand-new heart, someone to put everything right.\n\nAnd then God broke the silence. Not in a palace. Not in the temple in Jerusalem. In a small, unimportant town called Nazareth, where nothing ever happened.\n\nGod sent the angel Gabriel to a young woman named Mary. She was not a queen. She was not famous. Nobody was watching her.\n\nGabriel said, 'Hello, Mary! God is very pleased with you. The Lord is with you.'\n\nMary was frightened and confused. What kind of greeting was that?\n\nSo Gabriel told her not to be afraid, and then he said the most astonishing thing anybody has ever been told. 'You are going to have a baby boy. You will call Him Jesus. He will be great. He will be called the Son of the Most High God. God will give Him the throne of His father David — and His kingdom will never, ever end.'\n\nDo you remember that promise? God had made it to David hundreds of years before, on the night David wanted to build God a house. A King from your family. A throne for ever. This was that promise, arriving.\n\nMary asked a real question: 'But how can this happen?'\n\nAnd Gabriel answered her, and then he said the sentence this story is for: 'Nothing is impossible for God.'\n\nThink of everything Mary already knew. God made a world out of nothing. God gave old Sarah a baby when she laughed at the idea. God opened a sea. God sent fire onto a soaking altar. Nothing is impossible for God.\n\nAnd here is the most amazing part. God was not just sending a King. God was coming Himself. The One who made the stars was going to be a baby who needed feeding and holding and keeping warm.\n\nMary said, 'I am the Lord's servant. Let it happen just as you have said.'\n\nShe did not fully understand. She said yes anyway.",
+      "childText": "For four hundred years there were no new prophets. God's people waited in the quiet, holding on to His promises. Then God broke the silence — not in a palace, but in a small town called Nazareth where nothing ever happened. God sent the angel Gabriel to a young woman named Mary. She was not a queen. She was not famous. Nobody was watching her. 'Do not be afraid, Mary,' said Gabriel. 'You are going to have a baby boy. You will call Him Jesus. He will be the Son of the Most High God, and His kingdom will never, ever end.' Do you remember that promise? God made it to David long, long ago — a King for ever. This was that promise arriving! Mary asked, 'But how can this happen?' And Gabriel said, 'Nothing is impossible for God.' And God was not only sending a King. God was coming Himself. The One who made the stars was going to be a baby! Mary said, 'I am the Lord's servant. Let it happen just as you said.' She did not understand it all. She said yes anyway.",
+      "verses": [
+        {
+          "ref": "Luke 1:28",
+          "kjv": "Hail, thou that art highly favoured, the Lord is with thee.",
+          "little_bible": "The angel said: 'Hello Mary! The Lord is with you.'"
+        },
+        {
+          "ref": "Luke 1:31",
+          "kjv": "And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS.",
+          "little_bible": "'You will have a baby boy. Call Him Jesus.'"
+        },
+        {
+          "ref": "Luke 1:37",
+          "kjv": "For with God nothing shall be impossible.",
+          "little_bible": "Nothing is impossible for God."
+        },
+        {
+          "ref": "Luke 1:38",
+          "kjv": "And Mary said, Behold the handmaid of the Lord; be it unto me according to thy word.",
+          "little_bible": "Mary said: 'I am God's servant. Let it happen.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did God choose an ordinary girl in a small town?",
+      "parentGuide": "The new concept is the Incarnation announced — God is not only sending a rescuer, He is coming Himself. Say that part slowly, because it is the hinge of the whole Bible and children can hold it: the One who made the stars became a baby who needed feeding. Retrieve two things deliberately. God's Forever-King Promise, because Gabriel is quoting it — the throne of his father David, a kingdom with no end — and your child may well recognise it. And The Promised Son, because Sarah laughed at an impossible baby and God did it anyway. Do not turn Mary into the point of the story. She is wonderful because she said yes without understanding, not because she was special enough to be picked. If your child asks how the baby got there, 'God did it, and it had never happened before or since' is a complete and true answer at this age.",
+      "familyQuestion": "What has God asked us to trust Him with?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that nothing is impossible for You. Thank You that You did not stay far away — You came to us Yourself. Help us say yes to You even when we do not understand. Amen.",
+      "childPrompt": "Is there something you want to trust God with today?",
+      "prayerPoints": [
+        "Thank God that He came to us Himself instead of staying far away",
+        "Tell God about something that feels impossible to you"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Nothing is impossible for God.",
+      "ref": "Luke 1:37",
+      "memoryPhrase": "God can do anything.",
+      "tip": "Hold your hands close together and say 'this is what I can do' — then throw your arms out as wide as they will go and say: 'God can do ANYTHING!' Do it three times."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Say yes to one thing today that you would normally say no to because it feels too hard — and ask God to help you before you start.",
+      "parentNote": "Let them pick it, and keep it genuinely small. The lesson is that yes comes before understanding, which is exactly what Mary modelled — not that they should attempt something beyond them."
+    }
+  }
+}

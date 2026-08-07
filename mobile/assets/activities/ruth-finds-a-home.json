@@ -1,0 +1,36 @@
+{
+  "storyId": "ruth-finds-a-home",
+  "memoryBuilder": {
+    "phrase": "Everyone can belong.",
+    "phraseWords": ["Everyone", "can", "belong."],
+    "verseRef": "Ruth 1:16",
+    "verseText": "Ruth said: 'Your people will be my people. Your God will be my God.'",
+    "verseWords": ["Your", "people", "will", "be", "my", "people.", "Your", "God", "will", "be", "my", "God."]
+  },
+  "sequence": {
+    "prompt": "How did Ruth find a home? Put it in order.",
+    "items": [
+      { "id": "alone",  "label": "Naomi and Ruth were left with nobody",  "emoji": "😢", "order": 1 },
+      { "id": "stay",   "label": "Ruth said, 'Where you go, I will go'",  "emoji": "❤️", "order": 2 },
+      { "id": "glean",  "label": "Ruth gathered leftover grain all day",  "emoji": "🌾", "order": 3 },
+      { "id": "family", "label": "Boaz was kind, and Ruth got a family",  "emoji": "🏠", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "ruth",  "left": "Ruth",  "leftEmoji": "🌾", "rightId": "stayed", "right": "Stayed with Naomi and chose her God", "rightEmoji": "❤️" },
+      { "leftId": "naomi", "left": "Naomi", "leftEmoji": "👵", "rightId": "home",   "right": "Went back home with nothing left",    "rightEmoji": "🚶" },
+      { "leftId": "boaz",  "left": "Boaz",  "leftEmoji": "🧑‍🌾", "rightId": "kind", "right": "Noticed Ruth and left extra grain",   "rightEmoji": "🤲" }
+    ]
+  },
+  "application": {
+    "question": "Ruth came from far away and God gave her a family. Who do you know who might feel left out?",
+    "options": [
+      { "id": "new",    "label": "Someone new",         "emoji": "🚪" },
+      { "id": "alone",  "label": "Someone on their own", "emoji": "🧍" },
+      { "id": "quiet",  "label": "Someone very quiet",   "emoji": "🤫" }
+    ],
+    "followUp": "Ruth was from the wrong country and had nothing at all — and she ended up in Jesus' own family. Nobody is too different to belong to God."
+  }
+}

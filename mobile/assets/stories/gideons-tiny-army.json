@@ -1,0 +1,72 @@
+{
+  "id": "gideons-tiny-army",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "God says this to Gideon while Gideon is hiding in a winepress, certain he is the weakest man in the weakest family.",
+  "title": "Gideon's Tiny Army",
+  "subtitle": "God kept sending soldiers home until there were hardly any left — on purpose",
+  "collection": "a-land-needing-a-king",
+  "mainTruth": "God often makes us smaller so that everyone can see the victory was His.",
+  "ageRange": "4-7",
+  "bibleRef": "Judges 6:11-16; 7:1-22",
+  "durationMinutes": 5,
+  "coverEmoji": "🏺",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "A small band of figures standing on a dark hillside at night, each holding a clay jar with lamplight glowing inside it, a vast valley of tents below, starry sky, painterly gouache illustration on parchment paper, deep night-blue with warm clay-lamp amber, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, few and small against many, no violence shown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God's people had forgotten God again, and again they were suffering. A huge army kept coming and taking all their food, so God's people were hiding in caves and going hungry.\n\nThen God sent an angel to a man called Gideon, who was hiding at the time, and the angel said: 'The Lord is with you, mighty warrior.' Gideon must have looked around to see who the angel was talking to. He said, 'How can I save Israel? My family is the smallest, and I am the least important person in it.'\n\nAnd God said, 'Go — because I will be with you.' That was the whole answer. Not 'you are stronger than you think.' Just: I will be with you.\n\nSo Gideon gathered an army: thirty-two thousand men. Against that enormous enemy, thirty-two thousand was already too few. And then God said something astonishing. 'You have too many.'\n\nToo many? God explained why: 'If you win with this many, Israel will say — my own hand saved me.' God did not want them to be able to take the credit.\n\nSo God sent home everyone who was frightened, and twenty-two thousand left. Ten thousand remained. And God said, 'Still too many.' After one more test, Gideon had three hundred men. Three hundred, against an army too big to count.\n\nThen God gave them their weapons: a trumpet, and a clay jar, and a torch hidden inside the jar. That was it. At night they surrounded the enemy camp, blew the trumpets all together, smashed the jars so the light blazed out everywhere at once, and shouted. The enemy army panicked in the dark and fled, and God's people were free.\n\nGideon's three hundred won a battle they could never have won. And nobody — not one person — could say 'my own hand saved me.'",
+      "childText": "God's people had forgotten God again, and a huge army kept taking all their food. God sent an angel to a man called Gideon and said, 'The Lord is with you, mighty warrior!' Gideon said, 'Me? My family is the smallest, and I am the least important!' God said, 'Go — I will be with you.' So Gideon gathered thirty-two thousand men. But God said, 'You have too many! If you win with this many you will say you saved yourselves.' So God sent them home until only three hundred were left! They had trumpets and clay jars with torches inside. They blew the trumpets, smashed the jars, and God gave the victory!",
+      "verses": [
+        {
+          "ref": "Judges 6:12",
+          "kjv": "The LORD is with thee, thou mighty man of valour.",
+          "little_bible": "The angel said: 'The Lord is with you, mighty warrior!'"
+        },
+        {
+          "ref": "Judges 6:15",
+          "kjv": "Behold, my family is poor in Manasseh, and I am the least in my father's house.",
+          "little_bible": "Gideon said: 'But I am the least important in my family.'"
+        },
+        {
+          "ref": "Judges 6:16",
+          "kjv": "And the LORD said unto him, Surely I will be with thee.",
+          "little_bible": "God said: 'Go. I will be with you.'"
+        },
+        {
+          "ref": "Judges 7:2",
+          "kjv": "The people that are with thee are too many for me to give the Midianites into their hands, lest Israel vaunt themselves against me, saying, Mine own hand hath saved me.",
+          "little_bible": "God said: 'You have too many. You would say you saved yourselves.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did God send most of the army home?",
+      "parentGuide": "God's strength in weakness is the concept, and the story states the reason out loud in Judges 7:2 — so that nobody could boast. Two guardrails. Do not turn this into 'you are stronger than you think', because God's answer to Gideon was never about Gideon; it was 'I will be with you'. And do not turn it into 'so it does not matter what we do' — Gideon still had to go, and go at night, and obey a strange plan. Retrieve Joshua's walls: God again chose a method that made human credit impossible. Keep the enemy's panic non-graphic. If your child feels small or least-important, this is their story — say so.",
+      "familyQuestion": "When do you feel small or not good enough?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, we are small, and that is all right, because You are strong. Thank You that You do not need us to be impressive. When something is too big for us, please do it Your way, and we will give You the thanks. Amen.",
+      "childPrompt": "Can you tell God about a time you felt too small?",
+      "prayerPoints": [
+        "Tell God about something you feel too small for",
+        "Thank God that the victory belongs to Him, not to us"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'Go. I will be with you.'",
+      "ref": "Judges 6:16",
+      "memoryPhrase": "God is my strength.",
+      "tip": "Crouch down as small as you can and whisper 'I am small' — then stand up tall and say: 'God is my strength.' Do it three times, standing faster each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "When something good happens today, say thank you to God for it out loud instead of saying you did it yourself.",
+      "parentNote": "Judges 7:2 is about credit, so the application has to be about credit too. Model it first — thank God in front of your child for something that went well for you today, and let them hear you not take it."
+    }
+  }
+}

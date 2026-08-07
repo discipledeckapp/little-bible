@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-calms-the-storm",
+  "memoryBuilder": {
+    "phrase": "Even the wind obeys.",
+    "phraseWords": ["Even", "the", "wind", "obeys."],
+    "verseRef": "Mark 4:39",
+    "verseText": "Jesus said, 'Peace, be still.' And the wind stopped.",
+    "verseWords": ["Jesus", "said", "Peace", "be", "still", "And", "the", "wind", "stopped"]
+  },
+  "sequence": {
+    "prompt": "What happened out on the lake? Put it in order.",
+    "items": [
+      { "id": "asleep", "label": "Jesus fell asleep at the back of the boat", "emoji": "😴", "order": 1 },
+      { "id": "storm",  "label": "A wild storm filled the boat with water",   "emoji": "🌊", "order": 2 },
+      { "id": "spoke",  "label": "Jesus said, 'Peace! Be still.'",            "emoji": "🤚", "order": 3 },
+      { "id": "calm",   "label": "The lake went completely calm",             "emoji": "✨", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "wind",     "left": "the screaming wind",        "leftEmoji": "🌬️", "rightId": "stopped", "right": "It stopped the moment Jesus spoke",           "rightEmoji": "🤫" },
+      { "leftId": "cushion",  "left": "Jesus asleep on a cushion", "leftEmoji": "😴", "rightId": "both",    "right": "He was truly a tired man, and truly God",     "rightEmoji": "❤️" },
+      { "leftId": "question", "left": "the friends' big question", "leftEmoji": "❓", "rightId": "who",     "right": "'Who is this? Even the sea obeys Him!'",      "rightEmoji": "🙌" }
+    ]
+  },
+  "application": {
+    "question": "When something feels frightening, what helps most?",
+    "options": [
+      { "id": "with",  "label": "Remembering Jesus is with me",     "emoji": "🙏" },
+      { "id": "tell",  "label": "Telling a grown-up how I feel",    "emoji": "💬" },
+      { "id": "words", "label": "Saying the words 'Peace, be still'", "emoji": "🌊" }
+    ],
+    "followUp": "Being frightened is not naughty — the men in that boat were fishermen, and they were terrified. What saved them was not braver hearts but the voice of Jesus, and that voice is with you too. He made the wind, so even the wind obeys."
+  }
+}

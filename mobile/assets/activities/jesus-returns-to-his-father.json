@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-returns-to-his-father",
+  "memoryBuilder": {
+    "phrase": "Jesus is with us.",
+    "phraseWords": ["Jesus", "is", "with", "us."],
+    "verseRef": "Matthew 28:20",
+    "verseText": "I am with you always, right to the very end.",
+    "verseWords": ["I", "am", "with", "you", "always,", "right", "to", "the", "very", "end."]
+  },
+  "sequence": {
+    "prompt": "What happened on the hill? Put it in order.",
+    "items": [
+      { "id": "alive",  "label": "Jesus kept showing His friends He was alive", "emoji": "🐟", "order": 1 },
+      { "id": "go",     "label": "Jesus said: 'Go and tell everybody about Me'", "emoji": "🗺️", "order": 2 },
+      { "id": "up",     "label": "Jesus was lifted up into a bright cloud",      "emoji": "☁️", "order": 3 },
+      { "id": "angels", "label": "Two angels said He will come back",            "emoji": "👼", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "cloud",  "left": "the bright cloud",     "leftEmoji": "🌥️", "rightId": "home",  "right": "It carried Jesus home to His throne",     "rightEmoji": "👑" },
+      { "leftId": "power",  "left": "all power",            "leftEmoji": "⚡",  "rightId": "his",   "right": "In heaven and on earth, it belongs to Jesus", "rightEmoji": "🌍" },
+      { "leftId": "always", "left": "I am with you always", "leftEmoji": "💛", "rightId": "never", "right": "Jesus never leaves His people",           "rightEmoji": "🤝" }
+    ]
+  },
+  "application": {
+    "question": "Jesus is King everywhere, and He is with you. Where do you most need to remember that?",
+    "options": [
+      { "id": "night",   "label": "In bed at night",       "emoji": "🌙" },
+      { "id": "newplace","label": "Somewhere new",         "emoji": "🎒" },
+      { "id": "alone",   "label": "When I feel all alone", "emoji": "😟" }
+    ],
+    "followUp": "Jesus went up to rule, not to go away. He has all power in heaven and on earth, and He is praying for you right now. Jesus is with us."
+  }
+}

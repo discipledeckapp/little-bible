@@ -1,0 +1,72 @@
+{
+  "id": "jesus-heals-and-forgives",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to the religious teachers in a crowded house in Capernaum, just before He tells a man on a mat to stand up and walk home.",
+  "title": "Jesus Heals and Forgives",
+  "subtitle": "They came for his legs, and Jesus started with his heart",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Only God can forgive sins — so when Jesus forgives, He is showing us who He is. He mended the man's legs to prove He can mend what is deeper.",
+  "ageRange": "4-7",
+  "bibleRef": "Mark 2:1-12",
+  "durationMinutes": 5,
+  "coverEmoji": "🛏️",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "Interior of a crowded flat-roofed village house seen from below, a ragged hole broken open in the mud-and-branch ceiling with dust drifting down in a bright shaft of daylight, a woven mat being lowered on ropes toward a seated teaching figure while four faces peer through the gap above, packed onlookers pressed to the walls, painterly gouache illustration on parchment paper, warm ochre and clay-brown palette with dusty cream light, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, hush and hope --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus came home to Capernaum, and word went round the town in minutes. By the time the sun was properly up, the house was packed. People filled every room, stood in the doorway and spilled out into the street. Nobody could get in, and nobody could get out.\n\nSomewhere in that town were five friends. Four of them could walk. One of them could not. He had lain on a mat for years, carried everywhere, unable to stand or work or even scratch his own foot.\n\nThe four picked up the corners of his mat and set off for the house. When they arrived and saw that crowd, they did not shrug and go home. They carried him up the outside stairs onto the flat roof. And then they started digging.\n\nRoofs there were made of dried mud packed over branches. So picture the scene inside: Jesus is teaching, and dust begins drifting down. Then crumbs of mud. Then a hole opens, and daylight pours in, and four faces are looking through it. And down through the hole, on ropes, comes a man on a mat, lowered right into the middle of the room until he is lying at Jesus' feet.\n\nEverybody waited for Jesus to mend his legs. That is what the friends came for. That is what we would have come for.\n\nInstead Jesus looked at the man and said, 'Son, your sins are forgiven.'\n\nThe religious teachers sitting there went cold. They did not say it out loud, but they thought it: only God can forgive sins. Who does this man think He is?\n\nAnd they were right about the first part. Sin is against God, so only God can wipe it away. No prophet ever said those words. No priest ever said those words.\n\nJesus knew exactly what they were thinking. So He said, 'Which is easier — to say your sins are forgiven, or to say get up and walk? I will show you that the Son of Man has authority on earth to forgive sins.' Then He turned to the man. 'Get up. Pick up your mat. Go home.'\n\nAnd the man stood up. In front of everyone he rolled up the mat he had lain on for years, tucked it under his arm and walked out through a crowd that scrambled to get out of his way.\n\nThe healing was the proof. The forgiveness was the gift. Jesus mended the man's legs so that we would believe He can mend our hearts.",
+      "childText": "Jesus came home to Capernaum, and the whole town heard. Soon the house was so full that nobody could get in or out. Four friends came carrying a man on a mat, because his legs did not work and he could not walk at all. When they saw the crowd, they did not go home. They carried him up onto the flat roof, and started digging a hole! Inside, Jesus was teaching when dust began falling. Then a hole opened, and down came a man on a mat, right at Jesus' feet. Everybody waited for Jesus to mend his legs. But Jesus looked at him and said something nobody expected: 'Son, your sins are forgiven.' The teachers were shocked, because only God can forgive sins. So Jesus said, 'I will show you.' He told the man, 'Get up. Pick up your mat. Go home.' And the man stood up and walked! Jesus mended his legs to show that He can forgive hearts.",
+      "verses": [
+        {
+          "ref": "Mark 2:4",
+          "kjv": "And when they could not come nigh unto him for the press, they uncovered the roof where he was ... and they let down the bed wherein the sick of the palsy lay.",
+          "little_bible": "They dug through the roof and let the mat down."
+        },
+        {
+          "ref": "Mark 2:5",
+          "kjv": "When Jesus saw their faith, he said unto the sick of the palsy, Son, thy sins be forgiven thee.",
+          "little_bible": "Jesus said: 'Son, your sins are forgiven.'"
+        },
+        {
+          "ref": "Mark 2:10",
+          "kjv": "But that ye may know that the Son of man hath power on earth to forgive sins ...",
+          "little_bible": "Jesus has power on earth to forgive sins."
+        },
+        {
+          "ref": "Mark 2:12",
+          "kjv": "And immediately he arose, took up the bed, and went forth before them all.",
+          "little_bible": "He stood up, picked up his mat, and walked out."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did Jesus give the man before his legs?",
+      "parentGuide": "The new concept is authority to forgive sins. Notice the order: the man came for his legs, and Jesus dealt with his heart first. That is not Jesus missing the point — it is Jesus naming the deeper problem, then mending the legs as public proof that He has the right to do it. Only God can forgive sins, which is exactly why the teachers were so upset. The likeliest misreading is moral: be a determined friend like those four men. Their faith is lovely, but it did not forgive or heal anybody — Jesus did. A second one is worth heading off directly: children can quietly conclude that people who are ill must have sinned. Jesus never said that, and you should say so. Retrieve The Very Sad Choice. That story showed what went wrong inside people; this one shows the only Person who can put it right. If your child asks what sins are, keep it concrete — the wrong things we do, say and want.",
+      "familyQuestion": "Which is harder to mend, legs or hearts?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Lord Jesus, You are the only one who can forgive sins, and You want to. We are sorry for the wrong things we have done. Thank You that You do not turn us away when we come to You. Amen.",
+      "childPrompt": "Can you tell Jesus one thing you are sorry for?",
+      "prayerPoints": [
+        "Tell Jesus one wrong thing you are sorry about",
+        "Thank Jesus that He is happy to forgive you"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus has power on earth to forgive sins.",
+      "ref": "Mark 2:10",
+      "memoryPhrase": "Jesus can forgive sins.",
+      "tip": "Lie flat on the floor like the man on his mat. When a grown-up says, 'Get up, pick up your mat, go home', jump up, scoop a blanket under your arm and march around saying: 'Jesus can forgive sins.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell God one wrong thing you did today, then say out loud, 'Thank You Jesus, You can forgive that' — and go and do something happy.",
+      "parentNote": "Do not let this become a confession inspection. Go first with something small and real of your own, and keep it short. The bit that matters most is the going-off-happy afterwards: forgiven children should feel lighter, not watched."
+    }
+  }
+}

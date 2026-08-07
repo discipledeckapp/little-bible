@@ -1,0 +1,37 @@
+{
+  "storyId": "an-angel-visits-mary",
+  "memoryBuilder": {
+    "phrase": "God can do anything.",
+    "phraseWords": ["God", "can", "do", "anything."],
+    "verseRef": "Luke 1:37",
+    "verseText": "Nothing is impossible for God.",
+    "verseWords": ["Nothing", "is", "impossible", "for", "God."]
+  },
+  "sequence": {
+    "prompt": "How did God's message come to Mary? Put it in order.",
+    "items": [
+      { "id": "quiet",   "label": "God's people waited in the quiet", "emoji": "🤫", "order": 1 },
+      { "id": "angel",   "label": "Gabriel came to Mary in Nazareth", "emoji": "🕊️", "order": 2 },
+      { "id": "message", "label": "'You will have a baby called Jesus'", "emoji": "👶", "order": 3 },
+      { "id": "yes",     "label": "Mary said: 'Let it happen'",       "emoji": "🙌", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "nazareth", "left": "the town of Nazareth", "leftEmoji": "🏘️", "rightId": "small", "right": "A small place where nothing ever happened", "rightEmoji": "🤏" },
+      { "leftId": "kingdom",  "left": "Jesus' kingdom",       "leftEmoji": "👑", "rightId": "never", "right": "It will never, ever end",                 "rightEmoji": "♾️" },
+      { "leftId": "coming",   "left": "who was coming",       "leftEmoji": "✨", "rightId": "himself","right": "God was coming Himself, as a baby",      "rightEmoji": "👶" }
+    ]
+  },
+  "application": {
+    "question": "Mary said yes before she understood. What could you trust God with today?",
+    "options": [
+      { "id": "hard",  "label": "Something that feels too hard", "emoji": "🧗" },
+      { "id": "new",   "label": "Something new and scary",       "emoji": "🚪" },
+      { "id": "wait",  "label": "Something I am waiting for",    "emoji": "⏳" }
+    ],
+    "followUp": "Mary was not a queen and nobody was watching her — and God chose her. She did not understand it all, and she said yes anyway. Remember: God can do anything."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "gods-forever-king-promise",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "God says this to David through the prophet Nathan, on the night David offered to build God a house.",
+  "title": "God's Forever-King Promise",
+  "subtitle": "David wanted to build God a house — so God promised to build David a family instead",
+  "collection": "heroes-of-faith",
+  "mainTruth": "God promised David a King from his family who would reign for ever. Every promise God has made is heading towards one person.",
+  "ageRange": "4-7",
+  "bibleRef": "2 Samuel 7:1-17",
+  "durationMinutes": 5,
+  "coverEmoji": "👑",
+  "coverColor": "#7C3AED",
+  "illustrationPrompt": "A king seated low on a simple cedar floor at night looking upward in wonder, a great starry sky opening above him, a distant golden crown of light suspended among the stars, painterly gouache illustration on parchment paper, deep violet and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, awe and promise --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "The wars were over. David was living in a beautiful house made of cedar wood, and God's Ark — the golden box that showed God was with His people — was still sitting in a tent.\n\nDavid did not think that was right. 'Here I am in a house of cedar,' he said, 'while God's Ark stays in a tent. I will build God a house.'\n\nIt was a good thought. It was a generous thought. And God said no.\n\nThat night God gave Nathan a message for David, and it began with a list of everything God had already done: 'I took you from the sheep field. I was with you everywhere you went. I made your name great.' David had not started this. God had.\n\nThen God said the thing that turned everything around. 'You want to build Me a house? I am going to build you a house.'\n\nGod did not mean a house made of stone. He meant a family. A line. And God made David a promise so big that David sat down on the floor and could not think what to say.\n\nGod promised that one of David's own children would build the temple. And then He promised something much bigger: that a King would come from David's family, and His kingdom would last for ever. Not a long time. For ever. A throne that never empties. A King who never dies and is never replaced.\n\nDavid could only say, 'Who am I, Lord, that You would do this for me?'\n\nAnd remember what David had just been through. This is the same David who had sinned so badly and been forgiven. God did not take the promise back. God's promises do not depend on how well we do — they depend on how faithful He is.\n\nA thousand years later, an angel came to a young woman named Mary and said about her baby: 'God will give Him the throne of His father David, and His kingdom will never end.'\n\nGod kept the promise. His name is Jesus.",
+      "childText": "The wars were over. David lived in a fine house of cedar wood — but God's golden Ark was still in a tent. 'I will build God a house!' said David. It was a kind thought. And God said no. That night God sent Nathan with a message. First God reminded David of all He had already done: 'I took you from the sheep field. I was with you everywhere you went.' David had not started this. God had. Then God said the surprising part: 'You want to build Me a house? I am going to build YOU a house.' God did not mean stones. He meant a family. God promised that a King would come from David's family, and that His kingdom would last for ever. David sat down and could hardly speak. 'Who am I, that You would do this for me?' A long time later, a baby was born in Bethlehem. God kept His promise. His name is Jesus.",
+      "verses": [
+        {
+          "ref": "2 Samuel 7:2",
+          "kjv": "See now, I dwell in an house of cedar, but the ark of God dwelleth within curtains.",
+          "little_bible": "David said: 'I live in a fine house. God's Ark is in a tent.'"
+        },
+        {
+          "ref": "2 Samuel 7:11",
+          "kjv": "Also the LORD telleth thee that he will make thee an house.",
+          "little_bible": "God said: 'I will build a house for you.'"
+        },
+        {
+          "ref": "2 Samuel 7:16",
+          "kjv": "And thine house and thy kingdom shall be established for ever before thee: thy throne shall be established for ever.",
+          "little_bible": "God said: 'A King from your family will reign for ever.'"
+        },
+        {
+          "ref": "2 Samuel 7:18",
+          "kjv": "Who am I, O Lord GOD? and what is my house, that thou hast brought me hitherto?",
+          "little_bible": "David said: 'Who am I, that You would do this for me?'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did God promise to build for David instead?",
+      "parentGuide": "The new concept is covenant promise carried through a family — the Davidic covenant. Children handle 'for ever' better than adults expect, so lean on it: a king who never gets old, never gets swapped, never stops being king. The reversal is the memorable shape of the story, so say it out loud twice — David offered to build; God said 'I will build you'. Retrieve two things. God Calls Abraham, because this is the same God making the same kind of unbreakable promise to another family. And David's Sin and God's Mercy, because the promise comes to a forgiven man, which is the whole reason it is good news for us. Finish by connecting forward to Birth of Jesus if your child has already heard it — the angel's words to Mary are this promise being kept.",
+      "familyQuestion": "What is something God has promised that lasts for ever?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You keep Your promises even when we do not deserve them. Thank You for sending Jesus, the King whose kingdom will never end. Help us trust You when we have to wait. Amen.",
+      "childPrompt": "Can you thank God for a promise He has kept?",
+      "prayerPoints": [
+        "Thank God that Jesus is a King who will never stop being King",
+        "Ask God to help you trust a promise you are still waiting for"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'A King from your family will reign for ever.'",
+      "ref": "2 Samuel 7:16",
+      "memoryPhrase": "Jesus reigns for ever.",
+      "tip": "Make a crown shape with your hands above your head and hold it there while you slowly say: 'Jesus reigns for EVER.' Stretch out the word 'ever' as long as your breath lasts."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Draw a crown and write on it one promise God has made that will never run out. Put it somewhere you will see it tomorrow.",
+      "parentNote": "Let your child choose the promise rather than supplying one. Whatever they pick tells you what they are actually holding on to, and that is worth knowing."
+    }
+  }
+}

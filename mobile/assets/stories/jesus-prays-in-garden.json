@@ -1,0 +1,72 @@
+{
+  "id": "jesus-prays-in-garden",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Jesus prays this in a garden at night, hours before He was arrested, while His friends slept nearby.",
+  "title": "Jesus Prays in the Garden",
+  "subtitle": "He told His Father exactly how He felt — and still said yes",
+  "collection": "jesus-saves",
+  "mainTruth": "Jesus was truly distressed and truly trusted His Father at the same time. Being afraid is not the opposite of trusting God.",
+  "ageRange": "4-7",
+  "bibleRef": "Mark 14:32-42",
+  "durationMinutes": 5,
+  "coverEmoji": "🌿",
+  "coverColor": "#14532D",
+  "illustrationPrompt": "A man kneeling low among ancient olive trees at night, face lifted towards a break of moonlight in the branches, three friends asleep in the shadows behind him, painterly gouache illustration on parchment paper, deep green and cool silver palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sorrow held by trust, no menace --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "After the supper, Jesus and His friends walked out into the night to a garden full of old olive trees. It was called Gethsemane.\n\nJesus took Peter, James and John a little further in with Him, and then something happened that we should not rush past. The Bible says Jesus began to be deeply distressed and troubled. He said to them, 'My heart is so sad, it feels like it could break. Stay here. Stay awake with Me.'\n\nThis is Jesus — the one who stilled a storm with a word, who was not afraid of a giant crowd or a tempter in a desert. And here He is, so sad He can hardly stand, asking His friends not to leave Him on His own.\n\nHe went a little further and fell on the ground and prayed. He did not pretend. He said: 'Father, everything is possible for You. Please take this cup away from Me.' He was asking not to have to go through the next day.\n\nAnd then, in the same breath: 'But not what I want. What You want.'\n\nHe prayed that same prayer three times. And each time He came back, His friends were asleep. He was carrying the heaviest night in history and the people who loved Him could not even stay awake.\n\nAn angel came and strengthened Him. And in the end Jesus stood up and walked towards the people coming to arrest Him — because He had decided.\n\nHere is what a child needs from this story. Jesus was genuinely frightened and genuinely sad, and He was trusting His Father completely at exactly the same time. Being afraid is not the opposite of trusting God.\n\nAnd when you tell God honestly how you feel — even 'please, I do not want this' — you are praying the way Jesus prayed.",
+      "childText": "After supper, Jesus and His friends walked out into the night to a garden of old olive trees called Gethsemane. Jesus took three friends further in with Him, and then something happened we should not rush past. Jesus became deeply sad and troubled. 'My heart feels like it could break,' He said. 'Stay here. Stay awake with Me.' This is the same Jesus who stopped a storm with one word — and now He was so sad He could hardly stand. He went a little further and knelt right down on the ground, and He did not pretend. He prayed, 'Father, everything is possible for You. Please take this away from Me.' And then, in the same breath: 'But not what I want — what You want.' He prayed it three times, and every time He came back His friends were fast asleep. Then Jesus stood up and walked towards the people coming for Him, because He had decided.",
+      "verses": [
+        {
+          "ref": "Mark 14:33",
+          "kjv": "And began to be sore amazed, and to be very heavy.",
+          "little_bible": "Jesus began to feel very troubled and very sad."
+        },
+        {
+          "ref": "Mark 14:34",
+          "kjv": "My soul is exceeding sorrowful unto death: tarry ye here, and watch.",
+          "little_bible": "Jesus said: 'My heart is so sad. Stay awake with Me.'"
+        },
+        {
+          "ref": "Mark 14:36",
+          "kjv": "Abba, Father, all things are possible unto thee; take away this cup from me: nevertheless not what I will, but what thou wilt.",
+          "little_bible": "Jesus prayed: 'Father, not what I want — what You want.'"
+        },
+        {
+          "ref": "Hebrews 5:7",
+          "kjv": "Who in the days of his flesh, when he had offered up prayers and supplications with strong crying and tears.",
+          "little_bible": "Jesus prayed to His Father with loud cries and tears."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Was Jesus trusting God even though He felt afraid?",
+      "parentGuide": "Be present for this one and do not hurry it. The new concept is trust under anguish, and the single most valuable thing your child can take away is that Jesus was genuinely distressed AND genuinely trusting at the same moment — being afraid is not the opposite of faith. Resist the urge to tidy Jesus up into calm serenity here; the Bible does not, and a child who is told that real faith never feels frightened will conclude their own fear means they have failed. Say plainly that Jesus asked not to have to do it, and then chose His Father's way anyway. The sleeping friends matter too: the people who loved Him most let Him down, and He went on loving them. If your child asks what the 'cup' was, it is fine to say it was the terrible thing coming the next day, which the next story tells. Retrieve Jesus Says No to the Tempter — same Jesus, same trust, much harder night.",
+      "familyQuestion": "What do we do with feelings we do not want?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Father, thank You that Jesus told You honestly how He felt. Thank You that we can too. When we are frightened, help us say what we feel and still trust You. Amen.",
+      "childPrompt": "Can you tell God honestly how you are feeling right now?",
+      "prayerPoints": [
+        "Tell God exactly how you feel — He is not shocked by it",
+        "Ask God to help you trust Him even when you feel afraid"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus prayed: 'Father, not what I want — what You want.'",
+      "ref": "Mark 14:36",
+      "memoryPhrase": "Not mine, but Yours.",
+      "tip": "Hold both hands out flat with palms up, as if handing something over, and say slowly: 'Not mine, but Yours.' Hold them there for a breath before you drop them."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell God one true thing about how you feel today — even if it is not a nice feeling. Then say: 'Not mine, but Yours.'",
+      "parentNote": "Go first, with something real and age-appropriate from your own week. A child learns that honest prayer is allowed by hearing a grown-up do it, not by being told they may."
+    }
+  }
+}

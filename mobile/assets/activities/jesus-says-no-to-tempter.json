@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-says-no-to-tempter",
+  "memoryBuilder": {
+    "phrase": "Jesus said no!",
+    "phraseWords": ["Jesus", "said", "no!"],
+    "verseRef": "Matthew 4:10",
+    "verseText": "Jesus said: 'Worship the Lord your God, and serve only Him.'",
+    "verseWords": ["Worship", "the", "Lord", "your", "God,", "and", "serve", "only", "Him."]
+  },
+  "sequence": {
+    "prompt": "What happened in the desert? Put it in order.",
+    "items": [
+      { "id": "desert", "label": "God's Spirit led Jesus to the desert", "emoji": "🏜️", "order": 1 },
+      { "id": "hungry", "label": "Forty days with nothing to eat",       "emoji": "🌵", "order": 2 },
+      { "id": "asked",  "label": "The tempter asked Him three times",    "emoji": "🐍", "order": 3 },
+      { "id": "angels", "label": "The tempter left, and angels came",    "emoji": "🕊️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "whisper", "left": "what the tempter does", "leftEmoji": "🤫", "rightId": "ask",   "right": "He can only ask — he cannot make you", "rightEmoji": "🚫" },
+      { "leftId": "answer",  "left": "how Jesus answered",    "leftEmoji": "📖", "rightId": "words", "right": "With God's own words, every time",      "rightEmoji": "✨" },
+      { "leftId": "garden",  "left": "the garden and the desert", "leftEmoji": "⚖️", "rightId": "nono", "right": "They said yes; Jesus said no",       "rightEmoji": "✅" }
+    ]
+  },
+  "application": {
+    "question": "Jesus answered with God's words. What wrong thing sounds like a good idea to you?",
+    "options": [
+      { "id": "grab",   "label": "Taking what is not mine", "emoji": "🍬" },
+      { "id": "fib",    "label": "Telling a little fib",    "emoji": "🙊" },
+      { "id": "unkind", "label": "Being unkind to get my way", "emoji": "😠" }
+    ],
+    "followUp": "Being tempted is not the same as doing wrong — Jesus was tempted and He stayed perfect. The tempter can only whisper; he cannot make you do anything. And Jesus said no three times, so you can say it too."
+  }
+}

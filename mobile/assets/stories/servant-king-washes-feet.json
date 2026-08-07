@@ -1,0 +1,72 @@
+{
+  "id": "servant-king-washes-feet",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to His friends after washing their feet, on the last evening before He died.",
+  "title": "The Servant King Washes Feet",
+  "subtitle": "The King of everything picked up a towel and knelt on the floor",
+  "collection": "jesus-saves",
+  "mainTruth": "Jesus is a King who serves. Greatness in His kingdom looks like kneeling down and doing the lowest job for somebody else.",
+  "ageRange": "4-7",
+  "bibleRef": "John 13:1-17",
+  "durationMinutes": 5,
+  "coverEmoji": "🪣",
+  "coverColor": "#0F766E",
+  "illustrationPrompt": "A man kneeling on a stone floor with a towel round his waist, gently washing the dusty feet of a seated friend, a basin of water beside him, twelve places set at a low table in warm lamplight behind, painterly gouache illustration on parchment paper, deep teal and warm amber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, tenderness and humility --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "It was the last evening. Jesus knew what was coming the next day, and He knew exactly who He was — the Bible says Jesus knew that the Father had put everything into His hands, and that He had come from God and was going back to God.\n\nAnd knowing all of that, He got up from supper, took off His outer coat, wrapped a towel round His waist, poured water into a basin, and knelt down on the floor to wash His friends' feet.\n\nYou have to understand what that meant. Roads then were dust and mud, and everybody walked in open sandals. By evening feet were filthy. Washing them was the job of the lowest servant in the house — the one nobody else wanted to be.\n\nThere was no servant in that room. So the twelve had all sat down with dirty feet rather than be the one to do it.\n\nAnd Jesus did it. He went round the whole table, one friend at a time, washing and drying each pair of feet with the towel from His own waist.\n\nWhen He reached Peter, Peter pulled his feet back. 'You will never wash my feet!' It felt upside down and wrong to him — kings do not kneel.\n\nJesus said, 'If I do not wash you, you have no part with Me.' And Peter, being Peter, said, 'Then wash all of me!'\n\nHere is the part that should stop us. Jesus knew that one of those men would betray Him before morning. He washed his feet too.\n\nWhen He had finished He put His coat back on, sat down and said, 'Do you understand what I have done? You call Me Teacher and Lord, and you are right. So if I have washed your feet, you should wash one another's feet. I have given you an example. Do as I have done.'\n\nGreatness in God's kingdom is not being at the top. It is picking up the towel.",
+      "childText": "It was the last evening before Jesus died. Jesus knew exactly who He was — God's own Son, with everything in His hands. And knowing that, He got up from supper, took off His coat, wrapped a towel round His waist, poured water into a basin, and knelt down on the floor to wash His friends' feet. You have to know what that meant. The roads were dust and mud and everybody wore open sandals, so by evening feet were filthy. Washing them was the job of the lowest servant in the house. There was no servant in that room, so all twelve friends had sat down with dirty feet rather than be the one to do it. And Jesus did it. He went right round the table, one friend at a time. Peter pulled his feet away. 'You will never wash my feet!' Kings do not kneel! But Jesus washed them all — even the friend He knew would let Him down before morning. Then He said, 'I have shown you what to do. Now do the same for each other.'",
+      "verses": [
+        {
+          "ref": "John 13:3",
+          "kjv": "Jesus knowing that the Father had given all things into his hands, and that he was come from God, and went to God.",
+          "little_bible": "Jesus knew He had come from God and had everything."
+        },
+        {
+          "ref": "John 13:5",
+          "kjv": "After that he poureth water into a bason, and began to wash the disciples' feet.",
+          "little_bible": "Jesus poured water and began to wash their feet."
+        },
+        {
+          "ref": "John 13:8",
+          "kjv": "Peter saith unto him, Thou shalt never wash my feet.",
+          "little_bible": "Peter said: 'You will never wash my feet!'"
+        },
+        {
+          "ref": "John 13:15",
+          "kjv": "For I have given you an example, that ye should do as I have done to you.",
+          "little_bible": "Jesus said: 'I have shown you. Now do the same.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why was it surprising that Jesus washed their feet?",
+      "parentGuide": "The new concept is servant kingship — in God's kingdom greatness runs downwards. Children grasp this fastest through the dirt: explain what feet actually looked like after a day on dust roads in open sandals, and that this was the lowest servant's job. Then say the thing that makes it land — there was no servant in the room, so twelve grown men sat there with filthy feet rather than be the one to do it, and Jesus, who knew He was God's Son with everything in His hands, got up and did it anyway. He was not pretending to be lowly; He was showing what God is actually like. Do not let it collapse into 'so be helpful at home'. First it is something done FOR us — He washes us clean — and only then a pattern to copy. Retrieve Jesus Grows and Obeys, and note that He washed the feet of the friend who would betray Him that same night.",
+      "familyQuestion": "What job in our house does nobody want to do?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, You are the King of everything and You knelt down on the floor for Your friends. Thank You for washing us clean. Help us pick up the towel and serve each other. Amen.",
+      "childPrompt": "Can you thank Jesus for making you clean?",
+      "prayerPoints": [
+        "Thank Jesus that He serves us before He asks anything of us",
+        "Ask Jesus to help you do a job nobody else wants to do"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus said: 'I have shown you. Now do the same.'",
+      "ref": "John 13:15",
+      "memoryPhrase": "Jesus serves. I serve.",
+      "tip": "Kneel down and pretend to dry someone's feet with a towel, then swap over and let them dry yours. Each time you swap, say: 'Jesus serves. I serve.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Do one job today that is somebody else's job — and do not tell anybody you did it.",
+      "parentNote": "The secrecy is the point; the moment it is announced it becomes about being seen. If you notice it later, thank them quietly rather than praising them in front of others."
+    }
+  }
+}

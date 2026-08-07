@@ -1,0 +1,72 @@
+{
+  "id": "deborah-leads-gods-people",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "This is the opening line of the song Deborah sings after the battle, thanking God that the people gladly offered themselves.",
+  "title": "Deborah Leads God's People",
+  "subtitle": "A wise woman sat under a palm tree and helped a whole nation remember God",
+  "collection": "a-land-needing-a-king",
+  "mainTruth": "God uses anyone who is willing to serve Him — women and men, young and old.",
+  "ageRange": "4-7",
+  "bibleRef": "Judges 4:1-16; 5:1-9",
+  "durationMinutes": 5,
+  "coverEmoji": "🌴",
+  "coverColor": "#166534",
+  "illustrationPrompt": "A woman seated in the shade of a tall date palm on a hillside, people of all ages gathered on the grass listening to her, distant hills and a wide sky, painterly gouache illustration on parchment paper, palm-green and warm hillside-gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, calm authority and gathered trust --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "After Joshua died, something sad kept happening over and over. God's people would forget God and do wrong things. Then life would go badly for them. Then they would cry out to God. And God — again and again — would send someone to help them. Those helpers were called judges. God's people kept forgetting. God kept rescuing.\n\nIn one of those times, God's people had been treated very harshly for twenty years by a king with a huge army and nine hundred iron chariots. They cried out to God again.\n\nAnd God had already given them a leader. Her name was Deborah, and she was a prophetess — someone who spoke God's words to the people. She used to sit under a palm tree, and people would come from all over to bring her their arguments and their problems, and she would help them decide what was right. She was wise, and she listened to God, and the whole nation trusted her.\n\nDeborah sent for a man called Barak, who led the army, and she told him what God had said: go, and God will hand the enemy over to you.\n\nBut Barak was afraid. He said, 'I will only go if you come with me.' And Deborah went. She did not scold him and she did not refuse. She simply went, and God did exactly what He had promised, and God's people were free again.\n\nAfterwards Deborah sang a song, and in it she praised God for one particular thing: that the people had willingly offered themselves. Not that they were strong. Not that they were impressive. That they were willing.\n\nThat is what God does. He does not look for the most powerful person in the room. He looks for someone willing to say yes.",
+      "childText": "After Joshua died, God's people kept forgetting God. Then things would go badly, and they would cry out to Him — and God kept sending someone to help. Those helpers were called judges. One of them was a woman called Deborah. She listened to God and told the people His words. She sat under a palm tree, and people came from everywhere to ask her what was right. Deborah told Barak, who led the army, 'Go — God will help you.' But Barak was afraid and said, 'Only if you come too.' So Deborah went with him! And God did just what He promised. God uses anyone who is willing.",
+      "verses": [
+        {
+          "ref": "Judges 4:4",
+          "kjv": "And Deborah, a prophetess... she judged Israel at that time.",
+          "little_bible": "Deborah listened to God. She led God's people wisely."
+        },
+        {
+          "ref": "Judges 4:5",
+          "kjv": "And she dwelt under the palm tree of Deborah... and the children of Israel came up to her for judgment.",
+          "little_bible": "She sat under a palm tree. People came to ask her what was right."
+        },
+        {
+          "ref": "Judges 4:9",
+          "kjv": "And she said, I will surely go with thee.",
+          "little_bible": "Deborah said: 'I will go with you.' So she went."
+        },
+        {
+          "ref": "Judges 5:2",
+          "kjv": "Praise ye the LORD for the avenging of Israel, when the people willingly offered themselves.",
+          "little_bible": "Praise God! The people gladly said yes to Him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What kind of person does God use?",
+      "parentGuide": "The concept is that God uses willing servants, and Deborah is the plain evidence that this includes women in positions of real authority — say that clearly rather than implying it. Two things to keep straight. God raised Deborah up; she did not seize anything. And the song credits willingness, not strength, which is the answer to the discussion question. Introduce the judges cycle here too — forget, suffer, cry out, rescue — because it is the pattern that makes the need for a true King obvious later. Keep the battle non-graphic; the focus is Deborah's wisdom and God's faithfulness.",
+      "familyQuestion": "What is one way you could say yes to helping someone this week?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You use anyone who is willing — not just the strongest or the loudest. Thank You for wise people who help us know what is right. Please make us willing to say yes to You. Amen.",
+      "childPrompt": "Can you tell God you are willing to help?",
+      "prayerPoints": [
+        "Tell God you are willing for Him to use you",
+        "Thank God for one wise person who helps your family"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Praise God! The people gladly said yes to Him.",
+      "ref": "Judges 5:2",
+      "memoryPhrase": "I am willing, God!",
+      "tip": "Put your hand straight up in the air like you are volunteering, and say: 'I am willing, God!' Go round the family so everybody gets a turn to put their hand up."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Volunteer for one job today before anybody asks you to do it.",
+      "parentNote": "Volunteering unprompted is the child-sized shape of Judges 5:2. Notice it out loud when it happens and name it as willingness, because that word is the one you want them to keep."
+    }
+  }
+}

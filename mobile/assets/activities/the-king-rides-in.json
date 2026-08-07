@@ -1,0 +1,37 @@
+{
+  "storyId": "the-king-rides-in",
+  "memoryBuilder": {
+    "phrase": "Our King came gently.",
+    "phraseWords": ["Our", "King", "came", "gently."],
+    "verseRef": "Zechariah 9:9",
+    "verseText": "Look! Your King is coming, gentle, riding on a donkey.",
+    "verseWords": ["Look!", "Your", "King", "is", "coming,", "gentle,", "riding", "on", "a", "donkey."]
+  },
+  "sequence": {
+    "prompt": "How did the King arrive? Put it in order.",
+    "items": [
+      { "id": "waiting", "label": "God's people waited for the promised King", "emoji": "⏳", "order": 1 },
+      { "id": "donkey",  "label": "Jesus sent for a little donkey",           "emoji": "🐴", "order": 2 },
+      { "id": "coats",   "label": "People laid coats on the road",            "emoji": "🧥", "order": 3 },
+      { "id": "shout",   "label": "The crowd shouted 'Hosanna!'",             "emoji": "🌿", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "horse",  "left": "the war horse they expected", "leftEmoji": "🐎", "rightId": "fight",  "right": "A king who comes to fight",              "rightEmoji": "⚔️" },
+      { "leftId": "donkey", "left": "the donkey Jesus chose",      "leftEmoji": "🐴", "rightId": "peace",  "right": "A King who comes in peace",              "rightEmoji": "🕊️" },
+      { "leftId": "words",  "left": "Zechariah's old words",       "leftEmoji": "📜", "rightId": "kept",   "right": "God kept a promise made long before",     "rightEmoji": "✅" }
+    ]
+  },
+  "application": {
+    "question": "Our King is gentle. What is one way you could welcome Him into your day today?",
+    "options": [
+      { "id": "sing",  "label": "Sing Him a song",           "emoji": "🎵" },
+      { "id": "tell",  "label": "Tell Him He is King",       "emoji": "👑" },
+      { "id": "gentle", "label": "Be gentle like Him",        "emoji": "🤲" }
+    ],
+    "followUp": "Jesus could have taken a war horse and everybody would have cheered even louder. He chose the donkey because He was riding towards a cross, not a fight. Our King came gently."
+  }
+}

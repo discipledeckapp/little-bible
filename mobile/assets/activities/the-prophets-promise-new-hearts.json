@@ -1,0 +1,37 @@
+{
+  "storyId": "the-prophets-promise-new-hearts",
+  "memoryBuilder": {
+    "phrase": "God gives new hearts.",
+    "phraseWords": ["God", "gives", "new", "hearts."],
+    "verseRef": "Ezekiel 36:26",
+    "verseText": "God said: 'I will give you a new heart, soft and alive.'",
+    "verseWords": ["I", "will", "give", "you", "a", "new", "heart,", "soft", "and", "alive."]
+  },
+  "sequence": {
+    "prompt": "How did God's big promise come? Put it in order.",
+    "items": [
+      { "id": "away",    "label": "God's people kept going their own way", "emoji": "🚶", "order": 1 },
+      { "id": "stone",   "label": "The problem was hearts of stone",       "emoji": "🪨", "order": 2 },
+      { "id": "promise", "label": "God promised brand-new hearts",         "emoji": "❤️", "order": 3 },
+      { "id": "wait",    "label": "God's people waited a long, quiet time", "emoji": "⏳", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "stone",  "left": "a heart of stone",   "leftEmoji": "🪨", "rightId": "cannot", "right": "It cannot love — it must be swapped", "rightEmoji": "🔄" },
+      { "leftId": "rules",  "left": "God's good commands", "leftEmoji": "📜", "rightId": "outside","right": "They were good, but the problem was inside", "rightEmoji": "💭" },
+      { "leftId": "forgive","left": "God's forgiveness",   "leftEmoji": "🕊️", "rightId": "nomore", "right": "He will not bring it up again",      "rightEmoji": "✨" }
+    ]
+  },
+  "application": {
+    "question": "God promised to change people from the inside. What would you like God to soften in you?",
+    "options": [
+      { "id": "angry",  "label": "How quickly I get cross", "emoji": "😤" },
+      { "id": "share",  "label": "How hard I find sharing", "emoji": "🎁" },
+      { "id": "sorry",  "label": "How hard it is to say sorry", "emoji": "😔" }
+    ],
+    "followUp": "You cannot make your own heart new — and God never asked you to. He promised to do it Himself. Every story so far has been walking towards the One who came to keep that promise. God gives new hearts."
+  }
+}

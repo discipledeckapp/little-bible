@@ -1,0 +1,37 @@
+{
+  "storyId": "saul-the-king",
+  "memoryBuilder": {
+    "phrase": "Obey all the way.",
+    "phraseWords": ["Obey", "all", "the", "way."],
+    "verseRef": "1 Samuel 15:22",
+    "verseText": "Listening to God is better than any gift you can bring Him.",
+    "verseWords": ["Listening", "to", "God", "is", "better", "than", "any", "gift", "you", "can", "bring", "Him."]
+  },
+  "sequence": {
+    "prompt": "What happened with King Saul? Put it in order.",
+    "items": [
+      { "id": "asked",   "label": "The people asked for a king",           "emoji": "🙋", "order": 1 },
+      { "id": "saul",    "label": "God gave them Saul, who looked kingly", "emoji": "👑", "order": 2 },
+      { "id": "half",    "label": "Saul did most of what God said",        "emoji": "🌗", "order": 3 },
+      { "id": "excuse",  "label": "Saul made excuses instead of obeying",  "emoji": "💬", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "wanted", "left": "the king they wanted", "leftEmoji": "👑", "rightId": "like",  "right": "One who looked like other nations' kings", "rightEmoji": "👀" },
+      { "leftId": "half",   "left": "doing most of it",     "leftEmoji": "🌗", "rightId": "not",   "right": "That is not obeying at all",               "rightEmoji": "🚫" },
+      { "leftId": "needed", "left": "the King they needed", "leftEmoji": "❤️", "rightId": "listen","right": "One who would truly listen to God",        "rightEmoji": "👂" }
+    ]
+  },
+  "application": {
+    "question": "Saul did the easy parts and skipped the hard one. Where do you do most of a job but not all?",
+    "options": [
+      { "id": "tidy",  "label": "Tidying my room",    "emoji": "🧸" },
+      { "id": "teeth", "label": "Getting ready for bed", "emoji": "🪥" },
+      { "id": "sorry", "label": "Saying sorry properly", "emoji": "😔" }
+    ],
+    "followUp": "Saul even had a religious-sounding excuse ready. God is not after actions that look good — He is after a heart that listens. Obey all the way."
+  }
+}

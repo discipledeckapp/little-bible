@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-raises-lazarus",
+  "memoryBuilder": {
+    "phrase": "Jesus is the life.",
+    "phraseWords": ["Jesus", "is", "the", "life."],
+    "verseRef": "John 11:25",
+    "verseText": "Jesus said: 'I am the life. Trust Me and live.'",
+    "verseWords": ["I", "am", "the", "life.", "Trust", "Me", "and", "live."]
+  },
+  "sequence": {
+    "prompt": "What happened to Lazarus? Put it in order.",
+    "items": [
+      { "id": "ill",   "label": "Lazarus became very ill",            "emoji": "🛏️", "order": 1 },
+      { "id": "grave", "label": "Lazarus died and was buried",        "emoji": "🪨", "order": 2 },
+      { "id": "wept",  "label": "Jesus cried at the grave",           "emoji": "💧", "order": 3 },
+      { "id": "out",   "label": "'Lazarus, come out!' — and he did",  "emoji": "🕊️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "martha", "left": "Martha",            "leftEmoji": "😢", "rightId": "said",  "right": "'If You were here, he would not have died'", "rightEmoji": "💬" },
+      { "leftId": "tears",  "left": "Jesus' tears",      "leftEmoji": "💧", "rightId": "sad",   "right": "Death is truly sad, and God is not pretending", "rightEmoji": "❤️" },
+      { "leftId": "voice",  "left": "Jesus' loud voice", "leftEmoji": "📣", "rightId": "alive", "right": "Death had to let go, and Lazarus walked out", "rightEmoji": "🚶" }
+    ]
+  },
+  "application": {
+    "question": "Jesus cries with us and He is stronger than death. Who would you like to bring to Him today?",
+    "options": [
+      { "id": "miss",  "label": "Someone I miss",        "emoji": "💭" },
+      { "id": "poorly", "label": "Someone who is poorly", "emoji": "🛏️" },
+      { "id": "me",    "label": "Me, when I feel afraid", "emoji": "🤗" }
+    ],
+    "followUp": "Jesus did not stand at that grave pretending everything was fine. He cried first, and then He called Lazarus out into the sunshine. You can bring Him the saddest thing you have, because Jesus is the life."
+  }
+}

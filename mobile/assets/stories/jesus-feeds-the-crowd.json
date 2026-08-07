@@ -1,0 +1,72 @@
+{
+  "id": "jesus-feeds-the-crowd",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to the crowd the day after He fed thousands of them on a hillside, when they come back looking for more free bread.",
+  "title": "Jesus Feeds the Crowd",
+  "subtitle": "Five little loaves, twelve full baskets, and one enormous claim",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Bread keeps you going until teatime; Jesus gives Himself and never runs out. He is the bread of life, and whoever comes to Him will never be hungry again.",
+  "ageRange": "4-7",
+  "bibleRef": "John 6:1-14, 35",
+  "durationMinutes": 5,
+  "coverEmoji": "🍞",
+  "coverColor": "#CA8A04",
+  "illustrationPrompt": "A wide green hillside above a blue lake at golden hour crowded with thousands of seated families on the grass, in the foreground a small barefoot boy holding up a cloth bundle of five flat barley loaves and two little fish toward a standing figure who is breaking bread, woven baskets being carried out among the people, painterly gouache illustration on parchment paper, meadow green and warm harvest gold palette with soft lake blue, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, generous and unhurried --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "A huge crowd had followed Jesus around the top of the lake — thousands of them, walking over the hills because they had heard what He could do. Jesus went up a hillside and sat down, and He watched them all coming, and He felt sorry for them, and He taught them all day long.\n\nBy late afternoon His friends were worried. 'It is getting late and there is nothing to eat out here. Send them home.'\n\nJesus turned to Philip and asked him a question He already knew the answer to. 'Where shall we buy bread for all these people?'\n\nPhilip did the sum. 'Even eight months' wages would not buy enough bread for this crowd.' He was right. Adding up what they had was never going to work, because what they had was nothing.\n\nThen Andrew came over with a boy. Nobody tells us his name. He had come out for the day with his lunch wrapped up: five little barley loaves, the small flat cheap kind, and two small dried fish. Andrew said it out loud and heard how hopeless it sounded. 'But what is that among so many?'\n\nAnd the boy handed it to Jesus anyway.\n\nJesus told everybody to sit down on the grass. He took the five loaves and the two fish. He looked up to heaven and thanked His Father. And then He began to break the bread and give it out.\n\nAnd it did not run out.\n\nThe disciples carried basket after basket into the crowd, and every time they came back the bread was still there. Five thousand men, and women and children besides — everybody ate, and everybody ate as much as they wanted. When it was over, Jesus told them to gather up the leftovers, and there were twelve full baskets of scraps. More at the end than at the beginning.\n\nThe next day the crowd came looking for Jesus, hoping for another free lunch. And He said the thing that whole hillside had been pointing to: 'I am the bread of life. Whoever comes to Me will never be hungry again.'\n\nBread keeps you alive until teatime, and then you need more. Jesus is saying something bigger: I am the food your heart was made for, and I do not run out. Long ago God rained bread from heaven for hungry people in the desert. Now the Bread Himself was standing on a hillside, breaking Himself up and handing Himself round.",
+      "childText": "Thousands of people followed Jesus over the hills to hear Him teach. By the afternoon they were hungry, and there were no shops anywhere. Jesus asked Philip, 'Where can we buy bread for all these people?' Philip added it up and said there was nowhere near enough money. Then Andrew brought a boy to Jesus. The boy had his lunch with him: five small barley loaves and two little fish. 'But what is that among so many?' said Andrew. Still, the boy handed it all to Jesus. Jesus told everybody to sit down on the grass. He took the bread, thanked His Father, and began breaking it and giving it out. And it did not run out! Everybody ate as much as they wanted. Afterwards there were twelve baskets of leftovers. More at the end than at the beginning! Then Jesus said, 'I am the bread of life. Whoever comes to Me will never be hungry again.'",
+      "verses": [
+        {
+          "ref": "John 6:9",
+          "kjv": "There is a lad here, which hath five barley loaves, and two small fishes: but what are they among so many?",
+          "little_bible": "A boy had five little loaves and two small fish."
+        },
+        {
+          "ref": "John 6:11",
+          "kjv": "And Jesus took the loaves; and when he had given thanks, he distributed to the disciples ... and likewise of the fishes as much as they would.",
+          "little_bible": "Jesus thanked God, then gave everyone as much as they wanted."
+        },
+        {
+          "ref": "John 6:12",
+          "kjv": "Gather up the fragments that remain, that nothing be lost.",
+          "little_bible": "Jesus said: 'Pick up the leftovers. Waste nothing.'"
+        },
+        {
+          "ref": "John 6:35",
+          "kjv": "I am the bread of life: he that cometh to me shall never hunger.",
+          "little_bible": "Jesus said: 'I am the bread of life.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did Jesus call Himself the bread of life?",
+      "parentGuide": "The new concept is Jesus as the bread of life. The miracle is not the point all by itself — John tells us what it meant the very next day, when Jesus says, 'I am the bread of life.' Bread keeps a body going for a few hours; Jesus is the food a heart was made for, and He does not run out. Twelve baskets left over is the picture of Him: more at the end than at the beginning. The most likely misreading is to make the boy the hero — give Jesus your little bit and He will make it big. Generosity is good, but five loaves fed nobody until Jesus took them; the miracle belongs to Jesus, not to the lunch. Watch too for shrinking this down to a lesson about sharing. Retrieve Jesus Says No to the Tempter. In the desert Jesus would not make bread for Himself; on this hillside He makes bread for thousands. He never used His power for His own comfort, and He is still like that.",
+      "familyQuestion": "What are we hungry for that food cannot fill?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Lord Jesus, thank You for food that fills our tummies, and thank You that You fill something deeper. You are the bread of life and You never run out. We come to You today. Amen.",
+      "childPrompt": "Can you thank Jesus for being the bread that never runs out?",
+      "prayerPoints": [
+        "Thank Jesus that He never runs out of what we need",
+        "Ask Jesus to fill the hungry place inside you"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "I am the bread of life. Whoever comes to Me will never be hungry.",
+      "ref": "John 6:35",
+      "memoryPhrase": "Jesus is the bread.",
+      "tip": "Pat your tummy and say, 'Bread fills me up until teatime.' Then put your hand flat on your heart and say together: 'Jesus is the bread.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "At your next meal, before anybody takes a bite, thank Jesus out loud for being the bread that never runs out — then eat your first mouthful together.",
+      "parentNote": "Let your child say the thank-you if they will, even clumsily. If you have leftovers afterwards, point at them and count them: twelve baskets is the detail children remember, and it is the detail that says Jesus gives more than enough."
+    }
+  }
+}

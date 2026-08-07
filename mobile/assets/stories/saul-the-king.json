@@ -1,0 +1,72 @@
+{
+  "id": "saul-the-king",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Samuel says this to King Saul, who disobeyed God and then brought God a gift to try to make up for it.",
+  "title": "Saul: The King Who Would Not Listen",
+  "subtitle": "He did most of what God said — and found out that most is not the same as all",
+  "collection": "a-land-needing-a-king",
+  "mainTruth": "Obeying God halfway is not obeying Him. God wants our listening hearts, not just our religious actions.",
+  "ageRange": "4-7",
+  "bibleRef": "1 Samuel 8:4-22; 15:1-23",
+  "durationMinutes": 5,
+  "coverEmoji": "👑",
+  "coverColor": "#57534E",
+  "illustrationPrompt": "A tall crowned figure standing alone on a windswept hilltop with his back half turned, a torn edge of robe caught in his hand, an older prophet walking away down the slope, heavy grey sky, painterly gouache illustration on parchment paper, cold stone-grey and dull gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sober consequence without menace --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Samuel grew old, and God's people came to him with a request. 'Give us a king,' they said, 'so we can be like all the other nations.'\n\nThat request had something sad hidden inside it. God was already their King. They had a King who had heard them in Egypt, opened the sea, fed them in the desert and lived right in the middle of their camp. But they wanted a king they could look at, like everybody else had.\n\nGod told Samuel to warn them what a human king would be like — that he would take their sons and their fields and their harvests. But they said, 'We still want one.' So God gave them a king. His name was Saul, and he was tall and handsome and looked exactly like a king should look.\n\nAt first things went well. But then God gave Saul a clear instruction through Samuel, about a battle and about not keeping anything for himself. And Saul did most of it. He did the big, obvious parts. But he kept back the best animals, and he did not do the part he did not like.\n\nWhen Samuel came, Saul said cheerfully, 'I have done what the Lord commanded!' Samuel said: 'Then what is that sound I can hear? Why can I hear sheep?'\n\nAnd Saul made excuses. He said it was the people's idea. He said he was going to give the animals to God as an offering — as if a religious-sounding reason would make disobedience acceptable.\n\nThen Samuel said the words this whole story is for: 'Does God want offerings more than He wants you to obey Him? Listening to God is better than any gift you could bring Him.'\n\nDoing most of what God says is not obeying God. Saul wanted to look like he was following God without actually listening to Him. And a king who will not listen cannot lead God's people.\n\nSo God said He would choose a different king — one who had the right kind of heart. God's people had asked for a king who looked impressive. What they needed was a King who would listen. One day, that King would come.",
+      "childText": "Samuel grew old, and God's people said, 'Give us a king, so we can be like everyone else.' But God was already their King! He had rescued them and lived right in their camp. Still, God gave them a king called Saul, who was tall and looked just like a king should. Then God gave Saul a clear instruction — and Saul did most of it, but not all. He kept the best animals for himself. When Samuel asked why, Saul made excuses. So Samuel said, 'Listening to God is better than any gift you could bring Him.' Doing most of what God says is not obeying God. God's people needed a King who would listen.",
+      "verses": [
+        {
+          "ref": "1 Samuel 8:5",
+          "kjv": "Now make us a king to judge us like all the nations.",
+          "little_bible": "They said: 'Give us a king, like all the other nations.'"
+        },
+        {
+          "ref": "1 Samuel 8:7",
+          "kjv": "They have not rejected thee, but they have rejected me, that I should not reign over them.",
+          "little_bible": "God said: 'They do not want Me to be their King.'"
+        },
+        {
+          "ref": "1 Samuel 15:13",
+          "kjv": "And Saul said unto him, Blessed be thou of the LORD: I have performed the commandment of the LORD.",
+          "little_bible": "Saul said: 'I did everything God told me!' But he had not."
+        },
+        {
+          "ref": "1 Samuel 15:22",
+          "kjv": "Behold, to obey is better than sacrifice, and to hearken than the fat of rams.",
+          "little_bible": "Listening to God is better than any gift you can bring Him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Saul did most of what God said. Was that obeying?",
+      "parentGuide": "Partial obedience is the concept, and children grasp it fast because they do it daily — tidying the visible half of the room is exactly Saul's mistake. Two things to hold together. Name the sin honestly: Saul disobeyed and then dressed it up in religious language, which is the most dangerous part of the story. And keep it hopeful: this story exists to make us want a better King, and it is placed right before David for that reason. Do not linger on the battle. Retrieve Samuel Listens — same prophet, opposite response. Ask your child where they 'do most of it', and be ready to admit where you do too.",
+      "familyQuestion": "Where do we do most of a job but not all of it?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, we are sorry for the times we do most of what You say and leave the hard part out. We do not want to just look like we are following You. Please give us listening hearts. Amen.",
+      "childPrompt": "Can you tell God about a job you only did half of?",
+      "prayerPoints": [
+        "Tell God about somewhere you have been obeying only halfway",
+        "Ask God for a listening heart, not just good-looking actions"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Listening to God is better than any gift you can bring Him.",
+      "ref": "1 Samuel 15:22",
+      "memoryPhrase": "Obey all the way.",
+      "tip": "Walk halfway across the room, stop, and say 'halfway is not obeying' — then walk all the way to the wall and touch it as you say: 'Obey all the way.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Pick a job you usually only half do, and today do every single part of it — including the bit you normally skip.",
+      "parentNote": "Let your child name the job and the skipped part themselves; the self-diagnosis is most of the lesson. Check it together afterwards without turning it into an inspection, and thank them for the part they would normally have left."
+    }
+  }
+}

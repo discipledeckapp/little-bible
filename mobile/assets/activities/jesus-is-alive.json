@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-is-alive",
+  "memoryBuilder": {
+    "phrase": "Jesus is alive!",
+    "phraseWords": ["Jesus", "is", "alive!"],
+    "verseRef": "Luke 24:6",
+    "verseText": "He is not here. He is alive, just as He said!",
+    "verseWords": ["He", "is", "not", "here.", "He", "is", "alive,", "just", "as", "He", "said!"]
+  },
+  "sequence": {
+    "prompt": "What happened on Sunday morning? Put it in order.",
+    "items": [
+      { "id": "walk",   "label": "The women walked to the tomb",       "emoji": "🚶", "order": 1 },
+      { "id": "stone",  "label": "The big stone was already moved",    "emoji": "🪨", "order": 2 },
+      { "id": "cloths", "label": "The cloths were folded, neatly",     "emoji": "🧺", "order": 3 },
+      { "id": "risen",  "label": "The angels said: 'He has risen!'",   "emoji": "😇", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does {left} tell us?",
+    "pairs": [
+      { "leftId": "folded", "left": "the folded cloths",  "leftEmoji": "🧺", "rightId": "calm",  "right": "Nobody in a hurry folds cloths",   "rightEmoji": "🕊️" },
+      { "leftId": "body",   "left": "Jesus' new body",    "leftEmoji": "🙌", "rightId": "real",  "right": "Real — He ate fish and could be touched", "rightEmoji": "🐟" },
+      { "leftId": "name",   "left": "Jesus saying 'Mary'", "leftEmoji": "💬", "rightId": "knows", "right": "He knows us by name",             "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "Jesus is alive right now. Who could you tell the good news to?",
+    "options": [
+      { "id": "family", "label": "Somebody in my family", "emoji": "🏠" },
+      { "id": "friend", "label": "A friend",              "emoji": "🧑‍🤝‍🧑" },
+      { "id": "sad",    "label": "Somebody who is sad",   "emoji": "💙" }
+    ],
+    "followUp": "Jesus was not a ghost and not just a nice memory — He ate fish in front of His friends. On Friday sin was paid for, and on Sunday death itself met Jesus and lost. Shout it: Jesus is alive!"
+  }
+}

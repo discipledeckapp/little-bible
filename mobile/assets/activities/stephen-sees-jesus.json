@@ -1,0 +1,37 @@
+{
+  "storyId": "stephen-sees-jesus",
+  "memoryBuilder": {
+    "phrase": "Jesus stands for me.",
+    "phraseWords": ["Jesus", "stands", "for", "me."],
+    "verseRef": "Acts 7:56",
+    "verseText": "Look! I can see Jesus standing up for me.",
+    "verseWords": ["Look!", "I", "can", "see", "Jesus", "standing", "up", "for", "me."]
+  },
+  "sequence": {
+    "prompt": "What happened to Stephen? Put it in order.",
+    "items": [
+      { "id": "chosen", "label": "Stephen was chosen to help feed people",   "emoji": "🍲", "order": 1 },
+      { "id": "told",   "label": "He told everyone the truth about Jesus",    "emoji": "📣", "order": 2 },
+      { "id": "looked", "label": "He looked up and heaven opened",            "emoji": "✨", "order": 3 },
+      { "id": "stand",  "label": "He saw Jesus standing to welcome him",      "emoji": "🙌", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "standing", "left": "Jesus standing up",     "leftEmoji": "🙌", "rightId": "welcome", "right": "He stood to welcome Stephen home",     "rightEmoji": "🏡" },
+      { "leftId": "open",     "left": "heaven opening",        "leftEmoji": "✨", "rightId": "alone",   "right": "Stephen was never alone for a second", "rightEmoji": "🤝" },
+      { "leftId": "prayer",   "left": "Stephen's last prayer", "leftEmoji": "🙏", "rightId": "forgive", "right": "Lord, please forgive them",           "rightEmoji": "💗" }
+    ]
+  },
+  "application": {
+    "question": "Stephen looked at Jesus when things were hard. When is it hard for you to say you love Jesus?",
+    "options": [
+      { "id": "school",  "label": "At school",              "emoji": "🎒" },
+      { "id": "friends", "label": "When friends laugh",     "emoji": "😐" },
+      { "id": "shy",     "label": "When I feel shy",        "emoji": "🤐" }
+    ],
+    "followUp": "Loving Jesus cost Stephen everything, and Jesus did not stay seated for it. Heaven opened, and the King of everything got up. Jesus stands for me."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "gods-forever-king-promise",
+  "memoryBuilder": {
+    "phrase": "Jesus reigns for ever.",
+    "phraseWords": ["Jesus", "reigns", "for", "ever."],
+    "verseRef": "2 Samuel 7:16",
+    "verseText": "God said: 'A King from your family will reign for ever.'",
+    "verseWords": ["A", "King", "from", "your", "family", "will", "reign", "for", "ever."]
+  },
+  "sequence": {
+    "prompt": "What happened the night God made His promise? Put it in order.",
+    "items": [
+      { "id": "cedar",   "label": "David looked at his fine cedar house", "emoji": "🏠", "order": 1 },
+      { "id": "offer",   "label": "David said: 'I will build God a house'", "emoji": "🔨", "order": 2 },
+      { "id": "nathan",  "label": "God sent Nathan with a message",       "emoji": "🌙", "order": 3 },
+      { "id": "promise", "label": "God promised a King who reigns for ever", "emoji": "👑", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "house",  "left": "the house God would build", "leftEmoji": "🏠", "rightId": "family", "right": "A family, not stones",              "rightEmoji": "👨‍👩‍👧" },
+      { "leftId": "throne", "left": "the forever throne",        "leftEmoji": "👑", "rightId": "never",  "right": "It never empties — Jesus fills it", "rightEmoji": "✝️" },
+      { "leftId": "why",    "left": "why God kept the promise",  "leftEmoji": "🤝", "rightId": "faithful","right": "Because He is faithful, not because David was good", "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "David sat down in wonder and said, 'Who am I?' What promise of God do you want to thank Him for?",
+    "options": [
+      { "id": "with",   "label": "God is always with me",   "emoji": "🤝" },
+      { "id": "loves",  "label": "God will never stop loving me", "emoji": "❤️" },
+      { "id": "king",   "label": "Jesus is King for ever",  "emoji": "👑" }
+    ],
+    "followUp": "David offered God a house; God gave David a family with a King in it who would never stop being King. And He made that promise to a man He had already forgiven. Jesus reigns for ever."
+  }
+}

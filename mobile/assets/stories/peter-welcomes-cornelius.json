@@ -1,0 +1,72 @@
+{
+  "id": "peter-welcomes-cornelius",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Peter says this out loud in Cornelius' house, the moment he finally understands what God has been showing him.",
+  "title": "Peter Welcomes Cornelius",
+  "subtitle": "God had to give Peter the same dream three times before he would go",
+  "collection": "spirit-filled-family",
+  "mainTruth": "God does not have favourites. His family is made of every kind of person from every country, and that was His plan from the beginning.",
+  "ageRange": "4-7",
+  "bibleRef": "Acts 10",
+  "durationMinutes": 5,
+  "coverEmoji": "🤝",
+  "coverColor": "#0F766E",
+  "illustrationPrompt": "Two men from different lands clasping hands warmly in a sunlit doorway, one in a plain fisherman's tunic and one in a Roman officer's cloak, a whole household of different faces gathered behind them, painterly gouache illustration on parchment paper, warm teal and golden sandstone palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, welcome and gladness --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "There was a soldier called Cornelius. He was a Roman officer — one of the people who had taken over the country — and he was not Jewish. But he loved God, gave generously to the poor, and prayed all the time.\n\nOne afternoon an angel came and told him to send for a man called Peter.\n\nMeanwhile, on a rooftop in another town, Peter was hungry and waiting for lunch, and God gave him a strange dream. A great sheet came down out of the sky, full of every kind of animal — including all the ones Peter had been told his whole life he must never eat. And a voice said, 'Get up, Peter. Kill and eat.'\n\n'Certainly not, Lord!' said Peter. 'I have never eaten anything unclean.'\n\nAnd the voice said: 'Do not call anything unclean that God has made clean.'\n\nThis happened three times. Three! Peter was still standing there puzzling over it when Cornelius' messengers knocked at the gate.\n\nYou see, the dream was never really about food. It was about people. Peter had grown up believing there were two kinds — his kind, and the outsiders — and that you did not go into an outsider's house.\n\nSo Peter went. He walked into a Roman officer's home, which he had never done in his life, and he looked around at a room full of people who were nothing like him. And he said: 'Now I really understand it. God does not have favourites. In every nation, anybody who honours Him and does what is right is welcome to Him.'\n\nAnd while Peter was still speaking, the Holy Spirit came on all of them, exactly as He had come on the friends at Pentecost. The same Spirit. The same welcome. No second-class members.\n\nGod's family was never meant to be one kind of person from one place. Look around your church. That room in Cornelius' house is where it started.",
+      "childText": "There was a Roman soldier called Cornelius. He was not Jewish, but he loved God and prayed all the time and gave to the poor. One afternoon an angel told him to send for a man called Peter. Meanwhile Peter was up on a rooftop feeling hungry, and God gave him a strange dream. A big sheet came down out of the sky full of every kind of animal — including all the ones Peter had been told his whole life he must never eat. A voice said, 'Get up, Peter. Eat.' 'Certainly not, Lord!' said Peter. And the voice said, 'Do not call anything unclean that God has made clean.' It happened three times! Then the messengers knocked. The dream was never really about food. It was about people. So Peter walked into a Roman's house for the first time in his life, looked round at a room full of people nothing like him, and said, 'Now I understand. God does not have favourites!'",
+      "verses": [
+        {
+          "ref": "Acts 10:2",
+          "kjv": "A devout man, and one that feared God with all his house, which gave much alms to the people, and prayed to God alway.",
+          "little_bible": "Cornelius loved God, helped the poor, and prayed always."
+        },
+        {
+          "ref": "Acts 10:15",
+          "kjv": "What God hath cleansed, that call not thou common.",
+          "little_bible": "God said: 'Do not call unclean what I have made clean.'"
+        },
+        {
+          "ref": "Acts 10:34",
+          "kjv": "Of a truth I perceive that God is no respecter of persons.",
+          "little_bible": "Peter said: 'God really does not have favourites!'"
+        },
+        {
+          "ref": "Acts 10:44",
+          "kjv": "While Peter yet spake these words, the Holy Ghost fell on all them which heard the word.",
+          "little_bible": "God's Spirit came on them all while Peter was still talking."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "The dream was not about food. What was it about?",
+      "parentGuide": "The new concept is one multiethnic people — the church was never meant to be one kind of person from one place. The turn children enjoy is that the dream is a trick question: it looks like it is about dinner and it is about people. Say plainly what Peter believed before: there were his people and there were outsiders, and you did not go into an outsider's house. God did not persuade him with an argument; He gave him the same dream three times because Peter was that slow to change, which is worth admitting because we are too. Then make it local — look around your church, or your street, and name the different places people came from. Retrieve Visitors Worship the King, where foreigners were the very first to kneel to Jesus, and Ruth Finds a Home. The Spirit arriving mid-sentence is the point: God did not wait for Peter to finish deciding.",
+      "familyQuestion": "Who do we treat as 'not our kind of person'?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You have no favourites. Thank You that Your family comes from every country in the world. Please show us anyone we have been leaving out. Amen.",
+      "childPrompt": "Is there somebody you find hard to welcome?",
+      "prayerPoints": [
+        "Thank God that His family includes every kind of person",
+        "Ask God to show you somebody you have been leaving out"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Peter said: 'God really does not have favourites!'",
+      "ref": "Acts 10:34",
+      "memoryPhrase": "God has no favourites.",
+      "tip": "Stand in a circle holding hands and take one big step outwards to make the circle wider, saying: 'God has no favourites.' Do it again, and again, until you cannot reach."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find somebody today who usually gets left out, and invite them in — to your game, your table, or your conversation.",
+      "parentNote": "Ask afterwards what it felt like rather than whether they did it. Peter's problem was not that he did not know the right answer; it was that going in felt strange, and he went anyway."
+    }
+  }
+}

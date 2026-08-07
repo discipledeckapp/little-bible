@@ -1,0 +1,72 @@
+{
+  "id": "joshua-and-the-walls",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "God says this to Joshua as he takes over from Moses, facing a walled city and a job that feels far too big for him.",
+  "title": "Joshua and the Strong Walls",
+  "subtitle": "God's people marched round a walled city for seven days — and never lifted a sword at it",
+  "collection": "a-land-needing-a-king",
+  "mainTruth": "Being brave is not feeling unafraid. It is obeying God because He is with you.",
+  "ageRange": "4-7",
+  "bibleRef": "Joshua 1:1-9; 6:1-20",
+  "durationMinutes": 5,
+  "coverEmoji": "🏰",
+  "coverColor": "#0F766E",
+  "illustrationPrompt": "A great walled city of pale stone on a plain, a long line of small figures with rams-horn trumpets walking in a wide circle around its base, dust rising, wide morning sky, painterly gouache illustration on parchment paper, warm limestone and teal-sky palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, patient obedience before a great obstacle, no battle shown --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Forty years later, Moses had died, and God gave the job of leading His people to Joshua — one of the two who had trusted Him all those years before.\n\nGod said to Joshua: 'Be strong and very brave. Do not be afraid, and do not lose heart — because the Lord your God is with you wherever you go.' Notice why Joshua could be brave. Not because he was strong. Not because he had a big army. Because God was with him.\n\nThe first city in front of them was Jericho, and it had enormous walls. The gates were shut tight. Nobody was going in and nobody was coming out.\n\nThen God told Joshua the plan, and it was the strangest plan anybody had ever heard. Do not attack the walls. Walk around the city — once a day, for six days. Do not shout. Say nothing at all. Just walk, with the priests carrying the ark of God at the front, blowing rams' horn trumpets.\n\nSo that is what they did. Round and round, in silence, day after day, while the people of Jericho watched from the top of the walls and must have wondered what on earth they were doing. It must have felt very strange, and probably rather foolish.\n\nThen on the seventh day they walked round seven times. And the priests blew the trumpets, and Joshua said, 'Shout! The Lord has given you the city!' And all the people gave a great shout — and the walls fell down flat.\n\nGod's people had not knocked one stone loose. They had marched, and waited, and trusted, and obeyed. The victory was completely God's. And a woman called Rahab, who lived in Jericho and had trusted God and helped His people, was kept safe with her whole family — she later became part of Jesus' own family tree.",
+      "childText": "Moses had died, and now God chose Joshua to lead His people. God said, 'Be strong and very brave. Do not be afraid — the Lord your God is with you wherever you go.' The first city was Jericho, and its walls were enormous. But God's plan was strange: do not attack — just walk around the city once a day for six days, and say nothing at all. So they did! Round and round, in silence. Then on the seventh day they walked round seven times, blew the trumpets, and everyone shouted — and the walls fell down flat! They had not moved one stone. God did it all.",
+      "verses": [
+        {
+          "ref": "Joshua 1:6",
+          "kjv": "Be strong and of a good courage.",
+          "little_bible": "God said to Joshua: 'Be strong and very brave.'"
+        },
+        {
+          "ref": "Joshua 1:9",
+          "kjv": "Be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
+          "little_bible": "God said: 'Do not be afraid. I am with you everywhere you go.'"
+        },
+        {
+          "ref": "Joshua 6:3",
+          "kjv": "And ye shall compass the city, all ye men of war, and go round about the city once. Thus shalt thou do six days.",
+          "little_bible": "God said: 'Walk around the city once each day, for six days.'"
+        },
+        {
+          "ref": "Joshua 6:20",
+          "kjv": "The people shouted with a great shout, that the wall fell down flat.",
+          "little_bible": "The people shouted. And the walls fell down flat!"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why could Joshua be brave?",
+      "parentGuide": "Courage here is defined for your child in a way that will serve them for life: not the absence of fear, and not self-confidence, but obedience because God is present. God tells Joshua three times not to fear, which implies Joshua was afraid — say that out loud. Note also that the plan was deliberately un-impressive, so nobody could claim credit. Keep the fall of the city non-graphic; the Bible's focus here is the walls and God's power, and Rahab's rescue is the human detail worth dwelling on instead. Retrieve Twelve Spies: Joshua is the same man who trusted forty years earlier.",
+      "familyQuestion": "When have you had to do something brave even though you felt scared?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that being brave does not mean not being scared. Thank You that You are with us wherever we go. When something feels too big, help us to obey You anyway. Amen.",
+      "childPrompt": "Can you ask God to help you be brave about one thing?",
+      "prayerPoints": [
+        "Ask God for courage about one specific thing this week",
+        "Thank God that He is with you wherever you go"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'Do not be afraid. I am with you everywhere you go.'",
+      "ref": "Joshua 1:9",
+      "memoryPhrase": "God is with me!",
+      "tip": "March around the room seven times in silence, counting on your fingers. On the seventh lap, stop, throw your hands up and shout: 'God is with me!'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Do one thing today that a grown-up asked, even if it does not seem to make sense — and ask them afterwards why it mattered.",
+      "parentNote": "Joshua obeyed instructions that looked foolish for six days before anything happened. Trusting obedience before understanding is the exact muscle here — so do explain afterwards, which is what makes it trust rather than blind compliance."
+    }
+  }
+}

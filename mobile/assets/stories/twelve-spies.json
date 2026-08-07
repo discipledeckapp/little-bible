@@ -1,0 +1,72 @@
+{
+  "id": "twelve-spies",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Moses prays God's own words back to Him at the edge of the promised land, after the people believed ten frightened spies instead of God.",
+  "title": "Twelve Spies and Two Trusting Hearts",
+  "subtitle": "Twelve men saw exactly the same land — and ten of them only saw the giants",
+  "collection": "a-land-needing-a-king",
+  "mainTruth": "Fear tells us to look at how big the problem is. Faith looks at how big God is.",
+  "ageRange": "4-7",
+  "bibleRef": "Numbers 13-14",
+  "durationMinutes": 5,
+  "coverEmoji": "🍇",
+  "coverColor": "#4C1D95",
+  "illustrationPrompt": "Two men carrying an enormous cluster of purple grapes slung on a pole between their shoulders, walking out of a green fertile valley, ten smaller figures hanging back in shadow behind them, painterly gouache illustration on parchment paper, vine-green and deep grape-purple palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, abundance set against hesitation --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "God had brought His people all the way to the edge of the land He had promised them. It was right there in front of them. So Moses chose twelve men, one from each family group, and sent them in to look at it.\n\nFor forty days the twelve explored. And the land was wonderful — so full of good fruit that it took two men to carry one bunch of grapes on a pole between them. They brought it back to show everybody.\n\nThen the twelve gave their report. All twelve had walked the same ground. All twelve had seen the same fruit. And all twelve had seen the same thing that frightened them: the people living there were big and strong, and their cities had high walls.\n\nTen of the men said: 'We cannot do it. They are too strong for us. Next to them we felt like grasshoppers.'\n\nBut two of them — Joshua and Caleb — said something completely different. 'The land is very good. Let us go up. The Lord is with us — do not be afraid of them.'\n\nDo you see it? The ten were not lying about the giants. The giants were real. What the ten forgot was God. They measured the giants against themselves, and of course they came out small. Joshua and Caleb measured the giants against God.\n\nSadly, the people believed the ten. They cried all night and said they wished they had never left Egypt. Because they would not trust God, they did not go into the land — they wandered in the desert for forty years instead.\n\nBut God did not stop being God. Moses prayed, and reminded God of what God had said about Himself: slow to anger, full of steady love, forgiving. And it was true. Forty years later, Joshua and Caleb walked into that land. God kept His promise to the two who trusted Him.",
+      "childText": "God brought His people right to the edge of the land He had promised. Moses sent twelve men in to look. The land was wonderful — the grapes were so big that two men carried one bunch on a pole! But the men also saw that the people there were big and strong. Ten of them said, 'We cannot do it. They are too strong for us!' But Joshua and Caleb said, 'The land is good. Let us go — the Lord is with us!' The ten measured the giants against themselves. Joshua and Caleb measured them against God. Sadly the people believed the ten, so they did not go in.",
+      "verses": [
+        {
+          "ref": "Numbers 13:27",
+          "kjv": "We came unto the land whither thou sentest us, and surely it floweth with milk and honey.",
+          "little_bible": "They said: 'The land is very good, just as God said.'"
+        },
+        {
+          "ref": "Numbers 13:31",
+          "kjv": "But the men that went up with him said, We be not able to go up against the people; for they are stronger than we.",
+          "little_bible": "Ten men said: 'We cannot go. They are stronger than us.'"
+        },
+        {
+          "ref": "Numbers 14:9",
+          "kjv": "Only rebel not ye against the LORD... neither fear ye the people of the land... the LORD is with us: fear them not.",
+          "little_bible": "Joshua said: 'Do not be afraid. The Lord is with us!'"
+        },
+        {
+          "ref": "Numbers 14:18",
+          "kjv": "The LORD is longsuffering, and of great mercy, forgiving iniquity and transgression.",
+          "little_bible": "God is slow to get angry. His love is very great."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "All twelve saw the giants. What did Joshua and Caleb see that the ten forgot?",
+      "parentGuide": "Unbelief is the concept, and the key move is that it is not about information — all twelve had identical facts. The ten measured the problem against themselves; Joshua and Caleb measured it against God. Be careful not to teach 'do not be afraid' as 'pretend the giants are small'. The giants were real, and the Bible says so. Faith is not denial, it is bringing God into the comparison. Retrieve the sea in World 3: they had already seen God do the impossible. Note too that Moses' prayer appeals to God's character, not to the people's merit.",
+      "familyQuestion": "What is your biggest 'giant' at the moment?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, some things really are big and we really are small. Thank You that You are bigger than all of them. Help us to be like Joshua and Caleb, and to remember You when we feel afraid. Amen.",
+      "childPrompt": "Can you tell God about something that feels too big for you?",
+      "prayerPoints": [
+        "Tell God honestly about something that frightens you",
+        "Ask God to help you remember Him when you feel small"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God is slow to get angry. His love is very great.",
+      "ref": "Numbers 14:18",
+      "memoryPhrase": "God is bigger!",
+      "tip": "Hold your hands close together and say 'the giants are this big' — then stretch your arms as wide as they will go and shout: 'God is bigger!' Do it three times."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Think of one thing you have been avoiding because it feels scary. Do it today, and say 'God is with me' before you start.",
+      "parentNote": "Pick something genuinely small — asking for help, trying the hard page, saying sorry first. The aim is one repetition of acting while afraid, not conquering the fear itself. Tell them afterwards what you noticed them do."
+    }
+  }
+}

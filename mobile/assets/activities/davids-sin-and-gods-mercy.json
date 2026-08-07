@@ -1,0 +1,37 @@
+{
+  "storyId": "davids-sin-and-gods-mercy",
+  "memoryBuilder": {
+    "phrase": "God makes hearts clean.",
+    "phraseWords": ["God", "makes", "hearts", "clean."],
+    "verseRef": "Psalm 51:10",
+    "verseText": "God, make a clean heart in me. Make me new inside.",
+    "verseWords": ["God,", "make", "a", "clean", "heart", "in", "me.", "Make", "me", "new", "inside."]
+  },
+  "sequence": {
+    "prompt": "What happened with King David? Put it in order.",
+    "items": [
+      { "id": "wrong",  "label": "David did something very wrong",   "emoji": "😞", "order": 1 },
+      { "id": "hide",   "label": "David hid it and felt heavy inside", "emoji": "🤐", "order": 2 },
+      { "id": "nathan", "label": "Nathan said: 'You are that man'",   "emoji": "🗣️", "order": 3 },
+      { "id": "sorry",  "label": "David said sorry, and God forgave", "emoji": "💧", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "hiding", "left": "hiding what we did",  "leftEmoji": "🤐", "rightId": "heavy", "right": "It made David feel heavy and grey", "rightEmoji": "🪨" },
+      { "leftId": "nathan", "left": "Nathan the prophet",  "leftEmoji": "🗣️", "rightId": "quiet", "right": "He told a story instead of shouting", "rightEmoji": "📖" },
+      { "leftId": "mercy",  "left": "God's forgiveness",   "leftEmoji": "❤️", "rightId": "kind",  "right": "It came because God is merciful",   "rightEmoji": "🕊️" }
+    ]
+  },
+  "application": {
+    "question": "David felt better once he stopped hiding. Who could you tell about something you have been keeping in?",
+    "options": [
+      { "id": "god",    "label": "Tell God first",        "emoji": "🙏" },
+      { "id": "parent", "label": "Tell a grown-up who loves me", "emoji": "🤗" },
+      { "id": "sorry",  "label": "Say sorry to someone",  "emoji": "😔" }
+    ],
+    "followUp": "David did not say 'but' and he did not blame anybody. He just said, 'I have done wrong.' And God forgave him straight away — not because David was good enough, but because God is merciful. God makes hearts clean."
+  }
+}

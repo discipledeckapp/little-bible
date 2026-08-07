@@ -1,0 +1,37 @@
+{
+  "storyId": "the-spirit-grows-good-fruit",
+  "memoryBuilder": {
+    "phrase": "God grows good fruit.",
+    "phraseWords": ["God", "grows", "good", "fruit."],
+    "verseRef": "Galatians 5:22",
+    "verseText": "God's Spirit grows love, joy, peace and kindness in us.",
+    "verseWords": ["God's", "Spirit", "grows", "love,", "joy,", "peace", "and", "kindness", "in", "us."]
+  },
+  "sequence": {
+    "prompt": "How does good fruit grow in us? Put it in order.",
+    "items": [
+      { "id": "vine",   "label": "Jesus is the vine, we are the branches", "emoji": "🌿", "order": 1 },
+      { "id": "joined", "label": "We stay joined to Him",                  "emoji": "🔗", "order": 2 },
+      { "id": "life",   "label": "His life flows into us",                 "emoji": "💧", "order": 3 },
+      { "id": "fruit",  "label": "The fruit grows, quietly",               "emoji": "🍎", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what the story says.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "branch", "left": "a branch",            "leftEmoji": "🌿", "rightId": "notry", "right": "It never strains — fruit just grows", "rightEmoji": "🍎" },
+      { "leftId": "fruit",  "left": "the fruit of the Spirit", "leftEmoji": "🍇", "rightId": "like", "right": "What you are like to be with",    "rightEmoji": "🤗" },
+      { "leftId": "job",    "left": "our job",             "leftEmoji": "🔗", "rightId": "stay",  "right": "Simply to stay joined to Jesus",     "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "God grows fruit in us over time. Which one would you like Him to grow in you?",
+    "options": [
+      { "id": "patience", "label": "Patience", "emoji": "⏳" },
+      { "id": "kindness", "label": "Kindness", "emoji": "🤗" },
+      { "id": "peace",    "label": "Peace",    "emoji": "🕊️" }
+    ],
+    "followUp": "You do not have to squeeze this out of yourself — nobody can. It is called fruit because it grows, and God is the one who grows it. Stay joined to Jesus, and God grows good fruit."
+  }
+}

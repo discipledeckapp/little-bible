@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-calls-his-helpers",
+  "memoryBuilder": {
+    "phrase": "Jesus says follow Me.",
+    "phraseWords": ["Jesus", "says", "follow", "Me."],
+    "verseRef": "Mark 1:17",
+    "verseText": "Jesus said: 'Come, follow Me, and I will make you fishers of people.'",
+    "verseWords": ["Come,", "follow", "Me,", "and", "I", "will", "make", "you", "fishers", "of", "people."]
+  },
+  "sequence": {
+    "prompt": "How did Jesus find His helpers? Put it in order.",
+    "items": [
+      { "id": "news",  "label": "Jesus told people the good news",    "emoji": "📣", "order": 1 },
+      { "id": "lake",  "label": "He walked along the edge of a lake", "emoji": "🌅", "order": 2 },
+      { "id": "call",  "label": "'Come, follow Me!'",                 "emoji": "🙋", "order": 3 },
+      { "id": "nets",  "label": "They left their nets and went",      "emoji": "🎣", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "where", "left": "where Jesus looked",   "leftEmoji": "🌊", "rightId": "work",  "right": "At a lake, where people were working", "rightEmoji": "🎣" },
+      { "leftId": "who",   "left": "who Jesus chose",      "leftEmoji": "🧑‍🤝‍🧑", "rightId": "ordinary", "right": "Ordinary people, not clever or important", "rightEmoji": "🤲" },
+      { "leftId": "first", "left": "who chose first",      "leftEmoji": "➡️", "rightId": "jesus", "right": "Jesus did — He came looking for them",  "rightEmoji": "❤️" }
+    ]
+  },
+  "application": {
+    "question": "Jesus came looking for ordinary people. What is one true thing you could tell somebody about Him?",
+    "options": [
+      { "id": "loves",  "label": "Jesus loves you",       "emoji": "❤️" },
+      { "id": "king",   "label": "Jesus is King for ever", "emoji": "👑" },
+      { "id": "came",   "label": "Jesus came to rescue us", "emoji": "✝️" }
+    ],
+    "followUp": "Their hands smelled of fish and nobody thought they were special. Jesus walked up on an ordinary morning and chose them — and He kept them even though they got things wrong all the time. Jesus says follow Me."
+  }
+}

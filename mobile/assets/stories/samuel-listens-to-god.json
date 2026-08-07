@@ -1,0 +1,72 @@
+{
+  "id": "samuel-listens-to-god",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Young Samuel says this the fourth time God calls his name in the night, once Eli has taught him how to answer.",
+  "title": "Samuel Listens to God",
+  "subtitle": "A boy heard his name in the night three times before he knew who was calling",
+  "collection": "a-land-needing-a-king",
+  "mainTruth": "God speaks, and the right answer is: 'Speak, Lord — I am listening.'",
+  "ageRange": "4-7",
+  "bibleRef": "1 Samuel 3:1-21",
+  "durationMinutes": 5,
+  "coverEmoji": "🕯️",
+  "coverColor": "#1E1B4B",
+  "illustrationPrompt": "A boy sitting up on a low sleeping mat inside a quiet stone room at night, a single oil lamp still burning on a stand nearby, soft shadows and warm lamplight, painterly gouache illustration on parchment paper, deep night-blue with amber lamp glow, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, hushed attentiveness --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "There was a woman called Hannah who wanted a baby very much and had waited a long time. She prayed and prayed, and God gave her a son. She called him Samuel, and because she was so thankful, she gave him back to God — when he was still small, he went to live and serve at God's house with an old priest called Eli.\n\nNow in those days, the Bible says, God did not speak to people very often. It was a quiet time.\n\nOne night Samuel was lying down to sleep, and the lamp in God's house was still burning. And he heard a voice call his name: 'Samuel!'\n\nSamuel jumped up and ran to Eli, because who else could it be? 'Here I am — you called me.' But Eli said, 'I did not call you. Go back and lie down.' So he did.\n\nThen it happened again. 'Samuel!' And again Samuel ran to Eli. And again Eli said, 'I did not call you, my son. Go and lie down.'\n\nAnd a third time. 'Samuel!' And a third time Samuel got up and went.\n\nThen Eli understood. He said, 'Go and lie down, and if He calls you again, say this: Speak, Lord — for Your servant is listening.'\n\nSo Samuel went back. And the Lord came and stood there and called, 'Samuel! Samuel!'\n\nAnd Samuel said, 'Speak — for Your servant is listening.'\n\nGod gave Samuel a message that night, and it was a hard one about Eli's family. In the morning Samuel was afraid to tell Eli — but he told him the truth anyway, all of it. And Samuel grew up, and God was with him, and everybody came to know that Samuel really did hear from God.\n\nHe was only a boy. But he listened, and he obeyed, and he told the truth even when it was hard.",
+      "childText": "Hannah wanted a baby for a long time. God gave her a son called Samuel, and she thanked God by giving him back to God. So Samuel lived at God's house with an old priest called Eli. One night Samuel heard someone call his name. He ran to Eli — but Eli said, 'I did not call you.' It happened again. And again! The third time, Eli understood and said, 'If He calls again, say: Speak, Lord — Your servant is listening.' So God called, 'Samuel! Samuel!' And Samuel said, 'Speak — Your servant is listening.' God gave him a hard message, and Samuel told the truth anyway. He was only a boy!",
+      "verses": [
+        {
+          "ref": "1 Samuel 1:27",
+          "kjv": "For this child I prayed; and the LORD hath given me my petition which I asked of him.",
+          "little_bible": "Hannah said: 'I prayed for this child, and God gave him.'"
+        },
+        {
+          "ref": "1 Samuel 3:8",
+          "kjv": "And the LORD called Samuel again the third time.",
+          "little_bible": "God called Samuel's name a third time."
+        },
+        {
+          "ref": "1 Samuel 3:10",
+          "kjv": "Speak; for thy servant heareth.",
+          "little_bible": "Samuel said: 'Speak, Lord. Your servant is listening.'"
+        },
+        {
+          "ref": "1 Samuel 3:19",
+          "kjv": "And Samuel grew, and the LORD was with him.",
+          "little_bible": "Samuel grew up, and God was with him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did Samuel say when he knew it was God?",
+      "parentGuide": "Responsive hearing is the concept: God speaks and we answer 'I am listening'. Two useful notes for your child. Samuel did not recognise God's voice at first and needed an older person to help him — needing help to hear God is normal, not a failure. And listening led straight to a hard job he was afraid of, which he did anyway; obedience is what proves listening. Say plainly that today God speaks to us mainly through the Bible, so 'listening to God' means reading and obeying it, not waiting for a voice at night. Retrieve Deborah: God uses the willing, including the very young.",
+      "familyQuestion": "What makes it hard to listen properly?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You speak to us in the Bible. Help us to be quiet enough to listen, and brave enough to do what You say — even the hard parts. Speak, Lord. We are listening. Amen.",
+      "childPrompt": "Can you say to God: 'Speak, Lord — I am listening'?",
+      "prayerPoints": [
+        "Tell God you want to listen to Him",
+        "Ask God for courage to obey the hard parts"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Samuel said: 'Speak, Lord. Your servant is listening.'",
+      "ref": "1 Samuel 3:10",
+      "memoryPhrase": "Speak, Lord, I'm listening.",
+      "tip": "Turn all the lights down, sit very still, and whisper it three times: 'Speak, Lord, I'm listening.' Cup a hand behind your ear each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Listen to a grown-up all the way to the end today without interrupting once — then do what they said.",
+      "parentNote": "Listening is a skill before it is a virtue, and interrupting is developmentally normal at this age, so aim for one deliberate success rather than a whole day. Give them your own undivided listening in return — it teaches far more than the instruction."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "the-last-supper",
+  "memoryBuilder": {
+    "phrase": "Given for you.",
+    "phraseWords": ["Given", "for", "you."],
+    "verseRef": "Luke 22:19",
+    "verseText": "Jesus said: 'This is My body, given for you.'",
+    "verseWords": ["This", "is", "My", "body,", "given", "for", "you."]
+  },
+  "sequence": {
+    "prompt": "What happened at the last supper? Put it in order.",
+    "items": [
+      { "id": "meal",  "label": "They sat down to the Passover meal",  "emoji": "🍽️", "order": 1 },
+      { "id": "bread", "label": "Jesus broke the bread",               "emoji": "🍞", "order": 2 },
+      { "id": "cup",   "label": "Jesus lifted the cup",                "emoji": "🍷", "order": 3 },
+      { "id": "new",   "label": "'This is God's new promise'",         "emoji": "🤝", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the meal to what it means.",
+    "questionTemplate": "What does {left} mean?",
+    "pairs": [
+      { "leftId": "passover", "left": "the Passover meal", "leftEmoji": "🐑", "rightId": "back",  "right": "It remembered the lamb in Egypt",   "rightEmoji": "🚪" },
+      { "leftId": "bread",    "left": "the broken bread",  "leftEmoji": "🍞", "rightId": "body",  "right": "Jesus' body, given for us",         "rightEmoji": "❤️" },
+      { "leftId": "cup",      "left": "the cup",           "leftEmoji": "🍷", "rightId": "promise","right": "God's brand-new promise",           "rightEmoji": "✨" }
+    ]
+  },
+  "application": {
+    "question": "Christians still share this meal to remember Jesus. What helps you remember Him?",
+    "options": [
+      { "id": "pray",  "label": "Praying together",     "emoji": "🙏" },
+      { "id": "sing",  "label": "Singing about Jesus",  "emoji": "🎵" },
+      { "id": "story", "label": "Hearing His stories",  "emoji": "📖" }
+    ],
+    "followUp": "For hundreds of years that meal looked backwards to a lamb in Egypt. Jesus told His friends it had always been looking forwards — to Him. He is the Lamb, and His body was given for you."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "paul-and-silas-in-prison",
+  "memoryBuilder": {
+    "phrase": "Sing in the dark.",
+    "phraseWords": ["Sing", "in", "the", "dark."],
+    "verseRef": "Philippians 4:4",
+    "verseText": "Be glad in the Lord always. I will say it again — be glad!",
+    "verseWords": ["Be", "glad", "in", "the", "Lord", "always.", "I", "will", "say", "it", "again", "be", "glad!"]
+  },
+  "sequence": {
+    "prompt": "What happened in Philippi? Put it in order.",
+    "items": [
+      { "id": "free",   "label": "Paul set a trapped woman free",       "emoji": "🕊️", "order": 1 },
+      { "id": "prison", "label": "They were thrown into the dark prison", "emoji": "⛓️", "order": 2 },
+      { "id": "sing",   "label": "At midnight they sang to God",        "emoji": "🎵", "order": 3 },
+      { "id": "quake",  "label": "An earthquake opened every door",     "emoji": "🌍", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "joy",     "left": "their singing",        "leftEmoji": "🎵", "rightId": "notfine", "right": "Everything was not fine — God was still there", "rightEmoji": "🤝" },
+      { "leftId": "listen",  "left": "the other prisoners",  "leftEmoji": "👂", "rightId": "heard",   "right": "They lay in the dark and listened",  "rightEmoji": "🌙" },
+      { "leftId": "stayed",  "left": "nobody running away",  "leftEmoji": "🚪", "rightId": "asked",   "right": "It made the jailer ask about Jesus", "rightEmoji": "❓" }
+    ]
+  },
+  "application": {
+    "question": "They sang when things went wrong. What could you do next time something goes wrong?",
+    "options": [
+      { "id": "sing",  "label": "Sing a song about God", "emoji": "🎵" },
+      { "id": "tell",  "label": "Tell God how I feel",   "emoji": "🙏" },
+      { "id": "thank", "label": "Thank God for one thing", "emoji": "💛" }
+    ],
+    "followUp": "Singing in the dark is not pretending to be happy. Everything really had gone wrong, and God really was with them, and both were true at once. The prisoners could not help listening. Sing in the dark."
+  }
+}

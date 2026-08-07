@@ -1,0 +1,37 @@
+{
+  "storyId": "gideons-tiny-army",
+  "memoryBuilder": {
+    "phrase": "God is my strength.",
+    "phraseWords": ["God", "is", "my", "strength."],
+    "verseRef": "Judges 6:16",
+    "verseText": "God said: 'Go. I will be with you.'",
+    "verseWords": ["Go.", "I", "will", "be", "with", "you."]
+  },
+  "sequence": {
+    "prompt": "How did God win with Gideon's tiny army? Put it in order.",
+    "items": [
+      { "id": "angel",  "label": "An angel called Gideon a mighty warrior", "emoji": "✨", "order": 1 },
+      { "id": "small",  "label": "Gideon said, 'But I am the least'",       "emoji": "🙍", "order": 2 },
+      { "id": "home",   "label": "God sent most of the army home",          "emoji": "🏠", "order": 3 },
+      { "id": "jars",   "label": "The three hundred smashed their jars",    "emoji": "🏺", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "gideon", "left": "Gideon",              "leftEmoji": "🙍", "rightId": "least",  "right": "He felt like the least important", "rightEmoji": "🤏" },
+      { "leftId": "toomany","left": "the big army",        "leftEmoji": "👥", "rightId": "boast",  "right": "Too many — they would boast",      "rightEmoji": "🚫" },
+      { "leftId": "three",  "left": "the three hundred",   "leftEmoji": "🏺", "rightId": "god",    "right": "So small that God got the credit", "rightEmoji": "✨" }
+    ]
+  },
+  "application": {
+    "question": "Gideon felt like the least important person. When do you feel small?",
+    "options": [
+      { "id": "little", "label": "When I am the littlest", "emoji": "🤏" },
+      { "id": "cant",   "label": "When I cannot do it yet", "emoji": "😔" },
+      { "id": "last",   "label": "When I am picked last",   "emoji": "🙋" }
+    ],
+    "followUp": "God never told Gideon he was stronger than he thought. He said something better: 'I will be with you.' Small is fine. God is strong."
+  }
+}

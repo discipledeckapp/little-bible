@@ -1,0 +1,72 @@
+{
+  "id": "the-spirit-grows-good-fruit",
+  "sensitivityTier": "general",
+  "genre": "teaching",
+  "verseContext": "Paul writes this to a church that was trying very hard to be good by following rules instead of trusting Jesus.",
+  "title": "The Spirit Grows Good Fruit",
+  "subtitle": "You cannot squeeze an apple out of a branch — it has to grow",
+  "collection": "spirit-filled-family",
+  "mainTruth": "Good fruit is grown by God's Spirit inside us, not manufactured by trying harder. Our job is to stay joined to Jesus.",
+  "ageRange": "4-7",
+  "bibleRef": "Galatians 5:22-23; John 15:1-8",
+  "durationMinutes": 5,
+  "coverEmoji": "🍎",
+  "coverColor": "#15803D",
+  "illustrationPrompt": "A close view of a strong vine branch growing out from a thick trunk, heavy with ripe fruit, warm sunlight coming through the leaves, a child's hand resting gently on the branch, painterly gouache illustration on parchment paper, rich green and golden light palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, growth and abundance --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Have you ever seen an apple tree straining? Have you ever heard a branch grunting and puffing, trying really hard to make an apple?\n\nOf course not. Branches do not make fruit by trying. Fruit grows, quietly, because the branch is joined to the tree and the life of the tree flows into it.\n\nJesus said: 'I am the vine. You are the branches. Stay joined to Me, and you will grow lots of fruit. On your own, you can do nothing.'\n\nAnd Paul wrote a list of what grows on a person who has God's Spirit living in them. It is one of the loveliest lists in the Bible: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control.\n\nRead that again slowly. Is any of it about being clever, or fast, or good at things? No. It is all about what you are like to be with.\n\nNow here is the part that matters most, and it is easy to get backwards. Paul does not say 'try very hard and produce these nine things.' He calls it fruit — fruit of the Spirit. It grows. God grows it, inside you, over time.\n\nThat is such good news for a child who has already tried to be patient and failed by breakfast. You do not have to squeeze it out of yourself. Nobody can.\n\nSo what do we do? We stay joined. We talk to God. We listen to His words. We spend time with His people. We say sorry and come back when we wander off — like David did, like Peter did. And the fruit grows, slowly, the way fruit does. You will probably not notice it. Other people will.\n\nRemember the promise the prophets made, long ago, about new hearts and God's own Spirit put inside His people? This is what that looks like when it has been growing for a while.",
+      "childText": "Have you ever seen an apple tree straining? Have you ever heard a branch puffing and grunting, trying really hard to make an apple? Of course not! Branches do not make fruit by trying. Fruit grows quietly, because the branch is joined to the tree. Jesus said, 'I am the vine and you are the branches. Stay joined to Me and you will grow lots of fruit. On your own you can do nothing.' And Paul made a list of what grows on a person who has God's Spirit inside them: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control. Notice that none of it is about being clever or fast or best. It is all about what you are like to be with. And here is the best part — it is called fruit because it GROWS. God grows it in you. You do not have to squeeze it out of yourself, because nobody can. Our job is just to stay joined to Jesus.",
+      "verses": [
+        {
+          "ref": "John 15:5",
+          "kjv": "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit.",
+          "little_bible": "Jesus said: 'I am the vine. You are the branches.'"
+        },
+        {
+          "ref": "John 15:5",
+          "kjv": "For without me ye can do nothing.",
+          "little_bible": "Jesus said: 'Without Me you can do nothing.'"
+        },
+        {
+          "ref": "Galatians 5:22",
+          "kjv": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.",
+          "little_bible": "God's Spirit grows love, joy, peace and kindness in us."
+        },
+        {
+          "ref": "Galatians 5:23",
+          "kjv": "Meekness, temperance: against such there is no law.",
+          "little_bible": "He grows gentleness and self-control in us too."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Does a branch have to try hard to grow fruit?",
+      "parentGuide": "This is World 9's capstone and the anti-moralism story of the whole app, so guard it carefully. The new concept is sanctification, and the single thing to protect is the word fruit: it grows, God grows it, and it is not a nine-item checklist for a child to achieve. If your child leaves this thinking they must try harder to be patient, the story has taught the opposite of what it says. The branch image does the work — let them tell you what a straining apple tree would look like and enjoy how silly it is. Then be practical about what staying joined actually means: talking to God, hearing His words, being with His people, and coming back when we wander. Retrieve The Prophets Promise New Hearts — this is that promise grown up. It is also worth saying that you will usually not notice your own fruit; other people will, which is a relief rather than a disappointment.",
+      "familyQuestion": "Which fruit would our family most like God to grow?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, You are the vine and we are the branches. We cannot make good fruit by ourselves. Please keep us joined to You, and grow Your fruit in us. Amen.",
+      "childPrompt": "Which fruit would you like God to grow in you?",
+      "prayerPoints": [
+        "Ask God to grow one particular fruit in you",
+        "Thank God that He does the growing, so you do not have to squeeze"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God's Spirit grows love, joy, peace and kindness in us.",
+      "ref": "Galatians 5:22",
+      "memoryPhrase": "God grows good fruit.",
+      "tip": "Curl up small like a seed on the floor, then grow slowly up onto tiptoes with your arms out like branches, saying: 'God grows good fruit.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Eat a piece of fruit today, and while you eat it name one fruit of the Spirit you would like God to grow in you.",
+      "parentNote": "Name yours too, honestly — patience or gentleness is usually the true answer for a grown-up, and hearing you admit it teaches more than the list does."
+    }
+  }
+}

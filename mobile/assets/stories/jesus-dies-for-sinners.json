@@ -1,0 +1,72 @@
+{
+  "id": "jesus-dies-for-sinners",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Peter writes this years later, explaining in one sentence why Jesus died and what it achieved.",
+  "title": "Jesus Dies for Sinners",
+  "subtitle": "He took the punishment that belonged to us, and He chose to",
+  "collection": "jesus-saves",
+  "mainTruth": "Jesus died in our place. He took what we deserved so that we could have what He deserved, and nobody made Him do it.",
+  "ageRange": "4-7",
+  "bibleRef": "Mark 15:22-39; 1 Peter 3:18",
+  "durationMinutes": 5,
+  "coverEmoji": "✝️",
+  "coverColor": "#44403C",
+  "illustrationPrompt": "A distant hillside at dusk with three simple crosses in silhouette on the horizon, seen from far away across an empty field, a single shaft of gold light breaking through heavy cloud onto the ground, no figures in detail, painterly gouache illustration on parchment paper, muted charcoal and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, restraint and hope, absolutely no blood or wounds --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "This is the saddest part of the story, and the most important. Take it slowly.\n\nIn the morning they took Jesus away, and they put Him on a cross to die. A cross was how that country killed people. It hurt terribly, and it took a long time, and Jesus did not fight it.\n\nThat is the part to hold on to. He could have stopped it with a word. He had stilled a storm with a word. Nobody took His life from Him — He gave it.\n\nWhile He hung there people shouted up at Him, 'You saved other people! Save Yourself!' And He could have. He stayed because saving Himself and saving us were two different things, and He chose us.\n\nAnd then the sky went dark in the middle of the day, for three hours. Because something was happening that we cannot see with our eyes.\n\nEvery wrong thing — every lie, every cruel word, every time anybody has ever turned away from God — all of it was laid on Jesus. He had never once done wrong. And He took the punishment that belonged to us, all of it, in our place.\n\nRemember the lamb in Egypt, whose blood on the door meant the family inside was safe? Remember the ram caught in the bush, that died instead of Isaac? All of it had been pointing here. Jesus is the Lamb.\n\nAnd Jesus said, 'It is finished.' Not 'I am finished' — finished, like a job completed. Paid. Done. There is nothing left to add.\n\nThen He died.\n\nIn the temple there was a huge, thick curtain that shut people out of the holiest place, where God's presence was. The moment Jesus died, that curtain tore in two from the top to the bottom — torn from God's side, not ours. The way in was open.\n\nA soldier standing there, watching, said: 'Truly this man was the Son of God.'\n\nThis is not the end of the story. Wait until tomorrow.",
+      "childText": "This is the saddest part of the story, and the most important one. In the morning they took Jesus away and put Him on a cross to die. It hurt terribly, and Jesus did not fight it. He could have stopped it with one word — He had stopped a whole storm with one word. Nobody took His life from Him. He gave it. People shouted up at Him, 'You saved other people! Save Yourself!' And He could have. He stayed, because saving Himself and saving us were two different things, and He chose us. Then the sky went dark in the middle of the day. Every wrong thing anybody has ever done was laid on Jesus, who had never done wrong at all, and He took the punishment that belonged to us. Then Jesus said, 'It is finished.' Not 'I am finished' — finished like a job completed. Paid. Done. And in the temple the huge curtain that shut people out tore right in two, from the very top. The way in was open. This is not the end. Wait until tomorrow.",
+      "verses": [
+        {
+          "ref": "Mark 15:31",
+          "kjv": "He saved others; himself he cannot save.",
+          "little_bible": "They said: 'He saved others. He cannot save Himself!'"
+        },
+        {
+          "ref": "John 19:30",
+          "kjv": "When Jesus therefore had received the vinegar, he said, It is finished.",
+          "little_bible": "Jesus said: 'It is finished.' The work was all done."
+        },
+        {
+          "ref": "Mark 15:38",
+          "kjv": "And the veil of the temple was rent in twain from the top to the bottom.",
+          "little_bible": "The big curtain tore in two, from the top down."
+        },
+        {
+          "ref": "1 Peter 3:18",
+          "kjv": "For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God.",
+          "little_bible": "Jesus died for us, to bring us home to God."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Jesus could have stopped it. Why did He stay?",
+      "parentGuide": "Be present, unhurried, and willing to stop early if your child needs you to. The new concept is substitution: He took what we deserved. Say what happened plainly and then stop — no wounds, no detail, no dwelling. The subject of this story is not how much Jesus suffered but what He achieved and that He chose it. Two things children get wrong without help. First, that this was done TO Jesus by people stronger than Him — say clearly that nobody took His life, He gave it, and He could have stopped it at any moment. Second, that God the Father was angry with Jesus rather than loving us through Him. Retrieve The Passover Lamb and God Provides a Lamb; if your child makes the connection to the ram in the bush themselves, that is the whole Old Testament landing at once. 'It is finished' means paid, not defeated. And do not leave them here overnight if you can help it — tell them the next story is coming.",
+      "familyQuestion": "What does it mean that Jesus took our place?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You for taking what we deserved. Thank You that You chose to stay when You could have come down. Thank You that the way to God is open now. Amen.",
+      "childPrompt": "Can you say thank You to Jesus for taking your place?",
+      "prayerPoints": [
+        "Thank Jesus for choosing to stay when He could have stopped it",
+        "Thank God that the curtain tore and the way in is open"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus said: 'It is finished.' The work was all done.",
+      "ref": "John 19:30",
+      "memoryPhrase": "It is finished!",
+      "tip": "Do a big job together — tidy one whole shelf — and when the very last thing is in place, brush your hands off and say together: 'It is finished!'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Take a piece of paper and draw or write one thing you have done wrong. Then tear it right in two and say: 'It is finished.'",
+      "parentNote": "Tear yours as well, in front of them. Then throw both pieces away together — do not keep them or discuss what was written. The physical tearing is doing the teaching."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "jesus-says-no-to-tempter",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to the tempter in the desert, the third and last time He is asked to do wrong.",
+  "title": "Jesus Says No to the Tempter",
+  "subtitle": "In a garden, the first people said yes. In a desert, Jesus said no",
+  "collection": "jesus-is-here",
+  "mainTruth": "Jesus was tempted just as we are, and He never once gave in. Where Adam and Eve said yes, Jesus said no — and He used God's words to do it.",
+  "ageRange": "4-7",
+  "bibleRef": "Matthew 4:1-11",
+  "durationMinutes": 5,
+  "coverEmoji": "🚫",
+  "coverColor": "#78350F",
+  "illustrationPrompt": "A lone figure standing firm and upright on a bare rocky desert ridge with one hand raised in refusal, a long dark shadow stretching away from him across the stones, pale hot sky and distant heat haze, painterly gouache illustration on parchment paper, ochre and dusty umber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, resolve and steadiness, no monster and no menace --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Straight after the river, God's Spirit led Jesus out into the desert. Not a sandy beach — a hard, hot, empty place of rocks and dust, with nothing to eat and nobody to talk to. Jesus stayed there forty days and did not eat at all. By the end He was very, very hungry.\n\nAnd that is when the tempter came.\n\nThere is somebody who hates God and wants to spoil everything God makes. The Bible calls him the devil, or the tempter, because what he does is whisper — he tries to make wrong things sound like good ideas. He cannot force anybody. He can only ask.\n\nHe asked Jesus three times.\n\nFirst: 'If You really are God's Son, turn these stones into bread.' Which sounds almost reasonable — Jesus was starving, and He could have. But it would have meant grabbing something for Himself instead of waiting for His Father. Jesus said: 'People do not live on bread alone. They live on every word that comes from God.'\n\nSecond: 'Jump off the top of the temple. God will catch You. Everybody will see.' A shortcut. Be famous today, instead of the long hard road. Jesus said: 'Do not put God to the test.'\n\nThird, the tempter showed Him all the kingdoms of the world and said: 'Bow down to me, and I will give You all of it.' Everything, right now, with no cross at the end of it.\n\nAnd Jesus said: 'Go away! It is written — worship the Lord your God, and serve only Him.'\n\nAnd the tempter left. And angels came and looked after Jesus.\n\nNow think back. Do you remember the garden, right at the beginning, when the first people were asked to disobey God? They had everything they needed and they said yes.\n\nHere is Jesus, with nothing at all, hungry and tired and alone in a desert — and He said no. Three times.\n\nNotice how He did it. Every single time, He answered with God's own words. He did not argue cleverly. He said what God had already said.\n\nJesus knows exactly what being tempted feels like. He has been there. And He never, ever gave in.",
+      "childText": "Straight after the river, God's Spirit led Jesus out into the desert — a hot, empty place of rocks and dust. Jesus stayed forty days and did not eat at all. He was very, very hungry. And that is when the tempter came. There is somebody who hates God and wants to spoil everything God makes. What he does is whisper. He tries to make wrong things sound like good ideas. He cannot make anybody do anything — he can only ask. He asked Jesus three times. 'Turn these stones into bread!' Jesus said, 'People live on every word that comes from God.' 'Jump off the temple! Everybody will see!' Jesus said, 'Do not put God to the test.' 'Bow down to me and I will give You the whole world!' And Jesus said, 'Go away! Worship the Lord your God, and serve only Him.' So the tempter left, and angels came and looked after Jesus. Now think back to the garden, right at the beginning. The first people had everything they needed, and they said yes to doing wrong. Here is Jesus with nothing at all, hungry and alone — and He said no. Three times! And every single time, He answered with God's own words.",
+      "verses": [
+        {
+          "ref": "Matthew 4:1",
+          "kjv": "Then was Jesus led up of the Spirit into the wilderness to be tempted of the devil.",
+          "little_bible": "God's Spirit led Jesus into the desert, and the tempter came."
+        },
+        {
+          "ref": "Matthew 4:4",
+          "kjv": "Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.",
+          "little_bible": "Jesus said: 'We live on every word that comes from God.'"
+        },
+        {
+          "ref": "Matthew 4:10",
+          "kjv": "Get thee hence, Satan: for it is written, Thou shalt worship the Lord thy God, and him only shalt thou serve.",
+          "little_bible": "Jesus said: 'Worship the Lord your God, and serve only Him.'"
+        },
+        {
+          "ref": "Hebrews 4:15",
+          "kjv": "We have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin.",
+          "little_bible": "Jesus was tempted just like us, but He never did wrong."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "In the garden they said yes. What did Jesus say in the desert?",
+      "parentGuide": "The new concept is Jesus' sinlessness, and the shape that makes it land is the contrast with The Very Sad Choice — retrieve it directly, because this story is built as the answer to it. Everything they needed and they said yes; nothing at all and He said no. On the tempter, be brief, calm and accurate: he is real, he hates God, and all he can do is whisper — he cannot make anybody do anything. That last clause matters more than anything else you say, and it is what a frightened child needs. Do not describe him, do not give him a face, and do not let this become a story about him. Then show the method, because it is usable today: Jesus answered with God's own words every time, not with clever arguments. If your child has ever felt bad for being tempted, say the thing they need — being tempted is not sinning; Jesus was tempted and stayed perfect.",
+      "familyQuestion": "What does the tempter whisper to us most often?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You know what being tempted feels like, and that You never gave in. When wrong things sound like good ideas, help us say no like You did. Amen.",
+      "childPrompt": "Is there a wrong thing that sounds like a good idea to you?",
+      "prayerPoints": [
+        "Ask Jesus for help with the wrong thing that tempts you most",
+        "Thank Jesus that He was tempted too, so He understands"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus said: 'Worship the Lord your God, and serve only Him.'",
+      "ref": "Matthew 4:10",
+      "memoryPhrase": "Jesus said no!",
+      "tip": "Stand firm with your feet planted, hold one hand up flat like a stop sign, and say in a strong steady voice: 'Jesus said NO!' Do it three times — once for each time He said it."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Next time you want to do something you know is wrong, say out loud: 'No — Jesus said no, and I can too.' Then walk away from it.",
+      "parentNote": "Saying it out loud is doing most of the work, so do not let them skip that bit. And when they fail at this, point them straight back to the story: Jesus already said no perfectly, in their place."
+    }
+  }
+}

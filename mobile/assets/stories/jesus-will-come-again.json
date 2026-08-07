@@ -1,0 +1,72 @@
+{
+  "id": "jesus-will-come-again",
+  "sensitivityTier": "general",
+  "genre": "teaching",
+  "verseContext": "Two angels say this to the disciples as they stand staring up at the sky, watching Jesus go.",
+  "title": "Jesus Will Come Again",
+  "subtitle": "The angels asked them why they were still standing there looking up",
+  "collection": "king-makes-all-things-new",
+  "mainTruth": "Jesus is coming back — really, visibly, and for certain. So we wait with our sleeves rolled up, not with our heads in the clouds.",
+  "ageRange": "4-7",
+  "bibleRef": "Acts 1:9-11",
+  "durationMinutes": 5,
+  "coverEmoji": "☁️",
+  "coverColor": "#0369A1",
+  "illustrationPrompt": "A small group of people on a green hilltop shading their eyes and gazing up at a bright break in the clouds, two shining figures standing quietly beside them pointing gently back down the hill towards a distant town, painterly gouache illustration on parchment paper, sky blue and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, expectancy and purpose --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "After Jesus came back to life, He stayed with His friends for forty days. He ate with them. He taught them. He let them touch His hands.\n\nThen one day He led them out to a hill, lifted His hands and blessed them — and while He was still blessing them, He was taken up, and a cloud hid Him, and He was gone.\n\nAnd they stood there. Staring up. Necks back, eyes on the sky, not moving.\n\nWho could blame them?\n\nThen two men in white were suddenly standing next to them, and they asked a question that is almost funny: 'Men of Galilee, why are you standing here looking up at the sky?'\n\nAnd then they told them the thing this story is for: 'This same Jesus, who has been taken from you into heaven, will come back — in the same way you have watched Him go.'\n\nRead that carefully. Not a different Jesus — this same Jesus. Not a whisper or a feeling — coming back the same visible way He left. It is a promise with a date that God has not told us.\n\nSo Jesus is not gone the way somebody who moved away is gone. He is King now, He is with us by His Spirit, and one day everybody on earth will see Him arrive.\n\nAnd here is what the angels were really saying with that question. Do not just stand there. Jesus had given them a job: tell everybody, everywhere, about Me. Waiting for Jesus does not mean staring at the sky. It means getting on with what He asked, in the ordinary days, until He comes.\n\nSo the disciples walked back down that hill with great joy — and got to work.\n\nWe are still in that in-between time. He said He is coming. He has never broken a promise yet.",
+      "childText": "After Jesus came back to life, He stayed with His friends for forty days. He ate with them and taught them and let them touch His hands. Then one day He led them out to a hill, lifted His hands to bless them — and while He was still blessing them He was taken up, and a cloud hid Him, and He was gone. And they stood there staring up at the sky, necks back, not moving. Who could blame them? Then two men in white were suddenly beside them, asking an almost funny question: 'Why are you standing here looking up at the sky?' And then they said the best part: 'This same Jesus will come back — the same way you have watched Him go.' Not a different Jesus. This same one. So the friends walked back down the hill full of joy, and got to work. Waiting for Jesus does not mean staring at the sky. It means getting on with what He asked us to do.",
+      "verses": [
+        {
+          "ref": "Acts 1:9",
+          "kjv": "While they beheld, he was taken up; and a cloud received him out of their sight.",
+          "little_bible": "While they watched, Jesus was taken up into a cloud."
+        },
+        {
+          "ref": "Acts 1:11",
+          "kjv": "Why stand ye gazing up into heaven?",
+          "little_bible": "They asked: 'Why are you standing here looking up?'"
+        },
+        {
+          "ref": "Acts 1:11",
+          "kjv": "This same Jesus... shall so come in like manner as ye have seen him go into heaven.",
+          "little_bible": "This same Jesus will come back, just as He went."
+        },
+        {
+          "ref": "Matthew 28:20",
+          "kjv": "And, lo, I am with you alway, even unto the end of the world.",
+          "little_bible": "Jesus said: 'I am with you always, right to the end.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did the angels ask the friends on the hill?",
+      "parentGuide": "The new concept is the second coming, and the phrase to hold on to is 'this same Jesus'. Children can wonder whether Jesus going up means He has gone away in the sad sense — say clearly that He is King now, present by His Spirit, and returning visibly. The angels' question is the practical heart of it and children find it funny: two angels turn up and essentially ask, why are you all still standing here? Waiting for Jesus is active, not dreamy. If your child asks when, the honest answer is that nobody knows, not even the angels, and that Jesus said so on purpose — being ready matters more than knowing the date. Avoid speculation and anything that sounds like a countdown; a child who becomes anxious about the end of the world has been given the wrong thing. Retrieve Jesus Is Alive, and finish on the disciples walking down the hill with joy and getting on with the job.",
+      "familyQuestion": "What has Jesus asked us to get on with while we wait?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You are coming back, and that You are with us right now by Your Spirit. Help us get on with what You asked us to do while we wait. Amen.",
+      "childPrompt": "What would you like to say to Jesus while we wait for Him?",
+      "prayerPoints": [
+        "Thank Jesus that He is coming back, exactly as He promised",
+        "Ask Jesus to help you get on with the job He has given you"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "This same Jesus will come back, just as He went.",
+      "ref": "Acts 1:11",
+      "memoryPhrase": "Jesus is coming back.",
+      "tip": "Look right up at the ceiling with your neck back, then snap your head down, roll up your sleeves and say: 'Jesus is coming back!' — then go and do a job straight away."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Pick one job Jesus would want done today — a kindness, a sorry, a helping hand — and do it while you wait for Him.",
+      "parentNote": "Keep it same-day and finishable. The whole point of the angels' question is that waiting is active, so a job that gets done today teaches it better than a good intention about the future."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "when-someone-we-love-dies",
+  "sensitivityTier": "parental_presence",
+  "genre": "lament",
+  "verseContext": "Paul writes this to a church full of people who were grieving and frightened about friends who had died.",
+  "title": "When Someone We Love Dies",
+  "subtitle": "Jesus cried at a grave, and He is not pretending it does not hurt",
+  "collection": "king-makes-all-things-new",
+  "mainTruth": "Death is real and sad, and crying is right. Christians grieve — but not like people who have no hope, because Jesus is alive.",
+  "ageRange": "4-7",
+  "bibleRef": "John 11:32-36; 1 Thessalonians 4:13-14",
+  "durationMinutes": 5,
+  "coverEmoji": "🕊️",
+  "coverColor": "#1E3A5F",
+  "illustrationPrompt": "A man standing quietly at a stone tomb in a garden with tears on his face, one hand resting on the stone, a grieving woman kneeling beside him and a friend's hand on her shoulder, soft grey morning light with one warm break of gold in the clouds, painterly gouache illustration on parchment paper, muted blue and gentle gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, tenderness and honesty, nothing frightening --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "This is a hard story, and it is a true one, and you are not reading it alone.\n\nSometimes somebody we love dies. It might be a grandparent, or a friend, or a pet. When a person dies, their body stops working and it does not start again. They are not asleep, and they have not gone on a trip. They have died. It is right to say the true word.\n\nAnd it hurts more than almost anything.\n\nJesus had a friend called Lazarus who died. By the time Jesus got there, Lazarus had been in the tomb four days and his sisters were heartbroken. Mary came out to meet Jesus and fell down at His feet and said, 'Lord, if You had been here, my brother would not have died.'\n\nNow — Jesus knew exactly what He was about to do. He knew that in a few minutes Lazarus would walk out of that tomb alive. He knew the ending.\n\nAnd Jesus wept.\n\nHe stood at His friend's grave and He cried. The shortest verse in the whole Bible is two words: 'Jesus wept.' He did not tell Mary to cheer up. He did not say it was fine. He cried with her, because death is a horrible thing that was never supposed to be part of God's world.\n\nSo if you are sad, you are not doing it wrong. Jesus cried too. You can cry, and cry again tomorrow, and tell a grown-up who loves you exactly how you feel.\n\nAnd there is something else, which is just as true. Paul wrote to some very sad people: 'We do not want you to grieve like people who have no hope.' Notice — he did not say do not grieve. He said do not grieve like people with no hope.\n\nBecause Jesus died and came back with a real body that could eat breakfast. Death met Jesus and lost. And everyone who belongs to Him will one day be raised up too.\n\nSo Christians cry real tears, and hold on to a real hope, at the same time.",
+      "childText": "This is a hard story, and a true one, and you are not reading it alone. Sometimes somebody we love dies. When a person dies, their body stops working and it does not start again. They are not asleep and they have not gone on a trip. They have died. And it hurts more than almost anything. Jesus had a friend called Lazarus who died. When Jesus arrived, Lazarus' sister Mary fell down at His feet and said, 'Lord, if You had been here, my brother would not have died.' Now Jesus knew He was about to make Lazarus alive again. He knew the happy ending was minutes away. And Jesus wept. He stood at His friend's grave and cried. He did not tell Mary to cheer up. He cried with her, because death is a horrible thing that was never meant to be part of God's world. So if you are sad, you are not doing it wrong. Jesus cried too. And one day He will wipe every tear away.",
+      "verses": [
+        {
+          "ref": "John 11:32",
+          "kjv": "Lord, if thou hadst been here, my brother had not died.",
+          "little_bible": "Mary said: 'Lord, if You had been here, he would not have died.'"
+        },
+        {
+          "ref": "John 11:35",
+          "kjv": "Jesus wept.",
+          "little_bible": "Jesus cried."
+        },
+        {
+          "ref": "1 Thessalonians 4:13",
+          "kjv": "That ye sorrow not, even as others which have no hope.",
+          "little_bible": "We are sad — but not like people with no hope."
+        },
+        {
+          "ref": "Revelation 21:4",
+          "kjv": "And God shall wipe away all tears from their eyes.",
+          "little_bible": "God will wipe every tear from their eyes."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Jesus knew the happy ending. Why did He still cry?",
+      "parentGuide": "Sit down for this one and let it take as long as it takes. The new concept is Christian grief. Use true words: died, not 'lost', 'asleep' or 'gone away' — those are meant kindly but they frighten young children, who may then be afraid of sleep or wait for the person to come back. Say that the body stopped working and does not start again. Then let 'Jesus wept' do its work: He knew Lazarus would walk out of that tomb in minutes and He cried anyway, which means He is not asking your child to hurry up and feel better. Please do not promise that nobody else will die — it is the most tempting sentence in the world here and it is not yours to promise. You can promise that you will always tell them the truth and that God never leaves. Pair this with 'tell a trusted adult how you feel'. If your child asks where the person is now, answer within what your family believes and be willing to say 'I don't know everything'. Retrieve Jesus Is Alive.",
+      "familyQuestion": "Who can we tell when we feel sad inside?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You cried too, and that You understand. When we miss somebody, please stay close to us. Thank You that You beat death and that sad things will not last for ever. Amen.",
+      "childPrompt": "Is there somebody you miss that you want to tell God about?",
+      "prayerPoints": [
+        "Tell God who you miss, and how much",
+        "Thank Jesus that He cried too and understands exactly"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus cried.",
+      "ref": "John 11:35",
+      "memoryPhrase": "Jesus cried too.",
+      "tip": "Put your hand gently on your own cheek, as if catching a tear, and say softly: 'Jesus cried too.' Then hug whoever is with you."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell one grown-up who loves you how you are really feeling inside today — even if the feeling is a sad one.",
+      "parentNote": "If they come to you, stop what you are doing and listen without fixing it. You do not have to make it better; Jesus did not. Sitting in it with them IS the help."
+    }
+  }
+}

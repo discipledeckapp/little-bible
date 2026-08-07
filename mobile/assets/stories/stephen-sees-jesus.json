@@ -1,0 +1,72 @@
+{
+  "id": "stephen-sees-jesus",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Stephen says this out loud while angry men are shouting at him, as heaven opens in front of his eyes.",
+  "title": "Stephen Sees Jesus",
+  "subtitle": "When it cost him everything, he looked up — and Jesus was standing",
+  "collection": "spirit-filled-family",
+  "mainTruth": "Following Jesus is not always safe, but we are never alone. Heaven is open, and Jesus stands up to welcome His people home.",
+  "ageRange": "4-7",
+  "bibleRef": "Acts 6:1-15; 7:51-60",
+  "durationMinutes": 5,
+  "coverEmoji": "✨",
+  "coverColor": "#78716C",
+  "illustrationPrompt": "A young man kneeling on stony ground with his face lifted and shining, eyes wide with wonder, heaven opening above him in a break of white-gold light where a standing figure welcomes him with open arms, a blurred crowd kept far back in soft shadow, painterly gouache illustration on parchment paper, pale gold and dove grey palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, peace rather than violence, nothing graphic --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "The new family grew so fast that the apostles needed help. So the church chose seven men to make sure everybody got fed — especially the widows nobody else was looking after. One of the seven was a young man called Stephen.\n\nStephen was full of the Holy Spirit. He carried food to old ladies, and he told people about Jesus, and God did wonderful things through him. People remembered his face.\n\nBut not everybody was pleased. Some men argued with Stephen and could not win, because what Stephen said was true. So instead of listening, they got angry. They told lies about him and dragged him in front of the leaders of the city.\n\nStephen was not frightened. He stood up and told them the whole story of God — Abraham, Joseph, Moses, the tabernacle, the prophets — the same story you have been hearing all along. And then he said the hardest part out loud: 'God kept sending you people who told the truth, and you would not listen. And when God sent His own Son, you handed Him over.'\n\nThey put their hands over their ears and shouted, so they would not have to hear it.\n\nAnd right in the middle of all that noise, Stephen looked up. And heaven opened.\n\n'Look!' he said. 'I can see heaven opened, and Jesus standing at God's right hand!'\n\nNow, everywhere else in the Bible, Jesus is sitting on His throne, because His work is finished. Here He is standing. Jesus stood up — the way you stand up when somebody you love most in the world walks into the room. Jesus was standing to welcome Stephen home.\n\nThen the angry men took Stephen out of the city and threw stones at him, and Stephen died.\n\nThat is a very sad thing, and it is true, and we are not going to pretend it is not. But look at what Stephen was doing while it happened. He was not looking at the stones. He was looking at Jesus. And he prayed two prayers: 'Lord Jesus, take me home,' and then, 'Lord, please do not blame them for this.' He forgave them, exactly the way Jesus forgave from the cross.\n\nAnd standing in that crowd, holding people's coats, was a young man called Saul, who thought Stephen deserved it. Remember him. God was not finished with him.\n\nFollowing Jesus is not always safe. Stephen shows us what is true when it costs the most: heaven is open, Jesus is standing, and we are not on our own for a single second.",
+      "childText": "The church grew so fast that seven helpers were chosen to make sure everybody got fed. One of them was a young man called Stephen, who was full of the Holy Spirit. Stephen carried food to old ladies and told people about Jesus, and God did wonderful things through him. But some men did not want to hear the truth, so they told lies about Stephen and dragged him in front of the city leaders. Stephen was not frightened. He told them the whole story of God — and then he looked up, and heaven opened! 'Look!' he said. 'I can see Jesus standing up for me.' Everywhere else in the Bible Jesus is sitting on His throne. Here He is standing, like someone standing up when the person they love walks in. Then the angry men threw stones at Stephen, and he died. That is very sad, and it is true. But Stephen was not looking at the stones. He was looking at Jesus.",
+      "verses": [
+        {
+          "ref": "Acts 6:8",
+          "kjv": "And Stephen, full of faith and power, did great wonders and miracles among the people.",
+          "little_bible": "Stephen was full of faith and God's power."
+        },
+        {
+          "ref": "Acts 7:55",
+          "kjv": "But he, being full of the Holy Ghost, looked up stedfastly into heaven, and saw the glory of God.",
+          "little_bible": "Stephen looked up and saw God's shining glory."
+        },
+        {
+          "ref": "Acts 7:56",
+          "kjv": "Behold, I see the heavens opened, and the Son of man standing on the right hand of God.",
+          "little_bible": "Look! I can see Jesus standing up for me."
+        },
+        {
+          "ref": "Acts 7:60",
+          "kjv": "Lord, lay not this sin to their charge.",
+          "little_bible": "Stephen prayed: 'Lord, please forgive them.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did Stephen see when he looked up?",
+      "parentGuide": "This one needs you sitting close and unhurried. The new concept is hope in persecution: sometimes loving Jesus costs, and God does not always rescue us out of the hard thing — He is with us inside it. Say how Stephen died plainly, once, and then move your child's eyes where Stephen's eyes were. The story is about what he saw, not about stones. Two likely misreadings. First, that God abandoned Stephen; the opposite is true, and the standing Jesus is the proof — everywhere else He is seated, and here He rises to welcome one young man home. Second, that this could happen to them tonight; be honest that in many places it is safe to love Jesus and in some places it is not, and that Jesus is with His people in both. Retrieve Elijah and the Only True God: standing alone for God is costly and God stands with those who do. Expect questions about dying, and answer them calmly.",
+      "familyQuestion": "What helps us be brave when doing right is hard?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that heaven is open and You stand up for Your people. Please help us be brave like Stephen, and kind even to people who are unkind to us. Please look after everyone who is in trouble today for loving You. Amen.",
+      "childPrompt": "Can you ask Jesus to help you be brave?",
+      "prayerPoints": [
+        "Ask Jesus for courage when it is hard to say you love Him",
+        "Pray for Christians somewhere in the world who are in danger today"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Look! I can see Jesus standing up for me.",
+      "ref": "Acts 7:56",
+      "memoryPhrase": "Jesus stands for me.",
+      "tip": "Sit down together, then stand up quickly as if someone you love has just walked in, and say: 'Jesus stands for me.' Let your child make you stand up for them too."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Say something kind to somebody who has been unkind to you, the way Stephen prayed for the people who hurt him.",
+      "parentNote": "Do not push this if the hurt is fresh; forgiving is not the same as pretending, and Stephen had the Spirit's help. If your child cannot do it yet, pray for that person together instead — that is the same road, just the first step of it."
+    }
+  }
+}

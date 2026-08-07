@@ -1,0 +1,72 @@
+{
+  "id": "when-anger-knocks",
+  "sensitivityTier": "guided",
+  "genre": "teaching",
+  "verseContext": "James writes this to Christians whose arguing and quick tempers were pulling their church family apart.",
+  "title": "When Anger Knocks",
+  "subtitle": "You cannot always stop the knocking — but you can choose what you let in",
+  "collection": "king-makes-all-things-new",
+  "mainTruth": "Feeling angry is not a sin, and hiding it does not help. God asks us what we do next — and He helps us, because He is slow to anger Himself.",
+  "ageRange": "4-7",
+  "bibleRef": "James 1:19-20; Genesis 4:6-7; Psalm 103:8",
+  "durationMinutes": 5,
+  "coverEmoji": "🚪",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "A child standing very still just inside a wooden doorway with one hand pressed flat against their own chest and eyes closed, a hot orange glow pressing at the door behind them, an older hand resting gently on their shoulder, calm evening lamplight in the room ahead, painterly gouache illustration on parchment paper, ember orange and cool slate-blue palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, a hard feeling held safely, no shouting faces --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Right near the beginning of the Bible, a man called Cain got angry. His brother had brought God a gift that pleased God, and Cain's had not, and Cain went hot and dark inside. His face fell.\n\nAnd God came and asked him a kind question — not a telling-off, a question. 'Why are you angry? Why has your face fallen?' Then God said something children remember for the rest of their lives if you say it well: 'Sin is crouching at your door like an animal, waiting to come in. But you can rule over it.'\n\nCain did not listen. He let it in, and something terrible happened to his brother.\n\nSo hold two true things together. First, feeling angry is not the same as doing wrong. Jesus Himself got angry — at people who did not care that a man beside them was suffering, and at traders turning God's house into a marketplace. Jesus was angry and never sinned once. Anger is often a sign that something really is wrong, and God gave us the feeling on purpose.\n\nSecond, anger is dangerous the moment it starts giving orders. James, writing to a church full of arguments, put it simply: be quick to listen, slow to speak, slow to get angry.\n\nNotice the order. Listening first. Most children's anger — and most of ours — comes out fast in words before anybody has heard anybody.\n\nSo what do you do when anger knocks? You do not pretend you are fine; God is never shocked by a furious child, and pretending only pushes the anger somewhere secret where it grows. You stop. You breathe. You tell God exactly how hot you feel — the psalms are full of people doing precisely that. You tell a grown-up who loves you. And then, when the roaring has gone down, you go and put right whatever needs putting right, today if you can.\n\nAnd here is the reason any of that is possible. God is 'slow to anger, and plenteous in mercy'. He has had every reason to lose patience with us and He has not. A child who is learning to be slow to anger is not just being well behaved. They are growing to be like their Father.\n\nYou cannot always stop anger knocking. You can choose what you let in.",
+      "childText": "Long ago, God asked a man called Cain a kind question. Cain was furious with his brother, and his face went dark and low. God said, 'Why are you angry? Sin is crouching at your door like an animal, waiting to come in — but you can rule over it.' Cain did not listen, and something terrible happened. Now here is something important: feeling angry is not the same as doing wrong. Jesus got angry too, when people were unkind to somebody who was hurting — and Jesus never sinned, not once. Anger is like a knock at the door. You cannot always stop the knocking. But you can choose what you let in. So God says: be quick to listen, slow to speak, slow to get angry. Stop. Breathe. Tell God exactly how hot you feel, because He is never shocked. Tell a grown-up too. And God, who is slow to get angry Himself, will help you.",
+      "verses": [
+        {
+          "ref": "Genesis 4:6",
+          "kjv": "And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?",
+          "little_bible": "God asked kindly: 'Cain, why are you so angry?'"
+        },
+        {
+          "ref": "Genesis 4:7",
+          "kjv": "If thou doest not well, sin lieth at the door... and thou shalt rule over him.",
+          "little_bible": "God warned: 'Sin waits at your door. You can rule it.'"
+        },
+        {
+          "ref": "James 1:19",
+          "kjv": "Let every man be swift to hear, slow to speak, slow to wrath.",
+          "little_bible": "Be quick to listen, slow to speak, slow to get angry."
+        },
+        {
+          "ref": "Psalm 103:8",
+          "kjv": "The LORD is merciful and gracious, slow to anger, and plenteous in mercy.",
+          "little_bible": "God is kind, full of mercy, and slow to get angry."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What can we do when anger comes knocking?",
+      "parentGuide": "The new concept is handling anger rightly, and it needs two guard-rails at once. The first misreading is that anger itself is naughty. A child who believes that learns to hide it, feels ashamed of a feeling God gave them, and stops telling you when something is wrong. Jesus was angry and sinless — say that plainly. The second misreading is the opposite: 'I could not help it.' God told Cain he could rule over what was crouching at his door, so the feeling is not in charge. Keep the emphasis on what happens after the knock, not on stopping the knock. Retrieve Two Brothers and Jealous Hearts and let your child notice that God warned Cain kindly first — anger did not surprise God, and neither does theirs. Then admit one time this week when you were slow to listen and quick to speak. Your child already knows about it, and hearing you name it makes the door safe to open.",
+      "familyQuestion": "What makes each of us angry fastest, and what helps most?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, sometimes we go hot and cross inside, and You are never shocked by it. Thank You that You are slow to get angry with us. Help us stop, and listen, and put things right. Amen.",
+      "childPrompt": "Can you tell God exactly what made you angry this week?",
+      "prayerPoints": [
+        "Tell God the honest, hot feeling — He already knows and is not shocked",
+        "Ask God to make you quick to listen and slow to get angry"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Be quick to listen, slow to speak, slow to get angry.",
+      "ref": "James 1:19",
+      "memoryPhrase": "Slow to get angry.",
+      "tip": "Breathe in slowly while you count to four on your fingers, then let the breath out even more slowly and say: 'Slow to get angry.' Do it three times."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "The next time you feel angry today, do one thing before you say anything: take four slow breaths. Then tell somebody how you feel using words, not hands.",
+      "parentNote": "Agree a signal together now, before anybody is cross — a hand on the chest, or the word 'four'. Use it on yourself in front of them at least once. And when they manage it, notice the pause out loud rather than the good behaviour that followed."
+    }
+  }
+}

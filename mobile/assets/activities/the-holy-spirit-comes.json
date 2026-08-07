@@ -1,0 +1,37 @@
+{
+  "storyId": "the-holy-spirit-comes",
+  "memoryBuilder": {
+    "phrase": "God's Spirit lives inside.",
+    "phraseWords": ["God's", "Spirit", "lives", "inside."],
+    "verseRef": "Acts 1:8",
+    "verseText": "The Holy Spirit will come and give you power.",
+    "verseWords": ["The", "Holy", "Spirit", "will", "come", "and", "give", "you", "power."]
+  },
+  "sequence": {
+    "prompt": "What happened at Pentecost? Put it in order.",
+    "items": [
+      { "id": "wait",   "label": "The friends waited and prayed together",     "emoji": "🙏", "order": 1 },
+      { "id": "wind",   "label": "A sound like rushing wind filled the house", "emoji": "💨", "order": 2 },
+      { "id": "flames", "label": "Little flames rested on each of them",       "emoji": "🔥", "order": 3 },
+      { "id": "langs",  "label": "Everyone heard God's works in their own language", "emoji": "🗣️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "spirit",   "left": "the Holy Spirit",         "leftEmoji": "🕊️", "rightId": "gift",  "right": "God Himself, given as a gift",          "rightEmoji": "🎁" },
+      { "leftId": "waiting",  "left": "the waiting friends",     "leftEmoji": "🙏", "rightId": "gave",  "right": "They waited, and God did the giving",   "rightEmoji": "🤲" },
+      { "leftId": "visitors", "left": "visitors from many lands","leftEmoji": "🌍", "rightId": "own",   "right": "They heard about God in their own language", "rightEmoji": "🗣️" }
+    ]
+  },
+  "application": {
+    "question": "The Holy Spirit is a gift God gives, not a prize you win. What could you ask God to help you do?",
+    "options": [
+      { "id": "kind", "label": "Be kind when it is hard",   "emoji": "💗" },
+      { "id": "tell", "label": "Tell someone about Jesus",  "emoji": "🗣️" },
+      { "id": "obey", "label": "Listen and obey",           "emoji": "👂" }
+    ],
+    "followUp": "God used to live in a tent in the middle of the camp. Now, because of Jesus, He comes to live in His people — as a gift nobody could ever earn. God's Spirit lives inside."
+  }
+}

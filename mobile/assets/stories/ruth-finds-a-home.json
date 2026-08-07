@@ -1,0 +1,72 @@
+{
+  "id": "ruth-finds-a-home",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Ruth says this on the road out of Moab, refusing to leave Naomi even though going with her means being poor and a stranger.",
+  "title": "Ruth Finds a Home",
+  "subtitle": "She was from the wrong country and had nothing left — and God gave her a family",
+  "collection": "a-land-needing-a-king",
+  "mainTruth": "God welcomes outsiders in. Nobody is too far away or too different to belong to His family.",
+  "ageRange": "4-7",
+  "bibleRef": "Ruth 1:1-18; 2:1-13; 4:9-17",
+  "durationMinutes": 5,
+  "coverEmoji": "🌾",
+  "coverColor": "#A16207",
+  "illustrationPrompt": "A young woman gathering leftover stalks of barley in a wide golden harvest field, older reapers working ahead of her, an older woman waiting at the field's edge, warm late-afternoon light, painterly gouache illustration on parchment paper, ripe barley-gold and soft shadow palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, quiet loyalty and gentle welcome --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "There was a woman called Naomi who left God's land because there was no food, and went to live in a country called Moab. Her two sons married women from there. One of them was called Ruth.\n\nThen something very sad happened. Naomi's husband died, and then both of her sons died too. Now there were three women left with no one to look after them: Naomi, and her two sons' wives. In those days that meant they were poor and had nobody.\n\nNaomi decided to go home. And she told the two younger women to stay in Moab, where their families were, because she had nothing to offer them. One of them stayed. But Ruth would not go.\n\nRuth said something so beautiful that people have remembered it ever since: 'Do not ask me to leave you. Where you go, I will go. Where you stay, I will stay. Your people will be my people, and your God will be my God.'\n\nRuth was from the wrong country. She did not belong to God's people by birth. But she chose God, and she chose to stay with Naomi when there was nothing in it for her.\n\nSo they went to Bethlehem, poor and hungry. And in those days God had made a rule to look after poor people: farmers must not harvest the very edges of their fields, so that anyone with nothing could come and gather what was left. So Ruth went out into the barley fields and gathered leftover grain in the hot sun, all day, to feed herself and Naomi.\n\nThe field belonged to a good man called Boaz. He noticed her, and he was kind. He told his workers to leave extra for her and not to bother her. He gave her water and food, and he blessed her for how she had looked after Naomi.\n\nAnd in the end Boaz married Ruth, and they had a baby. Ruth — the foreigner with nothing — was given a home, a family, and a place among God's people. And that baby's family line ran all the way down to King David, and then all the way down to Jesus.\n\nThe outsider became a great-grandmother of the King.",
+      "childText": "Naomi left God's land because there was no food. Her sons married women there, and one was called Ruth. Then Naomi's husband and both her sons died, and the women had nobody to look after them. Naomi went home, and told Ruth to stay with her own family. But Ruth said, 'Where you go, I will go. Your people will be my people, and your God will be my God.' So they went to Bethlehem, poor and hungry. Ruth gathered leftover grain in the fields all day. A kind man called Boaz noticed her and left extra for her. Later they married! Ruth the outsider was given a family — and Jesus came from it.",
+      "verses": [
+        {
+          "ref": "Ruth 1:16",
+          "kjv": "Whither thou goest, I will go... thy people shall be my people, and thy God my God.",
+          "little_bible": "Ruth said: 'Your people will be my people. Your God will be my God.'"
+        },
+        {
+          "ref": "Ruth 2:2",
+          "kjv": "Let me now go to the field, and glean ears of corn.",
+          "little_bible": "Ruth said: 'Let me go and gather the leftover grain.'"
+        },
+        {
+          "ref": "Ruth 2:12",
+          "kjv": "The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, under whose wings thou art come to trust.",
+          "little_bible": "Boaz said: 'You came to trust God. He will care for you.'"
+        },
+        {
+          "ref": "Ruth 4:17",
+          "kjv": "And they called his name Obed: he is the father of Jesse, the father of David.",
+          "little_bible": "Ruth's baby was Obed. King David came from his family."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Ruth was from a different country. Did that stop her belonging to God's family?",
+      "parentGuide": "Covenant kindness to outsiders is the concept, and the answer to the question is a firm no — Ruth ends up in Jesus' own family tree, which the Bible records deliberately. Keep the three deaths brief, factual and calm; children handle 'they died and the women were left with nobody' well when it is said plainly and not lingered over. Two things worth naming: God had built care for the poor into His law, so Ruth's gleaning was provision not charity; and Boaz's kindness was noticing someone nobody else was looking at. This is the story for any child who has ever felt like they do not fit.",
+      "familyQuestion": "Who do we know who might feel left out? What could we do about it?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that Ruth came from far away and You still gave her a family. Thank You that nobody is too different to belong to You. Help us to notice people who feel left out, and to be kind like Boaz. Amen.",
+      "childPrompt": "Can you ask God to help you welcome someone?",
+      "prayerPoints": [
+        "Thank God that He welcomes people from every country",
+        "Ask God to help you notice someone who feels left out"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Ruth said: 'Your people will be my people. Your God will be my God.'",
+      "ref": "Ruth 1:16",
+      "memoryPhrase": "Everyone can belong.",
+      "tip": "Stand in a circle holding hands, then open a gap and beckon an imaginary person in as you say: 'Everyone can belong.' Close the circle around them and say it again."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find someone today who is on their own, and invite them to join in with what you are doing.",
+      "parentNote": "Boaz's kindness began with noticing. Practise the noticing out loud with your child — in the playground, at church, in the queue — and let the invitation be theirs to make."
+    }
+  }
+}

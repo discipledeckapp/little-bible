@@ -1,0 +1,36 @@
+{
+  "storyId": "deborah-leads-gods-people",
+  "memoryBuilder": {
+    "phrase": "I am willing, God!",
+    "phraseWords": ["I", "am", "willing,", "God!"],
+    "verseRef": "Judges 5:2",
+    "verseText": "Praise God! The people gladly said yes to Him.",
+    "verseWords": ["Praise", "God!", "The", "people", "gladly", "said", "yes", "to", "Him."]
+  },
+  "sequence": {
+    "prompt": "How did God help His people through Deborah? Put it in order.",
+    "items": [
+      { "id": "forgot", "label": "God's people forgot God again",         "emoji": "😞", "order": 1 },
+      { "id": "cried",  "label": "They cried out to God for help",        "emoji": "🙏", "order": 2 },
+      { "id": "palm",   "label": "Deborah told them God's words",         "emoji": "🌴", "order": 3 },
+      { "id": "went",   "label": "Deborah went with Barak, and God won",  "emoji": "🙌", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "deborah", "left": "Deborah", "leftEmoji": "🌴", "rightId": "listened", "right": "Listened to God and led wisely",  "rightEmoji": "👂" },
+      { "leftId": "barak",   "left": "Barak",   "leftEmoji": "😟", "rightId": "afraid",   "right": "Was afraid to go on his own",     "rightEmoji": "🫣" },
+      { "leftId": "people",  "left": "The people", "leftEmoji": "👨‍👩‍👧", "rightId": "willing", "right": "Gladly said yes to God",  "rightEmoji": "🙋" }
+    ]
+  },
+  "application": {
+    "question": "God uses anyone who is willing. What could you say yes to this week?",
+    "options": [
+      { "id": "help",  "label": "Helping at home",    "emoji": "🧹" },
+      { "id": "kind",  "label": "Being kind to someone", "emoji": "❤️" },
+      { "id": "share", "label": "Sharing what I have", "emoji": "🎁" }
+    ],
+    "followUp": "God did not pick the strongest or the loudest person. Deborah's song praises the people for one thing — they were willing. God can use you today."
+  }
+}

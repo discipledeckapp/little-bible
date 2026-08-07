@@ -1,0 +1,72 @@
+{
+  "id": "the-king-rides-in",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "A prophet wrote this about five hundred years before Jesus, promising that God's King would arrive gently, riding on a donkey.",
+  "title": "The King Rides into Jerusalem",
+  "subtitle": "Everyone expected a war horse — God's King came on a borrowed donkey",
+  "collection": "jesus-saves",
+  "mainTruth": "God's King came exactly as He had promised — not on a war horse but on a little donkey. Our King is gentle, and He came to save us, not to fight us.",
+  "ageRange": "4-7",
+  "bibleRef": "Zechariah 9:9; Matthew 21:1-11; Luke 19:28-44",
+  "durationMinutes": 5,
+  "coverEmoji": "🌿",
+  "coverColor": "#15803D",
+  "illustrationPrompt": "A gentle figure riding a small grey donkey up a sunlit road towards a walled city gate, crowds laying cloaks on the stones and waving green palm branches overhead, children running alongside, high golden city walls behind, painterly gouache illustration on parchment paper, palm green, dusty gold and warm terracotta palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, joyful welcome with a quiet undertone --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "For hundreds of years God's people had been waiting for the King God promised. And they all had a picture in their heads of how He would arrive: on a war horse, with an army marching behind Him, to throw the Romans out of their country.\n\nThen Jesus came up to Jerusalem for the Passover festival, and He arranged His arrival very carefully — because He was about to say something with it.\n\nHe stopped outside the city and sent two of His friends into a village. 'You will find a young donkey tied up there,' He said. 'Untie it and bring it to Me. If anybody asks, tell them the Lord needs it.'\n\nA donkey. Not a horse. Nobody rides a donkey into a city to start a war. Donkeys carry flour and firewood and grandmothers. A king on a donkey is a king coming in peace.\n\nAnd it was not an accident. Five hundred years earlier, God's prophet Zechariah had written it down: 'Look, your King is coming to you — gentle, and riding on a donkey.' Jesus was not simply being modest. He was holding up a sign that said: I am the King you were promised. Go and read the old words.\n\nSo the people laid their coats down on the road, because that is what you do for a king. They cut palm branches and waved them in the air. And the whole crowd began to shout: 'Hosanna! Blessed is He who comes in the name of the Lord! Hosanna in the highest!' Hosanna means 'please save us now'.\n\nThe religious leaders hated every second of it. 'Tell them to be quiet!' they said. And Jesus answered, 'If they kept quiet, the stones on this road would start shouting.' Some things are far too true to stay silent about.\n\nThe King had come. But He had not come to fight the Romans, and most of that happy crowd had not understood that yet. They wanted a king who would win them a country. He had come to win them back to God — and He was riding towards a cross, not a throne room.\n\nJesus knew it. As He came over the top of the hill and saw the city in front of Him, He cried for it.\n\nFive days later, some of the same voices shouting 'Hosanna!' would be shouting something very different. But the King kept riding anyway. He came gently, He came on purpose, and He came all the way.",
+      "childText": "For hundreds of years God's people had been waiting for the King God promised. They all thought He would come on a big war horse with an army behind Him. Then Jesus came to Jerusalem — and He sent two friends to fetch a little donkey. A donkey! Nobody starts a war on a donkey. Donkeys carry flour and firewood. A king on a donkey is a king coming in peace. And it was not an accident. Long, long before, God's prophet Zechariah wrote it down: 'Look, your King is coming, gentle, riding on a donkey.' So the people laid their coats on the road, because that is what you do for a king. They waved palm branches and shouted, 'Hosanna! God bless the King!' The leaders said, 'Make them stop!' Jesus said, 'If they stopped, the stones would shout!' The King had come — gently, on purpose, riding towards a cross.",
+      "verses": [
+        {
+          "ref": "Zechariah 9:9",
+          "kjv": "Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: behold, thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass.",
+          "little_bible": "Look! Your King is coming, gentle, riding on a donkey."
+        },
+        {
+          "ref": "Luke 19:30",
+          "kjv": "Ye shall find a colt tied, whereon yet never man sat: loose him, and bring him hither.",
+          "little_bible": "Jesus said: 'Bring Me the little donkey.'"
+        },
+        {
+          "ref": "Matthew 21:9",
+          "kjv": "Hosanna to the Son of David: Blessed is he that cometh in the name of the Lord; Hosanna in the highest.",
+          "little_bible": "The people shouted: 'Hosanna! God bless the King!'"
+        },
+        {
+          "ref": "Luke 19:40",
+          "kjv": "I tell you that, if these should hold their peace, the stones would immediately cry out.",
+          "little_bible": "Jesus said: 'If they stopped, the stones would shout!'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did the King come on a donkey?",
+      "parentGuide": "The new concept is the humble Messiah: our King is real royalty and He arrived gently, on purpose, to fulfil a promise written five centuries earlier. The likely misreading is the crowd's own — that a proper king wins by force, so a gentle king must be a weak one. Say it the other way round: choosing the donkey took more strength than taking a horse, because He knew where the road ended. A second thing worth naming honestly, because older children will spot it: many in that cheering crowd turned away within the week. Popularity is not the same as trust, and Jesus was not fooled by the shouting. Retrieve God's Forever-King Promise — God promised David a king whose kingdom would never end, and here He comes, up the road, on a donkey. If your child asks why Jesus cried when He saw the city, tell them: because He loved the people who were about to reject Him.",
+      "familyQuestion": "What would we shout if Jesus rode down our street?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, You are the King God promised, and You came gently. Thank You for coming on purpose, all the way. Hosanna! We want You to be King of our family. Amen.",
+      "childPrompt": "Can you shout 'Hosanna!' and tell Jesus He is King?",
+      "prayerPoints": [
+        "Praise Jesus for being the King God promised long ago",
+        "Ask Jesus to be King of your home and your day"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Look! Your King is coming, gentle, riding on a donkey.",
+      "ref": "Zechariah 9:9",
+      "memoryPhrase": "Our King came gently.",
+      "tip": "Wave a leaf, a tea towel or a scarf over your head like a palm branch, and march slowly on the spot saying: 'Our King came gently.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find something to wave — a leaf, a scarf, a piece of paper — and welcome Jesus out loud at your front door as a family.",
+      "parentNote": "Doing it at the actual door matters more than it sounds; children remember thresholds. Afterwards ask what they think a gentle king would be like to live with, and let their answer stand without correcting it."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "saul-meets-the-risen-jesus",
+  "memoryBuilder": {
+    "phrase": "Jesus makes me new.",
+    "phraseWords": ["Jesus", "makes", "me", "new."],
+    "verseRef": "2 Corinthians 5:17",
+    "verseText": "Anyone who belongs to Jesus is made brand new.",
+    "verseWords": ["Anyone", "who", "belongs", "to", "Jesus", "is", "made", "brand", "new."]
+  },
+  "sequence": {
+    "prompt": "What happened to Saul? Put it in order.",
+    "items": [
+      { "id": "prison", "label": "Saul locked up the friends of Jesus",        "emoji": "⛓️", "order": 1 },
+      { "id": "light",  "label": "A bright light knocked him to the ground",   "emoji": "🌟", "order": 2 },
+      { "id": "ananias","label": "Ananias called him 'Brother Saul'",          "emoji": "🤝", "order": 3 },
+      { "id": "preach", "label": "Saul told everybody Jesus is God's Son",     "emoji": "🗣️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "before", "left": "Saul before the road",   "leftEmoji": "😠", "rightId": "hurting", "right": "He was hurting the friends of Jesus",        "rightEmoji": "⛓️" },
+      { "leftId": "voice",  "left": "the voice in the light", "leftEmoji": "🌟", "rightId": "iamjesus","right": "'I am Jesus — the One you are hurting'",     "rightEmoji": "🗣️" },
+      { "leftId": "brother","left": "Ananias",                "leftEmoji": "🤝", "rightId": "called",  "right": "He called his enemy 'Brother Saul'",         "rightEmoji": "💗" }
+    ]
+  },
+  "application": {
+    "question": "God did not make Saul better — He made him new. What can only God make new?",
+    "options": [
+      { "id": "heart",  "label": "My grumpy heart",                  "emoji": "💗" },
+      { "id": "family", "label": "How I treat my brother or sister", "emoji": "🫂" },
+      { "id": "enemy",  "label": "Someone I think could never change","emoji": "🙏" }
+    ],
+    "followUp": "Saul was hurting God's people, and God chose him anyway — gave him a new heart, a new job and even a new name. Nobody has to become good enough first, because nobody ever could. Jesus makes me new."
+  }
+}

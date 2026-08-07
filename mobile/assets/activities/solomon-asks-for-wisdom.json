@@ -1,0 +1,37 @@
+{
+  "storyId": "solomon-asks-for-wisdom",
+  "memoryBuilder": {
+    "phrase": "God gives me wisdom.",
+    "phraseWords": ["God", "gives", "me", "wisdom."],
+    "verseRef": "Proverbs 2:6",
+    "verseText": "God gives wisdom. It comes from Him.",
+    "verseWords": ["God", "gives", "wisdom.", "It", "comes", "from", "Him."]
+  },
+  "sequence": {
+    "prompt": "What happened when Solomon became king? Put it in order.",
+    "items": [
+      { "id": "young",  "label": "Young Solomon became king",           "emoji": "👦", "order": 1 },
+      { "id": "dream",  "label": "God said: 'Ask Me for anything'",     "emoji": "🌙", "order": 2 },
+      { "id": "ask",    "label": "Solomon asked for a listening heart", "emoji": "👂", "order": 3 },
+      { "id": "baby",   "label": "He found the baby's real mother",     "emoji": "👶", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "asked",  "left": "what Solomon asked for", "leftEmoji": "👂", "rightId": "heart", "right": "A listening heart, not riches",      "rightEmoji": "❤️" },
+      { "leftId": "wisdom", "left": "what wisdom really is",  "leftEmoji": "💡", "rightId": "right", "right": "Knowing what is right and doing it", "rightEmoji": "✅" },
+      { "leftId": "get",    "left": "how we get wisdom",      "leftEmoji": "🙏", "rightId": "askgod","right": "We ask God, and He gives it",        "rightEmoji": "🎁" }
+    ]
+  },
+  "application": {
+    "question": "Solomon asked to be the right kind of person, not to have more things. What could you ask God for today?",
+    "options": [
+      { "id": "listen", "label": "A heart that listens",   "emoji": "👂" },
+      { "id": "kind",   "label": "Help to be kind",        "emoji": "🤗" },
+      { "id": "choose", "label": "Help to choose right",   "emoji": "🧭" }
+    ],
+    "followUp": "God did not give Solomon wisdom because Solomon was clever. He gave it because Solomon asked. God gives wisdom to anyone who asks Him — including you."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "peter-welcomes-cornelius",
+  "memoryBuilder": {
+    "phrase": "God has no favourites.",
+    "phraseWords": ["God", "has", "no", "favourites."],
+    "verseRef": "Acts 10:34",
+    "verseText": "Peter said: 'God really does not have favourites!'",
+    "verseWords": ["God", "really", "does", "not", "have", "favourites!"]
+  },
+  "sequence": {
+    "prompt": "How did Peter learn that God has no favourites? Put it in order.",
+    "items": [
+      { "id": "angel",  "label": "An angel told Cornelius to send for Peter", "emoji": "😇", "order": 1 },
+      { "id": "dream",  "label": "Peter had the same dream three times",      "emoji": "💭", "order": 2 },
+      { "id": "knock",  "label": "The messengers knocked at the gate",        "emoji": "🚪", "order": 3 },
+      { "id": "spirit", "label": "God's Spirit came on everybody there",      "emoji": "🔥", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "dream",  "left": "the dream about animals", "leftEmoji": "💭", "rightId": "people", "right": "It was really about people",       "rightEmoji": "🧑‍🤝‍🧑" },
+      { "leftId": "three",  "left": "why it came three times", "leftEmoji": "3️⃣", "rightId": "slow",   "right": "Peter was slow to change his mind", "rightEmoji": "🐌" },
+      { "leftId": "family", "left": "God's family",            "leftEmoji": "🌍", "rightId": "every",  "right": "Every kind of person, everywhere",  "rightEmoji": "🤝" }
+    ]
+  },
+  "application": {
+    "question": "Peter walked into a house he had always avoided. Who could you welcome in?",
+    "options": [
+      { "id": "new",    "label": "Somebody new here",       "emoji": "🙋" },
+      { "id": "out",    "label": "Somebody left out",       "emoji": "🧍" },
+      { "id": "differ", "label": "Somebody very different from me", "emoji": "🌍" }
+    ],
+    "followUp": "God did not win Peter round with an argument — He gave him the same dream three times, because Peter was that slow. Then the Spirit came on everyone in the room while Peter was still talking. God has no favourites."
+  }
+}

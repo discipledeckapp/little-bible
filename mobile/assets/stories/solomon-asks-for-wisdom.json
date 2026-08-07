@@ -1,0 +1,72 @@
+{
+  "id": "solomon-asks-for-wisdom",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Solomon wrote this later in a book of wise sayings, after God had answered his prayer for wisdom.",
+  "title": "Solomon Asks for Wisdom",
+  "subtitle": "God said 'ask Me for anything' — and one young king asked for the right thing",
+  "collection": "heroes-of-faith",
+  "mainTruth": "Wisdom is not knowing lots of things — it is knowing what is right and doing it. And it comes from God, who gives it to anyone who asks.",
+  "ageRange": "4-7",
+  "bibleRef": "1 Kings 3:5-28",
+  "durationMinutes": 5,
+  "coverEmoji": "💡",
+  "coverColor": "#0E7490",
+  "illustrationPrompt": "A very young king sitting on a large throne looking small and thoughtful, one hand resting on an open scroll, warm dawn light streaming through tall pillars behind him, an empty treasure chest and a crown set aside on the floor, painterly gouache illustration on parchment paper, teal and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, quiet humility --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "When David grew old, his son Solomon became king. Solomon was young — he said so himself: 'I am only a little child. I do not know how to go out or come in.'\n\nOne night, God came to Solomon in a dream and said something astonishing: 'Ask Me for whatever you want, and I will give it to you.'\n\nStop and think about that for a moment. Anything. If someone said that to you, what would you say?\n\nSolomon could have asked to be rich. He could have asked to live a very long time. He could have asked for his enemies to disappear. Those are the three things everybody wants.\n\nInstead Solomon said: 'Lord, You have made me king over so many people, and I do not know what I am doing. Please give me a listening heart, so I can tell the difference between good and bad.'\n\nHe did not ask for things. He asked to be the right kind of person.\n\nAnd God was so pleased. God said, 'Because you asked for this, and not for long life or riches, I will give you a wise and understanding heart. And I will also give you the things you did not ask for.'\n\nSoon everyone found out how wise Solomon was. Two women came to him holding one baby, and both said, 'He is mine!' There were no witnesses. Nobody could prove anything.\n\nSo Solomon said, calmly, 'Then bring me a sword, and we will cut the baby in half — half for each of you.'\n\nOne woman said, 'Yes, do it.' The other cried out, 'No! Give him to her! Just let him live!'\n\nAnd Solomon said: 'Give the baby to that woman. She is his mother.' Because real love would rather lose than let the one it loves be hurt. Solomon had never planned to harm the baby at all — he was listening for the sound of a mother's heart.\n\nThat is what wisdom is. Not knowing lots of facts. Knowing what is right, and doing it.\n\nAnd here is the best part. God did not give wisdom to Solomon because Solomon was clever. God gave it because Solomon asked. The Bible says God gives wisdom to anyone who asks Him — including you.",
+      "childText": "When David grew old, his son Solomon became king. Solomon was very young. 'I am only a little child,' he said. 'I do not know what to do!' One night God said to him, 'Ask Me for whatever you want.' Anything at all! What would you have asked for? Solomon could have asked to be rich, or to live a very long time. Instead he said, 'Lord, give me a listening heart, so I can tell right from wrong.' He did not ask for things. He asked to be the right kind of person. God was so pleased! 'Because you asked for that, I will give you a wise heart — and the other things too.' Soon everyone saw how wise Solomon was. Two women came holding one baby, and both said, 'He is mine!' Solomon listened carefully, and he found the real mother by her love. That is what wisdom is: knowing what is right and doing it. And God gave it because Solomon asked.",
+      "verses": [
+        {
+          "ref": "1 Kings 3:5",
+          "kjv": "And God said, Ask what I shall give thee.",
+          "little_bible": "God said: 'Ask Me for whatever you want.'"
+        },
+        {
+          "ref": "1 Kings 3:9",
+          "kjv": "Give therefore thy servant an understanding heart to judge thy people, that I may discern between good and bad.",
+          "little_bible": "Solomon said: 'Give me a listening heart to know right from wrong.'"
+        },
+        {
+          "ref": "1 Kings 3:10",
+          "kjv": "And the speech pleased the Lord, that Solomon had asked this thing.",
+          "little_bible": "God was very pleased that Solomon asked for this."
+        },
+        {
+          "ref": "Proverbs 2:6",
+          "kjv": "For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding.",
+          "little_bible": "God gives wisdom. It comes from Him."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "God said 'ask for anything'. What would you ask?",
+      "parentGuide": "Ask the question and then genuinely wait — the honest answer is usually a toy, and that is the right place to start rather than something to correct. The new concept is wisdom, and children need it defined against what they assume it means. Wisdom is not being clever or knowing lots of things; it is knowing what is right and doing it, and it is something you ask for rather than something you are born with. That last part matters most for a child who has decided they are 'not the clever one'. The baby story frightens some children for a moment, so land the ending clearly: Solomon never intended to hurt the baby, and the real mother was found by her love. Retrieve Samuel Listens to God — Solomon asks for exactly what Samuel already had, a listening heart.",
+      "familyQuestion": "What is one wise choice we could make this week?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, You say we can ask You for wisdom, so we are asking. Give us listening hearts that know what is right. Help us want good things more than we want more things. Amen.",
+      "childPrompt": "Can you ask God for a listening heart, like Solomon did?",
+      "prayerPoints": [
+        "Ask God for wisdom to know right from wrong",
+        "Thank God that He gives wisdom to anyone who asks"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God gives wisdom. It comes from Him.",
+      "ref": "Proverbs 2:6",
+      "memoryPhrase": "God gives me wisdom.",
+      "tip": "Cup both hands together like you are catching rain, hold them out in front of you, and say: 'God gives me wisdom.' Then close your hands as if you have caught it."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Before you make one choice today — any choice — stop and ask God out loud: 'God, please give me wisdom.' Then make the choice.",
+      "parentNote": "Pick the moment together in advance so it actually happens; a decided moment beats a good intention. Ask afterwards what they noticed, and be willing to do it out loud yourself first."
+    }
+  }
+}

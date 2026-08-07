@@ -1,0 +1,37 @@
+{
+  "storyId": "when-i-feel-alone",
+  "memoryBuilder": {
+    "phrase": "God never leaves me.",
+    "phraseWords": ["God", "never", "leaves", "me."],
+    "verseRef": "Hebrews 13:5",
+    "verseText": "God says: 'I will never leave you or let you go.'",
+    "verseWords": ["God", "says:", "'I", "will", "never", "leave", "you", "or", "let", "you", "go.'"]
+  },
+  "sequence": {
+    "prompt": "How did God's never-leaving promise reach us? Put it in order.",
+    "items": [
+      { "id": "moses", "label": "Moses died and Joshua had to lead",        "emoji": "⛰️", "order": 1 },
+      { "id": "lonely", "label": "Joshua felt very small and very alone",   "emoji": "😔", "order": 2 },
+      { "id": "promise", "label": "God said, 'I will never leave you'",     "emoji": "🤝", "order": 3 },
+      { "id": "letter", "label": "The promise was written down for us too", "emoji": "📜", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "feeling", "left": "feeling lonely",      "leftEmoji": "😔", "rightId": "allowed", "right": "It is allowed, and God is not cross", "rightEmoji": "💙" },
+      { "leftId": "dark",    "left": "a dark bedroom",      "leftEmoji": "🌙", "rightId": "already", "right": "God is in there already",            "rightEmoji": "🕯️" },
+      { "leftId": "promise", "left": "God's promise",       "leftEmoji": "📜", "rightId": "never",   "right": "He will never leave or let go",       "rightEmoji": "🤝" }
+    ]
+  },
+  "application": {
+    "question": "Where do you feel most alone?",
+    "options": [
+      { "id": "bed",    "label": "In bed at night",         "emoji": "🌙" },
+      { "id": "school", "label": "When nobody picks me",     "emoji": "🎒" },
+      { "id": "worry",  "label": "With a worry I cannot say", "emoji": "🤐" }
+    ],
+    "followUp": "God never told Joshua to stop feeling small, and He does not tell you to stop feeling lonely either. He tells you something truer than the feeling: He is in that place already, before you get there. God never leaves me."
+  }
+}

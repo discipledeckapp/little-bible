@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-is-baptised",
+  "memoryBuilder": {
+    "phrase": "This is My Son.",
+    "phraseWords": ["This", "is", "My", "Son."],
+    "verseRef": "Matthew 3:17",
+    "verseText": "God said: 'This is My Son. I love Him. I am pleased with Him.'",
+    "verseWords": ["This", "is", "My", "Son.", "I", "love", "Him.", "I", "am", "pleased", "with", "Him."]
+  },
+  "sequence": {
+    "prompt": "What happened at the river? Put it in order.",
+    "items": [
+      { "id": "queue",  "label": "Jesus stood in the queue",         "emoji": "🚶", "order": 1 },
+      { "id": "john",   "label": "John said: 'You should baptise me!'", "emoji": "🗣️", "order": 2 },
+      { "id": "water",  "label": "Jesus came up out of the water",    "emoji": "💧", "order": 3 },
+      { "id": "voice",  "label": "The Father spoke from heaven",      "emoji": "☁️", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to where they were at the river.",
+    "questionTemplate": "Where was {left} at the river?",
+    "pairs": [
+      { "leftId": "son",    "left": "the Son",         "leftEmoji": "🧎", "rightId": "inwater", "right": "Standing in the water",   "rightEmoji": "💧" },
+      { "leftId": "spirit", "left": "the Holy Spirit", "leftEmoji": "🕊️", "rightId": "down",   "right": "Coming down like a dove", "rightEmoji": "⬇️" },
+      { "leftId": "father", "left": "the Father",      "leftEmoji": "☁️", "rightId": "heaven", "right": "Speaking out loud from heaven", "rightEmoji": "📢" }
+    ]
+  },
+  "application": {
+    "question": "God said He was pleased with Jesus before Jesus had done anything yet. Who could you tell that you love them?",
+    "options": [
+      { "id": "parent",  "label": "A grown-up at home", "emoji": "🤗" },
+      { "id": "sibling", "label": "My brother or sister", "emoji": "👧" },
+      { "id": "friend",  "label": "A friend",           "emoji": "🧑‍🤝‍🧑" }
+    ],
+    "followUp": "The Son was in the water, the Spirit came down, and the Father spoke — all at once, and all three are God. One God. And the Father said He was pleased before Jesus had done a single thing."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-grows-and-obeys",
+  "memoryBuilder": {
+    "phrase": "Jesus always obeyed God.",
+    "phraseWords": ["Jesus", "always", "obeyed", "God."],
+    "verseRef": "Luke 2:51",
+    "verseText": "Jesus went home with them, and He obeyed them.",
+    "verseWords": ["Jesus", "went", "home", "with", "them,", "and", "He", "obeyed", "them."]
+  },
+  "sequence": {
+    "prompt": "What happened when Jesus was twelve? Put it in order.",
+    "items": [
+      { "id": "festival", "label": "The family went to the festival",  "emoji": "🎪", "order": 1 },
+      { "id": "missing",  "label": "Jesus was not in the group",       "emoji": "❓", "order": 2 },
+      { "id": "temple",   "label": "They found Him with the teachers", "emoji": "📜", "order": 3 },
+      { "id": "home",     "label": "Jesus went home and obeyed",       "emoji": "🏠", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "child", "left": "Jesus as a child",     "leftEmoji": "🧒", "rightId": "same",  "right": "He had jobs and a bedtime, like you",  "rightEmoji": "🛏️" },
+      { "leftId": "father","left": "'My Father's house'",   "leftEmoji": "🏛️", "rightId": "knew",  "right": "Jesus knew who He really was",        "rightEmoji": "✨" },
+      { "leftId": "saul",  "left": "King Saul and Jesus",  "leftEmoji": "⚖️", "rightId": "allway","right": "Saul did most; Jesus did all of it",   "rightEmoji": "✅" }
+    ]
+  },
+  "application": {
+    "question": "Jesus obeyed every single day. Which ordinary job do you find hardest?",
+    "options": [
+      { "id": "tidy",  "label": "Tidying up",        "emoji": "🧺" },
+      { "id": "bed",   "label": "Going to bed",      "emoji": "🌙" },
+      { "id": "first", "label": "Coming first time", "emoji": "👂" }
+    ],
+    "followUp": "This is not 'be as good as Jesus' — nobody can be. Jesus obeyed perfectly in your place, because you cannot. He knows exactly what your day feels like, because He had one too. Jesus always obeyed God."
+  }
+}

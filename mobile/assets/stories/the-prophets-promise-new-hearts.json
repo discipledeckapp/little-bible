@@ -1,0 +1,72 @@
+{
+  "id": "the-prophets-promise-new-hearts",
+  "sensitivityTier": "general",
+  "genre": "teaching",
+  "verseContext": "God says this through the prophet Ezekiel to people who have lost everything and are far from home.",
+  "title": "The Prophets Promise New Hearts",
+  "subtitle": "God's people kept failing — so God promised to change them from the inside",
+  "collection": "heroes-of-faith",
+  "mainTruth": "God promised a brand-new agreement: not better rules on the outside, but a new heart on the inside — one that wants to love Him.",
+  "ageRange": "4-7",
+  "bibleRef": "Jeremiah 31:31-34; Ezekiel 36:26-27",
+  "durationMinutes": 5,
+  "coverEmoji": "❤️",
+  "coverColor": "#059669",
+  "illustrationPrompt": "A pair of open hands holding a grey stone heart while a warm living green shoot grows up through it, soft dawn light breaking behind, a distant ruined city turning green at the edges, painterly gouache illustration on parchment paper, emerald and warm cream palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, hope after loss --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Let us look back at the whole story so far.\n\nGod made a beautiful world, and people chose to go their own way. God rescued a family, and they went their own way. God rescued a whole nation out of Egypt, gave them good commands, and lived right in the middle of their camp — and they still went their own way. God gave them judges, and kings, and the very best king of all still did wrong.\n\nIt was not that God's commands were bad. They were good. The problem was never outside. It was inside. The people had hearts of stone.\n\nSo God sent prophets — messengers who told the truth about what was happening, and told the truth about what God was going to do. And the prophets said something no one expected.\n\nGod did not say, 'I will give you better rules.' He did not say, 'Try harder.' He said something far better than that.\n\nThrough Ezekiel, God promised: 'I will give you a new heart, and put a new spirit inside you. I will take away your heart of stone and give you a heart that is soft and alive. And I will put My own Spirit in you, so that you will want to walk in My ways.'\n\nA stone heart cannot love. It cannot be taught to love. It has to be replaced.\n\nAnd through Jeremiah, God promised a brand-new agreement — a new covenant. 'I will write My law on their hearts. I will be their God, and they will be My people. And I will forgive their sin, and remember it no more.'\n\nNot rules on stone tablets any more. God's own words written inside people. Not sin that has to be covered again every year. Sin forgiven and never mentioned again.\n\nThis was the biggest promise in the whole Old Testament. And then God's people waited. Four hundred years went by with no new prophet at all. It was a long, quiet wait in the dark.\n\nBut a promise from God is not less true because you are still waiting for it.\n\nAnd then, one night, in a small town called Bethlehem, a baby was born. On the night before He died, He picked up a cup and said: 'This is the new covenant in My blood.'\n\nEverything you have heard so far has been walking towards Him.",
+      "childText": "God made a beautiful world, and people went their own way. God rescued a whole nation and lived right in their camp — and they still went their own way. Even the very best king did wrong. God's commands were not bad. They were good! The problem was never outside. It was inside. The people had hearts of stone. So God sent prophets with a message nobody expected. God did not say, 'Here are better rules.' He did not say, 'Try harder.' God said, 'I will give you a new heart. I will take away your heart of stone and give you a heart that is soft and alive. And I will put My Spirit inside you.' A stone heart cannot love. It has to be swapped for a new one. God also promised, 'I will forgive what you did wrong, and I will not remember it any more.' Then God's people waited a long, quiet time. But waiting does not make a promise less true. And then a baby was born in Bethlehem.",
+      "verses": [
+        {
+          "ref": "Jeremiah 31:31",
+          "kjv": "Behold, the days come, saith the LORD, that I will make a new covenant with the house of Israel.",
+          "little_bible": "God said: 'I will make a brand-new promise with My people.'"
+        },
+        {
+          "ref": "Jeremiah 31:34",
+          "kjv": "For I will forgive their iniquity, and I will remember their sin no more.",
+          "little_bible": "God said: 'I will forgive them and remember their sin no more.'"
+        },
+        {
+          "ref": "Ezekiel 36:26",
+          "kjv": "A new heart also will I give you... and I will take away the stony heart out of your flesh.",
+          "little_bible": "God said: 'I will give you a new heart, soft and alive.'"
+        },
+        {
+          "ref": "Ezekiel 36:27",
+          "kjv": "And I will put my spirit within you, and cause you to walk in my statutes.",
+          "little_bible": "God said: 'I will put My Spirit inside you.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did God swap stone hearts for new ones?",
+      "parentGuide": "This is the capstone of the whole Old Testament half of the curriculum, so let it feel like one. The new concept is the new covenant — God's answer to the problem every story so far has exposed. Do the recap out loud with your child supplying the stories they remember; the pattern lands better when they say it than when you do. Then be careful with one thing: a new heart is something God gives, not something a child produces by trying. The right response to this story is asking, not resolving. Children ask about the four hundred silent years, and it is worth sitting with — God was not gone, and the waiting did not make the promise weaker. If your child has already heard Birth of Jesus, finish there deliberately; if not, tell them what is coming next.",
+      "familyQuestion": "What is God still changing in us from the inside?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, we cannot make our own hearts new. Thank You that You promised to do it Yourself. Please give us hearts that want to love You, and thank You for keeping every promise. Amen.",
+      "childPrompt": "Can you ask God for a heart that wants to love Him?",
+      "prayerPoints": [
+        "Ask God to give you a new heart, because you cannot make one yourself",
+        "Thank God that He forgives and does not keep bringing it up again"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'I will give you a new heart, soft and alive.'",
+      "ref": "Ezekiel 36:26",
+      "memoryPhrase": "God gives new hearts.",
+      "tip": "Squeeze one fist tight and hard like a stone, then open it slowly into a soft hand and put it on your chest as you say: 'God gives new hearts.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find a small stone and hold it in one hand. Say the hard thing you wish were softer in you, then put the stone down and open your hand to God.",
+      "parentNote": "Say yours first and mean it. This is the last story before Jesus arrives, and what your child needs from you here is not a lesson but the sight of a grown-up who also needs a new heart."
+    }
+  }
+}

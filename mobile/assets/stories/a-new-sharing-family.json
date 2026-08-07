@@ -1,0 +1,72 @@
+{
+  "id": "a-new-sharing-family",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Luke writes this about the very first church, in the days straight after three thousand people believed in Jesus.",
+  "title": "A New Sharing Family",
+  "subtitle": "The church is not a building — it is a family with room at the table",
+  "collection": "spirit-filled-family",
+  "mainTruth": "God's Spirit does not only make one person new; He joins new people into one family who learn, share, eat and pray together.",
+  "ageRange": "4-7",
+  "bibleRef": "Acts 2:42-47",
+  "durationMinutes": 5,
+  "coverEmoji": "🍞",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "A long low table in a courtyard at dusk with families of many skin tones sharing flatbread from clay bowls, a small child handing a loaf to an older woman, oil lamps glowing, an open scroll at one end, painterly gouache illustration on parchment paper, warm honey and olive palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, homely gladness --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Three thousand people believed in Jesus in a single day. So what did they do next?\n\nThey did not go home and follow Jesus quietly on their own. They became a family. The Bible has a word for that family: the church. And the church is not a building — it is people who belong to Jesus and now belong to each other.\n\nLuke tells us four things this brand-new family did, every single day.\n\nThey learned. The apostles taught them everything Jesus had said and done, and they listened hard. Nobody folded their arms and said, 'I know all this already.'\n\nThey shared. This is the part that startled the whole city. If somebody in the family had no food, somebody else sold something they owned and bought food for them. People sold fields. People sold jewellery. Not because a rule made them — nobody made them — but because they suddenly could not enjoy having plenty while their brother had nothing.\n\nThey ate. They went from house to house and had proper meals together, and Luke says they ate with glad and happy hearts. Ordinary bread. Ordinary tables. Real joy.\n\nAnd they prayed. Out loud, together, all sorts of people who would never have sat down in the same room before.\n\nThink about who was in that room. Fishermen from Galilee with rough hands. Rich women from the city. Visitors who had stayed on from Egypt and Libya and Rome. Grandmothers, tiny children, servants, soldiers. Some of them had been on opposite sides. Now they were passing each other the bread.\n\nThat is what God's Spirit does. He does not only make one person new on the inside; He joins new people together into one family on the outside.\n\nAnd the people of Jerusalem watched them. They saw a group who shared their money and their food and their houses, who were glad instead of grumpy, who kept praising God out loud. And it was so beautiful that more people wanted in. Every single day, God added more.\n\nSo when your family goes to church, this is what you are joining: not an event you attend, but a family you belong to. The person sitting behind you is your brother or your sister. It means we learn together, share our things, eat together and pray together — and when one of us has nothing, the rest of us notice.\n\nGod's family was never meant to be one person alone with God. It was always meant to be a table with room at it.",
+      "childText": "Three thousand people believed in Jesus in one day. So what happened next? They became a family, and the Bible calls that family the church. The church is not a building — it is people who belong to Jesus and now belong to each other. Every day this new family did four things. They learned, listening to everything the apostles taught about Jesus. They shared, so that if one person had no food, somebody else sold something and bought food for them. They ate together, going from house to house with glad and happy hearts. And they prayed together, out loud. Think who was there — fishermen, rich city women, visitors from Egypt and Libya and Rome, grandmothers and tiny children. Some of them had been on opposite sides. Now they were passing each other the bread! God's Spirit does not only make one person new. He joins people into one family. And every day God added more.",
+      "verses": [
+        {
+          "ref": "Acts 2:42",
+          "kjv": "And they continued stedfastly in the apostles' doctrine and fellowship, and in breaking of bread, and in prayers.",
+          "little_bible": "They learned, shared, ate and prayed together every day."
+        },
+        {
+          "ref": "Acts 2:44",
+          "kjv": "And all that believed were together, and had all things common.",
+          "little_bible": "They shared everything they had with one another."
+        },
+        {
+          "ref": "Acts 2:46",
+          "kjv": "And they, continuing daily... did eat their meat with gladness and singleness of heart.",
+          "little_bible": "They ate together with glad and happy hearts."
+        },
+        {
+          "ref": "Acts 2:47",
+          "kjv": "Praising God, and having favour with all the people. And the Lord added to the church daily.",
+          "little_bible": "They praised God, and more people joined every day."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "What did God's new family do every single day?",
+      "parentGuide": "The new concept is the church, and for a four-year-old it must stay concrete: the church is people who learn, share, eat and pray together. The likely misreading is the one our language teaches them — that church is a building you go into, or an hour you sit through. Say the four verbs and point at real people in your own congregation while you do it. The second thing to guard is motive. The sharing in Acts was not a rule and not a fundraising drive; it came out of new hearts that could no longer enjoy plenty while a brother went without. So do not turn this into 'good children share'. The Spirit made a family, and families share. Retrieve Ruth Finds a Home: an outsider was folded into God's people and given a place to belong, which is exactly what happens at this table. Ask your child who at your church they do not know yet.",
+      "familyQuestion": "Who in God's family could we make room for this week?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Thank You, God, that we are not on our own. Thank You for giving us a family who learns and shares and eats and prays together. Please help us notice anybody who has been left out. Amen.",
+      "childPrompt": "Can you thank God for one person in your church family?",
+      "prayerPoints": [
+        "Thank God for one person in your church family by name",
+        "Ask God to help you notice someone who has nobody to sit with"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "They learned, shared, ate and prayed together every day.",
+      "ref": "Acts 2:42",
+      "memoryPhrase": "Learn, share, eat, pray.",
+      "tip": "Do one action for each word: tap your head for 'learn', open both hands for 'share', pretend to take a bite for 'eat', and fold your hands for 'pray'. Then do all four fast!"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Share some of your food with somebody today, and eat it together instead of on your own.",
+      "parentNote": "Let your child hand it over themselves, and choose someone outside your household if you can — a neighbour, or a family from church. Sitting down with the person is the part they will remember; sharing food from a distance is not what Acts 2 describes."
+    }
+  }
+}

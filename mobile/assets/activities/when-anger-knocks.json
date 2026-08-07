@@ -1,0 +1,37 @@
+{
+  "storyId": "when-anger-knocks",
+  "memoryBuilder": {
+    "phrase": "Slow to get angry.",
+    "phraseWords": ["Slow", "to", "get", "angry."],
+    "verseRef": "James 1:19",
+    "verseText": "Be quick to listen, slow to speak, slow to get angry.",
+    "verseWords": ["Be", "quick", "to", "listen,", "slow", "to", "speak,", "slow", "to", "get", "angry."]
+  },
+  "sequence": {
+    "prompt": "What do we do when anger knocks? Put it in order.",
+    "items": [
+      { "id": "knock",   "label": "Anger knocks — I go hot inside",        "emoji": "🔥", "order": 1 },
+      { "id": "breathe", "label": "I stop and take four slow breaths",     "emoji": "🌬️", "order": 2 },
+      { "id": "tell",    "label": "I tell God and a grown-up how I feel",  "emoji": "🙏", "order": 3 },
+      { "id": "mend",    "label": "I go and put it right today",           "emoji": "🤝", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "feeling", "left": "feeling angry",           "leftEmoji": "😤", "rightId": "notsin", "right": "A real feeling — Jesus felt it too",  "rightEmoji": "❤️" },
+      { "leftId": "door",    "left": "sin at the door",         "leftEmoji": "🚪", "rightId": "rule",   "right": "It waits — but you can rule it",      "rightEmoji": "✋" },
+      { "leftId": "god",     "left": "God's own temper",        "leftEmoji": "🕊️", "rightId": "slow",   "right": "Full of mercy and slow to get angry", "rightEmoji": "🐢" }
+    ]
+  },
+  "application": {
+    "question": "When anger knocks today, what will you do first?",
+    "options": [
+      { "id": "breathe", "label": "Breathe and count to four", "emoji": "🌬️" },
+      { "id": "grownup", "label": "Tell a grown-up how I feel", "emoji": "🧑‍🦱" },
+      { "id": "pray",    "label": "Tell God the hot feeling",   "emoji": "🙏" }
+    ],
+    "followUp": "God asked Cain a kind question before anything happened, so He is not waiting to catch you out when you feel cross. He is slow to get angry with us, every single day. Ask Him for the same patience and He will grow it in you. Slow to get angry."
+  }
+}

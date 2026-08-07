@@ -1,0 +1,72 @@
+{
+  "id": "god-makes-everything-new",
+  "sensitivityTier": "general",
+  "genre": "teaching",
+  "verseContext": "God says this out loud from His throne at the very end of the Bible, as the new world begins.",
+  "title": "God Makes Everything New",
+  "subtitle": "The story ends where it began — with God making a world",
+  "collection": "king-makes-all-things-new",
+  "mainTruth": "God is not throwing this world away and starting again. He is making everything new — and this time nothing will ever spoil it.",
+  "ageRange": "4-7",
+  "bibleRef": "Revelation 21:1-5; 22:1-5",
+  "durationMinutes": 5,
+  "coverEmoji": "🌈",
+  "coverColor": "#059669",
+  "illustrationPrompt": "A radiant new city with open gates standing among green hills, a clear river running out from it lined with fruit trees, people of every nation walking freely in warm morning light, no sun needed because the light comes from the city itself, painterly gouache illustration on parchment paper, emerald and radiant gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, homecoming and overwhelming joy --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Do you remember the very first story? Right at the beginning, God made everything, and it was good, and He was pleased with it.\n\nAnd then it got spoiled. People chose their own way, and sadness and dying and unfairness came into the world, and everything since has been affected by it.\n\nThe whole of this book has been one long rescue. God promised a Rescuer. He rescued a family, then a nation. He gave a lamb, a law, a tabernacle, kings and prophets, all pointing forward. Then Jesus came — lived the life we could not live, died the death we deserved, and rose again on the third day. His Spirit came to live inside His people. And He promised to come back.\n\nSo how does it all end?\n\nJohn was given a picture of it, and this is what he saw: a new heaven and a new earth. Not a cloud, and not nothing — a real new world, with a river and trees and a city with its gates standing open, and people from every nation walking about in it.\n\nAnd he heard a loud voice from the throne saying: 'Look! God's home is now with people. He will live with them. They will be His people, and God Himself will be with them.'\n\nAnd then this: 'He will wipe every tear from their eyes. There will be no more death, or crying, or pain, because the old things have all gone.'\n\nEvery tear. Wiped away, personally, by God.\n\nAnd the One on the throne said: 'Look — I am making everything new!'\n\nNot 'I am making all new things', as if this world were rubbish to be thrown out. Making everything new. Mended. Healed. Better than before, and never able to be spoiled again.\n\nThe story ends where it started: with God making a world and walking with His people in it. Except this time nobody will ever have to leave.\n\nThat is where you are going, if you belong to Jesus. That is how the story ends.",
+      "childText": "Do you remember the very first story? Right at the beginning, God made everything, and it was good. And then it got spoiled — people chose their own way, and sadness and dying came into the world. Everything since has been one long rescue. God promised a Rescuer. He gave a lamb, and kings, and prophets, all pointing forwards. Then Jesus came, and lived, and died, and rose again, and sent His Spirit, and promised to come back. So how does it all end? John was shown a picture of it. He saw a new heaven and a new earth — not a cloud, but a real new world, with a river and fruit trees and a city with its gates wide open, and people from every country walking about in it. And a loud voice said, 'God's home is now with people! He will wipe every tear from their eyes. There will be no more dying, or crying, or pain.' And the One on the throne said: 'Look — I am making everything new!'",
+      "verses": [
+        {
+          "ref": "Revelation 21:1",
+          "kjv": "And I saw a new heaven and a new earth.",
+          "little_bible": "John saw a new heaven and a new earth."
+        },
+        {
+          "ref": "Revelation 21:3",
+          "kjv": "Behold, the tabernacle of God is with men, and he will dwell with them.",
+          "little_bible": "God's home is now with people. He will live with them."
+        },
+        {
+          "ref": "Revelation 21:4",
+          "kjv": "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying.",
+          "little_bible": "God will wipe every tear away. No more dying or crying."
+        },
+        {
+          "ref": "Revelation 21:5",
+          "kjv": "And he that sat upon the throne said, Behold, I make all things new.",
+          "little_bible": "God said: 'Look! I am making everything new!'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "How is the ending like the very first story?",
+      "parentGuide": "This is the capstone of all eighty stories, so let it feel like an ending. Retrieve God Made Everything deliberately and put the two side by side: the Bible opens with God making a world and walking with His people, and it closes exactly there — except this one can never be spoiled and nobody has to leave. If your child can see that shape, they have the whole Bible in one picture. Two things to get right. God is not throwing this world away: the promise is everything made NEW, mended and healed, not swapped for something else — which is why what we do here matters. And 'He will wipe every tear from their eyes' is personal; God does it Himself, one face at a time, which is worth saying slowly to a child who has cried about something real. Then ask them what they most want to see there. Whatever they name, tell them it is not a silly question — the hope is meant to be concrete.",
+      "familyQuestion": "What are you most looking forward to about the new world?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, thank You that You are not throwing this world away — You are making everything new. Thank You that You will wipe every tear away Yourself. We cannot wait to be there with You. Amen.",
+      "childPrompt": "What are you most looking forward to seeing?",
+      "prayerPoints": [
+        "Thank God that He will wipe every tear away Himself",
+        "Tell God what you are most looking forward to in the new world"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God said: 'Look! I am making everything new!'",
+      "ref": "Revelation 21:5",
+      "memoryPhrase": "I make everything new!",
+      "tip": "Find something broken or scruffy in your house, hold it up, and say together: 'I make everything new!' Then mend it or clean it if you can."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Mend something today instead of throwing it away — a toy, a page, a friendship — because that is what God is doing with the world.",
+      "parentNote": "Mending rather than replacing is the whole doctrine in miniature, so do it together and say why out loud. This is the last story in the app; it is worth marking the moment and telling your child how far they have come."
+    }
+  }
+}

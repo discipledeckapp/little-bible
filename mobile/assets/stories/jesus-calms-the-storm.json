@@ -1,0 +1,72 @@
+{
+  "id": "jesus-calms-the-storm",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to a screaming storm on the Sea of Galilee, standing up in a sinking boat while His frightened friends watch Him.",
+  "title": "Jesus Calms the Storm",
+  "subtitle": "The wind and the waves knew exactly whose voice that was",
+  "collection": "what-jesus-taught",
+  "mainTruth": "Jesus speaks to the storm and it obeys Him, because the sea belongs to the One who made it. We are safe because of who is in the boat, not because of how brave we feel.",
+  "ageRange": "4-7",
+  "bibleRef": "Mark 4:35-41",
+  "durationMinutes": 5,
+  "coverEmoji": "🌊",
+  "coverColor": "#1E40AF",
+  "illustrationPrompt": "A small wooden fishing boat low in dark heaving water at night, one standing figure with an arm outstretched toward a wall of wave and torn cloud while huddled companions grip the mast, the water directly around the boat already flattening to glass and holding a reflection of breaking starlight, painterly gouache illustration on parchment paper, deep indigo and slate teal palette with warm lantern gold, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, awe rather than terror --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "It had been a long day of teaching. Crowds had pressed in around Jesus all afternoon, and when evening came He said to His friends, 'Let us go over to the other side of the lake.'\n\nSo they climbed into their fishing boat and pushed out onto the water. Jesus was so tired that He lay down at the back of the boat, put His head on a cushion, and fell fast asleep.\n\nThen the wind came.\n\nThe Sea of Galilee sits low between hills, and storms drop onto it suddenly. This one was ferocious. The wind screamed. Waves rose higher than the boat and broke straight over the side, and water filled the bottom faster than the men could bail it out.\n\nNow remember who was in that boat. Peter, Andrew, James and John were fishermen. They had worked this lake their whole lives. They knew the difference between a rough night and a night you do not come home from. And these men were terrified.\n\nAnd Jesus was still asleep.\n\nThey shook Him awake. 'Teacher! Don't You care that we are drowning?'\n\nJesus stood up in that pitching boat. He did not reach for a rope or an oar or a bucket. He simply spoke to the weather. 'Peace! Be still.'\n\nAnd the wind stopped. Not slowly, the way wind normally dies away — it stopped. The waves flattened out. In one breath the lake went from a fury to a mirror, so calm the men could see the stars lying on it.\n\nThen Jesus turned to His friends. 'Why were you so afraid? Do you still not trust Me?'\n\nAnd here is the strange part. The storm was over, and now the disciples were more astonished than they had been in the wind. They whispered to one another, 'Who is this? Even the wind and the sea obey Him.'\n\nThat was exactly the right question. In all their Scriptures there was only One who did this. God alone rules the sea. God alone says to the waters, 'This far and no further.' The men in that boat had grown up singing about it. And now the One who speaks to the sea was standing in their boat with a wet cushion behind Him, asking them why they were afraid.\n\nJesus is not simply a kind teacher with good advice. He is the Maker of the wind — and the wind knows His voice.",
+      "childText": "It had been a long day. When evening came, Jesus said to His friends, 'Let us go over to the other side of the lake.' So they climbed into their boat, and Jesus was so tired that He lay down at the back, put His head on a cushion, and fell fast asleep. Then the wind came. Waves rose higher than the boat and crashed straight over the side, and water began filling it up. Jesus' friends were fishermen who knew this lake well, and they were terrified! They shook Him awake. 'Teacher! Don't You care that we are drowning?' Jesus stood up. He did not reach for a rope or a bucket. He simply spoke to the storm: 'Peace! Be still.' And the wind stopped. The waves went flat. The lake became as calm as a mirror. His friends whispered, 'Who is this? Even the wind and the sea obey Him.' Jesus made the wind, and the wind knows His voice.",
+      "verses": [
+        {
+          "ref": "Mark 4:37",
+          "kjv": "And there arose a great storm of wind, and the waves beat into the ship, so that it was now full.",
+          "little_bible": "A wild storm came, and water filled the boat."
+        },
+        {
+          "ref": "Mark 4:38",
+          "kjv": "And they awake him, and say unto him, Master, carest thou not that we perish?",
+          "little_bible": "They said: 'Teacher, don't You care that we are drowning?'"
+        },
+        {
+          "ref": "Mark 4:39",
+          "kjv": "And he arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm.",
+          "little_bible": "Jesus said, 'Peace, be still.' And the wind stopped."
+        },
+        {
+          "ref": "Mark 4:41",
+          "kjv": "What manner of man is this, that even the wind and the sea obey him?",
+          "little_bible": "They asked: 'Who is this? Even the sea obeys Him!'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Who can tell a storm what to do?",
+      "parentGuide": "The new concept is authority over creation. Jesus does not pray for the storm to stop; He tells it to stop, and it obeys Him the way it obeys its Maker. That is why the disciples end up asking, 'Who is this?' — and that question is what you want your child to carry away. The most likely misreading is to turn this into a lesson about bravery: be brave like the disciples should have been. They were not brave, and the story never asks them to be. What flattened the sea was Jesus' voice, not their courage. Say it plainly: we are safe because of who is in the boat. Retrieve God Made Everything. God spoke and the sea appeared; here Jesus speaks and the sea lies down. Same voice. Let your child make that link themselves if they can. One gentle caution: do not promise that Jesus always makes hard things stop. He does not always still the storm — He is always in the boat.",
+      "familyQuestion": "What storm in our family needs Jesus' voice?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Lord Jesus, You made the wind and the waves, and they listen to You. When we are frightened, help us remember that You are in the boat with us. Thank You that nothing is bigger than Your voice. Amen.",
+      "childPrompt": "Can you tell Jesus about something that frightens you?",
+      "prayerPoints": [
+        "Tell Jesus about one thing that makes you feel frightened",
+        "Thank Jesus that even the wind and the sea obey Him"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus said, 'Peace, be still.' And the wind stopped.",
+      "ref": "Mark 4:39",
+      "memoryPhrase": "Even the wind obeys.",
+      "tip": "Whoosh and wave your arms wildly like a storm. When a grown-up says, 'Peace! Be still', freeze completely still, drop your arms, and whisper together: 'Even the wind obeys.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find something noisy in your house — a fan, a tap, a shaking bag — turn it off, and in the quiet say together: 'Even the wind obeys.'",
+      "parentNote": "The point of the noise is the contrast; let the sudden quiet do the teaching. Afterwards, name out loud one thing you personally find frightening, and tell your child that you are in the boat with Jesus too. Children believe this most when they hear grown-ups needing it."
+    }
+  }
+}

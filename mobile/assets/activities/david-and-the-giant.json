@@ -1,0 +1,37 @@
+{
+  "storyId": "david-and-the-giant",
+  "memoryBuilder": {
+    "phrase": "The battle is God's.",
+    "phraseWords": ["The", "battle", "is", "God's."],
+    "verseRef": "1 Samuel 17:47",
+    "verseText": "The battle belongs to God. He saves His own way.",
+    "verseWords": ["The", "battle", "belongs", "to", "God.", "He", "saves", "His", "own", "way."]
+  },
+  "sequence": {
+    "prompt": "What happened in the valley? Put it in order.",
+    "items": [
+      { "id": "shout",  "label": "The giant shouted at God's people", "emoji": "📢", "order": 1 },
+      { "id": "afraid", "label": "Every soldier was too afraid to go", "emoji": "😨", "order": 2 },
+      { "id": "stones", "label": "David chose five smooth stones",     "emoji": "🪨", "order": 3 },
+      { "id": "fell",   "label": "One stone flew, and the giant fell", "emoji": "🎯", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "soldiers", "left": "the watching soldiers", "leftEmoji": "🛡️", "rightId": "won",   "right": "They won without throwing one stone",     "rightEmoji": "🎉" },
+      { "leftId": "armour",   "left": "the king's heavy armour", "leftEmoji": "🥋", "rightId": "off",   "right": "David took it off — it was not his",      "rightEmoji": "🚫" },
+      { "leftId": "sums",     "left": "David's different sum",   "leftEmoji": "🤔", "rightId": "godsize","right": "He measured the giant against God",       "rightEmoji": "✨" }
+    ]
+  },
+  "application": {
+    "question": "The soldiers were saved by someone else's victory. What feels giant-sized to you today?",
+    "options": [
+      { "id": "dark",   "label": "Being scared at night",   "emoji": "🌙" },
+      { "id": "new",    "label": "Something new and big",   "emoji": "🚪" },
+      { "id": "hard",   "label": "Something too hard for me", "emoji": "🧗" }
+    ],
+    "followUp": "You do not have to be David in this story — you get to be one of the soldiers on the hill. Jesus went out and won the battle you could never win. The battle is God's."
+  }
+}

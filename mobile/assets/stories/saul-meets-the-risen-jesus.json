@@ -1,0 +1,72 @@
+{
+  "id": "saul-meets-the-risen-jesus",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Paul writes this years later about what happened to him on that road, and about everybody else who belongs to Jesus: not a tidy-up, but a brand-new start.",
+  "title": "Saul Meets the Risen Jesus",
+  "subtitle": "God did not make Saul better — He made him new",
+  "collection": "spirit-filled-family",
+  "mainTruth": "God does not improve people, and He does not wait for good ones. He chose the man who was hurting His church and made him a brand-new creation.",
+  "ageRange": "4-7",
+  "bibleRef": "Acts 9:1-22; 2 Corinthians 5:17",
+  "durationMinutes": 5,
+  "coverEmoji": "🌟",
+  "coverColor": "#0369A1",
+  "illustrationPrompt": "A man fallen to his knees on a dusty desert road with one arm flung up over his eyes, a burst of blinding white-gold light breaking open the sky above him, his travelling companions shielding their faces further back, pale city walls small on the horizon, painterly gouache illustration on parchment paper, blinding white-gold and sandstone ochre palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, awe rather than terror --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Do you remember the young man standing in the crowd while Stephen died, holding everybody's coats? His name was Saul. And Saul thought he was doing God a favour.\n\nSaul hated the friends of Jesus. He went from house to house, pulling men and women out and locking them up in prison. He was not a little bit unkind. If you loved Jesus, Saul was the most frightening person alive. And one morning he set off for a city called Damascus with letters in his bag, to find more Christians and drag them back in chains.\n\nSo here is a question. If you were God, and you wanted somebody to carry the good news about Jesus to the whole wide world — would you pick him? Nobody would pick him.\n\nGod picked him.\n\nOn the hot dusty road, with no warning at all, a light brighter than the desert sun burst all around Saul, and he fell flat on the ground. And a voice said, 'Saul, Saul, why are you hurting Me?'\n\nSaul lay in the dust. 'Who are You, Lord?'\n\n'I am Jesus — the One you are hurting.'\n\nDid you hear that? Saul had never laid a finger on Jesus. He had hurt Jesus' people. And Jesus said: that was Me. That is how close Jesus keeps His family.\n\nWhen Saul got up, everything had gone dark. He could not see a thing, and his friends had to lead him by the hand into the city like a small child.\n\nThree days later God sent a man called Ananias to the house where Saul was staying. Ananias was frightened — of course he was, everybody knew that name. But he went. He put his hands on the shoulders of the man who had come to arrest him, and the very first word out of his mouth was: 'Brother Saul.'\n\nBrother. Not 'enemy'. Not 'nearly forgiven'. Brother.\n\nAnd Saul could see again, and he was filled with the Holy Spirit, and he was baptised. Then straight away — straight away — he walked into the meeting houses of Damascus and began telling everybody that Jesus is the Son of God. People could hardly believe their ears. Was this not the man who came here to destroy us?\n\nGod gave him a new name, too. Saul became Paul, and Paul wrote more of your Bible than almost anybody else.\n\nYears afterwards, Paul explained what had happened on that road, and he did not say, 'God helped me improve a bit.' He said this: anybody who belongs to Jesus is a new creation. The old is gone. Everything has become new.\n\nGod did not mend Saul. God made him new.",
+      "childText": "Do you remember the young man holding the coats while Stephen died? His name was Saul, and Saul hated the friends of Jesus. He pulled them out of their houses and locked them up in prison. One morning he set off for a city called Damascus to find more Christians. Then, on the hot dusty road, a light brighter than the sun burst all around him, and Saul fell flat on the ground. A voice said, 'Saul, Saul, why are you hurting Me?' 'Who are You, Lord?' 'I am Jesus.' When Saul got up he could not see anything at all, so his friends led him by the hand into the city. Three days later God sent a frightened but brave man called Ananias, who put his hands on Saul and said, 'Brother Saul.' Brother! Then Saul could see, and the Holy Spirit filled him, and he began telling everybody that Jesus is God's Son. God gave him a new name too: Paul.",
+      "verses": [
+        {
+          "ref": "Acts 9:4",
+          "kjv": "And he fell to the earth, and heard a voice saying unto him, Saul, Saul, why persecutest thou me?",
+          "little_bible": "Saul, Saul, why are you hurting Me?"
+        },
+        {
+          "ref": "Acts 9:5",
+          "kjv": "And he said, Who art thou, Lord? And the Lord said, I am Jesus whom thou persecutest.",
+          "little_bible": "Who are You, Lord? I am Jesus."
+        },
+        {
+          "ref": "Acts 9:20",
+          "kjv": "And straightway he preached Christ in the synagogues, that he is the Son of God.",
+          "little_bible": "Straight away Saul told everyone Jesus is God's Son."
+        },
+        {
+          "ref": "2 Corinthians 5:17",
+          "kjv": "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+          "little_bible": "Anyone who belongs to Jesus is made brand new."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Did God improve Saul, or make him new?",
+      "parentGuide": "Head off the confusion before it starts: this is not King Saul. Say plainly that they are two different men, hundreds of years apart, and that this Saul is the one God renames Paul — the Paul whose letters fill the back of your Bible. Then the new concept: new-creation identity. God did not tidy Saul up or coach him into being nicer; He made him new. The likely misreading is that God chose Saul because He spotted something promising in him. The opposite is the whole point. Saul was hunting Christians, and God chose him anyway, and Ananias called him brother before he had done one single useful thing. Say that out loud, because a child who believes God waits for good children will spend years trying to qualify. Retrieve The Prophets Promise New Hearts: God promised new hearts, not better behaviour, and on that road He handed one over. Then ask your child what God changed in Saul. The answer is everything, starting inside.",
+      "familyQuestion": "What has God made new in us that we could never have changed ourselves?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You did not wait for Saul to become good. Thank You that You do not wait for us either. Please make us new on the inside, and help us love the people we find hardest to love. Amen.",
+      "childPrompt": "Can you thank Jesus that He makes people brand new?",
+      "prayerPoints": [
+        "Thank Jesus that He makes people new instead of waiting for good ones",
+        "Pray for somebody you think could never love Jesus"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Anyone who belongs to Jesus is made brand new.",
+      "ref": "2 Corinthians 5:17",
+      "memoryPhrase": "Jesus makes me new.",
+      "tip": "Curl up small on the floor like Saul falling down in the dust, then stand up tall with both arms wide open and say: 'Jesus makes me new.' Do it three times, faster each time."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Think of one person you are sure could never love Jesus, and pray for them out loud by name today.",
+      "parentNote": "Choose yours first and mean it — a difficult neighbour, somebody who has hurt your family. Do not tidy the choice up. The point your child needs to feel is that God picked the very last person anybody would have picked, so nobody is off the list."
+    }
+  }
+}

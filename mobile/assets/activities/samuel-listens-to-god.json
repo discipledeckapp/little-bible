@@ -1,0 +1,36 @@
+{
+  "storyId": "samuel-listens-to-god",
+  "memoryBuilder": {
+    "phrase": "Speak, Lord, I'm listening.",
+    "phraseWords": ["Speak,", "Lord,", "I'm", "listening."],
+    "verseRef": "1 Samuel 3:10",
+    "verseText": "Samuel said: 'Speak, Lord. Your servant is listening.'",
+    "verseWords": ["Speak,", "Lord.", "Your", "servant", "is", "listening."]
+  },
+  "sequence": {
+    "prompt": "What happened the night God called Samuel? Put it in order.",
+    "items": [
+      { "id": "gave",   "label": "Hannah gave Samuel back to God",       "emoji": "🙏", "order": 1 },
+      { "id": "called", "label": "A voice called Samuel's name at night", "emoji": "🕯️", "order": 2 },
+      { "id": "ran",    "label": "Samuel ran to Eli three times",         "emoji": "🏃", "order": 3 },
+      { "id": "listen", "label": "Samuel said, 'Speak — I am listening'", "emoji": "👂", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they did.",
+    "pairs": [
+      { "leftId": "hannah", "left": "Hannah", "leftEmoji": "🙏", "rightId": "gave",   "right": "Prayed for Samuel, then gave him to God", "rightEmoji": "👶" },
+      { "leftId": "eli",    "left": "Eli",    "leftEmoji": "👴", "rightId": "helped", "right": "Helped Samuel know it was God calling",   "rightEmoji": "💡" },
+      { "leftId": "samuel", "left": "Samuel", "leftEmoji": "🧒", "rightId": "told",   "right": "Listened, then told the truth",           "rightEmoji": "👂" }
+    ]
+  },
+  "application": {
+    "question": "God speaks to us in the Bible. What makes listening hard for you?",
+    "options": [
+      { "id": "noisy", "label": "It is too noisy",     "emoji": "🔊" },
+      { "id": "busy",  "label": "I am too busy playing", "emoji": "🧸" },
+      { "id": "hard",  "label": "The answer is hard",  "emoji": "😔" }
+    ],
+    "followUp": "Samuel needed Eli's help to know it was God — needing help to hear God is normal. And Samuel's listening led to a hard job he did anyway. That is what listening looks like."
+  }
+}

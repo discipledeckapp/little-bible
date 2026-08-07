@@ -1,0 +1,36 @@
+{
+  "storyId": "twelve-spies",
+  "memoryBuilder": {
+    "phrase": "God is bigger!",
+    "phraseWords": ["God", "is", "bigger!"],
+    "verseRef": "Numbers 14:18",
+    "verseText": "God is slow to get angry. His love is very great.",
+    "verseWords": ["God", "is", "slow", "to", "get", "angry.", "His", "love", "is", "very", "great."]
+  },
+  "sequence": {
+    "prompt": "What happened with the twelve spies? Put it in order.",
+    "items": [
+      { "id": "sent",   "label": "Moses sent twelve men to look at the land", "emoji": "🕵️", "order": 1 },
+      { "id": "fruit",  "label": "They brought back enormous grapes",         "emoji": "🍇", "order": 2 },
+      { "id": "ten",    "label": "Ten said, 'We cannot do it'",               "emoji": "😨", "order": 3 },
+      { "id": "two",    "label": "Joshua and Caleb said, 'God is with us'",   "emoji": "💪", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each one to what they said or did.",
+    "pairs": [
+      { "leftId": "ten",    "left": "The ten spies",     "leftEmoji": "😨", "rightId": "cannot", "right": "Said the giants were too strong",    "rightEmoji": "🚫" },
+      { "leftId": "two",    "left": "Joshua and Caleb",  "leftEmoji": "💪", "rightId": "go",     "right": "Said 'Let us go — God is with us!'", "rightEmoji": "🙌" },
+      { "leftId": "moses",  "left": "Moses",             "leftEmoji": "🧔", "rightId": "prayed", "right": "Prayed and reminded God of His love", "rightEmoji": "🙏" }
+    ]
+  },
+  "application": {
+    "question": "The ten measured the giants against themselves. What is your biggest 'giant' right now?",
+    "options": [
+      { "id": "scared", "label": "Something that scares me", "emoji": "😰" },
+      { "id": "hard",   "label": "Something too hard",       "emoji": "🧱" },
+      { "id": "new",    "label": "Something brand new",      "emoji": "🚪" }
+    ],
+    "followUp": "The giants were real — the ten were not lying about them. They just forgot to put God in the picture. Your giant is real too, and God is bigger than it."
+  }
+}

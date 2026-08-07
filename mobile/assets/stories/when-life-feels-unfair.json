@@ -1,0 +1,72 @@
+{
+  "id": "when-life-feels-unfair",
+  "sensitivityTier": "guided",
+  "genre": "lament",
+  "verseContext": "Asaph wrote songs for God's temple, and he wrote this one when he had watched cheats and bullies do well for so long that he nearly gave up on God.",
+  "title": "When Life Feels Unfair",
+  "subtitle": "You are allowed to tell God it is not fair — and He is not finished yet",
+  "collection": "king-makes-all-things-new",
+  "mainTruth": "God lets His children complain to Him about what is not fair, and He promises that one day every wrong will be put right.",
+  "ageRange": "4-7",
+  "bibleRef": "Psalm 73",
+  "durationMinutes": 5,
+  "coverEmoji": "⚖️",
+  "coverColor": "#6D28D9",
+  "illustrationPrompt": "A man in simple robes standing at the top of worn stone temple steps with his sandalled feet slipping slightly on the wet edge, one open hand lifted in complaint towards a heavy grey sky, a strong unseen shaft of warm light steadying him from the doorway behind, painterly gouache illustration on parchment paper, storm violet and warm amber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, honest sorrow held safely, no anger in the face --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Asaph wrote songs for God's temple. He led the singing. And one day he wrote a song that begins by nearly falling over.\n\n'My feet were almost gone,' he says. 'My steps had well nigh slipped.' He means: I very nearly stopped believing.\n\nWhy? Because he had been watching. He watched people who cheated and lied and pushed others about, and he watched them do beautifully. Big houses. Easy lives. Nothing ever seemed to go wrong for them. Meanwhile Asaph was trying to do what was right, and every single morning was hard.\n\nSo he said it out loud to God. Not politely. He told God he had kept his heart clean for nothing. He told God it was not fair.\n\nAnd here is something worth noticing before you read another word: God kept that song. He put it in the Bible. God was not shocked by it, and He did not tell Asaph off for writing it. There are more than sixty songs like it in the psalms. Complaining to God is not the opposite of trusting Him — it is a way of trusting Him, because you only bring a complaint to somebody you still believe is listening.\n\nThen the song turns. Asaph says, 'When I thought about this, it was too painful for me — until I went into the house of God. Then I understood how it ends.'\n\nHe did not get a clever answer. He got a bigger view. He remembered that the story is not over, that the people getting away with it are not getting away with it for ever, and that God will put every single wrong thing right.\n\nAnd then Asaph writes the line that changed everything. Looking back at the whole miserable time, he says: 'Nevertheless I am continually with thee: thou hast holden me by my right hand.'\n\nAll the way through. Even while he was slipping. Even while he was angry. God had been holding his hand the whole time, and Asaph had not noticed.\n\nSo the song ends: 'It is good for me to draw near to God.'\n\nThat is the whole answer this story gives, and it is enough. Unfair things are real, and God has not explained all of them yet. But He has not lost His grip, and He has not finished putting things right.\n\nDo not tidy this one up for your child. Let them complain, out loud, to God.",
+      "childText": "Asaph wrote the songs for God's big temple. One day he wrote a song about nearly falling over. 'My feet almost slipped,' he said — he meant that he nearly stopped believing in God. Why? Because he had been watching. He watched people who cheated and pushed and told lies, and everything went well for them! And Asaph was trying to do right, and every day was hard. So Asaph told God all about it. He said, 'This is not fair!' And do you know what God did? God kept that song and put it in the Bible. God was not cross with Asaph for saying it. Then Asaph went into God's house and remembered something: the story is not finished. One day God will put every wrong thing right. And Asaph looked back and saw that God had been holding his hand the whole time. So he sang, 'It is good for me to come close to God.'",
+      "verses": [
+        {
+          "ref": "Psalm 73:2",
+          "kjv": "But as for me, my feet were almost gone; my steps had well nigh slipped.",
+          "little_bible": "My feet nearly slipped. I almost stopped believing."
+        },
+        {
+          "ref": "Psalm 73:3",
+          "kjv": "For I was envious at the foolish, when I saw the prosperity of the wicked.",
+          "little_bible": "I saw bad people doing well, and it hurt."
+        },
+        {
+          "ref": "Psalm 73:23",
+          "kjv": "Nevertheless I am continually with thee: thou hast holden me by my right hand.",
+          "little_bible": "All that time God was holding my hand."
+        },
+        {
+          "ref": "Psalm 73:28",
+          "kjv": "But it is good for me to draw near to God: I have put my trust in the Lord GOD.",
+          "little_bible": "It is good for me to come close to God."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Was God cross with Asaph for complaining?",
+      "parentGuide": "The new concept is lament — telling God honestly that something is wrong — held together with final justice. Two misreadings sit either side of this story. The first is that good Christians do not complain, so a child learns to bring God only their tidy feelings. God kept Asaph's complaint and printed it; say that out loud, because it gives your child permission they will need for the rest of their life. The second misreading is that God will explain everything if we ask nicely. He did not explain it to Asaph. What Asaph got was a longer view — the story is not finished, and every wrong will be put right — and the discovery that God had been holding his hand the whole way through the slipping. Do not answer your child's unfair thing with a lesson today; let them say it to God in their own words while you sit there. Retrieve Joseph and His Jealous Brothers: nothing about that pit was fair, and God was not absent from it.",
+      "familyQuestion": "What unfair thing do we each need to tell God about?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, some things are not fair, and it hurts. Thank You that we can say so to You and You are not cross. Please hold our hands, and put every wrong thing right one day. Amen.",
+      "childPrompt": "Can you tell God the thing that feels most unfair to you?",
+      "prayerPoints": [
+        "Say the unfair thing out loud to God, exactly as it feels",
+        "Thank God that He is holding your hand even now"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "It is good for me to come close to God.",
+      "ref": "Psalm 73:28",
+      "memoryPhrase": "Come close to God.",
+      "tip": "Stand on one wobbly foot until you nearly slip. Then take two big steps to a grown-up, hold on tight, and say: 'Come close to God.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Tell God one thing that is not fair, using your own words and your outdoor voice if you want. Then say the last line of Asaph's song: 'It is good for me to come close to God.'",
+      "parentNote": "Go first, and choose something genuinely unfair from your own week rather than something small. Do not follow their complaint with a correction. Simply say, 'God heard that,' and leave it there."
+    }
+  }
+}

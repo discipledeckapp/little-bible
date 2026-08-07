@@ -1,0 +1,37 @@
+{
+  "storyId": "when-life-feels-unfair",
+  "memoryBuilder": {
+    "phrase": "Come close to God.",
+    "phraseWords": ["Come", "close", "to", "God."],
+    "verseRef": "Psalm 73:28",
+    "verseText": "It is good for me to come close to God.",
+    "verseWords": ["It", "is", "good", "for", "me", "to", "come", "close", "to", "God."]
+  },
+  "sequence": {
+    "prompt": "How did Asaph's song go? Put it in order.",
+    "items": [
+      { "id": "watched", "label": "Asaph watched cheats doing well",        "emoji": "👀", "order": 1 },
+      { "id": "slipped", "label": "His feet almost slipped away from God",  "emoji": "🦶", "order": 2 },
+      { "id": "told",    "label": "He told God, 'This is not fair!'",       "emoji": "🗣️", "order": 3 },
+      { "id": "held",    "label": "He saw God had held his hand all along", "emoji": "🤝", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the song to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "complaint", "left": "Asaph's complaint",     "leftEmoji": "🗣️", "rightId": "kept",   "right": "God kept it and put it in the Bible", "rightEmoji": "📖" },
+      { "leftId": "unfair",    "left": "unfair things",         "leftEmoji": "⚖️", "rightId": "right",  "right": "One day God will put them all right",  "rightEmoji": "👑" },
+      { "leftId": "hand",      "left": "the slipping time",     "leftEmoji": "🦶", "rightId": "holding", "right": "God was holding his hand the whole way", "rightEmoji": "🤝" }
+    ]
+  },
+  "application": {
+    "question": "What feels most unfair to you right now?",
+    "options": [
+      { "id": "blamed", "label": "Being blamed for something else", "emoji": "😢" },
+      { "id": "bully",  "label": "Somebody unkind gets away with it", "emoji": "😠" },
+      { "id": "left",   "label": "Being left out on purpose",      "emoji": "🚪" }
+    ],
+    "followUp": "God did not tell Asaph off for saying it was not fair, and He put that song in the Bible so you would know you can say it too. The story is not finished, and He has not let go of your hand. Come close to God."
+  }
+}

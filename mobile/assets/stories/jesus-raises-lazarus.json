@@ -1,0 +1,72 @@
+{
+  "id": "jesus-raises-lazarus",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to Martha on the road outside her village, four days after her brother Lazarus died and was buried.",
+  "title": "Jesus Raises Lazarus",
+  "subtitle": "His friend had been dead four days — so Jesus cried, and then He called him out",
+  "collection": "jesus-saves",
+  "mainTruth": "Jesus is the resurrection and the life. Death is real and terrible, and Jesus is stronger than it — He speaks, and death lets go.",
+  "ageRange": "4-7",
+  "bibleRef": "John 11:1-44",
+  "durationMinutes": 5,
+  "coverEmoji": "🕊️",
+  "coverColor": "#44403C",
+  "illustrationPrompt": "A dark rock tomb with its round stone rolled aside, a figure standing before it with one hand lifted and calling out, warm light spilling from the opening onto a man wrapped in pale cloth stepping into the daylight, sisters watching with hands over their mouths, olive trees behind, painterly gouache illustration on parchment paper, stone-grey and warm honey-gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, awe and tenderness, no fear --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Jesus had a friend called Lazarus, who lived in a village called Bethany with his two sisters, Mary and Martha. Jesus loved all three of them very much.\n\nOne day Lazarus became seriously ill. His sisters sent an urgent message: 'Lord, the one You love is ill.' They knew what Jesus could do. They had watched Him heal complete strangers. Surely He would come running for a friend.\n\nBut Jesus did not come. He stayed where He was for two more days. And while He waited, Lazarus died.\n\nBy the time Jesus arrived, Lazarus had been in the grave four days. Martha came out to meet Him on the road, and she said the thing she had been thinking all week: 'Lord, if You had been here, my brother would not have died.'\n\nJesus did not tell her off for saying it. He said something enormous instead: 'I am the resurrection and the life. Whoever believes in Me will live, even if they die.' Then He asked her, 'Do you believe this?'\n\nThen they took Him to the grave. And here is the part nobody expects. Jesus — who knew exactly what He was about to do, who knew this whole sad story was about to end well — stood outside that grave and cried.\n\nJesus wept. Two words, the shortest verse in the Bible, and they tell us something we must never forget. God is not casual about death. Death is not a friend and it was never part of God's good world. Standing in front of it, Jesus cried real tears.\n\nAnd then He stopped crying, and He did something nobody else in the world could do.\n\n'Take away the stone,' He said. Martha was horrified — it had been four days. But they rolled it away. And Jesus called out in a great loud voice, the way you might call somebody in from the garden for tea:\n\n'Lazarus, come out!'\n\nAnd Lazarus came out. Alive. Still wrapped in his grave cloths, blinking in the sunshine. 'Untie him,' Jesus said, 'and let him go.'\n\nEverybody standing there learned something that day. Jesus does not only feel sad about death. He is stronger than it.\n\nLazarus would grow old and die again one day. This was a signpost, not the end of the road. But it pointed straight at what Jesus was about to do Himself, in a grave of His own, very soon.",
+      "childText": "Jesus had a friend called Lazarus, who lived with his sisters Mary and Martha. One day Lazarus became very ill, and his sisters sent Jesus an urgent message. But Jesus did not come straight away — and Lazarus died. By the time Jesus arrived, Lazarus had been in his grave for four days. Martha came out to meet Him and said, 'If You were here, my brother would not have died.' Jesus said, 'I am the life. Whoever trusts Me will live, even if they die.' Then they took Jesus to the grave. And Jesus cried. Real tears! Death is sad, and God is not pretending that it is not. Then Jesus called out in a great loud voice, 'Lazarus, come out!' And Lazarus came out — alive, still wrapped in his grave cloths. 'Untie him,' said Jesus. Jesus does not only feel sad about death. He is stronger than it.",
+      "verses": [
+        {
+          "ref": "John 11:21",
+          "kjv": "Then said Martha unto Jesus, Lord, if thou hadst been here, my brother had not died.",
+          "little_bible": "Martha said: 'If You were here, he would not have died.'"
+        },
+        {
+          "ref": "John 11:25",
+          "kjv": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live.",
+          "little_bible": "Jesus said: 'I am the life. Trust Me and live.'"
+        },
+        {
+          "ref": "John 11:35",
+          "kjv": "Jesus wept.",
+          "little_bible": "Jesus cried real tears."
+        },
+        {
+          "ref": "John 11:43",
+          "kjv": "And when he thus had spoken, he cried with a loud voice, Lazarus, come forth.",
+          "little_bible": "Jesus called out: 'Lazarus, come out!'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did Jesus cry if He could fix it?",
+      "parentGuide": "Be present for this one and do not hurry it — a child who has lost a grandparent or a pet will be thinking about them, and that is exactly right. The new concept is that Jesus is the resurrection and the life: death is not merely something He is sad about, it is something He has authority over. Two misreadings to head off. First, that Jesus' tears mean He was helpless — He wept because death is genuinely wrong, and then He commanded it to let go. Second, that God always raises people now if we ask hard enough; He does not, and pretending otherwise will hurt your child later. Say instead: everyone who trusts Jesus will be raised, because He was. Retrieve The Very Sad Choice — death came into the world there, and here is the One who came to undo it. If your child asks about somebody who died, it is enough to say: 'Jesus cried about that too, and He is stronger than it.'",
+      "familyQuestion": "Who do we miss, and what do we want to tell Jesus about them?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, thank You that You cry with us when things are sad. Thank You that You are stronger than death. We trust You with the people we love and with ourselves. Amen.",
+      "childPrompt": "Is there someone sad or poorly you want to tell Jesus about?",
+      "prayerPoints": [
+        "Tell Jesus about somebody you miss or somebody who is poorly",
+        "Thank Jesus that He is stronger than death"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "Jesus said: 'I am the life. Trust Me and live.'",
+      "ref": "John 11:25",
+      "memoryPhrase": "Jesus is the life.",
+      "tip": "Curl up small on the floor like Lazarus in the tomb. When someone calls 'come out!', jump up tall with your arms in the air and say: 'Jesus is the life.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Draw or make a card for somebody in your family who is sad or missing someone, and pray for them before you give it.",
+      "parentNote": "Let your child choose the person, even if the choice surprises you. If grief comes up in your house today, let the story do its work: Jesus wept first and commanded second, and you are allowed to sit in the first part for as long as your child needs."
+    }
+  }
+}

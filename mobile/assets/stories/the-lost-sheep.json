@@ -1,6 +1,8 @@
 {
   "id": "the-lost-sheep",
   "sensitivityTier": "general",
+  "genre": "parable",
+  "verseContext": "Jesus tells this story to religious leaders who are complaining that He spends His time with the wrong kind of people.",
   "title": "The Lost Sheep",
   "subtitle": "Jesus leaves the ninety-nine to find the one that is lost",
   "collection": "what-jesus-taught",

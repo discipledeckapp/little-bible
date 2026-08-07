@@ -1,0 +1,72 @@
+{
+  "id": "davids-sin-and-gods-mercy",
+  "sensitivityTier": "guided",
+  "genre": "narrative",
+  "verseContext": "David wrote this prayer after he had done something terribly wrong and had finally stopped hiding it.",
+  "title": "David's Sin and God's Mercy",
+  "subtitle": "Even the best king did wrong — and found out what God does with a sorry heart",
+  "collection": "heroes-of-faith",
+  "mainTruth": "Hiding sin makes it worse; bringing it to God brings mercy. God does not want us to pretend — He wants us to come back.",
+  "ageRange": "4-7",
+  "bibleRef": "2 Samuel 11-12; Psalm 51",
+  "durationMinutes": 5,
+  "coverEmoji": "💧",
+  "coverColor": "#1E3A5F",
+  "illustrationPrompt": "A crowned man kneeling low on a palace roof at night with his face in his hands, a prophet standing quietly nearby with one hand extended in kindness, deep blue night sky with a single warm lamp, painterly gouache illustration on parchment paper, indigo and warm amber palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, sorrow met with mercy, no menace --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "David became the king. He was the king with the right kind of heart — the one God had chosen. And then David did something very wrong.\n\nOne evening David saw a woman called Bathsheba, who was already married to a soldier named Uriah. David wanted her anyway. He was the king, so he took her — even though she was not his to take.\n\nAnd then David did something worse. He tried to hide it. He sent orders that put Uriah in the most dangerous part of the battle, where he would be killed. And Uriah died.\n\nDavid told nobody. For nearly a whole year he carried on being king, wearing his crown, going to worship, looking exactly the same on the outside. But inside, he was heavy and grey and dried up. He later wrote that his bones felt old and his strength drained away, like water in the hot sun. That is what hiding does.\n\nThen God sent a prophet called Nathan. Nathan did not shout. He told David a story — about a rich man with a thousand sheep who stole the one little lamb belonging to a poor man. David was furious. 'That man deserves to be punished!' he said.\n\nAnd Nathan said four quiet words: 'You are that man.'\n\nDavid could have made excuses. He was the king; nobody could have stopped him. Saul would have made excuses. Instead David said, 'I have sinned against the Lord.' No blaming, no explaining, no 'but'.\n\nAnd right then, God forgave him. Not because David was sorry enough or good enough. Because God is merciful.\n\nDavid wrote a prayer about that day, and we still have it. He asked God for something bigger than being let off: 'Make a clean heart in me, God. Put a right spirit inside me.' He did not just want the mess cleaned up. He wanted to be different.\n\nSad things still came from what David did — being forgiven does not undo everything. But David was not lost. He came back. And God kept His promise to him anyway.\n\nBecause the very best king still needed mercy, we know we are still waiting for a King who never would.",
+      "childText": "David was the king with the right kind of heart. And then David did something very wrong. He took a woman called Bathsheba, who was already married to a soldier named Uriah. Then David hid what he had done, and he sent Uriah where he would be killed. For almost a whole year David wore his crown and looked just the same outside. But inside he felt heavy and grey. That is what hiding does. So God sent a prophet called Nathan. Nathan did not shout. He told a story about a rich man who stole a poor man's only lamb. David was cross! 'That man should be punished!' Then Nathan said four quiet words: 'You are that man.' David could have made excuses. Instead he said, 'I have done wrong against God.' No blaming. No 'but'. And God forgave him — not because David was good enough, but because God is merciful. So David prayed, 'God, make a clean heart in me.'",
+      "verses": [
+        {
+          "ref": "2 Samuel 12:7",
+          "kjv": "And Nathan said to David, Thou art the man.",
+          "little_bible": "Nathan said to David: 'You are that man.'"
+        },
+        {
+          "ref": "2 Samuel 12:13",
+          "kjv": "And David said unto Nathan, I have sinned against the LORD.",
+          "little_bible": "David said: 'I have done wrong against God.'"
+        },
+        {
+          "ref": "Psalm 32:3",
+          "kjv": "When I kept silence, my bones waxed old through my roaring all the day long.",
+          "little_bible": "When I hid my sin, I felt heavy and sad inside."
+        },
+        {
+          "ref": "Psalm 51:10",
+          "kjv": "Create in me a clean heart, O God; and renew a right spirit within me.",
+          "little_bible": "God, make a clean heart in me. Make me new inside."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Why did hiding it make David feel worse, not better?",
+      "parentGuide": "This story needs you present, and it needs you unhurried. The new concept is repentance — not 'saying sorry' but turning round and coming back. Say what David did plainly and then stop; do not add detail, and do not let the wrongdoing become the subject of the story. The subject is what God did with a man who admitted it. Two things children take away wrongly if you are not careful. First, that God forgave David because David felt bad enough — he did not; God forgave because God is merciful, and David's own prayer asks for a new heart, not a good report. Second, that forgiveness means nothing happened — David's family did suffer afterwards, and it is honest to say that consequences stayed even though God's love did not leave. Retrieve Saul: The King Who Would Not Listen and put the two side by side: both kings sinned; only one came back. That contrast is the whole point of placing them together. If your child tells you about something they have been hiding, treat it as the best possible outcome of this story — thank them first, before anything else.",
+      "familyQuestion": "What makes it hard to admit when we have done wrong?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, we are sorry for the things we hide. Thank You that You already know and You still love us. Please make clean hearts in us and make us new inside. Amen.",
+      "childPrompt": "Is there something you have been keeping hidden?",
+      "prayerPoints": [
+        "Tell God the thing you have been hiding — He already knows",
+        "Ask God to make a clean heart in you, like David did"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God, make a clean heart in me. Make me new inside.",
+      "ref": "Psalm 51:10",
+      "memoryPhrase": "God makes hearts clean.",
+      "tip": "Wash your hands together and watch the dirt go. As the water runs, say: 'God makes hearts clean.' Say it once more while you dry them."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Think of one thing you have been keeping hidden, and tell God about it. Then, if you can, tell one grown-up who loves you.",
+      "parentNote": "If your child brings something to you today, your first reaction is the lesson — not the words afterwards. Thank them for telling you before you say anything else. Nathan came to David with a story, not a shout, and David came back because of it."
+    }
+  }
+}

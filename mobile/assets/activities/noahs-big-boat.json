@@ -1,36 +1,104 @@
 {
   "storyId": "noahs-big-boat",
   "memoryBuilder": {
-    "phrase": "Noah trusted God!",
-    "phraseWords": ["Noah", "trusted", "God!"],
+    "phrase": "Noah trusted God and obeyed!",
+    "phraseWords": [
+      "Noah",
+      "trusted",
+      "God",
+      "and",
+      "obeyed!"
+    ],
     "verseRef": "Genesis 6:22",
     "verseText": "Thus did Noah; according to all that God commanded him, so did he.",
-    "verseWords": ["Noah", "did", "everything", "God", "told", "him", "to", "do."]
+    "verseWords": [
+      "Noah",
+      "did",
+      "everything",
+      "God",
+      "told",
+      "him",
+      "to",
+      "do."
+    ]
   },
   "sequence": {
     "prompt": "What happened in Noah's big adventure? Put it in order.",
     "items": [
-      { "id": "god-speaks", "label": "God told Noah to build a big boat", "emoji": "📢", "order": 1 },
-      { "id": "animals",    "label": "Animals came onto the ark",         "emoji": "🐘", "order": 2 },
-      { "id": "rain",       "label": "Rain fell for forty days",          "emoji": "🌧️", "order": 3 },
-      { "id": "rainbow",    "label": "God sent a rainbow promise",        "emoji": "🌈", "order": 4 }
+      {
+        "id": "god-speaks",
+        "label": "God told Noah to build a big boat",
+        "emoji": "📢",
+        "order": 1
+      },
+      {
+        "id": "animals",
+        "label": "Animals came onto the ark",
+        "emoji": "🐘",
+        "order": 2
+      },
+      {
+        "id": "rain",
+        "label": "Rain fell for forty days",
+        "emoji": "🌧️",
+        "order": 3
+      },
+      {
+        "id": "rainbow",
+        "label": "God sent a rainbow promise",
+        "emoji": "🌈",
+        "order": 4
+      }
     ]
   },
   "matches": {
     "prompt": "Match each to what they did or mean.",
     "questionTemplate": "What does the story say about {left}?",
     "pairs": [
-      { "leftId": "noah",    "left": "Noah",        "leftEmoji": "👴", "rightId": "built",   "right": "Built the ark because he trusted God",  "rightEmoji": "🔨" },
-      { "leftId": "animals", "left": "Animals",     "leftEmoji": "🐘", "rightId": "came",    "right": "Came to Noah two by two",               "rightEmoji": "2️⃣" },
-      { "leftId": "rainbow", "left": "The rainbow", "leftEmoji": "🌈", "rightId": "promise", "right": "God's promise to care for His people",  "rightEmoji": "🤝" }
+      {
+        "leftId": "noah",
+        "left": "Noah",
+        "leftEmoji": "👴",
+        "rightId": "built",
+        "right": "Built the ark because he trusted God",
+        "rightEmoji": "🔨"
+      },
+      {
+        "leftId": "animals",
+        "left": "Animals",
+        "leftEmoji": "🐘",
+        "rightId": "came",
+        "right": "Came to Noah two by two",
+        "rightEmoji": "2️⃣"
+      },
+      {
+        "leftId": "rainbow",
+        "left": "The rainbow",
+        "leftEmoji": "🌈",
+        "rightId": "promise",
+        "right": "God's promise to care for His people",
+        "rightEmoji": "🤝"
+      }
     ]
   },
   "application": {
     "question": "Noah did what God said even when it was hard. When is it hard for YOU to trust God?",
     "options": [
-      { "id": "afraid",    "label": "When I am afraid",           "emoji": "😟" },
-      { "id": "different", "label": "When others do differently", "emoji": "🤔" },
-      { "id": "waiting",   "label": "When I have to wait",        "emoji": "⏳" }
+      {
+        "id": "afraid",
+        "label": "When I am afraid",
+        "emoji": "😟"
+      },
+      {
+        "id": "different",
+        "label": "When others do differently",
+        "emoji": "🤔"
+      },
+      {
+        "id": "waiting",
+        "label": "When I have to wait",
+        "emoji": "⏳"
+      }
     ],
     "followUp": "God saw Noah's trust and kept every promise He made. He keeps every promise to you too — even when it is hard to wait."
   }

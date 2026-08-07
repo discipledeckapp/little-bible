@@ -1,0 +1,72 @@
+{
+  "id": "visitors-worship-the-king",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Matthew describes what the visitors from far away did the moment they finally found the child.",
+  "title": "Visitors Worship the King",
+  "subtitle": "They came from a long way away, and they were the first to kneel",
+  "collection": "jesus-is-here",
+  "mainTruth": "Jesus is not one nation's King — He is the King of everybody, everywhere. People from far away belong to Him too.",
+  "ageRange": "4-7",
+  "bibleRef": "Matthew 2:1-12",
+  "durationMinutes": 5,
+  "coverEmoji": "🌟",
+  "coverColor": "#B45309",
+  "illustrationPrompt": "Three travellers in rich robes from distant lands kneeling low before a toddler held by his mother in a simple doorway, opened gift boxes glinting on the ground, one enormous star low in a deep blue sky above the roof, camels resting behind them, painterly gouache illustration on parchment paper, indigo and burnished gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, reverence and welcome --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "A long way east of Bethlehem — many months of travelling away — there were men who studied the sky. They were not Jewish. They did not have the temple or the prophets or the commands. They lived in a different country and spoke a different language.\n\nAnd one night they saw a new star.\n\nSomehow they knew what it meant: a King had been born. So they packed up and left home and travelled for months, following it, over deserts and hills, all the way to a country they had never seen — to find a King who was not even their own.\n\nFirst they went to Jerusalem, to the palace, because that is where kings live. They asked King Herod, 'Where is the child who has been born King of the Jews? We have come to worship Him.'\n\nHerod did not like that at all. He was the king. He did not want another one. But his teachers looked in the old scrolls and found a prophet's words: the King would be born in Bethlehem.\n\nSo the visitors went on to Bethlehem — and the star stopped over one particular house.\n\nThey went in. And there was no palace, no throne, no guards. Just a young child with His mother in an ordinary house.\n\nAnd they knelt down on the floor.\n\nThink about who these men were. Rich, clever, important, from far away, with nothing to do with Israel at all. And they were the first people in the story to kneel down and worship Jesus.\n\nThen they opened their treasure boxes and gave Him gifts: gold, which you give a king; frankincense, sweet-smelling, which you burn for God; and myrrh, a spice used when somebody dies. Three gifts that said King, and God, and one day He will die for us — though the visitors probably did not know that last part.\n\nGod warned them in a dream not to go back to Herod, so they went home a different way, and Jesus was kept safe.\n\nRight at the very beginning, before Jesus could even speak, God made sure the story showed us something: this King belongs to the whole world. Whoever you are, wherever you are from, you can come and kneel down too.",
+      "childText": "Far, far to the east there were men who studied the sky. They were not Jewish. They lived in a different country and spoke a different language. One night they saw a brand-new star, and somehow they knew: a King has been born! So they left home and travelled for months and months, over deserts and hills, to find a King who was not even their own. First they went to the palace in Jerusalem, because that is where kings live. But the old scrolls said the King would be born in Bethlehem. So on they went — and the star stopped over one house. They went inside. No palace. No throne. No guards. Just a young child with His mother in an ordinary house. And they knelt right down on the floor. These rich, clever, important men from far away were the very first people to kneel down and worship Jesus! They opened their treasure boxes and gave Him gold, and sweet-smelling frankincense, and myrrh. Then God warned them in a dream, and they went home a different way, and Jesus was kept safe. Right at the beginning God showed us something: this King belongs to the whole world. Whoever you are, wherever you are from, you can kneel down too.",
+      "verses": [
+        {
+          "ref": "Matthew 2:2",
+          "kjv": "Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him.",
+          "little_bible": "They asked: 'Where is the new King? We came to worship Him.'"
+        },
+        {
+          "ref": "Matthew 2:9",
+          "kjv": "The star, which they saw in the east, went before them, till it came and stood over where the young child was.",
+          "little_bible": "The star stopped right above where the child was."
+        },
+        {
+          "ref": "Matthew 2:11",
+          "kjv": "And when they were come into the house... they fell down, and worshipped him: and... presented unto him gifts.",
+          "little_bible": "They knelt down and worshipped Jesus, and gave Him gifts."
+        },
+        {
+          "ref": "Psalm 22:27",
+          "kjv": "All the ends of the world shall remember and turn unto the LORD.",
+          "little_bible": "People from every place will come and worship God."
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Who were the first people to kneel down and worship Jesus?",
+      "parentGuide": "The new concept is that Jesus is the Messiah for all nations — this is a story about belonging. The point children need is the one the passage goes out of its way to make: the first worshippers were foreigners who had none of the advantages, and they got there before the priests in Jerusalem did. Say that plainly, and say it to your own child about your own family. Retrieve Ruth Finds a Home, where an outsider was welcomed in, and God Calls Abraham, where God promised to bless every family on earth. The three gifts are worth naming slowly — gold for a king, incense for God, myrrh for someone who will die — because they are a whole gospel in three boxes. Herod is in the story but do not dwell on him; 'he did not want another king, so God kept Jesus safe' is enough here.",
+      "familyQuestion": "Who could we welcome in that nobody expects?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, You are King of the whole world, and that means You are our King too. Thank You that anybody from anywhere can come to You. We kneel down and worship You today. Amen.",
+      "childPrompt": "Can you tell Jesus that He is your King?",
+      "prayerPoints": [
+        "Worship Jesus as King, in your own words",
+        "Thank God that people from every country belong to Him"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "They knelt down and worshipped Jesus, and gave Him gifts.",
+      "ref": "Matthew 2:11",
+      "memoryPhrase": "Jesus is for everyone.",
+      "tip": "Kneel right down on the floor together like the visitors did, put your hands out flat, and say: 'Jesus is for everyone.' Then point at yourself and say: 'Even me!'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Choose one thing you own and give it away, or make a gift for somebody today — the way the visitors gave the best they had brought.",
+      "parentNote": "Let it cost them a little. The visitors did not bring spares; they opened their treasure boxes. A gift that costs nothing teaches nothing, and a small real cost is enough at this age."
+    }
+  }
+}

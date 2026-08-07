@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-feeds-the-crowd",
+  "memoryBuilder": {
+    "phrase": "Jesus is the bread.",
+    "phraseWords": ["Jesus", "is", "the", "bread."],
+    "verseRef": "John 6:35",
+    "verseText": "I am the bread of life. Whoever comes to Me will never be hungry.",
+    "verseWords": ["I", "am", "the", "bread", "of", "life", "Whoever", "comes", "to", "Me", "will", "never", "be", "hungry"]
+  },
+  "sequence": {
+    "prompt": "What happened on the hillside? Put it in order.",
+    "items": [
+      { "id": "crowd",   "label": "A huge crowd followed Jesus over the hills",    "emoji": "👥", "order": 1 },
+      { "id": "lunch",   "label": "A boy gave Jesus five loaves and two fish",     "emoji": "🐟", "order": 2 },
+      { "id": "thanked", "label": "Jesus thanked His Father and broke the bread",  "emoji": "🙏", "order": 3 },
+      { "id": "baskets", "label": "Twelve full baskets of leftovers were gathered", "emoji": "🧺", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "loaves",  "left": "five little loaves",   "leftEmoji": "🥖", "rightId": "took",  "right": "Not nearly enough, until Jesus took them",    "rightEmoji": "🙌" },
+      { "leftId": "baskets", "left": "twelve full baskets",  "leftEmoji": "🧺", "rightId": "more",  "right": "With Jesus there is always more than enough", "rightEmoji": "✨" },
+      { "leftId": "hearts",  "left": "our hungry hearts",    "leftEmoji": "❤️", "rightId": "fills", "right": "Only Jesus can truly fill them",             "rightEmoji": "🍞" }
+    ]
+  },
+  "application": {
+    "question": "Jesus never runs out. What do you need from Him today?",
+    "options": [
+      { "id": "empty",   "label": "Help when I feel empty",   "emoji": "🫙" },
+      { "id": "sad",     "label": "Comfort when I am sad",    "emoji": "😢" },
+      { "id": "loveshare", "label": "Enough love to share",   "emoji": "❤️" }
+    ],
+    "followUp": "Bread fills you until teatime, and then you are hungry all over again. Jesus gives us Himself, and He never runs out — there were twelve whole baskets left over. Jesus is the bread."
+  }
+}

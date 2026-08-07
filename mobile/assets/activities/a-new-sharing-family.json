@@ -1,0 +1,37 @@
+{
+  "storyId": "a-new-sharing-family",
+  "memoryBuilder": {
+    "phrase": "Learn, share, eat, pray.",
+    "phraseWords": ["Learn,", "share,", "eat,", "pray."],
+    "verseRef": "Acts 2:42",
+    "verseText": "They learned, shared, ate and prayed together every day.",
+    "verseWords": ["They", "learned,", "shared,", "ate", "and", "prayed", "together", "every", "day."]
+  },
+  "sequence": {
+    "prompt": "How did God's new family begin? Put it in order.",
+    "items": [
+      { "id": "believed", "label": "Three thousand people believed in Jesus",  "emoji": "🎉", "order": 1 },
+      { "id": "learned",  "label": "They learned everything about Jesus",      "emoji": "📖", "order": 2 },
+      { "id": "shared",   "label": "They shared food and money and homes",     "emoji": "🤲", "order": 3 },
+      { "id": "added",    "label": "God added more people every day",          "emoji": "➕", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "church",  "left": "the church",       "leftEmoji": "⛪", "rightId": "people", "right": "People who belong to Jesus and to each other", "rightEmoji": "👨‍👩‍👧‍👦" },
+      { "leftId": "sharing", "left": "their sharing",    "leftEmoji": "🤲", "rightId": "nobody", "right": "Nobody in the family went without food",       "rightEmoji": "🍲" },
+      { "leftId": "meals",   "left": "eating together",  "leftEmoji": "🍞", "rightId": "glad",   "right": "Glad and happy hearts round a table",          "rightEmoji": "😊" }
+    ]
+  },
+  "application": {
+    "question": "God's family learns, shares, eats and prays together. What could you do for someone in God's family?",
+    "options": [
+      { "id": "toy",  "label": "Share something of mine", "emoji": "🧸" },
+      { "id": "seat", "label": "Save them a seat",        "emoji": "🪑" },
+      { "id": "pray", "label": "Pray for them by name",   "emoji": "🙏" }
+    ],
+    "followUp": "The Spirit did not only make three thousand people new inside; He made them one family. That is what you belong to, and the person sitting behind you at church is your brother or sister. Learn, share, eat, pray."
+  }
+}

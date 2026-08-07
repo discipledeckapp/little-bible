@@ -1,0 +1,37 @@
+{
+  "storyId": "jesus-heals-and-forgives",
+  "memoryBuilder": {
+    "phrase": "Jesus can forgive sins.",
+    "phraseWords": ["Jesus", "can", "forgive", "sins."],
+    "verseRef": "Mark 2:10",
+    "verseText": "Jesus has power on earth to forgive sins.",
+    "verseWords": ["Jesus", "has", "power", "on", "earth", "to", "forgive", "sins"]
+  },
+  "sequence": {
+    "prompt": "What happened in the crowded house? Put it in order.",
+    "items": [
+      { "id": "packed",  "label": "The house was packed full of people",        "emoji": "👥", "order": 1 },
+      { "id": "carried", "label": "Four friends carried a man on a mat",        "emoji": "🛏️", "order": 2 },
+      { "id": "roof",    "label": "They dug through the roof and lowered him in", "emoji": "🕳️", "order": 3 },
+      { "id": "walked",  "label": "Jesus forgave him, and he got up and walked", "emoji": "🚶", "order": 4 }
+    ]
+  },
+  "matches": {
+    "prompt": "Match each part of the story to what it means.",
+    "questionTemplate": "What does the story say about {left}?",
+    "pairs": [
+      { "leftId": "hole", "left": "the hole in the roof", "leftEmoji": "🕳️", "rightId": "way",   "right": "Four friends made a way to Jesus",            "rightEmoji": "🤝" },
+      { "leftId": "sins", "left": "the man's sins",       "leftEmoji": "😔", "rightId": "first", "right": "Jesus forgave them first of all",            "rightEmoji": "❤️" },
+      { "leftId": "legs", "left": "the man's legs",       "leftEmoji": "🦵", "rightId": "proof", "right": "Jesus mended them to prove He can forgive", "rightEmoji": "🚶" }
+    ]
+  },
+  "application": {
+    "question": "Jesus can forgive sins. What will you bring to Him today?",
+    "options": [
+      { "id": "did",    "label": "Something I did wrong",   "emoji": "😔" },
+      { "id": "hurt",   "label": "Someone I hurt",          "emoji": "💔" },
+      { "id": "secret", "label": "A secret I have kept",    "emoji": "🤫" }
+    ],
+    "followUp": "The four friends thought legs were the biggest problem in that room. Jesus knew the biggest problem was inside, and He is the only one who can reach it. Bring Him anything at all, because Jesus can forgive sins."
+  }
+}

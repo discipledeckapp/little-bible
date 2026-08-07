@@ -1,0 +1,72 @@
+{
+  "id": "jesus-returns-to-his-father",
+  "sensitivityTier": "general",
+  "genre": "narrative",
+  "verseContext": "Jesus says this to His friends on a hillside, in the last moments before He is taken up into heaven.",
+  "title": "Jesus Returns to His Father",
+  "subtitle": "He did not go away from His friends — He went up to rule",
+  "collection": "spirit-filled-family",
+  "mainTruth": "Jesus went up to the highest throne there is, and He rules over everything right now. He did not leave His people behind — He promised to be with us to the very end.",
+  "ageRange": "4-7",
+  "bibleRef": "Matthew 28:16-20; Acts 1:1-11",
+  "durationMinutes": 5,
+  "coverEmoji": "☁️",
+  "coverColor": "#0284C7",
+  "illustrationPrompt": "Eleven friends standing on a green hilltop with heads tilted right back and hands lifted, looking up at a shaft of golden light and a bright cloud rising above olive trees, two quiet figures in white standing among them, painterly gouache illustration on parchment paper, olive green and warm gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, joyful awe --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "For forty days after He came out of the tomb, Jesus kept turning up.\n\nHe walked with two friends along a dusty road. He stood in a locked room and let Thomas look at His hands. He cooked breakfast on a beach and ate it with His friends, so they would know He was not a ghost. Over and over He showed them the same thing: I really am alive.\n\nThen one day He led them out of the city, up a hill called the Mount of Olives.\n\nHis friends had a question ready — the same question they always had. 'Lord, is this when You make everything right?' They were hoping for a throne in Jerusalem, and soldiers, and a crown you could look at.\n\nJesus told them something far bigger. 'All power in heaven and on earth has been given to Me. So go. Go to every country and tell everybody about Me. And the Holy Spirit will come and give you power to do it.'\n\nAnd then He said the words His friends would hold on to for the rest of their lives: 'And look — I am with you always, right to the very end.'\n\nThen, while He was still blessing them, Jesus was lifted up. Not snatched away. Lifted, the way a king goes up to his throne. And a bright cloud came underneath Him, the same kind of shining cloud that had filled the tabernacle long ago when God came down to live with His people. This time the cloud carried Jesus home.\n\nHis friends stood there with their necks bent back, staring at the sky.\n\nTwo angels in white were suddenly standing beside them. 'Why are you looking up? This same Jesus who has gone into heaven will come back one day, exactly the way you have seen Him go.'\n\nSo they walked back down that hill — and they were not sad. Luke says they were full of joy. Because Jesus had not gone away from them. He had gone up to rule.\n\nJesus is not having a rest in heaven. He is reigning. He is the King with real power over every country, every storm and every sad thing, and He is praying for His people this very minute. His body went up, so He is not standing beside you in the room. But He said 'I am with you always', and He meant it — because He was about to send His own Spirit to live inside them.\n\nJesus went up. And Jesus is coming back.",
+      "childText": "For forty days after He came out of the tomb, Jesus kept turning up. He walked with friends on a dusty road. He let Thomas look at His hands. He cooked breakfast on a beach and ate it, so they would know He was really alive. Then one day He led them up a hill. 'All power in heaven and on earth has been given to Me,' Jesus said. 'So go and tell everybody about Me. And look — I am with you always, right to the very end.' Then, while He was still blessing them, Jesus was lifted up, the way a king goes up to his throne, and a bright cloud carried Him home. His friends stood staring at the sky. Two angels said, 'This same Jesus will come back one day, just the way He went.' So they walked down the hill full of joy. Jesus had not gone away. He had gone up to be King.",
+      "verses": [
+        {
+          "ref": "Matthew 28:18",
+          "kjv": "All power is given unto me in heaven and in earth.",
+          "little_bible": "Jesus said: 'All power in heaven and earth is Mine.'"
+        },
+        {
+          "ref": "Matthew 28:20",
+          "kjv": "And, lo, I am with you alway, even unto the end of the world.",
+          "little_bible": "I am with you always, right to the very end."
+        },
+        {
+          "ref": "Acts 1:9",
+          "kjv": "He was taken up; and a cloud received him out of their sight.",
+          "little_bible": "Jesus was lifted up, and a cloud carried Him home."
+        },
+        {
+          "ref": "Acts 1:11",
+          "kjv": "This same Jesus, which is taken up from you into heaven, shall so come in like manner as ye have seen him go.",
+          "little_bible": "Angels said: 'This same Jesus will come back one day.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Where did Jesus go, and why were His friends glad?",
+      "parentGuide": "The new concept is the ascension and reign: Jesus did not fade out of the story, He went up to the highest throne there is and rules from it now. The likely misreading is the one a child will feel rather than say — that Jesus left, that this is a goodbye, and that heaven is a long way off. Point at the two clues in the text instead. The friends came down that hill full of joy, not crying; and Jesus said 'I am with you always' in the same breath as going up, because His Spirit was coming next. Also resist the picture of Jesus resting. He is reigning, and He is praying for us right now. Retrieve Jesus Calls His Helpers: the very same ordinary friends He gathered at the lakeside are the ones He now sends to every country. If your child asks where heaven is, 'I do not know where, but I know who is there' is honest and enough.",
+      "familyQuestion": "If Jesus is King over everything, what does that change today?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "Jesus, You are the King over everything, everywhere. Thank You that You did not leave us on our own. Thank You that You are with us always, right to the very end. Please help us tell somebody about You. Amen.",
+      "childPrompt": "Can you tell Jesus that He is your King?",
+      "prayerPoints": [
+        "Tell Jesus He is King over the thing you are worried about",
+        "Thank Jesus that He is with you always, even when you cannot see Him"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "I am with you always, right to the very end.",
+      "ref": "Matthew 28:20",
+      "memoryPhrase": "Jesus is with us.",
+      "tip": "Reach both hands as high as you can and say 'Jesus went up!' — then bring your hands down onto your heart and say: 'Jesus is with us.'"
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Go outside, look up at the sky for a moment, and then tell one person something true about Jesus.",
+      "parentNote": "Keep the telling tiny — 'Jesus is alive' is plenty. The point is that looking up leads to going out; that is exactly what the angels said to the friends on the hill. Let your child choose who to tell, and go with them."
+    }
+  }
+}

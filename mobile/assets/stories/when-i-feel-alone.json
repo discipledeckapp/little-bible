@@ -1,0 +1,72 @@
+{
+  "id": "when-i-feel-alone",
+  "sensitivityTier": "guided",
+  "genre": "teaching",
+  "verseContext": "The writer of Hebrews is writing to Christians who have lost friends, homes and safety, and he hands them the oldest promise God ever made about staying.",
+  "title": "When I Feel Alone",
+  "subtitle": "Feeling alone and being alone are not the same thing",
+  "collection": "king-makes-all-things-new",
+  "mainTruth": "God does not tell us to stop feeling lonely. He tells us the truth underneath the feeling: He is already there, and He will never leave.",
+  "ageRange": "4-7",
+  "bibleRef": "Hebrews 13:5-6; Deuteronomy 31:6-8; Psalm 139:7-10",
+  "durationMinutes": 5,
+  "coverEmoji": "🌙",
+  "coverColor": "#1E3A8A",
+  "illustrationPrompt": "A small child sitting alone on the edge of a bed in a dim night-time room with knees pulled up, one warm lamp glowing low and a wide band of soft golden light already resting across the whole floor and reaching the child's feet, an open doorway behind, painterly gouache illustration on parchment paper, deep midnight blue and warm honey-gold palette, storybook quality referencing Jesus Storybook Bible by Jago, NOT cartoon, tender company rather than emptiness --ar 16:9 --style raw",
+  "steps": {
+    "read": {
+      "title": "Read Together",
+      "text": "Moses was dead.\n\nFor forty years he had been the one who spoke to God, the one who went first, the one everybody looked at when they were frightened. And now he was gone, and Joshua had to lead a whole nation of people into a land full of walled cities, without him.\n\nGod did not say to Joshua, 'Do not be silly.' God said, 'Be strong and of a good courage... for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee.'\n\nHold on to that word forsake. It means to walk off and leave somebody behind. God promised Joshua He would never do it.\n\nHundreds of years later, a letter was written to a group of Christians who had lost nearly everything — friends, homes, safety. Some of them had been thrown out by their own families. And the writer reached back and picked up God's promise to Joshua and put it into their hands, word for word: 'I will never leave thee, nor forsake thee.'\n\nWhich tells us something important. That promise was never only Joshua's. It belongs to every one of God's children, including the small one sitting beside you.\n\nNow, be careful here, because this is where children get short-changed. God does not promise that your child will never feel lonely. Loneliness is a real feeling and it is not a sin, and shame about it only makes a child hide it. David felt it. Elijah felt it so strongly he asked to die. Jesus, in the dark of Gethsemane, asked His friends to stay awake with Him, and they did not.\n\nSo what God gives is not a better feeling. It is a truer fact underneath the feeling: feeling alone and being alone are two different things.\n\nDavid put it into a question in Psalm 139. 'Where could I go to get away from You? If I go up, You are there. If I make my bed in the dark, You are there. If I go to the far edge of the sea, Your hand is already holding me.' Not You would come. You are there — already, before I arrive.\n\nThat is why lonely is one of the safest things a child can say out loud in your house. Naming it does not push God away. He was in the dark room first.",
+      "childText": "Moses had died. For years and years he had been the one who went first, and now Joshua had to lead a whole nation without him. Joshua must have felt very small and very alone. So God told him, 'Be brave. I am going with you. I will never leave you.' Hundreds of years later, somebody wrote a letter to Christians who had lost their homes and their friends, and he wrote God's same words down again: 'I will never leave you.' Because that promise was never only for Joshua! Sometimes you feel alone too. Maybe the room is dark, or nobody chose you, or there is a worry you cannot tell anybody. That is a horrible feeling, and God is not cross with you for feeling it. But listen: feeling alone and being alone are not the same thing. God is already in the dark room. Wherever you go, He is there first, and He will never let you go.",
+      "verses": [
+        {
+          "ref": "Hebrews 13:5",
+          "kjv": "He hath said, I will never leave thee, nor forsake thee.",
+          "little_bible": "God says: 'I will never leave you or let you go.'"
+        },
+        {
+          "ref": "Deuteronomy 31:6",
+          "kjv": "Be strong and of a good courage... for the LORD thy God, he it is that doth go with thee.",
+          "little_bible": "Be brave. God Himself is going with you."
+        },
+        {
+          "ref": "Psalm 139:7",
+          "kjv": "Whither shall I go from thy spirit? or whither shall I flee from thy presence?",
+          "little_bible": "Where could I go where God is not there?"
+        },
+        {
+          "ref": "Matthew 28:20",
+          "kjv": "And, lo, I am with you alway, even unto the end of the world.",
+          "little_bible": "Jesus said: 'I am with you always, right to the end.'"
+        }
+      ]
+    },
+    "discuss": {
+      "title": "Talk About It",
+      "question": "Is feeling alone the same as being alone?",
+      "parentGuide": "The new concept is God's never-leaving presence, and the misreading to head off is the one children hear from well-meaning grown-ups: that a Christian child should not feel lonely, and that saying so means their faith is weak. It does not. Elijah felt it, David wrote a whole psalm out of it, and Jesus asked His friends to stay awake with Him in the dark. Say plainly that the feeling is allowed. What God changes is not the feeling but the fact underneath it — He is already there, before your child arrives, in the dark bedroom and the empty playground. Watch for the other misreading too: 'God is with me' is not a magic sentence that makes the sad go away, so do not use it to close a conversation your child needs to keep having. Retrieve Daniel and the Lions and let them notice that God did not keep Daniel out of the pit; He was in it with him. Then tell your child about a time you felt alone, and what helped.",
+      "familyQuestion": "When is each of us most likely to feel lonely?"
+    },
+    "pray": {
+      "title": "Let's Pray",
+      "guidedPrayer": "God, sometimes we feel very alone, and You are not cross with us for feeling it. Thank You that You are already there before we arrive. Help us believe that You will never leave us. Amen.",
+      "childPrompt": "Can you tell God about a time you felt all alone?",
+      "prayerPoints": [
+        "Tell God the exact place where you feel loneliest",
+        "Thank God that He is already there before you get there"
+      ]
+    },
+    "remember": {
+      "title": "Remember This",
+      "memoryVerse": "God says: 'I will never leave you or let you go.'",
+      "ref": "Hebrews 13:5",
+      "memoryPhrase": "God never leaves me.",
+      "tip": "Hold one of your own hands inside the other and squeeze so tightly that it cannot slip out. Say: 'God never leaves me.' Try to pull it out — and do not let go."
+    },
+    "doToday": {
+      "title": "Do It Today",
+      "action": "Find the place where you feel loneliest — your bed, a corner of the playground, the back seat of the car. Stand in it and say out loud: 'God is here already.'",
+      "parentNote": "Go and stand in yours too, in front of them. If your child names a lonely place at school, do not rush to fix it today — write it down and ask about that exact place again in three days. Being remembered is most of what they were asking for."
+    }
+  }
+}
