@@ -96,7 +96,10 @@ class _StepAgeBand extends StatelessWidget {
   final VoidCallback onNext;
 
   static const _bands = [
-    ('early', 'Early Reader', '3–5', '🌱'),
+    // 'Early Learner', not 'Early Reader' — a 3-year-old is not reading yet, and
+    // the Parent Hub already calls this band Early Learner. The two screens must
+    // agree, or a parent sees the band renamed between setup and settings.
+    ('early', 'Early Learner', '3–5', '🌱'),
     ('emerging', 'Emerging Reader', '6–8', '🌿'),
     ('independent', 'Independent Reader', '9–12', '🌳'),
   ];
@@ -315,7 +318,7 @@ class _StepConfirm extends StatelessWidget {
     'lion': '🦁', 'lamb': '🐑', 'dove': '🕊️', 'bear': '🐻',
   };
   static const _bandLabel = {
-    'early': 'Early Reader (3–5)', 'emerging': 'Emerging Reader (6–8)',
+    'early': 'Early Learner (3–5)', 'emerging': 'Emerging Reader (6–8)',
     'independent': 'Independent Reader (9–12)',
   };
 
