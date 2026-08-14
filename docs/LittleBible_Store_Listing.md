@@ -11,17 +11,27 @@ Every claim below was verified against the shipped v1.2.0 build: **80 stories**,
 
 The buyer is not the child. It is a **Christian parent** — most often the person doing
 bedtime, often tired, often quietly unsure they know enough to explain the Bible properly.
-Secondary buyers: grandparents, Sunday-school leaders, homeschooling parents.
+Secondary buyers: grandparents and homeschooling parents — and a distinct third audience,
+**churches and children's ministries**, who are not buying a bedtime app at all. They are
+looking for a teaching plan. Because every story states its doctrine, memory verse,
+discussion questions and application, the curriculum doubles as a Sunday-school scheme of
+work: ten worlds across a year, or one story for the truth they need this week. Say this
+explicitly in the listing — it is a buyer nobody else in this category is addressing.
 
 The listing sells **relief and competence**, not features. Five angles do the work:
 
-1. **It is an actual Bible, not a storybook.** The Little Bible Version renders Scripture
+1. **It is a discipleship curriculum, not a story collection. This is the thesis — lead
+   with it everywhere.** 80 stories from creation to the new creation, deliberately mapped:
+   each one teaches **one** new doctrine and names the earlier story it depends on. Sin
+   before the flood. Substitution before the cross. Covenant before the kingdom. A child who
+   finishes has been walked through sin, covenant, atonement, the law, kingship, repentance,
+   the incarnation, the Trinity, penal substitution, the resurrection, the Spirit, the church,
+   sanctification, judgment and the new creation — in the order that makes each one make sense.
+   Competing apps are a pile of favourites, and a child meets David having never heard of sin.
+2. **It is an actual Bible, not a storybook.** The Little Bible Version renders Scripture
    verse by verse in words a child can hold, beside the King James text — with what the
    verse means, a prayer, and a question to ask. Competing apps retell stories; this one
-   hands a child the Bible itself. **Lead with this.**
-2. **In order, not a grab-bag.** Nearly every children's Bible app is a pile of favourites.
-   A child meets David having never heard of sin. Ours is a curriculum — 80 stories where
-   each builds on the last.
+   hands a child the Bible itself.
 3. **It tells the parent what to say.** Every story and every chapter has a guide naming the
    one idea to land and the mistake children usually make. The strongest single converter.
 4. **It grows with the child, and covers the siblings.** Three reading levels — 3–5, 6–8,
@@ -30,7 +40,12 @@ The listing sells **relief and competence**, not features. Five angles do the wo
    for a family rather than a child.
 5. **Grace, not moral lessons.** "Be brave like David" is the reading we deliberately avoid.
 
-Lead with #1 and #4 in short fields, #3 in long copy.
+Lead with #1 in every field. #2 is the proof that it is Scripture rather than retelling;
+#4 is what makes it worth buying for a family. #3 does the work in long copy.
+
+The word that carries all of this is **mapped** — it is the difference between a curriculum
+and a collection, and it is what a parent is actually looking for without having the word
+for it.
 
 ---
 
@@ -43,73 +58,103 @@ Little Bible: Bible for Kids
 
 ### Subtitle — 30 / 30
 ```
-Stories & verses for ages 3–12
+Creation to Christ, ages 3–12
 ```
-*"Verses" is what signals this is a Bible, not a storybook. The story count moves to the
-promotional text, where it is not competing for the same 30 characters.*
+*"Creation to Christ" does in three words what "80 Bible stories" cannot: it says there is
+an arc. A parent scanning search results reads it as a plan rather than a pile. The story
+count and the Bible version move to the promotional text, where they are not competing for
+the same 30 characters.*
 
-### Promotional Text — 168 / 170
+**Alternate, if you would rather signal Scripture over sequence:**
+`Stories & verses for ages 3–12` (30) — keeps "verses", loses the arc. Test both; the arc
+is the rarer claim.
+
+### Promotional Text — 164 / 170
 *(editable any time without App Review — use it for seasonal pushes)*
 ```
-A Bible written for children — verse by verse, in words they can hold, with what it means and a prayer. Plus 80 stories in order, ages 3 to 12. King James text is free.
+A discipleship curriculum, not a story collection. 80 stories from creation to the new creation, each teaching one truth in an order that makes sense. Ages 3 to 12.
 ```
 
-### Keywords — 97 / 100
+### Keywords — 99 / 100
 *(comma-separated, no spaces — never repeat words already in your name or subtitle)*
 ```
-christian,jesus,god,toddler,preschool,devotional,prayer,sunday,school,faith,church,family,verse
+christian,jesus,god,toddler,preschool,devotional,prayer,sunday,school,curriculum,discipleship,faith
 ```
 
 **Why these:** "bible", "kids", "stories" and "ages" are already indexed from the name and
 subtitle — repeating them wastes characters. `toddler` and `preschool` catch the youngest
 band; `sunday` + `school` index as a phrase pair.
 
-### Description — 3,305 / 4,000
+**`curriculum` and `discipleship` are the two that matter most.** They are lower-volume than
+"bible kids", but they are what a children's pastor, Sunday-school coordinator or
+homeschooling parent actually types — and almost nothing in this category ranks for them.
+Low volume with near-zero competition and a buyer who converts beats high volume where you
+are competing with YouVersion. They replaced `church`, `family` and `verse`, which are
+generic and already implied.
+
+### Description — 3,996 / 4,000
 
 ```
-Little Bible teaches children the whole story of the Bible — in order, one story at a time.
+You mean to teach your child the Bible. Properly — not another retelling of Noah's ark, but the real thing, in an order that holds together. Then you wonder whether you know enough, and where you would even begin. So it keeps not happening.
 
-Most children's Bibles are a collection of favourites. A child meets David without ever hearing about sin, or Jesus without the promises He came to keep. Little Bible is different: 80 stories across 10 worlds, each one building on the last, so a child finishes with the shape of the whole Bible in their head.
+Little Bible is that plan, already made.
+
+It is a discipleship curriculum, not a collection of Bible stories. Most children's Bible apps are a pile of favourites, and a child can hear about Noah fifty times without hearing why Jesus came. Little Bible is deliberately mapped: 80 stories from the creation of the world to the making of a new one, each teaching one new truth and building on a story your child already knows.
+
+Sin before the flood. Substitution before the cross. Covenant before the kingdom. The order is the teaching.
+
+WHAT YOUR CHILD WILL ACTUALLY LEARN
+Ten worlds in sequence, covering doctrines most children's Bibles never reach:
+
+1. In the Beginning — creation, sin, the first promise of a rescuer
+2. Promise Family — covenant, faith, substitution, providence
+3. God Rescues a People — redemption, Passover, the law, God with us
+4. A Land Needing a King — unbelief, obedience, strength in weakness
+5. Heroes of Faith — repentance, the forever-King promise, wisdom, the new covenant
+6. Jesus Is Here — the incarnation, the Trinity, sinlessness, discipleship
+7. The Compassionate King — His authority over creation, sin and hunger
+8. Jesus Saves — the servant king, the cross, the bodily resurrection
+9. Spirit-Filled Family — ascension, the Spirit, the church, sanctification
+10. The King Makes All Things New — grief, the second coming, new creation
+
+It ends where the Bible ends. Nothing is skipped for being hard.
 
 A BIBLE WRITTEN FOR CHILDREN
-The Little Bible Version puts Scripture into words a child can actually hold, verse by verse, beside the King James text. Every verse carries what it means, a short phrase to remember, a prayer, and a question worth asking at the table. Every chapter opens with a summary, the main lesson, and a guide for you.
+The Little Bible Version puts Scripture into words a child can hold, verse by verse, beside the King James text. Every verse carries what it means, a phrase to remember, a prayer, and a question worth asking at the table. Every chapter opens with a summary, the main lesson and a guide for you.
 
-Proverbs and John are complete. Genesis, Psalms, Matthew, Mark and Luke are under way — 99 chapters so far, with more arriving in the app without waiting for an update.
+Proverbs and John are complete; Genesis, Psalms and the other Gospels are under way — 99 chapters, with more arriving without an app update.
+
+FOR CHURCHES, SUNDAY SCHOOLS AND MINISTRIES
+If your volunteers are deciding on Saturday night what to teach on Sunday, and the children have done the ark three times this year, this is a scheme of work. Every story states its doctrine, memory verse, discussion questions and application. Follow the ten worlds across a year, or pick the story you need this week.
 
 IT GROWS WITH YOUR CHILD
-Three reading levels — Early Learner (3–5), Emerging Reader (6–8) and Independent Reader (9–12). The games change with the level: picture-matching for children who cannot read yet, spelling and quizzes for those who can. One purchase covers every child profile on the device, so brothers and sisters each get the version that fits them.
+Three reading levels — Early Learner (3-5), Emerging Reader (6-8), Independent Reader (9-12). Games change with the level: picture-matching before they can read, quizzes after. One purchase covers every profile.
 
 WHAT'S INSIDE
-• 80 illustrated stories, about five minutes each
-• A parent guide for every single story
+• 80 hand-painted stories, five minutes each, with warm narration
+• A parent guide for every story
 • Six games — Story Order, Who Did That?, Fill the Gap, True or False?, Quick Quiz, Spell It!
-• Colouring pages your child can paint and share
-• Memory verses with actions to do together
-• The Little Bible Version — Scripture in a child's words, with meaning, prayer and questions
+• Colouring pages to paint and share
+• Memory verses with actions
+• The Little Bible Version, with meaning, prayer and questions
 • The complete King James Bible — all 66 books, free forever
 
-WRITTEN FOR THE PARENT, NOT JUST THE CHILD
-You do not need to be a theologian. Every story comes with notes telling you the one idea to land, the mistake children usually make, and which earlier story to bring back. Five minutes and a willingness to sit down is genuinely all it takes.
+YOU DO NOT NEED TO BE A THEOLOGIAN
+Every story tells you the one idea to land, the mistake children usually make, and which earlier story to bring back. Five minutes and a willingness to sit down is all it takes.
 
 GRACE, NOT MORAL LESSONS
-This is not "be brave like David". Your child is not David in that story — they are one of the frightened soldiers on the hill, watching someone else fight for them. Every story points to what God has done, not to what your child should achieve.
+This is not "be brave like David". Your child is not David in that story — they are one of the frightened soldiers watching someone else fight for them.
 
 HONEST ABOUT THE HARD PARTS
-Some stories deal with sin, grief and the cross. Those are marked "With a grown-up" and open only after a parent PIN, so you decide when each child is ready. Nothing is softened into an untruth, and nothing arrives without you.
-
-MADE TO BE READ TOGETHER
-Warm narration for children still learning to read. Questions that start real conversations. A prayer and one small thing to do today. Hand-painted illustrations, never clip art.
+Stories dealing with sin, grief and the cross are marked "With a grown-up" and open only after a parent PIN. Nothing is softened into an untruth.
 
 NO ADS. NO TRACKING. WORKS OFFLINE.
-No advertising of any kind. No third-party trackers. Everything works on a plane, in the car, or anywhere the signal drops.
+No advertising, no third-party trackers, and it all works offline.
 
 FREE AND PAID
-Any 20 stories are free — your child picks which ones. A single purchase unlocks all 80 for every child profile on the device, with no subscription. The Bible reader is always free and is never locked.
+Any 20 stories are free — your child picks which. One purchase unlocks all 80 for every profile, no subscription. The Bible reader is always free.
 
-FOR FAMILIES EVERYWHERE
-Written in British English, with art and examples that dignify children of every background and the worldwide church.
-
-Questions or feedback: littlebible.org
+littlebible.org
 ```
 
 ---
@@ -121,10 +166,10 @@ Questions or feedback: littlebible.org
 Little Bible: Bible for Kids
 ```
 
-### Short description — 78 / 80
+### Short description — 75 / 80
 *(shown under the title; the most-read line on the whole listing)*
 ```
-A Bible written for children, plus 80 stories in order. Ages 3-12. No ads.
+80 stories from creation to Christ, deliberately mapped. Ages 3-12. No ads.
 ```
 
 ### Full description
